@@ -1,0 +1,274 @@
+{
+  "topics": [
+    {
+      "name": "词汇辨析",
+      "questions": [
+        {
+          "question": "I have been looking forward to ______ from you.",
+          "options": ["A. hear", "B. hearing", "C. heard", "D. hears"],
+          "answer": "B"
+        },
+        {
+          "question": "It ______ me two hours to finish my homework yesterday.",
+          "options": ["A. took", "B. spent", "C. cost", "D. paid"],
+          "answer": "A"
+        },
+        {
+          "question": "She is ______ in painting.",
+          "options": ["A. interest", "B. interesting", "C. interested", "D. interests"],
+          "answer": "C"
+        },
+        {
+          "question": "We should ______ our parents' advice.",
+          "options": ["A. listen", "B. hear", "C. follow", "D. sound"],
+          "answer": "C"
+        },
+        {
+          "question": "He has ______ a lot of money on this car.",
+          "options": ["A. took", "B. spent", "C. cost", "D. paid"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "动词时态",
+      "questions": [
+        {
+          "question": "She ______ to Beijing twice.",
+          "options": ["A. has been", "B. has gone", "C. went", "D. goes"],
+          "answer": "A"
+        },
+        {
+          "question": "I ______ TV when he came in.",
+          "options": ["A. watch", "B. watched", "C. was watching", "D. am watching"],
+          "answer": "C"
+        },
+        {
+          "question": "By the time we got there, the train ______.",
+          "options": ["A. left", "B. has left", "C. had left", "D. leaves"],
+          "answer": "C"
+        },
+        {
+          "question": "He ______ English for five years.",
+          "options": ["A. studies", "B. studied", "C. has studied", "D. is studying"],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "name": "被动语态",
+      "questions": [
+        {
+          "question": "The bridge ______ last year.",
+          "options": ["A. built", "B. was built", "C. is built", "D. has built"],
+          "answer": "B"
+        },
+        {
+          "question": "The homework ______ by the students now.",
+          "options": ["A. is being done", "B. was being done", "C. has done", "D. does"],
+          "answer": "A"
+        },
+        {
+          "question": "This song ______ by many people.",
+          "options": ["A. likes", "B. liked", "C. is liked", "D. liking"],
+          "answer": "C"
+        },
+        {
+          "question": "The meeting ______ until next Friday.",
+          "options": ["A. will hold", "B. will be held", "C. holds", "D. is held"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "定语从句",
+      "questions": [
+        {
+          "question": "This is the book ______ I bought yesterday.",
+          "options": ["A. who", "B. which", "C. where", "D. when"],
+          "answer": "B"
+        },
+        {
+          "question": "The man ______ is standing there is my teacher.",
+          "options": ["A. which", "B. whom", "C. who", "D. whose"],
+          "answer": "C"
+        },
+        {
+          "question": "I remember the day ______ we first met.",
+          "options": ["A. which", "B. that", "C. when", "D. where"],
+          "answer": "C"
+        },
+        {
+          "question": "The house ______ we live is very old.",
+          "options": ["A. which", "B. that", "C. in which", "D. who"],
+          "answer": "C"
+        },
+        {
+          "question": "He is the only person ______ can help me.",
+          "options": ["A. which", "B. whom", "C. who", "D. whose"],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "name": "状语从句",
+      "questions": [
+        {
+          "question": "I will call you ______ I arrive.",
+          "options": ["A. until", "B. as soon as", "C. unless", "D. although"],
+          "answer": "B"
+        },
+        {
+          "question": "______ it rains, we will go hiking.",
+          "options": ["A. If", "B. Unless", "C. Because", "D. Although"],
+          "answer": "B"
+        },
+        {
+          "question": "He was late ______ the heavy traffic.",
+          "options": ["A. because", "B. because of", "C. so", "D. but"],
+          "answer": "B"
+        },
+        {
+          "question": "______ he is old, he is still healthy.",
+          "options": ["A. Although", "B. Because", "C. If", "D. When"],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "非谓语动词",
+      "questions": [
+        {
+          "question": "I want ______ a doctor when I grow up.",
+          "options": ["A. be", "B. to be", "C. being", "D. been"],
+          "answer": "B"
+        },
+        {
+          "question": "She enjoys ______ to music.",
+          "options": ["A. listen", "B. to listen", "C. listening", "D. listened"],
+          "answer": "C"
+        },
+        {
+          "question": "______ the door, he went out.",
+          "options": ["A. Open", "B. Opening", "C. Opened", "D. To open"],
+          "answer": "B"
+        },
+        {
+          "question": "The teacher asked us ______ quiet.",
+          "options": ["A. be", "B. to be", "C. being", "D. been"],
+          "answer": "B"
+        },
+        {
+          "question": "I saw her ______ the room.",
+          "options": ["A. enter", "B. to enter", "C. entering", "D. entered"],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "虚拟语气",
+      "questions": [
+        {
+          "question": "If I ______ you, I would study harder.",
+          "options": ["A. am", "B. was", "C. were", "D. be"],
+          "answer": "C"
+        },
+        {
+          "question": "I wish I ______ a bird.",
+          "options": ["A. am", "B. was", "C. were", "D. be"],
+          "answer": "C"
+        },
+        {
+          "question": "If he ______ earlier, he would have caught the bus.",
+          "options": ["A. left", "B. leaves", "C. had left", "D. has left"],
+          "answer": "C"
+        },
+        {
+          "question": "He suggested that we ______ early.",
+          "options": ["A. leave", "B. left", "C. leaving", "D. leaves"],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "主谓一致",
+      "questions": [
+        {
+          "question": "Neither he nor I ______ wrong.",
+          "options": ["A. am", "B. is", "C. are", "D. be"],
+          "answer": "A"
+        },
+        {
+          "question": "Everyone ______ to go.",
+          "options": ["A. want", "B. wants", "C. wanting", "D. wanted"],
+          "answer": "B"
+        },
+        {
+          "question": "The number of students ______ 50.",
+          "options": ["A. is", "B. are", "C. has", "D. have"],
+          "answer": "A"
+        },
+        {
+          "question": "A number of students ______ absent today.",
+          "options": ["A. is", "B. are", "C. has", "D. have"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "特殊句式",
+      "questions": [
+        {
+          "question": "It is important ______ us to study English.",
+          "options": ["A. for", "B. to", "C. with", "D. of"],
+          "answer": "A"
+        },
+        {
+          "question": "______ beautiful the flower is!",
+          "options": ["A. What", "B. How", "C. Very", "D. So"],
+          "answer": "B"
+        },
+        {
+          "question": "Not only ______ hard, but also he is smart.",
+          "options": ["A. he works", "B. does he work", "C. he does work", "D. working"],
+          "answer": "B"
+        },
+        {
+          "question": "It was yesterday ______ I met him.",
+          "options": ["A. when", "B. that", "C. which", "D. where"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "完形填空高频",
+      "questions": [
+        {
+          "question": "He worked hard, ______ he passed the exam.",
+          "options": ["A. but", "B. so", "C. or", "D. and"],
+          "answer": "B"
+        },
+        {
+          "question": "I don't know ______ he will come or not.",
+          "options": ["A. that", "B. whether", "C. if", "D. what"],
+          "answer": "B"
+        },
+        {
+          "question": "The more you practice, the ______ you will become.",
+          "options": ["A. good", "B. better", "C. best", "D. well"],
+          "answer": "B"
+        },
+        {
+          "question": "He is ______ young ______ go to school.",
+          "options": ["A. too...to", "B. so...that", "C. such...that", "D. enough...to"],
+          "answer": "A"
+        },
+        {
+          "question": "We should take care ______ our health.",
+          "options": ["A. for", "B. of", "C. with", "D. about"],
+          "answer": "B"
+        }
+      ]
+    }
+  ]
+}
