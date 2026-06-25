@@ -33,7 +33,7 @@
             <div class="stage-question-meta"><span class="question-order">{{ String(index + 1).padStart(2, '0') }}</span><el-tag size="small" effect="plain">{{ question.subject }} · {{ question.knowledgeName }}</el-tag></div>
             <h4>{{ question.stem }}</h4>
             <el-radio-group v-model="testAnswers[question.id]" class="stage-options">
-              <el-radio v-for="(option, optionIndex) in question.options" :key="option" :value="optionIndex" border><b>{{ optionLetters[optionIndex] }}</b>{{ option }}</el-radio>
+              <el-radio v-for="(option, optionIndex) in question.options" :key="option" :value="optionLetters[optionIndex]" border><b>{{ optionLetters[optionIndex] }}</b>{{ option }}</el-radio>
             </el-radio-group>
           </article>
         </div>

@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import { institutions, majorOptions, provinceOptions, stageTemplates, todayTasks } from '../data/mvp'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
+const DIAGNOSTIC_VERSION = 'docs-json-question-bank-v1'
 
 function getDefaultYear() {
   const now = new Date()
@@ -14,6 +15,25 @@ function loadSavedState() {
     return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}
   } catch {
     return {}
+  }
+}
+
+function createDefaultDiagnostic() {
+  return {
+    version: DIAGNOSTIC_VERSION,
+    completed: false,
+    subjectScores: { '政治': 42, '英语': 28, '高等数学（二）': 22 },
+    knowledge: 34,
+    speed: 46,
+    mistakeType: '基础概念不牢',
+    weeklyHours: 18,
+    answers: {},
+    submittedSubjects: [],
+    knowledgeDetails: [],
+    answerDetails: [],
+    correctCount: 0,
+    totalQuestions: 0,
+    durationSeconds: 0
   }
 }
 
@@ -29,19 +49,7 @@ export const useApplicationStore = defineStore('application', () => {
     startDate: new Date().toISOString().slice(0, 10)
   })
   const selectedInstitutionCode = ref(saved.selectedInstitutionCode || 'njue-demo')
-  const diagnostic = ref(saved.diagnostic || {
-    completed: false,
-    subjectScores: { '政治': 42, '英语': 28, '高等数学（二）': 22 },
-    knowledge: 34,
-    speed: 46,
-    mistakeType: '基础概念不牢',
-    weeklyHours: 18,
-    answers: {},
-    knowledgeDetails: [],
-    correctCount: 0,
-    totalQuestions: 0,
-    durationSeconds: 0
-  })
+  const diagnostic = ref(saved.diagnostic?.version === DIAGNOSTIC_VERSION ? saved.diagnostic : createDefaultDiagnostic())
   const currentStage = ref(saved.currentStage || 1)
   const tasks = ref(saved.tasks || todayTasks)
   const stageTests = ref(saved.stageTests || [])
@@ -92,19 +100,15 @@ export const useApplicationStore = defineStore('application', () => {
     )
   }
 
-  function completeDiagnostic(payload) {
-    diagnostic.value = { ...diagnostic.value, ...payload, completed: true }
+  function completeDiagnostic(payload, completed = true) {
+    diagnostic.value = { ...diagnostic.value, ...payload, version: DIAGNOSTIC_VERSION, completed }
   }
 
   function resetDiagnostic() {
     diagnostic.value = {
-      ...diagnostic.value,
+      ...createDefaultDiagnostic(),
       completed: false,
-      answers: {},
-      knowledgeDetails: [],
-      correctCount: 0,
-      totalQuestions: 0,
-      durationSeconds: 0
+      weeklyHours: diagnostic.value.weeklyHours
     }
     syncDiagnosticSubjects()
   }
