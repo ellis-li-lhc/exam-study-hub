@@ -4,7 +4,8 @@
       <div class="welcome-copy">
         <span class="section-kicker">{{ store.profile.examYear }} 成人高考专升本</span>
         <h2>{{ greeting }}，今天从最重要的一步开始。</h2>
-        <p>当前目标是 {{ provinceText }}的{{ store.selectedMajor?.name }}。先完成诊断，再让学习时间真正花在能提分的地方。</p>
+        <p v-if="store.profileComplete">当前目标是 {{ provinceText }}的{{ store.selectedMajor?.name }}。先完成诊断，再让学习时间真正花在能提分的地方。</p>
+        <p v-else>还没有建立报考档案。先选定报考省份和意向专业，系统才能帮你匹配招生院校、生成入学诊断和学习计划。</p>
         <div class="welcome-actions">
           <el-button type="primary" size="large" @click="router.push(nextAction.path)">
             {{ nextAction.label }}<el-icon class="el-icon--right"><ArrowRight /></el-icon>

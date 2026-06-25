@@ -45,7 +45,7 @@
                 >
                   <span class="knowledge-index">
                     <el-icon v-if="isGroupComplete(group)"><Check /></el-icon>
-                    <template v-else>{{ groupNumber(group) }}</template>
+                    <template v-else>{{ groupNumberInSubject(group) }}</template>
                   </span>
                   <span>
                     <strong>{{ group.name }}</strong>
@@ -57,7 +57,7 @@
               <section class="question-panel">
                 <div class="knowledge-heading">
                   <div>
-                    <span>{{ currentGroup.subject }} · 知识点 {{ groupNumber(currentGroup) }}/{{ groups.length }}</span>
+                    <span>{{ currentGroup.subject }} · 知识点 {{ groupNumberInSubject(currentGroup) }}/{{ currentSubjectGroups.length }}</span>
                     <h3>{{ currentGroup.name }}</h3>
                     <p>{{ currentGroup.description }}</p>
                   </div>
@@ -79,13 +79,13 @@
                 </div>
 
                 <div class="quiz-actions">
-                  <el-button :disabled="currentGlobalIndex === 0" @click="goPrevious">
+                  <el-button :disabled="isFirstGroupInSubject" @click="goPrevious">
                     <el-icon><ArrowLeft /></el-icon>上一个
                   </el-button>
                   <span v-if="isSubjectSubmitted(activeSubject)" class="group-done"><el-icon><CircleCheck /></el-icon>{{ activeSubject }}已提交，可继续其他科目</span>
                   <span v-else-if="!isGroupComplete(currentGroup)">还剩 {{ currentGroup.questions.length - answeredInGroup(currentGroup) }} 题</span>
                   <span v-else class="group-done"><el-icon><CircleCheck /></el-icon>当前知识点已答完</span>
-                  <el-button v-if="currentGlobalIndex < groups.length - 1" type="primary" plain @click="goNext">
+                  <el-button v-if="!isLastGroupInSubject" type="primary" plain @click="goNext">
                     下一个<el-icon class="el-icon--right"><ArrowRight /></el-icon>
                   </el-button>
                   <el-button type="primary" :disabled="!canSubmitSubject(activeSubject) || isSubjectSubmitted(activeSubject)" @click="submitSubject(activeSubject)">
@@ -262,7 +262,7 @@
       </section>
 
       <div class="result-actions">
-        <el-button @click="restart"><el-icon><Refresh /></el-icon>重新诊断</el-button>
+        <el-button size="large" @click="restart"><el-icon><Refresh /></el-icon>重新诊断</el-button>
         <el-button type="primary" size="large" @click="router.push('/target')">查看目标分与差距<el-icon class="el-icon--right"><ArrowRight /></el-icon></el-button>
       </div>
     </template>
@@ -303,7 +303,10 @@ const currentGroup = computed(() => {
     || groups.value[0]
     || { questions: [] }
 })
-const currentGlobalIndex = computed(() => groups.value.findIndex(group => group.id === currentGroup.value.id))
+const currentSubjectGroups = computed(() => groups.value.filter(group => group.subject === currentGroup.value.subject))
+const currentIndexInSubject = computed(() => currentSubjectGroups.value.findIndex(group => group.id === currentGroup.value.id))
+const isFirstGroupInSubject = computed(() => currentIndexInSubject.value <= 0)
+const isLastGroupInSubject = computed(() => currentIndexInSubject.value >= currentSubjectGroups.value.length - 1)
 
 function groupsBySubject(subject) { return groups.value.filter(group => group.subject === subject) }
 function answeredInGroup(group) { return group.questions.filter(question => answers[question.id] !== undefined).length }
@@ -312,7 +315,7 @@ function questionsInSubject(subject) { return groupsBySubject(subject).reduce((s
 function answeredInSubject(subject) { return groupsBySubject(subject).flatMap(group => group.questions).filter(question => answers[question.id] !== undefined).length }
 function isSubjectSubmitted(subject) { return (store.diagnostic.submittedSubjects || []).includes(subject) }
 function canSubmitSubject(subject) { return answeredInSubject(subject) === questionsInSubject(subject) && questionsInSubject(subject) > 0 }
-function groupNumber(group) { return Math.max(1, groups.value.findIndex(item => item.id === group.id) + 1) }
+function groupNumberInSubject(group) { return Math.max(1, groupsBySubject(group.subject).findIndex(item => item.id === group.id) + 1) }
 function formatTime(seconds) { return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}` }
 function masteryClass(mastery) { return mastery >= 80 ? 'strong' : mastery >= 60 ? 'medium' : 'weak' }
 function knowledgeDetailsBySubject(subject) { return (store.diagnostic.knowledgeDetails || []).filter(item => item.subject === subject) }
@@ -353,7 +356,7 @@ function handleSubjectChange(subject) {
 }
 
 function goPrevious() {
-  const previous = groups.value[currentGlobalIndex.value - 1]
+  const previous = currentSubjectGroups.value[currentIndexInSubject.value - 1]
   if (previous) setGroup(previous)
 }
 
@@ -362,7 +365,7 @@ function goNext() {
     ElMessage.warning('请先完成当前知识点的全部题目')
     return
   }
-  const next = groups.value[currentGlobalIndex.value + 1]
+  const next = currentSubjectGroups.value[currentIndexInSubject.value + 1]
   if (next) setGroup(next)
 }
 

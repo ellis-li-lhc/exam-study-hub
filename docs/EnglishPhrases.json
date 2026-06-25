@@ -1,0 +1,86 @@
+{
+  "title": "核心短语与固定搭配",
+  "intro": "成考英语高频考点。短语和搭配要整体记忆，配例句理解用法。",
+  "groups": [
+    {
+      "id": "verb-phrase",
+      "name": "一、常用动词短语",
+      "short": "动词短语",
+      "desc": "动词 + 副词/介词构成的高频短语",
+      "words": [
+        { "word": "get up", "meaning": "起床", "example": "I get up at six every day." },
+        { "word": "look after", "meaning": "照顾", "example": "She looks after her little brother." },
+        { "word": "give up", "meaning": "放弃", "example": "Don't give up your dream." },
+        { "word": "put on", "meaning": "穿上", "example": "Put on your coat, it's cold." },
+        { "word": "take off", "meaning": "脱下；起飞", "example": "Please take off your shoes." },
+        { "word": "turn on", "meaning": "打开（电器）", "example": "Turn on the light, please." },
+        { "word": "turn off", "meaning": "关掉", "example": "Turn off the TV before you sleep." },
+        { "word": "look for", "meaning": "寻找", "example": "I am looking for my keys." },
+        { "word": "find out", "meaning": "查明，弄清楚", "example": "We must find out the truth." },
+        { "word": "grow up", "meaning": "长大", "example": "I want to be a doctor when I grow up." },
+        { "word": "come from", "meaning": "来自", "example": "Where do you come from?" },
+        { "word": "look forward to", "meaning": "期待", "example": "I look forward to your reply." }
+      ]
+    },
+    {
+      "id": "prep",
+      "name": "二、介词搭配",
+      "short": "介词搭配",
+      "desc": "be + 形容词 / 动词 + 固定介词",
+      "words": [
+        { "word": "be good at", "meaning": "擅长", "example": "She is good at English." },
+        { "word": "be interested in", "meaning": "对……感兴趣", "example": "I am interested in music." },
+        { "word": "be afraid of", "meaning": "害怕", "example": "He is afraid of dogs." },
+        { "word": "be proud of", "meaning": "为……自豪", "example": "We are proud of you." },
+        { "word": "be famous for", "meaning": "以……闻名", "example": "The city is famous for its food." },
+        { "word": "be different from", "meaning": "与……不同", "example": "This one is different from that one." },
+        { "word": "be full of", "meaning": "充满", "example": "The room is full of people." },
+        { "word": "be late for", "meaning": "……迟到", "example": "Don't be late for class." },
+        { "word": "depend on", "meaning": "依靠；取决于", "example": "It depends on the weather." },
+        { "word": "take part in", "meaning": "参加", "example": "They take part in the game." },
+        { "word": "pay attention to", "meaning": "注意", "example": "Pay attention to your spelling." },
+        { "word": "agree with", "meaning": "同意", "example": "I agree with you." }
+      ]
+    },
+    {
+      "id": "pattern",
+      "name": "三、高频句型短语",
+      "short": "句型短语",
+      "desc": "构成句子骨架的固定句型",
+      "words": [
+        { "word": "there be", "meaning": "有（存在）", "example": "There is a book on the desk." },
+        { "word": "used to do", "meaning": "过去常常", "example": "I used to play football." },
+        { "word": "be going to", "meaning": "打算；将要", "example": "I am going to visit my friend." },
+        { "word": "would like to", "meaning": "想要", "example": "I would like to have some tea." },
+        { "word": "had better", "meaning": "最好（做某事）", "example": "You had better see a doctor." },
+        { "word": "prefer A to B", "meaning": "比起 B 更喜欢 A", "example": "I prefer tea to coffee." },
+        { "word": "not only ... but also", "meaning": "不仅……而且", "example": "He is not only smart but also kind." },
+        { "word": "as soon as", "meaning": "一……就……", "example": "Call me as soon as you arrive." },
+        { "word": "so ... that", "meaning": "如此……以至于", "example": "It was so cold that we stayed home." },
+        { "word": "in order to", "meaning": "为了", "example": "She studies hard in order to pass." },
+        { "word": "instead of", "meaning": "代替；而不是", "example": "Let's walk instead of driving." },
+        { "word": "as ... as", "meaning": "和……一样", "example": "He is as tall as his father." }
+      ]
+    },
+    {
+      "id": "common",
+      "name": "四、日常常用词组",
+      "short": "常用词组",
+      "desc": "口语与写作里高频出现的搭配",
+      "words": [
+        { "word": "a lot of / lots of", "meaning": "许多", "example": "There are a lot of books here." },
+        { "word": "a number of", "meaning": "许多（修饰可数）", "example": "A number of students are absent." },
+        { "word": "because of", "meaning": "因为（后接名词）", "example": "We stayed home because of the rain." },
+        { "word": "in front of", "meaning": "在……前面", "example": "A car is in front of the house." },
+        { "word": "at the same time", "meaning": "同时", "example": "Don't do two things at the same time." },
+        { "word": "make friends", "meaning": "交朋友", "example": "It is easy to make friends here." },
+        { "word": "do one's best", "meaning": "尽某人最大努力", "example": "Just do your best." },
+        { "word": "have a rest", "meaning": "休息一下", "example": "Let's have a rest." },
+        { "word": "take care of", "meaning": "照顾", "example": "Take care of yourself." },
+        { "word": "get ready for", "meaning": "为……做准备", "example": "Get ready for the exam." },
+        { "word": "such as", "meaning": "例如", "example": "I like fruit, such as apples and bananas." },
+        { "word": "of course", "meaning": "当然", "example": "Of course you can." }
+      ]
+    }
+  ]
+}

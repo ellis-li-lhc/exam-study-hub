@@ -1,12 +1,19 @@
 import englishBank from '../../docs/English.json'
-import mathBank from '../../docs/Math.json'
+import mathOneBank from '../../docs/MathOne.json'
+import mathTwoBank from '../../docs/MathTwo.json'
 import politicsBank from '../../docs/Politics.json'
+import chineseLiteratureBank from '../../docs/ChineseLiterature.json'
+import educationTheoryBank from '../../docs/EducationTheory.json'
+import civilLawBank from '../../docs/CivilLaw.json'
 
 const subjectSourceMap = {
   政治: politicsBank,
   英语: englishBank,
-  '高等数学（一）': mathBank,
-  '高等数学（二）': mathBank
+  '高等数学（一）': mathOneBank,
+  '高等数学（二）': mathTwoBank,
+  '大学语文': chineseLiteratureBank,
+  '教育理论': educationTheoryBank,
+  '民法': civilLawBank
 }
 
 const optionPrefixPattern = /^[A-D][.、．]\s*/

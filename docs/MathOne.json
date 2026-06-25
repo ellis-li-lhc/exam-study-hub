@@ -1,0 +1,221 @@
+{
+  "subject": "高等数学（一）",
+  "category": "理工类",
+  "topics": [
+    {
+      "name": "极限计算",
+      "questions": [
+        {
+          "question": "lim(x→0) sin3x/x = ?",
+          "options": ["A. 1", "B. 3", "C. 1/3", "D. 0"],
+          "answer": "B"
+        },
+        {
+          "question": "lim(x→∞) (1+1/x)^x = ?",
+          "options": ["A. 0", "B. 1", "C. e", "D. ∞"],
+          "answer": "C"
+        },
+        {
+          "question": "lim(x→1) (x²-1)/(x-1) = ?",
+          "options": ["A. 0", "B. 1", "C. 2", "D. 不存在"],
+          "answer": "C"
+        },
+        {
+          "question": "lim(x→0) (1-cosx)/x² = ?",
+          "options": ["A. 0", "B. 1", "C. 1/2", "D. 2"],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "name": "函数连续性",
+      "questions": [
+        {
+          "question": "f(x)=1/x在x=0处是？",
+          "options": ["A. 连续", "B. 可去间断点", "C. 跳跃间断点", "D. 无穷间断点"],
+          "answer": "D"
+        },
+        {
+          "question": "函数在某点可导与连续的关系是？",
+          "options": ["A. 可导必连续", "B. 连续必可导", "C. 互不相关", "D. 等价"],
+          "answer": "A"
+        },
+        {
+          "question": "f(x)=|x|在x=0处是否可导？",
+          "options": ["A. 可导", "B. 不可导", "C. 连续且可导", "D. 不连续"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "一元函数微分学",
+      "questions": [
+        {
+          "question": "f(x)=x³，求f'(x)",
+          "options": ["A. x²", "B. 3x²", "C. 3x³", "D. x³/3"],
+          "answer": "B"
+        },
+        {
+          "question": "f(x)=sinx，求f'(x)",
+          "options": ["A. cosx", "B. -cosx", "C. sinx", "D. -sinx"],
+          "answer": "A"
+        },
+        {
+          "question": "f(x)=eˣ，求f'(x)",
+          "options": ["A. eˣ", "B. xeˣ⁻¹", "C. eˣ/x", "D. lnx·eˣ"],
+          "answer": "A"
+        },
+        {
+          "question": "f(x)=lnx，求f'(x)",
+          "options": ["A. 1/x", "B. x", "C. -1/x²", "D. lnx/x"],
+          "answer": "A"
+        },
+        {
+          "question": "f(x)=x²eˣ，求f'(x)",
+          "options": ["A. 2xeˣ", "B. x²eˣ", "C. (2x+x²)eˣ", "D. 2xeˣ-x²"],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "name": "一元函数积分学",
+      "questions": [
+        {
+          "question": "∫2x dx = ?",
+          "options": ["A. x²", "B. x²+C", "C. 2x²+C", "D. x²/2+C"],
+          "answer": "B"
+        },
+        {
+          "question": "∫cosx dx = ?",
+          "options": ["A. sinx+C", "B. -sinx+C", "C. cosx+C", "D. -cosx+C"],
+          "answer": "A"
+        },
+        {
+          "question": "∫1/x dx = ?",
+          "options": ["A. x⁻²+C", "B. ln|x|+C", "C. 1/x²+C", "D. -1/x²+C"],
+          "answer": "B"
+        },
+        {
+          "question": "∫eˣ dx = ?",
+          "options": ["A. eˣ+C", "B. xeˣ⁻¹+C", "C. eˣ/x+C", "D. lnx·eˣ+C"],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "定积分及其应用",
+      "questions": [
+        {
+          "question": "曲线y=x²与x轴在[0,1]上围成的面积为？",
+          "options": ["A. 1/2", "B. 1/3", "C. 1/4", "D. 1"],
+          "answer": "B"
+        },
+        {
+          "question": "∫₀¹ x dx = ?",
+          "options": ["A. 1", "B. 1/2", "C. 1/3", "D. 2"],
+          "answer": "B"
+        },
+        {
+          "question": "∫₀^π sinx dx = ?",
+          "options": ["A. 0", "B. 1", "C. 2", "D. -2"],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "name": "多元函数微积分学",
+      "questions": [
+        {
+          "question": "z=x²+y²，求∂z/∂x",
+          "options": ["A. 2x", "B. 2y", "C. 2x+2y", "D. x²"],
+          "answer": "A"
+        },
+        {
+          "question": "z=xy，求∂z/∂y",
+          "options": ["A. x", "B. y", "C. xy", "D. 1"],
+          "answer": "A"
+        },
+        {
+          "question": "z=x²y，求∂z/∂x",
+          "options": ["A. 2xy", "B. x²", "C. 2x", "D. xy"],
+          "answer": "A"
+        },
+        {
+          "question": "二重积分∫∫_D dxdy（D为平面区域）表示？",
+          "options": ["A. 曲线长度", "B. 区域D的面积", "C. 体积恒为1", "D. 区域周长"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "无穷级数",
+      "questions": [
+        {
+          "question": "等比级数Σ(1/2)ⁿ（n从1到∞）的和为？",
+          "options": ["A. 1", "B. 2", "C. 1/2", "D. 发散"],
+          "answer": "A"
+        },
+        {
+          "question": "调和级数Σ1/n（n从1到∞）是？",
+          "options": ["A. 收敛", "B. 发散", "C. 和为1", "D. 和为e"],
+          "answer": "B"
+        },
+        {
+          "question": "p级数Σ1/n²（n从1到∞）的敛散性是？",
+          "options": ["A. 发散", "B. 收敛", "C. 和为0", "D. 无法判断"],
+          "answer": "B"
+        },
+        {
+          "question": "等比级数Σaqⁿ收敛的条件是？",
+          "options": ["A. |q|<1", "B. |q|>1", "C. q=1", "D. q>0"],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "常微分方程",
+      "questions": [
+        {
+          "question": "微分方程y'=2x的通解是？",
+          "options": ["A. y=x²", "B. y=x²+C", "C. y=2x²+C", "D. y=2x+C"],
+          "answer": "B"
+        },
+        {
+          "question": "微分方程y''-y=0的特征方程是？",
+          "options": ["A. r²-1=0", "B. r²+1=0", "C. r-1=0", "D. r²-r=0"],
+          "answer": "A"
+        },
+        {
+          "question": "微分方程y'+y=0的通解是？",
+          "options": ["A. y=Ceˣ", "B. y=Ce⁻ˣ", "C. y=Ce²ˣ", "D. y=C"],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "向量代数与空间解析几何",
+      "questions": [
+        {
+          "question": "向量a=(1,2,2)的模|a|=？",
+          "options": ["A. 5", "B. 3", "C. 9", "D. √5"],
+          "answer": "B"
+        },
+        {
+          "question": "若两非零向量满足a·b=0，则a与b？",
+          "options": ["A. 平行", "B. 垂直", "C. 相等", "D. 反向"],
+          "answer": "B"
+        },
+        {
+          "question": "空间直角坐标系中，方程z=0表示？",
+          "options": ["A. x轴", "B. y轴", "C. xOy坐标平面", "D. 原点"],
+          "answer": "C"
+        },
+        {
+          "question": "向量a=(1,0,0)与b=(0,1,0)的数量积a·b=？",
+          "options": ["A. 0", "B. 1", "C. -1", "D. 不存在"],
+          "answer": "A"
+        }
+      ]
+    }
+  ]
+}

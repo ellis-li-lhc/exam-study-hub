@@ -93,7 +93,8 @@ const menuItems = [
   { path: '/diagnosis', title: '入学诊断', icon: 'DataAnalysis' },
   { path: '/target', title: '目标分分析', icon: 'Aim' },
   { path: '/plan', title: '学习路线', icon: 'Calendar' },
-  { path: '/progress', title: '学习进度', icon: 'TrendCharts' }
+  { path: '/progress', title: '学习进度', icon: 'TrendCharts' },
+  { path: '/english', title: '英语特训', icon: 'Notebook' }
 ]
 
 const provinceLabel = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
@@ -113,7 +114,8 @@ const headerSubtitle = computed(() => {
     '/diagnosis': '看清当前水平，计划才不会凭感觉',
     '/target': '用可靠的参考线算出安全目标',
     '/plan': '把总目标拆成能完成的阶段',
-    '/progress': '记录执行，也允许计划被现实修正'
+    '/progress': '记录执行，也允许计划被现实修正',
+    '/english': '基础越弱，越要先过单词关'
   }
   return subtitles[route.path] || '个人备考工作台'
 })

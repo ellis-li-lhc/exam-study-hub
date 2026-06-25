@@ -40,15 +40,15 @@ function createDefaultDiagnostic() {
 export const useApplicationStore = defineStore('application', () => {
   const saved = loadSavedState()
   const profile = ref(saved.profile || {
-    provinces: ['henan', 'jiangsu'],
+    provinces: [],
     examYear: getDefaultYear(),
-    majorCode: 'business',
+    majorCode: '',
     mode: 'plan',
     weekdayHours: 2,
     weekendHours: 4,
     startDate: new Date().toISOString().slice(0, 10)
   })
-  const selectedInstitutionCode = ref(saved.selectedInstitutionCode || 'njue-demo')
+  const selectedInstitutionCode = ref(saved.selectedInstitutionCode || null)
   const diagnostic = ref(saved.diagnostic?.version === DIAGNOSTIC_VERSION ? saved.diagnostic : createDefaultDiagnostic())
   const currentStage = ref(saved.currentStage || 1)
   const tasks = ref(saved.tasks || todayTasks)
@@ -69,6 +69,88 @@ export const useApplicationStore = defineStore('application', () => {
   })
   const targetScore = computed(() => referenceScore.value + 30)
   const scoreGap = computed(() => Math.max(0, targetScore.value - currentScore.value))
+  const SUBJECT_MAX = 150
+  // 分科目标：结合诊断结果分配，而非平均/固定权重。
+  // 思路：以诊断折算分为各科起点，把“目标总分-当前总分”的增量按
+  // （剩余提分空间 × 提分效率）的优先级分配；公共课提分快、专业课较慢，
+  // 满分封顶后剩余增量再分给仍有空间的科目，目标之和略高于目标总分以预留波动。
+  const subjectTargets = computed(() => {
+    const subjects = selectedMajor.value?.subjects || []
+    if (!subjects.length) return []
+
+    const scores = diagnostic.value.subjectScores
+    const details = diagnostic.value.knowledgeDetails || []
+    const efficiencyByIndex = [1.25, 1, 0.75]
+
+    const items = subjects.map((name, index) => {
+      const current = Number(scores[name] || 0)
+      const subjectDetails = details.filter(detail => detail.subject === name)
+      const mastery = subjectDetails.length
+        ? Math.round(subjectDetails.reduce((sum, detail) => sum + detail.mastery, 0) / subjectDetails.length)
+        : Math.round(current / SUBJECT_MAX * 100)
+      return {
+        name,
+        current,
+        mastery,
+        efficiency: efficiencyByIndex[index] ?? 0.75,
+        target: current
+      }
+    })
+
+    const currentTotal = items.reduce((sum, item) => sum + item.current, 0)
+    const totalTarget = Math.min(SUBJECT_MAX * subjects.length, Math.round(targetScore.value * 1.05))
+    let remaining = Math.max(0, totalTarget - currentTotal)
+
+    let guard = 0
+    while (remaining > 0.5 && guard < 50) {
+      const open = items.filter(item => item.target < SUBJECT_MAX)
+      const prioritySum = open.reduce((sum, item) => sum + (SUBJECT_MAX - item.target) * item.efficiency, 0)
+      if (!open.length || prioritySum <= 0) break
+      let distributed = 0
+      open.forEach(item => {
+        const share = remaining * ((SUBJECT_MAX - item.target) * item.efficiency / prioritySum)
+        const add = Math.min(SUBJECT_MAX - item.target, share)
+        item.target += add
+        distributed += add
+      })
+      remaining -= distributed
+      if (distributed < 0.5) break
+      guard += 1
+    }
+
+    return items.map(item => {
+      const target = Math.round(item.target)
+      const points = details
+        .filter(detail => detail.subject === item.name)
+        .map(detail => ({ id: detail.id, name: detail.name, mastery: detail.mastery, correct: detail.correct, total: detail.total }))
+        .sort((a, b) => a.mastery - b.mastery)
+      return {
+        name: item.name,
+        current: item.current,
+        mastery: item.mastery,
+        target,
+        gap: Math.max(0, target - item.current),
+        strategy: item.mastery < 40
+          ? '抓基础概念与高频送分题'
+          : item.mastery < 70
+            ? '针对薄弱知识点专项突破'
+            : '巩固高频易错点，保持手感',
+        knowledgePoints: points,
+        weakPoints: points.filter(point => point.mastery < 60)
+      }
+    })
+  })
+
+  // 跨科目的优先复习清单：掌握度最低的若干知识点，回答“先补哪些重点”。
+  const focusKnowledge = computed(() => {
+    const subjects = selectedMajor.value?.subjects || []
+    const details = (diagnostic.value.knowledgeDetails || []).filter(detail => subjects.includes(detail.subject))
+    return [...details]
+      .sort((a, b) => a.mastery - b.mastery)
+      .filter(detail => detail.mastery < 60)
+      .slice(0, 6)
+      .map(detail => ({ id: detail.id, name: detail.name, subject: detail.subject, mastery: detail.mastery, correct: detail.correct, total: detail.total }))
+  })
   const weeklyHours = computed(() => profile.value.mode === 'plan'
     ? Number(profile.value.weekdayHours) * 5 + Number(profile.value.weekendHours) * 2
     : Number(diagnostic.value.weeklyHours || 0))
@@ -169,6 +251,8 @@ export const useApplicationStore = defineStore('application', () => {
     referenceScore,
     targetScore,
     scoreGap,
+    subjectTargets,
+    focusKnowledge,
     weeklyHours,
     estimatedWeeks,
     overallProgress,

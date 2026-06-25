@@ -1,0 +1,119 @@
+{
+  "title": "基础语法",
+  "intro": "会单词还要懂规则才能造对句子。下面是成考英语最基础、最常考的语法点，配中英对照例句。",
+  "sections": [
+    {
+      "id": "patterns",
+      "name": "一、五大基本句型",
+      "short": "基本句型",
+      "points": [
+        { "title": "主语 + 谓语（S + V）", "explain": "最简单的句子，主语发出一个动作。", "examples": [
+          { "en": "Birds fly.", "cn": "鸟会飞。" },
+          { "en": "The baby is crying.", "cn": "婴儿在哭。" }
+        ] },
+        { "title": "主语 + 系动词 + 表语（S + V + P）", "explain": "用 be / become / look 等系动词连接，表语说明主语是什么或怎么样。", "examples": [
+          { "en": "She is a teacher.", "cn": "她是一名老师。" },
+          { "en": "The soup tastes good.", "cn": "这汤味道很好。" }
+        ] },
+        { "title": "主语 + 谓语 + 宾语（S + V + O）", "explain": "谓语动作作用到一个宾语上。", "examples": [
+          { "en": "I like English.", "cn": "我喜欢英语。" },
+          { "en": "We play football.", "cn": "我们踢足球。" }
+        ] },
+        { "title": "主语 + 谓语 + 双宾语（S + V + O + O）", "explain": "给某人某物，常见动词 give / tell / show / send。", "examples": [
+          { "en": "He gave me a book.", "cn": "他给了我一本书。" },
+          { "en": "She told us a story.", "cn": "她给我们讲了个故事。" }
+        ] },
+        { "title": "主语 + 谓语 + 宾语 + 宾补（S + V + O + C）", "explain": "宾语后再加成分补充说明宾语。", "examples": [
+          { "en": "We call him Tom.", "cn": "我们叫他汤姆。" },
+          { "en": "Keep the room clean.", "cn": "保持房间干净。" }
+        ] }
+      ],
+      "quiz": [
+        { "stem": "下列哪一句是“主语 + 系动词 + 表语”结构？", "options": ["She is a teacher.", "I like English.", "Birds fly.", "He gave me a book."], "answer": "She is a teacher." },
+        { "stem": "“We call him Tom.” 属于哪种基本句型？", "options": ["主谓", "主谓宾", "主谓宾 + 宾补", "主系表"], "answer": "主谓宾 + 宾补" },
+        { "stem": "选出“主语 + 谓语 + 宾语”结构的句子：", "options": ["The soup tastes good.", "We play football.", "There is a book.", "Keep quiet."], "answer": "We play football." }
+      ]
+    },
+    {
+      "id": "tense",
+      "name": "二、常用时态",
+      "short": "时态",
+      "points": [
+        { "title": "一般现在时", "explain": "表示经常、习惯的动作或客观事实。第三人称单数动词加 -s/-es。", "examples": [
+          { "en": "I get up at six.", "cn": "我六点起床。" },
+          { "en": "She likes music.", "cn": "她喜欢音乐。" }
+        ] },
+        { "title": "一般过去时", "explain": "表示过去发生的动作，动词用过去式。", "examples": [
+          { "en": "I watched TV last night.", "cn": "我昨晚看了电视。" },
+          { "en": "He went to school.", "cn": "他去上学了。" }
+        ] },
+        { "title": "一般将来时", "explain": "表示将来要发生的动作，结构 will + 动词原形，或 be going to + 动词原形。", "examples": [
+          { "en": "I will call you tomorrow.", "cn": "我明天给你打电话。" },
+          { "en": "We are going to travel.", "cn": "我们打算去旅行。" }
+        ] },
+        { "title": "现在进行时", "explain": "表示此刻正在进行的动作，结构 be + 动词-ing。", "examples": [
+          { "en": "She is reading a book.", "cn": "她正在看书。" },
+          { "en": "They are playing.", "cn": "他们正在玩。" }
+        ] },
+        { "title": "现在完成时", "explain": "表示过去发生、对现在有影响的动作，结构 have/has + 过去分词。", "examples": [
+          { "en": "I have finished my homework.", "cn": "我已经完成了作业。" },
+          { "en": "He has left.", "cn": "他已经走了。" }
+        ] }
+      ],
+      "quiz": [
+        { "stem": "She ___ music every day.", "options": ["like", "likes", "liked", "is liking"], "answer": "likes" },
+        { "stem": "I ___ TV last night.", "options": ["watch", "watches", "watched", "will watch"], "answer": "watched" },
+        { "stem": "Look! They ___ now.", "options": ["play", "plays", "are playing", "played"], "answer": "are playing" },
+        { "stem": "I ___ my homework already.", "options": ["finish", "finished", "have finished", "will finish"], "answer": "have finished" }
+      ]
+    },
+    {
+      "id": "agreement",
+      "name": "三、主谓一致与 be 动词",
+      "short": "主谓一致",
+      "points": [
+        { "title": "be 动词的人称变化", "explain": "I 用 am；you / we / they 用 are；he / she / it 用 is。", "examples": [
+          { "en": "I am a student.", "cn": "我是一名学生。" },
+          { "en": "They are friends.", "cn": "他们是朋友。" }
+        ] },
+        { "title": "第三人称单数", "explain": "主语是 he/she/it 或单数名词时，一般现在时谓语动词加 -s/-es。", "examples": [
+          { "en": "He works hard.", "cn": "他工作努力。" },
+          { "en": "She goes to school by bus.", "cn": "她坐公交车上学。" }
+        ] },
+        { "title": "主谓数的一致", "explain": "主语单数，谓语用单数；主语复数，谓语用复数。", "examples": [
+          { "en": "The dog runs fast.", "cn": "这只狗跑得快。" },
+          { "en": "The dogs run fast.", "cn": "这些狗跑得快。" }
+        ] }
+      ],
+      "quiz": [
+        { "stem": "He ___ to school by bus.", "options": ["go", "goes", "going", "are going"], "answer": "goes" },
+        { "stem": "They ___ my friends.", "options": ["is", "am", "are", "be"], "answer": "are" },
+        { "stem": "The dog ___ fast.", "options": ["run", "runs", "running", "are run"], "answer": "runs" }
+      ]
+    },
+    {
+      "id": "basics",
+      "name": "四、there be 与名词冠词",
+      "short": "there be / 名词",
+      "points": [
+        { "title": "there be 句型", "explain": "表示“某处有某物”。遵循就近原则：be 与最靠近它的名词保持一致。", "examples": [
+          { "en": "There is a pen on the desk.", "cn": "桌上有一支笔。" },
+          { "en": "There are some books here.", "cn": "这儿有一些书。" }
+        ] },
+        { "title": "可数名词的单复数", "explain": "可数名词复数一般加 -s/-es。", "examples": [
+          { "en": "one book → two books", "cn": "一本书 → 两本书" },
+          { "en": "one box → two boxes", "cn": "一个盒子 → 两个盒子" }
+        ] },
+        { "title": "冠词 a / an / the", "explain": "a/an 泛指“一个”（an 用于元音音素开头的词前）；the 表示特指。", "examples": [
+          { "en": "a book / an apple", "cn": "一本书 / 一个苹果" },
+          { "en": "Close the door, please.", "cn": "请关上门。" }
+        ] }
+      ],
+      "quiz": [
+        { "stem": "___ a pen on the desk.", "options": ["There is", "There are", "Have", "Has"], "answer": "There is" },
+        { "stem": "I want ___ apple.", "options": ["a", "an", "the", "（不填）"], "answer": "an" },
+        { "stem": "There ___ some books here.", "options": ["is", "am", "are", "be"], "answer": "are" }
+      ]
+    }
+  ]
+}
