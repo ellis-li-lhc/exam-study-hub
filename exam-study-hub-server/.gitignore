@@ -1,0 +1,55 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# 打包/构建产物
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# ---- 环境变量与密钥（绝不提交）----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- 测试 / 覆盖率 / 缓存 ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# ---- 工具 / 包管理 ----
+pip-log.txt
+pip-wheel-metadata/
+
+# ---- 数据库本地文件 / 日志 ----
+*.sqlite3
+*.db
+*.log
+logs/
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# ---- Alembic ----
+# 迁移脚本需要提交，这里只忽略可能的本地临时产物（默认无）
