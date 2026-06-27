@@ -23,6 +23,7 @@ const routes = [
       { path: 'target', name: 'Target', component: () => import('../views/Target.vue'), meta: { title: '目标分分析', icon: 'Aim' } },
       { path: 'plan', name: 'StudyPlan', component: () => import('../views/StudyPlan.vue'), meta: { title: '学习路线', icon: 'Calendar' } },
       { path: 'progress', name: 'Progress', component: () => import('../views/Progress.vue'), meta: { title: '学习进度', icon: 'TrendCharts' } },
+      { path: 'admin/users', name: 'AdminUsers', component: () => import('../views/AdminUsers.vue'), meta: { title: '用户管理', icon: 'Setting', admin: true } },
       { path: 'selection', redirect: '/profile' }
     ]
   }
@@ -48,6 +49,10 @@ router.beforeEach((to) => {
   }
   // 已登录还想去登录页：直接回首页。
   if (to.name === 'Login' && auth.isAuthenticated) {
+    return { name: 'Home' }
+  }
+  // 管理员专属页面：非管理员一律挡回首页。
+  if (to.meta.admin && !auth.isAdmin) {
     return { name: 'Home' }
   }
 

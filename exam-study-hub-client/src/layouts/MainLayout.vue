@@ -12,7 +12,6 @@
       <div class="cycle-card">
         <div class="cycle-top">
           <span>{{ store.profile.examYear }} 考试周期</span>
-          <el-tag size="small" type="success" effect="plain">个人版</el-tag>
         </div>
         <div class="cycle-progress"><span :style="{ width: `${flowProgress}%` }"></span></div>
         <small>已完成 {{ completedSteps }} / 5 项准备</small>
@@ -117,16 +116,22 @@ async function onUserCommand(command) {
   }
 }
 
-const menuItems = [
-  { path: '/home', title: '备考总览', icon: 'Grid' },
-  { path: '/profile', title: '报考档案', icon: 'User' },
-  { path: '/schools', title: '专业与院校', icon: 'School' },
-  { path: '/diagnosis', title: '入学诊断', icon: 'DataAnalysis' },
-  { path: '/target', title: '目标分分析', icon: 'Aim' },
-  { path: '/plan', title: '学习路线', icon: 'Calendar' },
-  { path: '/progress', title: '学习进度', icon: 'TrendCharts' },
-  { path: '/english', title: '英语特训', icon: 'Notebook' }
-]
+const menuItems = computed(() => {
+  const items = [
+    { path: '/home', title: '备考总览', icon: 'Grid' },
+    { path: '/profile', title: '报考档案', icon: 'User' },
+    { path: '/schools', title: '专业与院校', icon: 'School' },
+    { path: '/diagnosis', title: '入学诊断', icon: 'DataAnalysis' },
+    { path: '/target', title: '目标分分析', icon: 'Aim' },
+    { path: '/plan', title: '学习路线', icon: 'Calendar' },
+    { path: '/progress', title: '学习进度', icon: 'TrendCharts' },
+    { path: '/english', title: '英语特训', icon: 'Notebook' }
+  ]
+  if (auth.isAdmin) {
+    items.push({ path: '/admin/users', title: '用户管理', icon: 'Setting' })
+  }
+  return items
+})
 
 const provinceLabel = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
 const completedSteps = computed(() => [

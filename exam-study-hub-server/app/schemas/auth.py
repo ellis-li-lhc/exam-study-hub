@@ -1,4 +1,7 @@
 # 鉴权接口的出入参形状。
+from datetime import datetime
+from typing import Literal
+
 from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
@@ -20,6 +23,7 @@ class UserRead(BaseModel):
     id: int
     username: str
     email: EmailStr | None = None
+    role: str = "user"
     model_config = ConfigDict(from_attributes=True)
 
 
@@ -28,3 +32,18 @@ class TokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
     user: UserRead
+
+
+class UserAdminItem(BaseModel):
+    """管理员视角的用户列表项。"""
+    id: int
+    username: str
+    email: EmailStr | None = None
+    role: str
+    created_at: datetime
+    model_config = ConfigDict(from_attributes=True)
+
+
+class RoleUpdate(BaseModel):
+    """修改用户角色的入参。"""
+    role: Literal["user", "admin"]

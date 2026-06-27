@@ -37,3 +37,22 @@ def authenticate(db: Session, username: str, password: str) -> User | None:
     if not user or not verify_password(password, user.hashed_password):
         return None
     return user
+
+
+def list_users(db: Session) -> list[User]:
+    """列出所有用户（管理员用）。"""
+    return list(db.scalars(select(User).order_by(User.id)).all())
+
+
+def update_role(db: Session, user: User, role: str) -> User:
+    """修改用户角色。"""
+    user.role = role
+    db.commit()
+    db.refresh(user)
+    return user
+
+
+def delete_user(db: Session, user: User) -> None:
+    """删除用户（连带其云端状态）。"""
+    db.delete(user)
+    db.commit()

@@ -11,6 +11,7 @@ export const useAuthStore = defineStore('auth', () => {
   const user = ref(null)
 
   const isAuthenticated = computed(() => Boolean(token.value))
+  const isAdmin = computed(() => user.value?.role === 'admin')
 
   function setSession(tokenValue, userValue) {
     token.value = tokenValue
@@ -57,5 +58,5 @@ export const useAuthStore = defineStore('auth', () => {
     if (clearData) clearLocalState()
   }
 
-  return { token, user, isAuthenticated, login, register, restore, logout }
+  return { token, user, isAuthenticated, isAdmin, login, register, restore, logout }
 })
