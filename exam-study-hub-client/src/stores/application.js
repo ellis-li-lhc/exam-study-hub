@@ -291,6 +291,36 @@ export const useApplicationStore = defineStore('application', () => {
     if (currentStage.value < 4) currentStage.value += 1
   }
 
+  // —— 云端同步用 ——
+  // 用云端拉取的 app_state 整块覆盖本地状态（登录后调用）。
+  function hydrate(blob) {
+    if (!blob || typeof blob !== 'object') return
+    if (blob.profile) profile.value = blob.profile
+    if ('selectedInstitutionCode' in blob) selectedInstitutionCode.value = blob.selectedInstitutionCode
+    if (blob.diagnostic && blob.diagnostic.version === DIAGNOSTIC_VERSION) diagnostic.value = blob.diagnostic
+    if (blob.currentStage) currentStage.value = blob.currentStage
+    if (Array.isArray(blob.tasks)) tasks.value = blob.tasks
+    if (Array.isArray(blob.stageTests)) stageTests.value = blob.stageTests
+  }
+
+  // 退出登录时把本地状态恢复成默认值，避免下个账号看到上个账号的数据。
+  function resetAll() {
+    profile.value = {
+      provinces: [],
+      examYear: getDefaultYear(),
+      majorCode: '',
+      mode: 'plan',
+      weekdayHours: 2,
+      weekendHours: 4,
+      startDate: new Date().toISOString().slice(0, 10)
+    }
+    selectedInstitutionCode.value = null
+    diagnostic.value = createDefaultDiagnostic()
+    currentStage.value = 1
+    tasks.value = todayTasks
+    stageTests.value = []
+  }
+
   watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, stageTests], () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       profile: profile.value,
@@ -337,6 +367,8 @@ export const useApplicationStore = defineStore('application', () => {
     resetDiagnostic,
     toggleTask,
     submitStageTest,
-    advanceStage
+    advanceStage,
+    hydrate,
+    resetAll
   }
 })

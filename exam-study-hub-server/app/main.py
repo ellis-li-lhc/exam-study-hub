@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 # 导入我们自己写的配置和路由
 from app.core.config import settings
-from app.routers import majors, provinces, institutions, questions
+from app.routers import majors, provinces, institutions, questions, auth, state
 from app.db.session import get_db
 
 # 创建 FastAPI 应用实例，title 会显示在 /docs 文档页顶部
@@ -27,6 +27,8 @@ app.include_router(majors.router)
 app.include_router(provinces.router)
 app.include_router(institutions.router)
 app.include_router(questions.router)
+app.include_router(auth.router)
+app.include_router(state.router)
 
 
 # 健康检查接口：访问 /api/health 返回 {"status": "ok"}，

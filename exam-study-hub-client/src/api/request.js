@@ -20,8 +20,14 @@ http.interceptors.response.use(
   // 失败：统一抛出可读错误（FastAPI 的错误信息在 error.response.data.detail）
   (error) => {
     const status = error.response?.status
-    // 将来接入鉴权后，可在此统一处理 401：
-    // if (status === 401) { localStorage.removeItem('token'); /* 跳登录 */ }
+    // 401：token 缺失或失效。清掉本地 token，跳回登录页（带上当前路径以便登录后跳回）。
+    if (status === 401) {
+      localStorage.removeItem('token')
+      const path = window.location.pathname + window.location.search
+      if (!path.startsWith('/login')) {
+        window.location.assign(`/login?redirect=${encodeURIComponent(path)}`)
+      }
+    }
     const message = error.response?.data?.detail || error.message || '请求失败'
     return Promise.reject(new Error(message))
   }

@@ -9,3 +9,7 @@ from app.models.catalog import (  # noqa: F401
     QuestionTopic,
     Question,
 )
+from app.models.user import (  # noqa: F401
+    User,
+    UserState,
+)

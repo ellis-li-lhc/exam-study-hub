@@ -51,7 +51,20 @@
           </div>
         </div>
         <div class="topbar-actions">
-          <el-avatar :size="36">我</el-avatar>
+          <el-dropdown trigger="click" @command="onUserCommand">
+            <span class="user-trigger">
+              <el-avatar :size="36">{{ avatarText }}</el-avatar>
+              <span class="user-name">{{ auth.user?.username || '我' }}</span>
+              <el-icon><ArrowDown /></el-icon>
+            </span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item command="logout">
+                  <el-icon><SwitchButton /></el-icon> 退出登录
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
         </div>
       </el-header>
 
@@ -78,12 +91,31 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import { ElMessageBox } from 'element-plus'
 import { useApplicationStore } from '../stores/application'
+import { useAuthStore } from '../stores/auth'
 
 const route = useRoute()
+const router = useRouter()
 const store = useApplicationStore()
+const auth = useAuthStore()
 const mobileOpen = ref(false)
+
+const avatarText = computed(() => (auth.user?.username || '我').slice(0, 1).toUpperCase())
+
+async function onUserCommand(command) {
+  if (command !== 'logout') return
+  const confirmed = await ElMessageBox.confirm(
+    '退出后本机将清除当前学习数据（云端已保存），确定退出吗？',
+    '退出登录',
+    { confirmButtonText: '退出', cancelButtonText: '取消', type: 'warning' }
+  ).catch(() => false)
+  if (confirmed) {
+    auth.logout()
+    router.replace('/login')
+  }
+}
 
 const menuItems = [
   { path: '/home', title: '备考总览', icon: 'Grid' },
@@ -150,6 +182,9 @@ const headerSubtitle = computed(() => {
 .topbar { height:76px; padding:0 30px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:80; background:rgba(248,251,255,.88); border-bottom:1px solid rgba(216,225,239,.8); backdrop-filter:blur(16px); }
 .topbar-title { display:flex; align-items:center; gap:10px; }.topbar-title h1 { font-size:1.05rem; color:var(--ink); line-height:1.35; }.eyebrow { color:var(--text-muted); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 .topbar-actions { display:flex; align-items:center; gap:12px; }.mobile-menu { display:none; }
+.user-trigger { display:flex; align-items:center; gap:8px; cursor:pointer; outline:none; color:var(--text-secondary); }
+.user-trigger .user-name { font-size:.85rem; font-weight:600; color:var(--ink); }
+.user-trigger .el-icon { font-size:13px; color:var(--text-muted); }
 .main-content { width:100%; max-width:1480px; margin:0 auto; padding:26px 30px 48px; }
 .page-enter-active,.page-leave-active { transition:opacity .18s ease,transform .18s ease; }.page-enter-from { opacity:0; transform:translateY(8px); }.page-leave-to { opacity:0; transform:translateY(-5px); }
 .mobile-brand { padding:22px 14px; }

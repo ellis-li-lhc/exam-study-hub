@@ -20,6 +20,14 @@ class Settings(BaseSettings):
     # 允许跨域访问的前端地址。前端 Vite 开发服务器默认跑在 5173 端口。
     cors_origins: str = "http://localhost:5173"
 
+    # —— JWT 鉴权相关 ——
+    # secret_key：给 JWT 签名用的密钥。生产环境务必在 .env 里换成随机长串，不要用默认值。
+    secret_key: str = "dev-secret-change-me-in-production"
+    # 签名算法，HS256 是对称加密，配合上面的 secret_key 使用。
+    jwt_algorithm: str = "HS256"
+    # access token 有效期（分钟）。这里给 7 天，方便个人使用、少频繁登录。
+    access_token_expire_minutes: int = 60 * 24 * 7
+
     # @property 让下面这个方法可以像属性一样访问：settings.cors_origin_list
     # 作用：把上面用逗号分隔的字符串，拆成一个列表，方便 CORS 中间件使用。
     @property

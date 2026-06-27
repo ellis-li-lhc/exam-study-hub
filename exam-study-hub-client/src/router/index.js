@@ -1,8 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainLayout from '../layouts/MainLayout.vue'
 import { useApplicationStore } from '../stores/application'
+import { useAuthStore } from '../stores/auth'
 
 const routes = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue'),
+    meta: { public: true }
+  },
   {
     path: '/',
     component: MainLayout,
@@ -33,6 +40,17 @@ const NEED_INSTITUTION = ['Diagnosis', 'Target', 'StudyPlan', 'Progress']
 const NEED_DIAGNOSIS = ['Target', 'StudyPlan', 'Progress']
 
 router.beforeEach((to) => {
+  const auth = useAuthStore()
+
+  // 未登录：除登录页外一律跳登录，并记下原目标用于登录后跳回。
+  if (!to.meta.public && !auth.isAuthenticated) {
+    return { name: 'Login', query: to.fullPath !== '/' ? { redirect: to.fullPath } : {} }
+  }
+  // 已登录还想去登录页：直接回首页。
+  if (to.name === 'Login' && auth.isAuthenticated) {
+    return { name: 'Home' }
+  }
+
   const store = useApplicationStore()
   const name = to.name
 

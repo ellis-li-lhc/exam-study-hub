@@ -59,6 +59,17 @@ export const useVocabularyStore = defineStore('vocabulary', () => {
     currentBatch.value = 0
   }
 
+  // —— 云端同步用 ——
+  function hydrate(blob) {
+    if (blob && Array.isArray(blob.knownIds)) knownIds.value = new Set(blob.knownIds)
+    if (blob && typeof blob.currentBatch === 'number') currentBatch.value = blob.currentBatch
+  }
+
+  function resetAll() {
+    knownIds.value = new Set()
+    currentBatch.value = 0
+  }
+
   watch([knownIds, currentBatch], () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       knownIds: [...knownIds.value],
@@ -81,6 +92,8 @@ export const useVocabularyStore = defineStore('vocabulary', () => {
     toggleKnown,
     setBatch,
     markCurrentBatch,
-    resetProgress
+    resetProgress,
+    hydrate,
+    resetAll
   }
 })

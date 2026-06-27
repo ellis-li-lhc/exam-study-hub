@@ -42,9 +42,18 @@ export const useEnglishProgressStore = defineStore('englishProgress', () => {
     knownKeys.value = new Set([...knownKeys.value].filter(key => !key.startsWith(prefix)))
   }
 
+  // —— 云端同步用 ——
+  function hydrate(blob) {
+    if (blob && Array.isArray(blob.knownKeys)) knownKeys.value = new Set(blob.knownKeys)
+  }
+
+  function resetAll() {
+    knownKeys.value = new Set()
+  }
+
   watch(knownKeys, () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ knownKeys: [...knownKeys.value] }))
   }, { deep: true })
 
-  return { knownKeys, isKnown, toggle, markMany, countKnown, resetPrefix }
+  return { knownKeys, isKnown, toggle, markMany, countKnown, resetPrefix, hydrate, resetAll }
 })
