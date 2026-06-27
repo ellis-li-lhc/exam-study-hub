@@ -7,12 +7,13 @@
 
     <el-form label-position="top" class="profile-form" @submit.prevent>
       <el-card shadow="never" class="form-card">
-        <template #header><div class="form-heading"><span>1</span><div><h3>我可以在哪报名？</h3><p>支持多选，你可以同时比较河南与江苏的招生院校。</p></div></div></template>
-        <el-checkbox-group v-model="draft.provinces" class="choice-grid province-grid">
-          <el-checkbox v-for="province in store.provinceOptions" :key="province.value" :value="province.value" border>
-            <strong>{{ province.label }}</strong><small>{{ province.note }}</small>
-          </el-checkbox>
-        </el-checkbox-group>
+        <template #header><div class="form-heading"><span>1</span><div><h3>我可以在哪报名？</h3><p>支持多选。目前仅江苏开放真实招生数据，其余省份陆续接入。</p></div></div></template>
+        <el-select v-model="draft.provinces" multiple size="large" placeholder="选择报考省份" class="province-select">
+          <el-option v-for="province in chinaProvinces" :key="province.value" :label="province.label" :value="province.value" :disabled="!isProvinceAvailable(province.value)">
+            <span>{{ province.label }}</span>
+            <span v-if="!isProvinceAvailable(province.value)" class="option-tag">暂未开放</span>
+          </el-option>
+        </el-select>
         <el-alert class="policy-tip" type="info" show-icon :closable="false" title="户籍地通常可直接报名；非户籍地可能需要居住证或连续 3～6 个月社保，最终以当年省级公告为准。" />
       </el-card>
 
@@ -59,6 +60,7 @@
 import { computed, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { useApplicationStore } from '../stores/application'
+import { chinaProvinces, isProvinceAvailable } from '../data/regions'
 
 const router = useRouter(); const store = useApplicationStore(); const currentYear = new Date().getFullYear()
 const draft = reactive(JSON.parse(JSON.stringify(store.profile)))
@@ -70,7 +72,7 @@ function saveAndContinue(){ store.updateProfile(draft); router.push('/schools') 
 
 <style scoped>
 .page-stack{display:flex;flex-direction:column;gap:18px}.page-intro{display:flex;align-items:flex-start;justify-content:space-between}.page-intro h2{color:var(--ink);font-size:1.7rem}.page-intro p{margin-top:5px;color:var(--text-secondary)}.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.72rem;font-weight:800;letter-spacing:.1em}.profile-form{display:flex;flex-direction:column;gap:16px}.form-card{border-radius:20px;border-color:var(--line)}.form-heading{display:flex;gap:13px;align-items:center}.form-heading>span{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;color:var(--primary);font-weight:800;background:var(--primary-soft)}.form-heading h3{color:var(--ink);font-size:1rem}.form-heading p{color:var(--text-muted);font-size:.76rem}.choice-grid,.major-grid,.mode-grid{display:grid;width:100%;gap:12px}.province-grid,.mode-grid{grid-template-columns:repeat(2,1fr)}.major-grid{grid-template-columns:repeat(3,1fr)}
-:deep(.el-checkbox.is-bordered),:deep(.el-radio.is-bordered){width:100%;height:auto;margin:0;padding:16px;border-radius:14px;align-items:flex-start}:deep(.el-checkbox__label),:deep(.el-radio__label){width:100%;white-space:normal}:deep(.el-checkbox__label strong),:deep(.el-checkbox__label small){display:block}:deep(.el-checkbox__label small){margin-top:4px;color:var(--text-secondary);font-size:.75rem}.policy-tip{margin-top:14px}.year-row{display:flex;align-items:center;gap:18px}.year-row .el-select{width:240px}.year-note{display:flex;align-items:center;gap:8px;color:var(--text-secondary);font-size:.8rem}.major-name{font-weight:800;color:var(--ink);margin-right:8px}.major-grid small,.major-grid b{display:block}.major-grid small{min-height:42px;margin:8px 0;color:var(--text-secondary);font-size:.74rem}.major-grid b{color:var(--primary-deep);font-size:.72rem}.mode-title{display:flex;align-items:center;gap:7px;color:var(--ink);font-weight:800}.mode-grid small{display:block;margin-top:7px;color:var(--text-secondary);font-size:.76rem}.time-settings{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:16px;margin-top:18px;padding:18px;border-radius:14px;background:#f7f9fd}.time-settings .el-form-item{margin:0}.time-settings .el-form-item span{margin-left:7px;color:var(--text-muted)}.weekly-total small,.weekly-total strong{display:block}.weekly-total small{color:var(--text-muted);font-size:.74rem}.weekly-total strong{color:var(--primary);font-size:1.35rem}.form-actions{display:flex;align-items:center;justify-content:space-between;padding:8px 2px}.form-actions>span{color:var(--text-muted);font-size:.76rem}
+:deep(.el-checkbox.is-bordered),:deep(.el-radio.is-bordered){width:100%;height:auto;margin:0;padding:16px;border-radius:14px;align-items:flex-start}:deep(.el-checkbox__label),:deep(.el-radio__label){width:100%;white-space:normal}:deep(.el-checkbox__label strong),:deep(.el-checkbox__label small){display:block}:deep(.el-checkbox__label small){margin-top:4px;color:var(--text-secondary);font-size:.75rem}.policy-tip{margin-top:14px}.province-select{width:100%;max-width:420px}.option-tag{float:right;color:var(--text-muted);font-size:.72rem}.year-row{display:flex;align-items:center;gap:18px}.year-row .el-select{width:240px}.year-note{display:flex;align-items:center;gap:8px;color:var(--text-secondary);font-size:.8rem}.major-name{font-weight:800;color:var(--ink);margin-right:8px}.major-grid small,.major-grid b{display:block}.major-grid small{min-height:42px;margin:8px 0;color:var(--text-secondary);font-size:.74rem}.major-grid b{color:var(--primary-deep);font-size:.72rem}.mode-title{display:flex;align-items:center;gap:7px;color:var(--ink);font-weight:800}.mode-grid small{display:block;margin-top:7px;color:var(--text-secondary);font-size:.76rem}.time-settings{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:16px;margin-top:18px;padding:18px;border-radius:14px;background:#f7f9fd}.time-settings .el-form-item{margin:0}.time-settings .el-form-item span{margin-left:7px;color:var(--text-muted)}.weekly-total small,.weekly-total strong{display:block}.weekly-total small{color:var(--text-muted);font-size:.74rem}.weekly-total strong{color:var(--primary);font-size:1.35rem}.form-actions{display:flex;align-items:center;justify-content:space-between;padding:8px 2px}.form-actions>span{color:var(--text-muted);font-size:.76rem}
 @media(max-width:1000px){.major-grid{grid-template-columns:repeat(2,1fr)}.time-settings{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.province-grid,.mode-grid,.major-grid,.time-settings{grid-template-columns:1fr}.year-row,.form-actions{align-items:stretch;flex-direction:column}.year-row .el-select{width:100%}}
 </style>
 
