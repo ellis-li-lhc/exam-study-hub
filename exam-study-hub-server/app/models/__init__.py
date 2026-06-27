@@ -6,4 +6,6 @@ from app.models.catalog import (  # noqa: F401
     Province,
     Institution,
     AdmissionScore,
+    QuestionTopic,
+    Question,
 )

@@ -270,16 +270,22 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, reactive, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
-import { getDiagnosticGroups } from '../data/diagnostic-questions'
+import { fetchDiagnosticGroups } from '../data/diagnostic-questions'
 import { useApplicationStore } from '../stores/application'
 
 const router = useRouter()
 const store = useApplicationStore()
 const subjects = computed(() => store.selectedMajor?.subjects || [])
-const groups = computed(() => getDiagnosticGroups(subjects.value))
+const groups = ref([])
+
+async function loadGroups() {
+  groups.value = await fetchDiagnosticGroups(subjects.value)
+}
+onMounted(loadGroups)
+watch(subjects, loadGroups)
 const activeSubject = ref(subjects.value[0] || '政治')
 const activeResultSubject = ref(subjects.value[0] || '政治')
 const activeGroupId = ref('')

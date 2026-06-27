@@ -1,5 +1,5 @@
 # 招生目录相关的数据库表模型。第一版先建「专业」这一组。
-from sqlalchemy import ForeignKey, String, Integer, UniqueConstraint
+from sqlalchemy import ForeignKey, String, Integer, UniqueConstraint, Text, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -81,3 +81,33 @@ class AdmissionScore(Base):
     source: Mapped[str | None] = mapped_column(String(255), nullable=True)          # 数据来源
 
     institution: Mapped["Institution"] = relationship(back_populates="scores")
+
+
+class QuestionTopic(Base):
+    """诊断/阶段测试题库的知识点。来自 docs/*.json 的 topics。"""
+    __tablename__ = "question_topics"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    subject: Mapped[str] = mapped_column(String(64), index=True)   # 科目名，如 政治 / 英语 / 高等数学（一）
+    name: Mapped[str] = mapped_column(String(128))                 # 知识点名
+    sort_order: Mapped[int] = mapped_column(Integer, default=0)    # 在该科目内的顺序
+
+    questions: Mapped[list["Question"]] = relationship(
+        back_populates="topic", cascade="all, delete-orphan"
+    )
+
+
+class Question(Base):
+    """单选题。options 存规范化后的选项文本（去掉 A. 前缀），answer 为大写字母。"""
+    __tablename__ = "questions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    topic_id: Mapped[int] = mapped_column(
+        ForeignKey("question_topics.id", ondelete="CASCADE"), index=True
+    )
+    stem: Mapped[str] = mapped_column(Text)
+    options: Mapped[list] = mapped_column(JSON)
+    answer: Mapped[str] = mapped_column(String(8))
+    sort_order: Mapped[int] = mapped_column(Integer, default=0)
+
+    topic: Mapped["QuestionTopic"] = relationship(back_populates="questions")

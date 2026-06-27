@@ -57,8 +57,8 @@
 </template>
 
 <script setup>
-import { computed, reactive, ref } from 'vue'
-import { getDiagnosticGroups } from '../data/diagnostic-questions'
+import { computed, onMounted, reactive, ref } from 'vue'
+import { fetchDiagnosticGroups } from '../data/diagnostic-questions'
 import { useApplicationStore } from '../stores/application'
 
 const store = useApplicationStore()
@@ -67,6 +67,11 @@ const testResult = ref(null)
 const testingStage = ref(store.currentStage)
 const testAnswers = reactive({})
 const optionLetters = ['A', 'B', 'C', 'D']
+const allGroups = ref([])
+
+onMounted(async () => {
+  allGroups.value = await fetchDiagnosticGroups(store.selectedMajor?.subjects || [])
+})
 
 const statusLabel = status => ({ completed: '已完成', active: '进行中', pending: '未开始' })[status]
 const statusType = status => ({ completed: 'success', active: 'primary', pending: 'info' })[status]
@@ -74,9 +79,9 @@ const currentStageName = computed(() => store.stages.find(stage => stage.id === 
 
 const stageQuestions = computed(() => {
   const subjects = store.selectedMajor?.subjects || []
-  const allGroups = getDiagnosticGroups(subjects)
+  const groups = allGroups.value
   return subjects.flatMap(subject => {
-    const subjectGroups = allGroups.filter(group => group.subject === subject)
+    const subjectGroups = groups.filter(group => group.subject === subject)
     if (!subjectGroups.length) return []
     const selectedGroup = testingStage.value === 1
       ? subjectGroups[0]

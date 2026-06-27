@@ -5,3 +5,4 @@
 export * from './majors'
 export * from './provinces'
 export * from './institutions'
+export * from './questions'
