@@ -5,9 +5,15 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.crud import institution as crud_inst
 from app.crud.institution import KELEI_TO_CATEGORY, DEFAULT_DURATION
-from app.schemas.institution import InstitutionRead, ScoreRead
+from app.schemas.institution import InstitutionRead, ScoreRead, SourceRead
 
 router = APIRouter(prefix="/api/institutions", tags=["institutions"])
+
+# 各省投档线数据的来源机构。
+PROVIDER_BY_PROVINCE = {
+    "jiangsu": "江苏省教育考试院",
+    "henan": "河南省教育考试院",
+}
 
 
 @router.get("", response_model=list[InstitutionRead])
@@ -39,10 +45,24 @@ def read_institutions(
             )
             for s in inst.scores
         ]
+        # 来源与可信度：由投档线数据派生（年度、官方链接、线型）。
+        province_code = province_map.get(inst.province_id, "")
+        if inst.scores:
+            years = [s.year for s in inst.scores]
+            source_url = next((s.source for s in inst.scores if s.source), None)
+            source = SourceRead(
+                provider=PROVIDER_BY_PROVINCE.get(province_code),
+                year=max(years),
+                line_type=inst.scores[0].line_type,
+                url=source_url,
+                confidence="verified",
+            )
+        else:
+            source = SourceRead(confidence="none")
         results.append(InstitutionRead(
             code=inst.code,
             name=inst.name,
-            province=province_map.get(inst.province_id, ""),
+            province=province_code,
             city=inst.city,
             duration=inst.duration or DEFAULT_DURATION,
             tuition=inst.tuition,
@@ -50,6 +70,7 @@ def read_institutions(
             degree=inst.degree,
             majors=offered,
             scores=scores,
+            source=source,
         ))
 
     # 若指定了专业，只返回开设该专业的院校

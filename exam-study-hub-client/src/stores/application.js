@@ -255,7 +255,10 @@ export const useApplicationStore = defineStore('application', () => {
         tuition: item.tuition ?? '—',
         teachingSite: item.teaching_site || '以院校招生简章为准',
         degree: item.degree || '以院校学位授予要求为准',
-        sourceStatus: '2025 江苏省教育考试院投档线',
+        source: item.source || null,
+        sourceStatus: item.source?.confidence === 'verified'
+          ? `${item.source.year} 年${item.source.provider || ''}${item.source.line_type || ''}`
+          : '暂无官方数据',
         majors: item.majors || [],
         scores: (item.scores || []).map(s => ({ year: s.year, score: s.score, tuition: s.tuition, majorCategory: s.major_category })),
       }))
