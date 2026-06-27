@@ -2,6 +2,7 @@ import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { institutions as mvpInstitutions, majorOptions as mvpMajors, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
 import { getMajors, getProvinces, getInstitutions } from '../api'
+import { getExamDate, buildMilestones, buildDailyTasks, fmtDate } from '../data/planner'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
 const DIAGNOSTIC_VERSION = 'docs-json-question-bank-v1'
@@ -54,6 +55,10 @@ export const useApplicationStore = defineStore('application', () => {
   const currentStage = ref(saved.currentStage || 1)
   const tasks = ref(saved.tasks || todayTasks)
   const stageTests = ref(saved.stageTests || [])
+  // 今天的任务是哪一天生成的（用于「每天自动刷新当日任务」）
+  const tasksDate = ref(saved.tasksDate || null)
+  // 复习队列：阶段测试沉淀的薄弱知识点，会被插入每日任务（动态纠偏）
+  const reviewQueue = ref(saved.reviewQueue || [])
 
   // 专业列表：默认用本地 mvp 数据兜底，loadMajors() 会用后端数据替换。
   const majorOptions = ref(mvpMajors)
@@ -188,6 +193,19 @@ export const useApplicationStore = defineStore('application', () => {
     status: stage.id < currentStage.value ? 'completed' : stage.id === currentStage.value ? 'active' : 'pending'
   })))
 
+  // 参考考试日（当年 10 月第 4 个周六）与距考试天数。
+  const examDate = computed(() => fmtDate(getExamDate(Number(profile.value.examYear) || getDefaultYear())))
+  const daysUntilExam = computed(() => Math.max(0, Math.round((new Date(examDate.value) - new Date()) / 86400000)))
+
+  // 达标里程碑：把四个阶段铺到 [开始日, 考试日]，给出每阶段起止日期。
+  // 未来阶段从「今天」起算，所以进度落后时会自动压缩 —— 即“重排期”。
+  const planMilestones = computed(() => buildMilestones(stageTemplates, {
+    startDate: profile.value.startDate,
+    examDate: examDate.value,
+    currentStage: currentStage.value,
+    today: fmtDate(new Date())
+  }))
+
   function updateProfile(nextProfile) {
     const majorChanged = profile.value.majorCode !== nextProfile.majorCode
     profile.value = { ...profile.value, ...nextProfile }
@@ -268,7 +286,44 @@ export const useApplicationStore = defineStore('application', () => {
 
   function toggleTask(taskId) {
     const task = tasks.value.find(item => item.id === taskId)
-    if (task) task.done = !task.done
+    if (!task) return
+    task.done = !task.done
+    // 完成的是复习任务：从复习队列移除，避免明天再次出现。
+    if (task.done && task.reviewKey) {
+      reviewQueue.value = reviewQueue.value.filter(item => item.knowledgeName !== task.reviewKey)
+    }
+  }
+
+  // 把薄弱知识点加入复习队列（去重）。
+  function addReviews(points) {
+    const existing = new Set(reviewQueue.value.map(item => item.knowledgeName))
+    points.forEach(point => {
+      if (point.knowledgeName && !existing.has(point.knowledgeName)) {
+        reviewQueue.value.push({ subject: point.subject, knowledgeName: point.knowledgeName, addedStage: currentStage.value })
+        existing.add(point.knowledgeName)
+      }
+    })
+  }
+
+  // 重新生成「今天」的任务（计划模式）。
+  function regenerateTasks() {
+    const today = fmtDate(new Date())
+    tasks.value = buildDailyTasks({
+      subjectTargets: subjectTargets.value,
+      currentStage: currentStage.value,
+      weekdayHours: profile.value.weekdayHours,
+      weekendHours: profile.value.weekendHours,
+      reviewQueue: reviewQueue.value,
+      date: today
+    })
+    tasksDate.value = today
+  }
+
+  // 进入计划页时调用：跨天或任务为空则自动生成当日任务。
+  function ensureTodayTasks() {
+    if (profile.value.mode !== 'plan') return
+    const today = fmtDate(new Date())
+    if (tasksDate.value !== today || !tasks.value.length) regenerateTasks()
   }
 
   function submitStageTest(result) {
@@ -283,7 +338,13 @@ export const useApplicationStore = defineStore('application', () => {
       passed,
       date: new Date().toISOString().slice(0, 10)
     })
+    // 动态纠偏：把本次测试答错的知识点加入复习队列。
+    if (Array.isArray(result.weakPoints) && result.weakPoints.length) {
+      addReviews(result.weakPoints)
+    }
     if (passed && currentStage.value < 4) currentStage.value += 1
+    // 立即重排当日任务，让复习项 / 新阶段任务马上生效。
+    if (profile.value.mode === 'plan') regenerateTasks()
     return { passed, threshold }
   }
 
@@ -301,6 +362,8 @@ export const useApplicationStore = defineStore('application', () => {
     if (blob.currentStage) currentStage.value = blob.currentStage
     if (Array.isArray(blob.tasks)) tasks.value = blob.tasks
     if (Array.isArray(blob.stageTests)) stageTests.value = blob.stageTests
+    if ('tasksDate' in blob) tasksDate.value = blob.tasksDate
+    if (Array.isArray(blob.reviewQueue)) reviewQueue.value = blob.reviewQueue
   }
 
   // 退出登录时把本地状态恢复成默认值，避免下个账号看到上个账号的数据。
@@ -319,16 +382,20 @@ export const useApplicationStore = defineStore('application', () => {
     currentStage.value = 1
     tasks.value = todayTasks
     stageTests.value = []
+    tasksDate.value = null
+    reviewQueue.value = []
   }
 
-  watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, stageTests], () => {
+  watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, stageTests, tasksDate, reviewQueue], () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       profile: profile.value,
       selectedInstitutionCode: selectedInstitutionCode.value,
       diagnostic: diagnostic.value,
       currentStage: currentStage.value,
       tasks: tasks.value,
-      stageTests: stageTests.value
+      stageTests: stageTests.value,
+      tasksDate: tasksDate.value,
+      reviewQueue: reviewQueue.value
     }))
   }, { deep: true })
 
@@ -342,6 +409,8 @@ export const useApplicationStore = defineStore('application', () => {
     currentStage,
     tasks,
     stageTests,
+    tasksDate,
+    reviewQueue,
     selectedMajor,
     selectedProvinces,
     filteredInstitutions,
@@ -358,6 +427,9 @@ export const useApplicationStore = defineStore('application', () => {
     estimatedWeeks,
     overallProgress,
     stages,
+    examDate,
+    daysUntilExam,
+    planMilestones,
     updateProfile,
     selectInstitution,
     loadMajors,
@@ -366,6 +438,9 @@ export const useApplicationStore = defineStore('application', () => {
     completeDiagnostic,
     resetDiagnostic,
     toggleTask,
+    addReviews,
+    regenerateTasks,
+    ensureTodayTasks,
     submitStageTest,
     advanceStage,
     hydrate,

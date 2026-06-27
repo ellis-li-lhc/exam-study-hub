@@ -44,7 +44,7 @@
       </el-card>
 
       <el-card shadow="never" class="today-card">
-        <template #header><div class="card-heading"><div><span class="section-kicker">今日节奏</span><h3>{{ store.profile.mode === 'plan' ? '3 项学习任务' : '自主学习建议' }}</h3></div><el-tag>{{ store.profile.mode === 'plan' ? '计划模式' : '自主模式' }}</el-tag></div></template>
+        <template #header><div class="card-heading"><div><span class="section-kicker">今日节奏</span><h3>{{ store.profile.mode === 'plan' ? `${store.tasks.length} 项学习任务` : '自主学习建议' }}</h3></div><el-tag>{{ store.profile.mode === 'plan' ? '计划模式' : '自主模式' }}</el-tag></div></template>
         <template v-if="store.profile.mode === 'plan'">
           <label v-for="task in store.tasks" :key="task.id" class="mini-task" :class="{ done: task.done }">
             <el-checkbox :model-value="task.done" @change="store.toggleTask(task.id)" />
@@ -67,12 +67,16 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useApplicationStore } from '../stores/application'
 
 const router = useRouter()
 const store = useApplicationStore()
+
+// 计划模式下进入首页时，确保已生成「今天」的任务（跨天会自动刷新）。
+onMounted(() => store.ensureTodayTasks())
+
 const hour = new Date().getHours()
 const greeting = hour < 12 ? '早上好' : hour < 18 ? '下午好' : '晚上好'
 const provinceText = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
@@ -89,7 +93,7 @@ const metrics = computed(() => [
   { label: '可报考省份', value: `${store.selectedProvinces.length} 个`, note: provinceText.value, icon: 'Location', tone: 'blue' },
   { label: '考试科目', value: `${store.selectedMajor?.subjects.length || 0} 科`, note: store.selectedMajor?.subjects.join(' · '), icon: 'Tickets', tone: 'mint' },
   { label: '每周学习', value: `${store.weeklyHours} 小时`, note: store.profile.mode === 'plan' ? '系统自动排期' : '由你自主安排', icon: 'Clock', tone: 'amber' },
-  { label: '预计达标', value: `${store.estimatedWeeks} 周`, note: '会随阶段测试动态调整', icon: 'TrendCharts', tone: 'violet' }
+  { label: '距考试', value: `${store.daysUntilExam} 天`, note: `考试日 ${store.examDate}`, icon: 'TrendCharts', tone: 'violet' }
 ])
 
 const journey = computed(() => [
