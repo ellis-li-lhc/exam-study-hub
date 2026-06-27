@@ -6,6 +6,7 @@ class ScoreRead(BaseModel):
     category_name: str          # 科类名，如 专升本经管类
     major_category: str | None = None   # 对应的专业类别，如 经济管理类
     score: int | None = None
+    tuition: int | None = None  # 该科类学费(元/年)，省定标准
 
 
 class InstitutionRead(BaseModel):

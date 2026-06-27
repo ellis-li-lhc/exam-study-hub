@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.db.session import get_db
 from app.crud import institution as crud_inst
-from app.crud.institution import KELEI_TO_CATEGORY
+from app.crud.institution import KELEI_TO_CATEGORY, DEFAULT_DURATION
 from app.schemas.institution import InstitutionRead, ScoreRead
 
 router = APIRouter(prefix="/api/institutions", tags=["institutions"])
@@ -35,6 +35,7 @@ def read_institutions(
                 category_name=s.category_name,
                 major_category=KELEI_TO_CATEGORY.get(s.category_name),
                 score=s.score,
+                tuition=crud_inst.tuition_for(inst.name, KELEI_TO_CATEGORY.get(s.category_name)),
             )
             for s in inst.scores
         ]
@@ -43,7 +44,7 @@ def read_institutions(
             name=inst.name,
             province=province_map.get(inst.province_id, ""),
             city=inst.city,
-            duration=inst.duration,
+            duration=inst.duration or DEFAULT_DURATION,
             tuition=inst.tuition,
             teaching_site=inst.teaching_site,
             degree=inst.degree,

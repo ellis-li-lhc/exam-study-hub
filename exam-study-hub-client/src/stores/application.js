@@ -70,17 +70,22 @@ export const useApplicationStore = defineStore('application', () => {
     if (!tagged.length) return list
     return tagged
       .filter(s => s.majorCategory === category && s.score != null)
-      .map(s => ({ year: s.year, score: s.score }))
+      .map(s => ({ year: s.year, score: s.score, tuition: s.tuition }))
   }
 
   const selectedMajor = computed(() => majorOptions.value.find(item => item.code === profile.value.majorCode))
   const selectedProvinces = computed(() => provinceOptions.value.filter(item => profile.value.provinces.includes(item.value)))
   const filteredInstitutions = computed(() => institutions.value
     .filter(item => profile.value.provinces.includes(item.province) && (item.majors || []).includes(profile.value.majorCode))
-    .map(item => ({ ...item, scores: relevantScores(item, selectedMajor.value?.category) })))
+    .map(item => {
+      const scores = relevantScores(item, selectedMajor.value?.category)
+      return { ...item, scores, tuition: scores[0]?.tuition ?? item.tuition }
+    }))
   const selectedInstitution = computed(() => {
     const found = institutions.value.find(item => item.code === selectedInstitutionCode.value)
-    return found ? { ...found, scores: relevantScores(found, selectedMajor.value?.category) } : undefined
+    if (!found) return undefined
+    const scores = relevantScores(found, selectedMajor.value?.category)
+    return { ...found, scores, tuition: scores[0]?.tuition ?? found.tuition }
   })
   const profileComplete = computed(() => profile.value.provinces.length > 0 && Boolean(profile.value.majorCode))
   const diagnosisComplete = computed(() => diagnostic.value.completed)
@@ -234,7 +239,7 @@ export const useApplicationStore = defineStore('application', () => {
         degree: item.degree || '以院校学位授予要求为准',
         sourceStatus: '2025 江苏省教育考试院投档线',
         majors: item.majors || [],
-        scores: (item.scores || []).map(s => ({ year: s.year, score: s.score, majorCategory: s.major_category })),
+        scores: (item.scores || []).map(s => ({ year: s.year, score: s.score, tuition: s.tuition, majorCategory: s.major_category })),
       }))
     } catch (error) {
       console.warn('加载院校列表失败，已使用本地兜底数据', error)

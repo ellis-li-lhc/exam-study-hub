@@ -24,7 +24,7 @@
           <div class="school-stats">
             <span><small>近年参考线</small><strong>{{ latestScore(school) }} 分</strong></span>
             <span><small>学制</small><strong>{{ school.duration }}</strong></span>
-            <span><small>学费参考</small><strong>¥{{ school.tuition }}/年</strong></span>
+            <span><small>学费参考</small><strong>{{ school.tuition ? `¥${school.tuition}/年` : '暂未获取' }}</strong></span>
           </div>
           <div class="school-meta"><span><el-icon><Location /></el-icon>{{ school.teachingSite }}</span><span><el-icon><Medal /></el-icon>{{ school.degree }}</span></div>
         </article>
