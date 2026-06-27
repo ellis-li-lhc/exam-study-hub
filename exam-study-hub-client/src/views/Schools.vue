@@ -5,7 +5,7 @@
       <el-button @click="router.push('/profile')"><el-icon><Edit /></el-icon>修改专业</el-button>
     </section>
 
-    <el-alert title="当前为界面演示数据，院校名称、分数、学费和教学点将在接入官方数据后替换。" type="warning" show-icon :closable="false" />
+    <el-alert title="院校与投档线为 2025 年江苏省教育考试院数据，仅供参考；录取以当年官方招生简章为准。" type="info" show-icon :closable="false" />
 
     <div class="subject-strip">
       <span><el-icon><Tickets /></el-icon>统考科目</span>

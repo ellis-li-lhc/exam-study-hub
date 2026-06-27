@@ -51,7 +51,6 @@
           </div>
         </div>
         <div class="topbar-actions">
-          <el-tag type="warning" effect="light">Mock 数据</el-tag>
           <el-avatar :size="36">我</el-avatar>
         </div>
       </el-header>

@@ -62,7 +62,7 @@
       </el-card>
     </section>
 
-    <el-alert title="当前院校、分数和收费信息为界面演示数据，接入后端后应以考试院和院校当年招生简章为准。" type="warning" show-icon :closable="false" />
+    <el-alert title="院校与投档线为 2025 年江苏省教育考试院数据，仅供参考；录取以考试院和院校当年招生简章为准。" type="info" show-icon :closable="false" />
   </div>
 </template>
 
