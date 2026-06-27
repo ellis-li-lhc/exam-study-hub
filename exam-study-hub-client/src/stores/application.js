@@ -1,6 +1,7 @@
 import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
-import { institutions, majorOptions, provinceOptions, stageTemplates, todayTasks } from '../data/mvp'
+import { institutions as mvpInstitutions, majorOptions as mvpMajors, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
+import { getMajors, getProvinces, getInstitutions } from '../api'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
 const DIAGNOSTIC_VERSION = 'docs-json-question-bank-v1'
@@ -54,12 +55,33 @@ export const useApplicationStore = defineStore('application', () => {
   const tasks = ref(saved.tasks || todayTasks)
   const stageTests = ref(saved.stageTests || [])
 
-  const selectedMajor = computed(() => majorOptions.find(item => item.code === profile.value.majorCode))
-  const selectedProvinces = computed(() => provinceOptions.filter(item => profile.value.provinces.includes(item.value)))
-  const filteredInstitutions = computed(() => institutions.filter(item => (
-    profile.value.provinces.includes(item.province) && item.majors.includes(profile.value.majorCode)
-  )))
-  const selectedInstitution = computed(() => institutions.find(item => item.code === selectedInstitutionCode.value))
+  // 专业列表：默认用本地 mvp 数据兜底，loadMajors() 会用后端数据替换。
+  const majorOptions = ref(mvpMajors)
+  // 省份列表：同样本地兜底，loadProvinces() 用后端数据替换。
+  const provinceOptions = ref(mvpProvinces)
+  // 院校列表：本地兜底，loadInstitutions() 用后端数据替换。
+  const institutions = ref(mvpInstitutions)
+
+  // 取某院校对应「选中专业科类」的投档线，归一成 [{year, score}]。
+  // 后端数据每条 score 带 majorCategory；mvp 兜底数据没有该字段，直接用。
+  function relevantScores(item, category) {
+    const list = item.scores || []
+    const tagged = list.filter(s => s.majorCategory != null)
+    if (!tagged.length) return list
+    return tagged
+      .filter(s => s.majorCategory === category && s.score != null)
+      .map(s => ({ year: s.year, score: s.score }))
+  }
+
+  const selectedMajor = computed(() => majorOptions.value.find(item => item.code === profile.value.majorCode))
+  const selectedProvinces = computed(() => provinceOptions.value.filter(item => profile.value.provinces.includes(item.value)))
+  const filteredInstitutions = computed(() => institutions.value
+    .filter(item => profile.value.provinces.includes(item.province) && (item.majors || []).includes(profile.value.majorCode))
+    .map(item => ({ ...item, scores: relevantScores(item, selectedMajor.value?.category) })))
+  const selectedInstitution = computed(() => {
+    const found = institutions.value.find(item => item.code === selectedInstitutionCode.value)
+    return found ? { ...found, scores: relevantScores(found, selectedMajor.value?.category) } : undefined
+  })
   const profileComplete = computed(() => profile.value.provinces.length > 0 && Boolean(profile.value.majorCode))
   const diagnosisComplete = computed(() => diagnostic.value.completed)
   const currentScore = computed(() => Object.values(diagnostic.value.subjectScores).reduce((sum, value) => sum + Number(value || 0), 0))
@@ -175,6 +197,50 @@ export const useApplicationStore = defineStore('application', () => {
     selectedInstitutionCode.value = code
   }
 
+  // 从后端加载专业列表，替换本地兜底数据。
+  // 后端暂无 description 字段，这里按 code 从本地补上（纯展示文案）。
+  async function loadMajors() {
+    try {
+      const data = await getMajors()
+      const descByCode = Object.fromEntries(mvpMajors.map(item => [item.code, item.description]))
+      majorOptions.value = data.map(item => ({ ...item, description: descByCode[item.code] ?? '' }))
+    } catch (error) {
+      console.warn('加载专业列表失败，已使用本地兜底数据', error)
+    }
+  }
+
+  // 从后端加载省份列表。后端返回 {code,name,note}，映射成前端用的 {value,label,note}。
+  async function loadProvinces() {
+    try {
+      const data = await getProvinces()
+      provinceOptions.value = data.map(item => ({ value: item.code, label: item.name, note: item.note }))
+    } catch (error) {
+      console.warn('加载省份列表失败，已使用本地兜底数据', error)
+    }
+  }
+
+  // 从后端加载院校列表，映射成前端用的形状。
+  async function loadInstitutions() {
+    try {
+      const data = await getInstitutions()
+      institutions.value = data.map(item => ({
+        code: item.code,
+        name: item.name,
+        province: item.province,
+        city: item.city || '—',
+        duration: item.duration || '2.5 年',
+        tuition: item.tuition ?? '—',
+        teachingSite: item.teaching_site || '以院校招生简章为准',
+        degree: item.degree || '以院校学位授予要求为准',
+        sourceStatus: '2025 江苏省教育考试院投档线',
+        majors: item.majors || [],
+        scores: (item.scores || []).map(s => ({ year: s.year, score: s.score, majorCategory: s.major_category })),
+      }))
+    } catch (error) {
+      console.warn('加载院校列表失败，已使用本地兜底数据', error)
+    }
+  }
+
   function syncDiagnosticSubjects() {
     const existing = diagnostic.value.subjectScores
     diagnostic.value.subjectScores = Object.fromEntries(
@@ -259,6 +325,9 @@ export const useApplicationStore = defineStore('application', () => {
     stages,
     updateProfile,
     selectInstitution,
+    loadMajors,
+    loadProvinces,
+    loadInstitutions,
     completeDiagnostic,
     resetDiagnostic,
     toggleTask,
