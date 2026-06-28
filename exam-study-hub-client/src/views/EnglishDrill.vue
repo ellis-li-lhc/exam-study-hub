@@ -282,15 +282,45 @@ function startGrammarTest() {
   openTest(`${section.short} · 语法自测`, questions, false)
 }
 
+// —— 语音朗读：等异步加载完成 + 按质量优选声音，避免 Chrome/Edge 选到沙哑的精简音 ——
+let cachedVoices = []
+function loadVoices() {
+  cachedVoices = window.speechSynthesis?.getVoices() || []
+}
+if ('speechSynthesis' in window) {
+  loadVoices()
+  // getVoices() 首次常为空，声音列表异步就绪后会触发该事件
+  window.speechSynthesis.onvoiceschanged = loadVoices
+}
+
+// 按优先级挑高质量英文声音；排除名字带 compact（精简/低质量）的
+function pickBestVoice() {
+  const voices = cachedVoices.length ? cachedVoices : (window.speechSynthesis?.getVoices() || [])
+  const en = voices.filter(v => /^en[-_]?/i.test(v.lang))
+  if (!en.length) return null
+  const enUS = en.filter(v => /en[-_]?US/i.test(v.lang))
+  const pool = enUS.length ? enUS : en
+  const preferred = [
+    /Google US English/i,                 // Chrome 自然音
+    /Microsoft.*(Aria|Jenny|Guy|Natural)/i, // Edge 自然音
+    /Samantha/i,                          // macOS Apple 优质音
+    /Microsoft.*(Zira|David|Mark)/i
+  ]
+  for (const re of preferred) {
+    const hit = pool.find(v => re.test(v.name) && !/compact/i.test(v.name))
+    if (hit) return hit
+  }
+  return pool.find(v => !/compact/i.test(v.name)) || pool[0]
+}
+
 function speak(text) {
   if (!('speechSynthesis' in window)) { ElMessage.warning('当前浏览器不支持语音朗读'); return }
   window.speechSynthesis.cancel()
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = 'en-US'
   utterance.rate = 0.9
-  const voices = window.speechSynthesis.getVoices()
-  const englishVoice = voices.find(voice => /en[-_]US/i.test(voice.lang)) || voices.find(voice => /^en/i.test(voice.lang))
-  if (englishVoice) utterance.voice = englishVoice
+  const voice = pickBestVoice()
+  if (voice) utterance.voice = voice
   window.speechSynthesis.speak(utterance)
 }
 
