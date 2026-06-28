@@ -25,12 +25,13 @@ function daysBetween(a, b) {
   return Math.round((toDate(b) - toDate(a)) / 86400000)
 }
 
-// 成人高考全国统考一般在 10 月最后一个完整周末。这里取当年 10 月的第 4 个周六作为参考考试日。
+// 成人高考统考一般在 10 月最后一个周末。这里把“目标考期/达标基准日”取为
+// 10 月倒数第二个周六（比实际考试提前约一周，给最后冲刺与意外留出缓冲）。
 export function getExamDate(year) {
-  const oct1 = new Date(year, 9, 1)            // 月份从 0 开始，9 = 十月
-  const firstSatOffset = (6 - oct1.getDay() + 7) % 7
-  const fourthSat = 1 + firstSatOffset + 21    // 第 1 个周六再加 3 周
-  return new Date(year, 9, fourthSat)
+  const oct31 = new Date(year, 9, 31)              // 月份从 0 开始，9 = 十月
+  const offsetToLastSat = (oct31.getDay() - 6 + 7) % 7  // 从 10/31 往回到最近周六的天数
+  const lastSat = 31 - offsetToLastSat             // 10 月最后一个周六（≈实际考试）
+  return new Date(year, 9, lastSat - 7)            // 倒数第二个周六（目标达标日）
 }
 
 // 把四个阶段按「建议周数」铺到 [开始日, 考试日] 区间上，算出每个阶段的起止日期。

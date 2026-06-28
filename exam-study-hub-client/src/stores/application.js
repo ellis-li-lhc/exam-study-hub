@@ -223,6 +223,28 @@ export const useApplicationStore = defineStore('application', () => {
     today: fmtDate(new Date())
   }))
 
+  // 目标分可行性：用「分差所需有效学时」对比「到目标考期的可用学时」。
+  // 所需学时沿用 estimatedWeeks 的口径（分差×2.1 + 60），保证两处数字一致。
+  const feasibility = computed(() => {
+    const requiredHours = Math.round(scoreGap.value * 2.1 + 60)
+    const weeksLeft = daysUntilExam.value / 7
+    const weekly = Math.max(0, weeklyHours.value)
+    const availableHours = Math.round(weeksLeft * weekly)
+    const shortfallHours = Math.max(0, requiredHours - availableHours)
+    const feasible = shortfallHours === 0 && weeksLeft > 0
+    // 在剩余周数内补齐缺口，每周还需额外投入的学时
+    const extraWeekly = weeksLeft > 0 ? Math.ceil(shortfallHours / weeksLeft) : null
+    return {
+      requiredHours,
+      availableHours,
+      shortfallHours,
+      weeksLeft: Math.max(0, Math.round(weeksLeft)),
+      weeklyHours: weekly,
+      feasible,
+      extraWeekly
+    }
+  })
+
   function updateProfile(nextProfile) {
     const majorChanged = profile.value.majorCode !== nextProfile.majorCode
     profile.value = { ...profile.value, ...nextProfile }
@@ -439,6 +461,7 @@ export const useApplicationStore = defineStore('application', () => {
     examDate,
     daysUntilExam,
     planMilestones,
+    feasibility,
     updateProfile,
     selectInstitution,
     loadProvinces,
