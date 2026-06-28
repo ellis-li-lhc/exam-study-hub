@@ -8,6 +8,46 @@ from app.models.catalog import Major, MajorSubject, Province, Institution, Admis
 
 SCORES_FILE = Path(__file__).resolve().parent.parent / "scraped-data" / "jiangsu-adult-scores.json"
 
+# 院校所在市（校本部）。来自院校公开资料；外省校标其校本部所在市。
+# 用于报考档案按市筛选院校（成考实际就读以教学点为准，教学点信息以招生简章为准）。
+CITY_BY_NAME = {
+    # 南京
+    "中国药科大学": "南京", "南京中医药大学": "南京", "南京信息工程大学": "南京",
+    "南京农业大学": "南京", "南京医科大学": "南京", "南京审计大学": "南京",
+    "南京工业大学": "南京", "南京工程学院": "南京", "南京师范大学": "南京",
+    "南京晓庄学院": "南京", "南京林业大学": "南京", "南京特殊教育师范学院": "南京",
+    "南京理工大学": "南京", "南京航空航天大学": "南京", "南京财经大学": "南京",
+    "南京邮电大学": "南京", "河海大学": "南京", "金陵科技学院": "南京",
+    "江苏第二师范学院": "南京", "江苏警官学院": "南京",
+    # 徐州
+    "中国矿业大学": "徐州", "江苏师范大学": "徐州", "徐州医科大学": "徐州", "徐州工程学院": "徐州",
+    # 苏州
+    "苏州大学": "苏州", "苏州科技大学": "苏州", "苏州工学院": "苏州",
+    # 无锡
+    "江南大学": "无锡", "无锡太湖学院": "无锡", "无锡学院": "无锡",
+    # 常州
+    "常州大学": "常州", "常州工学院": "常州", "河海大学（常州校区）": "常州", "江苏理工学院": "常州",
+    # 镇江
+    "江苏大学": "镇江", "江苏科技大学": "镇江",
+    # 扬州
+    "扬州大学": "扬州",
+    # 南通
+    "南通大学": "南通", "南通理工学院": "南通",
+    # 盐城
+    "盐城工学院": "盐城", "盐城师范学院": "盐城",
+    # 淮安
+    "淮阴工学院": "淮安", "淮阴师范学院": "淮安",
+    # 连云港
+    "江苏海洋大学": "连云港",
+    # 宿迁
+    "宿迁学院": "宿迁",
+    # 泰州
+    "泰州学院": "泰州",
+    # 省外（校本部所在市）
+    "上海海事大学": "上海", "大连海事大学": "大连",
+    "西安交通大学": "西安", "西安建筑科技大学": "西安", "长安大学": "西安",
+}
+
 # 与前端 exam-study-hub-client/src/data/mvp.js 的 provinceOptions 保持一致
 PROVINCES = [
     {"code": "henan", "name": "河南", "note": "户籍地，可直接按当年公告准备材料"},
@@ -96,6 +136,18 @@ def run():
                   f"新增投档线 {score_added} 条（共 {db.query(AdmissionScore).count()}）")
         else:
             print(f"未找到 {SCORES_FILE}，跳过院校数据")
+
+        # —— 回填院校所在市（按名称映射，可重复运行）——
+        city_updated = 0
+        for inst in db.query(Institution).all():
+            city = CITY_BY_NAME.get(inst.name)
+            if city and inst.city != city:
+                inst.city = city
+                city_updated += 1
+        db.commit()
+        missing = [i.name for i in db.query(Institution).all() if not i.city]
+        print(f"回填院校所在市 {city_updated} 所；仍缺城市 {len(missing)} 所" +
+              (f"：{missing}" if missing else ""))
     finally:
         db.close()
 

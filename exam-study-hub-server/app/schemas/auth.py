@@ -47,3 +47,8 @@ class UserAdminItem(BaseModel):
 class RoleUpdate(BaseModel):
     """修改用户角色的入参。"""
     role: Literal["user", "admin"]
+
+
+class PasswordUpdate(BaseModel):
+    """管理员重置用户密码的入参。"""
+    password: str = Field(min_length=6, max_length=128)

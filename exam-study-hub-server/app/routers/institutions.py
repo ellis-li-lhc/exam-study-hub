@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.core.deps import get_current_user
 from app.crud import institution as crud_inst
 from app.crud.institution import KELEI_TO_CATEGORY, DEFAULT_DURATION
 from app.schemas.institution import InstitutionRead, ScoreRead, SourceRead
@@ -21,6 +22,7 @@ def read_institutions(
     province: str | None = None,
     major: str | None = None,
     db: Session = Depends(get_db),
+    _user=Depends(get_current_user),
 ):
     """按省份(可选)、专业 code(可选)查询院校。
     院校开设哪些专业 = 它投档的科类对应的专业类别下的所有专业。"""

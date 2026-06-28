@@ -3,11 +3,12 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.core.deps import get_current_user
 from app.crud import major as crud_major
 from app.models.catalog import Major
 from app.schemas.major import MajorRead, MajorCreate
 
-router = APIRouter(prefix="/api/majors", tags=["majors"])
+router = APIRouter(prefix="/api/majors", tags=["majors"], dependencies=[Depends(get_current_user)])
 
 
 def _to_read(major: Major) -> MajorRead:

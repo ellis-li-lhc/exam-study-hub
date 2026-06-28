@@ -52,6 +52,14 @@ def update_role(db: Session, user: User, role: str) -> User:
     return user
 
 
+def set_password(db: Session, user: User, new_password: str) -> User:
+    """管理员重置用户密码（存哈希，不保存明文）。"""
+    user.hashed_password = hash_password(new_password)
+    db.commit()
+    db.refresh(user)
+    return user
+
+
 def delete_user(db: Session, user: User) -> None:
     """删除用户（连带其云端状态）。"""
     db.delete(user)

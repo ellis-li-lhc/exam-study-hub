@@ -1,14 +1,11 @@
 # FastAPI 是 Web 框架本体
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI
 # CORS 中间件：解决“前端在 5173、后端在 8000，浏览器默认禁止跨域访问”的问题
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import text
-from sqlalchemy.orm import Session
 
 # 导入我们自己写的配置和路由
 from app.core.config import settings
 from app.routers import majors, provinces, institutions, questions, auth, state, admin
-from app.db.session import get_db
 
 # 创建 FastAPI 应用实例，title 会显示在 /docs 文档页顶部
 app = FastAPI(title="exam-study-hub API")
@@ -37,12 +34,3 @@ app.include_router(admin.router)
 @app.get("/api/health")
 def health():
     return {"status": "ok"}
-
-
-# 数据库连通性检查：访问 /api/db-check，执行一条 SELECT 1。
-# 能返回 {"database": "connected"} 就说明后端到 PostgreSQL 的连接是通的。
-# （这是临时验证用的接口，确认连接没问题后可以删掉。）
-@app.get("/api/db-check")
-def db_check(db: Session = Depends(get_db)):
-    db.execute(text("SELECT 1"))
-    return {"database": "connected"}

@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.core.deps import get_current_user
 from app.crud import question as crud_question
 from app.schemas.question import QuestionGroup, QuestionItem
 
@@ -13,6 +14,7 @@ router = APIRouter(prefix="/api/questions", tags=["questions"])
 def read_questions(
     subjects: str = Query("", description="科目名，逗号分隔，如 政治,英语"),
     db: Session = Depends(get_db),
+    _user=Depends(get_current_user),
 ):
     """按科目返回题库知识点分组。返回结构与前端 getDiagnosticGroups 一致：
     每个知识点是一个 group，含 id/name/description/subject/questions。
