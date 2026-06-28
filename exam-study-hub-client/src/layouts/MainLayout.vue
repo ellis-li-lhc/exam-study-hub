@@ -131,7 +131,8 @@ const menuItems = computed(() => {
     { path: '/target', title: '目标分分析', icon: 'Aim' },
     { path: '/plan', title: '学习路线', icon: 'Calendar' },
     { path: '/progress', title: '学习进度', icon: 'TrendCharts' },
-    { path: '/english', title: '英语特训', icon: 'Notebook' }
+    { path: '/english', title: '英语特训', icon: 'Notebook' },
+    { path: '/politics', title: '政治特训', icon: 'Reading' }
   ]
   if (auth.isAdmin) {
     items.push({ path: '/admin/users', title: '用户管理', icon: 'Setting' })
