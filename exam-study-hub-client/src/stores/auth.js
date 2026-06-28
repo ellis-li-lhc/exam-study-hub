@@ -27,12 +27,15 @@ export const useAuthStore = defineStore('auth', () => {
 
   async function login(payload) {
     const res = await apiLogin(payload)
+    // 先清掉本机可能残留的上一个账号的本地状态，避免被当成“待迁移数据”推到本账号云端
+    clearLocalState()
     setSession(res.access_token, res.user)
     await afterAuthenticated()
   }
 
   async function register(payload) {
     const res = await apiRegister(payload)
+    clearLocalState()
     setSession(res.access_token, res.user)
     await afterAuthenticated()
   }

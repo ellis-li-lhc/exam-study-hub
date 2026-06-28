@@ -89,7 +89,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessageBox } from 'element-plus'
 import { useApplicationStore } from '../stores/application'
@@ -100,6 +100,12 @@ const router = useRouter()
 const store = useApplicationStore()
 const auth = useAuthStore()
 const mobileOpen = ref(false)
+
+// 进入主框架（已登录）后加载基础数据；这些接口需要登录态。
+onMounted(() => {
+  store.loadProvinces()
+  store.loadInstitutions()
+})
 
 const avatarText = computed(() => (auth.user?.username || '我').slice(0, 1).toUpperCase())
 

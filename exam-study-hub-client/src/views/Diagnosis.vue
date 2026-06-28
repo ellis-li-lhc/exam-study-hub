@@ -6,9 +6,14 @@
         <h2>{{ store.diagnosisComplete ? '基础诊断报告' : '知识点基础诊断' }}</h2>
         <p>{{ store.diagnosisComplete ? '分数完全由答题结果生成，可随时重新测试。' : `共 ${groups.length} 个知识点、${totalQuestions} 道单选题，每个知识点 3~5 道。` }}</p>
       </div>
-      <el-tag :type="store.diagnosisComplete ? 'success' : 'primary'" effect="light">
-        {{ store.diagnosisComplete ? '诊断完成' : formatTime(elapsedSeconds) }}
-      </el-tag>
+      <div class="intro-actions">
+        <el-button v-if="auth.isAdmin && !store.diagnosisComplete" type="warning" plain size="small" @click="adminAutofill">
+          <el-icon><MagicStick /></el-icon>随机填充并提交（测试）
+        </el-button>
+        <el-tag :type="store.diagnosisComplete ? 'success' : 'primary'" effect="light">
+          {{ store.diagnosisComplete ? '诊断完成' : formatTime(elapsedSeconds) }}
+        </el-tag>
+      </div>
     </section>
 
     <template v-if="!store.diagnosisComplete">
@@ -275,9 +280,11 @@ import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
 import { fetchDiagnosticGroups } from '../data/diagnostic-questions'
 import { useApplicationStore } from '../stores/application'
+import { useAuthStore } from '../stores/auth'
 
 const router = useRouter()
 const store = useApplicationStore()
+const auth = useAuthStore()
 const subjects = computed(() => store.selectedMajor?.subjects || [])
 const groups = ref([])
 
@@ -375,7 +382,7 @@ function goNext() {
   if (next) setGroup(next)
 }
 
-function submitSubject(subject) {
+function submitSubject(subject, { silent = false } = {}) {
   if (isSubjectSubmitted(subject)) return
   if (!canSubmitSubject(subject)) {
     ElMessage.warning(`请先完成${subject}的全部题目`)
@@ -440,16 +447,32 @@ function submitSubject(subject) {
     activeResultSubject.value = subject
     activeResultGroupIds[subject] = subjectKnowledgeDetails[0]?.id || ''
     window.scrollTo({ top: 0, behavior: 'smooth' })
-    ElMessage.success('全部科目已提交，已生成完整诊断报告')
+    if (!silent) ElMessage.success('全部科目已提交，已生成完整诊断报告')
   } else {
     activeSubject.value = subject
     activeResultGroupIds[subject] = subjectKnowledgeDetails[0]?.id || ''
-    ElMessage.success(`${subject}已提交，已生成本科目报告`)
+    if (!silent) ElMessage.success(`${subject}已提交，已生成本科目报告`)
   }
 }
 
-function resetSubject(subject) {
-  const subjectGroups = groupsBySubject(subject)
+// 管理员测试用：给所有题目随机选答案，并依次提交各科目，直接生成完整诊断报告。
+function adminAutofill() {
+  if (!groups.value.length) {
+    ElMessage.warning('题目尚未加载完成，请稍候再试')
+    return
+  }
+  groups.value.forEach(group => {
+    group.questions.forEach(question => {
+      answers[question.id] = optionLetters[Math.floor(Math.random() * question.options.length)]
+    })
+  })
+  subjects.value.forEach(subject => {
+    if (!isSubjectSubmitted(subject)) submitSubject(subject, { silent: true })
+  })
+  ElMessage.success('已随机填充并提交全部科目，已生成诊断报告')
+}
+
+function resetSubject(subject) {  const subjectGroups = groupsBySubject(subject)
   const subjectQuestionIds = new Set(subjectGroups.flatMap(group => group.questions.map(question => question.id)))
   subjectQuestionIds.forEach(id => delete answers[id])
 
@@ -496,6 +519,7 @@ function restart() {
 .page-intro{display:flex;align-items:flex-start;justify-content:space-between}
 .page-intro h2{color:var(--ink);font-size:1.55rem}
 .page-intro p{margin-top:4px;color:var(--text-secondary);font-size:.82rem}
+.intro-actions{display:flex;align-items:center;gap:10px}
 .section-kicker{display:block;margin-bottom:4px;color:var(--primary);font-size:.7rem;font-weight:800;letter-spacing:.1em}
 .diagnosis-shell{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 12px 30px rgba(30,64,120,.045)}
 .diagnosis-summary{display:grid;grid-template-columns:128px 1fr;align-items:center;gap:16px;padding:14px 18px;background:linear-gradient(135deg,#f8fbff,#eef5ff);border-bottom:1px solid var(--line)}

@@ -1,7 +1,8 @@
 import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
-import { institutions as mvpInstitutions, majorOptions as mvpMajors, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
-import { getMajors, getProvinces, getInstitutions } from '../api'
+import { institutions as mvpInstitutions, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
+import { examMajors, subjectsForCategory } from '../data/majors'
+import { getProvinces, getInstitutions } from '../api'
 import { getExamDate, buildMilestones, buildDailyTasks, fmtDate } from '../data/planner'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
@@ -43,6 +44,7 @@ export const useApplicationStore = defineStore('application', () => {
   const saved = loadSavedState()
   const profile = ref(saved.profile || {
     provinces: [],
+    cities: [],
     examYear: getDefaultYear(),
     majorCode: '',
     mode: 'plan',
@@ -60,8 +62,8 @@ export const useApplicationStore = defineStore('application', () => {
   // 复习队列：阶段测试沉淀的薄弱知识点，会被插入每日任务（动态纠偏）
   const reviewQueue = ref(saved.reviewQueue || [])
 
-  // 专业列表：默认用本地 mvp 数据兜底，loadMajors() 会用后端数据替换。
-  const majorOptions = ref(mvpMajors)
+  // 报考专业列表（成考专升本常见专业，含所属科类）。统考科目由科类决定。
+  const majorOptions = ref(examMajors)
   // 省份列表：同样本地兜底，loadProvinces() 用后端数据替换。
   const provinceOptions = ref(mvpProvinces)
   // 院校列表：本地兜底，loadInstitutions() 用后端数据替换。
@@ -78,14 +80,29 @@ export const useApplicationStore = defineStore('application', () => {
       .map(s => ({ year: s.year, score: s.score, tuition: s.tuition }))
   }
 
-  const selectedMajor = computed(() => majorOptions.value.find(item => item.code === profile.value.majorCode))
+  const selectedMajor = computed(() => {
+    const major = majorOptions.value.find(item => item.code === profile.value.majorCode)
+    return major ? { ...major, subjects: subjectsForCategory(major.category) } : undefined
+  })
   const selectedProvinces = computed(() => provinceOptions.value.filter(item => profile.value.provinces.includes(item.value)))
-  const filteredInstitutions = computed(() => institutions.value
-    .filter(item => profile.value.provinces.includes(item.province) && (item.majors || []).includes(profile.value.majorCode))
-    .map(item => {
-      const scores = relevantScores(item, selectedMajor.value?.category)
-      return { ...item, scores, tuition: scores[0]?.tuition ?? item.tuition }
-    }))
+  // 院校按「报考类别(科类)」反查：院校在该科类有投档线即视为可报。
+  // 后端数据每条 score 带 majorCategory；本地兜底数据无该字段时回退到 majors 匹配。
+  const filteredInstitutions = computed(() => {
+    const category = selectedMajor.value?.category
+    const cities = profile.value.cities || []
+    return institutions.value
+      .filter(item => {
+        if (!profile.value.provinces.includes(item.province)) return false
+        if (cities.length && !cities.includes(item.city)) return false
+        const cats = (item.scores || []).map(s => s.majorCategory).filter(Boolean)
+        if (cats.length) return cats.includes(category)
+        return (item.majors || []).includes(profile.value.majorCode)
+      })
+      .map(item => {
+        const scores = relevantScores(item, category)
+        return { ...item, scores, tuition: scores[0]?.tuition ?? item.tuition }
+      })
+  })
   const selectedInstitution = computed(() => {
     const found = institutions.value.find(item => item.code === selectedInstitutionCode.value)
     if (!found) return undefined
@@ -218,18 +235,6 @@ export const useApplicationStore = defineStore('application', () => {
 
   function selectInstitution(code) {
     selectedInstitutionCode.value = code
-  }
-
-  // 从后端加载专业列表，替换本地兜底数据。
-  // 后端暂无 description 字段，这里按 code 从本地补上（纯展示文案）。
-  async function loadMajors() {
-    try {
-      const data = await getMajors()
-      const descByCode = Object.fromEntries(mvpMajors.map(item => [item.code, item.description]))
-      majorOptions.value = data.map(item => ({ ...item, description: descByCode[item.code] ?? '' }))
-    } catch (error) {
-      console.warn('加载专业列表失败，已使用本地兜底数据', error)
-    }
   }
 
   // 从后端加载省份列表。后端返回 {code,name,note}，映射成前端用的 {value,label,note}。
@@ -373,6 +378,7 @@ export const useApplicationStore = defineStore('application', () => {
   function resetAll() {
     profile.value = {
       provinces: [],
+      cities: [],
       examYear: getDefaultYear(),
       majorCode: '',
       mode: 'plan',
@@ -435,7 +441,6 @@ export const useApplicationStore = defineStore('application', () => {
     planMilestones,
     updateProfile,
     selectInstitution,
-    loadMajors,
     loadProvinces,
     loadInstitutions,
     completeDiagnostic,

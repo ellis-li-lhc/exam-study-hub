@@ -3,17 +3,8 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import { useApplicationStore } from './stores/application'
-
-const store = useApplicationStore()
-
-// 应用启动时从后端加载基础数据（失败则用本地兜底数据）
-onMounted(() => {
-  store.loadMajors()
-  store.loadProvinces()
-  store.loadInstitutions()
-})
+// 基础数据（省份/院校）改在登录后的主框架 MainLayout 内加载：
+// 这些接口需要登录态，放在未鉴权的根组件会被 401 拒绝。
 </script>
 
 <style>
