@@ -69,7 +69,7 @@ def reset_password(
     return target
 
 
-@router.delete("/{user_id}", status_code=204)
+@router.delete("/{user_id}")
 def delete_user(
     user_id: int,
     admin: User = Depends(get_current_admin),
@@ -81,4 +81,4 @@ def delete_user(
     if target.id == admin.id:
         raise HTTPException(status_code=400, detail="不能删除自己")
     crud_user.delete_user(db, target)
-    return None
+    return {"deleted": user_id}

@@ -14,10 +14,19 @@ http.interceptors.request.use((config) => {
 })
 
 // —— 响应拦截器 ——
+// 后端统一返回信封 {code, message, data}：
+// - code === 0 视为成功，返回 data，业务代码直接拿到数据；
+// - code !== 0 视为业务失败，抛出 message。
 http.interceptors.response.use(
-  // 成功：直接返回响应体 data，业务代码就不用每次写 .data
-  (response) => response.data,
-  // 失败：统一抛出可读错误（FastAPI 的错误信息在 error.response.data.detail）
+  (response) => {
+    const body = response.data
+    if (body && typeof body === 'object' && 'code' in body) {
+      if (body.code === 0) return body.data
+      return Promise.reject(new Error(body.message || '请求失败'))
+    }
+    return body   // 兜底：非信封响应（如 204 无内容）
+  },
+  // 失败：HTTP 4xx/5xx，错误体也是信封 {code, message, data:null}
   (error) => {
     const status = error.response?.status
     // 401：token 缺失或失效。清掉本地 token，跳回登录页（带上当前路径以便登录后跳回）。
@@ -28,7 +37,8 @@ http.interceptors.response.use(
         window.location.assign(`/login?redirect=${encodeURIComponent(path)}`)
       }
     }
-    const message = error.response?.data?.detail || error.message || '请求失败'
+    const data = error.response?.data
+    const message = data?.message || data?.detail || error.message || '请求失败'
     return Promise.reject(new Error(message))
   }
 )

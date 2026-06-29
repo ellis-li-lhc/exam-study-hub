@@ -5,10 +5,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # 导入我们自己写的配置和路由
 from app.core.config import settings
+from app.core.envelope import EnvelopeMiddleware
 from app.routers import majors, provinces, institutions, questions, auth, state, admin
 
 # 创建 FastAPI 应用实例，title 会显示在 /docs 文档页顶部
 app = FastAPI(title="exam-study-hub API")
+
+# 统一响应信封：把 /api 下的返回封装成 {code, message, data}
+app.add_middleware(EnvelopeMiddleware)
 
 # 注册 CORS 中间件，允许前端跨域调用本后端
 app.add_middleware(
