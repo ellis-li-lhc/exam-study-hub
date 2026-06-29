@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # 导入我们自己写的配置和路由
 from app.core.config import settings
 from app.core.envelope import EnvelopeMiddleware
-from app.routers import majors, provinces, institutions, questions, auth, state, admin
+from app.routers import provinces, institutions, questions, auth, state, admin
 
 # 创建 FastAPI 应用实例，title 会显示在 /docs 文档页顶部
 app = FastAPI(title="exam-study-hub API")
@@ -23,8 +23,7 @@ app.add_middleware(
     allow_headers=["*"],                      # 允许所有请求头
 )
 
-# 把 majors 这组路由挂到应用上，/api/majors 接口就生效了
-app.include_router(majors.router)
+# 注册各资源路由
 app.include_router(provinces.router)
 app.include_router(institutions.router)
 app.include_router(questions.router)
