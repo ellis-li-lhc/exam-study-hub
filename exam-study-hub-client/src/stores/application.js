@@ -40,6 +40,14 @@ function createDefaultDiagnostic() {
   }
 }
 
+function formatSourceStatus(source) {
+  if (!source || source.confidence !== 'verified') return '暂无官方数据'
+  const label = `${source.year} 年${source.provider || ''}${source.line_type || ''}`
+  if (source.line_type === '征集志愿备档线') return `${label}（余缺计划参考）`
+  if (source.line_type === '省控线') return `${label}（最低控制线参考）`
+  return label
+}
+
 export const useApplicationStore = defineStore('application', () => {
   const saved = loadSavedState()
   const profile = ref(saved.profile || {
@@ -94,6 +102,7 @@ export const useApplicationStore = defineStore('application', () => {
       .filter(item => {
         if (!profile.value.provinces.includes(item.province)) return false
         if (cities.length && !cities.includes(item.city)) return false
+        if (item.majorMatch === 'exact') return (item.majors || []).includes(profile.value.majorCode)
         const cats = (item.scores || []).map(s => s.majorCategory).filter(Boolean)
         if (cats.length) return cats.includes(category)
         return (item.majors || []).includes(profile.value.majorCode)
@@ -283,11 +292,20 @@ export const useApplicationStore = defineStore('application', () => {
         teachingSite: item.teaching_site || '以院校招生简章为准',
         degree: item.degree || '以院校学位授予要求为准',
         source: item.source || null,
-        sourceStatus: item.source?.confidence === 'verified'
-          ? `${item.source.year} 年${item.source.provider || ''}${item.source.line_type || ''}`
-          : '暂无官方数据',
+        sourceStatus: formatSourceStatus(item.source),
         majors: item.majors || [],
-        scores: (item.scores || []).map(s => ({ year: s.year, score: s.score, tuition: s.tuition, majorCategory: s.major_category })),
+        majorMatch: item.major_match || 'category',
+        plans: item.plans || [],
+        scores: (item.scores || [])
+          .map(s => ({
+            year: s.year,
+            score: s.score,
+            tuition: s.tuition,
+            majorCategory: s.major_category,
+            lineType: s.line_type,
+            round: s.round
+          }))
+          .sort((a, b) => a.year - b.year),
       }))
     } catch (error) {
       console.warn('加载院校列表失败，已使用本地兜底数据', error)

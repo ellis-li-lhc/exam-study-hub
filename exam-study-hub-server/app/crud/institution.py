@@ -9,7 +9,7 @@ CATEGORY_TO_KELEI = {
     "法学类": ["专升本法学类"],
     "理工类": ["专升本理工类"],
     "教育学类": ["专升本教育学类", "专升本教育学类（体育）"],
-    "文史中医类": ["专升本文史类", "专升本文史类（中医）"],
+    "文史中医类": ["专升本文史类", "专升本文史类（中医）", "专升本文史中医类", "专升本中医类"],
 }
 # 反向：科类名 → 专业类别
 KELEI_TO_CATEGORY = {k: cat for cat, keleis in CATEGORY_TO_KELEI.items() for k in keleis}
@@ -49,7 +49,10 @@ def tuition_for(institution_name: str, category: str | None) -> int | None:
 
 
 def list_institutions(db: Session, province_code: str | None = None) -> list[Institution]:
-    stmt = select(Institution).options(selectinload(Institution.scores)).order_by(Institution.id)
+    stmt = select(Institution).options(
+        selectinload(Institution.scores),
+        selectinload(Institution.plans),
+    ).order_by(Institution.id)
     if province_code:
         stmt = stmt.join(Province, Institution.province_id == Province.id).where(Province.code == province_code)
     return list(db.scalars(stmt).all())
@@ -61,6 +64,11 @@ def majors_by_category(db: Session) -> dict[str, list[str]]:
     for major in db.scalars(select(Major)).all():
         result.setdefault(major.category, []).append(major.code)
     return result
+
+
+def major_code_by_name(db: Session) -> dict[str, str]:
+    """{专业名称: 专业code}，用于公开专业计划的真实专业匹配。"""
+    return {major.name: major.code for major in db.scalars(select(Major)).all()}
 
 
 def province_code_by_id(db: Session) -> dict[int, str]:

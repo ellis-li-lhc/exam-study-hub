@@ -63,6 +63,9 @@ class Institution(Base):
     scores: Mapped[list["AdmissionScore"]] = relationship(
         back_populates="institution", cascade="all, delete-orphan"
     )
+    plans: Mapped[list["AdmissionPlan"]] = relationship(
+        back_populates="institution", cascade="all, delete-orphan"
+    )
 
 
 class AdmissionScore(Base):
@@ -78,9 +81,60 @@ class AdmissionScore(Base):
     category_name: Mapped[str] = mapped_column(String(64))                          # 科类名，如 专升本经管类
     score: Mapped[int | None] = mapped_column(Integer, nullable=True)               # 投档分
     line_type: Mapped[str] = mapped_column(String(32))                              # 院校投档线 / 省控线...
+    round: Mapped[str | None] = mapped_column(String(64), nullable=True)             # 主批次 / 征集志愿...
     source: Mapped[str | None] = mapped_column(String(255), nullable=True)          # 数据来源
 
     institution: Mapped["Institution"] = relationship(back_populates="scores")
+
+
+class AdmissionPlan(Base):
+    """招生专业计划。用于有公开专业目录/征集计划的省份做真实专业匹配。"""
+    __tablename__ = "admission_plans"
+    __table_args__ = (
+        UniqueConstraint(
+            "institution_id", "year", "major_code", "line_type", "round",
+            name="uq_admission_plan_inst_year_major_round",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    institution_id: Mapped[int] = mapped_column(
+        ForeignKey("institutions.id", ondelete="CASCADE"), index=True
+    )
+    year: Mapped[int] = mapped_column(Integer)
+    major_code: Mapped[str] = mapped_column(String(32), index=True)
+    major_name: Mapped[str] = mapped_column(String(128), index=True)
+    level: Mapped[str] = mapped_column(String(32))
+    category_code: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    category_name: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    plan_count: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    line_type: Mapped[str] = mapped_column(String(32))
+    round: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    source: Mapped[str | None] = mapped_column(String(255), nullable=True)
+
+    institution: Mapped["Institution"] = relationship(back_populates="plans")
+
+
+class ProvinceControlScore(Base):
+    """省级录取最低控制分数线。独立于院校，不能当成院校卡片展示。"""
+    __tablename__ = "province_control_scores"
+    __table_args__ = (
+        UniqueConstraint(
+            "province_id", "year", "level", "category_name", "line_type", "round",
+            name="uq_province_control_score_year_category_round",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    province_id: Mapped[int] = mapped_column(ForeignKey("provinces.id"), index=True)
+    year: Mapped[int] = mapped_column(Integer)
+    level: Mapped[str] = mapped_column(String(32))
+    category_code: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    category_name: Mapped[str] = mapped_column(String(64))
+    score: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    line_type: Mapped[str] = mapped_column(String(32))
+    round: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    source: Mapped[str | None] = mapped_column(String(255), nullable=True)
 
 
 class QuestionTopic(Base):

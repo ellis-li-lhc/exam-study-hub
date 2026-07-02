@@ -7,6 +7,18 @@ class ScoreRead(BaseModel):
     major_category: str | None = None   # 对应的专业类别，如 经济管理类
     score: int | None = None
     tuition: int | None = None  # 该科类学费(元/年)，省定标准
+    line_type: str | None = None
+    round: str | None = None
+
+
+class PlanRead(BaseModel):
+    year: int
+    major_code: str
+    major_name: str
+    category_name: str | None = None
+    plan_count: int | None = None
+    line_type: str | None = None
+    round: str | None = None
 
 
 class SourceRead(BaseModel):
@@ -28,5 +40,7 @@ class InstitutionRead(BaseModel):
     teaching_site: str | None = None
     degree: str | None = None
     majors: list[str] = []      # 该院校开设的专业 code（按科类推导）
+    major_match: str = "category"  # exact=按公开专业计划精确匹配 / category=按科类兜底
+    plans: list[PlanRead] = []
     scores: list[ScoreRead] = []
     source: SourceRead | None = None

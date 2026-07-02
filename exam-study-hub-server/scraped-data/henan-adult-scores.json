@@ -1,0 +1,2347 @@
+[
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "023",
+    "institution_name": "中国石油大学(华东)",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "023134001",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 4
+      },
+      {
+        "major_code": "023134002",
+        "major_name": "石油工程",
+        "plan_count": 30
+      },
+      {
+        "major_code": "023134003",
+        "major_name": "油气储运工程",
+        "plan_count": 24
+      },
+      {
+        "major_code": "023134004",
+        "major_name": "安全工程",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "025",
+    "institution_name": "西安电子科技大学",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "025114001",
+        "major_name": "汉语言文学",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "025",
+    "institution_name": "西安电子科技大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "025134002",
+        "major_name": "计算机科学与技术",
+        "plan_count": 19
+      },
+      {
+        "major_code": "025134003",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 19
+      },
+      {
+        "major_code": "025134004",
+        "major_name": "通信工程",
+        "plan_count": 8
+      },
+      {
+        "major_code": "025134005",
+        "major_name": "人工智能",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "025",
+    "institution_name": "西安电子科技大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "025144006",
+        "major_name": "工商管理",
+        "plan_count": 8
+      },
+      {
+        "major_code": "025144007",
+        "major_name": "人力资源管理",
+        "plan_count": 13
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "034",
+    "institution_name": "中央财经大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "034144001",
+        "major_name": "金融学",
+        "plan_count": 5
+      },
+      {
+        "major_code": "034144002",
+        "major_name": "会计学",
+        "plan_count": 16
+      },
+      {
+        "major_code": "034144003",
+        "major_name": "工商管理",
+        "plan_count": 10
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "047",
+    "institution_name": "中国矿业大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "047134001",
+        "major_name": "土木工程",
+        "plan_count": 1
+      },
+      {
+        "major_code": "047134002",
+        "major_name": "测绘工程",
+        "plan_count": 1
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "054",
+    "institution_name": "中国地质大学(武汉)",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "054134001",
+        "major_name": "计算机科学与技术",
+        "plan_count": 11
+      },
+      {
+        "major_code": "054134003",
+        "major_name": "土木工程",
+        "plan_count": 10
+      },
+      {
+        "major_code": "054134005",
+        "major_name": "资源勘查工程",
+        "plan_count": 5
+      },
+      {
+        "major_code": "054134007",
+        "major_name": "宝石及材料工艺学",
+        "plan_count": 2
+      },
+      {
+        "major_code": "054134008",
+        "major_name": "测绘工程",
+        "plan_count": 11
+      },
+      {
+        "major_code": "054134010",
+        "major_name": "安全工程",
+        "plan_count": 2
+      },
+      {
+        "major_code": "054134011",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "054",
+    "institution_name": "中国地质大学(武汉)",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "054144012",
+        "major_name": "土地资源管理",
+        "plan_count": 4
+      },
+      {
+        "major_code": "054144014",
+        "major_name": "行政管理",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "065",
+    "institution_name": "长安大学",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "065154001",
+        "major_name": "法学",
+        "plan_count": 8
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "065",
+    "institution_name": "长安大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "065134002",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 21
+      },
+      {
+        "major_code": "065134003",
+        "major_name": "道路桥梁与渡河工程",
+        "plan_count": 3
+      },
+      {
+        "major_code": "065134004",
+        "major_name": "道路桥梁与渡河工程",
+        "plan_count": 5
+      },
+      {
+        "major_code": "065134005",
+        "major_name": "汽车服务工程",
+        "plan_count": 1
+      },
+      {
+        "major_code": "065134006",
+        "major_name": "测绘工程",
+        "plan_count": 31
+      },
+      {
+        "major_code": "065134007",
+        "major_name": "资源勘查工程",
+        "plan_count": 19
+      },
+      {
+        "major_code": "065134008",
+        "major_name": "人工智能",
+        "plan_count": 3
+      },
+      {
+        "major_code": "065134009",
+        "major_name": "人工智能",
+        "plan_count": 3
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "065",
+    "institution_name": "长安大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "065144010",
+        "major_name": "工程造价",
+        "plan_count": 5
+      },
+      {
+        "major_code": "065144011",
+        "major_name": "会计学",
+        "plan_count": 3
+      },
+      {
+        "major_code": "065144012",
+        "major_name": "会计学",
+        "plan_count": 7
+      },
+      {
+        "major_code": "065144013",
+        "major_name": "行政管理",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "071",
+    "institution_name": "北京理工大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "071134001",
+        "major_name": "车辆工程",
+        "plan_count": 1
+      },
+      {
+        "major_code": "071134002",
+        "major_name": "计算机科学与技术",
+        "plan_count": 2
+      },
+      {
+        "major_code": "071134003",
+        "major_name": "计算机科学与技术",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "071",
+    "institution_name": "北京理工大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "071144004",
+        "major_name": "工商管理",
+        "plan_count": 2
+      },
+      {
+        "major_code": "071144005",
+        "major_name": "工商管理",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "072",
+    "institution_name": "西北工业大学",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "072154001",
+        "major_name": "法学",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "072",
+    "institution_name": "西北工业大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "072134002",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 6
+      },
+      {
+        "major_code": "072134004",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 7
+      },
+      {
+        "major_code": "072134005",
+        "major_name": "化学工程与工艺",
+        "plan_count": 7
+      },
+      {
+        "major_code": "072134006",
+        "major_name": "计算机科学与技术",
+        "plan_count": 7
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "072",
+    "institution_name": "西北工业大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "072144007",
+        "major_name": "工商管理",
+        "plan_count": 11
+      },
+      {
+        "major_code": "072144008",
+        "major_name": "会计学",
+        "plan_count": 7
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "081",
+    "institution_name": "中国消防救援学院",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "081154001",
+        "major_name": "消防指挥（只招收经所在总队级单位批准报考的在职消防救援人员）",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "081",
+    "institution_name": "中国消防救援学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "081134002",
+        "major_name": "消防工程（只招收经所在总队级单位批准报考的在职消防救援人员）",
+        "plan_count": 2
+      },
+      {
+        "major_code": "081134003",
+        "major_name": "抢险救援指挥与技术（只招收经所在总队级单位批准报考的在职消防救援人员）",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "082",
+    "institution_name": "东北农业大学",
+    "category_code": "174",
+    "category_name": "专升本农学类",
+    "score": 82,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "082174007",
+        "major_name": "动物医学",
+        "plan_count": 31
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "082",
+    "institution_name": "东北农业大学",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "082154001",
+        "major_name": "法学",
+        "plan_count": 35
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "082",
+    "institution_name": "东北农业大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "082134002",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 20
+      },
+      {
+        "major_code": "082134003",
+        "major_name": "水利水电工程",
+        "plan_count": 78
+      },
+      {
+        "major_code": "082134004",
+        "major_name": "计算机科学与技术",
+        "plan_count": 12
+      },
+      {
+        "major_code": "082134005",
+        "major_name": "土木工程",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "082",
+    "institution_name": "东北农业大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "082144008",
+        "major_name": "土地资源管理",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "165",
+    "institution_name": "南京师范大学",
+    "category_code": "164",
+    "category_name": "专升本教育学类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "165164001",
+        "major_name": "学前教育",
+        "plan_count": 29
+      },
+      {
+        "major_code": "165164002",
+        "major_name": "小学教育",
+        "plan_count": 34
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "165",
+    "institution_name": "南京师范大学",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "165114004",
+        "major_name": "汉语言文学",
+        "plan_count": 27
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "165",
+    "institution_name": "南京师范大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "165134006",
+        "major_name": "计算机科学与技术",
+        "plan_count": 57
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "165",
+    "institution_name": "南京师范大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "165144007",
+        "major_name": "行政管理",
+        "plan_count": 24
+      },
+      {
+        "major_code": "165144008",
+        "major_name": "人力资源管理",
+        "plan_count": 24
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "195",
+    "institution_name": "华东交通大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "195134001",
+        "major_name": "轨道交通信号与控制",
+        "plan_count": 5
+      },
+      {
+        "major_code": "195134002",
+        "major_name": "交通运输",
+        "plan_count": 10
+      },
+      {
+        "major_code": "195134004",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 2
+      },
+      {
+        "major_code": "195134005",
+        "major_name": "交通工程",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "226",
+    "institution_name": "涟源钢铁总厂职工大学",
+    "category_code": "141",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "226141001",
+        "major_name": "工程管理",
+        "plan_count": 19
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "269",
+    "institution_name": "西北民族大学",
+    "category_code": "174",
+    "category_name": "专升本农学类",
+    "score": 82,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "269174010",
+        "major_name": "动物医学",
+        "plan_count": 50
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "269",
+    "institution_name": "西北民族大学",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "269114003",
+        "major_name": "汉语言文学",
+        "plan_count": 7
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "269",
+    "institution_name": "西北民族大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "269134004",
+        "major_name": "数学与应用数学",
+        "plan_count": 12
+      },
+      {
+        "major_code": "269134006",
+        "major_name": "环境工程",
+        "plan_count": 4
+      },
+      {
+        "major_code": "269134007",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 44
+      },
+      {
+        "major_code": "269134008",
+        "major_name": "土木工程",
+        "plan_count": 31
+      },
+      {
+        "major_code": "269134009",
+        "major_name": "化学工程与工艺",
+        "plan_count": 17
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "269",
+    "institution_name": "西北民族大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "269144001",
+        "major_name": "金融学",
+        "plan_count": 1
+      },
+      {
+        "major_code": "269144005",
+        "major_name": "应用心理学",
+        "plan_count": 3
+      },
+      {
+        "major_code": "269144011",
+        "major_name": "财务管理",
+        "plan_count": 14
+      },
+      {
+        "major_code": "269144012",
+        "major_name": "公共事业管理",
+        "plan_count": 3
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "363",
+    "institution_name": "河南财政金融学院",
+    "category_code": "164",
+    "category_name": "专升本教育学类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "363164002",
+        "major_name": "学前教育",
+        "plan_count": 12
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "363",
+    "institution_name": "河南财政金融学院",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "363114003",
+        "major_name": "汉语言文学",
+        "plan_count": 3
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "363",
+    "institution_name": "河南财政金融学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "363134004",
+        "major_name": "计算机科学与技术",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "363",
+    "institution_name": "河南财政金融学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "363144001",
+        "major_name": "金融学",
+        "plan_count": 3
+      },
+      {
+        "major_code": "363144005",
+        "major_name": "会计学",
+        "plan_count": 9
+      },
+      {
+        "major_code": "363144006",
+        "major_name": "人力资源管理",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "380",
+    "institution_name": "郑州航空工业管理学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "380134009",
+        "major_name": "计算机科学与技术",
+        "plan_count": 10
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "380",
+    "institution_name": "郑州航空工业管理学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "380144014",
+        "major_name": "工商管理",
+        "plan_count": 9
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "383",
+    "institution_name": "河南工业大学",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "383154001",
+        "major_name": "法学",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "383",
+    "institution_name": "河南工业大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "383134004",
+        "major_name": "计算机科学与技术",
+        "plan_count": 5
+      },
+      {
+        "major_code": "383134007",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "383",
+    "institution_name": "河南工业大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "383144009",
+        "major_name": "工商管理",
+        "plan_count": 6
+      },
+      {
+        "major_code": "383144011",
+        "major_name": "工程管理",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "384",
+    "institution_name": "中原工学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "384134004",
+        "major_name": "计算机科学与技术",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "384",
+    "institution_name": "中原工学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "384144009",
+        "major_name": "市场营销",
+        "plan_count": 2
+      },
+      {
+        "major_code": "384144010",
+        "major_name": "工商管理",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "184",
+    "category_name": "专升本医学类",
+    "score": 90,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386184009",
+        "major_name": "护理学",
+        "plan_count": 36
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "164",
+    "category_name": "专升本教育学类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386164002",
+        "major_name": "教育学",
+        "plan_count": 73
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386114004",
+        "major_name": "汉语国际教育",
+        "plan_count": 53
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386154001",
+        "major_name": "法学",
+        "plan_count": 121
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386134005",
+        "major_name": "化学",
+        "plan_count": 14
+      },
+      {
+        "major_code": "386134006",
+        "major_name": "化学工程与工艺",
+        "plan_count": 31
+      },
+      {
+        "major_code": "386134007",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 102
+      },
+      {
+        "major_code": "386134008",
+        "major_name": "计算机科学与技术",
+        "plan_count": 115
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386144010",
+        "major_name": "药学",
+        "plan_count": 34
+      },
+      {
+        "major_code": "386144011",
+        "major_name": "行政管理",
+        "plan_count": 86
+      },
+      {
+        "major_code": "386144012",
+        "major_name": "工程管理",
+        "plan_count": 31
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "386",
+    "institution_name": "郑州大学",
+    "category_code": "124",
+    "category_name": "专升本艺术类",
+    "score": 82,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "386124003",
+        "major_name": "网络与新媒体",
+        "plan_count": 63
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "390",
+    "institution_name": "河南农业大学",
+    "category_code": "174",
+    "category_name": "专升本农学类",
+    "score": 82,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "390174009",
+        "major_name": "林学",
+        "plan_count": 13
+      },
+      {
+        "major_code": "390174010",
+        "major_name": "农学",
+        "plan_count": 19
+      },
+      {
+        "major_code": "390174011",
+        "major_name": "动物医学",
+        "plan_count": 23
+      },
+      {
+        "major_code": "390174012",
+        "major_name": "园林",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "390",
+    "institution_name": "河南农业大学",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "390154002",
+        "major_name": "法学",
+        "plan_count": 14
+      },
+      {
+        "major_code": "390154003",
+        "major_name": "社会工作",
+        "plan_count": 13
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "390",
+    "institution_name": "河南农业大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "390134004",
+        "major_name": "生物工程",
+        "plan_count": 9
+      },
+      {
+        "major_code": "390134005",
+        "major_name": "环境工程",
+        "plan_count": 16
+      },
+      {
+        "major_code": "390134006",
+        "major_name": "计算机科学与技术",
+        "plan_count": 9
+      },
+      {
+        "major_code": "390134007",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 14
+      },
+      {
+        "major_code": "390134008",
+        "major_name": "食品质量与安全",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "390",
+    "institution_name": "河南农业大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "390144001",
+        "major_name": "经济学",
+        "plan_count": 13
+      },
+      {
+        "major_code": "390144013",
+        "major_name": "财务管理",
+        "plan_count": 16
+      },
+      {
+        "major_code": "390144014",
+        "major_name": "土地资源管理",
+        "plan_count": 7
+      },
+      {
+        "major_code": "390144015",
+        "major_name": "行政管理",
+        "plan_count": 23
+      },
+      {
+        "major_code": "390144016",
+        "major_name": "工商管理",
+        "plan_count": 33
+      },
+      {
+        "major_code": "390144017",
+        "major_name": "市场营销",
+        "plan_count": 14
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "391",
+    "institution_name": "河南大学",
+    "category_code": "184",
+    "category_name": "专升本医学类",
+    "score": 90,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "391184016",
+        "major_name": "护理学",
+        "plan_count": 41
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "391",
+    "institution_name": "河南大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "391144015",
+        "major_name": "药学",
+        "plan_count": 10
+      },
+      {
+        "major_code": "391144019",
+        "major_name": "人力资源管理",
+        "plan_count": 5
+      },
+      {
+        "major_code": "391144020",
+        "major_name": "工商管理",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "393",
+    "institution_name": "河南医药大学",
+    "category_code": "184",
+    "category_name": "专升本医学类",
+    "score": 90,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "393184001",
+        "major_name": "口腔医学",
+        "plan_count": 19
+      },
+      {
+        "major_code": "393184002",
+        "major_name": "护理学",
+        "plan_count": 107
+      },
+      {
+        "major_code": "393184003",
+        "major_name": "医学影像技术",
+        "plan_count": 12
+      },
+      {
+        "major_code": "393184005",
+        "major_name": "医学检验技术",
+        "plan_count": 7
+      },
+      {
+        "major_code": "393184006",
+        "major_name": "医学影像学",
+        "plan_count": 3
+      },
+      {
+        "major_code": "393184009",
+        "major_name": "临床医学",
+        "plan_count": 47
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "393",
+    "institution_name": "河南医药大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "393144010",
+        "major_name": "药学",
+        "plan_count": 18
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "402",
+    "institution_name": "河南工学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "402134001",
+        "major_name": "软件工程",
+        "plan_count": 1
+      },
+      {
+        "major_code": "402134002",
+        "major_name": "车辆工程",
+        "plan_count": 4
+      },
+      {
+        "major_code": "402134004",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 1
+      },
+      {
+        "major_code": "402134005",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 2
+      },
+      {
+        "major_code": "402134008",
+        "major_name": "焊接技术与工程",
+        "plan_count": 1
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "402",
+    "institution_name": "河南工学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "402144009",
+        "major_name": "财务管理",
+        "plan_count": 9
+      },
+      {
+        "major_code": "402144010",
+        "major_name": "物流管理",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "403",
+    "institution_name": "河南工程学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "403134002",
+        "major_name": "计算机科学与技术",
+        "plan_count": 1
+      },
+      {
+        "major_code": "403134004",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 1
+      },
+      {
+        "major_code": "403134005",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 1
+      },
+      {
+        "major_code": "403134006",
+        "major_name": "安全工程",
+        "plan_count": 1
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "403",
+    "institution_name": "河南工程学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "403144008",
+        "major_name": "人力资源管理",
+        "plan_count": 1
+      },
+      {
+        "major_code": "403144011",
+        "major_name": "行政管理",
+        "plan_count": 1
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "404",
+    "institution_name": "郑州工程技术学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "404134001",
+        "major_name": "软件工程",
+        "plan_count": 4
+      },
+      {
+        "major_code": "404134003",
+        "major_name": "土木工程",
+        "plan_count": 4
+      },
+      {
+        "major_code": "404134004",
+        "major_name": "电子信息工程",
+        "plan_count": 2
+      },
+      {
+        "major_code": "404134005",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "404",
+    "institution_name": "郑州工程技术学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "404144006",
+        "major_name": "物流管理",
+        "plan_count": 3
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "408",
+    "institution_name": "洛阳理工学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "408134002",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 2
+      },
+      {
+        "major_code": "408134004",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 7
+      },
+      {
+        "major_code": "408134005",
+        "major_name": "无机非金属材料工程",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "408",
+    "institution_name": "洛阳理工学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "408144006",
+        "major_name": "工商管理",
+        "plan_count": 6
+      },
+      {
+        "major_code": "408144007",
+        "major_name": "会计学",
+        "plan_count": 4
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "411",
+    "institution_name": "郑州师范学院",
+    "category_code": "164",
+    "category_name": "专升本教育学类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "411164004",
+        "major_name": "小学教育",
+        "plan_count": 29
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "415",
+    "institution_name": "河南城建学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "415134006",
+        "major_name": "给排水科学与工程",
+        "plan_count": 4
+      },
+      {
+        "major_code": "415134008",
+        "major_name": "能源与动力工程",
+        "plan_count": 3
+      },
+      {
+        "major_code": "415134013",
+        "major_name": "环境工程",
+        "plan_count": 3
+      },
+      {
+        "major_code": "415134015",
+        "major_name": "测绘工程",
+        "plan_count": 3
+      },
+      {
+        "major_code": "415134017",
+        "major_name": "城乡规划",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "415",
+    "institution_name": "河南城建学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "415144019",
+        "major_name": "旅游管理",
+        "plan_count": 7
+      },
+      {
+        "major_code": "415144023",
+        "major_name": "市场营销",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "418",
+    "institution_name": "郑州西亚斯学院",
+    "category_code": "184",
+    "category_name": "专升本医学类",
+    "score": 90,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "418184006",
+        "major_name": "护理学",
+        "plan_count": 19
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "418",
+    "institution_name": "郑州西亚斯学院",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "418114003",
+        "major_name": "汉语言文学",
+        "plan_count": 5
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "418",
+    "institution_name": "郑州西亚斯学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "418134005",
+        "major_name": "计算机科学与技术",
+        "plan_count": 18
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "418",
+    "institution_name": "郑州西亚斯学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "418144007",
+        "major_name": "工商管理",
+        "plan_count": 20
+      },
+      {
+        "major_code": "418144008",
+        "major_name": "人力资源管理",
+        "plan_count": 19
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "420",
+    "institution_name": "安阳工学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "420134003",
+        "major_name": "计算机科学与技术",
+        "plan_count": 2
+      },
+      {
+        "major_code": "420134004",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 2
+      },
+      {
+        "major_code": "420134008",
+        "major_name": "电气工程及其自动化",
+        "plan_count": 2
+      },
+      {
+        "major_code": "420134009",
+        "major_name": "土木工程",
+        "plan_count": 4
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "420",
+    "institution_name": "安阳工学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "420144010",
+        "major_name": "财务管理",
+        "plan_count": 1
+      },
+      {
+        "major_code": "420144012",
+        "major_name": "会计学",
+        "plan_count": 4
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "423",
+    "institution_name": "黄淮学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "423144008",
+        "major_name": "市场营销",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "427",
+    "institution_name": "南阳理工学院",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "427114010",
+        "major_name": "中医学",
+        "plan_count": 19
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "432",
+    "institution_name": "黄河交通学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "432134001",
+        "major_name": "机械设计制造及其自动化",
+        "plan_count": 5
+      },
+      {
+        "major_code": "432134003",
+        "major_name": "土木工程",
+        "plan_count": 6
+      },
+      {
+        "major_code": "432134005",
+        "major_name": "物联网工程",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "452",
+    "institution_name": "河南科技职业大学",
+    "category_code": "184",
+    "category_name": "专升本医学类",
+    "score": 90,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "452184007",
+        "major_name": "护理",
+        "plan_count": 6
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "469",
+    "institution_name": "河南开封科技传媒学院",
+    "category_code": "114",
+    "category_name": "专升本文史中医类",
+    "score": 110,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "469114002",
+        "major_name": "汉语言文学",
+        "plan_count": 8
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "469",
+    "institution_name": "河南开封科技传媒学院",
+    "category_code": "154",
+    "category_name": "专升本法学类",
+    "score": 85,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "469154001",
+        "major_name": "法学",
+        "plan_count": 11
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "469",
+    "institution_name": "河南开封科技传媒学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "469134003",
+        "major_name": "计算机科学与技术",
+        "plan_count": 7
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "469",
+    "institution_name": "河南开封科技传媒学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "469144004",
+        "major_name": "人力资源管理",
+        "plan_count": 5
+      },
+      {
+        "major_code": "469144005",
+        "major_name": "会计学",
+        "plan_count": 7
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "510",
+    "institution_name": "鹤壁开放大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "510134003",
+        "major_name": "计算机科学与技术",
+        "plan_count": 10
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "510",
+    "institution_name": "鹤壁开放大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "510144004",
+        "major_name": "会计学",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "516",
+    "institution_name": "驻马店开放大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "516134001",
+        "major_name": "计算机科学与技术",
+        "plan_count": 2
+      },
+      {
+        "major_code": "516134002",
+        "major_name": "土木工程",
+        "plan_count": 1
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "516",
+    "institution_name": "驻马店开放大学",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "516144004",
+        "major_name": "会计学",
+        "plan_count": 4
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "517",
+    "institution_name": "信阳开放大学",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "517134001",
+        "major_name": "计算机科学与技术",
+        "plan_count": 2
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "522",
+    "institution_name": "郑州财经学院",
+    "category_code": "134",
+    "category_name": "专升本理工类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "522134001",
+        "major_name": "计算机科学与技术",
+        "plan_count": 1
+      }
+    ]
+  },
+  {
+    "province": "henan",
+    "year": 2025,
+    "level": "专升本",
+    "institution_code": "522",
+    "institution_name": "郑州财经学院",
+    "category_code": "144",
+    "category_name": "专升本经管类",
+    "score": 80,
+    "line_type": "征集志愿备档线",
+    "round": "征集志愿",
+    "source_url": "https://www.haeea.cn/attach/file/20251212/20251212175749_1654_34d14f63.pdf",
+    "majors": [
+      {
+        "major_code": "522144002",
+        "major_name": "财务管理",
+        "plan_count": 1
+      }
+    ]
+  }
+]

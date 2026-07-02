@@ -38,9 +38,17 @@ export const chinaProvinces = [
 ]
 
 // 当前已开放报考的省份（有真实招生数据）。其余省份在下拉中禁用。
-// 后续接入河南等省的数据后，把对应 value 加进来即可。
-export const availableProvinces = ['jiangsu']
+export const availableProvinces = ['jiangsu', 'henan']
+
+export const provinceCityOptions = {
+  jiangsu: ['南京', '无锡', '徐州', '常州', '苏州', '南通', '连云港', '淮安', '盐城', '扬州', '镇江', '泰州', '宿迁'],
+  henan: ['郑州', '开封', '洛阳', '平顶山', '安阳', '鹤壁', '新乡', '焦作', '濮阳', '许昌', '漯河', '三门峡', '南阳', '商丘', '信阳', '周口', '驻马店', '济源']
+}
 
 export function isProvinceAvailable(value) {
   return availableProvinces.includes(value)
+}
+
+export function isCityInProvince(province, city) {
+  return provinceCityOptions[province]?.includes(city) || false
 }
