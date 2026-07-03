@@ -21,6 +21,7 @@
             <el-select
               :model-value="row.role"
               size="small"
+              filterable
               :disabled="row.id === auth.user?.id"
               @change="(role) => changeRole(row, role)"
             >

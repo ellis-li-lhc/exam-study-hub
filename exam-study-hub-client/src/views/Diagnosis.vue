@@ -566,7 +566,7 @@ function restart() {
 .quiz-actions{margin-top:auto;position:sticky;bottom:0;z-index:4;display:flex;align-items:center;gap:10px;padding:12px 16px;border-top:1px solid var(--line);background:rgba(255,255,255,.95);backdrop-filter:blur(10px)}
 .quiz-actions>span{flex:1;text-align:center;color:var(--text-muted);font-size:.7rem}
 .quiz-actions .group-done{display:flex;justify-content:center;align-items:center;gap:5px;color:var(--mint)}
-.result-hero{display:grid;grid-template-columns:190px 1fr;gap:24px;align-items:center;padding:28px;border-radius:22px;color:#dce8f9;background:linear-gradient(135deg,#14233e,#234875)}
+.result-hero{display:grid;grid-template-columns:190px 1fr;gap:24px;align-items:center;padding:26px;border-radius:var(--radius-lg);color:#dce8f9;background:#111f33;box-shadow:var(--shadow-md)}
 .result-score{padding-right:24px;border-right:1px solid rgba(255,255,255,.15)}
 .result-score span,.result-score small{color:#9fb5d3;font-size:.72rem}
 .result-score strong{display:inline-block;margin:0 7px;color:#fff;font-size:3rem}

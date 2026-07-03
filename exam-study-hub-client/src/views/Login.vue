@@ -81,10 +81,10 @@ async function submit() {
 </script>
 
 <style scoped>
-.auth-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: linear-gradient(145deg, #eaf2ff, #f8fbff 60%); }
-.auth-card { width: 100%; max-width: 400px; padding: 32px 30px 36px; background: #fff; border-radius: 20px; border: 1px solid var(--line); box-shadow: 0 18px 48px rgba(37,99,235,.12); }
+.auth-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: linear-gradient(180deg, #fbfdff 0%, #eef3f8 100%); }
+.auth-card { width: 100%; max-width: 400px; padding: 30px 28px 34px; background: #fff; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-md); }
 .auth-brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 13px; color: #fff; background: linear-gradient(145deg,var(--primary),#5b8ff9); box-shadow: 0 8px 20px rgba(37,99,235,.25); }
+.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; color: #fff; background: var(--primary-deep); box-shadow: var(--shadow-xs); }
 .brand-mark .el-icon { font-size: 23px; }
 .auth-brand strong { display: block; color: var(--ink); font-size: 1.1rem; }
 .auth-brand small { display: block; color: var(--text-muted); font-size: .76rem; margin-top: 1px; }

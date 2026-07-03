@@ -21,7 +21,7 @@
         <section class="drill-toolbar">
           <div class="toolbar-left">
             <el-button :disabled="store.currentBatch === 0" @click="store.setBatch(store.currentBatch - 1)"><el-icon><ArrowLeft /></el-icon>上一组</el-button>
-            <el-select :model-value="store.currentBatch" class="batch-select" @change="store.setBatch($event)">
+            <el-select :model-value="store.currentBatch" filterable class="batch-select" @change="store.setBatch($event)">
               <el-option v-for="option in store.batchOptions" :key="option.value" :label="option.label" :value="option.value" />
             </el-select>
             <el-button :disabled="store.currentBatch === store.batchCount - 1" @click="store.setBatch(store.currentBatch + 1)">下一组<el-icon class="el-icon--right"><ArrowRight /></el-icon></el-button>
@@ -333,13 +333,13 @@ function confirmReset() {
 
 <style scoped>
 .page-stack{display:flex;flex-direction:column;gap:18px}
-.page-intro h2{color:var(--ink);font-size:1.7rem}
+.page-intro h2{color:var(--ink);font-size:1.55rem}
 .page-intro p{margin-top:5px;color:var(--text-secondary);max-width:80ch}
 .section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.72rem;font-weight:800;letter-spacing:.1em}
 .drill-tabs{margin-top:-4px}
 :deep(.drill-tabs .el-tabs__item){font-size:.95rem;height:46px}
 .tab-label{font-weight:700}
-.drill-hero{display:grid;grid-template-columns:200px 1fr auto;gap:24px;align-items:center;padding:22px 26px;border:1px solid #d8e3f2;border-radius:20px;background:linear-gradient(145deg,#fff,#f2f7ff)}
+.drill-hero{display:grid;grid-template-columns:200px 1fr auto;gap:22px;align-items:center;padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs)}
 .hero-score span,.hero-score small{display:block;color:var(--text-muted);font-size:.74rem}
 .hero-score strong{display:block;color:var(--ink);font-size:2.6rem;line-height:1.05}
 .hero-progress p{margin-top:12px;color:var(--text-secondary);font-size:.78rem}
@@ -348,7 +348,7 @@ function confirmReset() {
 .toolbar-left,.toolbar-right{display:flex;align-items:center;gap:10px}
 .batch-select{width:190px}
 .word-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.word-card{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:.18s ease}
+.word-card{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .word-card:hover{box-shadow:var(--shadow-sm)}
 .word-card.known{background:#f4fbf7;border-color:#c9efdf}
 .word-main{min-width:0;flex:1}
@@ -363,7 +363,7 @@ function confirmReset() {
 .known-toggle.mini{height:26px;width:26px;padding:0;margin-left:auto}
 .extra-bar{display:flex;align-items:center;gap:14px}
 .extra-intro{flex:1}
-.extra-progress{flex:0 0 auto;text-align:center;padding:8px 18px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.extra-progress{flex:0 0 auto;text-align:center;padding:8px 18px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff}
 .extra-progress small{display:block;color:var(--text-muted);font-size:.68rem}
 .extra-progress strong{color:var(--ink);font-size:1.1rem}
 .essential-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
@@ -377,7 +377,7 @@ function confirmReset() {
 .group-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
 .group-count{color:var(--text-muted);font-size:.74rem}
 .essential-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.essential-card{padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:.18s ease}
+.essential-card{padding:15px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .essential-card.known{background:#f4fbf7;border-color:#c9efdf}
 .essential-top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .essential-top strong{color:var(--ink);font-size:1rem}
@@ -385,7 +385,7 @@ function confirmReset() {
 .example{display:flex;align-items:center;gap:6px;padding:9px 11px;border-radius:10px;color:var(--primary-deep);font-size:.8rem;line-height:1.45;background:var(--primary-soft);cursor:pointer}
 .example .el-icon{flex:0 0 auto;color:var(--primary)}
 .grammar-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.grammar-card{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:.18s ease}
+.grammar-card{padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .grammar-card.known{background:#f4fbf7;border-color:#c9efdf}
 .grammar-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
 .grammar-head h4{color:var(--ink);font-size:.96rem}

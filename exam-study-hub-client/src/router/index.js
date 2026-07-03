@@ -20,6 +20,7 @@ const routes = [
       { path: 'schools', name: 'Schools', component: () => import('../views/Schools.vue'), meta: { title: '专业与院校', icon: 'School' } },
       { path: 'diagnosis', name: 'Diagnosis', component: () => import('../views/Diagnosis.vue'), meta: { title: '入学诊断', icon: 'DataAnalysis' } },
       { path: 'english', name: 'EnglishDrill', component: () => import('../views/EnglishDrill.vue'), meta: { title: '英语特训', icon: 'Notebook' } },
+      { path: 'math', name: 'MathDrill', component: () => import('../views/MathDrill.vue'), meta: { title: '数学特训', icon: 'Histogram' } },
       { path: 'politics', name: 'PoliticsDrill', component: () => import('../views/PoliticsDrill.vue'), meta: { title: '政治特训', icon: 'Reading' } },
       { path: 'target', name: 'Target', component: () => import('../views/Target.vue'), meta: { title: '目标分分析', icon: 'Aim' } },
       { path: 'plan', name: 'StudyPlan', component: () => import('../views/StudyPlan.vue'), meta: { title: '学习路线', icon: 'Calendar' } },
@@ -67,4 +68,3 @@ router.beforeEach((to) => {
 })
 
 export default router
-

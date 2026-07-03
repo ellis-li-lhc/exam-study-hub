@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="score-orbit">
-        <el-progress type="dashboard" :percentage="scorePercentage" :width="154" :stroke-width="12" color="#3976ef">
+        <el-progress type="dashboard" :percentage="scorePercentage" :width="154" :stroke-width="12" color="#1d4ed8">
           <template #default>
             <strong>{{ store.diagnosisComplete ? store.currentScore : '--' }}</strong>
             <span>/ {{ store.targetScore }} 目标分</span>
@@ -107,10 +107,54 @@ const completedFlow = computed(() => journey.value.filter(item => item.status ==
 </script>
 
 <style scoped>
-.dashboard-page{display:flex;flex-direction:column;gap:22px}.welcome-panel{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:36px;align-items:center;padding:38px 42px;border:1px solid #d9e4f3;border-radius:24px;background:linear-gradient(130deg,#fff 0%,#f5f9ff 58%,#eaf2ff 100%);box-shadow:var(--shadow-sm)}
-.section-kicker{display:block;margin-bottom:7px;color:var(--primary);font-size:.72rem;font-weight:800;letter-spacing:.1em}.welcome-copy h2{max-width:690px;color:var(--ink);font-size:clamp(1.7rem,3vw,2.45rem);line-height:1.25}.welcome-copy p{max-width:690px;margin:14px 0 24px;color:var(--text-secondary)}.welcome-actions{display:flex;gap:12px}.score-orbit{text-align:center}.score-orbit strong,.score-orbit span{display:block}.score-orbit strong{color:var(--ink);font-size:2.1rem;line-height:1}.score-orbit span{margin-top:6px;color:var(--text-muted);font-size:.73rem}.score-orbit small{display:block;margin-top:-8px;color:var(--primary);font-weight:700}
-.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.metric-card{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.92)}.metric-icon{width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border-radius:13px}.metric-icon.blue{color:#2867d8;background:#e8f1ff}.metric-icon.mint{color:#07835f;background:#def7ec}.metric-icon.amber{color:#bb7000;background:#fff0cd}.metric-icon.violet{color:#7650c9;background:#eee8ff}.metric-card p{color:var(--text-muted);font-size:.76rem}.metric-card strong{display:block;color:var(--ink);font-size:1.35rem}.metric-card small{display:block;color:var(--text-secondary);font-size:.72rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:175px}
-.dashboard-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px}.journey-card,.today-card{border-radius:20px;border-color:var(--line)}.card-heading{display:flex;align-items:center;justify-content:space-between}.card-heading h3{color:var(--ink);font-size:1.12rem}.card-heading>span{color:var(--text-muted);font-size:.78rem}.journey-list{display:flex;flex-direction:column;gap:8px}.journey-step{width:100%;display:flex;align-items:center;gap:13px;padding:13px;border:0;border-radius:14px;text-align:left;background:transparent;color:var(--text-muted);cursor:pointer}.journey-step:hover{background:#f6f9fe}.journey-step.active{background:#edf4ff;color:var(--primary)}.journey-step.done .step-index{color:#fff;background:var(--mint)}.step-index{width:32px;height:32px;display:grid;place-items:center;flex:0 0 auto;border-radius:50%;font-size:.78rem;font-weight:800;background:#edf1f7}.step-copy{flex:1}.step-copy strong,.step-copy small{display:block}.step-copy strong{color:var(--ink);font-size:.88rem}.step-copy small{font-size:.73rem}.mini-task{display:flex;align-items:center;gap:11px;padding:13px 0;border-bottom:1px solid var(--line);cursor:pointer}.mini-task>span{flex:1}.mini-task strong,.mini-task small{display:block}.mini-task strong{color:var(--ink);font-size:.84rem}.mini-task small{color:var(--text-secondary);font-size:.74rem}.mini-task>b{color:var(--text-muted);font-size:.72rem}.mini-task.done{opacity:.58}.mini-task.done small{text-decoration:line-through}.self-study-empty{text-align:center;padding:24px 10px}.self-study-empty .metric-icon{margin:0 auto 12px}.self-study-empty h4{color:var(--ink)}.self-study-empty p{margin:7px auto 16px;color:var(--text-secondary);font-size:.85rem;max-width:35ch}
-@media(max-width:1100px){.metrics-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.welcome-panel{grid-template-columns:1fr;padding:28px 22px}.score-orbit{display:none}.dashboard-grid{grid-template-columns:1fr}.metrics-grid{grid-template-columns:1fr}.welcome-actions{flex-wrap:wrap}}
+.dashboard-page{display:flex;flex-direction:column;gap:18px}
+.welcome-panel{display:grid;grid-template-columns:minmax(0,1fr) 216px;gap:28px;align-items:center;padding:28px 30px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs)}
+.section-kicker{display:block;margin-bottom:7px;color:var(--primary);font-size:.7rem;font-weight:900;letter-spacing:.08em}
+.welcome-copy h2{max-width:690px;color:var(--ink);font-size:clamp(1.45rem,2.4vw,2rem);line-height:1.28;letter-spacing:0}
+.welcome-copy p{max-width:720px;margin:12px 0 22px;color:var(--text-secondary);font-size:.9rem}
+.welcome-actions{display:flex;gap:10px;flex-wrap:wrap}
+.score-orbit{text-align:center;padding:12px;border-left:1px solid var(--line)}
+.score-orbit strong,.score-orbit span{display:block}
+.score-orbit strong{color:var(--ink);font-size:2rem;line-height:1}
+.score-orbit span{margin-top:6px;color:var(--text-muted);font-size:.72rem}
+.score-orbit small{display:block;margin-top:-8px;color:var(--primary);font-weight:800}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metric-card{display:flex;gap:12px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs)}
+.metric-icon{width:38px;height:38px;display:grid;place-items:center;flex:0 0 auto;border-radius:10px}
+.metric-icon.blue{color:var(--primary);background:var(--primary-soft)}
+.metric-icon.mint{color:var(--mint);background:var(--mint-soft)}
+.metric-icon.amber{color:var(--accent);background:var(--accent-soft)}
+.metric-icon.violet{color:#475569;background:#eef2f7}
+.metric-card p{color:var(--text-muted);font-size:.72rem;font-weight:800}
+.metric-card strong{display:block;color:var(--ink);font-size:1.18rem;line-height:1.25}
+.metric-card small{display:block;color:var(--text-secondary);font-size:.72rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:170px}
+.dashboard-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:16px}
+.journey-card,.today-card{border-radius:var(--radius-lg);border-color:var(--line)}
+.card-heading{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.card-heading h3{color:var(--ink);font-size:1.02rem}
+.card-heading>span{color:var(--text-muted);font-size:.76rem;font-weight:800}
+.journey-list{display:flex;flex-direction:column;gap:6px}
+.journey-step{width:100%;display:flex;align-items:center;gap:12px;padding:12px;border:1px solid transparent;border-radius:var(--radius-md);text-align:left;background:transparent;color:var(--text-muted);cursor:pointer;transition:background-color var(--ease-standard),border-color var(--ease-standard)}
+.journey-step:hover{border-color:var(--line);background:var(--surface-soft)}
+.journey-step.active{border-color:#cbdaf3;background:var(--primary-faint);color:var(--primary)}
+.journey-step.done .step-index{color:#fff;background:var(--mint)}
+.step-index{width:30px;height:30px;display:grid;place-items:center;flex:0 0 auto;border-radius:9px;font-size:.76rem;font-weight:900;background:#edf1f7}
+.step-copy{flex:1;min-width:0}
+.step-copy strong,.step-copy small{display:block}
+.step-copy strong{color:var(--ink);font-size:.86rem}
+.step-copy small{font-size:.72rem}
+.mini-task{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.mini-task>span{flex:1;min-width:0}
+.mini-task strong,.mini-task small{display:block}
+.mini-task strong{color:var(--ink);font-size:.82rem}
+.mini-task small{color:var(--text-secondary);font-size:.73rem}
+.mini-task>b{color:var(--text-muted);font-size:.72rem}
+.mini-task.done{opacity:.6}
+.mini-task.done small{text-decoration:line-through}
+.self-study-empty{text-align:center;padding:24px 10px}
+.self-study-empty .metric-icon{margin:0 auto 12px}
+.self-study-empty h4{color:var(--ink)}
+.self-study-empty p{margin:7px auto 16px;color:var(--text-secondary);font-size:.84rem;max-width:35ch}
+@media(max-width:1100px){.metrics-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.welcome-panel{grid-template-columns:1fr;padding:22px}.score-orbit{display:none}.dashboard-grid{grid-template-columns:1fr}.metrics-grid{grid-template-columns:1fr}}
 </style>
-
