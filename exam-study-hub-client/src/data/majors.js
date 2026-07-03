@@ -14,6 +14,23 @@ export function subjectsForCategory(category) {
   return categorySubjects[category] || []
 }
 
+const legacyMajorCodeMap = {
+  business: 'gongshang-guanli',
+  accounting: 'kuaiji',
+  law: 'faxue',
+  education: 'jiaoyuxue',
+  computer: 'jisuanji',
+  chinese: 'hanyu-yanwen'
+}
+
+export function normalizeMajorCode(code) {
+  return legacyMajorCodeMap[code] || code
+}
+
+export function normalizeMajorCodes(codes = []) {
+  return [...new Set(codes.map(normalizeMajorCode))]
+}
+
 export const examMajors = [
   // —— 经济管理类（统考：政治、英语、高等数学（二））——
   { code: 'gongshang-guanli', name: '工商管理', category: '经济管理类' },

@@ -1,7 +1,7 @@
 import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { institutions as mvpInstitutions, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
-import { examMajors, subjectsForCategory } from '../data/majors'
+import { examMajors, normalizeMajorCodes, subjectsForCategory } from '../data/majors'
 import { getProvinces, getInstitutions } from '../api'
 import { getExamDate, buildMilestones, buildDailyTasks, fmtDate } from '../data/planner'
 
@@ -293,7 +293,7 @@ export const useApplicationStore = defineStore('application', () => {
         degree: item.degree || '以院校学位授予要求为准',
         source: item.source || null,
         sourceStatus: formatSourceStatus(item.source),
-        majors: item.majors || [],
+        majors: normalizeMajorCodes(item.majors || []),
         majorMatch: item.major_match || 'category',
         plans: item.plans || [],
         scores: (item.scores || [])
