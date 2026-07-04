@@ -39,7 +39,10 @@ http.interceptors.response.use(
     }
     const data = error.response?.data
     const message = data?.message || data?.detail || error.message || '请求失败'
-    return Promise.reject(new Error(message))
+    const normalized = new Error(message)
+    normalized.status = status
+    normalized.data = data?.data ?? null
+    return Promise.reject(normalized)
   }
 )
 

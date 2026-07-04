@@ -1,6 +1,7 @@
 // 云端同步：登录后把本地状态与服务器对齐，并在本地变更时自动回写。
 // 三块状态分别对应三个 localStorage key，与后端 user_states 的三个 JSON 字段一一对应。
 import { watch } from 'vue'
+import { ElMessage } from 'element-plus'
 import { getState, saveState } from './api'
 import { useApplicationStore } from './stores/application'
 import { useEnglishProgressStore } from './stores/englishProgress'
@@ -31,17 +32,63 @@ function localSnapshot() {
 
 let stopWatch = null
 let pushTimer = null
+let retryTimer = null
+let cloudVersion = 0
+let conflictNotified = false
+
+function snapshotForSave() {
+  return {
+    ...localSnapshot(),
+    client_version: cloudVersion
+  }
+}
 
 // 防抖回写：本地变更后 1.5s 内无新变更才真正发请求，避免频繁打服务器。
 function schedulePush() {
   clearTimeout(pushTimer)
   pushTimer = setTimeout(async () => {
     try {
-      await saveState(localSnapshot())
+      const saved = await saveState(snapshotForSave())
+      cloudVersion = saved.sync_version ?? cloudVersion
+      conflictNotified = false
+      clearTimeout(retryTimer)
     } catch (error) {
+      if (error.status === 409) {
+        console.warn('云端状态版本冲突，已拉取最新进度', error)
+        if (!conflictNotified) {
+          ElMessage.warning('云端进度已在其他设备更新，已为你刷新到最新版本')
+          conflictNotified = true
+        }
+        await pullFromCloud()
+        return
+      }
+      ElMessage.warning('云端保存失败，当前进度已保留在本机，稍后会自动重试')
       console.warn('云端保存失败（已保留在本地，稍后重试）', error)
+      clearTimeout(retryTimer)
+      retryTimer = setTimeout(schedulePush, 10000)
     }
   }, 1500)
+}
+
+// 退出登录或关键操作前调用：立即刷一次云端，减少防抖窗口内的数据丢失。
+export async function flushCloudState() {
+  clearTimeout(pushTimer)
+  clearTimeout(retryTimer)
+  try {
+    const saved = await saveState(snapshotForSave())
+    cloudVersion = saved.sync_version ?? cloudVersion
+    conflictNotified = false
+    return true
+  } catch (error) {
+    if (error.status === 409) {
+      await pullFromCloud()
+      ElMessage.warning('云端进度已在其他设备更新，退出前已刷新到最新版本')
+      return false
+    }
+    console.warn('退出前云端保存失败', error)
+    ElMessage.warning('退出前云端保存失败，当前进度仍保留在本机')
+    return false
+  }
 }
 
 // 登录后调用：用云端数据覆盖本地；若云端为空则把本地推上去（首次登录的迁移）。
@@ -58,6 +105,7 @@ export async function pullFromCloud() {
     return
   }
 
+  cloudVersion = cloud.sync_version ?? 0
   const hasCloud = cloud.app_state || cloud.english_extras || cloud.vocab_progress
   if (hasCloud) {
     if (cloud.app_state) appStore.hydrate(cloud.app_state)
@@ -66,7 +114,8 @@ export async function pullFromCloud() {
   } else {
     // 云端还没有数据：把本地现有进度作为初始数据上传。
     try {
-      await saveState(localSnapshot())
+      const saved = await saveState(snapshotForSave())
+      cloudVersion = saved.sync_version ?? cloudVersion
     } catch (error) {
       console.warn('初始状态上传失败', error)
     }
@@ -87,7 +136,10 @@ export function startAutoSync() {
       appStore.diagnostic,
       appStore.currentStage,
       appStore.tasks,
+      appStore.tasksVersion,
       appStore.stageTests,
+      appStore.tasksDate,
+      appStore.reviewQueue,
       engStore.knownKeys,
       vocabStore.knownIds,
       vocabStore.currentBatch
@@ -104,11 +156,14 @@ export function stopAutoSync() {
     stopWatch = null
   }
   clearTimeout(pushTimer)
+  clearTimeout(retryTimer)
 }
 
 // 退出登录：停止同步并清空本地状态，避免下个账号看到上个账号的数据。
 export function clearLocalState() {
   stopAutoSync()
+  cloudVersion = 0
+  conflictNotified = false
   useApplicationStore().resetAll()
   useEnglishProgressStore().resetAll()
   useVocabularyStore().resetAll()

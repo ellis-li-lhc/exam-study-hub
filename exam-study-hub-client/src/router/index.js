@@ -26,6 +26,7 @@ const routes = [
       { path: 'plan', name: 'StudyPlan', component: () => import('../views/StudyPlan.vue'), meta: { title: '学习路线', icon: 'Calendar' } },
       { path: 'progress', name: 'Progress', component: () => import('../views/Progress.vue'), meta: { title: '学习进度', icon: 'TrendCharts' } },
       { path: 'admin/users', name: 'AdminUsers', component: () => import('../views/AdminUsers.vue'), meta: { title: '用户管理', icon: 'Setting', admin: true } },
+      { path: 'admin/data', name: 'AdminData', component: () => import('../views/AdminData.vue'), meta: { title: '数据管理', icon: 'DataBoard', admin: true } },
       { path: 'selection', redirect: '/profile' }
     ]
   }
@@ -62,7 +63,7 @@ router.beforeEach((to) => {
   const name = to.name
 
   if (NEED_PROFILE.includes(name) && !store.profileComplete) return { name: 'Profile' }
-  if (NEED_INSTITUTION.includes(name) && !store.selectedInstitution) return { name: 'Schools' }
+  if (NEED_INSTITUTION.includes(name) && !store.selectedInstitutionCode) return { name: 'Schools' }
   if (NEED_DIAGNOSIS.includes(name) && !store.diagnosisComplete) return { name: 'Diagnosis' }
   return true
 })

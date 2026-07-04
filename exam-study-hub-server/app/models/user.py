@@ -1,7 +1,7 @@
 # 用户与“用户云端状态”相关的数据库表模型。
 from datetime import datetime, timezone
 
-from sqlalchemy import String, JSON, ForeignKey, DateTime
+from sqlalchemy import String, JSON, ForeignKey, DateTime, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -43,6 +43,7 @@ class UserState(Base):
     app_state: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     english_extras: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     vocab_progress: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    sync_version: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),

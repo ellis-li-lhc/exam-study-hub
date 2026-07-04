@@ -9,9 +9,9 @@
       <div class="confidence" :class="{ verified: hasVerifiedScores }">
         <el-icon><component :is="hasVerifiedScores ? 'CircleCheck' : 'Warning'" /></el-icon>
         <p>
-          <strong>当前可信度：{{ hasVerifiedScores ? '参考（基于官方投档线）' : '数据不足' }}</strong>
-          <span v-if="hasVerifiedScores">参考线取自{{ sourceInfo.provider }} {{ sourceInfo.year }} 年{{ sourceInfo.line_type }}；成人高考不公布专业线，录取以当年招生简章为准。</span>
-          <span v-else>该院校暂无可核实的投档线，目标分仅供初步参考。</span>
+          <strong>当前可信度：{{ hasVerifiedScores ? '参考（基于官方公开线）' : '数据不足' }}</strong>
+          <span v-if="hasVerifiedScores">参考线取自{{ sourceInfo.provider }} {{ sourceInfo.year }} 年{{ sourceInfo.line_type }}；不同省份线型不同，录取以当年招生简章为准。</span>
+          <span v-else>该院校暂无可核实的公开参考线，目标分仅供初步参考。</span>
         </p>
       </div>
     </section>
@@ -32,7 +32,7 @@
 
     <section class="analysis-grid">
       <el-card shadow="never" class="analysis-card reference-card">
-        <template #header><div class="card-heading"><div><span class="section-kicker">近年数据</span><h3>录取参考线</h3></div><el-tag size="small" type="info">专业线优先</el-tag></div></template>
+        <template #header><div class="card-heading"><div><span class="section-kicker">近年数据</span><h3>录取参考线</h3></div><el-tag size="small" type="info">院校 / 科类参考</el-tag></div></template>
         <div class="history-chart"><div v-for="item in store.selectedInstitution?.scores" :key="item.year" class="history-col"><strong>{{ item.score }}</strong><i :style="{height:`${Math.min(92, item.score/1.6)}%`}"></i><span>{{ item.year }}</span></div></div>
       </el-card>
 
@@ -57,7 +57,7 @@
       <div class="subject-targets"><div v-for="item in subjectTargets" :key="item.name" class="subject-cell"><div class="subject-cell-top"><strong>{{ item.name }}</strong><span>{{ item.current }} → <b>{{ item.target }}</b></span></div><el-progress :percentage="item.target ? Math.round(item.current/item.target*100) : 0" :show-text="false" :stroke-width="8" /><small>掌握度 {{ item.mastery }}% · 建议提升 {{ item.gap }} 分 · {{ item.strategy }}</small><div v-if="item.weakPoints.length" class="weak-chips"><span v-for="point in item.weakPoints" :key="point.id">{{ point.name }} · {{ point.mastery }}%</span></div></div></div>
     </el-card>
 
-    <section class="method-card"><span class="method-icon"><el-icon><DataAnalysis /></el-icon></span><div><h3>目标分计算方式</h3><p>成人高考公布到院校投档线（不单独公布专业录取线），取近三年较高有效值，再增加 30 分安全空间。分科目标结合诊断掌握度分配，优先把增量投到提分空间大、效率高的科目。招生人数变化会影响结果，因此这不是录取承诺。</p></div><el-button type="primary" size="large" @click="router.push('/plan')">生成学习路线<el-icon class="el-icon--right"><ArrowRight /></el-icon></el-button></section>
+    <section class="method-card"><span class="method-icon"><el-icon><DataAnalysis /></el-icon></span><div><h3>目标分计算方式</h3><p>成人高考通常不公布逐专业录取线，本系统按当前院校可核实公开线取有效参考值，再增加 30 分安全空间。分科目标结合诊断掌握度分配，优先把增量投到提分空间大、效率高的科目。招生人数变化会影响结果，因此这不是录取承诺。</p></div><el-button type="primary" size="large" @click="router.push('/plan')">生成学习路线<el-icon class="el-icon--right"><ArrowRight /></el-icon></el-button></section>
   </div>
 </template>
 

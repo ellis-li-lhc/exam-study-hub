@@ -6,11 +6,14 @@
         <h2>用户管理</h2>
         <p>查看注册用户与其填报信息、调整角色、重置密码。管理员可访问本页，普通用户不可见。</p>
       </div>
-      <el-button :loading="loading" @click="load">刷新</el-button>
+      <el-button class="refresh-btn" :loading="loading" @click="load">
+        <el-icon><Refresh /></el-icon>
+        刷新
+      </el-button>
     </section>
 
     <el-card shadow="never" class="users-card">
-      <el-table :data="users" v-loading="loading" stripe>
+      <el-table :data="users" v-loading="loading" stripe class="users-table">
         <el-table-column prop="id" label="ID" width="64" />
         <el-table-column prop="username" label="用户名" min-width="120" />
         <el-table-column prop="email" label="邮箱" min-width="170">
@@ -33,11 +36,41 @@
         <el-table-column label="注册时间" min-width="150">
           <template #default="{ row }">{{ formatTime(row.created_at) }}</template>
         </el-table-column>
-        <el-table-column label="操作" width="230" align="right">
+        <el-table-column label="操作" width="148" align="right" header-align="right" class-name="actions-column">
           <template #default="{ row }">
-            <el-button type="primary" size="small" text @click="openState(row)">查看填报</el-button>
-            <el-button size="small" text @click="resetPwd(row)">重置密码</el-button>
-            <el-button type="danger" size="small" text :disabled="row.id === auth.user?.id" @click="removeUser(row)">删除</el-button>
+            <div class="row-actions" aria-label="用户操作">
+              <el-tooltip content="查看填报" placement="top" :show-after="250">
+                <el-button
+                  class="action-icon primary"
+                  circle
+                  aria-label="查看填报"
+                  @click="openState(row)"
+                >
+                  <el-icon><View /></el-icon>
+                </el-button>
+              </el-tooltip>
+              <el-tooltip content="重置密码" placement="top" :show-after="250">
+                <el-button
+                  class="action-icon"
+                  circle
+                  aria-label="重置密码"
+                  @click="resetPwd(row)"
+                >
+                  <el-icon><Key /></el-icon>
+                </el-button>
+              </el-tooltip>
+              <el-tooltip :content="row.id === auth.user?.id ? '不能删除当前账号' : '删除用户'" placement="top" :show-after="250">
+                <el-button
+                  class="action-icon danger"
+                  circle
+                  aria-label="删除用户"
+                  :disabled="row.id === auth.user?.id"
+                  @click="removeUser(row)"
+                >
+                  <el-icon><Delete /></el-icon>
+                </el-button>
+              </el-tooltip>
+            </div>
           </template>
         </el-table-column>
       </el-table>
@@ -48,6 +81,7 @@
         <template v-if="profile">
           <h4 class="block-title">报考档案</h4>
           <dl class="info-list">
+            <div><dt>云端版本</dt><dd>v{{ currentState?.sync_version ?? 0 }}<span v-if="currentState?.updated_at"> · {{ formatTime(currentState.updated_at) }}</span></dd></div>
             <div><dt>报考省份</dt><dd>{{ provinceLabels || '—' }}</dd></div>
             <div><dt>意向城市</dt><dd>{{ cityLabels || '不限' }}</dd></div>
             <div><dt>报考专业</dt><dd>{{ majorLabel || '—' }}</dd></div>
@@ -77,6 +111,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import { Delete, Key, Refresh, View } from '@element-plus/icons-vue'
 import { getUsers, updateUserRole, deleteUser, resetUserPassword, getUserState } from '../api'
 import { useAuthStore } from '../stores/auth'
 import { chinaProvinces } from '../data/regions'
@@ -194,11 +229,80 @@ onMounted(load)
 .page-intro h2 { color: var(--ink); font-size: 1.7rem; }
 .page-intro p { margin-top: 5px; color: var(--text-secondary); font-size: .85rem; }
 .section-kicker { display: block; margin-bottom: 5px; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .1em; }
-.users-card { border-radius: 18px; border-color: var(--line); }
+.refresh-btn { min-width: 84px; }
+.users-card {
+  border-radius: var(--radius-lg);
+  border-color: var(--line);
+  overflow: hidden;
+}
+.users-card :deep(.el-card__body) {
+  padding: 18px 20px 8px;
+  overflow-x: auto;
+}
+.users-table { min-width: 760px; }
+.users-table :deep(.el-table__header th) {
+  height: 44px;
+  background: #f8fafc;
+  color: var(--text-secondary);
+  font-weight: 800;
+}
+.users-table :deep(.el-table__row td) { height: 72px; }
+.users-table :deep(.actions-column) { background-image: linear-gradient(90deg, rgba(255,255,255,0), #fff 18px); }
+.row-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  min-width: 116px;
+}
+.row-actions :deep(.el-button + .el-button) { margin-left: 0; }
+.action-icon {
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+.action-icon:hover,
+.action-icon:focus-visible {
+  border-color: #d7e1ee;
+  color: var(--ink);
+  background: #f7f9fc;
+}
+.action-icon:active { transform: scale(.96); }
+.action-icon.primary {
+  color: var(--primary);
+  background: var(--primary-faint);
+}
+.action-icon.primary:hover,
+.action-icon.primary:focus-visible {
+  border-color: #bfd1f0;
+  color: var(--primary-deep);
+  background: var(--primary-soft);
+}
+.action-icon.danger { color: #dc2626; }
+.action-icon.danger:hover,
+.action-icon.danger:focus-visible {
+  border-color: #fecaca;
+  color: #b91c1c;
+  background: #fff1f2;
+}
+.action-icon.is-disabled,
+.action-icon.is-disabled:hover {
+  border-color: transparent;
+  color: #cbd5e1;
+  background: transparent;
+  transform: none;
+}
 .state-detail { min-height: 200px; }
 .block-title { margin: 6px 0 10px; color: var(--ink); font-size: .92rem; }
 .info-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
 .info-list > div { display: grid; grid-template-columns: 84px 1fr; gap: 10px; align-items: start; }
 .info-list dt { color: var(--text-muted); font-size: .8rem; }
 .info-list dd { color: var(--ink); font-size: .82rem; line-height: 1.5; }
+@media (max-width: 720px) {
+  .page-intro { flex-direction: column; gap: 12px; }
+  .refresh-btn { align-self: flex-start; }
+}
 </style>

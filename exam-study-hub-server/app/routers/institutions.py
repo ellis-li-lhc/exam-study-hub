@@ -74,16 +74,16 @@ def read_institutions(
             )
             for p in sorted(inst.plans, key=lambda item: (item.year, item.major_code))
         ]
-        # 来源与可信度：由投档线数据派生（年度、官方链接、线型）。
-        source_item = next(
+        # 来源与可信度：页面的参考线来自 scores，优先使用分数来源；没有分数时再兜底到招生计划来源。
+        plan_source = next(
+            (p for p in sorted(inst.plans, key=lambda item: item.year, reverse=True) if p.source),
+            None,
+        )
+        score_source = next(
             (s for s in sorted(inst.scores, key=lambda item: item.year, reverse=True) if s.source),
             None,
         )
-        if source_item is None:
-            source_item = next(
-                (p for p in sorted(inst.plans, key=lambda item: item.year, reverse=True) if p.source),
-                None,
-            )
+        source_item = score_source or plan_source
         if source_item is not None:
             source = SourceRead(
                 provider=PROVIDER_BY_PROVINCE.get(province_code),

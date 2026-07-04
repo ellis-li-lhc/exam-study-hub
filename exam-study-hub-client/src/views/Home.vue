@@ -62,7 +62,7 @@
       </el-card>
     </section>
 
-    <el-alert title="院校与投档线为 2025 年江苏省教育考试院数据，仅供参考；录取以考试院和院校当年招生简章为准。" type="info" show-icon :closable="false" />
+    <el-alert title="院校与分数线来自已接入省份公开数据；江苏以院校投档线为主，河南以省控线和征集志愿备档线为参考。录取以考试院和院校当年招生简章为准。" type="info" show-icon :closable="false" />
   </div>
 </template>
 

@@ -87,11 +87,98 @@ const STAGE_TASK = {
   4: { type: '模考冲刺', verb: '限时模考', minutes: 55 }
 }
 
+const STAGE_FOCUS = {
+  1: {
+    title: '补齐最低掌握度',
+    reason: '优先处理诊断中掌握度最低的基础点，先把送分区稳住。',
+    action: '基础补缺'
+  },
+  2: {
+    title: '集中专项突破',
+    reason: '围绕分差贡献最大的薄弱点做专项训练，拉开提分空间。',
+    action: '专项突破'
+  },
+  3: {
+    title: '真题场景迁移',
+    reason: '把薄弱点放进历年真题语境里练，减少会概念但不会做题的断层。',
+    action: '真题套用'
+  },
+  4: {
+    title: '模考复盘稳定',
+    reason: '用阶段错题和低稳定性知识点做冲刺复盘，压低临场波动。',
+    action: '模考复盘'
+  }
+}
+
+function uniqueBy(items, keyFn) {
+  const seen = new Set()
+  return items.filter(item => {
+    const key = keyFn(item)
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
+export function buildWeaknessBacklog(subjectTargets = []) {
+  const points = subjectTargets.flatMap(subject => {
+    const subjectGap = Math.max(0, Number(subject.gap || 0))
+    const sourcePoints = subject.knowledgePoints?.length
+      ? subject.knowledgePoints
+      : [{ id: subject.name, name: `${subject.name}综合巩固`, mastery: subject.mastery, correct: null, total: null }]
+    return sourcePoints.map(point => {
+      const mastery = Number(point.mastery ?? subject.mastery ?? 0)
+      const weakness = Math.max(0, 100 - mastery)
+      const volumeWeight = Number(point.total || 0) > 0 ? Math.min(Number(point.total), 10) * 1.5 : 3
+      const priority = Math.round(weakness * 1.4 + Math.min(subjectGap, 80) * 0.55 + volumeWeight)
+      return {
+        id: point.id || `${subject.name}-${point.name}`,
+        subject: subject.name,
+        name: point.name,
+        mastery,
+        correct: point.correct,
+        total: point.total,
+        gap: subjectGap,
+        priority,
+        severity: mastery < 40 ? 'urgent' : mastery < 60 ? 'weak' : mastery < 75 ? 'watch' : 'steady',
+        reason: `掌握度 ${mastery}%${subjectGap ? `，该科还需提升 ${subjectGap} 分` : ''}`
+      }
+    })
+  })
+  return uniqueBy(points, item => `${item.subject}:${item.id}:${item.name}`)
+    .sort((a, b) => b.priority - a.priority || a.mastery - b.mastery)
+}
+
+export function buildStageFocusPlan(stageTemplates, weaknessBacklog = []) {
+  const fallback = weaknessBacklog.slice(0, 3)
+  return stageTemplates.map(stage => {
+    const config = STAGE_FOCUS[stage.id] || STAGE_FOCUS[1]
+    const pool = stage.id === 1
+      ? weaknessBacklog.filter(point => point.mastery < 60)
+      : stage.id === 2
+        ? weaknessBacklog.filter(point => point.mastery < 75)
+        : weaknessBacklog
+    const focusPoints = (pool.length ? pool : fallback).slice(0, stage.id >= 3 ? 4 : 5)
+    const top = focusPoints[0]
+    const focusSummary = top
+      ? `${top.subject}「${top.name}」优先，${top.reason}`
+      : '完成诊断后自动生成阶段重点'
+    return {
+      ...stage,
+      focusTitle: config.title,
+      focusReason: config.reason,
+      focusAction: config.action,
+      focusSummary,
+      focusPoints
+    }
+  })
+}
+
 // 生成「今天」的任务清单：
 // 1) 先排阶段测试沉淀下来的复习项（动态纠偏）；
 // 2) 再按各科最薄弱知识点、跨科目轮排，填满当天时间预算；
 // 工作日/周末用不同的时长预算。done 状态由 store 维护。
-export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, weekendHours, reviewQueue, date }) {
+export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, weekendHours, reviewQueue, focusPoints, date }) {
   const d = toDate(date)
   const isWeekend = [0, 6].includes(d.getDay())
   const budget = Math.max(60, (isWeekend ? weekendHours : weekdayHours) * 60)
@@ -100,10 +187,11 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
   const tasks = []
   let id = 1
   let used = 0
+  const canFit = duration => used === 0 || used + duration <= budget
 
   // 1) 复习项优先（来自阶段测试的薄弱知识点）
   ;(reviewQueue || []).forEach(item => {
-    if (used >= budget) return
+    if (!canFit(30)) return
     tasks.push({
       id: id++,
       subject: item.subject,
@@ -116,10 +204,32 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
     used += 30
   })
 
-  // 2) 各科按掌握度从低到高取知识点，跨科目轮排，填满预算
+  // 2) 当前阶段的诊断重点优先进入今日任务。
+  ;(focusPoints || []).forEach(point => {
+    if (!canFit(stage.minutes)) return
+    tasks.push({
+      id: id++,
+      subject: point.subject,
+      title: `${point.name} · ${stage.verb}`,
+      duration: stage.minutes,
+      type: stage.type,
+      done: false,
+      mastery: point.mastery,
+      focus: true,
+      reason: point.reason
+    })
+    used += stage.minutes
+  })
+
+  const usedFocusKeys = new Set((focusPoints || []).map(point => `${point.subject}:${point.name}`))
+
+  // 3) 各科按掌握度从低到高取知识点，跨科目轮排，填满预算
   const perSubject = (subjectTargets || []).map(st => ({
     subject: st.name,
-    points: (st.knowledgePoints || []).slice().sort((a, b) => a.mastery - b.mastery)
+    points: (st.knowledgePoints || [])
+      .filter(point => !usedFocusKeys.has(`${st.name}:${point.name}`))
+      .slice()
+      .sort((a, b) => a.mastery - b.mastery)
   }))
 
   let added = true
@@ -127,6 +237,7 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
     added = false
     for (const s of perSubject) {
       if (used >= budget) break
+      if (!canFit(stage.minutes)) break
       const point = s.points.shift()
       if (!point) continue
       tasks.push({

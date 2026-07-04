@@ -3,10 +3,12 @@ import { defineStore } from 'pinia'
 import { institutions as mvpInstitutions, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
 import { examMajors, normalizeMajorCodes, subjectsForCategory } from '../data/majors'
 import { getProvinces, getInstitutions } from '../api'
-import { getExamDate, buildMilestones, buildDailyTasks, fmtDate } from '../data/planner'
+import { getExamDate, buildMilestones, buildDailyTasks, buildStageFocusPlan, buildWeaknessBacklog, fmtDate } from '../data/planner'
+import { isCityInProvince } from '../data/regions'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
 const DIAGNOSTIC_VERSION = 'docs-json-question-bank-v1'
+const PLAN_TASK_VERSION = 'diagnostic-route-v2'
 
 function getDefaultYear() {
   const now = new Date()
@@ -44,6 +46,7 @@ function formatSourceStatus(source) {
   if (!source || source.confidence !== 'verified') return '暂无官方数据'
   const label = `${source.year} 年${source.provider || ''}${source.line_type || ''}`
   if (source.line_type === '征集志愿备档线') return `${label}（余缺计划参考）`
+  if (source.line_type === '征求计划') return `${label}（余缺计划参考）`
   if (source.line_type === '省控线') return `${label}（最低控制线参考）`
   return label
 }
@@ -64,6 +67,7 @@ export const useApplicationStore = defineStore('application', () => {
   const diagnostic = ref(saved.diagnostic?.version === DIAGNOSTIC_VERSION ? saved.diagnostic : createDefaultDiagnostic())
   const currentStage = ref(saved.currentStage || 1)
   const tasks = ref(saved.tasks || todayTasks)
+  const tasksVersion = ref(saved.tasksVersion || null)
   const stageTests = ref(saved.stageTests || [])
   // 今天的任务是哪一天生成的（用于「每天自动刷新当日任务」）
   const tasksDate = ref(saved.tasksDate || null)
@@ -109,21 +113,28 @@ export const useApplicationStore = defineStore('application', () => {
       })
       .map(item => {
         const scores = relevantScores(item, category)
-        return { ...item, scores, tuition: scores[0]?.tuition ?? item.tuition }
+        return { ...item, scores, tuition: scores[0]?.tuition ?? item.tuition ?? null }
+      })
+      .sort((a, b) => {
+        const aLocal = isCityInProvince(a.province, a.city)
+        const bLocal = isCityInProvince(b.province, b.city)
+        if (aLocal !== bLocal) return aLocal ? -1 : 1
+        if (a.majorMatch !== b.majorMatch) return a.majorMatch === 'exact' ? -1 : 1
+        return String(a.city || '').localeCompare(String(b.city || ''), 'zh') || a.name.localeCompare(b.name, 'zh')
       })
   })
   const selectedInstitution = computed(() => {
-    const found = institutions.value.find(item => item.code === selectedInstitutionCode.value)
-    if (!found) return undefined
-    const scores = relevantScores(found, selectedMajor.value?.category)
-    return { ...found, scores, tuition: scores[0]?.tuition ?? found.tuition }
+    return filteredInstitutions.value.find(item => item.code === selectedInstitutionCode.value)
   })
   const profileComplete = computed(() => profile.value.provinces.length > 0 && Boolean(profile.value.majorCode))
   const diagnosisComplete = computed(() => diagnostic.value.completed)
   const currentScore = computed(() => Object.values(diagnostic.value.subjectScores).reduce((sum, value) => sum + Number(value || 0), 0))
   const referenceScore = computed(() => {
-    const scores = selectedInstitution.value?.scores || []
-    return scores.length ? Math.max(...scores.map(item => item.score)) : 120
+    const scores = (selectedInstitution.value?.scores || [])
+      .filter(item => item.score !== null && item.score !== undefined)
+      .map(item => Number(item.score))
+      .filter(score => Number.isFinite(score))
+    return scores.length ? Math.max(...scores) : 120
   })
   const targetScore = computed(() => referenceScore.value + 30)
   const scoreGap = computed(() => Math.max(0, targetScore.value - currentScore.value))
@@ -199,22 +210,19 @@ export const useApplicationStore = defineStore('application', () => {
     })
   })
 
-  // 跨科目的优先复习清单：掌握度最低的若干知识点，回答“先补哪些重点”。
-  const focusKnowledge = computed(() => {
-    const subjects = selectedMajor.value?.subjects || []
-    const details = (diagnostic.value.knowledgeDetails || []).filter(detail => subjects.includes(detail.subject))
-    return [...details]
-      .sort((a, b) => a.mastery - b.mastery)
-      .filter(detail => detail.mastery < 60)
-      .slice(0, 6)
-      .map(detail => ({ id: detail.id, name: detail.name, subject: detail.subject, mastery: detail.mastery, correct: detail.correct, total: detail.total }))
-  })
+  // 跨科目的诊断薄弱项 backlog：掌握度、目标分差、题量一起决定优先级。
+  const weaknessBacklog = computed(() => buildWeaknessBacklog(subjectTargets.value))
+  const stageFocusPlan = computed(() => buildStageFocusPlan(stageTemplates, weaknessBacklog.value))
+  const currentStageFocus = computed(() => stageFocusPlan.value.find(stage => stage.id === currentStage.value))
+  const focusKnowledge = computed(() => weaknessBacklog.value
+    .filter(point => point.severity !== 'steady')
+    .slice(0, 6))
   const weeklyHours = computed(() => profile.value.mode === 'plan'
     ? Number(profile.value.weekdayHours) * 5 + Number(profile.value.weekendHours) * 2
     : Number(diagnostic.value.weeklyHours || 0))
   const estimatedWeeks = computed(() => Math.max(6, Math.ceil((scoreGap.value * 2.1 + 60) / Math.max(weeklyHours.value, 1))))
   const overallProgress = computed(() => Math.round(tasks.value.filter(item => item.done).length / Math.max(tasks.value.length, 1) * 100))
-  const stages = computed(() => stageTemplates.map(stage => ({
+  const stages = computed(() => stageFocusPlan.value.map(stage => ({
     ...stage,
     status: stage.id < currentStage.value ? 'completed' : stage.id === currentStage.value ? 'active' : 'pending'
   })))
@@ -225,7 +233,7 @@ export const useApplicationStore = defineStore('application', () => {
 
   // 达标里程碑：把四个阶段铺到 [开始日, 考试日]，给出每阶段起止日期。
   // 未来阶段从「今天」起算，所以进度落后时会自动压缩 —— 即“重排期”。
-  const planMilestones = computed(() => buildMilestones(stageTemplates, {
+  const planMilestones = computed(() => buildMilestones(stageFocusPlan.value, {
     startDate: profile.value.startDate,
     examDate: examDate.value,
     currentStage: currentStage.value,
@@ -257,15 +265,15 @@ export const useApplicationStore = defineStore('application', () => {
   function updateProfile(nextProfile) {
     const majorChanged = profile.value.majorCode !== nextProfile.majorCode
     profile.value = { ...profile.value, ...nextProfile }
-    if (!filteredInstitutions.value.some(item => item.code === selectedInstitutionCode.value)) {
-      selectedInstitutionCode.value = filteredInstitutions.value[0]?.code || null
+    if (majorChanged || !filteredInstitutions.value.some(item => item.code === selectedInstitutionCode.value)) {
+      selectedInstitutionCode.value = null
     }
     syncDiagnosticSubjects()
     if (majorChanged) resetDiagnostic()
   }
 
   function selectInstitution(code) {
-    selectedInstitutionCode.value = code
+    selectedInstitutionCode.value = filteredInstitutions.value.some(item => item.code === code) ? code : null
   }
 
   // 从后端加载省份列表。后端返回 {code,name,note}，映射成前端用的 {value,label,note}。
@@ -288,7 +296,7 @@ export const useApplicationStore = defineStore('application', () => {
         province: item.province,
         city: item.city || '—',
         duration: item.duration || '2.5 年',
-        tuition: item.tuition ?? '—',
+        tuition: item.tuition ?? null,
         teachingSite: item.teaching_site || '以院校招生简章为准',
         degree: item.degree || '以院校学位授予要求为准',
         source: item.source || null,
@@ -321,6 +329,7 @@ export const useApplicationStore = defineStore('application', () => {
 
   function completeDiagnostic(payload, completed = true) {
     diagnostic.value = { ...diagnostic.value, ...payload, version: DIAGNOSTIC_VERSION, completed }
+    tasksVersion.value = null
   }
 
   function resetDiagnostic() {
@@ -329,6 +338,7 @@ export const useApplicationStore = defineStore('application', () => {
       completed: false,
       weeklyHours: diagnostic.value.weeklyHours
     }
+    tasksVersion.value = null
     syncDiagnosticSubjects()
   }
 
@@ -362,16 +372,18 @@ export const useApplicationStore = defineStore('application', () => {
       weekdayHours: profile.value.weekdayHours,
       weekendHours: profile.value.weekendHours,
       reviewQueue: reviewQueue.value,
+      focusPoints: currentStageFocus.value?.focusPoints || [],
       date: today
     })
     tasksDate.value = today
+    tasksVersion.value = PLAN_TASK_VERSION
   }
 
   // 进入计划页时调用：跨天或任务为空则自动生成当日任务。
   function ensureTodayTasks() {
     if (profile.value.mode !== 'plan') return
     const today = fmtDate(new Date())
-    if (tasksDate.value !== today || !tasks.value.length) regenerateTasks()
+    if (tasksDate.value !== today || tasksVersion.value !== PLAN_TASK_VERSION || !tasks.value.length) regenerateTasks()
   }
 
   function submitStageTest(result) {
@@ -397,7 +409,10 @@ export const useApplicationStore = defineStore('application', () => {
   }
 
   function advanceStage() {
-    if (currentStage.value < 4) currentStage.value += 1
+    if (currentStage.value < 4) {
+      currentStage.value += 1
+      if (profile.value.mode === 'plan') regenerateTasks()
+    }
   }
 
   // —— 云端同步用 ——
@@ -409,6 +424,8 @@ export const useApplicationStore = defineStore('application', () => {
     if (blob.diagnostic && blob.diagnostic.version === DIAGNOSTIC_VERSION) diagnostic.value = blob.diagnostic
     if (blob.currentStage) currentStage.value = blob.currentStage
     if (Array.isArray(blob.tasks)) tasks.value = blob.tasks
+    if ('tasksVersion' in blob) tasksVersion.value = blob.tasksVersion
+    else if (Array.isArray(blob.tasks)) tasksVersion.value = null
     if (Array.isArray(blob.stageTests)) stageTests.value = blob.stageTests
     if ('tasksDate' in blob) tasksDate.value = blob.tasksDate
     if (Array.isArray(blob.reviewQueue)) reviewQueue.value = blob.reviewQueue
@@ -430,18 +447,20 @@ export const useApplicationStore = defineStore('application', () => {
     diagnostic.value = createDefaultDiagnostic()
     currentStage.value = 1
     tasks.value = todayTasks
+    tasksVersion.value = null
     stageTests.value = []
     tasksDate.value = null
     reviewQueue.value = []
   }
 
-  watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, stageTests, tasksDate, reviewQueue], () => {
+  watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, tasksVersion, stageTests, tasksDate, reviewQueue], () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       profile: profile.value,
       selectedInstitutionCode: selectedInstitutionCode.value,
       diagnostic: diagnostic.value,
       currentStage: currentStage.value,
       tasks: tasks.value,
+      tasksVersion: tasksVersion.value,
       stageTests: stageTests.value,
       tasksDate: tasksDate.value,
       reviewQueue: reviewQueue.value
@@ -457,6 +476,7 @@ export const useApplicationStore = defineStore('application', () => {
     diagnostic,
     currentStage,
     tasks,
+    tasksVersion,
     stageTests,
     tasksDate,
     reviewQueue,
@@ -471,6 +491,9 @@ export const useApplicationStore = defineStore('application', () => {
     targetScore,
     scoreGap,
     subjectTargets,
+    weaknessBacklog,
+    stageFocusPlan,
+    currentStageFocus,
     focusKnowledge,
     weeklyHours,
     estimatedWeeks,

@@ -25,3 +25,28 @@ export function getUserState(userId) {
 export function deleteUser(userId) {
   return http.delete(`/admin/users/${userId}`)
 }
+
+// 数据管理总览  → GET /api/admin/data/summary
+export function getAdminDataSummary() {
+  return http.get('/admin/data/summary')
+}
+
+// 院校数据查看  → GET /api/admin/data/institutions
+export function getAdminInstitutions(params = {}) {
+  return http.get('/admin/data/institutions', { params })
+}
+
+// 当前库中的数据导入批次（按来源/年份/批次聚合） → GET /api/admin/data/batches
+export function getAdminImportBatches() {
+  return http.get('/admin/data/batches')
+}
+
+// 题库质量报告 → GET /api/admin/data/question-quality
+export function getAdminQuestionQuality() {
+  return http.get('/admin/data/question-quality')
+}
+
+// 省份 / 专业主数据维护入口 → GET /api/admin/data/catalog
+export function getAdminCatalog() {
+  return http.get('/admin/data/catalog')
+}

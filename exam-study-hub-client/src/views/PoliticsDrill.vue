@@ -55,6 +55,8 @@
               :type="progress.isKnown(card.key) ? 'success' : 'default'"
               :plain="!progress.isKnown(card.key)"
               circle
+              :aria-label="progress.isKnown(card.key) ? `取消第 ${card.no} 条掌握标记` : `标记第 ${card.no} 条已掌握`"
+              :title="progress.isKnown(card.key) ? '取消掌握标记' : '标记已掌握'"
               @click="progress.toggle(card.key)"
             >
               <el-icon><Check /></el-icon>
@@ -358,7 +360,7 @@ function resetQuizAnswers() {
 .topic-select{width:260px}
 .quiz-toolbar{justify-content:flex-start}
 .mem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.mem-card{display:flex;gap:10px;padding:15px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:box-shadow .18s,border-color .18s}
+.mem-card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;min-height:92px;padding:15px 68px 15px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:box-shadow .18s,border-color .18s}
 .mem-card:hover{box-shadow:0 6px 16px rgba(37,99,235,.07)}
 .mem-card.known{border-color:#bfe8cf;background:#f6fffb}
 .mem-no{width:26px;height:26px;display:grid;place-items:center;flex:0 0 auto;border-radius:8px;color:var(--primary);font-size:.66rem;font-weight:800;background:var(--primary-soft)}
@@ -366,7 +368,7 @@ function resetQuizAnswers() {
 .mem-body{flex:1;min-width:0}
 .mem-q{color:var(--ink);font-size:.86rem;line-height:1.55}
 .mem-a{margin-top:10px;padding:10px 12px;border-radius:10px;background:#eef7f2;color:#15795a;font-size:.84rem;line-height:1.6;font-weight:600}
-.mark-btn{flex:0 0 auto;align-self:flex-start}
+.mark-btn{position:absolute;top:16px;right:16px;width:44px;height:44px;padding:0}
 .pager{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px;color:var(--text-secondary);font-size:.8rem}
 .quiz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .quiz-card{padding:15px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs)}

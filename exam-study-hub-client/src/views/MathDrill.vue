@@ -68,10 +68,13 @@
             class="known-toggle"
             :type="progress.isKnown(topic.key) ? 'success' : 'default'"
             :plain="!progress.isKnown(topic.key)"
-            circle
+            round
+            :aria-label="progress.isKnown(topic.key) ? `取消 ${topic.name} 掌握标记` : `标记 ${topic.name} 已掌握`"
+            :title="progress.isKnown(topic.key) ? '取消掌握标记' : '标记已掌握'"
             @click="progress.toggle(topic.key)"
           >
             <el-icon><Check /></el-icon>
+            {{ progress.isKnown(topic.key) ? '已掌握' : '标记掌握' }}
           </el-button>
         </div>
 
@@ -254,11 +257,12 @@ function resetAnswers() {
 .math-topic-card{padding:18px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .math-topic-card:hover{box-shadow:var(--shadow-sm)}
 .math-topic-card.known{border-color:#c9efdf;background:#f5fbf8}
-.topic-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.topic-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:flex-start;gap:12px;margin-bottom:14px}
 .topic-no{width:32px;height:32px;display:grid;place-items:center;flex:0 0 auto;border-radius:9px;color:var(--primary);font-size:.76rem;font-weight:900;background:var(--primary-soft)}
 .topic-head h3{color:var(--ink);font-size:1.02rem}
+.topic-head>div{min-width:0}
 .topic-head p{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:5px;color:var(--text-muted);font-size:.74rem}
-.known-toggle{margin-left:auto;flex:0 0 auto}
+.known-toggle{min-height:44px;margin-left:0;padding:0 14px;white-space:nowrap}
 .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .guide-block{padding:14px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--surface-soft)}
 .guide-block h4{display:flex;align-items:center;gap:6px;margin-bottom:8px;color:var(--ink);font-size:.86rem}
@@ -281,5 +285,5 @@ function resetAnswers() {
 .option-grid button.picked:not(.correct):not(.wrong){border-color:var(--primary);background:#f3f7ff}
 .answer-note{margin-top:9px;color:var(--text-muted);font-size:.74rem}
 @media(max-width:980px){.math-hero{grid-template-columns:1fr 1fr}.question-list{grid-template-columns:1fr}}
-@media(max-width:700px){.page-intro,.math-toolbar{align-items:stretch;flex-direction:column}.math-hero,.guide-grid,.option-grid{grid-template-columns:1fr}.subject-select,.topic-select{width:100%}}
+@media(max-width:700px){.page-intro,.math-toolbar{align-items:stretch;flex-direction:column}.math-hero,.guide-grid,.option-grid{grid-template-columns:1fr}.topic-head{grid-template-columns:auto minmax(0,1fr)}.known-toggle{grid-column:2;justify-self:start}.subject-select,.topic-select{width:100%}}
 </style>

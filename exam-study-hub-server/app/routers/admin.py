@@ -35,6 +35,8 @@ def get_user_state(
         app_state=state.app_state,
         english_extras=state.english_extras,
         vocab_progress=state.vocab_progress,
+        sync_version=state.sync_version,
+        updated_at=state.updated_at,
     )
 
 

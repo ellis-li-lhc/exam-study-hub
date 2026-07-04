@@ -4,13 +4,32 @@
 
     <section class="stage-overview"><div v-for="stage in store.planMilestones" :key="stage.id" class="stage-node" :class="stage.status"><span><el-icon v-if="stage.status==='completed'"><Check /></el-icon><template v-else>{{ stage.id }}</template></span><div><small>阶段 {{ stage.id }}</small><strong>{{ stage.name }}</strong><p>{{ stage.startDate.slice(5) }} ~ {{ stage.endDate.slice(5) }}</p></div></div></section>
 
+    <section v-if="topWeaknesses.length" class="route-evidence">
+      <div>
+        <span class="section-kicker">路线依据</span>
+        <h3>优先处理 {{ topWeaknesses[0].subject }} · {{ topWeaknesses[0].name }}</h3>
+        <p>{{ topWeaknesses[0].reason }}，当前路线会先补短板，再进入专项和真题迁移。</p>
+      </div>
+      <div class="weakness-list">
+        <span v-for="point in topWeaknesses" :key="`${point.subject}-${point.id}`" :class="point.severity">
+          <b>{{ point.subject }}</b>{{ point.name }}<em>{{ point.mastery }}%</em>
+        </span>
+      </div>
+    </section>
+
     <section class="plan-layout">
       <div class="stage-detail">
         <el-card v-for="stage in store.planMilestones" :key="stage.id" shadow="never" class="stage-card" :class="stage.status">
           <div class="stage-card-head"><span class="stage-badge">0{{ stage.id }}</span><div><h3>{{ stage.name }}</h3><p>{{ stage.description }}</p></div><el-tag :type="statusType(stage.status)" effect="plain">{{ statusLabel(stage.status) }}</el-tag></div>
           <div class="stage-goal"><el-icon><Flag /></el-icon><span><small>阶段完成标准</small><strong>{{ stage.target }}</strong></span></div>
+          <div v-if="stage.focusPoints?.length" class="stage-focus">
+            <div class="stage-focus-head"><strong>{{ stage.focusTitle }}</strong><span>{{ stage.focusSummary }}</span></div>
+            <div class="focus-points">
+              <span v-for="point in stage.focusPoints" :key="`${stage.id}-${point.subject}-${point.id}`"><b>{{ point.subject }}</b>{{ point.name }}<em>{{ point.mastery }}%</em></span>
+            </div>
+          </div>
           <div class="stage-window"><el-icon><Calendar /></el-icon><span>{{ stage.startDate }} ~ {{ stage.endDate }}</span></div>
-          <div v-if="stage.status==='active'" class="active-actions"><el-button type="primary" plain @click="openStageTest">进行阶段测试</el-button><span>系统出题并自动判分；偏低时自动把薄弱知识点加入明日复习，不强制退回。</span></div>
+          <div v-if="stage.status==='active'" class="active-actions"><el-button type="primary" plain @click="openStageTest">进行阶段测试</el-button><span>优先抽取本阶段重点；偏低时自动把薄弱知识点加入复习队列。</span></div>
         </el-card>
       </div>
 
@@ -20,11 +39,11 @@
         <template v-if="store.profile.mode==='plan'">
           <div v-for="group in tasksBySubject" :key="group.subject" class="task-group">
             <div class="task-group-head"><span class="task-subject">{{ group.subject }}</span><small>{{ group.doneCount }}/{{ group.tasks.length }} 项 · {{ group.minutes }} 分钟</small></div>
-            <div v-for="task in group.tasks" :key="task.id" class="task-row" :class="{done:task.done, review: task.reviewKey}"><el-checkbox :model-value="task.done" @change="store.toggleTask(task.id)"/><span><strong>{{ task.title }}</strong><small>{{ task.type }} · {{ task.duration }} 分钟</small></span></div>
+            <div v-for="task in group.tasks" :key="task.id" class="task-row" :class="{done:task.done, review: task.reviewKey, focus: task.focus}"><el-checkbox :model-value="task.done" @change="store.toggleTask(task.id)"/><span><strong>{{ task.title }}</strong><small>{{ task.type }} · {{ task.duration }} 分钟<span v-if="task.mastery != null"> · 掌握度 {{ task.mastery }}%</span></small></span></div>
           </div>
         </template>
         <div v-else class="self-panel">
-          <p class="self-intro">自主模式不生成每日排期。左侧四个阶段为统一路线，按下面「掌握度从低到高」的顺序优先推进，达到各阶段完成标准后再做阶段测试。</p>
+          <p class="self-intro">自主模式不生成每日排期。左侧四个阶段会按诊断薄弱项给出重点，下面按优先级列出当前最该推进的知识点。</p>
           <ol v-if="selfOrder.length" class="self-order">
             <li v-for="point in selfOrder" :key="point.id">
               <div class="self-order-top"><strong>{{ point.name }}</strong><b :class="point.mastery < 60 ? 'weak' : ''">{{ point.mastery }}%</b></div>
@@ -44,7 +63,8 @@
           <p>题目来自本阶段相关知识点，系统将按正确率自动判分。</p>
         </div>
 
-        <div class="stage-question-list">
+        <el-empty v-if="!hasStageQuestions" description="当前科目题库暂不可用，请稍后再试或先继续复习" :image-size="72" />
+        <div v-else class="stage-question-list">
           <article v-for="(question, index) in stageQuestions" :key="question.id" class="stage-question">
             <div class="stage-question-meta"><span class="question-order">{{ String(index + 1).padStart(2, '0') }}</span><el-tag size="small" effect="plain">{{ question.subject }} · {{ question.knowledgeName }}</el-tag></div>
             <h4>{{ question.stem }}</h4>
@@ -64,7 +84,7 @@
       </div>
 
       <template #footer>
-        <template v-if="!testResult"><el-button @click="testDialog=false">稍后再测</el-button><el-button type="primary" :disabled="answeredTestCount < stageQuestions.length" @click="submitTest">提交并自动判分</el-button></template>
+        <template v-if="!testResult"><el-button @click="testDialog=false">稍后再测</el-button><el-button type="primary" :disabled="!hasStageQuestions || answeredTestCount < stageQuestions.length" @click="submitTest">提交并自动判分</el-button></template>
         <template v-else-if="testResult.passed"><el-button type="primary" @click="testDialog=false">完成，进入下一阶段</el-button></template>
         <template v-else><el-button @click="testDialog=false">留在本阶段复习</el-button><el-button type="primary" plain @click="continueAnyway">仍进入下一阶段</el-button></template>
       </template>
@@ -93,11 +113,12 @@ onMounted(async () => {
 const statusLabel = status => ({ completed: '已完成', active: '进行中', pending: '未开始' })[status]
 const statusType = status => ({ completed: 'success', active: 'primary', pending: 'info' })[status]
 const currentStageName = computed(() => store.stages.find(stage => stage.id === testingStage.value)?.name || '')
+const topWeaknesses = computed(() => store.weaknessBacklog.slice(0, 5))
+const testingStageFocus = computed(() => store.stageFocusPlan.find(stage => stage.id === testingStage.value))
 
 // 自主模式的建议学习顺序：各科知识点按掌握度从低到高排序，取最弱的若干个。
 const selfOrder = computed(() => {
-  const points = store.subjectTargets.flatMap(st => (st.knowledgePoints || []).map(p => ({ ...p, subject: st.name })))
-  return points.sort((a, b) => a.mastery - b.mastery).slice(0, 8)
+  return store.weaknessBacklog.slice(0, 8)
 })
 
 // 计划模式：把当日任务按科目分组，并按专业的科目顺序排列。
@@ -120,7 +141,21 @@ const tasksBySubject = computed(() => {
   })
 })
 
+const focusedQuestionGroups = computed(() => {
+  const points = testingStageFocus.value?.focusPoints || []
+  return points.map(point => allGroups.value.find(group =>
+    group.subject === point.subject &&
+    (String(group.id) === String(point.id) || group.name === point.name)
+  )).filter(Boolean)
+})
+
 const stageQuestions = computed(() => {
+  const focusGroups = focusedQuestionGroups.value.filter(group => group.questions?.length)
+  if (focusGroups.length) {
+    return focusGroups
+      .flatMap(group => group.questions.slice(0, 2).map(question => ({ ...question, subject: group.subject, knowledgeName: group.name })))
+      .slice(0, 8)
+  }
   const subjects = store.selectedMajor?.subjects || []
   const groups = allGroups.value
   return subjects.flatMap(subject => {
@@ -139,6 +174,7 @@ const stageQuestions = computed(() => {
 })
 
 const answeredTestCount = computed(() => stageQuestions.value.filter(question => testAnswers[question.id] !== undefined).length)
+const hasStageQuestions = computed(() => stageQuestions.value.length > 0)
 const testProgress = computed(() => Math.round(answeredTestCount.value / Math.max(stageQuestions.value.length, 1) * 100))
 
 function openStageTest() {
@@ -149,7 +185,7 @@ function openStageTest() {
 }
 
 function submitTest() {
-  if (answeredTestCount.value < stageQuestions.value.length) return
+  if (!hasStageQuestions.value || answeredTestCount.value < stageQuestions.value.length) return
   const correctQuestions = stageQuestions.value.filter(question => testAnswers[question.id] === question.answer)
   const correctCount = correctQuestions.length
   const totalQuestions = stageQuestions.value.length
@@ -179,6 +215,6 @@ function continueAnyway() {
 </script>
 
 <style scoped>
-.page-stack{display:flex;flex-direction:column;gap:18px}.page-intro{display:flex;align-items:flex-start;justify-content:space-between}.page-intro h2{color:var(--ink);font-size:1.7rem}.page-intro p{margin-top:5px;color:var(--text-secondary)}.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.72rem;font-weight:800;letter-spacing:.1em}.stage-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}.stage-node{display:flex;align-items:center;gap:10px;position:relative}.stage-node:not(:last-child):after{content:'';position:absolute;right:10px;width:34%;height:2px;background:var(--line)}.stage-node>span{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:var(--text-muted);font-weight:800;background:#edf1f6}.stage-node.active>span{color:#fff;background:var(--primary);box-shadow:0 0 0 6px var(--primary-soft)}.stage-node.completed>span{color:#fff;background:var(--mint)}.stage-node small,.stage-node strong,.stage-node p{display:block}.stage-node small{color:var(--text-muted);font-size:.64rem}.stage-node strong{color:var(--ink);font-size:.8rem}.stage-node p{color:var(--text-muted);font-size:.66rem}.plan-layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}.stage-detail{display:flex;flex-direction:column;gap:12px}.stage-card{border-radius:18px;border-color:var(--line)}.stage-card.active{border-color:#8bb1f7;box-shadow:0 0 0 3px rgba(37,99,235,.07)}.stage-card-head{display:flex;align-items:center;gap:13px}.stage-badge{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:var(--primary);font-weight:900;background:var(--primary-soft)}.stage-card-head>div{flex:1}.stage-card-head h3{color:var(--ink);font-size:.95rem}.stage-card-head p{color:var(--text-secondary);font-size:.74rem}.stage-goal{display:flex;align-items:center;gap:9px;margin-top:14px;padding:12px;border-radius:12px;background:#f6f8fc}.stage-goal>span small,.stage-goal>span strong{display:block}.stage-goal small{color:var(--text-muted);font-size:.66rem}.stage-goal strong{color:var(--ink);font-size:.76rem}.stage-window{display:flex;align-items:center;gap:7px;margin-top:9px;color:var(--text-secondary);font-size:.74rem}.stage-window .el-icon{color:var(--primary)}.review-note{display:flex;align-items:center;gap:6px;margin-top:14px;padding:9px 11px;border-radius:10px;color:#b77400;font-size:.74rem;background:var(--accent-soft)}.active-actions{display:flex;align-items:center;gap:12px;margin-top:13px}.active-actions span{color:var(--text-muted);font-size:.7rem}.daily-panel{position:sticky;top:98px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff}.daily-head{display:flex;align-items:center;justify-content:space-between}.daily-head h3{color:var(--ink);font-size:1rem}.task-row{display:flex;align-items:flex-start;gap:9px;padding:14px 0;border-bottom:1px solid var(--line)}.task-row>span{flex:1}.task-row b{display:inline-block;padding:2px 6px;margin-bottom:5px;border-radius:5px;color:var(--primary);font-size:.65rem;background:var(--primary-soft)}.task-row strong,.task-row small{display:block}.task-row strong{color:var(--ink);font-size:.78rem}.task-row small{color:var(--text-muted);font-size:.68rem}.task-row.done{opacity:.55}.task-row.done strong{text-decoration:line-through}.task-group{margin-bottom:4px}.task-group-head{display:flex;align-items:baseline;justify-content:space-between;margin:14px 0 2px;padding-bottom:6px;border-bottom:2px solid var(--primary-soft)}.task-subject{color:var(--primary-deep);font-size:.82rem;font-weight:800}.task-group-head small{color:var(--text-muted);font-size:.68rem}.task-row.review{border-left:3px solid var(--accent);padding-left:8px;margin-left:-11px}.task-row.review strong{color:#b77400}.self-intro{margin-top:6px;padding:14px;border-radius:13px;color:var(--text-secondary);font-size:.76rem;line-height:1.6;background:#f6f8fc}.self-order{margin-top:14px;padding-left:0;list-style:none;counter-reset:self}.self-order li{counter-increment:self;position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line)}.self-order li:before{content:counter(self);position:absolute;left:0;top:11px;width:21px;height:21px;display:grid;place-items:center;border-radius:6px;color:var(--primary);font-size:.66rem;font-weight:800;background:var(--primary-soft)}.self-order-top{display:flex;align-items:baseline;justify-content:space-between}.self-order strong{color:var(--ink);font-size:.8rem}.self-order b{color:var(--mint);font-size:.8rem}.self-order b.weak{color:#e6a23c}.self-order small{display:block;margin-top:2px;color:var(--text-muted);font-size:.68rem}.test-intro{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#f5f8fc}.test-intro>div{display:flex;align-items:baseline;gap:5px}.test-intro strong{color:var(--ink);font-size:1.2rem}.test-intro span,.test-intro p{color:var(--text-muted);font-size:.7rem}.test-intro p{grid-column:1/-1;margin-top:-7px}.stage-question-list{display:flex;flex-direction:column;gap:14px;max-height:55vh;margin-top:16px;padding:0 10px 6px 0;overflow:auto;scrollbar-gutter:stable}.stage-question{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fff}.stage-question-meta{display:flex;align-items:center;gap:9px;min-width:0}.stage-question-meta>.question-order{width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:9px;color:var(--primary);font-size:.68rem;font-weight:900;background:var(--primary-soft)}.stage-question-meta :deep(.el-tag){max-width:calc(100% - 40px);height:26px;padding:0 9px;border-radius:7px;overflow:hidden;text-overflow:ellipsis}.stage-question h4{margin:14px 0;color:var(--ink);font-size:.9rem;line-height:1.55}.stage-options{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;width:100%}:deep(.stage-options .el-radio){width:100%;height:auto;min-height:44px;margin:0;padding:10px 12px;border-radius:10px}:deep(.stage-options .el-radio__label){display:flex;align-items:center;min-width:0;white-space:normal;line-height:1.4}.stage-options b{display:inline-grid;place-items:center;width:21px;height:21px;margin-right:7px;flex:0 0 21px;border-radius:5px;color:var(--text-secondary);font-size:.65rem;background:#eef2f7}.test-result-panel{text-align:center;padding:12px}.result-mark{width:58px;height:58px;display:grid;place-items:center;margin:0 auto 12px;border-radius:18px;font-size:28px}.result-mark.passed{color:var(--mint);background:var(--mint-soft)}.result-mark.review{color:#b77400;background:var(--accent-soft)}.test-result-panel h3{color:var(--ink);font-size:1.25rem}.test-result-panel>p{margin:6px 0 18px;color:var(--text-secondary);font-size:.8rem}.auto-score{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.auto-score>span{padding:14px;border-radius:12px;text-align:left;background:#f5f8fc}.auto-score small,.auto-score strong{display:block}.auto-score small{color:var(--text-muted);font-size:.68rem}.auto-score strong{margin-top:3px;color:var(--ink);font-size:1rem}:deep(.stage-test-dialog .el-dialog__header){margin:0;padding:20px 22px 12px;border-bottom:1px solid var(--line)}:deep(.stage-test-dialog .el-dialog__body){padding:16px 22px}:deep(.stage-test-dialog .el-dialog__footer){padding:14px 22px;border-top:1px solid var(--line)}
-@media(max-width:1050px){.stage-overview{grid-template-columns:repeat(2,1fr);gap:18px}.stage-node:after{display:none}.plan-layout{grid-template-columns:1fr}.daily-panel{position:static}}@media(max-width:600px){.stage-overview{grid-template-columns:1fr}.active-actions{align-items:flex-start;flex-direction:column}.stage-options,.auto-score{grid-template-columns:1fr}.test-intro{grid-template-columns:1fr}.test-intro p{grid-column:auto;margin:0}}
+.page-stack{display:flex;flex-direction:column;gap:18px}.page-intro{display:flex;align-items:flex-start;justify-content:space-between}.page-intro h2{color:var(--ink);font-size:1.7rem}.page-intro p{margin-top:5px;color:var(--text-secondary)}.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.72rem;font-weight:800;letter-spacing:.1em}.stage-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}.stage-node{display:flex;align-items:center;gap:10px;position:relative}.stage-node:not(:last-child):after{content:'';position:absolute;right:10px;width:34%;height:2px;background:var(--line)}.stage-node>span{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:var(--text-muted);font-weight:800;background:#edf1f6}.stage-node.active>span{color:#fff;background:var(--primary);box-shadow:0 0 0 6px var(--primary-soft)}.stage-node.completed>span{color:#fff;background:var(--mint)}.stage-node small,.stage-node strong,.stage-node p{display:block}.stage-node small{color:var(--text-muted);font-size:.64rem}.stage-node strong{color:var(--ink);font-size:.8rem}.stage-node p{color:var(--text-muted);font-size:.66rem}.route-evidence{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff}.route-evidence h3{color:var(--ink);font-size:1rem}.route-evidence p{margin-top:5px;color:var(--text-secondary);font-size:.76rem;line-height:1.6}.weakness-list,.focus-points{display:flex;flex-wrap:wrap;gap:8px}.weakness-list span,.focus-points span{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:6px 9px;border:1px solid var(--line);border-radius:9px;color:var(--text-secondary);font-size:.7rem;background:#f8fafc}.weakness-list b,.focus-points b{color:var(--ink);font-weight:800}.weakness-list em,.focus-points em{font-style:normal;color:var(--primary);font-weight:900}.weakness-list .urgent{border-color:#f2c5a5;background:#fff7ed}.weakness-list .weak{border-color:#f7dfac;background:#fffbeb}.plan-layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}.stage-detail{display:flex;flex-direction:column;gap:12px}.stage-card{border-radius:18px;border-color:var(--line)}.stage-card.active{border-color:#8bb1f7;box-shadow:0 0 0 3px rgba(37,99,235,.07)}.stage-card-head{display:flex;align-items:center;gap:13px}.stage-badge{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:var(--primary);font-weight:900;background:var(--primary-soft)}.stage-card-head>div{flex:1}.stage-card-head h3{color:var(--ink);font-size:.95rem}.stage-card-head p{color:var(--text-secondary);font-size:.74rem}.stage-goal{display:flex;align-items:center;gap:9px;margin-top:14px;padding:12px;border-radius:12px;background:#f6f8fc}.stage-goal>span small,.stage-goal>span strong{display:block}.stage-goal small{color:var(--text-muted);font-size:.66rem}.stage-goal strong{color:var(--ink);font-size:.76rem}.stage-focus{margin-top:10px;padding:12px;border:1px solid #dbe7ff;border-radius:12px;background:#f8fbff}.stage-focus-head{display:flex;align-items:baseline;gap:8px;margin-bottom:9px}.stage-focus-head strong{color:var(--primary-deep);font-size:.76rem}.stage-focus-head span{color:var(--text-secondary);font-size:.7rem;line-height:1.5}.stage-window{display:flex;align-items:center;gap:7px;margin-top:9px;color:var(--text-secondary);font-size:.74rem}.stage-window .el-icon{color:var(--primary)}.review-note{display:flex;align-items:center;gap:6px;margin-top:14px;padding:9px 11px;border-radius:10px;color:#b77400;font-size:.74rem;background:var(--accent-soft)}.active-actions{display:flex;align-items:center;gap:12px;margin-top:13px}.active-actions span{color:var(--text-muted);font-size:.7rem}.daily-panel{position:sticky;top:98px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff}.daily-head{display:flex;align-items:center;justify-content:space-between}.daily-head h3{color:var(--ink);font-size:1rem}.task-row{display:flex;align-items:flex-start;gap:9px;padding:14px 0;border-bottom:1px solid var(--line)}.task-row>span{flex:1}.task-row b{display:inline-block;padding:2px 6px;margin-bottom:5px;border-radius:5px;color:var(--primary);font-size:.65rem;background:var(--primary-soft)}.task-row strong,.task-row small{display:block}.task-row strong{color:var(--ink);font-size:.78rem}.task-row small{color:var(--text-muted);font-size:.68rem}.task-row.done{opacity:.55}.task-row.done strong{text-decoration:line-through}.task-row.focus{border-left:3px solid var(--primary);padding-left:8px;margin-left:-11px}.task-group{margin-bottom:4px}.task-group-head{display:flex;align-items:baseline;justify-content:space-between;margin:14px 0 2px;padding-bottom:6px;border-bottom:2px solid var(--primary-soft)}.task-subject{color:var(--primary-deep);font-size:.82rem;font-weight:800}.task-group-head small{color:var(--text-muted);font-size:.68rem}.task-row.review{border-left:3px solid var(--accent);padding-left:8px;margin-left:-11px}.task-row.review strong{color:#b77400}.self-intro{margin-top:6px;padding:14px;border-radius:13px;color:var(--text-secondary);font-size:.76rem;line-height:1.6;background:#f6f8fc}.self-order{margin-top:14px;padding-left:0;list-style:none;counter-reset:self}.self-order li{counter-increment:self;position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line)}.self-order li:before{content:counter(self);position:absolute;left:0;top:11px;width:21px;height:21px;display:grid;place-items:center;border-radius:6px;color:var(--primary);font-size:.66rem;font-weight:800;background:var(--primary-soft)}.self-order-top{display:flex;align-items:baseline;justify-content:space-between}.self-order strong{color:var(--ink);font-size:.8rem}.self-order b{color:var(--mint);font-size:.8rem}.self-order b.weak{color:#e6a23c}.self-order small{display:block;margin-top:2px;color:var(--text-muted);font-size:.68rem}.test-intro{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#f5f8fc}.test-intro>div{display:flex;align-items:baseline;gap:5px}.test-intro strong{color:var(--ink);font-size:1.2rem}.test-intro span,.test-intro p{color:var(--text-muted);font-size:.7rem}.test-intro p{grid-column:1/-1;margin-top:-7px}.stage-question-list{display:flex;flex-direction:column;gap:14px;max-height:55vh;margin-top:16px;padding:0 10px 6px 0;overflow:auto;scrollbar-gutter:stable}.stage-question{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fff}.stage-question-meta{display:flex;align-items:center;gap:9px;min-width:0}.stage-question-meta>.question-order{width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:9px;color:var(--primary);font-size:.68rem;font-weight:900;background:var(--primary-soft)}.stage-question-meta :deep(.el-tag){max-width:calc(100% - 40px);height:26px;padding:0 9px;border-radius:7px;overflow:hidden;text-overflow:ellipsis}.stage-question h4{margin:14px 0;color:var(--ink);font-size:.9rem;line-height:1.55}.stage-options{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;width:100%}:deep(.stage-options .el-radio){width:100%;height:auto;min-height:44px;margin:0;padding:10px 12px;border-radius:10px}:deep(.stage-options .el-radio__label){display:flex;align-items:center;min-width:0;white-space:normal;line-height:1.4}.stage-options b{display:inline-grid;place-items:center;width:21px;height:21px;margin-right:7px;flex:0 0 21px;border-radius:5px;color:var(--text-secondary);font-size:.65rem;background:#eef2f7}.test-result-panel{text-align:center;padding:12px}.result-mark{width:58px;height:58px;display:grid;place-items:center;margin:0 auto 12px;border-radius:18px;font-size:28px}.result-mark.passed{color:var(--mint);background:var(--mint-soft)}.result-mark.review{color:#b77400;background:var(--accent-soft)}.test-result-panel h3{color:var(--ink);font-size:1.25rem}.test-result-panel>p{margin:6px 0 18px;color:var(--text-secondary);font-size:.8rem}.auto-score{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.auto-score>span{padding:14px;border-radius:12px;text-align:left;background:#f5f8fc}.auto-score small,.auto-score strong{display:block}.auto-score small{color:var(--text-muted);font-size:.68rem}.auto-score strong{margin-top:3px;color:var(--ink);font-size:1rem}:deep(.stage-test-dialog .el-dialog__header){margin:0;padding:20px 22px 12px;border-bottom:1px solid var(--line)}:deep(.stage-test-dialog .el-dialog__body){padding:16px 22px}:deep(.stage-test-dialog .el-dialog__footer){padding:14px 22px;border-top:1px solid var(--line)}
+@media(max-width:1050px){.stage-overview{grid-template-columns:repeat(2,1fr);gap:18px}.stage-node:after{display:none}.route-evidence{grid-template-columns:1fr}.plan-layout{grid-template-columns:1fr}.daily-panel{position:static}}@media(max-width:600px){.stage-overview{grid-template-columns:1fr}.route-evidence{padding:16px}.stage-focus-head{align-items:flex-start;flex-direction:column}.active-actions{align-items:flex-start;flex-direction:column}.stage-options,.auto-score{grid-template-columns:1fr}.test-intro{grid-template-columns:1fr}.test-intro p{grid-column:auto;margin:0}}
 </style>

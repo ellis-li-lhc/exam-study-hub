@@ -1,8 +1,45 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import 'element-plus/es/components/message/style/css'
+import 'element-plus/es/components/message-box/style/css'
+import 'element-plus/es/components/loading/style/css'
+import {
+  Aim,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  Check,
+  CircleCheck,
+  Close,
+  Compass,
+  DataAnalysis,
+  DataBoard,
+  Delete,
+  Edit,
+  EditPen,
+  Flag,
+  Grid,
+  Histogram,
+  Key,
+  Location,
+  MagicStick,
+  Medal,
+  Menu,
+  Notebook,
+  Reading,
+  Refresh,
+  School,
+  Search,
+  Setting,
+  SwitchButton,
+  Tickets,
+  TrendCharts,
+  User,
+  VideoPlay,
+  View,
+  Warning,
+} from '@element-plus/icons-vue'
 import App from './App.vue'
 import router from './router'
 import './styles/variables.css'
@@ -10,18 +47,54 @@ import { useAuthStore } from './stores/auth'
 
 const app = createApp(App)
 
-// 注册 Element Plus 图标
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+const elementIcons = {
+  Aim,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  Check,
+  CircleCheck,
+  Close,
+  Compass,
+  DataAnalysis,
+  DataBoard,
+  Delete,
+  Edit,
+  EditPen,
+  Flag,
+  Grid,
+  Histogram,
+  Key,
+  Location,
+  MagicStick,
+  Medal,
+  Menu,
+  Notebook,
+  Reading,
+  Refresh,
+  School,
+  Search,
+  Setting,
+  SwitchButton,
+  Tickets,
+  TrendCharts,
+  User,
+  VideoPlay,
+  View,
+  Warning,
+}
+
+for (const [key, component] of Object.entries(elementIcons)) {
   app.component(key, component)
 }
 
 app.use(createPinia())
-app.use(router)
-app.use(ElementPlus)
 
 // 挂载前先尝试恢复登录态（本地有 token 则校验并拉取云端数据），
-// 避免刷新后路由守卫把已登录用户错误地弹回登录页。
+// 再安装路由，避免刷新直达管理员页面时守卫先于用户信息恢复而误判权限。
 const auth = useAuthStore()
 auth.restore().finally(() => {
+  app.use(router)
   app.mount('#app')
 })

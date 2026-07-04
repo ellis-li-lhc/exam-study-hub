@@ -39,7 +39,7 @@ class InstitutionRead(BaseModel):
     tuition: int | None = None
     teaching_site: str | None = None
     degree: str | None = None
-    majors: list[str] = []      # 该院校开设的专业 code（按科类推导）
+    majors: list[str] = []      # 可匹配的专业 code：有公开计划时精确匹配，否则按科类推导
     major_match: str = "category"  # exact=按公开专业计划精确匹配 / category=按科类兜底
     plans: list[PlanRead] = []
     scores: list[ScoreRead] = []

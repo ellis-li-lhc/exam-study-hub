@@ -44,7 +44,7 @@
               </div>
               <p class="meaning">{{ word.meaning }}</p>
             </div>
-            <el-button class="known-toggle" :type="store.isKnown(word.id) ? 'success' : 'default'" :plain="!store.isKnown(word.id)" circle @click="store.toggleKnown(word.id)"><el-icon><Check /></el-icon></el-button>
+            <el-button class="known-toggle" :type="store.isKnown(word.id) ? 'success' : 'default'" :plain="!store.isKnown(word.id)" circle :aria-label="store.isKnown(word.id) ? `取消 ${word.word} 掌握标记` : `标记 ${word.word} 已掌握`" :title="store.isKnown(word.id) ? '取消掌握标记' : '标记已掌握'" @click="store.toggleKnown(word.id)"><el-icon><Check /></el-icon></el-button>
           </article>
           <el-empty v-if="visibleWords.length === 0" description="本组单词都已掌握，进入下一组吧" :image-size="80" />
         </section>
@@ -77,7 +77,7 @@
                 <strong class="speakable" @click="speak(item.word)">{{ item.word }}</strong>
                 <el-button class="speak-btn" text circle @click="speak(item.word)"><el-icon><VideoPlay /></el-icon></el-button>
                 <el-tag v-if="item.tag" size="small" effect="plain">{{ item.tag }}</el-tag>
-                <el-button class="known-toggle mini" :type="progress.isKnown(itemKey(dataset, item)) ? 'success' : 'default'" :plain="!progress.isKnown(itemKey(dataset, item))" circle @click="progress.toggle(itemKey(dataset, item))"><el-icon><Check /></el-icon></el-button>
+                <el-button class="known-toggle mini" :type="progress.isKnown(itemKey(dataset, item)) ? 'success' : 'default'" :plain="!progress.isKnown(itemKey(dataset, item))" circle :aria-label="progress.isKnown(itemKey(dataset, item)) ? `取消 ${item.word} 掌握标记` : `标记 ${item.word} 已掌握`" :title="progress.isKnown(itemKey(dataset, item)) ? '取消掌握标记' : '标记已掌握'" @click="progress.toggle(itemKey(dataset, item))"><el-icon><Check /></el-icon></el-button>
               </div>
               <p class="meaning">{{ item.meaning }}</p>
               <p class="example speakable" @click="speak(item.example)"><el-icon><VideoPlay /></el-icon>{{ item.example }}</p>
@@ -111,7 +111,7 @@
             <article v-for="(point, index) in activeGrammarSection.points" :key="index" class="grammar-card" :class="{ known: progress.isKnown(grammarKey(index)) }">
               <div class="grammar-head">
                 <h4>{{ point.title }}</h4>
-                <el-button class="known-toggle mini" :type="progress.isKnown(grammarKey(index)) ? 'success' : 'default'" :plain="!progress.isKnown(grammarKey(index))" circle @click="progress.toggle(grammarKey(index))"><el-icon><Check /></el-icon></el-button>
+                <el-button class="known-toggle mini" :type="progress.isKnown(grammarKey(index)) ? 'success' : 'default'" :plain="!progress.isKnown(grammarKey(index))" circle :aria-label="progress.isKnown(grammarKey(index)) ? `取消 ${point.title} 掌握标记` : `标记 ${point.title} 已掌握`" :title="progress.isKnown(grammarKey(index)) ? '取消掌握标记' : '标记已掌握'" @click="progress.toggle(grammarKey(index))"><el-icon><Check /></el-icon></el-button>
               </div>
               <p class="grammar-explain">{{ point.explain }}</p>
               <ul class="grammar-examples">
@@ -347,11 +347,11 @@ function confirmReset() {
 .drill-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px}
 .toolbar-left,.toolbar-right{display:flex;align-items:center;gap:10px}
 .batch-select{width:190px}
-.word-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.word-card{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
+.word-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.word-card{position:relative;min-height:112px;padding:18px 74px 18px 18px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .word-card:hover{box-shadow:var(--shadow-sm)}
 .word-card.known{background:#f4fbf7;border-color:#c9efdf}
-.word-main{min-width:0;flex:1}
+.word-main{min-width:0}
 .word-top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .word-top strong{color:var(--ink);font-size:1rem}
 .speakable{cursor:pointer}
@@ -359,8 +359,10 @@ function confirmReset() {
 .speak-btn{height:24px;width:24px;padding:0;color:var(--primary)}
 .phonetic{color:var(--text-muted);font-size:.76rem;font-style:italic}
 .meaning{margin-top:5px;color:var(--text-secondary);font-size:.8rem;line-height:1.4}
+.word-card .meaning{display:-webkit-box;margin-top:8px;line-height:1.45;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .known-toggle{flex:0 0 auto}
-.known-toggle.mini{height:26px;width:26px;padding:0;margin-left:auto}
+.word-card .known-toggle:not(.mini){position:absolute;top:50%;right:18px;width:44px;height:44px;padding:0;transform:translateY(-50%)}
+.known-toggle.mini{height:36px;width:36px;padding:0}
 .extra-bar{display:flex;align-items:center;gap:14px}
 .extra-intro{flex:1}
 .extra-progress{flex:0 0 auto;text-align:center;padding:8px 18px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff}
@@ -377,7 +379,7 @@ function confirmReset() {
 .group-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
 .group-count{color:var(--text-muted);font-size:.74rem}
 .essential-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.essential-card{padding:15px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
+.essential-card{position:relative;padding:15px 56px 16px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .essential-card.known{background:#f4fbf7;border-color:#c9efdf}
 .essential-top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .essential-top strong{color:var(--ink);font-size:1rem}
@@ -385,10 +387,11 @@ function confirmReset() {
 .example{display:flex;align-items:center;gap:6px;padding:9px 11px;border-radius:10px;color:var(--primary-deep);font-size:.8rem;line-height:1.45;background:var(--primary-soft);cursor:pointer}
 .example .el-icon{flex:0 0 auto;color:var(--primary)}
 .grammar-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.grammar-card{padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
+.grammar-card{position:relative;padding:18px 58px 18px 18px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs);transition:.18s ease}
 .grammar-card.known{background:#f4fbf7;border-color:#c9efdf}
 .grammar-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
 .grammar-head h4{color:var(--ink);font-size:.96rem}
+.essential-card .known-toggle.mini,.grammar-card .known-toggle.mini{position:absolute;top:14px;right:14px;width:36px;height:36px;margin:0;padding:0}
 .grammar-explain{margin:8px 0 12px;color:var(--text-secondary);font-size:.82rem;line-height:1.5}
 .grammar-examples{display:flex;flex-direction:column;gap:8px;list-style:none}
 .grammar-examples li{padding:9px 12px;border-radius:10px;background:#f6f9fe}

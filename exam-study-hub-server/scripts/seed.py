@@ -24,6 +24,7 @@ CONTROL_SCORE_FILES = [
 ]
 PLAN_FILES = [
     SCORES_DIR / "henan-adult-collection-plan-2025.json",
+    SCORES_DIR / "jiangsu-adult-collection-plan-2025.json",
 ]
 
 # 院校所在市（校本部）。来自院校公开资料；外省校标其校本部所在市。
@@ -86,19 +87,148 @@ PROVINCES = [
     {"code": "jiangsu", "name": "江苏", "note": "工作地，非户籍报名需核验居住证或连续社保"},
 ]
 
-# 与前端 exam-study-hub-client/src/data/mvp.js 的 majorOptions 保持一致
+# 与前端 exam-study-hub-client/src/data/majors.js 的 examMajors 保持一致。
+LEGACY_MAJOR_CODE_MAP = {
+    "business": "gongshang-guanli",
+    "accounting": "kuaiji",
+    "law": "faxue",
+    "education": "jiaoyuxue",
+    "computer": "jisuanji",
+    "chinese": "hanyu-yanwen",
+}
+
 MAJORS = [
-    {"code": "business", "name": "工商管理", "category": "经济管理类",
+    {"code": "gongshang-guanli", "name": "工商管理", "category": "经济管理类",
      "subjects": ["政治", "英语", "高等数学（二）"]},
-    {"code": "accounting", "name": "会计学", "category": "经济管理类",
+    {"code": "shichang-yingxiao", "name": "市场营销", "category": "经济管理类",
      "subjects": ["政治", "英语", "高等数学（二）"]},
-    {"code": "law", "name": "法学", "category": "法学类",
-     "subjects": ["政治", "英语", "民法"]},
-    {"code": "education", "name": "教育学", "category": "教育学类",
-     "subjects": ["政治", "英语", "教育理论"]},
-    {"code": "computer", "name": "计算机科学与技术", "category": "理工类",
+    {"code": "kuaiji", "name": "会计学", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "caiwu-guanli", "name": "财务管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "shenji", "name": "审计学", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "renli-ziyuan", "name": "人力资源管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "guomao", "name": "国际经济与贸易", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "jingjixue", "name": "经济学", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "jinrong", "name": "金融学", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "caizheng", "name": "财政学", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "dianzi-shangwu", "name": "电子商务", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "wuliu-guanli", "name": "物流管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "lvyou-guanli", "name": "旅游管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "xingzheng-guanli", "name": "行政管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "gonggong-shiye", "name": "公共事业管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "gongcheng-guanli", "name": "工程管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "fangdichan", "name": "房地产开发与管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "nonglin-jingji", "name": "农林经济管理", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
+    {"code": "jisuanji", "name": "计算机科学与技术", "category": "理工类",
      "subjects": ["政治", "英语", "高等数学（一）"]},
-    {"code": "chinese", "name": "汉语言文学", "category": "文史中医类",
+    {"code": "ruanjian", "name": "软件工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "wangluo-gongcheng", "name": "网络工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "wulianwang", "name": "物联网工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "dashuju", "name": "数据科学与大数据技术", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "rengong-zhineng", "name": "人工智能", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "xinxi-guanli", "name": "信息管理与信息系统", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "dianzi-xinxi", "name": "电子信息工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "tongxin", "name": "通信工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "zidonghua", "name": "自动化", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "dianqi", "name": "电气工程及其自动化", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "jixie-gongcheng", "name": "机械工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "jixie-zhizao", "name": "机械设计制造及其自动化", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "cheliang", "name": "车辆工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "tumu", "name": "土木工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "jianzhuxue", "name": "建筑学", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "jipaishui", "name": "给排水科学与工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "huagong", "name": "化学工程与工艺", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "huanjing", "name": "环境工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "shipin", "name": "食品科学与工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "cailiao", "name": "材料科学与工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "cehui", "name": "测绘工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "anquan", "name": "安全工程", "category": "理工类",
+     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "faxue", "name": "法学", "category": "法学类",
+     "subjects": ["政治", "英语", "民法"]},
+    {"code": "zhishi-chanquan", "name": "知识产权", "category": "法学类",
+     "subjects": ["政治", "英语", "民法"]},
+    {"code": "shehui-gongzuo", "name": "社会工作", "category": "法学类",
+     "subjects": ["政治", "英语", "民法"]},
+    {"code": "jianyuxue", "name": "监狱学", "category": "法学类",
+     "subjects": ["政治", "英语", "民法"]},
+    {"code": "jiaoyuxue", "name": "教育学", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "xueqian", "name": "学前教育", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "xiaoxue-jiaoyu", "name": "小学教育", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "tiyu-jiaoyu", "name": "体育教育", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "jiaoyu-jishu", "name": "教育技术学", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "teshu-jiaoyu", "name": "特殊教育", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "yingyong-xinli", "name": "应用心理学", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "shehui-tiyu", "name": "社会体育指导与管理", "category": "教育学类",
+     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "hanyu-yanwen", "name": "汉语言文学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "xinwen", "name": "新闻学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "guanggao", "name": "广告学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "guangbo-dianshi", "name": "广播电视学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "xinmeiti", "name": "网络与新媒体", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "mishu", "name": "秘书学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "yingyu", "name": "英语", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "shangwu-yingyu", "name": "商务英语", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "riyu", "name": "日语", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "lishi", "name": "历史学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "zhongyi", "name": "中医学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "zhongyao", "name": "中药学", "category": "文史中医类",
+     "subjects": ["政治", "英语", "大学语文"]},
+    {"code": "zhenjiu", "name": "针灸推拿学", "category": "文史中医类",
      "subjects": ["政治", "英语", "大学语文"]},
 ]
 
@@ -115,18 +245,57 @@ def run():
             province_added += 1
 
         # —— 专业 ——
-        added = 0
-        for item in MAJORS:
-            exists = db.query(Major).filter_by(code=item["code"]).first()
-            if exists:
+        # 老版本只有 6 个专业，且 code 与现在前端档案不一致；先原地升级 code。
+        legacy_removed = 0
+        for old_code, new_code in LEGACY_MAJOR_CODE_MAP.items():
+            old = db.query(Major).filter_by(code=old_code).first()
+            new = db.query(Major).filter_by(code=new_code).first()
+            if old is None:
                 continue
-            major = Major(code=item["code"], name=item["name"], category=item["category"])
-            major.subjects = [MajorSubject(subject=s) for s in item["subjects"]]
-            db.add(major)
-            added += 1
+            if new is None:
+                old.code = new_code
+            elif old.id != new.id:
+                db.delete(old)
+                legacy_removed += 1
+        db.flush()
+
+        added = updated = 0
+        for item in MAJORS:
+            major = db.query(Major).filter_by(code=item["code"]).first()
+            if major is None:
+                # 防止历史库里残留同名专业但 code 不一致。
+                major = db.query(Major).filter_by(name=item["name"], category=item["category"]).first()
+                if major is not None:
+                    major.code = item["code"]
+            if major is None:
+                major = Major(code=item["code"], name=item["name"], category=item["category"])
+                major.subjects = [MajorSubject(subject=s) for s in item["subjects"]]
+                db.add(major)
+                added += 1
+                continue
+
+            before = (
+                major.code,
+                major.name,
+                major.category,
+                [subject.subject for subject in major.subjects],
+            )
+            major.name = item["name"]
+            major.category = item["category"]
+            if [subject.subject for subject in major.subjects] != item["subjects"]:
+                major.subjects = [MajorSubject(subject=s) for s in item["subjects"]]
+            after = (
+                major.code,
+                major.name,
+                major.category,
+                [subject.subject for subject in major.subjects],
+            )
+            if before != after:
+                updated += 1
         db.commit()
         print(f"新增省份 {province_added} 个（共 {db.query(Province).count()}）；"
-              f"新增专业 {added} 个（共 {db.query(Major).count()}）")
+              f"新增专业 {added} 个，更新专业 {updated} 个，清理旧专业 {legacy_removed} 个"
+              f"（共 {db.query(Major).count()}）")
 
         # —— 清理旧版河南省控线伪院校（省控线现在入 province_control_scores）——
         henan = db.query(Province).filter_by(code="henan").first()

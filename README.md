@@ -14,15 +14,15 @@
 - **目标分分析**:取近三年较高投档线 + 30 分安全空间;结合诊断掌握度做分科目标分配,可信度按数据真实性动态展示。
 - **学习路线**:按诊断结果与考试日期自动生成四阶段计划、每日任务与达标里程碑;支持计划模式 / 自主模式。
 - **阶段测试与动态纠偏**:测试答错的知识点自动进入复习队列并重排到当日任务,落后时阶段自动压缩。
-- **账号与云端同步**:JWT 登录注册,报考档案 / 诊断 / 进度同步到云端,换设备不丢。
-- **管理员后台**:用户列表、角色管理、查看用户填报信息、重置密码(密码仅哈希存储,不可查看明文)。
+- **账号与云端同步**:JWT 登录注册,报考档案 / 诊断 / 进度同步到云端；保存带版本校验,避免多设备进度互相覆盖。
+- **管理员后台**:用户列表、角色管理、查看用户填报信息、重置密码；数据管理可查看院校覆盖、导入批次、校验结果、题库质量与主数据。
 
 ## 🧭 主流程
 
 ```
 登录 / 注册
   → 报考档案(省 / 市 / 专业 / 学习模式)
-  → 专业与院校(真实江苏投档线)
+  → 专业与院校(江苏投档线 / 河南专业计划与备档线)
   → 入学诊断(真实题库自动判分)
   → 目标分分析(参考线 + 30 分)
   → 学习路线(四阶段 + 每日任务)
@@ -52,7 +52,7 @@ exam-study-hub/
 │   └── src/data/             # 专业-科类、省份等静态数据
 └── exam-study-hub-server/    # 后端(FastAPI)
     ├── app/models/           # ORM 模型
-    ├── app/routers/          # 路由:auth/majors/provinces/institutions/questions/state/admin
+    ├── app/routers/          # 路由:auth/provinces/institutions/questions/state/admin/admin_data
     ├── app/crud/             # 数据访问层
     ├── alembic/              # 数据库迁移
     └── scripts/              # 数据抓取与入库脚本
@@ -89,15 +89,26 @@ npm install
 npm run dev                   # http://localhost:5173 ，/api 代理到 8000
 ```
 
+### 3. 常用校验
+
+```bash
+cd exam-study-hub-client
+npm run test:unit             # 前端核心业务逻辑单测
+npm run build                 # 生产构建
+
+cd ../exam-study-hub-server
+PYTHONPATH=. .venv/bin/python scripts/validate_data.py
+```
+
 ## 🗄 数据库表
 
-`provinces` · `majors` · `major_subjects` · `institutions` · `admission_scores` · `question_topics` · `questions` · `users` · `user_states`
+`provinces` · `majors` · `major_subjects` · `institutions` · `admission_scores` · `question_topics` · `questions` · `users` · `user_states(sync_version + updated_at)`
 
 ## 📌 数据真实性与免责声明
 
 - 江苏院校与投档线来自**江苏省教育考试院**公开数据(2025 年院校投档线),院校详情可追溯到原始文件链接。
 - 河南数据来自**河南省教育考试院**公开信息:近三年专升本省控线,以及 2025 年成人高招录取征集志愿计划 PDF。征集志愿备档线仅代表余缺计划阶段参考,不等同于主批次院校投档线。
-- 成人高考**不公布逐专业录取线**,逐院校招生专业目录仅在报名期、网上报名系统内开放,**不可公开抓取**。因此院校匹配粒度止于**科类**;专业归属、是否开设、统考科目**以院校当年招生计划为准**。
+- 成人高考**不公布逐专业录取线**。当前江苏主要按院校科类投档线匹配；河南已接入 2025 年征集志愿计划，可对部分院校做专业计划精确匹配。专业归属、是否开设、统考科目**以院校当年招生计划为准**。
 - 城市为院校校本部所在市,实际就读以教学点为准。
 - 本系统仅辅助个人决策与备考,**不构成录取承诺**,不替代省教育考试院及院校发布的正式招生政策。
 

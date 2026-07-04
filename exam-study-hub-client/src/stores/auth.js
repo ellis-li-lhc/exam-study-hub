@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { login as apiLogin, register as apiRegister, getMe } from '../api'
-import { pullFromCloud, startAutoSync, clearLocalState } from '../sync'
+import { pullFromCloud, startAutoSync, clearLocalState, flushCloudState } from '../sync'
 
 const TOKEN_KEY = 'token'
 
@@ -61,5 +61,10 @@ export const useAuthStore = defineStore('auth', () => {
     if (clearData) clearLocalState()
   }
 
-  return { token, user, isAuthenticated, isAdmin, login, register, restore, logout }
+  async function logoutWithFlush(clearData = true) {
+    if (token.value) await flushCloudState()
+    logout(clearData)
+  }
+
+  return { token, user, isAuthenticated, isAdmin, login, register, restore, logout, logoutWithFlush }
 })

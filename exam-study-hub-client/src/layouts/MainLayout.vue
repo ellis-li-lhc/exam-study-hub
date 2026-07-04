@@ -38,7 +38,7 @@
           <span v-if="store.selectedInstitution">{{ store.selectedInstitution.name }}</span>
           <div class="goal-score">
             <small>目标分</small>
-            <b>{{ store.targetScore }}</b>
+            <b :class="{ pending: !store.diagnosisComplete }">{{ goalScoreText }}</b>
           </div>
         </template>
         <span v-else>先完成报考档案</span>
@@ -57,6 +57,7 @@
         <div class="topbar-actions">
           <div class="context-strip">
             <span v-for="chip in contextChips" :key="chip.label" class="context-chip" :class="chip.tone">
+              <i class="chip-dot" aria-hidden="true"></i>
               <small>{{ chip.label }}</small>
               <strong>{{ chip.value }}</strong>
             </span>
@@ -133,7 +134,7 @@ async function onUserCommand(command) {
     { confirmButtonText: '退出', cancelButtonText: '取消', type: 'warning' }
   ).catch(() => false)
   if (confirmed) {
-    auth.logout()
+    await auth.logoutWithFlush()
     router.replace('/login')
   }
 }
@@ -164,13 +165,20 @@ const menuGroups = computed(() => {
   if (auth.isAdmin) {
     groups.push({
       title: '系统管理',
-      items: [{ path: '/admin/users', title: '用户管理', icon: 'Setting' }]
+      items: [
+        { path: '/admin/users', title: '用户管理', icon: 'Setting' },
+        { path: '/admin/data', title: '数据管理', icon: 'DataBoard' }
+      ]
     })
   }
   return groups
 })
 
 const provinceLabel = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
+const goalScoreText = computed(() => {
+  if (!store.selectedInstitution) return '选择院校后生成'
+  return store.diagnosisComplete ? String(store.targetScore) : '诊断后生成'
+})
 const contextChips = computed(() => [
   { label: '专业', value: store.selectedMajor?.name || '未建档', tone: 'blue' },
   { label: '年度', value: `${store.profile.examYear || '—'} 年`, tone: 'neutral' },
@@ -196,7 +204,9 @@ const headerSubtitle = computed(() => {
     '/progress': '记录执行，也允许计划被现实修正',
     '/english': '基础越弱，越要先过单词关',
     '/math': '公式、思路和例题一起过',
-    '/politics': '按考试板块拆清楚再背'
+    '/politics': '按考试板块拆清楚再背',
+    '/admin/users': '维护账号、角色和用户填报信息',
+    '/admin/data': '检查招生数据、专业计划和题库质量'
   }
   return subtitles[route.path] || '个人备考工作台'
 })
@@ -278,11 +288,12 @@ const headerSubtitle = computed(() => {
 .goal-summary span { color:#c8d6e6; font-size:.76rem; margin-top:3px; }
 .goal-score { display:flex; align-items:flex-end; justify-content:space-between; margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,.14); }
 .goal-score small { color:#9fb1c8; }
-.goal-score b { color:#fff; font-size:1.45rem; line-height:1; }
+.goal-score b { color:#fff; font-size:1.45rem; line-height:1; text-align:right; }
+.goal-score b.pending { font-size:.82rem; line-height:1.35; max-width:118px; }
 .content-shell { margin-left:var(--study-sidebar); min-width:0; }
 .topbar {
-  min-height:72px;
-  padding:10px 28px;
+  min-height:68px;
+  padding:8px 26px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -297,23 +308,69 @@ const headerSubtitle = computed(() => {
 .topbar-title { display:flex; align-items:center; gap:10px; min-width:0; }
 .topbar-title h1 { font-size:1.04rem; color:var(--ink); line-height:1.35; }
 .eyebrow { color:var(--text-muted); font-size:.7rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
-.topbar-actions { display:flex; align-items:center; gap:14px; min-width:0; }
-.context-strip { display:flex; align-items:center; gap:8px; min-width:0; }
+.topbar-actions { display:flex; align-items:center; gap:12px; min-width:0; }
+.context-strip {
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  gap:0;
+  min-width:0;
+  padding:4px;
+  border:1px solid rgba(210, 221, 236, .92);
+  border-radius:14px;
+  background:rgba(255, 255, 255, .82);
+  box-shadow:0 10px 24px rgba(17, 31, 51, .05);
+}
 .context-chip {
-  min-width:78px;
-  padding:7px 10px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:#fff;
+  min-width:82px;
+  max-width:132px;
+  min-height:34px;
+  display:grid;
+  grid-template-columns:auto minmax(0, 1fr);
+  grid-template-areas:
+    "dot label"
+    "dot value";
+  column-gap:7px;
+  align-items:center;
+  padding:5px 11px;
+  border:0;
+  border-radius:10px;
+  background:transparent;
   line-height:1.1;
+  transition:background-color .18s ease;
+}
+.context-chip + .context-chip {
+  border-left:1px solid #e4ebf4;
+  border-top-left-radius:0;
+  border-bottom-left-radius:0;
+}
+.context-chip:hover { background:#f8fafc; }
+.chip-dot {
+  grid-area:dot;
+  width:7px;
+  height:7px;
+  border-radius:999px;
+  background:#94a3b8;
 }
 .context-chip small,
 .context-chip strong { display:block; white-space:nowrap; }
-.context-chip small { color:var(--text-muted); font-size:.62rem; font-weight:800; }
-.context-chip strong { margin-top:2px; color:var(--ink); font-size:.72rem; overflow:hidden; text-overflow:ellipsis; max-width:110px; }
-.context-chip.blue { border-color:#cfdcf4; background:#f7faff; }
-.context-chip.green { border-color:#cdeadd; background:#f4fbf7; }
-.context-chip.amber { border-color:#f1dfba; background:#fffaf0; }
+.context-chip small {
+  grid-area:label;
+  color:var(--text-muted);
+  font-size:.6rem;
+  font-weight:800;
+}
+.context-chip strong {
+  grid-area:value;
+  margin-top:1px;
+  color:var(--ink);
+  font-size:.74rem;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.context-chip.blue .chip-dot { background:var(--primary); }
+.context-chip.green .chip-dot { background:var(--mint); }
+.context-chip.amber .chip-dot { background:var(--accent); }
 .mobile-menu { display:none; }
 .user-trigger {
   min-height:44px;
