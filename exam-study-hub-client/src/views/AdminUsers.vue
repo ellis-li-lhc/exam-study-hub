@@ -114,7 +114,7 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import { Delete, Key, Refresh, View } from '@element-plus/icons-vue'
 import { getUsers, updateUserRole, deleteUser, resetUserPassword, getUserState } from '../api'
 import { useAuthStore } from '../stores/auth'
-import { chinaProvinces } from '../data/regions'
+import { chinaProvinces, cityPreferenceLabel } from '../data/regions'
 import { examMajors } from '../data/majors'
 
 const auth = useAuthStore()
@@ -132,7 +132,7 @@ const majorMap = Object.fromEntries(examMajors.map(m => [m.code, m]))
 const profile = computed(() => currentState.value?.app_state?.profile || null)
 const diagnostic = computed(() => currentState.value?.app_state?.diagnostic || null)
 const provinceLabels = computed(() => (profile.value?.provinces || []).map(code => provinceMap[code] || code).join('、'))
-const cityLabels = computed(() => (profile.value?.cities || []).join('、'))
+const cityLabels = computed(() => (profile.value?.cities || []).map(cityPreferenceLabel).join('、'))
 const majorLabel = computed(() => majorMap[profile.value?.majorCode]?.name || profile.value?.majorCode || '')
 const majorCategory = computed(() => majorMap[profile.value?.majorCode]?.category || '')
 const diagnosticTotal = computed(() => {
@@ -223,86 +223,4 @@ function formatTime(value) {
 onMounted(load)
 </script>
 
-<style scoped>
-.page-stack { display: flex; flex-direction: column; gap: 18px; }
-.page-intro { display: flex; align-items: flex-start; justify-content: space-between; }
-.page-intro h2 { color: var(--ink); font-size: 1.7rem; }
-.page-intro p { margin-top: 5px; color: var(--text-secondary); font-size: .85rem; }
-.section-kicker { display: block; margin-bottom: 5px; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .1em; }
-.refresh-btn { min-width: 84px; }
-.users-card {
-  border-radius: var(--radius-lg);
-  border-color: var(--line);
-  overflow: hidden;
-}
-.users-card :deep(.el-card__body) {
-  padding: 18px 20px 8px;
-  overflow-x: auto;
-}
-.users-table { min-width: 760px; }
-.users-table :deep(.el-table__header th) {
-  height: 44px;
-  background: #f8fafc;
-  color: var(--text-secondary);
-  font-weight: 800;
-}
-.users-table :deep(.el-table__row td) { height: 72px; }
-.users-table :deep(.actions-column) { background-image: linear-gradient(90deg, rgba(255,255,255,0), #fff 18px); }
-.row-actions {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 6px;
-  min-width: 116px;
-}
-.row-actions :deep(.el-button + .el-button) { margin-left: 0; }
-.action-icon {
-  width: 34px;
-  height: 34px;
-  border: 1px solid transparent;
-  color: var(--text-secondary);
-  background: transparent;
-  transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
-}
-.action-icon:hover,
-.action-icon:focus-visible {
-  border-color: #d7e1ee;
-  color: var(--ink);
-  background: #f7f9fc;
-}
-.action-icon:active { transform: scale(.96); }
-.action-icon.primary {
-  color: var(--primary);
-  background: var(--primary-faint);
-}
-.action-icon.primary:hover,
-.action-icon.primary:focus-visible {
-  border-color: #bfd1f0;
-  color: var(--primary-deep);
-  background: var(--primary-soft);
-}
-.action-icon.danger { color: #dc2626; }
-.action-icon.danger:hover,
-.action-icon.danger:focus-visible {
-  border-color: #fecaca;
-  color: #b91c1c;
-  background: #fff1f2;
-}
-.action-icon.is-disabled,
-.action-icon.is-disabled:hover {
-  border-color: transparent;
-  color: #cbd5e1;
-  background: transparent;
-  transform: none;
-}
-.state-detail { min-height: 200px; }
-.block-title { margin: 6px 0 10px; color: var(--ink); font-size: .92rem; }
-.info-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
-.info-list > div { display: grid; grid-template-columns: 84px 1fr; gap: 10px; align-items: start; }
-.info-list dt { color: var(--text-muted); font-size: .8rem; }
-.info-list dd { color: var(--ink); font-size: .82rem; line-height: 1.5; }
-@media (max-width: 720px) {
-  .page-intro { flex-direction: column; gap: 12px; }
-  .refresh-btn { align-self: flex-start; }
-}
-</style>
+<style scoped lang="less" src="../styles/views/AdminUsers.less"></style>

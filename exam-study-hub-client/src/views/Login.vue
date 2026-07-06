@@ -10,6 +10,7 @@
       </div>
 
       <p class="auth-tip">登录后，报考档案、入学诊断与学习进度将同步到云端，换设备也不丢。</p>
+      <p class="release-note">河南/江苏公开数据试运行版 · 2025 公开数据 + 2026 备考规划参考 · 不构成录取承诺</p>
 
       <el-tabs v-model="mode" class="auth-tabs" stretch>
         <el-tab-pane label="登录" name="login" />
@@ -26,6 +27,9 @@
         <el-form-item label="密码" prop="password">
           <el-input v-model="form.password" type="password" show-password placeholder="至少 6 位" :prefix-icon="Lock" @keyup.enter="submit" />
         </el-form-item>
+        <div v-if="mode === 'login'" class="auth-options">
+          <el-checkbox v-model="rememberPassword">记住密码</el-checkbox>
+        </div>
         <el-button type="primary" class="auth-submit" :loading="loading" @click="submit">
           {{ mode === 'login' ? '登录' : '注册并登录' }}
         </el-button>
@@ -45,10 +49,19 @@ const auth = useAuthStore()
 const router = useRouter()
 const route = useRoute()
 
+const DEFAULT_LOGIN = Object.freeze({ username: 'admin', password: '200066' })
+const REMEMBERED_LOGIN_KEY = 'exam-study-hub:remembered-login'
+const rememberedLogin = readRememberedLogin()
+
 const mode = ref('login')
 const loading = ref(false)
+const rememberPassword = ref(Boolean(rememberedLogin))
 const formRef = ref()
-const form = reactive({ username: '', password: '', email: '' })
+const form = reactive({
+  username: rememberedLogin?.username || DEFAULT_LOGIN.username,
+  password: rememberedLogin?.password || DEFAULT_LOGIN.password,
+  email: ''
+})
 
 const rules = {
   username: [{ required: true, min: 2, max: 64, message: '请输入 2-64 个字符的用户名', trigger: 'blur' }],
@@ -59,6 +72,41 @@ const rules = {
 // 切换登录/注册时清掉上一次的校验提示
 watch(mode, () => formRef.value?.clearValidate())
 
+watch(rememberPassword, remember => {
+  if (!remember) clearRememberedLogin()
+})
+
+function readRememberedLogin() {
+  try {
+    const raw = localStorage.getItem(REMEMBERED_LOGIN_KEY)
+    if (!raw) return null
+    const value = JSON.parse(raw)
+    if (typeof value?.username !== 'string' || typeof value?.password !== 'string') return null
+    return { username: value.username, password: value.password }
+  } catch {
+    return null
+  }
+}
+
+function saveRememberedLogin() {
+  localStorage.setItem(
+    REMEMBERED_LOGIN_KEY,
+    JSON.stringify({ username: form.username, password: form.password })
+  )
+}
+
+function clearRememberedLogin() {
+  localStorage.removeItem(REMEMBERED_LOGIN_KEY)
+}
+
+function syncRememberPreference() {
+  if (rememberPassword.value) {
+    saveRememberedLogin()
+  } else {
+    clearRememberedLogin()
+  }
+}
+
 async function submit() {
   const valid = await formRef.value.validate().catch(() => false)
   if (!valid) return
@@ -66,6 +114,7 @@ async function submit() {
   try {
     if (mode.value === 'login') {
       await auth.login({ username: form.username, password: form.password })
+      syncRememberPreference()
     } else {
       await auth.register({ username: form.username, password: form.password, email: form.email || undefined })
     }
@@ -80,15 +129,4 @@ async function submit() {
 }
 </script>
 
-<style scoped>
-.auth-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: linear-gradient(180deg, #fbfdff 0%, #eef3f8 100%); }
-.auth-card { width: 100%; max-width: 400px; padding: 30px 28px 34px; background: #fff; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-md); }
-.auth-brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; color: #fff; background: var(--primary-deep); box-shadow: var(--shadow-xs); }
-.brand-mark .el-icon { font-size: 23px; }
-.auth-brand strong { display: block; color: var(--ink); font-size: 1.1rem; }
-.auth-brand small { display: block; color: var(--text-muted); font-size: .76rem; margin-top: 1px; }
-.auth-tip { margin: 18px 0 4px; color: var(--text-secondary); font-size: .82rem; line-height: 1.6; }
-.auth-tabs { margin-top: 6px; }
-.auth-submit { width: 100%; margin-top: 6px; }
-</style>
+<style scoped lang="less" src="../styles/views/Login.less"></style>

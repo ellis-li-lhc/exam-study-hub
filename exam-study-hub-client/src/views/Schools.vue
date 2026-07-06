@@ -1,11 +1,11 @@
 <template>
   <div class="schools-page page-stack">
     <section class="page-intro">
-      <div><span class="section-kicker">STEP 02</span><h2>{{ store.selectedMajor?.name }}相关招生院校</h2><p>招生省份：{{ provinceText }}<span v-if="cityText"> · 意向城市：{{ cityText }}</span> · {{ store.profile.examYear }} 年参考 · 科类：{{ store.selectedMajor?.category }}</p></div>
+      <div><span class="section-kicker">STEP 02</span><h2>{{ store.selectedMajor?.name }}相关招生院校</h2><p>招生省份：{{ provinceText }}<span v-if="cityText"> · 院校所在地偏好：{{ cityText }}</span> · {{ store.profile.examYear }} 年参考 · 科类：{{ store.selectedMajor?.category }}</p></div>
       <el-button @click="router.push('/profile')"><el-icon><Edit /></el-icon>修改专业</el-button>
     </section>
 
-    <el-alert title="院校与分数线来自已接入省份公开数据：江苏包含院校投档线与 2025 年本科征求计划，河南目前包含省控线与 2025 年征集志愿备档线；具体专业与录取结果以院校当年招生简章和考试院正式录取为准。" type="info" show-icon :closable="false" />
+    <el-alert title="河南/江苏公开数据试运行版：2025 公开数据 + 2026 备考规划参考；院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
 
     <div class="subject-strip">
       <span><el-icon><Tickets /></el-icon>统考科目</span>
@@ -32,7 +32,7 @@
             <span v-for="check in qualityProfile(school).checks" :key="check.key" class="quality-check" :class="{ ok: check.ok }">{{ check.label }}</span>
           </div>
         </article>
-        <el-empty v-if="store.filteredInstitutions.length === 0" :description="cityText ? `所选城市（${cityText}）暂无该科类招生院校，试试取消城市筛选或更换城市` : '所选省份暂无该类别的招生院校数据'" />
+        <el-empty v-if="store.filteredInstitutions.length === 0" :description="cityText ? `所选所在地偏好（${cityText}）暂无该科类招生院校，试试取消所在地筛选或勾选省外院校` : '所选省份暂无该类别的招生院校数据'" />
       </div>
 
       <aside class="compare-panel" v-if="selected">
@@ -70,11 +70,11 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useApplicationStore } from '../stores/application'
-import { isCityInProvince } from '../data/regions'
+import { cityPreferenceLabel, isCityInProvince } from '../data/regions'
 import { institutionDataProfile, latestReferenceScore, matchedPlansForMajor } from '../data/institutionQuality'
 const router=useRouter();const store=useApplicationStore();const selected=computed(()=>store.selectedInstitution)
 const provinceText=computed(()=>store.selectedProvinces.map(item=>item.label).join('、'))
-const cityText=computed(()=>(store.profile.cities||[]).join('、'))
+const cityText=computed(()=>(store.profile.cities||[]).map(cityPreferenceLabel).join('、'))
 const provinceName=code=>store.provinceOptions.find(item=>item.value===code)?.label
 const maxScore=computed(()=>Math.max(120,...(selected.value?.scores||[]).map(s=>s.score||0)))
 const barWidth=score=>`${Math.min(100,Math.round((score||0)/maxScore.value*100))}%`
@@ -115,7 +115,4 @@ function sourceLabel(source) {
 }
 </script>
 
-<style scoped>
-.page-stack{display:flex;flex-direction:column;gap:18px}.page-intro{display:flex;align-items:flex-start;justify-content:space-between}.page-intro h2{color:var(--ink);font-size:1.55rem}.page-intro p{margin-top:5px;color:var(--text-secondary)}.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.7rem;font-weight:900;letter-spacing:.08em}.subject-strip{display:flex;align-items:center;gap:9px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff}.subject-strip>span{display:flex;align-items:center;gap:6px;margin-right:5px;color:var(--ink);font-weight:900;font-size:.84rem}.subject-strip small{margin-left:auto;color:var(--text-muted);font-size:.72rem}.school-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;align-items:start}.school-list{display:flex;flex-direction:column;gap:12px}.school-card{padding:18px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs);cursor:pointer;transition:.2s ease}.school-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}.school-card.selected{border-color:#9db7ea;box-shadow:0 0 0 3px rgba(29,78,216,.08)}.school-head{display:flex;align-items:center;gap:13px}.school-avatar{width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;border-radius:12px;color:var(--primary);background:var(--primary-soft)}.school-name{flex:1;min-width:0}.school-name>div{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.school-name h3{color:var(--ink);font-size:1rem}.school-name p{color:var(--text-muted);font-size:.75rem}.school-location{display:flex;flex-wrap:wrap;gap:3px 12px;margin-top:4px}.school-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;padding:13px;border-radius:var(--radius-md);background:var(--surface-soft)}.school-stats span:not(:last-child){border-right:1px solid var(--line)}.school-stats small,.school-stats strong{display:block}.school-stats small{color:var(--text-muted);font-size:.7rem}.school-stats strong{color:var(--ink);font-size:.9rem}.school-meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--text-secondary);font-size:.74rem}.school-meta span{display:flex;align-items:center;gap:6px}.quality-row{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.quality-score,.quality-check{display:inline-flex;align-items:center;min-height:24px;border-radius:999px;font-size:.68rem;font-weight:800}.quality-score{padding:0 10px;color:#5f6f89;background:#eef3fb}.quality-verified{color:#047857;background:#dff7ec}.quality-reference{color:#1d4ed8;background:#e7efff}.quality-partial,.quality-incomplete{color:#b45309;background:#fff2d8}.quality-check{padding:0 8px;color:#8b97a9;background:#f6f8fb}.quality-check.ok{color:#166534;background:#e8f7ed}.compare-panel{position:sticky;top:92px;padding:20px;border-radius:var(--radius-lg);color:#dce8f9;background:#111f33;box-shadow:var(--shadow-md)}.compare-panel h3{color:#fff;font-size:1.12rem}.compare-panel>p{color:#b8c7d9;font-size:.8rem;line-height:1.6}.score-history{display:flex;flex-direction:column;gap:12px;margin:20px 0}.score-history>div{display:grid;grid-template-columns:40px 34px 1fr;align-items:center;gap:8px;font-size:.74rem}.score-history b{color:#fff}.score-history i{display:block;height:5px;border-radius:6px;background:#79a7f5}.compare-panel dl{display:flex;flex-direction:column;gap:12px;padding-top:16px;border-top:1px solid rgba(255,255,255,.13)}.compare-panel dt{color:#9fb1c8;font-size:.68rem}.compare-panel dd{color:#ecf3ff;font-size:.76rem;line-height:1.55}.quality-detail{font-weight:900;color:#fff}.source-badge{margin-left:6px}.source-link{display:inline-block;margin-top:4px;color:#9fc3ff;font-size:.72rem;text-decoration:underline}.continue-button{width:100%;margin-top:20px}.compare-panel .section-kicker{color:#9fc3ff}.empty-panel{background:#17283f}.empty-panel .continue-button{color:#8fa4c0;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15)}
-@media(max-width:1000px){.school-layout{grid-template-columns:1fr}.compare-panel{position:static}}@media(max-width:650px){.page-intro{gap:12px}.subject-strip{flex-wrap:wrap}.subject-strip small{width:100%;margin:4px 0 0}.school-stats{grid-template-columns:1fr}.school-stats span:not(:last-child){padding-bottom:8px;border-right:0;border-bottom:1px solid var(--line)}}
-</style>
+<style scoped lang="less" src="../styles/views/Schools.less"></style>

@@ -87,6 +87,9 @@ const STAGE_TASK = {
   4: { type: '模考冲刺', verb: '限时模考', minutes: 55 }
 }
 
+const REVIEW_INTERVALS = [1, 3, 7]
+const REVIEW_MASTERED_HITS = 3
+
 const STAGE_FOCUS = {
   1: {
     title: '补齐最低掌握度',
@@ -118,6 +121,113 @@ function uniqueBy(items, keyFn) {
     seen.add(key)
     return true
   })
+}
+
+export function reviewKeyFor(point = {}) {
+  const subject = String(point.subject || '综合')
+  const knowledgeName = String(point.knowledgeName || point.name || point.reviewKey || '')
+  return `${subject}:${knowledgeName}`
+}
+
+export function normalizeReviewItem(item, fallbackDate = fmt(new Date())) {
+  const subject = item?.subject || '综合'
+  const knowledgeName = item?.knowledgeName || item?.name || item?.reviewKey || ''
+  const key = item?.key || reviewKeyFor({ subject, knowledgeName })
+  const masteryHits = Math.max(0, Number(item?.masteryHits || 0))
+  const priority = Number.isFinite(Number(item?.priority)) ? Number(item.priority) : 100
+  return {
+    key,
+    subject,
+    knowledgeName,
+    source: item?.source || 'stage-test',
+    addedStage: item?.addedStage ?? null,
+    addedDate: item?.addedDate || fallbackDate,
+    nextReviewDate: item?.nextReviewDate || fallbackDate,
+    masteryHits,
+    priority,
+    lastDoneDate: item?.lastDoneDate || null,
+    lastResult: item?.lastResult || null,
+  }
+}
+
+export function normalizeReviewQueue(queue = [], fallbackDate = fmt(new Date())) {
+  const map = new Map()
+  queue.forEach(item => {
+    const normalized = normalizeReviewItem(item, fallbackDate)
+    if (!normalized.knowledgeName) return
+    const existing = map.get(normalized.key)
+    if (!existing || normalized.priority > existing.priority || normalized.nextReviewDate < existing.nextReviewDate) {
+      map.set(normalized.key, normalized)
+    }
+  })
+  return [...map.values()].sort((a, b) =>
+    String(a.nextReviewDate).localeCompare(String(b.nextReviewDate)) ||
+    b.priority - a.priority ||
+    a.knowledgeName.localeCompare(b.knowledgeName, 'zh')
+  )
+}
+
+export function advanceReviewItem(item, { date = fmt(new Date()), passed = true } = {}) {
+  const normalized = normalizeReviewItem(item, date)
+  if (!passed) {
+    return {
+      ...normalized,
+      masteryHits: 0,
+      priority: Math.min(140, normalized.priority + 25),
+      nextReviewDate: fmt(addDays(date, 1)),
+      lastDoneDate: date,
+      lastResult: 'wrong',
+    }
+  }
+
+  const masteryHits = normalized.masteryHits + 1
+  if (masteryHits >= REVIEW_MASTERED_HITS) {
+    return {
+      ...normalized,
+      masteryHits,
+      priority: 0,
+      nextReviewDate: null,
+      lastDoneDate: date,
+      lastResult: 'mastered',
+      mastered: true,
+    }
+  }
+
+  return {
+    ...normalized,
+    masteryHits,
+    priority: Math.max(20, normalized.priority - 35),
+    nextReviewDate: fmt(addDays(date, REVIEW_INTERVALS[masteryHits - 1] || 7)),
+    lastDoneDate: date,
+    lastResult: 'passed',
+  }
+}
+
+export function resolveTaskMode({ currentStage = 1, daysUntilExam = 999 } = {}) {
+  const stage = Number(currentStage || 1)
+  const days = Number(daysUntilExam)
+  if (Number.isFinite(days) && days <= 30) {
+    return {
+      key: 'sprint',
+      label: '冲刺模式',
+      taskStage: 4,
+      description: '距考试 30 天内，今日任务自动偏向限时模考、错题复盘和稳定输出。',
+    }
+  }
+  if (Number.isFinite(days) && days <= 60) {
+    return {
+      key: 'exam-transfer',
+      label: '真题强化',
+      taskStage: Math.max(stage, 3),
+      description: '距考试 60 天内，计划会减少纯铺知识点，优先把薄弱项放进真题场景。',
+    }
+  }
+  return {
+    key: 'adaptive',
+    label: '诊断驱动',
+    taskStage: stage,
+    description: '按诊断薄弱项、阶段测试和复习队列生成今日任务。',
+  }
 }
 
 export function buildWeaknessBacklog(subjectTargets = []) {
@@ -178,30 +288,44 @@ export function buildStageFocusPlan(stageTemplates, weaknessBacklog = []) {
 // 1) 先排阶段测试沉淀下来的复习项（动态纠偏）；
 // 2) 再按各科最薄弱知识点、跨科目轮排，填满当天时间预算；
 // 工作日/周末用不同的时长预算。done 状态由 store 维护。
-export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, weekendHours, reviewQueue, focusPoints, date }) {
+export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, weekendHours, reviewQueue, focusPoints, date, daysUntilExam }) {
   const d = toDate(date)
   const isWeekend = [0, 6].includes(d.getDay())
   const budget = Math.max(60, (isWeekend ? weekendHours : weekdayHours) * 60)
-  const stage = STAGE_TASK[currentStage] || STAGE_TASK[1]
+  const taskMode = resolveTaskMode({ currentStage, daysUntilExam })
+  const taskStage = taskMode.taskStage
+  const stage = STAGE_TASK[taskStage] || STAGE_TASK[1]
+  const isSprintTask = taskMode.key !== 'adaptive'
 
   const tasks = []
   let id = 1
   let used = 0
   const canFit = duration => used === 0 || used + duration <= budget
 
-  // 1) 复习项优先（来自阶段测试的薄弱知识点）
-  ;(reviewQueue || []).forEach(item => {
-    if (!canFit(30)) return
+  // 1) 复习项优先（来自阶段测试的薄弱知识点）；未到 nextReviewDate 的错题进入后续任务。
+  const dueReviews = normalizeReviewQueue(reviewQueue || [], fmt(d))
+    .filter(item => !item.nextReviewDate || item.nextReviewDate <= fmt(d))
+    .sort((a, b) => b.priority - a.priority || a.masteryHits - b.masteryHits)
+  dueReviews.forEach(item => {
+    const duration = taskStage >= 3 ? 35 : 30
+    if (!canFit(duration)) return
     tasks.push({
       id: id++,
       subject: item.subject,
-      title: `复习薄弱点：${item.knowledgeName}`,
-      duration: 30,
-      type: '复习巩固',
+      title: `${taskStage >= 3 ? '错题复盘' : '复习薄弱点'}：${item.knowledgeName}`,
+      duration,
+      type: item.masteryHits ? `复习巩固 · 第 ${item.masteryHits + 1} 轮` : '复习巩固',
       done: false,
-      reviewKey: item.knowledgeName
+      reviewKey: item.key,
+      reviewDueDate: item.nextReviewDate,
+      masteryHits: item.masteryHits,
+      priority: item.priority,
+      source: item.source,
+      planMode: taskMode.key,
+      modeLabel: taskMode.label,
+      sprint: isSprintTask,
     })
-    used += 30
+    used += duration
   })
 
   // 2) 当前阶段的诊断重点优先进入今日任务。
@@ -216,7 +340,10 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
       done: false,
       mastery: point.mastery,
       focus: true,
-      reason: point.reason
+      reason: point.reason,
+      planMode: taskMode.key,
+      modeLabel: taskMode.label,
+      sprint: isSprintTask,
     })
     used += stage.minutes
   })
@@ -247,7 +374,10 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
         duration: stage.minutes,
         type: stage.type,
         done: false,
-        mastery: point.mastery
+        mastery: point.mastery,
+        planMode: taskMode.key,
+        modeLabel: taskMode.label,
+        sprint: isSprintTask,
       })
       used += stage.minutes
       added = true
@@ -263,7 +393,10 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
         title: `${st.name} · ${stage.verb}`,
         duration: stage.minutes,
         type: stage.type,
-        done: false
+        done: false,
+        planMode: taskMode.key,
+        modeLabel: taskMode.label,
+        sprint: isSprintTask,
       })
     })
   }

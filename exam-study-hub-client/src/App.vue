@@ -7,8 +7,4 @@
 // 这些接口需要登录态，放在未鉴权的根组件会被 401 拒绝。
 </script>
 
-<style>
-#app {
-  min-height: 100vh;
-}
-</style>
+<style lang="less" src="./styles/App.less"></style>

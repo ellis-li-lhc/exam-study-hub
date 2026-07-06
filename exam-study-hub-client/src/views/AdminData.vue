@@ -30,6 +30,13 @@
 
     <el-tabs v-model="activeTab" class="data-tabs">
       <el-tab-pane label="院校数据" name="institutions">
+        <el-alert
+          class="scope-alert"
+          type="info"
+          title="本页按招生省份归档：招生省份表示院校出现在该省公开招生 / 征集计划中，院校所在地单独展示；省外院校不是脏数据。"
+          :closable="false"
+          show-icon
+        />
         <section class="toolbar">
           <el-select v-model="institutionFilters.province" clearable placeholder="全部省份" class="filter-select" @change="reloadInstitutions">
             <el-option v-for="province in catalog?.provinces || []" :key="province.code" :label="province.name" :value="province.code" />
@@ -42,10 +49,15 @@
         </section>
 
         <el-table :data="institutions.items" v-loading="institutionLoading" stripe class="data-table">
-          <el-table-column label="院校" min-width="210">
+          <el-table-column label="院校 / 招生口径" min-width="280">
             <template #default="{ row }">
               <strong class="table-main">{{ row.name }}</strong>
-              <small class="table-sub">{{ row.code }} · {{ row.province_name }} · {{ row.city || '未填城市' }}</small>
+              <div class="school-meta">
+                <span>代码 {{ row.code }}</span>
+                <span>招生省份：{{ row.province_name }}</span>
+                <span>院校所在地：{{ row.city || '未填城市' }}</span>
+                <el-tag v-if="row.city && !isLocalInstitution(row)" size="small" type="warning" effect="plain" class="location-tag">省外院校</el-tag>
+              </div>
             </template>
           </el-table-column>
           <el-table-column label="参考线" width="130">
@@ -118,8 +130,8 @@
         <section class="subject-grid">
           <div v-for="subject in questionQuality?.subjects || []" :key="subject.subject" class="subject-tile">
             <strong>{{ subject.subject }}</strong>
-            <span>{{ subject.topics_count }} 知识点 · {{ subject.questions_count }} 题</span>
-            <el-tag :type="subject.issue_count ? 'warning' : 'success'" effect="plain">{{ subject.issue_count ? `${subject.issue_count} 个问题` : '正常' }}</el-tag>
+            <span class="subject-meta">{{ subject.topics_count }} 知识点 · {{ subject.questions_count }} 题</span>
+            <el-tag class="subject-status" :type="subject.issue_count ? 'warning' : 'success'" effect="plain">{{ subject.issue_count ? `${subject.issue_count} 个问题` : '正常' }}</el-tag>
           </div>
         </section>
         <el-table :data="questionQuality?.issues || []" stripe class="data-table">
@@ -133,36 +145,109 @@
       </el-tab-pane>
 
       <el-tab-pane label="主数据" name="catalog">
-        <section class="catalog-layout">
-          <div>
-            <h3>省份覆盖</h3>
-            <el-table :data="catalog?.provinces || []" stripe class="data-table compact">
-              <el-table-column prop="name" label="省份" width="90" />
-              <el-table-column prop="institutions_count" label="院校" width="78" />
-              <el-table-column prop="scores_count" label="参考线" width="86" />
-              <el-table-column prop="plans_count" label="计划" width="78" />
-              <el-table-column prop="note" label="报名提示" min-width="160" />
-            </el-table>
-          </div>
-          <div>
-            <h3>专业科类</h3>
-            <el-table :data="catalog?.categories || []" stripe class="data-table compact">
-              <el-table-column prop="category" label="科类" width="120" />
-              <el-table-column prop="majors_count" label="专业数" width="86" />
-              <el-table-column label="统考科目" min-width="180">
-                <template #default="{ row }">{{ row.subjects.join('、') }}</template>
-              </el-table-column>
-            </el-table>
+        <section class="catalog-overview">
+          <div v-for="item in catalogOverview" :key="item.label" class="catalog-metric">
+            <span>{{ item.label }}</span>
+            <strong>{{ formatNumber(item.value) }}</strong>
+            <small>{{ item.hint }}</small>
           </div>
         </section>
-        <el-table :data="catalog?.majors || []" stripe class="data-table majors-table">
-          <el-table-column prop="code" label="专业代码" width="160" />
-          <el-table-column prop="name" label="专业名称" min-width="160" />
-          <el-table-column prop="category" label="科类" width="130" />
-          <el-table-column label="统考科目" min-width="190">
-            <template #default="{ row }">{{ row.subjects.join('、') }}</template>
-          </el-table-column>
-        </el-table>
+
+        <section class="catalog-section">
+          <div class="catalog-section-head">
+            <div>
+              <h3>省份覆盖</h3>
+              <p>按招生省份汇总数据规模，报名提示只保留影响报考判断的信息。</p>
+            </div>
+          </div>
+          <div class="province-grid">
+            <article v-for="province in catalog?.provinces || []" :key="province.code" class="province-panel">
+              <header>
+                <strong>{{ province.name }}</strong>
+                <el-tag size="small" effect="plain">{{ province.control_scores_count }} 条省控线</el-tag>
+              </header>
+              <p>{{ province.note || '暂无报名提示' }}</p>
+              <dl class="province-kpis">
+                <div>
+                  <dt>院校</dt>
+                  <dd>{{ formatNumber(province.institutions_count) }}</dd>
+                </div>
+                <div>
+                  <dt>参考线</dt>
+                  <dd>{{ formatNumber(province.scores_count) }}</dd>
+                </div>
+                <div>
+                  <dt>专业计划</dt>
+                  <dd>{{ formatNumber(province.plans_count) }}</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalog-section">
+          <div class="catalog-section-head">
+            <div>
+              <h3>专业科类</h3>
+              <p>先看科类和统考科目，再进入下方专业明细。</p>
+            </div>
+          </div>
+          <div class="category-grid">
+            <button
+              v-for="category in catalog?.categories || []"
+              :key="category.category"
+              type="button"
+              class="category-card"
+              :class="{ 'is-active': catalogFilters.category === category.category }"
+              @click="catalogFilters.category = catalogFilters.category === category.category ? '' : category.category"
+            >
+              <span class="category-card-top">
+                <strong>{{ category.category }}</strong>
+                <em>{{ category.majors_count }} 个专业</em>
+              </span>
+              <span class="subject-chip-list">
+                <span v-for="subject in category.subjects" :key="subject" class="subject-chip">{{ subject }}</span>
+              </span>
+            </button>
+          </div>
+        </section>
+
+        <section class="catalog-section">
+          <div class="catalog-section-head catalog-section-head--with-tools">
+            <div>
+              <h3>专业明细</h3>
+              <p>共 {{ filteredCatalogMajors.length }} 个专业，按科类分组展示，避免长表格连续滚动。</p>
+            </div>
+            <div class="catalog-toolbar">
+              <el-select v-model="catalogFilters.category" clearable placeholder="全部科类" class="catalog-filter">
+                <el-option v-for="category in catalog?.categories || []" :key="category.category" :label="category.category" :value="category.category" />
+              </el-select>
+              <el-input v-model="catalogFilters.keyword" clearable placeholder="搜索专业名称 / 代码 / 科目" class="catalog-search">
+                <template #prefix><el-icon><Search /></el-icon></template>
+              </el-input>
+            </div>
+          </div>
+          <el-empty v-if="catalog && !groupedCatalogMajors.length" description="没有匹配的专业" :image-size="72" />
+          <div v-else class="major-group-list">
+            <section v-for="group in groupedCatalogMajors" :key="group.category" class="major-group">
+              <header>
+                <div>
+                  <strong>{{ group.category }}</strong>
+                  <span>{{ group.majors.length }} 个专业</span>
+                </div>
+                <div class="subject-chip-list">
+                  <span v-for="subject in group.subjects" :key="subject" class="subject-chip">{{ subject }}</span>
+                </div>
+              </header>
+              <div class="major-chip-grid">
+                <span v-for="major in group.majors" :key="major.code" class="major-chip">
+                  <strong>{{ major.name }}</strong>
+                  <small>{{ major.code }}</small>
+                </span>
+              </div>
+            </section>
+          </div>
+        </section>
       </el-tab-pane>
 
       <el-tab-pane label="校验结果" name="validation">
@@ -180,9 +265,10 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { Refresh, Search } from '@element-plus/icons-vue'
+import { isCityInProvince } from '../data/regions'
 import {
   getAdminCatalog,
   getAdminDataSummary,
@@ -206,11 +292,76 @@ const institutionFilters = reactive({
   page: 1,
   pageSize: 30,
 })
+const catalogFilters = reactive({
+  category: '',
+  keyword: '',
+})
+
+const catalogOverview = computed(() => {
+  const provinces = catalog.value?.provinces || []
+  const categories = catalog.value?.categories || []
+  const majors = catalog.value?.majors || []
+  return [
+    {
+      label: '接入省份',
+      value: provinces.length,
+      hint: provinces.map(item => item.name).join(' / ') || '暂无省份',
+    },
+    {
+      label: '招生院校',
+      value: provinces.reduce((sum, item) => sum + item.institutions_count, 0),
+      hint: '按招生省份归档',
+    },
+    {
+      label: '招生与分数',
+      value: provinces.reduce((sum, item) => sum + item.scores_count + item.plans_count + item.control_scores_count, 0),
+      hint: '参考线 / 计划 / 省控线',
+    },
+    {
+      label: '专业体系',
+      value: majors.length,
+      hint: `${categories.length || 0} 个科类`,
+    },
+  ]
+})
+
+const filteredCatalogMajors = computed(() => {
+  const keyword = catalogFilters.keyword.trim().toLowerCase()
+  return (catalog.value?.majors || []).filter(major => {
+    const matchesCategory = !catalogFilters.category || major.category === catalogFilters.category
+    if (!matchesCategory) return false
+    if (!keyword) return true
+    return [
+      major.code,
+      major.name,
+      major.category,
+      ...(major.subjects || []),
+    ].some(value => String(value).toLowerCase().includes(keyword))
+  })
+})
+
+const groupedCatalogMajors = computed(() => {
+  const categoryMap = new Map((catalog.value?.categories || []).map(item => [
+    item.category,
+    { category: item.category, subjects: item.subjects || [], majors: [] },
+  ]))
+  for (const major of filteredCatalogMajors.value) {
+    if (!categoryMap.has(major.category)) {
+      categoryMap.set(major.category, { category: major.category, subjects: major.subjects || [], majors: [] })
+    }
+    categoryMap.get(major.category).majors.push(major)
+  }
+  return [...categoryMap.values()].filter(group => group.majors.length)
+})
 
 function qualityTag(value) {
   if (value === '完整') return 'success'
   if (value === '可参考') return 'info'
   return 'warning'
+}
+
+function isLocalInstitution(row) {
+  return Boolean(row?.city && isCityInProvince(row.province, row.city))
 }
 
 function compactSource(value) {
@@ -221,6 +372,10 @@ function compactSource(value) {
   } catch {
     return value.length > 32 ? `${value.slice(0, 30)}...` : value
   }
+}
+
+function formatNumber(value) {
+  return Number(value || 0).toLocaleString('zh-CN')
 }
 
 async function reloadInstitutions() {
@@ -264,6 +419,4 @@ async function refreshAll() {
 onMounted(refreshAll)
 </script>
 
-<style scoped>
-.page-stack{display:flex;flex-direction:column;gap:18px}.page-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.page-intro h2{color:var(--ink);font-size:1.7rem}.page-intro p{margin-top:5px;color:var(--text-secondary);font-size:.85rem;line-height:1.7}.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.72rem;font-weight:900;letter-spacing:.08em}.refresh-btn{min-width:84px}.stat-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}.stat-tile{min-height:92px;padding:14px;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:var(--shadow-xs)}.stat-tile small,.stat-tile span{display:block;color:var(--text-muted);font-size:.72rem}.stat-tile strong{display:block;margin:8px 0 2px;color:var(--ink);font-size:1.8rem;line-height:1;font-variant-numeric:tabular-nums}.tone-blue{border-color:#c8d9f5}.tone-green{border-color:#bfe7cf}.tone-amber{border-color:#f7dca4}.data-tabs{padding:14px 18px 18px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs)}.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}.filter-select{width:150px}.filter-input{width:260px}.data-table{width:100%;font-size:.82rem}.data-table :deep(.el-table__header th){height:42px;background:#f8fafc;color:var(--text-secondary);font-weight:900}.table-main{display:block;color:var(--ink);font-weight:900;line-height:1.35}.table-sub{display:block;margin-top:3px;color:var(--text-muted);font-size:.72rem;line-height:1.35}.issue-tag{margin:2px 4px 2px 0}.muted{color:var(--text-muted)}.source-link{color:var(--primary);font-weight:800;text-decoration:none}.source-link:hover{text-decoration:underline}.pagination{justify-content:flex-end;margin-top:14px}.subject-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}.subject-tile{min-height:88px;padding:14px;border:1px solid var(--line);border-radius:var(--radius-md);background:#f8fbff}.subject-tile strong,.subject-tile span{display:block}.subject-tile strong{color:var(--ink)}.subject-tile span{margin:6px 0 10px;color:var(--text-secondary);font-size:.78rem}.catalog-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}.catalog-layout h3{margin:0 0 10px;color:var(--ink);font-size:1rem}.compact{min-height:220px}.majors-table{margin-top:4px}@media(max-width:1180px){.stat-grid{grid-template-columns:repeat(3,1fr)}.subject-grid{grid-template-columns:repeat(2,1fr)}.catalog-layout{grid-template-columns:1fr}}@media(max-width:680px){.page-intro{flex-direction:column}.stat-grid,.subject-grid{grid-template-columns:1fr}.filter-input,.filter-select{width:100%}.toolbar{align-items:stretch}.toolbar .el-button{width:100%}}
-</style>
+<style scoped lang="less" src="../styles/views/AdminData.less"></style>

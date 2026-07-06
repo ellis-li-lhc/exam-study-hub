@@ -17,6 +17,24 @@
       </div>
     </section>
 
+    <section class="route-loop">
+      <article>
+        <small>当前策略</small>
+        <strong>{{ store.planMode.label }}</strong>
+        <p>{{ store.planMode.description }}</p>
+      </article>
+      <article>
+        <small>今日复习</small>
+        <strong>{{ store.reviewStats.due }}</strong>
+        <p>{{ store.reviewStats.scheduled }} 个错题知识点已排入后续复习。</p>
+      </article>
+      <article>
+        <small>闭环规则</small>
+        <strong>3 轮</strong>
+        <p>错题复习连续掌握后自动降权，并从复习队列移出。</p>
+      </article>
+    </section>
+
     <section class="plan-layout">
       <div class="stage-detail">
         <el-card v-for="stage in store.planMilestones" :key="stage.id" shadow="never" class="stage-card" :class="stage.status">
@@ -35,11 +53,23 @@
 
       <aside class="daily-panel">
         <div class="daily-head"><div><span class="section-kicker">{{ store.profile.mode==='plan'?'今天':'当前建议' }}</span><h3>{{ store.profile.mode==='plan'?`完成 ${store.tasks.length} 项任务`:'基础建立阶段' }}</h3></div><el-progress type="circle" :percentage="store.overallProgress" :width="64" :stroke-width="7" /></div>
-        <p v-if="store.profile.mode==='plan' && store.reviewQueue.length" class="review-note"><el-icon><Warning /></el-icon> 有 {{ store.reviewQueue.length }} 个薄弱知识点待复习，已排入今日任务。</p>
+        <p v-if="store.profile.mode==='plan' && store.reviewStats.due" class="review-note"><el-icon><Warning /></el-icon> 有 {{ store.reviewStats.due }} 个错题知识点今日到期，已排入任务。</p>
+        <p v-else-if="store.profile.mode==='plan' && store.reviewStats.scheduled" class="review-note scheduled"><el-icon><Calendar /></el-icon> {{ store.reviewStats.scheduled }} 个错题知识点已排到后续复习日。</p>
         <template v-if="store.profile.mode==='plan'">
           <div v-for="group in tasksBySubject" :key="group.subject" class="task-group">
             <div class="task-group-head"><span class="task-subject">{{ group.subject }}</span><small>{{ group.doneCount }}/{{ group.tasks.length }} 项 · {{ group.minutes }} 分钟</small></div>
-            <div v-for="task in group.tasks" :key="task.id" class="task-row" :class="{done:task.done, review: task.reviewKey, focus: task.focus}"><el-checkbox :model-value="task.done" @change="store.toggleTask(task.id)"/><span><strong>{{ task.title }}</strong><small>{{ task.type }} · {{ task.duration }} 分钟<span v-if="task.mastery != null"> · 掌握度 {{ task.mastery }}%</span></small></span></div>
+            <div v-for="task in group.tasks" :key="task.id" class="task-row" :class="{done:task.done, review: task.reviewKey, focus: task.focus, sprint: task.sprint}">
+              <el-checkbox :model-value="task.done" @change="store.toggleTask(task.id)"/>
+              <span>
+                <strong>{{ task.title }}</strong>
+                <small>
+                  {{ task.type }} · {{ task.duration }} 分钟
+                  <span v-if="task.mastery != null"> · 掌握度 {{ task.mastery }}%</span>
+                  <span v-if="task.reviewKey"> · 连续掌握 {{ task.masteryHits || 0 }}/3</span>
+                  <span v-if="task.sprint"> · {{ task.modeLabel }}</span>
+                </small>
+              </span>
+            </div>
           </div>
         </template>
         <div v-else class="self-panel">
@@ -80,6 +110,8 @@
         <h3>{{ testResult.passed ? '本阶段已达标' : '建议先补一次薄弱知识点' }}</h3>
         <p>答对 {{ testResult.correctCount }}/{{ testResult.totalQuestions }} 题，正确率 {{ testResult.accuracy }}%，本阶段标准为 {{ testResult.threshold }}%。</p>
         <div class="auto-score"><span><small>系统折算分</small><strong>{{ testResult.score }}</strong></span><span><small>薄弱知识点</small><strong>{{ testResult.weakKnowledge || '暂无明显薄弱项' }}</strong></span></div>
+        <el-alert v-if="testResult.queuedReviewCount" :title="`${testResult.queuedReviewCount} 个错题知识点已进入 ${testResult.nextReviewDate} 复习；连续掌握 3 轮后会自动降权移出。`" type="info" show-icon :closable="false" />
+        <el-alert v-if="testResult.stabilizedReviewCount" :title="`${testResult.stabilizedReviewCount} 个旧错题已连续掌握，已从复习队列移出。`" type="success" show-icon :closable="false" />
         <el-alert v-if="!testResult.passed" title="你可以关闭测试继续复习，也可以忽略建议进入下一阶段。" type="warning" show-icon :closable="false" />
       </div>
 
@@ -197,14 +229,24 @@ function submitTest() {
   // 答错知识点去重后作为复习项传给 store（动态纠偏）
   const seen = new Set()
   const weakPoints = []
+  const testedSeen = new Set()
+  const testedPoints = []
+  stageQuestions.value.forEach(question => {
+    const key = `${question.subject}:${question.knowledgeName}`
+    if (!testedSeen.has(key)) {
+      testedSeen.add(key)
+      testedPoints.push({ subject: question.subject, knowledgeName: question.knowledgeName })
+    }
+  })
   wrongQuestions.forEach(question => {
-    if (!seen.has(question.knowledgeName)) {
-      seen.add(question.knowledgeName)
+    const key = `${question.subject}:${question.knowledgeName}`
+    if (!seen.has(key)) {
+      seen.add(key)
       weakPoints.push({ subject: question.subject, knowledgeName: question.knowledgeName })
     }
   })
   const score = Math.round(accuracy / 100 * 450)
-  const result = store.submitStageTest({ score, accuracy, correctCount, totalQuestions, weakKnowledge, weakPoints })
+  const result = store.submitStageTest({ score, accuracy, correctCount, totalQuestions, weakKnowledge, weakPoints, testedPoints })
   testResult.value = { ...result, score, accuracy, correctCount, totalQuestions, weakKnowledge }
 }
 
@@ -214,7 +256,4 @@ function continueAnyway() {
 }
 </script>
 
-<style scoped>
-.page-stack{display:flex;flex-direction:column;gap:18px}.page-intro{display:flex;align-items:flex-start;justify-content:space-between}.page-intro h2{color:var(--ink);font-size:1.7rem}.page-intro p{margin-top:5px;color:var(--text-secondary)}.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.72rem;font-weight:800;letter-spacing:.1em}.stage-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}.stage-node{display:flex;align-items:center;gap:10px;position:relative}.stage-node:not(:last-child):after{content:'';position:absolute;right:10px;width:34%;height:2px;background:var(--line)}.stage-node>span{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;color:var(--text-muted);font-weight:800;background:#edf1f6}.stage-node.active>span{color:#fff;background:var(--primary);box-shadow:0 0 0 6px var(--primary-soft)}.stage-node.completed>span{color:#fff;background:var(--mint)}.stage-node small,.stage-node strong,.stage-node p{display:block}.stage-node small{color:var(--text-muted);font-size:.64rem}.stage-node strong{color:var(--ink);font-size:.8rem}.stage-node p{color:var(--text-muted);font-size:.66rem}.route-evidence{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff}.route-evidence h3{color:var(--ink);font-size:1rem}.route-evidence p{margin-top:5px;color:var(--text-secondary);font-size:.76rem;line-height:1.6}.weakness-list,.focus-points{display:flex;flex-wrap:wrap;gap:8px}.weakness-list span,.focus-points span{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:6px 9px;border:1px solid var(--line);border-radius:9px;color:var(--text-secondary);font-size:.7rem;background:#f8fafc}.weakness-list b,.focus-points b{color:var(--ink);font-weight:800}.weakness-list em,.focus-points em{font-style:normal;color:var(--primary);font-weight:900}.weakness-list .urgent{border-color:#f2c5a5;background:#fff7ed}.weakness-list .weak{border-color:#f7dfac;background:#fffbeb}.plan-layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}.stage-detail{display:flex;flex-direction:column;gap:12px}.stage-card{border-radius:18px;border-color:var(--line)}.stage-card.active{border-color:#8bb1f7;box-shadow:0 0 0 3px rgba(37,99,235,.07)}.stage-card-head{display:flex;align-items:center;gap:13px}.stage-badge{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:var(--primary);font-weight:900;background:var(--primary-soft)}.stage-card-head>div{flex:1}.stage-card-head h3{color:var(--ink);font-size:.95rem}.stage-card-head p{color:var(--text-secondary);font-size:.74rem}.stage-goal{display:flex;align-items:center;gap:9px;margin-top:14px;padding:12px;border-radius:12px;background:#f6f8fc}.stage-goal>span small,.stage-goal>span strong{display:block}.stage-goal small{color:var(--text-muted);font-size:.66rem}.stage-goal strong{color:var(--ink);font-size:.76rem}.stage-focus{margin-top:10px;padding:12px;border:1px solid #dbe7ff;border-radius:12px;background:#f8fbff}.stage-focus-head{display:flex;align-items:baseline;gap:8px;margin-bottom:9px}.stage-focus-head strong{color:var(--primary-deep);font-size:.76rem}.stage-focus-head span{color:var(--text-secondary);font-size:.7rem;line-height:1.5}.stage-window{display:flex;align-items:center;gap:7px;margin-top:9px;color:var(--text-secondary);font-size:.74rem}.stage-window .el-icon{color:var(--primary)}.review-note{display:flex;align-items:center;gap:6px;margin-top:14px;padding:9px 11px;border-radius:10px;color:#b77400;font-size:.74rem;background:var(--accent-soft)}.active-actions{display:flex;align-items:center;gap:12px;margin-top:13px}.active-actions span{color:var(--text-muted);font-size:.7rem}.daily-panel{position:sticky;top:98px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff}.daily-head{display:flex;align-items:center;justify-content:space-between}.daily-head h3{color:var(--ink);font-size:1rem}.task-row{display:flex;align-items:flex-start;gap:9px;padding:14px 0;border-bottom:1px solid var(--line)}.task-row>span{flex:1}.task-row b{display:inline-block;padding:2px 6px;margin-bottom:5px;border-radius:5px;color:var(--primary);font-size:.65rem;background:var(--primary-soft)}.task-row strong,.task-row small{display:block}.task-row strong{color:var(--ink);font-size:.78rem}.task-row small{color:var(--text-muted);font-size:.68rem}.task-row.done{opacity:.55}.task-row.done strong{text-decoration:line-through}.task-row.focus{border-left:3px solid var(--primary);padding-left:8px;margin-left:-11px}.task-group{margin-bottom:4px}.task-group-head{display:flex;align-items:baseline;justify-content:space-between;margin:14px 0 2px;padding-bottom:6px;border-bottom:2px solid var(--primary-soft)}.task-subject{color:var(--primary-deep);font-size:.82rem;font-weight:800}.task-group-head small{color:var(--text-muted);font-size:.68rem}.task-row.review{border-left:3px solid var(--accent);padding-left:8px;margin-left:-11px}.task-row.review strong{color:#b77400}.self-intro{margin-top:6px;padding:14px;border-radius:13px;color:var(--text-secondary);font-size:.76rem;line-height:1.6;background:#f6f8fc}.self-order{margin-top:14px;padding-left:0;list-style:none;counter-reset:self}.self-order li{counter-increment:self;position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line)}.self-order li:before{content:counter(self);position:absolute;left:0;top:11px;width:21px;height:21px;display:grid;place-items:center;border-radius:6px;color:var(--primary);font-size:.66rem;font-weight:800;background:var(--primary-soft)}.self-order-top{display:flex;align-items:baseline;justify-content:space-between}.self-order strong{color:var(--ink);font-size:.8rem}.self-order b{color:var(--mint);font-size:.8rem}.self-order b.weak{color:#e6a23c}.self-order small{display:block;margin-top:2px;color:var(--text-muted);font-size:.68rem}.test-intro{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:14px;padding:16px 18px;border-radius:14px;background:#f5f8fc}.test-intro>div{display:flex;align-items:baseline;gap:5px}.test-intro strong{color:var(--ink);font-size:1.2rem}.test-intro span,.test-intro p{color:var(--text-muted);font-size:.7rem}.test-intro p{grid-column:1/-1;margin-top:-7px}.stage-question-list{display:flex;flex-direction:column;gap:14px;max-height:55vh;margin-top:16px;padding:0 10px 6px 0;overflow:auto;scrollbar-gutter:stable}.stage-question{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fff}.stage-question-meta{display:flex;align-items:center;gap:9px;min-width:0}.stage-question-meta>.question-order{width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px;border-radius:9px;color:var(--primary);font-size:.68rem;font-weight:900;background:var(--primary-soft)}.stage-question-meta :deep(.el-tag){max-width:calc(100% - 40px);height:26px;padding:0 9px;border-radius:7px;overflow:hidden;text-overflow:ellipsis}.stage-question h4{margin:14px 0;color:var(--ink);font-size:.9rem;line-height:1.55}.stage-options{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;width:100%}:deep(.stage-options .el-radio){width:100%;height:auto;min-height:44px;margin:0;padding:10px 12px;border-radius:10px}:deep(.stage-options .el-radio__label){display:flex;align-items:center;min-width:0;white-space:normal;line-height:1.4}.stage-options b{display:inline-grid;place-items:center;width:21px;height:21px;margin-right:7px;flex:0 0 21px;border-radius:5px;color:var(--text-secondary);font-size:.65rem;background:#eef2f7}.test-result-panel{text-align:center;padding:12px}.result-mark{width:58px;height:58px;display:grid;place-items:center;margin:0 auto 12px;border-radius:18px;font-size:28px}.result-mark.passed{color:var(--mint);background:var(--mint-soft)}.result-mark.review{color:#b77400;background:var(--accent-soft)}.test-result-panel h3{color:var(--ink);font-size:1.25rem}.test-result-panel>p{margin:6px 0 18px;color:var(--text-secondary);font-size:.8rem}.auto-score{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.auto-score>span{padding:14px;border-radius:12px;text-align:left;background:#f5f8fc}.auto-score small,.auto-score strong{display:block}.auto-score small{color:var(--text-muted);font-size:.68rem}.auto-score strong{margin-top:3px;color:var(--ink);font-size:1rem}:deep(.stage-test-dialog .el-dialog__header){margin:0;padding:20px 22px 12px;border-bottom:1px solid var(--line)}:deep(.stage-test-dialog .el-dialog__body){padding:16px 22px}:deep(.stage-test-dialog .el-dialog__footer){padding:14px 22px;border-top:1px solid var(--line)}
-@media(max-width:1050px){.stage-overview{grid-template-columns:repeat(2,1fr);gap:18px}.stage-node:after{display:none}.route-evidence{grid-template-columns:1fr}.plan-layout{grid-template-columns:1fr}.daily-panel{position:static}}@media(max-width:600px){.stage-overview{grid-template-columns:1fr}.route-evidence{padding:16px}.stage-focus-head{align-items:flex-start;flex-direction:column}.active-actions{align-items:flex-start;flex-direction:column}.stage-options,.auto-score{grid-template-columns:1fr}.test-intro{grid-template-columns:1fr}.test-intro p{grid-column:auto;margin:0}}
-</style>
+<style scoped lang="less" src="../styles/views/StudyPlan.less"></style>

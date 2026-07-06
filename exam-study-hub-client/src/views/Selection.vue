@@ -16,10 +16,14 @@
         </el-select>
         <el-alert class="policy-tip" type="info" show-icon :closable="false" title="户籍地通常可直接报名；非户籍地可能需要居住证或连续 3～6 个月社保，最终以当年省级公告为准。" />
         <div v-if="cityOptions.length" class="city-block">
-          <label class="city-label">意向城市（可选，可多选）</label>
-          <el-select v-model="draft.cities" multiple clearable filterable size="large" placeholder="不限城市，按省内城市筛选院校" class="city-select">
-            <el-option v-for="city in cityOptions" :key="city" :label="city" :value="city" />
+          <label class="city-label">院校所在地偏好（可选，可多选）</label>
+          <el-select v-model="draft.cities" multiple clearable filterable size="large" placeholder="不限所在地，包含省内与省外招生院校" class="city-select">
+            <el-option v-for="option in cityOptions" :key="option.value" :label="option.label" :value="option.value">
+              <span>{{ option.label }}</span>
+              <span v-if="option.note" class="option-tag">{{ option.note }}</span>
+            </el-option>
           </el-select>
+          <p class="city-help">选择具体城市会按校本部所在地筛选；如也接受在所选省份招生的外省学校，请勾选“省外院校”。</p>
         </div>
       </el-card>
 
@@ -70,7 +74,14 @@
 import { computed, reactive, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useApplicationStore } from '../stores/application'
-import { chinaProvinces, isCityInProvince, isProvinceAvailable } from '../data/regions'
+import {
+  OUTSIDE_PROVINCE_CITY,
+  OUTSIDE_PROVINCE_CITY_LABEL,
+  chinaProvinces,
+  isCityInProvince,
+  isOutsideProvinceInstitution,
+  isProvinceAvailable,
+} from '../data/regions'
 import { subjectsForCategory } from '../data/majors'
 
 const router = useRouter(); const store = useApplicationStore(); const currentYear = new Date().getFullYear()
@@ -79,24 +90,30 @@ if (!Array.isArray(draft.cities)) draft.cities = []
 const yearOptions = [currentYear, currentYear + 1, currentYear + 2]
 const weeklyTotal = computed(() => Number(draft.weekdayHours) * 5 + Number(draft.weekendHours) * 2)
 const canSave = computed(() => draft.provinces.length > 0 && draft.majorCode && draft.mode)
-// 意向城市：只展示所选省份内、且当前数据里有院校的城市；外省高校的校本部城市不进入这里。
+// 院校所在地偏好：展示所选招生省份内的本省城市；如存在跨省招生院校，追加“省外院校”选项。
 const cityOptions = computed(() => {
   const set = new Set()
+  let hasOutside = false
   store.institutions.forEach(item => {
-    if (
-      draft.provinces.includes(item.province) &&
-      item.city &&
-      item.city !== '—' &&
-      isCityInProvince(item.province, item.city)
-    ) {
+    if (!draft.provinces.includes(item.province) || !item.city || item.city === '—') return
+    if (isCityInProvince(item.province, item.city)) {
       set.add(item.city)
+    } else if (isOutsideProvinceInstitution(item)) {
+      hasOutside = true
     }
   })
-  return [...set].sort((a, b) => a.localeCompare(b, 'zh'))
+  const options = [...set]
+    .sort((a, b) => a.localeCompare(b, 'zh'))
+    .map(city => ({ label: city, value: city }))
+  if (hasOutside) {
+    options.push({ label: OUTSIDE_PROVINCE_CITY_LABEL, value: OUTSIDE_PROVINCE_CITY, note: '跨省招生' })
+  }
+  return options
 })
-// 省份变化时，剔除已不在可选范围内的城市
+const cityOptionValues = computed(() => cityOptions.value.map(option => option.value))
+// 省份变化时，剔除已不在可选范围内的所在地偏好
 watch(() => draft.provinces.slice(), () => {
-  draft.cities = draft.cities.filter(city => cityOptions.value.includes(city))
+  draft.cities = draft.cities.filter(city => cityOptionValues.value.includes(city))
 })
 // 专业按科类分组展示
 const CATEGORY_ORDER = ['经济管理类', '理工类', '法学类', '教育学类', '文史中医类']
@@ -107,49 +124,4 @@ const selectedDraftMajor = computed(() => store.majorOptions.find(item => item.c
 function saveAndContinue(){ store.updateProfile(draft); router.push('/schools') }
 </script>
 
-<style scoped>
-.page-stack{display:flex;flex-direction:column;gap:18px}
-.page-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.page-intro h2{color:var(--ink);font-size:1.55rem;line-height:1.3}
-.page-intro p{margin-top:5px;color:var(--text-secondary)}
-.section-kicker{display:block;margin-bottom:5px;color:var(--primary);font-size:.7rem;font-weight:900;letter-spacing:.08em}
-.profile-form{display:flex;flex-direction:column;gap:14px}
-.form-card{border-radius:var(--radius-lg);border-color:var(--line);box-shadow:var(--shadow-xs)}
-.form-heading{display:flex;gap:12px;align-items:center}
-.form-heading>span{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;color:var(--primary);font-weight:900;background:var(--primary-soft)}
-.form-heading h3{color:var(--ink);font-size:.98rem}
-.form-heading p{color:var(--text-muted);font-size:.75rem;line-height:1.5}
-.choice-grid,.major-grid,.mode-grid{display:grid;width:100%;gap:12px}
-.province-grid,.mode-grid{grid-template-columns:repeat(2,1fr)}
-.major-grid{grid-template-columns:repeat(3,1fr)}
-:deep(.el-checkbox.is-bordered),:deep(.el-radio.is-bordered){width:100%;height:auto;min-height:72px;margin:0;padding:14px;border-radius:var(--radius-md);align-items:flex-start;background:#fff;transition:border-color var(--ease-standard),background-color var(--ease-standard)}
-:deep(.el-radio.is-bordered.is-checked){background:var(--primary-faint);border-color:#c6d7f6}
-:deep(.el-checkbox__label),:deep(.el-radio__label){width:100%;white-space:normal}
-:deep(.el-checkbox__label strong),:deep(.el-checkbox__label small){display:block}
-:deep(.el-checkbox__label small){margin-top:4px;color:var(--text-secondary);font-size:.75rem}
-.policy-tip{margin-top:14px}
-.province-select,.major-select,.city-select{width:100%;max-width:440px}
-.option-tag{float:right;color:var(--text-muted);font-size:.72rem}
-.major-detail{display:flex;align-items:center;gap:10px;margin-top:12px;color:var(--text-secondary);font-size:.82rem}
-.city-block{margin-top:16px}
-.city-label{display:block;margin-bottom:8px;color:var(--text-secondary);font-size:.82rem;font-weight:800}
-.year-row{display:flex;align-items:center;gap:18px}
-.year-row .el-select{width:240px}
-.year-note{display:flex;align-items:center;gap:8px;color:var(--text-secondary);font-size:.8rem}
-.major-name{font-weight:800;color:var(--ink);margin-right:8px}
-.major-grid small,.major-grid b{display:block}
-.major-grid small{min-height:42px;margin:8px 0;color:var(--text-secondary);font-size:.74rem}
-.major-grid b{color:var(--primary-deep);font-size:.72rem}
-.mode-title{display:flex;align-items:center;gap:7px;color:var(--ink);font-weight:900}
-.mode-grid small{display:block;margin-top:7px;color:var(--text-secondary);font-size:.76rem}
-.time-settings{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:14px;margin-top:16px;padding:16px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--surface-soft)}
-.time-settings .el-form-item{margin:0}
-.time-settings .el-form-item span{margin-left:7px;color:var(--text-muted)}
-.weekly-total small,.weekly-total strong{display:block}
-.weekly-total small{color:var(--text-muted);font-size:.72rem;font-weight:800}
-.weekly-total strong{color:var(--primary);font-size:1.22rem}
-.form-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 2px}
-.form-actions>span{color:var(--text-muted);font-size:.76rem}
-@media(max-width:1000px){.major-grid{grid-template-columns:repeat(2,1fr)}.time-settings{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.province-grid,.mode-grid,.major-grid,.time-settings{grid-template-columns:1fr}.page-intro,.year-row,.form-actions{align-items:stretch;flex-direction:column}.year-row .el-select{width:100%}}
-</style>
+<style scoped lang="less" src="../styles/views/Selection.less"></style>

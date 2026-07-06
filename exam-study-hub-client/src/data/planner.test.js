@@ -2,11 +2,13 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 
 import {
+  advanceReviewItem,
   buildDailyTasks,
   buildStageFocusPlan,
   buildWeaknessBacklog,
   fmtDate,
   getExamDate,
+  resolveTaskMode,
 } from './planner.js'
 
 test('buildWeaknessBacklog ranks lower mastery and larger score gaps first', () => {
@@ -63,6 +65,47 @@ test('buildDailyTasks puts stage-test review items before new focus tasks', () =
   assert.equal(tasks[0].title, '复习薄弱点：动词时态')
   assert.equal(tasks[1].title, '极限计算 · 基础概念与高频题')
   assert.equal(tasks.every(task => task.duration > 0), true)
+})
+
+test('buildDailyTasks only schedules review items when their review date is due', () => {
+  const tasks = buildDailyTasks({
+    currentStage: 2,
+    weekdayHours: 2,
+    weekendHours: 4,
+    date: '2026-07-06',
+    reviewQueue: [
+      { key: '英语:动词时态', subject: '英语', knowledgeName: '动词时态', nextReviewDate: '2026-07-07', priority: 120 },
+      { key: '政治:哲学', subject: '政治', knowledgeName: '哲学', nextReviewDate: '2026-07-06', priority: 90 },
+    ],
+    focusPoints: [{ subject: '高等数学（一）', name: '极限计算', mastery: 20, reason: '掌握度 20%' }],
+    subjectTargets: [],
+  })
+
+  assert.equal(tasks[0].title, '复习薄弱点：哲学')
+  assert.equal(tasks.some(task => task.title.includes('动词时态')), false)
+})
+
+test('advanceReviewItem delays review and marks item mastered after three successful rounds', () => {
+  const first = advanceReviewItem({
+    key: '英语:动词时态',
+    subject: '英语',
+    knowledgeName: '动词时态',
+    masteryHits: 0,
+    priority: 120,
+  }, { date: '2026-07-06', passed: true })
+  const second = advanceReviewItem(first, { date: '2026-07-07', passed: true })
+  const third = advanceReviewItem(second, { date: '2026-07-10', passed: true })
+
+  assert.equal(first.masteryHits, 1)
+  assert.equal(first.nextReviewDate, '2026-07-07')
+  assert.equal(second.nextReviewDate, '2026-07-10')
+  assert.equal(third.mastered, true)
+})
+
+test('resolveTaskMode switches into sprint style near the exam date', () => {
+  assert.equal(resolveTaskMode({ currentStage: 1, daysUntilExam: 112 }).taskStage, 1)
+  assert.equal(resolveTaskMode({ currentStage: 1, daysUntilExam: 45 }).taskStage, 3)
+  assert.equal(resolveTaskMode({ currentStage: 2, daysUntilExam: 20 }).taskStage, 4)
 })
 
 test('getExamDate keeps the target day before the final October weekend buffer', () => {

@@ -3,12 +3,23 @@ import { defineStore } from 'pinia'
 import { institutions as mvpInstitutions, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
 import { examMajors, normalizeMajorCodes, subjectsForCategory } from '../data/majors'
 import { getProvinces, getInstitutions } from '../api'
-import { getExamDate, buildMilestones, buildDailyTasks, buildStageFocusPlan, buildWeaknessBacklog, fmtDate } from '../data/planner'
-import { isCityInProvince } from '../data/regions'
+import {
+  advanceReviewItem,
+  buildDailyTasks,
+  buildMilestones,
+  buildStageFocusPlan,
+  buildWeaknessBacklog,
+  fmtDate,
+  getExamDate,
+  normalizeReviewQueue,
+  resolveTaskMode,
+  reviewKeyFor,
+} from '../data/planner'
+import { isCityInProvince, matchesCityPreference } from '../data/regions'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
 const DIAGNOSTIC_VERSION = 'docs-json-question-bank-v1'
-const PLAN_TASK_VERSION = 'diagnostic-route-v2'
+const PLAN_TASK_VERSION = 'diagnostic-route-v3'
 
 function getDefaultYear() {
   const now = new Date()
@@ -72,7 +83,7 @@ export const useApplicationStore = defineStore('application', () => {
   // 今天的任务是哪一天生成的（用于「每天自动刷新当日任务」）
   const tasksDate = ref(saved.tasksDate || null)
   // 复习队列：阶段测试沉淀的薄弱知识点，会被插入每日任务（动态纠偏）
-  const reviewQueue = ref(saved.reviewQueue || [])
+  const reviewQueue = ref(normalizeReviewQueue(saved.reviewQueue || [], fmtDate(new Date())))
 
   // 报考专业列表（成考专升本常见专业，含所属科类）。统考科目由科类决定。
   const majorOptions = ref(examMajors)
@@ -105,7 +116,7 @@ export const useApplicationStore = defineStore('application', () => {
     return institutions.value
       .filter(item => {
         if (!profile.value.provinces.includes(item.province)) return false
-        if (cities.length && !cities.includes(item.city)) return false
+        if (!matchesCityPreference(item, cities)) return false
         if (item.majorMatch === 'exact') return (item.majors || []).includes(profile.value.majorCode)
         const cats = (item.scores || []).map(s => s.majorCategory).filter(Boolean)
         if (cats.length) return cats.includes(category)
@@ -239,6 +250,20 @@ export const useApplicationStore = defineStore('application', () => {
     currentStage: currentStage.value,
     today: fmtDate(new Date())
   }))
+  const planMode = computed(() => resolveTaskMode({
+    currentStage: currentStage.value,
+    daysUntilExam: daysUntilExam.value
+  }))
+  const dueReviewQueue = computed(() => {
+    const today = fmtDate(new Date())
+    return normalizeReviewQueue(reviewQueue.value, today).filter(item => !item.nextReviewDate || item.nextReviewDate <= today)
+  })
+  const reviewStats = computed(() => ({
+    total: reviewQueue.value.length,
+    due: dueReviewQueue.value.length,
+    scheduled: Math.max(0, reviewQueue.value.length - dueReviewQueue.value.length),
+    stabilized: reviewQueue.value.filter(item => Number(item.masteryHits || 0) > 0).length,
+  }))
 
   // 目标分可行性：用「分差所需有效学时」对比「到目标考期的可用学时」。
   // 所需学时沿用 estimatedWeeks 的口径（分差×2.1 + 60），保证两处数字一致。
@@ -345,22 +370,90 @@ export const useApplicationStore = defineStore('application', () => {
   function toggleTask(taskId) {
     const task = tasks.value.find(item => item.id === taskId)
     if (!task) return
+    const wasDone = task.done
     task.done = !task.done
-    // 完成的是复习任务：从复习队列移除，避免明天再次出现。
-    if (task.done && task.reviewKey) {
-      reviewQueue.value = reviewQueue.value.filter(item => item.knowledgeName !== task.reviewKey)
+    // 完成的是复习任务：连续掌握会降权、延后复习；稳定 3 轮后从队列移除。
+    if (!wasDone && task.done && task.reviewKey) {
+      markReviewPassed(task.reviewKey)
     }
   }
 
-  // 把薄弱知识点加入复习队列（去重）。
-  function addReviews(points) {
-    const existing = new Set(reviewQueue.value.map(item => item.knowledgeName))
+  function upsertReviews(points, options = {}) {
+    const date = options.date || fmtDate(new Date())
+    const nextReviewDate = options.nextReviewDate || date
+    const map = new Map(normalizeReviewQueue(reviewQueue.value, date).map(item => [item.key, item]))
     points.forEach(point => {
-      if (point.knowledgeName && !existing.has(point.knowledgeName)) {
-        reviewQueue.value.push({ subject: point.subject, knowledgeName: point.knowledgeName, addedStage: currentStage.value })
-        existing.add(point.knowledgeName)
-      }
+      const knowledgeName = point.knowledgeName || point.name
+      if (!knowledgeName) return
+      const key = reviewKeyFor({ subject: point.subject, knowledgeName })
+      const existing = map.get(key)
+      map.set(key, {
+        ...existing,
+        key,
+        subject: point.subject,
+        knowledgeName,
+        source: options.source || existing?.source || 'stage-test',
+        addedStage: existing?.addedStage ?? currentStage.value,
+        addedDate: existing?.addedDate || date,
+        nextReviewDate,
+        masteryHits: options.resetMastery ? 0 : existing?.masteryHits || 0,
+        priority: Math.min(140, Math.max(existing?.priority || 0, options.priority || 100)),
+        lastResult: options.resetMastery ? 'wrong' : existing?.lastResult || null,
+      })
     })
+    reviewQueue.value = normalizeReviewQueue([...map.values()], date)
+  }
+
+  // 把薄弱知识点加入复习队列（去重）。
+  function addReviews(points, options = {}) {
+    upsertReviews(points, options)
+  }
+
+  function markReviewPassed(reviewKey, date = fmtDate(new Date())) {
+    const normalized = normalizeReviewQueue(reviewQueue.value, date)
+    reviewQueue.value = normalized.flatMap(item => {
+      const matches = item.key === reviewKey || item.knowledgeName === reviewKey
+      if (!matches) return [item]
+      const next = advanceReviewItem(item, { date, passed: true })
+      return next.mastered ? [] : [next]
+    })
+  }
+
+  function reconcileStageTestReviews({ weakPoints = [], testedPoints = [] }, date = fmtDate(new Date())) {
+    const wrongKeys = new Set(weakPoints.map(point => reviewKeyFor(point)))
+    const tomorrow = fmtDate(new Date(new Date(date).getTime() + 86400000))
+    if (weakPoints.length) {
+      addReviews(weakPoints, {
+        date,
+        nextReviewDate: tomorrow,
+        source: 'stage-test',
+        priority: 125,
+        resetMastery: true,
+      })
+    }
+    let stabilizedCount = 0
+    if (!testedPoints.length) {
+      return {
+        queuedReviewCount: weakPoints.length,
+        stabilizedReviewCount: 0,
+        nextReviewDate: weakPoints.length ? tomorrow : null,
+      }
+    }
+    const testedKeys = new Set(testedPoints.map(point => reviewKeyFor(point)))
+    reviewQueue.value = normalizeReviewQueue(reviewQueue.value, date).flatMap(item => {
+      if (!testedKeys.has(item.key) || wrongKeys.has(item.key)) return [item]
+      const next = advanceReviewItem(item, { date, passed: true })
+      if (next.mastered) {
+        stabilizedCount += 1
+        return []
+      }
+      return [next]
+    })
+    return {
+      queuedReviewCount: weakPoints.length,
+      stabilizedReviewCount: stabilizedCount,
+      nextReviewDate: weakPoints.length ? tomorrow : null,
+    }
   }
 
   // 重新生成「今天」的任务（计划模式）。
@@ -373,7 +466,8 @@ export const useApplicationStore = defineStore('application', () => {
       weekendHours: profile.value.weekendHours,
       reviewQueue: reviewQueue.value,
       focusPoints: currentStageFocus.value?.focusPoints || [],
-      date: today
+      date: today,
+      daysUntilExam: daysUntilExam.value
     })
     tasksDate.value = today
     tasksVersion.value = PLAN_TASK_VERSION
@@ -398,14 +492,15 @@ export const useApplicationStore = defineStore('application', () => {
       passed,
       date: new Date().toISOString().slice(0, 10)
     })
-    // 动态纠偏：把本次测试答错的知识点加入复习队列。
-    if (Array.isArray(result.weakPoints) && result.weakPoints.length) {
-      addReviews(result.weakPoints)
-    }
+    // 动态纠偏：错题进入明日复习队列；已连续掌握的旧错题自动降权或移出。
+    const reviewUpdate = reconcileStageTestReviews({
+      weakPoints: Array.isArray(result.weakPoints) ? result.weakPoints : [],
+      testedPoints: Array.isArray(result.testedPoints) ? result.testedPoints : [],
+    }) || { queuedReviewCount: 0, stabilizedReviewCount: 0, nextReviewDate: null }
     if (passed && currentStage.value < 4) currentStage.value += 1
     // 立即重排当日任务，让复习项 / 新阶段任务马上生效。
     if (profile.value.mode === 'plan') regenerateTasks()
-    return { passed, threshold }
+    return { passed, threshold, ...reviewUpdate }
   }
 
   function advanceStage() {
@@ -428,7 +523,7 @@ export const useApplicationStore = defineStore('application', () => {
     else if (Array.isArray(blob.tasks)) tasksVersion.value = null
     if (Array.isArray(blob.stageTests)) stageTests.value = blob.stageTests
     if ('tasksDate' in blob) tasksDate.value = blob.tasksDate
-    if (Array.isArray(blob.reviewQueue)) reviewQueue.value = blob.reviewQueue
+    if (Array.isArray(blob.reviewQueue)) reviewQueue.value = normalizeReviewQueue(blob.reviewQueue, fmtDate(new Date()))
   }
 
   // 退出登录时把本地状态恢复成默认值，避免下个账号看到上个账号的数据。
@@ -502,6 +597,9 @@ export const useApplicationStore = defineStore('application', () => {
     examDate,
     daysUntilExam,
     planMilestones,
+    planMode,
+    dueReviewQueue,
+    reviewStats,
     feasibility,
     updateProfile,
     selectInstitution,
@@ -511,6 +609,7 @@ export const useApplicationStore = defineStore('application', () => {
     resetDiagnostic,
     toggleTask,
     addReviews,
+    markReviewPassed,
     regenerateTasks,
     ensureTodayTasks,
     submitStageTest,
