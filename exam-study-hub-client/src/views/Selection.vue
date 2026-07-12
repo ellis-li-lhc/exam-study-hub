@@ -73,6 +73,7 @@
 <script setup>
 import { computed, reactive, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import { useApplicationStore } from '../stores/application'
 import {
   OUTSIDE_PROVINCE_CITY,
@@ -121,7 +122,45 @@ const majorGroups = computed(() => CATEGORY_ORDER
   .map(category => ({ category, majors: store.majorOptions.filter(item => item.category === category) }))
   .filter(group => group.majors.length))
 const selectedDraftMajor = computed(() => store.majorOptions.find(item => item.code === draft.majorCode))
-function saveAndContinue(){ store.updateProfile(draft); router.push('/schools') }
+
+async function saveAndContinue() {
+  const majorChanged = draft.majorCode !== store.profile.majorCode
+  let majorChangeStrategy = null
+
+  if (majorChanged && store.hasLearningProgress) {
+    try {
+      await ElMessageBox.confirm(
+        '更换专业会改变统考科目，入学诊断需要重做。\n\n「保留学习进度」：阶段、复习队列、历史测试保留，任务将按新诊断重排。\n「全部重来」：阶段回到 1，清空测试与复习记录。',
+        '确认更换专业',
+        {
+          distinguishCancelAndClose: true,
+          confirmButtonText: '保留学习进度',
+          cancelButtonText: '全部重来',
+          type: 'warning',
+        }
+      )
+      majorChangeStrategy = 'keep-progress'
+    } catch (action) {
+      if (action === 'cancel') {
+        majorChangeStrategy = 'full-reset'
+      } else {
+        return
+      }
+    }
+  } else if (majorChanged) {
+    majorChangeStrategy = 'keep-progress'
+  }
+
+  store.updateProfile(draft, { majorChangeStrategy })
+  if (majorChanged) {
+    ElMessage.success(
+      majorChangeStrategy === 'full-reset'
+        ? '专业已更新，诊断与学习进度已全部重置'
+        : '专业已更新，请重新完成入学诊断'
+    )
+  }
+  router.push('/schools')
+}
 </script>
 
 <style scoped lang="less" src="../styles/views/Selection.less"></style>

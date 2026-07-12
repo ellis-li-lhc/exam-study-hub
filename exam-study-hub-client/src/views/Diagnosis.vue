@@ -276,7 +276,7 @@
 
 <script setup>
 import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 import { useRouter } from 'vue-router'
 import { fetchDiagnosticGroups } from '../data/diagnostic-questions'
 import { useApplicationStore } from '../stores/application'
@@ -504,13 +504,39 @@ function resetSubject(subject) {  const subjectGroups = groupsBySubject(subject)
   ElMessage.success(`${subject}已重置，可以重新测试`)
 }
 
-function restart() {
-  store.resetDiagnostic()
+async function restart() {
+  let resetPlan = false
+  if (store.hasLearningProgress) {
+    try {
+      await ElMessageBox.confirm(
+        '重新诊断会更新基础分与薄弱项。\n\n「只更新基线」：保留当前阶段、复习队列与历史测试，任务按新诊断重排。\n「诊断并重排计划」：阶段回到 1，清空测试与复习记录。',
+        '重新诊断',
+        {
+          distinguishCancelAndClose: true,
+          confirmButtonText: '只更新基线',
+          cancelButtonText: '诊断并重排计划',
+          type: 'warning',
+        }
+      )
+      resetPlan = false
+    } catch (action) {
+      if (action === 'cancel') {
+        resetPlan = true
+      } else {
+        return
+      }
+    }
+  }
+
+  store.resetDiagnostic({ resetPlan })
   Object.keys(answers).forEach(key => delete answers[key])
+  Object.keys(activeResultGroupIds).forEach(key => delete activeResultGroupIds[key])
   activeSubject.value = subjects.value[0] || '政治'
   activeResultSubject.value = subjects.value[0] || '政治'
-  activeGroupId.value = ''
-  window.location.reload()
+  activeGroupId.value = groups.value.find(g => g.subject === activeSubject.value)?.id || ''
+  elapsedSeconds.value = 0
+  ElMessage.success(resetPlan ? '已重置诊断与学习进度，请重新作答' : '已重置诊断基线，请重新作答')
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 </script>
 

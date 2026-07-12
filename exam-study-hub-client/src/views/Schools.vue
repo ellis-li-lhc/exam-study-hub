@@ -32,7 +32,7 @@
             <span v-for="check in qualityProfile(school).checks" :key="check.key" class="quality-check" :class="{ ok: check.ok }">{{ check.label }}</span>
           </div>
         </article>
-        <el-empty v-if="store.filteredInstitutions.length === 0" :description="cityText ? `所选所在地偏好（${cityText}）暂无该科类招生院校，试试取消所在地筛选或勾选省外院校` : '所选省份暂无该类别的招生院校数据'" />
+        <el-empty v-if="store.filteredInstitutions.length === 0" :description="emptySchoolsText" />
       </div>
 
       <aside class="compare-panel" v-if="selected">
@@ -76,6 +76,13 @@ const router=useRouter();const store=useApplicationStore();const selected=comput
 const provinceText=computed(()=>store.selectedProvinces.map(item=>item.label).join('、'))
 const cityText=computed(()=>(store.profile.cities||[]).map(cityPreferenceLabel).join('、'))
 const provinceName=code=>store.provinceOptions.find(item=>item.value===code)?.label
+const emptySchoolsText=computed(()=>{
+  if (store.institutionsError) return '院校数据加载失败，请刷新页面或稍后重试'
+  if (!store.institutionsLoaded) return '正在加载院校数据…'
+  if (!store.institutions.length) return '暂无院校数据，请确认后端服务与数据种子是否就绪'
+  if (cityText.value) return `所选所在地偏好（${cityText.value}）暂无该科类招生院校，试试取消所在地筛选或勾选省外院校`
+  return '所选省份暂无该类别的招生院校数据'
+})
 const maxScore=computed(()=>Math.max(120,...(selected.value?.scores||[]).map(s=>s.score||0)))
 const barWidth=score=>`${Math.min(100,Math.round((score||0)/maxScore.value*100))}%`
 const matchStats=computed(() => store.filteredInstitutions.reduce((stats, school) => {

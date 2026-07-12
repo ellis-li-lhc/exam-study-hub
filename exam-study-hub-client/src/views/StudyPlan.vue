@@ -90,7 +90,11 @@
         <div class="test-intro">
           <div><strong>{{ answeredTestCount }}/{{ stageQuestions.length }}</strong><span>已完成</span></div>
           <el-progress :percentage="testProgress" :stroke-width="9" :show-text="false" />
-          <p>题目来自本阶段相关知识点，系统将按正确率自动判分。</p>
+          <p>
+            达标线 {{ currentThreshold }}%。
+            <template v-if="coveragePreview.length">本题重点覆盖：{{ coveragePreview.join('、') }}。</template>
+            <template v-else>题目来自本阶段相关知识点，系统将按正确率自动判分。</template>
+          </p>
         </div>
 
         <el-empty v-if="!hasStageQuestions" description="当前科目题库暂不可用，请稍后再试或先继续复习" :image-size="72" />
@@ -110,9 +114,24 @@
         <h3>{{ testResult.passed ? '本阶段已达标' : '建议先补一次薄弱知识点' }}</h3>
         <p>答对 {{ testResult.correctCount }}/{{ testResult.totalQuestions }} 题，正确率 {{ testResult.accuracy }}%，本阶段标准为 {{ testResult.threshold }}%。</p>
         <div class="auto-score"><span><small>系统折算分</small><strong>{{ testResult.score }}</strong></span><span><small>薄弱知识点</small><strong>{{ testResult.weakKnowledge || '暂无明显薄弱项' }}</strong></span></div>
+
+        <div v-if="testResult.knowledgeCoverage?.length" class="coverage-panel">
+          <small>本次覆盖知识点</small>
+          <div class="coverage-list">
+            <span
+              v-for="item in testResult.knowledgeCoverage"
+              :key="`${item.subject}-${item.knowledgeName}`"
+              :class="item.wrong ? 'has-wrong' : 'all-correct'"
+            >
+              <b>{{ item.subject }}</b>{{ item.knowledgeName }}
+              <em>{{ item.correct }}/{{ item.total }}</em>
+            </span>
+          </div>
+        </div>
+
         <el-alert v-if="testResult.queuedReviewCount" :title="`${testResult.queuedReviewCount} 个错题知识点已进入 ${testResult.nextReviewDate} 复习；连续掌握 3 轮后会自动降权移出。`" type="info" show-icon :closable="false" />
         <el-alert v-if="testResult.stabilizedReviewCount" :title="`${testResult.stabilizedReviewCount} 个旧错题已连续掌握，已从复习队列移出。`" type="success" show-icon :closable="false" />
-        <el-alert v-if="!testResult.passed" title="你可以关闭测试继续复习，也可以忽略建议进入下一阶段。" type="warning" show-icon :closable="false" />
+        <el-alert v-if="!testResult.passed" title="你可以关闭测试继续复习。若选择仍进入下一阶段，将标记为「未达标晋级」，复习队列会保留。" type="warning" show-icon :closable="false" />
       </div>
 
       <template #footer>
@@ -126,7 +145,9 @@
 
 <script setup>
 import { computed, onMounted, reactive, ref } from 'vue'
+import { ElMessageBox } from 'element-plus'
 import { fetchDiagnosticGroups } from '../data/diagnostic-questions'
+import { buildStageQuestions, stageThreshold, summarizeStageCoverage } from '../data/stageTest'
 import { useApplicationStore } from '../stores/application'
 
 const store = useApplicationStore()
@@ -147,13 +168,10 @@ const statusType = status => ({ completed: 'success', active: 'primary', pending
 const currentStageName = computed(() => store.stages.find(stage => stage.id === testingStage.value)?.name || '')
 const topWeaknesses = computed(() => store.weaknessBacklog.slice(0, 5))
 const testingStageFocus = computed(() => store.stageFocusPlan.find(stage => stage.id === testingStage.value))
+const currentThreshold = computed(() => stageThreshold(testingStage.value))
 
-// 自主模式的建议学习顺序：各科知识点按掌握度从低到高排序，取最弱的若干个。
-const selfOrder = computed(() => {
-  return store.weaknessBacklog.slice(0, 8)
-})
+const selfOrder = computed(() => store.weaknessBacklog.slice(0, 8))
 
-// 计划模式：把当日任务按科目分组，并按专业的科目顺序排列。
 const tasksBySubject = computed(() => {
   const order = store.selectedMajor?.subjects || []
   const map = new Map()
@@ -173,36 +191,28 @@ const tasksBySubject = computed(() => {
   })
 })
 
-const focusedQuestionGroups = computed(() => {
-  const points = testingStageFocus.value?.focusPoints || []
-  return points.map(point => allGroups.value.find(group =>
-    group.subject === point.subject &&
-    (String(group.id) === String(point.id) || group.name === point.name)
-  )).filter(Boolean)
-})
+const stageQuestions = computed(() => buildStageQuestions({
+  stageId: testingStage.value,
+  focusPoints: testingStageFocus.value?.focusPoints || [],
+  weaknessBacklog: store.weaknessBacklog,
+  groups: allGroups.value,
+  subjects: store.selectedMajor?.subjects || [],
+  answerDetails: store.diagnostic.answerDetails || [],
+  limit: 8,
+  perKnowledge: 2,
+}))
 
-const stageQuestions = computed(() => {
-  const focusGroups = focusedQuestionGroups.value.filter(group => group.questions?.length)
-  if (focusGroups.length) {
-    return focusGroups
-      .flatMap(group => group.questions.slice(0, 2).map(question => ({ ...question, subject: group.subject, knowledgeName: group.name })))
-      .slice(0, 8)
-  }
-  const subjects = store.selectedMajor?.subjects || []
-  const groups = allGroups.value
-  return subjects.flatMap(subject => {
-    const subjectGroups = groups.filter(group => group.subject === subject)
-    if (!subjectGroups.length) return []
-    const selectedGroup = testingStage.value === 1
-      ? subjectGroups[0]
-      : testingStage.value === 2
-        ? subjectGroups[1] || subjectGroups[0]
-        : null
-    const questions = selectedGroup
-      ? selectedGroup.questions.slice(0, 2).map(question => ({ ...question, subject, knowledgeName: selectedGroup.name }))
-      : subjectGroups.flatMap(group => group.questions.slice(0, 1).map(question => ({ ...question, subject, knowledgeName: group.name }))).slice(0, 2)
-    return questions
+const coveragePreview = computed(() => {
+  const names = []
+  const seen = new Set()
+  stageQuestions.value.forEach(q => {
+    const label = `${q.subject}·${q.knowledgeName}`
+    if (!seen.has(label)) {
+      seen.add(label)
+      names.push(label)
+    }
   })
+  return names.slice(0, 6)
 })
 
 const answeredTestCount = computed(() => stageQuestions.value.filter(question => testAnswers[question.id] !== undefined).length)
@@ -226,7 +236,7 @@ function submitTest() {
   const wrongKnowledge = wrongQuestions
     .reduce((counts, question) => ({ ...counts, [question.knowledgeName]: (counts[question.knowledgeName] || 0) + 1 }), {})
   const weakKnowledge = Object.entries(wrongKnowledge).sort((a, b) => b[1] - a[1])[0]?.[0] || ''
-  // 答错知识点去重后作为复习项传给 store（动态纠偏）
+
   const seen = new Set()
   const weakPoints = []
   const testedSeen = new Set()
@@ -245,13 +255,45 @@ function submitTest() {
       weakPoints.push({ subject: question.subject, knowledgeName: question.knowledgeName })
     }
   })
+
+  const knowledgeCoverage = summarizeStageCoverage(stageQuestions.value, testAnswers)
   const score = Math.round(accuracy / 100 * 450)
-  const result = store.submitStageTest({ score, accuracy, correctCount, totalQuestions, weakKnowledge, weakPoints, testedPoints })
-  testResult.value = { ...result, score, accuracy, correctCount, totalQuestions, weakKnowledge }
+  const result = store.submitStageTest({
+    score,
+    accuracy,
+    correctCount,
+    totalQuestions,
+    weakKnowledge,
+    weakPoints,
+    testedPoints,
+    knowledgeCoverage,
+  })
+  testResult.value = {
+    ...result,
+    score,
+    accuracy,
+    correctCount,
+    totalQuestions,
+    weakKnowledge,
+    knowledgeCoverage,
+  }
 }
 
-function continueAnyway() {
-  store.advanceStage()
+async function continueAnyway() {
+  try {
+    await ElMessageBox.confirm(
+      `正确率未达本阶段标准（${testResult.value?.threshold ?? currentThreshold.value}%）。仍进入下一阶段将标记为「未达标晋级」，复习队列会保留。是否继续？`,
+      '确认未达标晋级',
+      {
+        confirmButtonText: '仍进入下一阶段',
+        cancelButtonText: '取消',
+        type: 'warning',
+      }
+    )
+  } catch {
+    return
+  }
+  store.advanceStage({ withoutPass: true })
   testDialog.value = false
 }
 </script>

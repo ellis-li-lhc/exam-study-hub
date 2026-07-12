@@ -1,6 +1,7 @@
 import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
-import { institutions as mvpInstitutions, provinceOptions as mvpProvinces, stageTemplates, todayTasks } from '../data/mvp'
+import { ElMessage } from 'element-plus'
+import { provinceOptions as mvpProvinces, stageTemplates } from '../data/mvp'
 import { examMajors, normalizeMajorCodes, subjectsForCategory } from '../data/majors'
 import { getProvinces, getInstitutions } from '../api'
 import {
@@ -38,10 +39,10 @@ function createDefaultDiagnostic() {
   return {
     version: DIAGNOSTIC_VERSION,
     completed: false,
-    subjectScores: { '政治': 42, '英语': 28, '高等数学（二）': 22 },
-    knowledge: 34,
-    speed: 46,
-    mistakeType: '基础概念不牢',
+    subjectScores: {},
+    knowledge: 0,
+    speed: 0,
+    mistakeType: '',
     weeklyHours: 18,
     answers: {},
     submittedSubjects: [],
@@ -77,7 +78,8 @@ export const useApplicationStore = defineStore('application', () => {
   const selectedInstitutionCode = ref(saved.selectedInstitutionCode || null)
   const diagnostic = ref(saved.diagnostic?.version === DIAGNOSTIC_VERSION ? saved.diagnostic : createDefaultDiagnostic())
   const currentStage = ref(saved.currentStage || 1)
-  const tasks = ref(saved.tasks || todayTasks)
+  // 任务由诊断 + 计划生成；不再预置演示勾选清单
+  const tasks = ref(Array.isArray(saved.tasks) ? saved.tasks : [])
   const tasksVersion = ref(saved.tasksVersion || null)
   const stageTests = ref(saved.stageTests || [])
   // 今天的任务是哪一天生成的（用于「每天自动刷新当日任务」）
@@ -87,13 +89,15 @@ export const useApplicationStore = defineStore('application', () => {
 
   // 报考专业列表（成考专升本常见专业，含所属科类）。统考科目由科类决定。
   const majorOptions = ref(examMajors)
-  // 省份列表：同样本地兜底，loadProvinces() 用后端数据替换。
+  // 省份：接口成功后替换；失败时保留苏/豫最小兜底，保证档案页可选
   const provinceOptions = ref(mvpProvinces)
-  // 院校列表：本地兜底，loadInstitutions() 用后端数据替换。
-  const institutions = ref(mvpInstitutions)
+  // 院校：仅来自后端，初始为空（不再使用示例院校 mock）
+  const institutions = ref([])
+  const institutionsLoaded = ref(false)
+  const institutionsError = ref(null)
 
   // 取某院校对应「选中专业科类」的投档线，归一成 [{year, score}]。
-  // 后端数据每条 score 带 majorCategory；mvp 兜底数据没有该字段，直接用。
+  // 后端数据每条 score 带 majorCategory；无该字段时用整表 scores。
   function relevantScores(item, category) {
     const list = item.scores || []
     const tagged = list.filter(s => s.majorCategory != null)
@@ -287,15 +291,34 @@ export const useApplicationStore = defineStore('application', () => {
     }
   })
 
-  function updateProfile(nextProfile) {
+  // majorChangeStrategy:
+  // - null / 未换专业：只更新档案
+  // - 'keep-progress'：清诊断，保留阶段 / 复习队列 / 测试记录
+  // - 'full-reset'：诊断 + 学习进度全部重来
+  function updateProfile(nextProfile, { majorChangeStrategy = null } = {}) {
     const majorChanged = profile.value.majorCode !== nextProfile.majorCode
     profile.value = { ...profile.value, ...nextProfile }
     if (majorChanged || !filteredInstitutions.value.some(item => item.code === selectedInstitutionCode.value)) {
       selectedInstitutionCode.value = null
     }
     syncDiagnosticSubjects()
-    if (majorChanged) resetDiagnostic()
+    if (majorChanged) {
+      if (majorChangeStrategy === 'full-reset') {
+        resetDiagnostic({ resetPlan: true })
+      } else {
+        // keep-progress（默认）或未指定：只重做诊断基线
+        resetDiagnostic({ resetPlan: false })
+      }
+    }
   }
+
+  // 是否已有值得保护的学习进度（用于改专业 / 重诊前决定是否弹确认）
+  const hasLearningProgress = computed(() =>
+    diagnostic.value.completed ||
+    currentStage.value > 1 ||
+    stageTests.value.length > 0 ||
+    reviewQueue.value.length > 0
+  )
 
   function selectInstitution(code) {
     selectedInstitutionCode.value = filteredInstitutions.value.some(item => item.code === code) ? code : null
@@ -305,17 +328,20 @@ export const useApplicationStore = defineStore('application', () => {
   async function loadProvinces() {
     try {
       const data = await getProvinces()
-      provinceOptions.value = data.map(item => ({ value: item.code, label: item.name, note: item.note }))
+      if (Array.isArray(data) && data.length) {
+        provinceOptions.value = data.map(item => ({ value: item.code, label: item.name, note: item.note }))
+      }
     } catch (error) {
-      console.warn('加载省份列表失败，已使用本地兜底数据', error)
+      console.warn('加载省份列表失败，已使用本地苏/豫兜底', error)
     }
   }
 
-  // 从后端加载院校列表，映射成前端用的形状。
+  // 从后端加载院校列表，映射成前端用的形状。失败时清空，不回落示例院校。
   async function loadInstitutions() {
+    institutionsError.value = null
     try {
       const data = await getInstitutions()
-      institutions.value = data.map(item => ({
+      institutions.value = (data || []).map(item => ({
         code: item.code,
         name: item.name,
         province: item.province,
@@ -340,15 +366,21 @@ export const useApplicationStore = defineStore('application', () => {
           }))
           .sort((a, b) => a.year - b.year),
       }))
+      institutionsLoaded.value = true
     } catch (error) {
-      console.warn('加载院校列表失败，已使用本地兜底数据', error)
+      institutions.value = []
+      institutionsLoaded.value = true
+      institutionsError.value = error?.message || '加载院校列表失败'
+      console.warn('加载院校列表失败', error)
+      ElMessage.error('院校数据加载失败，请检查网络或稍后重试')
     }
   }
 
   function syncDiagnosticSubjects() {
     const existing = diagnostic.value.subjectScores
+    // 未诊断科目默认 0，不再写入占位假分
     diagnostic.value.subjectScores = Object.fromEntries(
-      (selectedMajor.value?.subjects || []).map(subject => [subject, existing[subject] ?? 25])
+      (selectedMajor.value?.subjects || []).map(subject => [subject, existing[subject] ?? 0])
     )
   }
 
@@ -357,13 +389,26 @@ export const useApplicationStore = defineStore('application', () => {
     tasksVersion.value = null
   }
 
-  function resetDiagnostic() {
+  // 清空阶段 / 测试记录 / 复习队列 / 当日任务（不改档案与院校）
+  function resetLearningProgress() {
+    currentStage.value = 1
+    stageTests.value = []
+    reviewQueue.value = []
+    tasks.value = []
+    tasksDate.value = null
+    tasksVersion.value = null
+  }
+
+  // resetPlan=false：只清诊断基线，任务会在下次 ensureTodayTasks 时按新诊断重生
+  // resetPlan=true：诊断 + 学习进度全部重来
+  function resetDiagnostic({ resetPlan = false } = {}) {
     diagnostic.value = {
       ...createDefaultDiagnostic(),
       completed: false,
       weeklyHours: diagnostic.value.weeklyHours
     }
     tasksVersion.value = null
+    if (resetPlan) resetLearningProgress()
     syncDiagnosticSubjects()
   }
 
@@ -482,32 +527,48 @@ export const useApplicationStore = defineStore('application', () => {
 
   function submitStageTest(result) {
     const thresholds = { 1: 65, 2: 75, 3: 75, 4: 80 }
-    const threshold = thresholds[currentStage.value]
+    const stageAtTest = currentStage.value
+    const threshold = thresholds[stageAtTest]
     const accuracy = Number(result.accuracy || 0)
     const passed = accuracy >= threshold
+    // 剥离不应直接摊进记录的字段，再写入
+    const { weakPoints, testedPoints, knowledgeCoverage, ...recordFields } = result
     stageTests.value.push({
-      stage: currentStage.value,
-      ...result,
+      stage: stageAtTest,
+      ...recordFields,
+      weakPoints: Array.isArray(weakPoints) ? weakPoints : [],
+      testedPoints: Array.isArray(testedPoints) ? testedPoints : [],
+      knowledgeCoverage: Array.isArray(knowledgeCoverage) ? knowledgeCoverage : [],
       threshold,
       passed,
+      advancedWithoutPass: false,
       date: new Date().toISOString().slice(0, 10)
     })
     // 动态纠偏：错题进入明日复习队列；已连续掌握的旧错题自动降权或移出。
     const reviewUpdate = reconcileStageTestReviews({
-      weakPoints: Array.isArray(result.weakPoints) ? result.weakPoints : [],
-      testedPoints: Array.isArray(result.testedPoints) ? result.testedPoints : [],
+      weakPoints: Array.isArray(weakPoints) ? weakPoints : [],
+      testedPoints: Array.isArray(testedPoints) ? testedPoints : [],
     }) || { queuedReviewCount: 0, stabilizedReviewCount: 0, nextReviewDate: null }
     if (passed && currentStage.value < 4) currentStage.value += 1
     // 立即重排当日任务，让复习项 / 新阶段任务马上生效。
     if (profile.value.mode === 'plan') regenerateTasks()
-    return { passed, threshold, ...reviewUpdate }
+    return { passed, threshold, stage: stageAtTest, ...reviewUpdate }
   }
 
-  function advanceStage() {
-    if (currentStage.value < 4) {
-      currentStage.value += 1
-      if (profile.value.mode === 'plan') regenerateTasks()
+  // 未达标仍晋级：标记最近一次本阶段测试为 advancedWithoutPass
+  function advanceStage({ withoutPass = false } = {}) {
+    if (currentStage.value >= 4) return
+    if (withoutPass) {
+      for (let i = stageTests.value.length - 1; i >= 0; i -= 1) {
+        const item = stageTests.value[i]
+        if (item.stage === currentStage.value && !item.passed) {
+          stageTests.value[i] = { ...item, advancedWithoutPass: true }
+          break
+        }
+      }
     }
+    currentStage.value += 1
+    if (profile.value.mode === 'plan') regenerateTasks()
   }
 
   // —— 云端同步用 ——
@@ -541,11 +602,14 @@ export const useApplicationStore = defineStore('application', () => {
     selectedInstitutionCode.value = null
     diagnostic.value = createDefaultDiagnostic()
     currentStage.value = 1
-    tasks.value = todayTasks
+    tasks.value = []
     tasksVersion.value = null
     stageTests.value = []
     tasksDate.value = null
     reviewQueue.value = []
+    institutions.value = []
+    institutionsLoaded.value = false
+    institutionsError.value = null
   }
 
   watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, tasksVersion, stageTests, tasksDate, reviewQueue], () => {
@@ -566,6 +630,8 @@ export const useApplicationStore = defineStore('application', () => {
     provinceOptions,
     majorOptions,
     institutions,
+    institutionsLoaded,
+    institutionsError,
     profile,
     selectedInstitutionCode,
     diagnostic,
@@ -581,6 +647,7 @@ export const useApplicationStore = defineStore('application', () => {
     selectedInstitution,
     profileComplete,
     diagnosisComplete,
+    hasLearningProgress,
     currentScore,
     referenceScore,
     targetScore,
@@ -607,6 +674,7 @@ export const useApplicationStore = defineStore('application', () => {
     loadInstitutions,
     completeDiagnostic,
     resetDiagnostic,
+    resetLearningProgress,
     toggleTask,
     addReviews,
     markReviewPassed,

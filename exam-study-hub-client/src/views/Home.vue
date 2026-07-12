@@ -101,7 +101,16 @@ const journey = computed(() => [
   { title: '目标院校', desc: '查看学费、学制与历史分数', path: '/schools', status: store.selectedInstitution ? 'done' : store.profileComplete ? 'active' : 'pending' },
   { title: '入学诊断', desc: '评估基础、速度和错题类型', path: '/diagnosis', status: store.diagnosisComplete ? 'done' : store.selectedInstitution ? 'active' : 'pending' },
   { title: '目标分数', desc: '参考线 + 30 分安全目标', path: '/target', status: store.diagnosisComplete ? 'done' : 'pending' },
-  { title: '学习与纠偏', desc: '四阶段路线和阶段测试', path: '/plan', status: store.overallProgress > 0 ? 'active' : 'pending' }
+  {
+    title: '学习与纠偏',
+    desc: '四阶段路线和阶段测试',
+    path: '/plan',
+    status: !store.diagnosisComplete
+      ? 'pending'
+      : (store.currentStage > 1 || store.stageTests.length > 0 || store.overallProgress > 0)
+        ? 'active'
+        : 'pending'
+  }
 ])
 const completedFlow = computed(() => journey.value.filter(item => item.status === 'done').length)
 </script>

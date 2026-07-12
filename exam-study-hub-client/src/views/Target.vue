@@ -2,7 +2,7 @@
   <div class="target-page page-stack">
     <section class="page-intro"><div><span class="section-kicker">STEP 04</span><h2>目标分不是拍脑袋定的</h2><p>{{ store.selectedInstitution?.name }} · {{ store.selectedMajor?.name }} · {{ store.profile.examYear }} 年参考</p></div><el-button @click="router.push('/diagnosis')"><el-icon><Refresh /></el-icon>重做诊断</el-button></section>
 
-    <el-alert v-if="!store.diagnosisComplete" title="尚未完成诊断，当前分数为示例初始值。建议先完成入学诊断。" type="warning" show-icon :closable="false" />
+    <el-alert v-if="!store.diagnosisComplete" title="尚未完成入学诊断，当前暂无有效基线分。请先完成诊断后再看分科目标与差距。" type="warning" show-icon :closable="false" />
     <section class="score-hero">
       <div class="target-number"><span>建议目标总分</span><strong>{{ store.targetScore }}</strong><small>参考线 {{ store.referenceScore }} + 安全分 30</small></div>
       <div class="score-path"><div><span>当前预估</span><b>{{ store.currentScore }}</b></div><i><span :style="{width:`${currentPercent}%`}"></span></i><div class="align-right"><span>目标分</span><b>{{ store.targetScore }}</b></div><p>还需提升 <strong>{{ store.scoreGap }}</strong> 分，距目标考期 <strong>{{ store.examDate }}</strong> 还有 <strong>{{ store.daysUntilExam }}</strong> 天。</p></div>
