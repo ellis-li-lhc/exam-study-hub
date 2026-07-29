@@ -11,23 +11,35 @@ def get_by_username(db: Session, username: str) -> User | None:
 
 
 def get_by_email(db: Session, email: str) -> User | None:
-    return db.scalars(select(User).where(User.email == email)).first()
+    return db.scalars(select(User).where(User.email == email.strip().lower())).first()
 
 
 def get_by_id(db: Session, user_id: int) -> User | None:
     return db.get(User, user_id)
 
 
-def create_user(db: Session, username: str, password: str, email: str | None = None) -> User:
+def create_user(
+    db: Session,
+    username: str,
+    password: str,
+    email: str | None = None,
+    *,
+    email_verified_at=None,
+    commit: bool = True,
+) -> User:
     """新建用户，密码哈希后入库。"""
     user = User(
         username=username,
-        email=email,
+        email=email.strip().lower() if email else None,
         hashed_password=hash_password(password),
+        email_verified_at=email_verified_at,
     )
     db.add(user)
-    db.commit()
-    db.refresh(user)
+    if commit:
+        db.commit()
+        db.refresh(user)
+    else:
+        db.flush()
     return user
 
 

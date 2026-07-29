@@ -1,5 +1,9 @@
 <template>
-  <el-container class="app-shell">
+  <el-container
+    v-loading.fullscreen.lock="loggingOut"
+    element-loading-text="正在同步并退出…"
+    class="app-shell"
+  >
     <el-aside class="sidebar" width="264px">
       <div class="brand">
         <span class="brand-mark"><el-icon><Reading /></el-icon></span>
@@ -20,7 +24,7 @@
       <nav class="nav-groups" aria-label="主导航">
         <section v-for="group in menuGroups" :key="group.title" class="nav-group">
           <p class="nav-group-title">{{ group.title }}</p>
-          <el-menu :default-active="route.path" router class="nav-menu">
+          <el-menu :key="`${group.title}-${route.path}-${navResetKey}`" :default-active="route.path" class="nav-menu" @select="handleMenuSelect">
             <el-menu-item v-for="item in group.items" :key="item.path" :index="item.path">
               <el-icon><component :is="item.icon" /></el-icon>
               <span>{{ item.title }}</span>
@@ -62,11 +66,12 @@
               <strong>{{ chip.value }}</strong>
             </span>
           </div>
-          <el-dropdown trigger="click" @command="onUserCommand">
+          <el-dropdown trigger="click" :disabled="loggingOut" @command="onUserCommand">
             <span class="user-trigger">
               <el-avatar :size="36">{{ avatarText }}</el-avatar>
-              <span class="user-name">{{ auth.user?.username || '我' }}</span>
-              <el-icon><ArrowDown /></el-icon>
+              <span class="user-name">{{ loggingOut ? '正在退出…' : (auth.user?.username || '我') }}</span>
+              <el-icon v-if="loggingOut" class="is-loading"><Loading /></el-icon>
+              <el-icon v-else><ArrowDown /></el-icon>
             </span>
             <template #dropdown>
               <el-dropdown-menu>
@@ -101,7 +106,7 @@
       <nav class="nav-groups" aria-label="移动端主导航">
         <section v-for="group in menuGroups" :key="group.title" class="nav-group">
           <p class="nav-group-title">{{ group.title }}</p>
-          <el-menu :default-active="route.path" router class="nav-menu" @select="mobileOpen = false">
+          <el-menu :key="`${group.title}-${route.path}-${navResetKey}`" :default-active="route.path" class="nav-menu" @select="handleMenuSelect">
             <el-menu-item v-for="item in group.items" :key="item.path" :index="item.path">
               <el-icon><component :is="item.icon" /></el-icon><span>{{ item.title }}</span>
             </el-menu-item>
@@ -116,6 +121,7 @@
 import { computed, ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessageBox } from 'element-plus'
+import { Loading } from '@element-plus/icons-vue'
 import { useApplicationStore } from '../stores/application'
 import { useAuthStore } from '../stores/auth'
 
@@ -124,6 +130,8 @@ const router = useRouter()
 const store = useApplicationStore()
 const auth = useAuthStore()
 const mobileOpen = ref(false)
+const navResetKey = ref(0)
+const loggingOut = ref(false)
 
 // 进入主框架（已登录）后加载基础数据；这些接口需要登录态。
 onMounted(() => {
@@ -134,15 +142,13 @@ onMounted(() => {
 const avatarText = computed(() => (auth.user?.username || '我').slice(0, 1).toUpperCase())
 
 async function onUserCommand(command) {
-  if (command !== 'logout') return
-  const confirmed = await ElMessageBox.confirm(
-    '退出后本机将清除当前学习数据（云端已保存），确定退出吗？',
-    '退出登录',
-    { confirmButtonText: '退出', cancelButtonText: '取消', type: 'warning' }
-  ).catch(() => false)
-  if (confirmed) {
+  if (command !== 'logout' || loggingOut.value) return
+  loggingOut.value = true
+  try {
     await auth.logoutWithFlush()
-    router.replace('/login')
+    await router.replace('/login')
+  } finally {
+    loggingOut.value = false
   }
 }
 
@@ -159,10 +165,15 @@ const menuGroups = computed(() => {
       ]
     },
     {
-      title: '学习执行',
+      title: '学习规划',
       items: [
         { path: '/plan', title: '学习路线', icon: 'Calendar' },
-        { path: '/progress', title: '学习进度', icon: 'TrendCharts' },
+        { path: '/progress', title: '学习进度', icon: 'TrendCharts' }
+      ]
+    },
+    {
+      title: '科目特训',
+      items: [
         { path: '/english', title: '英语特训', icon: 'Notebook' },
         { path: '/math', title: '数学特训', icon: 'Histogram' },
         { path: '/politics', title: '政治特训', icon: 'Reading' }
@@ -180,6 +191,58 @@ const menuGroups = computed(() => {
   }
   return groups
 })
+
+const guidedRoutes = {
+  profile: {
+    title: '先完成报考档案',
+    message: '专业与院校、入学诊断和学习规划都需要先读取你的报考省份、专业和学习方式。完善档案后即可继续。',
+    confirmButtonText: '去完善档案',
+    path: '/profile'
+  },
+  institution: {
+    title: '先选择目标院校',
+    message: '入学诊断、目标分分析和学习规划需要先确定目标院校，系统才能结合对应考试要求继续分析。',
+    confirmButtonText: '去选择院校',
+    path: '/schools'
+  },
+  diagnosis: {
+    title: '先完成入学诊断',
+    message: '完成基础诊断后，系统才能计算目标分差距，并根据薄弱知识点安排学习顺序。',
+    confirmButtonText: '去完成诊断',
+    path: '/diagnosis'
+  }
+}
+
+const profileRequiredPaths = ['/schools', '/diagnosis', '/target', '/plan', '/progress']
+const institutionRequiredPaths = ['/diagnosis', '/target', '/plan', '/progress']
+const diagnosisRequiredPaths = ['/target', '/plan', '/progress']
+
+function getNavigationGuide(path) {
+  if (profileRequiredPaths.includes(path) && !store.profileComplete) return guidedRoutes.profile
+  if (institutionRequiredPaths.includes(path) && !store.selectedInstitutionCode) return guidedRoutes.institution
+  if (diagnosisRequiredPaths.includes(path) && !store.diagnosisComplete) return guidedRoutes.diagnosis
+  return null
+}
+
+async function handleMenuSelect(path) {
+  mobileOpen.value = false
+  const guide = getNavigationGuide(path)
+  if (!guide) {
+    if (route.path !== path) await router.push(path)
+    return
+  }
+
+  const shouldContinue = await ElMessageBox.confirm(guide.message, guide.title, {
+    confirmButtonText: guide.confirmButtonText,
+    cancelButtonText: '暂时不去',
+    type: 'info',
+    autofocus: false,
+    distinguishCancelAndClose: true
+  }).catch(() => false)
+
+  navResetKey.value += 1
+  if (shouldContinue && route.path !== guide.path) await router.push(guide.path)
+}
 
 const provinceLabel = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
 const goalScoreText = computed(() => {

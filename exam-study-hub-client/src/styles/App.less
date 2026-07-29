@@ -1,3 +1,51 @@
 #app {
   min-height: 100vh;
 }
+
+.route-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 9999;
+  height: 3px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.16s ease;
+}
+
+.route-progress span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scaleX(1);
+  transform-origin: left;
+  background: linear-gradient(90deg, #2855bd, #6f92ee, #0f8f6d);
+  box-shadow: 0 1px 8px rgba(40, 85, 189, 0.38);
+  transition: transform 0.18s ease-out;
+}
+
+.route-progress.is-active {
+  opacity: 1;
+}
+
+.route-progress.is-active span {
+  animation: route-progress-loading 4s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+@keyframes route-progress-loading {
+  from { transform: scaleX(0.04); }
+  55% { transform: scaleX(0.68); }
+  to { transform: scaleX(0.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-progress,
+  .route-progress span {
+    transition: none;
+  }
+
+  .route-progress.is-active span {
+    animation: none;
+    transform: scaleX(0.72);
+  }
+}

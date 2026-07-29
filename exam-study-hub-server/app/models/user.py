@@ -17,6 +17,7 @@ class User(Base):
     hashed_password: Mapped[str] = mapped_column(String(255))
     # 角色：'user' 普通用户 / 'admin' 管理员。默认普通用户。
     role: Mapped[str] = mapped_column(String(16), default="user", server_default="user")
+    email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
@@ -51,3 +52,23 @@ class UserState(Base):
     )
 
     user: Mapped["User"] = relationship(back_populates="state")
+
+
+class EmailVerificationCode(Base):
+    """邮箱注册验证码发送记录。
+
+    只保存带服务端密钥的 HMAC 摘要，不保存六位验证码明文。
+    每次发送都留一条记录，便于按邮箱和 IP 做持久化限流。
+    """
+    __tablename__ = "email_verification_codes"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    email: Mapped[str] = mapped_column(String(255), index=True)
+    code_digest: Mapped[str] = mapped_column(String(64))
+    request_ip: Mapped[str] = mapped_column(String(64), index=True)
+    attempts: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    consumed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), index=True
+    )

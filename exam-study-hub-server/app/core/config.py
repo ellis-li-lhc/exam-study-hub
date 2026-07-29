@@ -28,6 +28,16 @@ class Settings(BaseSettings):
     # access token 有效期（分钟）。这里给 7 天，方便个人使用、少频繁登录。
     access_token_expire_minutes: int = 60 * 24 * 7
 
+    # 邮箱注册：Resend 负责发送验证码，Turnstile 负责防止机器人刷接口。
+    resend_api_key: str = ""
+    resend_from_email: str = ""
+    turnstile_secret_key: str = ""
+    email_code_expire_minutes: int = 10
+    email_code_resend_seconds: int = 60
+    email_code_daily_limit: int = 5
+    email_code_ip_hourly_limit: int = 20
+    email_code_max_attempts: int = 5
+
     # @property 让下面这个方法可以像属性一样访问：settings.cors_origin_list
     # 作用：把上面用逗号分隔的字符串，拆成一个列表，方便 CORS 中间件使用。
     @property

@@ -12,6 +12,7 @@ from app.models.catalog import (  # noqa: F401
     Question,
 )
 from app.models.user import (  # noqa: F401
+    EmailVerificationCode,
     User,
     UserState,
 )

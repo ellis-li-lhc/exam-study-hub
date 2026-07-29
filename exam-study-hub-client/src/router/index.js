@@ -2,12 +2,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainLayout from '../layouts/MainLayout.vue'
 import { useApplicationStore } from '../stores/application'
 import { useAuthStore } from '../stores/auth'
+import { finishRouteLoading, startRouteLoading } from './progress'
+
+const loadLogin = () => import('../views/Login.vue')
+const loadHome = () => import('../views/Home.vue')
+const loadProfile = () => import('../views/Selection.vue')
+const loadSchools = () => import('../views/Schools.vue')
+const loadDiagnosis = () => import('../views/Diagnosis.vue')
 
 const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../views/Login.vue'),
+    component: loadLogin,
     meta: { public: true }
   },
   {
@@ -15,10 +22,10 @@ const routes = [
     component: MainLayout,
     redirect: '/home',
     children: [
-      { path: 'home', name: 'Home', component: () => import('../views/Home.vue'), meta: { title: '备考总览', icon: 'Grid' } },
-      { path: 'profile', name: 'Profile', component: () => import('../views/Selection.vue'), meta: { title: '报考档案', icon: 'User' } },
-      { path: 'schools', name: 'Schools', component: () => import('../views/Schools.vue'), meta: { title: '专业与院校', icon: 'School' } },
-      { path: 'diagnosis', name: 'Diagnosis', component: () => import('../views/Diagnosis.vue'), meta: { title: '入学诊断', icon: 'DataAnalysis' } },
+      { path: 'home', name: 'Home', component: loadHome, meta: { title: '备考总览', icon: 'Grid' } },
+      { path: 'profile', name: 'Profile', component: loadProfile, meta: { title: '报考档案', icon: 'User' } },
+      { path: 'schools', name: 'Schools', component: loadSchools, meta: { title: '专业与院校', icon: 'School' } },
+      { path: 'diagnosis', name: 'Diagnosis', component: loadDiagnosis, meta: { title: '入学诊断', icon: 'DataAnalysis' } },
       { path: 'english', name: 'EnglishDrill', component: () => import('../views/EnglishDrill.vue'), meta: { title: '英语特训', icon: 'Notebook' } },
       { path: 'math', name: 'MathDrill', component: () => import('../views/MathDrill.vue'), meta: { title: '数学特训', icon: 'Histogram' } },
       { path: 'politics', name: 'PoliticsDrill', component: () => import('../views/PoliticsDrill.vue'), meta: { title: '政治特训', icon: 'Reading' } },
@@ -44,6 +51,7 @@ const NEED_INSTITUTION = ['Diagnosis', 'Target', 'StudyPlan', 'Progress']
 const NEED_DIAGNOSIS = ['Target', 'StudyPlan', 'Progress']
 
 router.beforeEach((to) => {
+  startRouteLoading()
   const auth = useAuthStore()
 
   // 未登录：除登录页外一律跳登录，并记下原目标用于登录后跳回。
@@ -67,5 +75,19 @@ router.beforeEach((to) => {
   if (NEED_DIAGNOSIS.includes(name) && !store.diagnosisComplete) return { name: 'Diagnosis' }
   return true
 })
+
+router.afterEach(() => finishRouteLoading())
+router.onError(() => finishRouteLoading())
+
+// 浏览器空闲时提前下载最常用的页面，减少第一次点击导航时的等待。
+export function preloadCommonRoutes() {
+  return Promise.allSettled([
+    loadLogin(),
+    loadHome(),
+    loadProfile(),
+    loadSchools(),
+    loadDiagnosis()
+  ])
+}
 
 export default router

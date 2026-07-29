@@ -41,7 +41,7 @@ import {
   Warning,
 } from '@element-plus/icons-vue'
 import App from './App.vue'
-import router from './router'
+import router, { preloadCommonRoutes } from './router'
 import './styles/variables.css'
 import { useAuthStore } from './stores/auth'
 
@@ -97,4 +97,11 @@ const auth = useAuthStore()
 auth.restore().finally(() => {
   app.use(router)
   app.mount('#app')
+
+  const preload = () => preloadCommonRoutes()
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(preload, { timeout: 2500 })
+  } else {
+    window.setTimeout(preload, 500)
+  }
 })

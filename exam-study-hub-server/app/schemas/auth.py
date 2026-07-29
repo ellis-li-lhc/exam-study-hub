@@ -9,7 +9,20 @@ class RegisterRequest(BaseModel):
     """注册入参。"""
     username: str = Field(min_length=2, max_length=64)
     password: str = Field(min_length=6, max_length=128)
-    email: EmailStr | None = None
+    email: EmailStr
+    verification_code: str = Field(pattern=r"^\d{6}$")
+
+
+class EmailCodeRequest(BaseModel):
+    """发送注册验证码。"""
+    email: EmailStr
+    turnstile_token: str = Field(min_length=1, max_length=2048)
+
+
+class EmailCodeResponse(BaseModel):
+    """发送成功后返回的倒计时信息。"""
+    expires_in: int
+    resend_after: int
 
 
 class LoginRequest(BaseModel):

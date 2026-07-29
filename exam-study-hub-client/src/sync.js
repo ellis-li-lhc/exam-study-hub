@@ -35,6 +35,9 @@ let pushTimer = null
 let retryTimer = null
 let cloudVersion = 0
 let conflictNotified = false
+let changeSequence = 0
+let syncedSequence = 0
+let activeSave = null
 
 function snapshotForSave() {
   return {
@@ -43,52 +46,83 @@ function snapshotForSave() {
   }
 }
 
-// 防抖回写：本地变更后 1.5s 内无新变更才真正发请求，避免频繁打服务器。
-function schedulePush() {
+function hasUnsyncedChanges() {
+  return changeSequence > syncedSequence
+}
+
+function queuePush(delay = 1500) {
   clearTimeout(pushTimer)
-  pushTimer = setTimeout(async () => {
+  pushTimer = setTimeout(() => {
+    pushTimer = null
+    void persistPendingChanges('auto')
+  }, delay)
+}
+
+// 只保存尚未同步的变更；序号可避免保存过程中产生的新修改被误标记为已同步。
+async function persistPendingChanges(context) {
+  if (!hasUnsyncedChanges()) return true
+  if (activeSave) {
+    await activeSave
+    if (!hasUnsyncedChanges()) return true
+  }
+
+  const targetSequence = changeSequence
+  const operation = (async () => {
     try {
       const saved = await saveState(snapshotForSave())
       cloudVersion = saved.sync_version ?? cloudVersion
+      syncedSequence = Math.max(syncedSequence, targetSequence)
       conflictNotified = false
       clearTimeout(retryTimer)
+      if (hasUnsyncedChanges()) queuePush()
+      return true
     } catch (error) {
       if (error.status === 409) {
         console.warn('云端状态版本冲突，已拉取最新进度', error)
-        if (!conflictNotified) {
+        const pulled = await pullFromCloud()
+        if (pulled) syncedSequence = changeSequence
+        if (context === 'exit') {
+          ElMessage.warning('云端进度已在其他设备更新，退出前已刷新到最新版本')
+        } else if (!conflictNotified) {
           ElMessage.warning('云端进度已在其他设备更新，已为你刷新到最新版本')
           conflictNotified = true
         }
-        await pullFromCloud()
-        return
+        return false
       }
-      ElMessage.warning('云端保存失败，当前进度已保留在本机，稍后会自动重试')
-      console.warn('云端保存失败（已保留在本地，稍后重试）', error)
-      clearTimeout(retryTimer)
-      retryTimer = setTimeout(schedulePush, 10000)
+      if (context === 'exit') {
+        console.warn('退出前云端保存失败', error)
+        ElMessage.warning('退出前云端保存失败，当前进度仍保留在本机')
+      } else {
+        ElMessage.warning('云端保存失败，当前进度已保留在本机，稍后会自动重试')
+        console.warn('云端保存失败（已保留在本地，稍后重试）', error)
+        clearTimeout(retryTimer)
+        retryTimer = setTimeout(() => queuePush(0), 10000)
+      }
+      return false
     }
-  }, 1500)
+  })()
+
+  activeSave = operation
+  try {
+    return await operation
+  } finally {
+    if (activeSave === operation) activeSave = null
+  }
+}
+
+// 防抖回写：本地变更后 1.5s 内无新变更才真正发请求，避免频繁打服务器。
+function schedulePush() {
+  changeSequence += 1
+  queuePush()
 }
 
 // 退出登录或关键操作前调用：立即刷一次云端，减少防抖窗口内的数据丢失。
 export async function flushCloudState() {
   clearTimeout(pushTimer)
+  pushTimer = null
   clearTimeout(retryTimer)
-  try {
-    const saved = await saveState(snapshotForSave())
-    cloudVersion = saved.sync_version ?? cloudVersion
-    conflictNotified = false
-    return true
-  } catch (error) {
-    if (error.status === 409) {
-      await pullFromCloud()
-      ElMessage.warning('云端进度已在其他设备更新，退出前已刷新到最新版本')
-      return false
-    }
-    console.warn('退出前云端保存失败', error)
-    ElMessage.warning('退出前云端保存失败，当前进度仍保留在本机')
-    return false
-  }
+  retryTimer = null
+  return persistPendingChanges('exit')
 }
 
 // 登录后调用：用云端数据覆盖本地；若云端为空则把本地推上去（首次登录的迁移）。
@@ -102,7 +136,7 @@ export async function pullFromCloud() {
     cloud = await getState()
   } catch (error) {
     console.warn('云端状态拉取失败，继续使用本地数据', error)
-    return
+    return false
   }
 
   cloudVersion = cloud.sync_version ?? 0
@@ -120,6 +154,8 @@ export async function pullFromCloud() {
       console.warn('初始状态上传失败', error)
     }
   }
+  syncedSequence = changeSequence
+  return true
 }
 
 // 开启自动回写：监听三个 store 的变化，防抖推送到云端。
@@ -164,6 +200,8 @@ export function clearLocalState() {
   stopAutoSync()
   cloudVersion = 0
   conflictNotified = false
+  changeSequence = 0
+  syncedSequence = 0
   useApplicationStore().resetAll()
   useEnglishProgressStore().resetAll()
   useVocabularyStore().resetAll()
