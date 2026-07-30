@@ -42,6 +42,7 @@ EXPECTED_COUNTS = {
     "henan_control": 26,
     "jiangsu_score": 171,
     "jiangsu_plan": 89,
+    "zhejiang_control": 24,
 }
 LEGACY_MAJOR_CODES = ["business", "accounting", "law", "education", "computer", "chinese"]
 
@@ -68,10 +69,13 @@ def build_validation_summary(db: Session) -> ValidationSummary:
 
     henan = db.query(Province).filter_by(code="henan").first()
     jiangsu = db.query(Province).filter_by(code="jiangsu").first()
+    zhejiang = db.query(Province).filter_by(code="zhejiang").first()
     if henan is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少河南省份记录"))
     if jiangsu is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少江苏省份记录"))
+    if zhejiang is None:
+        issues.append(ValidationIssue(severity="error", area="省份", message="缺少浙江省份记录"))
 
     major_count = db.query(Major).count()
     add_count_issue(issues, "专业主数据", "专业主数据", major_count, EXPECTED_COUNTS["major"])
@@ -151,6 +155,15 @@ def build_validation_summary(db: Session) -> ValidationSummary:
             "江苏本科征求计划",
             db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == jiangsu.id).count(),
             EXPECTED_COUNTS["jiangsu_plan"],
+        )
+
+    if zhejiang is not None:
+        add_count_issue(
+            issues,
+            "浙江数据",
+            "浙江省控线",
+            db.query(ProvinceControlScore).filter_by(province_id=zhejiang.id).count(),
+            EXPECTED_COUNTS["zhejiang_control"],
         )
 
     missing_city_count = db.query(Institution).filter(

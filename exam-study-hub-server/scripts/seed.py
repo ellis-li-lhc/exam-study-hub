@@ -21,6 +21,7 @@ SCORE_FILES = [
 ]
 CONTROL_SCORE_FILES = [
     SCORES_DIR / "henan-adult-control-scores.json",
+    SCORES_DIR / "zhejiang-adult-control-scores.json",
 ]
 PLAN_FILES = [
     SCORES_DIR / "henan-adult-collection-plan-2025.json",
@@ -85,6 +86,7 @@ CITY_BY_NAME = {
 PROVINCES = [
     {"code": "henan", "name": "河南", "note": "户籍地，可直接按当年公告准备材料"},
     {"code": "jiangsu", "name": "江苏", "note": "工作地，非户籍报名需核验居住证或连续社保"},
+    {"code": "zhejiang", "name": "浙江", "note": "已收录近三年成人高考专升本省控线"},
 ]
 
 # 与前端 exam-study-hub-client/src/data/majors.js 的 examMajors 保持一致。
