@@ -119,6 +119,10 @@
                     {{ countdown > 0 ? `${countdown}s 后重发` : '获取验证码' }}
                   </el-button>
                 </div>
+                <p class="verification-delivery-tip">
+                  <el-icon><InfoFilled /></el-icon>
+                  验证码邮件可能被归入垃圾邮件或广告邮件，请留意并将发件人加入白名单。
+                </p>
                 <p v-if="codeSentForCurrentEmail" class="verification-hint" aria-live="polite">
                   <el-icon><CircleCheck /></el-icon>
                   验证码已发送，10 分钟内有效，请同时检查垃圾邮箱。
