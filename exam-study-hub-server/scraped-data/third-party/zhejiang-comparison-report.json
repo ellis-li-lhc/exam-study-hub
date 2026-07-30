@@ -1,0 +1,451 @@
+{
+  "generated_at": "2026-07-30T07:30:10.404212+00:00",
+  "scope": "浙江成人高考院校-层次-专业候选目录",
+  "warning": "两家第三方快照年份不同，结果不得直接作为2025招生计划入库。",
+  "official_baseline": {
+    "year": 2025,
+    "source_url": "https://www.zjzs.net/art/2025/10/22/art_155_11643.html",
+    "institution_count": 92
+  },
+  "sources": {
+    "zj-ck.com": {
+      "snapshot_year": 2024,
+      "source_url": "https://www.zj-ck.com/ckzy/",
+      "record_count": 685,
+      "institution_count": 41,
+      "official_institution_match_count": 41,
+      "official_institution_name_precision": 1.0,
+      "official_2025_institution_coverage": 0.4457,
+      "unmatched_institutions": []
+    },
+    "zjck.org.cn": {
+      "snapshot_year": 2026,
+      "source_url": "https://www.zjck.org.cn/zhuanye/",
+      "record_count": 640,
+      "provider_code_count": 119,
+      "official_local_provider_match_count": 75,
+      "official_2025_local_institution_coverage": 0.8152,
+      "note": "目录页结构化数据仅展示部分院校代码；未匹配代码也可能是省外招生院校，因此不能据此计算误报率。",
+      "quality_probe": {
+        "probe_major": "计算机科学与技术",
+        "probe_url": "https://www.zjck.org.cn/zhuanye/major-b9a50c22/",
+        "claimed_institution_count": 46,
+        "displayed_institution_count": 0,
+        "structured_course_instances_empty": true
+      }
+    }
+  },
+  "cross_source": {
+    "source_a_unique_pairs": 685,
+    "source_b_official_local_unique_pairs": 407,
+    "agreed_pairs": 59,
+    "source_a_pair_agreement_rate": 0.0861,
+    "source_b_local_pair_agreement_rate": 0.145,
+    "agreed_pair_sample": [
+      {
+        "institution_code": "037",
+        "level": "专升本",
+        "major_name": "化学工程与工艺"
+      },
+      {
+        "institution_code": "037",
+        "level": "专升本",
+        "major_name": "学前教育"
+      },
+      {
+        "institution_code": "037",
+        "level": "高职（专科）",
+        "major_name": "学前教育"
+      },
+      {
+        "institution_code": "081",
+        "level": "专升本",
+        "major_name": "中国画"
+      },
+      {
+        "institution_code": "081",
+        "level": "专升本",
+        "major_name": "书法学"
+      },
+      {
+        "institution_code": "081",
+        "level": "专升本",
+        "major_name": "环境设计"
+      },
+      {
+        "institution_code": "081",
+        "level": "专升本",
+        "major_name": "视觉传达设计"
+      },
+      {
+        "institution_code": "081",
+        "level": "高中起点本科",
+        "major_name": "书法学"
+      },
+      {
+        "institution_code": "121",
+        "level": "专升本",
+        "major_name": "标准化工程"
+      },
+      {
+        "institution_code": "121",
+        "level": "专升本",
+        "major_name": "测控技术与仪器"
+      },
+      {
+        "institution_code": "121",
+        "level": "专升本",
+        "major_name": "财务管理"
+      },
+      {
+        "institution_code": "121",
+        "level": "专升本",
+        "major_name": "食品质量与安全"
+      },
+      {
+        "institution_code": "138",
+        "level": "专升本",
+        "major_name": "物流管理"
+      },
+      {
+        "institution_code": "319",
+        "level": "专升本",
+        "major_name": "物流管理"
+      },
+      {
+        "institution_code": "319",
+        "level": "专升本",
+        "major_name": "船舶与海洋工程"
+      },
+      {
+        "institution_code": "338",
+        "level": "高职（专科）",
+        "major_name": "数控技术"
+      },
+      {
+        "institution_code": "402",
+        "level": "专升本",
+        "major_name": "小学教育"
+      },
+      {
+        "institution_code": "402",
+        "level": "专升本",
+        "major_name": "英语"
+      },
+      {
+        "institution_code": "404",
+        "level": "专升本",
+        "major_name": "建筑学"
+      },
+      {
+        "institution_code": "404",
+        "level": "专升本",
+        "major_name": "网络与新媒体"
+      },
+      {
+        "institution_code": "407",
+        "level": "高职（专科）",
+        "major_name": "数控技术"
+      },
+      {
+        "institution_code": "407",
+        "level": "高职（专科）",
+        "major_name": "模具设计与制造"
+      },
+      {
+        "institution_code": "411",
+        "level": "高职（专科）",
+        "major_name": "建设工程管理"
+      },
+      {
+        "institution_code": "418",
+        "level": "专升本",
+        "major_name": "商务英语"
+      },
+      {
+        "institution_code": "418",
+        "level": "专升本",
+        "major_name": "日语"
+      },
+      {
+        "institution_code": "418",
+        "level": "专升本",
+        "major_name": "音乐学"
+      },
+      {
+        "institution_code": "418",
+        "level": "高职（专科）",
+        "major_name": "应用英语"
+      },
+      {
+        "institution_code": "418",
+        "level": "高职（专科）",
+        "major_name": "音乐表演"
+      },
+      {
+        "institution_code": "422",
+        "level": "高职（专科）",
+        "major_name": "体育教育"
+      },
+      {
+        "institution_code": "422",
+        "level": "高职（专科）",
+        "major_name": "动漫制作技术"
+      },
+      {
+        "institution_code": "422",
+        "level": "高职（专科）",
+        "major_name": "建设工程管理"
+      },
+      {
+        "institution_code": "422",
+        "level": "高职（专科）",
+        "major_name": "机械设计与制造"
+      },
+      {
+        "institution_code": "422",
+        "level": "高职（专科）",
+        "major_name": "空中乘务"
+      },
+      {
+        "institution_code": "426",
+        "level": "专升本",
+        "major_name": "英语"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "中医学"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "临床医学"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "健康服务与管理"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "医学检验技术"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "口腔医学"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "听力与言语康复学"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "康复治疗学"
+      },
+      {
+        "institution_code": "430",
+        "level": "专升本",
+        "major_name": "针灸推拿学"
+      },
+      {
+        "institution_code": "431",
+        "level": "专升本",
+        "major_name": "农学"
+      },
+      {
+        "institution_code": "431",
+        "level": "专升本",
+        "major_name": "园艺"
+      },
+      {
+        "institution_code": "431",
+        "level": "专升本",
+        "major_name": "林学"
+      },
+      {
+        "institution_code": "431",
+        "level": "专升本",
+        "major_name": "测绘工程"
+      },
+      {
+        "institution_code": "431",
+        "level": "专升本",
+        "major_name": "环境设计"
+      },
+      {
+        "institution_code": "433",
+        "level": "专升本",
+        "major_name": "金融工程"
+      },
+      {
+        "institution_code": "433",
+        "level": "高职（专科）",
+        "major_name": "服装与服饰设计"
+      },
+      {
+        "institution_code": "434",
+        "level": "专升本",
+        "major_name": "临床医学"
+      }
+    ],
+    "interpretation": "一致率仅表示两站相互印证，不等同于相对官方的专业准确率。"
+  },
+  "official_program_sample_check": {
+    "institution_code": "450",
+    "institution_name": "浙江理工大学",
+    "year": 2025,
+    "source_url": "https://cj.zstu.edu.cn/info/1033/3591.htm",
+    "official_unique_pair_count": 19,
+    "zj-ck.com": {
+      "candidate_pair_count": 7,
+      "official_match_count": 6,
+      "precision": 0.8571,
+      "recall": 0.3158,
+      "false_positive_pairs": [
+        {
+          "level": "专升本",
+          "major_name": "会计"
+        }
+      ],
+      "missing_official_pairs": [
+        {
+          "level": "专升本",
+          "major_name": "会计学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "国际经济与贸易"
+        },
+        {
+          "level": "专升本",
+          "major_name": "工程管理"
+        },
+        {
+          "level": "专升本",
+          "major_name": "应用化学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "建筑学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "服装设计与工程"
+        },
+        {
+          "level": "专升本",
+          "major_name": "汉语言文学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "法学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "生物制药"
+        },
+        {
+          "level": "专升本",
+          "major_name": "电子信息工程"
+        },
+        {
+          "level": "专升本",
+          "major_name": "电子商务"
+        },
+        {
+          "level": "专升本",
+          "major_name": "社会工作"
+        },
+        {
+          "level": "专升本",
+          "major_name": "行政管理"
+        }
+      ]
+    },
+    "zjck.org.cn": {
+      "candidate_pair_count": 4,
+      "official_match_count": 3,
+      "precision": 0.75,
+      "recall": 0.1579,
+      "false_positive_pairs": [
+        {
+          "level": "高职（专科）",
+          "major_name": "社会工作"
+        }
+      ],
+      "missing_official_pairs": [
+        {
+          "level": "专升本",
+          "major_name": "人力资源管理"
+        },
+        {
+          "level": "专升本",
+          "major_name": "会计学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "国际经济与贸易"
+        },
+        {
+          "level": "专升本",
+          "major_name": "土木工程"
+        },
+        {
+          "level": "专升本",
+          "major_name": "工商管理"
+        },
+        {
+          "level": "专升本",
+          "major_name": "工程管理"
+        },
+        {
+          "level": "专升本",
+          "major_name": "应用化学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "建筑学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "机械设计制造及其自动化"
+        },
+        {
+          "level": "专升本",
+          "major_name": "汉语言文学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "法学"
+        },
+        {
+          "level": "专升本",
+          "major_name": "电子信息工程"
+        },
+        {
+          "level": "专升本",
+          "major_name": "电子商务"
+        },
+        {
+          "level": "专升本",
+          "major_name": "电气工程及其自动化"
+        },
+        {
+          "level": "专升本",
+          "major_name": "行政管理"
+        },
+        {
+          "level": "专升本",
+          "major_name": "计算机科学与技术"
+        }
+      ]
+    },
+    "interpretation": "这是单校完整表抽样结果，不能外推为全省专业准确率。"
+  },
+  "import_recommendation": "quarantine"
+}
