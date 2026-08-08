@@ -1,5 +1,5 @@
 <template>
-  <div class="drill-page page-stack" :class="{ 'has-listen-player': listenActive }">
+  <div class="drill-page page-stack" :class="{ 'has-listen-player': listenActive, 'has-minimized-listen-player': listenActive && listenMinimized }">
     <section class="page-intro">
       <div><span class="section-kicker">英语特训</span><h2>先把单词地基打牢</h2><p>核心词、造句框架、固定搭配、基础语法，每块都能边学边测、记录掌握进度。基础越弱，越要先过单词关。</p></div>
     </section>
@@ -32,9 +32,15 @@
               <el-icon><Close v-if="currentBatchAllKnown" /><Check v-else /></el-icon>
               {{ currentBatchAllKnown ? '一键取消掌握' : '一键全部掌握' }}
             </el-button>
-            <el-button type="success" plain @click="startListening">
-              <el-icon><Headset /></el-icon>{{ listenActive ? '重新听本组' : '开始听词' }}
-            </el-button>
+            <el-dropdown class="listen-mode-dropdown" split-button type="success" @click="startListening('loop')" @command="startListening">
+              <el-icon><Headset /></el-icon>{{ listenActive && listenMode === 'loop' ? '重新循环本组' : '循环本组听读' }}
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item command="loop">循环本组听读</el-dropdown-item>
+                  <el-dropdown-item command="all">全部单词听读</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
             <el-button type="primary" @click="startVocabTest"><el-icon><EditPen /></el-icon>本组自测</el-button>
           </div>
         </section>
@@ -61,7 +67,72 @@
         </section>
       </el-tab-pane>
 
-      <!-- Tab 2: 造句基础 / Tab 3: 核心短语 共用结构 -->
+      <!-- Tab 2: 合并核心短语与日常短句，复用单词区的进度、工具栏和卡片布局 -->
+      <el-tab-pane name="phrases">
+        <template #label><span class="tab-label">常用短语</span></template>
+
+        <section class="drill-hero phrase-hero">
+          <div class="hero-score"><span>已掌握短语</span><strong>{{ phraseKnownCount }}</strong><small>/ {{ phraseTotal }} 条</small></div>
+          <div class="hero-progress">
+            <el-progress :percentage="phraseMasteryPercent" :stroke-width="14" :text-inside="true" />
+            <p>{{ activePhraseDataset.data.intro }} 当前第 {{ phraseGroupIndex + 1 }} 组已掌握 {{ phraseGroupKnown }}/{{ activePhraseGroup.words.length }}。</p>
+          </div>
+          <div class="phrase-source-switch" role="group" aria-label="短语内容分类">
+            <el-button :type="phraseSource === 'core' ? 'primary' : 'default'" :plain="phraseSource !== 'core'" @click="phraseSource = 'core'">核心短语</el-button>
+            <el-button :type="phraseSource === 'daily' ? 'primary' : 'default'" :plain="phraseSource !== 'daily'" @click="phraseSource = 'daily'">日常短句</el-button>
+          </div>
+        </section>
+
+        <section class="drill-toolbar">
+          <div class="toolbar-left">
+            <el-button :disabled="phraseGroupIndex === 0" @click="setPhraseGroup(phraseGroupIndex - 1)"><el-icon><ArrowLeft /></el-icon>上一组</el-button>
+            <el-select :model-value="phraseGroupIndex" class="batch-select" @change="setPhraseGroup($event)">
+              <el-option v-for="option in phraseGroupOptions" :key="option.value" :label="option.label" :value="option.value" />
+            </el-select>
+            <el-button :disabled="phraseGroupIndex === phraseGroupOptions.length - 1" @click="setPhraseGroup(phraseGroupIndex + 1)">下一组<el-icon class="el-icon--right"><ArrowRight /></el-icon></el-button>
+          </div>
+          <div class="toolbar-right">
+            <el-checkbox v-model="onlyUnknownPhrases" label="只看未掌握" border />
+            <el-button :type="phraseGroupAllKnown ? 'warning' : 'default'" plain @click="handlePhraseGroupMastery">
+              <el-icon><Close v-if="phraseGroupAllKnown" /><Check v-else /></el-icon>
+              {{ phraseGroupAllKnown ? '一键取消掌握' : '一键全部掌握' }}
+            </el-button>
+            <el-dropdown class="listen-mode-dropdown" split-button type="success" @click="startItemListening(activePhraseDataset, 'loop')" @command="startPhraseListenCommand">
+              <el-icon><Headset /></el-icon>{{ listenActive && isListeningDataset(activePhraseDataset) && listenMode === 'loop' ? '重新循环本组' : '循环本组听读' }}
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item command="loop">循环本组听读</el-dropdown-item>
+                  <el-dropdown-item command="all">全部当前分类听读</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+            <el-button type="primary" @click="startItemTest(activePhraseDataset)"><el-icon><EditPen /></el-icon>本组自测</el-button>
+          </div>
+        </section>
+
+        <section class="word-grid phrase-word-grid">
+          <article
+            v-for="item in visiblePhraseItems"
+            :key="item.word"
+            class="word-card phrase-word-card"
+            :class="{ known: progress.isKnown(itemKey(activePhraseDataset, item)), listening: isListeningDataset(activePhraseDataset) && activeListenWord?.id === itemKey(activePhraseDataset, item) }"
+          >
+            <div class="word-main">
+              <div class="word-top">
+                <strong class="speakable" @click="speak(item.word)">{{ item.word }}</strong>
+                <el-button class="speak-btn" text circle @click="speak(item.word)"><el-icon><VideoPlay /></el-icon></el-button>
+                <el-tag v-if="item.tag" size="small" effect="plain">{{ item.tag }}</el-tag>
+              </div>
+              <p class="meaning">{{ item.meaning }}</p>
+              <p v-if="item.example" class="example speakable" @click="speak(item.example)"><el-icon><VideoPlay /></el-icon>{{ item.example }}</p>
+            </div>
+            <el-button class="known-toggle" :type="progress.isKnown(itemKey(activePhraseDataset, item)) ? 'success' : 'default'" :plain="!progress.isKnown(itemKey(activePhraseDataset, item))" circle :aria-label="progress.isKnown(itemKey(activePhraseDataset, item)) ? `取消 ${item.word} 掌握标记` : `标记 ${item.word} 已掌握`" :title="progress.isKnown(itemKey(activePhraseDataset, item)) ? '取消掌握标记' : '标记已掌握'" @click="progress.toggle(itemKey(activePhraseDataset, item))"><el-icon><Check /></el-icon></el-button>
+          </article>
+          <el-empty v-if="visiblePhraseItems.length === 0" description="本组短语都已掌握，进入下一组吧" :image-size="80" />
+        </section>
+      </el-tab-pane>
+
+      <!-- Tab 3: 造句基础 -->
       <el-tab-pane v-for="dataset in itemDatasets" :key="dataset.ns" :name="dataset.ns">
         <template #label><span class="tab-label">{{ dataset.tabLabel }}</span></template>
 
@@ -79,11 +150,20 @@
             <h3>{{ activeItemGroup(dataset).name }}</h3><span>{{ activeItemGroup(dataset).desc }}</span>
             <div class="group-actions">
               <span class="group-count">本组 {{ groupKnownCount(dataset) }}/{{ activeItemGroup(dataset).words.length }}</span>
+              <el-dropdown v-if="dataset.listenable" split-button size="small" type="success" plain @click="startItemListening(dataset, 'loop')" @command="startItemListenCommand(dataset, $event)">
+                <el-icon><Headset /></el-icon>{{ isListeningDataset(dataset) && listenMode === 'loop' ? '重新循环本组' : '循环听本组' }}
+                <template #dropdown>
+                  <el-dropdown-menu>
+                    <el-dropdown-item command="loop">循环本组听读</el-dropdown-item>
+                    <el-dropdown-item command="all">全部短句听读</el-dropdown-item>
+                  </el-dropdown-menu>
+                </template>
+              </el-dropdown>
               <el-button size="small" type="primary" plain @click="startItemTest(dataset)"><el-icon><EditPen /></el-icon>本组自测</el-button>
             </div>
           </div>
           <div class="essential-grid">
-            <article v-for="item in activeItemGroup(dataset).words" :key="item.word" class="essential-card" :class="{ known: progress.isKnown(itemKey(dataset, item)) }">
+            <article v-for="item in activeItemGroup(dataset).words" :key="item.word" class="essential-card" :class="{ known: progress.isKnown(itemKey(dataset, item)), listening: isListeningDataset(dataset) && activeListenWord?.id === itemKey(dataset, item) }">
               <div class="essential-top">
                 <strong class="speakable" @click="speak(item.word)">{{ item.word }}</strong>
                 <el-button class="speak-btn" text circle @click="speak(item.word)"><el-icon><VideoPlay /></el-icon></el-button>
@@ -91,7 +171,7 @@
                 <el-button class="known-toggle mini" :type="progress.isKnown(itemKey(dataset, item)) ? 'success' : 'default'" :plain="!progress.isKnown(itemKey(dataset, item))" circle :aria-label="progress.isKnown(itemKey(dataset, item)) ? `取消 ${item.word} 掌握标记` : `标记 ${item.word} 已掌握`" :title="progress.isKnown(itemKey(dataset, item)) ? '取消掌握标记' : '标记已掌握'" @click="progress.toggle(itemKey(dataset, item))"><el-icon><Check /></el-icon></el-button>
               </div>
               <p class="meaning">{{ item.meaning }}</p>
-              <p class="example speakable" @click="speak(item.example)"><el-icon><VideoPlay /></el-icon>{{ item.example }}</p>
+              <p v-if="item.example" class="example speakable" @click="speak(item.example)"><el-icon><VideoPlay /></el-icon>{{ item.example }}</p>
             </article>
           </div>
         </section>
@@ -166,50 +246,77 @@
     </el-dialog>
 
     <Transition name="listen-player">
-      <section v-if="listenActive" class="listen-player" role="region" aria-label="听词模式播放器">
-        <el-button class="listen-dismiss" circle text aria-label="结束听词" title="结束听词" @click="stopListening(true)">
-          <el-icon><Close /></el-icon>
-        </el-button>
+      <section v-if="listenActive" class="listen-player" :class="{ 'is-minimized': listenMinimized }" role="region" aria-label="听词模式播放器">
+        <template v-if="!listenMinimized">
+          <el-button class="listen-minimize" circle text aria-label="缩小听写窗" title="缩小听写窗" @click="listenMinimized = true">
+            <span class="listen-minimize-mark" aria-hidden="true">−</span>
+          </el-button>
+          <el-button class="listen-dismiss" circle text aria-label="结束听词" title="结束听词" @click="stopListening(true)">
+            <el-icon><Close /></el-icon>
+          </el-button>
 
-        <div class="listen-summary" aria-live="polite">
-          <div class="listen-heading">
-            <span class="listen-status"><el-icon><Headset /></el-icon>{{ listenPaused ? '已暂停' : listenPhase }}</span>
-            <div class="listen-word">
-              <strong>{{ activeListenWord?.word }}</strong>
-              <span v-if="activeListenWord?.phonetic">/{{ activeListenWord.phonetic }}/</span>
+          <div class="listen-summary" aria-live="polite">
+            <div class="listen-heading">
+              <span class="listen-status"><el-icon><Headset /></el-icon>{{ listenPaused ? '已暂停' : listenPhase }}</span>
+              <div class="listen-word">
+                <strong>{{ activeListenWord?.word }}</strong>
+                <span v-if="activeListenWord?.phonetic">/{{ activeListenWord.phonetic }}/</span>
+              </div>
             </div>
+            <p>{{ activeListenWord?.meaning }}</p>
           </div>
-          <p>{{ activeListenWord?.meaning }}</p>
-        </div>
 
-        <div class="listen-progress">
-          <span>第 {{ listenIndex + 1 }} / {{ listenQueue.length }} 个</span>
-          <el-progress :percentage="listenPercent" :show-text="false" :stroke-width="6" />
-        </div>
+          <div class="listen-progress">
+            <span>{{ listenMode === 'loop' ? '循环本组' : '全部听读' }} · 第 {{ listenIndex + 1 }} / {{ listenQueue.length }} 个</span>
+            <el-progress :percentage="listenPercent" :show-text="false" :stroke-width="6" />
+          </div>
 
-        <div class="listen-controls">
-          <el-button circle plain :disabled="listenIndex === 0" aria-label="上一个单词" title="上一个单词" @click="previousListenWord">
-            <el-icon><ArrowLeft /></el-icon>
-          </el-button>
-          <el-button class="listen-toggle" circle type="primary" :aria-label="listenPaused ? '继续播放' : '暂停播放'" :title="listenPaused ? '继续播放' : '暂停播放'" @click="toggleListenPause">
-            <el-icon><VideoPlay v-if="listenPaused" /><VideoPause v-else /></el-icon>
-          </el-button>
-          <el-button circle plain :disabled="listenIndex >= listenQueue.length - 1" aria-label="下一个单词" title="下一个单词" @click="nextListenWord">
-            <el-icon><ArrowRight /></el-icon>
-          </el-button>
-          <el-button circle plain aria-label="重读当前单词" title="重读当前单词" @click="replayListenWord">
-            <el-icon><RefreshRight /></el-icon>
-          </el-button>
-        </div>
+          <div class="listen-controls">
+            <el-button circle plain :disabled="listenQueue.length < 2" aria-label="上一个单词" title="上一个单词" @click="previousListenWord">
+              <el-icon><ArrowLeft /></el-icon>
+            </el-button>
+            <el-button class="listen-toggle" circle type="primary" :aria-label="listenPaused ? '继续播放' : '暂停播放'" :title="listenPaused ? '继续播放' : '暂停播放'" @click="toggleListenPause">
+              <el-icon><VideoPlay v-if="listenPaused" /><VideoPause v-else /></el-icon>
+            </el-button>
+            <el-button circle plain :disabled="listenQueue.length < 2" aria-label="下一个单词" title="下一个单词" @click="nextListenWord">
+              <el-icon><ArrowRight /></el-icon>
+            </el-button>
+            <el-button circle plain aria-label="重读当前单词" title="重读当前单词" @click="replayListenWord">
+              <el-icon><RefreshRight /></el-icon>
+            </el-button>
+          </div>
 
-        <div class="listen-options">
-          <el-select v-model="listenRate" class="listen-rate" aria-label="朗读语速" @change="handleListenRateChange">
-            <el-option label="0.8×" :value="0.8" />
-            <el-option label="1.0×" :value="1" />
-            <el-option label="1.2×" :value="1.2" />
-          </el-select>
-          <el-checkbox v-model="listenOnlyUnknown" label="仅未掌握" border @change="rebuildListenQueue" />
-        </div>
+          <div class="listen-options">
+            <el-select v-model="listenRate" class="listen-rate" aria-label="朗读语速" @change="handleListenRateChange">
+              <el-option label="0.8×" :value="0.8" />
+              <el-option label="1.0×" :value="1" />
+              <el-option label="1.2×" :value="1.2" />
+            </el-select>
+            <el-radio-group v-model="listenMode" class="listen-mode-switch" size="small" aria-label="听读范围" @change="handleListenModeChange">
+              <el-radio-button value="loop">循环本组</el-radio-button>
+              <el-radio-button value="all">全部听读</el-radio-button>
+            </el-radio-group>
+            <el-checkbox v-if="listenSource === 'words'" v-model="listenOnlyUnknown" label="仅未掌握" border @change="rebuildListenQueue" />
+          </div>
+        </template>
+
+        <template v-else>
+          <div class="listen-mini-summary" aria-live="polite">
+            <span class="listen-mini-status"><el-icon><Headset /></el-icon>{{ listenPaused ? '已暂停' : listenPhase }}</span>
+            <strong>{{ activeListenWord?.word }}</strong>
+          </div>
+          <div class="listen-mini-actions">
+            <el-button class="listen-mini-toggle" circle type="primary" :aria-label="listenPaused ? '继续播放' : '暂停播放'" :title="listenPaused ? '继续播放' : '暂停播放'" @click="toggleListenPause">
+              <el-icon><VideoPlay v-if="listenPaused" /><VideoPause v-else /></el-icon>
+            </el-button>
+            <el-button circle plain aria-label="展开听写窗" title="展开听写窗" @click="listenMinimized = false">
+              <el-icon class="listen-expand-icon"><ArrowDown /></el-icon>
+            </el-button>
+            <el-button circle text aria-label="结束听词" title="结束听词" @click="stopListening(true)">
+              <el-icon><Close /></el-icon>
+            </el-button>
+          </div>
+        </template>
       </section>
     </Transition>
   </div>
@@ -222,18 +329,34 @@ import { useVocabularyStore } from '../stores/vocabulary'
 import { useEnglishProgressStore } from '../stores/englishProgress'
 import essentials from '../../docs/EnglishEssentials.json'
 import phrases from '../../docs/EnglishPhrases.json'
+import commonPhrases from '../../docs/EnglishCommonPhrases.json'
 import grammar from '../../docs/EnglishGrammar.json'
 
 const store = useVocabularyStore()
 const progress = useEnglishProgressStore()
 const activeTab = ref('words')
 const onlyUnknown = ref(false)
+const phraseSource = ref('core')
+const onlyUnknownPhrases = ref(false)
 
-// 造句基础 / 核心短语 共用同一套渲染与逻辑
+// 造句基础沿用知识卡片；两类短语在「常用短语」标签内统一呈现。
 const itemDatasets = [
-  { ns: 'essentials', tabLabel: '造句基础', data: essentials, activeId: ref(essentials.groups[0].id) },
-  { ns: 'phrases', tabLabel: '核心短语', data: phrases, activeId: ref(phrases.groups[0].id) }
+  { ns: 'essentials', tabLabel: '造句基础', data: essentials, activeId: ref(essentials.groups[0].id) }
 ]
+const phraseDatasets = {
+  core: { ns: 'phrases', data: phrases, activeId: ref(phrases.groups[0].id) },
+  daily: { ns: 'commonPhrases', data: commonPhrases, activeId: ref(commonPhrases.groups[0].id) }
+}
+const activePhraseDataset = computed(() => phraseDatasets[phraseSource.value])
+const activePhraseGroup = computed(() => activeItemGroup(activePhraseDataset.value))
+const phraseTotal = computed(() => totalItems(activePhraseDataset.value))
+const phraseKnownCount = computed(() => countKnownItems(activePhraseDataset.value))
+const phraseMasteryPercent = computed(() => phraseTotal.value ? Math.round(phraseKnownCount.value / phraseTotal.value * 100) : 0)
+const phraseGroupIndex = computed(() => Math.max(0, activePhraseDataset.value.data.groups.findIndex(group => group.id === activePhraseDataset.value.activeId.value)))
+const phraseGroupOptions = computed(() => activePhraseDataset.value.data.groups.map((group, index) => ({ value: index, label: `第 ${index + 1} 组 · ${group.short}` })))
+const phraseGroupKnown = computed(() => groupKnownCount(activePhraseDataset.value))
+const phraseGroupAllKnown = computed(() => activePhraseGroup.value.words.length > 0 && phraseGroupKnown.value === activePhraseGroup.value.words.length)
+const visiblePhraseItems = computed(() => onlyUnknownPhrases.value ? activePhraseGroup.value.words.filter(item => !progress.isKnown(itemKey(activePhraseDataset.value, item))) : activePhraseGroup.value.words)
 const activeGrammarId = ref(grammar.sections[0].id)
 const activeGrammarSection = computed(() => grammar.sections.find(section => section.id === activeGrammarId.value) || grammar.sections[0])
 
@@ -248,6 +371,10 @@ const listenQueue = ref([])
 const listenIndex = ref(0)
 const listenRate = ref(1)
 const listenOnlyUnknown = ref(false)
+const listenSource = ref(null)
+const listenMode = ref('loop')
+const listenGroupId = ref(null)
+const listenMinimized = ref(false)
 const activeListenWord = computed(() => listenQueue.value[listenIndex.value] || null)
 const listenPercent = computed(() => listenQueue.value.length ? Math.round((listenIndex.value + 1) / listenQueue.value.length * 100) : 0)
 
@@ -264,6 +391,27 @@ function countKnownItems(dataset) {
 function groupKnownCount(dataset) {
   const group = activeItemGroup(dataset)
   return progress.countKnown(group.words.map(item => `${dataset.ns}:${group.id}|${item.word}`))
+}
+function isListeningDataset(dataset) { return listenActive.value && listenSource.value === dataset.ns }
+
+function setPhraseGroup(index) {
+  const groups = activePhraseDataset.value.data.groups
+  const safeIndex = Math.max(0, Math.min(groups.length - 1, Number(index)))
+  activePhraseDataset.value.activeId.value = groups[safeIndex].id
+}
+
+function handlePhraseGroupMastery() {
+  const dataset = activePhraseDataset.value
+  const shouldMarkKnown = !phraseGroupAllKnown.value
+  activePhraseGroup.value.words.forEach(item => {
+    const key = itemKey(dataset, item)
+    if (progress.isKnown(key) !== shouldMarkKnown) progress.toggle(key)
+  })
+  ElMessage.success(shouldMarkKnown ? '已标记本组全部短语为已掌握' : '已取消本组全部掌握标记')
+}
+
+function startPhraseListenCommand(mode) {
+  startItemListening(activePhraseDataset.value, mode)
 }
 
 function toggleWordMastery(id) {
@@ -473,18 +621,27 @@ function playActiveListenWord() {
     scheduleListenStep(() => {
       listenPhase.value = '正在读中文'
       speakListenSegment(word.meaning, 'zh-CN', pickBestChineseVoice(), () => {
-        scheduleListenStep(advanceListenWord, 1200, runId)
+        scheduleListenStep(advanceListenWord, 1500, runId)
       }, runId)
-    }, 500, runId)
+    }, 200, runId)
   }, runId)
 }
 
 function finishListening() {
+  if (listenMode.value === 'loop' && listenQueue.value.length) {
+    clearListenSpeech()
+    listenIndex.value = 0
+    listenPhase.value = '开始下一轮'
+    const runId = listenRunId
+    scheduleListenStep(playActiveListenWord, 650, runId)
+    return
+  }
   clearListenSpeech()
   listenActive.value = false
   listenPaused.value = false
   listenPhase.value = '播放完成'
-  ElMessage.success('本组单词已播放完成')
+  ElMessage.success(listenSource.value === 'words' ? '本组单词已播放完成' : '本组短语已播放完成')
+  listenSource.value = null
 }
 
 function advanceListenWord() {
@@ -496,14 +653,35 @@ function advanceListenWord() {
   playActiveListenWord()
 }
 
-function startListening() {
+function startListening(mode = 'loop') {
   if (!('speechSynthesis' in window)) { ElMessage.warning('当前浏览器不支持语音朗读'); return }
   if (onlyUnknown.value) listenOnlyUnknown.value = true
-  const pool = listenOnlyUnknown.value ? store.currentWords.filter(word => !store.isKnown(word.id)) : store.currentWords
+  const sourceWords = mode === 'all' ? store.words : store.currentWords
+  const pool = listenOnlyUnknown.value ? sourceWords.filter(word => !store.isKnown(word.id)) : sourceWords
   if (!pool.length) { ElMessage.warning('当前组没有可播放的单词'); return }
+  startListenQueue(pool, 'words', mode)
+}
+
+function startItemListening(dataset, mode = 'loop', groupId = dataset.activeId.value) {
+  if (!('speechSynthesis' in window)) { ElMessage.warning('当前浏览器不支持语音朗读'); return }
+  const groups = mode === 'all' ? dataset.data.groups : dataset.data.groups.filter(group => group.id === groupId)
+  const pool = groups.flatMap(group => group.words.map(item => ({ ...item, id: `${dataset.ns}:${group.id}|${item.word}` })))
+  if (!pool.length) { ElMessage.warning('本组没有可播放的短语'); return }
+  startListenQueue(pool, dataset.ns, mode, groupId)
+}
+
+function startItemListenCommand(dataset, mode) {
+  startItemListening(dataset, mode)
+}
+
+function startListenQueue(pool, source, mode = 'loop', groupId = null) {
   clearListenSpeech()
   listenQueue.value = [...pool]
   listenIndex.value = 0
+  listenSource.value = source
+  listenMode.value = mode
+  listenGroupId.value = groupId
+  listenMinimized.value = false
   listenActive.value = true
   listenPaused.value = false
   playActiveListenWord()
@@ -528,15 +706,15 @@ function toggleListenPause() {
 }
 
 function previousListenWord() {
-  if (listenIndex.value === 0) return
-  listenIndex.value -= 1
+  if (listenQueue.value.length < 2) return
+  listenIndex.value = (listenIndex.value - 1 + listenQueue.value.length) % listenQueue.value.length
   listenPaused.value = false
   playActiveListenWord()
 }
 
 function nextListenWord() {
-  if (listenIndex.value >= listenQueue.value.length - 1) return
-  listenIndex.value += 1
+  if (listenQueue.value.length < 2) return
+  listenIndex.value = (listenIndex.value + 1) % listenQueue.value.length
   listenPaused.value = false
   playActiveListenWord()
 }
@@ -550,10 +728,21 @@ function handleListenRateChange() {
   if (listenActive.value && !listenPaused.value) playActiveListenWord()
 }
 
-function rebuildListenQueue() {
+function handleListenModeChange(mode) {
   if (!listenActive.value) return
+  if (listenSource.value === 'words') {
+    startListening(mode)
+    return
+  }
+  const dataset = itemDatasets.find(item => item.ns === listenSource.value)
+  if (dataset) startItemListening(dataset, mode, listenGroupId.value)
+}
+
+function rebuildListenQueue() {
+  if (!listenActive.value || listenSource.value !== 'words') return
   const currentId = activeListenWord.value?.id
-  const nextQueue = listenOnlyUnknown.value ? store.currentWords.filter(word => !store.isKnown(word.id)) : store.currentWords
+  const sourceWords = listenMode.value === 'all' ? store.words : store.currentWords
+  const nextQueue = listenOnlyUnknown.value ? sourceWords.filter(word => !store.isKnown(word.id)) : sourceWords
   if (!nextQueue.length) {
     stopListening()
     ElMessage.info('当前组没有未掌握单词')
@@ -572,19 +761,27 @@ function stopListening(showMessage = false) {
   listenPaused.value = false
   listenQueue.value = []
   listenIndex.value = 0
+  listenSource.value = null
+  listenGroupId.value = null
+  listenMinimized.value = false
   listenPhase.value = '准备播放'
   if (showMessage) ElMessage.info('已结束听词模式')
 }
 
 watch(() => store.currentBatch, () => {
-  if (listenActive.value) {
+  if (listenActive.value && listenSource.value === 'words' && listenMode.value === 'loop') {
     stopListening()
     ElMessage.info('已切换词组，听词模式已结束')
   }
 })
 
 watch(activeTab, tab => {
-  if (listenActive.value && tab !== 'words') stopListening()
+  if (listenActive.value && tab !== listenSource.value) stopListening()
+})
+
+watch(phraseSource, () => {
+  if (listenActive.value && ['phrases', 'commonPhrases'].includes(listenSource.value)) stopListening()
+  onlyUnknownPhrases.value = false
 })
 
 onBeforeUnmount(() => {

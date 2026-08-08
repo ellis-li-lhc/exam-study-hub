@@ -85,6 +85,16 @@
 .toolbar-right :deep(.el-button) {
   padding-inline: 16px;
 }
+.toolbar-right .listen-mode-dropdown :deep(.el-button) {
+  min-width: 0;
+}
+.toolbar-right .listen-mode-dropdown :deep(.el-button:not(.el-dropdown__caret-button)) {
+  min-width: 142px;
+}
+.toolbar-right .listen-mode-dropdown :deep(.el-dropdown__caret-button) {
+  width: 42px;
+  padding-inline: 0;
+}
 .toolbar-right :deep(.el-checkbox__label) {
   padding-left: 8px;
 }
@@ -282,6 +292,10 @@
   background: #f4fbf7;
   border-color: #c9efdf;
 }
+.essential-card.listening {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft), var(--shadow-sm);
+}
 .essential-top {
   display: flex;
   align-items: center;
@@ -475,6 +489,9 @@
 .has-listen-player {
   padding-bottom: 126px;
 }
+.has-listen-player.has-minimized-listen-player {
+  padding-bottom: 82px;
+}
 .listen-player {
   position: fixed;
   z-index: 40;
@@ -484,11 +501,11 @@
   display: grid;
   grid-template-columns: minmax(280px, 1fr) auto;
   grid-template-areas:
-    "summary controls"
-    "progress options";
+    "summary options"
+    "progress controls";
   align-items: center;
   gap: 10px 20px;
-  padding: 14px 48px 14px 18px;
+  padding: 14px 88px 14px 18px;
   border: 1px solid #cddcff;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.98);
@@ -566,6 +583,7 @@
 }
 .listen-controls {
   grid-area: controls;
+  justify-content: flex-end;
 }
 .listen-options {
   grid-area: options;
@@ -583,18 +601,113 @@
 .listen-rate {
   width: 82px;
 }
-.listen-options :deep(.el-checkbox) {
-  height: 40px;
+.listen-rate :deep(.el-select__wrapper) {
+  min-height: 30px;
+}
+.listen-mode-switch {
+  align-self: center;
   margin: 0;
 }
+.listen-mode-switch :deep(.el-radio-button__inner) {
+  box-sizing: border-box;
+  height: 30px;
+  min-height: 30px;
+  padding: 0 12px;
+  line-height: 28px;
+  font-size: 0.74rem;
+}
+.listen-options :deep(.el-checkbox.is-bordered) {
+  box-sizing: border-box;
+  height: 30px;
+  margin: 0;
+  padding: 0 12px;
+}
+.listen-options :deep(.el-checkbox__label) {
+  padding-left: 6px;
+  line-height: 28px;
+}
+.listen-minimize,
 .listen-dismiss {
   position: absolute;
+  z-index: 1;
   top: 8px;
-  right: 8px;
   width: 36px;
   height: 36px;
   margin: 0;
   color: var(--text-muted);
+}
+.listen-minimize {
+  right: 42px;
+  background: rgba(255, 255, 255, 0.96);
+}
+.listen-minimize-mark {
+  display: block;
+  margin-top: -3px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.listen-dismiss {
+  right: 8px;
+}
+.listen-player.is-minimized {
+  left: auto;
+  right: 24px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  width: auto;
+  min-width: 290px;
+  max-width: calc(100vw - 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 10px 8px 14px;
+  border-radius: 12px;
+  transform: none;
+}
+.listen-mini-summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.listen-mini-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  color: var(--primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+.listen-mini-summary strong {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 0.88rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listen-mini-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+.listen-mini-actions .el-button.is-circle {
+  box-sizing: border-box;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  min-height: 36px;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 36px;
+}
+.listen-mini-actions .listen-mini-toggle {
+  border-radius: 50%;
+}
+.listen-expand-icon {
+  transform: rotate(180deg);
 }
 .listen-player-enter-active,
 .listen-player-leave-active {
@@ -647,6 +760,12 @@
     flex: 1 1 calc(50% - 5px);
     min-width: 0;
   }
+  .toolbar-right .listen-mode-dropdown {
+    flex: 1 1 calc(50% - 5px);
+  }
+  .toolbar-right .listen-mode-dropdown :deep(.el-button:not(.el-dropdown__caret-button)) {
+    min-width: 0;
+  }
   .extra-bar {
     flex-direction: column;
     align-items: stretch;
@@ -654,15 +773,18 @@
   .has-listen-player {
     padding-bottom: 238px;
   }
+  .has-listen-player.has-minimized-listen-player {
+    padding-bottom: 82px;
+  }
   .listen-player {
     bottom: max(8px, env(safe-area-inset-bottom));
     width: calc(100vw - 16px);
     grid-template-columns: 1fr;
     grid-template-areas:
       "summary"
+      "options"
       "progress"
-      "controls"
-      "options";
+      "controls";
     gap: 12px;
     padding: 16px 46px 14px 14px;
   }

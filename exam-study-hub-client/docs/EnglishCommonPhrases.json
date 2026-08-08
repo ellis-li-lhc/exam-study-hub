@@ -1,0 +1,2605 @@
+{
+  "title": "日常短语与短句",
+  "intro": "精选 480 条日常表达，可按组循环听读或一次连续播放。",
+  "source": {
+    "name": "Tatoeba English–Mandarin Chinese sentence pairs（ManyThings 整理版）",
+    "url": "https://www.manythings.org/anki/cmn-eng.zip",
+    "license": "CC BY 2.0 FR",
+    "attribution": "www.manythings.org/anki and tatoeba.org；每条记录保留原始署名。",
+    "accessed": "2026-08-08"
+  },
+  "groups": [
+    {
+      "id": "common-01",
+      "name": "常用短句 01",
+      "short": "短句 01",
+      "desc": "公开英中语料精选 · 第 1 组",
+      "words": [
+        {
+          "word": "I try.",
+          "meaning": "我试试。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #20776 (CK) & #8870261 (will66)"
+        },
+        {
+          "word": "I won!",
+          "meaning": "我赢了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2005192 (CK) & #5102367 (mirrorvan)"
+        },
+        {
+          "word": "Oh no!",
+          "meaning": "不会吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1299275 (CK) & #5092475 (mirrorvan)"
+        },
+        {
+          "word": "Got it?",
+          "meaning": "知道了没有？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #455353 (CM) & #455357 (GlossaMatik)"
+        },
+        {
+          "word": "He ran.",
+          "meaning": "他跑了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #672229 (CK) & #5092389 (mirrorvan)"
+        },
+        {
+          "word": "Hop in.",
+          "meaning": "跳进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1111548 (Scott) & #5092444 (mirrorvan)"
+        },
+        {
+          "word": "I know.",
+          "meaning": "我知道。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #319990 (CK) & #3378015 (GlossaMatik)"
+        },
+        {
+          "word": "I quit.",
+          "meaning": "我退出。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #731636 (Eldad) & #5102253 (mirrorvan)"
+        },
+        {
+          "word": "I'm OK.",
+          "meaning": "我沒事。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433763 (CK) & #819304 (Martha)"
+        },
+        {
+          "word": "I'm up.",
+          "meaning": "我已经起来了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2765357 (arnxy20) & #8727845 (crescat)"
+        },
+        {
+          "word": "No way!",
+          "meaning": "不可能！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2175 (CM) & #503298 (fucongcong)"
+        },
+        {
+          "word": "Try it.",
+          "meaning": "试试吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #4756252 (cairnhead) & #4757237 (ryanwoo)"
+        },
+        {
+          "word": "We try.",
+          "meaning": "我们来试试。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #247763 (CK) & #5102171 (mirrorvan)"
+        },
+        {
+          "word": "Why me?",
+          "meaning": "为什么是我？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #24958 (CK) & #796834 (fucongcong)"
+        },
+        {
+          "word": "Be calm.",
+          "meaning": "冷静点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916317 (CK) & #5092667 (mirrorvan)"
+        },
+        {
+          "word": "Be fair.",
+          "meaning": "公平点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916316 (CK) & #5092666 (mirrorvan)"
+        },
+        {
+          "word": "Be kind.",
+          "meaning": "友善点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916315 (CK) & #5092663 (mirrorvan)"
+        },
+        {
+          "word": "Be nice.",
+          "meaning": "和气点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916314 (CK) & #5092659 (mirrorvan)"
+        },
+        {
+          "word": "Call me.",
+          "meaning": "联系我。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1553532 (CK) & #5102283 (mirrorvan)"
+        },
+        {
+          "word": "Call us.",
+          "meaning": "联系我们。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916313 (CK) & #5092654 (mirrorvan)"
+        }
+      ]
+    },
+    {
+      "id": "common-02",
+      "name": "常用短句 02",
+      "short": "短句 02",
+      "desc": "公开英中语料精选 · 第 2 组",
+      "words": [
+        {
+          "word": "Come in.",
+          "meaning": "进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #348091 (Hertz) & #5102310 (mirrorvan)"
+        },
+        {
+          "word": "Go home.",
+          "meaning": "回家。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2230769 (CK) & #3212768 (GlossaMatik)"
+        },
+        {
+          "word": "Hang on!",
+          "meaning": "坚持。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1894404 (Spamster) & #5092492 (mirrorvan)"
+        },
+        {
+          "word": "He came.",
+          "meaning": "他来了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #853153 (piksea) & #437438 (fucongcong)"
+        },
+        {
+          "word": "He runs.",
+          "meaning": "他跑。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #672254 (CK) & #5092396 (mirrorvan)"
+        },
+        {
+          "word": "Help me.",
+          "meaning": "帮我一下。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #266065 (Zifre) & #332800 (fucongcong)"
+        },
+        {
+          "word": "Help us.",
+          "meaning": "帮帮我们吧！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2187193 (CK) & #7771852 (jiangche)"
+        },
+        {
+          "word": "Hold on.",
+          "meaning": "坚持。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1357000 (sacredceltic) & #5092492 (mirrorvan)"
+        },
+        {
+          "word": "I agree.",
+          "meaning": "我同意。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436281 (lukaszpp) & #333224 (fucongcong)"
+        },
+        {
+          "word": "I'm hot.",
+          "meaning": "我觉得很热。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #455953 (lukaszpp) & #489080 (GlossaMatik)"
+        },
+        {
+          "word": "I'm ill.",
+          "meaning": "我生病了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #448236 (CK) & #780291 (Martha)"
+        },
+        {
+          "word": "I'm sad.",
+          "meaning": "我很难过。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #317741 (CK) & #333736 (fucongcong)"
+        },
+        {
+          "word": "I'm shy.",
+          "meaning": "我很害羞。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2203346 (CK) & #6535146 (xjjAstrus)"
+        },
+        {
+          "word": "I'm wet.",
+          "meaning": "我濕了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1780075 (Spamster) & #8388737 (wangchou)"
+        },
+        {
+          "word": "It's OK.",
+          "meaning": "没关系。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #413756 (CK) & #333730 (fucongcong)"
+        },
+        {
+          "word": "It's me.",
+          "meaning": "是我。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #42400 (sysko) & #335161 (fucongcong)"
+        },
+        {
+          "word": "Join us.",
+          "meaning": "来加入我们吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1745546 (belgavox) & #5092554 (mirrorvan)"
+        },
+        {
+          "word": "Keep it.",
+          "meaning": "留着吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1913087 (CK) & #5092637 (mirrorvan)"
+        },
+        {
+          "word": "Move on.",
+          "meaning": "繼續前進。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #8907613 (CK) & #13206878 (LeviHighway)"
+        },
+        {
+          "word": "Oh dear!",
+          "meaning": "哎！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #10244192 (Hybrid) & #13111723 (LeviHighway)"
+        }
+      ]
+    },
+    {
+      "id": "common-03",
+      "name": "常用短句 03",
+      "short": "短句 03",
+      "desc": "公开英中语料精选 · 第 3 组",
+      "words": [
+        {
+          "word": "See you.",
+          "meaning": "再见！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1151432 (Roggy) & #336477 (fucongcong)"
+        },
+        {
+          "word": "Skip it.",
+          "meaning": "不管它。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1953076 (ozzie) & #5102320 (mirrorvan)"
+        },
+        {
+          "word": "Take it.",
+          "meaning": "拿走吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1913089 (CK) & #5092645 (mirrorvan)"
+        },
+        {
+          "word": "Tell me.",
+          "meaning": "告诉我！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1913090 (CK) & #9965594 (GlossaMatik)"
+        },
+        {
+          "word": "Wake up!",
+          "meaning": "醒醒！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #323780 (CK) & #5102191 (mirrorvan)"
+        },
+        {
+          "word": "Wash up.",
+          "meaning": "去清洗一下。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #20763 (CK) & #5092178 (mirrorvan)"
+        },
+        {
+          "word": "We know.",
+          "meaning": "我们知道。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1556167 (shanghainese) & #5102291 (mirrorvan)"
+        },
+        {
+          "word": "Who won?",
+          "meaning": "谁赢了？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2005190 (CK) & #5102365 (mirrorvan)"
+        },
+        {
+          "word": "Why not?",
+          "meaning": "为什么不？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #30545 (CK) & #796839 (fucongcong)"
+        },
+        {
+          "word": "You run.",
+          "meaning": "你跑。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #672252 (CK) & #5092393 (mirrorvan)"
+        },
+        {
+          "word": "You win.",
+          "meaning": "算你狠。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #8645635 (hamsolo474) & #2485289 (fenfang557)"
+        },
+        {
+          "word": "Be still.",
+          "meaning": "静静的，别动。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1954265 (CK) & #5102329 (mirrorvan)"
+        },
+        {
+          "word": "Beats me.",
+          "meaning": "我一无所知。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #320001 (blay_paul) & #7772071 (jiangche)"
+        },
+        {
+          "word": "Dress up.",
+          "meaning": "穿上衣服。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11917214 (CK) & #13210529 (LeviHighway)"
+        },
+        {
+          "word": "Drive on.",
+          "meaning": "往前开。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1954268 (CK) & #5102335 (mirrorvan)"
+        },
+        {
+          "word": "Get real.",
+          "meaning": "醒醒吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1324400 (Scott) & #5092481 (mirrorvan)"
+        },
+        {
+          "word": "Good job!",
+          "meaning": "做得好！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1021038 (Quazel) & #4261676 (egg0073)"
+        },
+        {
+          "word": "Have fun.",
+          "meaning": "玩得開心。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #21267 (CK) & #819292 (Martha)"
+        },
+        {
+          "word": "He tries.",
+          "meaning": "他来试试。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #288166 (CM) & #5092267 (mirrorvan)"
+        },
+        {
+          "word": "How cute!",
+          "meaning": "多可爱啊！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #36097 (CM) & #5092632 (mirrorvan)"
+        }
+      ]
+    },
+    {
+      "id": "common-04",
+      "name": "常用短句 04",
+      "short": "短句 04",
+      "desc": "公开英中语料精选 · 第 4 组",
+      "words": [
+        {
+          "word": "Humor me.",
+          "meaning": "你就随了我的意吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1954271 (CM) & #5102344 (mirrorvan)"
+        },
+        {
+          "word": "Hurry up.",
+          "meaning": "趕快!",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1329 (brauliobezerra) & #46 (fucongcong)"
+        },
+        {
+          "word": "I did it.",
+          "meaning": "我做到了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2549832 (CK) & #8709238 (crescat)"
+        },
+        {
+          "word": "I forgot.",
+          "meaning": "我忘了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436603 (lukaszpp) & #335875 (fucongcong)"
+        },
+        {
+          "word": "I resign.",
+          "meaning": "我放弃。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #731590 (Eldad) & #5102250 (mirrorvan)"
+        },
+        {
+          "word": "I'll pay.",
+          "meaning": "我來付錢。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #411285 (CK) & #819298 (Martha)"
+        },
+        {
+          "word": "I'm back.",
+          "meaning": "我回来了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #564159 (darinmex) & #10153684 (GlossaMatik)"
+        },
+        {
+          "word": "I'm busy.",
+          "meaning": "我很忙。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #261721 (CK) & #819333 (Martha)"
+        },
+        {
+          "word": "I'm cold.",
+          "meaning": "我冷。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #455947 (lukaszpp) & #471387 (fucongcong)"
+        },
+        {
+          "word": "I'm cool.",
+          "meaning": "我很酷。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2202692 (CK) & #8933590 (crescat)"
+        },
+        {
+          "word": "I'm fine.",
+          "meaning": "我很好。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #257272 (Eldad) & #794004 (fucongcong)"
+        },
+        {
+          "word": "I'm free!",
+          "meaning": "我自由了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1888443 (Spamster) & #9956709 (GlossaMatik)"
+        },
+        {
+          "word": "I'm full.",
+          "meaning": "我吃飽了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433863 (CK) & #819300 (Martha)"
+        },
+        {
+          "word": "I'm home.",
+          "meaning": "我在家裡。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111725 (CK) & #919764 (Martha)"
+        },
+        {
+          "word": "I'm lost.",
+          "meaning": "我迷失了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #455833 (lukaszpp) & #5092558 (mirrorvan)"
+        },
+        {
+          "word": "I'm sick.",
+          "meaning": "我生病了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #780304 (vgigregg) & #780291 (Martha)"
+        },
+        {
+          "word": "I'm tall.",
+          "meaning": "我个子高。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2764439 (CK) & #7772132 (jiangche)"
+        },
+        {
+          "word": "Leave me.",
+          "meaning": "让我一个人呆会儿。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1954273 (CK) & #5102345 (mirrorvan)"
+        },
+        {
+          "word": "Let's go!",
+          "meaning": "走吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #241077 (CK) & #334277 (fucongcong)"
+        },
+        {
+          "word": "Look out!",
+          "meaning": "当心！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #20719 (CK) & #5092162 (mirrorvan)"
+        }
+      ]
+    },
+    {
+      "id": "common-05",
+      "name": "常用短句 05",
+      "short": "短句 05",
+      "desc": "公开英中语料精选 · 第 5 组",
+      "words": [
+        {
+          "word": "Now stop!",
+          "meaning": "少來了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #9703310 (sebCurti) & #13201792 (LeviHighway)"
+        },
+        {
+          "word": "Say what?",
+          "meaning": "啥？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #8453907 (shekitten) & #8463674 (gumblex)"
+        },
+        {
+          "word": "She runs.",
+          "meaning": "她跑。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #672264 (CM) & #765935 (Martha)"
+        },
+        {
+          "word": "Sit down.",
+          "meaning": "请坐。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1553397 (CK) & #5780574 (verdastelo9604)"
+        },
+        {
+          "word": "Stand up.",
+          "meaning": "起立。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1573801 (donkirkby) & #1746081 (sadhen)"
+        },
+        {
+          "word": "They won.",
+          "meaning": "他们赢了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1618734 (CK) & #5092506 (mirrorvan)"
+        },
+        {
+          "word": "Trust me.",
+          "meaning": "相信我。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #954991 (CM) & #5092404 (mirrorvan)"
+        },
+        {
+          "word": "Try hard.",
+          "meaning": "努力。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #271901 (Zifre) & #5102184 (mirrorvan)"
+        },
+        {
+          "word": "Try some.",
+          "meaning": "试试吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916312 (CK) & #4757237 (ryanwoo)"
+        },
+        {
+          "word": "Try this.",
+          "meaning": "试试这个。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1916311 (CK) & #8715853 (crescat)"
+        },
+        {
+          "word": "Use this.",
+          "meaning": "请用这个。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1954278 (CK) & #9490109 (jin1)"
+        },
+        {
+          "word": "Watch me.",
+          "meaning": "看着我",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1954282 (CK) & #12615453 (Enzo)"
+        },
+        {
+          "word": "Who's he?",
+          "meaning": "他是誰？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2203694 (CK) & #6147815 (xjjAstrus)"
+        },
+        {
+          "word": "Am I next?",
+          "meaning": "下一個是我嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11651974 (ddnktr) & #13275168 (LeviHighway)"
+        },
+        {
+          "word": "Answer me.",
+          "meaning": "回答我。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #251060 (Eldad) & #784532 (fucongcong)"
+        },
+        {
+          "word": "Begin now.",
+          "meaning": "現在開始。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11904577 (CK) & #13201761 (LeviHighway)"
+        },
+        {
+          "word": "Birds fly.",
+          "meaning": "鳥類飛行。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #278213 (CK) & #819282 (Martha)"
+        },
+        {
+          "word": "Call home!",
+          "meaning": "打电话回家！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1730009 (CK) & #5092540 (mirrorvan)"
+        },
+        {
+          "word": "Calm down.",
+          "meaning": "冷静点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #435575 (CK) & #5092667 (mirrorvan)"
+        },
+        {
+          "word": "Catch him.",
+          "meaning": "抓住他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #449029 (CK) & #5092265 (mirrorvan)"
+        }
+      ]
+    },
+    {
+      "id": "common-06",
+      "name": "常用短句 06",
+      "short": "短句 06",
+      "desc": "公开英中语料精选 · 第 6 组",
+      "words": [
+        {
+          "word": "Come home.",
+          "meaning": "回家吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #413767 (Scott) & #5102214 (mirrorvan)"
+        },
+        {
+          "word": "Cool down.",
+          "meaning": "冷静点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1860739 (CK) & #5092667 (mirrorvan)"
+        },
+        {
+          "word": "Do it now.",
+          "meaning": "現在就做。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #435763 (CK) & #771521 (Martha)"
+        },
+        {
+          "word": "Dogs bark.",
+          "meaning": "狗会叫。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1357070 (rul) & #5092504 (mirrorvan)"
+        },
+        {
+          "word": "Don't cry.",
+          "meaning": "别哭。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #953247 (CK) & #4265201 (notabene)"
+        },
+        {
+          "word": "Excuse me.",
+          "meaning": "对不起。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433504 (CK) & #472304 (fucongcong)"
+        },
+        {
+          "word": "Feel this.",
+          "meaning": "来感受一下这个。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1972624 (CK) & #5092677 (mirrorvan)"
+        },
+        {
+          "word": "Follow me.",
+          "meaning": "请跟我来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #250135 (CK) & #466246 (fucongcong)"
+        },
+        {
+          "word": "Follow us.",
+          "meaning": "请跟着我们。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1972627 (CK) & #5092678 (mirrorvan)"
+        },
+        {
+          "word": "Forget it.",
+          "meaning": "算了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #20398 (Eldad) & #400312 (GlossaMatik)"
+        },
+        {
+          "word": "Go inside.",
+          "meaning": "進到裡面去。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2428954 (CK) & #13111618 (LeviHighway)"
+        },
+        {
+          "word": "Good luck.",
+          "meaning": "祝你好运。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #239431 (sacredceltic) & #812490 (fucongcong)"
+        },
+        {
+          "word": "Hands off.",
+          "meaning": "别碰！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #268620 (CM) & #8870260 (will66)"
+        },
+        {
+          "word": "He's a DJ.",
+          "meaning": "他是一个 DJ 。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1383444 (CK) & #1878329 (sadhen)"
+        },
+        {
+          "word": "He's busy.",
+          "meaning": "他很忙。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2535641 (CM) & #343715 (fucongcong)"
+        },
+        {
+          "word": "He's lazy.",
+          "meaning": "他很懒。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2030108 (Spamster) & #343917 (fucongcong)"
+        },
+        {
+          "word": "How awful!",
+          "meaning": "太可怕了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #72077 (CM) & #5102161 (mirrorvan)"
+        },
+        {
+          "word": "How weird!",
+          "meaning": "真奇怪。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #4462562 (CK) & #1705791 (sadhen)"
+        },
+        {
+          "word": "I am cold.",
+          "meaning": "我冷。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436325 (lukaszpp) & #471387 (fucongcong)"
+        },
+        {
+          "word": "I am full.",
+          "meaning": "我吃飽了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #620122 (ulyssemc1) & #819300 (Martha)"
+        }
+      ]
+    },
+    {
+      "id": "common-07",
+      "name": "常用短句 07",
+      "short": "短句 07",
+      "desc": "公开英中语料精选 · 第 7 组",
+      "words": [
+        {
+          "word": "I am okay.",
+          "meaning": "我沒事。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #376402 (saeb) & #819304 (Martha)"
+        },
+        {
+          "word": "I am sick.",
+          "meaning": "我生病了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436427 (lukaszpp) & #780291 (Martha)"
+        },
+        {
+          "word": "I am tall.",
+          "meaning": "我个子高。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436275 (lukaszpp) & #7772132 (jiangche)"
+        },
+        {
+          "word": "I clapped.",
+          "meaning": "我拍手。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6196262 (CK) & #920090 (Martha)"
+        },
+        {
+          "word": "I get you.",
+          "meaning": "我了解你。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #904789 (Trailsend) & #904787 (kanaorange)"
+        },
+        {
+          "word": "I give up.",
+          "meaning": "我放弃。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #241200 (CK) & #5102250 (mirrorvan)"
+        },
+        {
+          "word": "I hope so.",
+          "meaning": "我希望如此。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #51142 (CK) & #333103 (fucongcong)"
+        },
+        {
+          "word": "I laughed.",
+          "meaning": "我笑了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #258713 (CK) & #335165 (fucongcong)"
+        },
+        {
+          "word": "I promise.",
+          "meaning": "我向你保证。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111800 (CK) & #502727 (fucongcong)"
+        },
+        {
+          "word": "I was shy.",
+          "meaning": "我害羞。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #4695537 (Hybrid) & #8215726 (verdastelo9604)"
+        },
+        {
+          "word": "I'll swim.",
+          "meaning": "我要游泳。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #5576197 (CK) & #6994070 (verdastelo9604)"
+        },
+        {
+          "word": "I'm a man.",
+          "meaning": "我是个男人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #580774 (CM) & #333655 (fucongcong)"
+        },
+        {
+          "word": "I'm bored.",
+          "meaning": "我覺得很無聊。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #431539 (Clavain) & #3668663 (egg0073)"
+        },
+        {
+          "word": "I'm first.",
+          "meaning": "我是第一。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2202863 (CK) & #8686688 (crescat)"
+        },
+        {
+          "word": "I'm lucky.",
+          "meaning": "我运气很好。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111713 (CK) & #437296 (fucongcong)"
+        },
+        {
+          "word": "I'm right.",
+          "meaning": "我是對的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #321343 (CK) & #816721 (Martha)"
+        },
+        {
+          "word": "I'm sober.",
+          "meaning": "我很清醒。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2361904 (CK) & #9961281 (GlossaMatik)"
+        },
+        {
+          "word": "I'm sorry.",
+          "meaning": "对不起。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #38387 (CK) & #472304 (fucongcong)"
+        },
+        {
+          "word": "I'm tired.",
+          "meaning": "我很累。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1705 (brauliobezerra) & #397734 (GlossaMatik)"
+        },
+        {
+          "word": "I'm young.",
+          "meaning": "我還年輕。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #321850 (CK) & #832459 (Martha)"
+        }
+      ]
+    },
+    {
+      "id": "common-08",
+      "name": "常用短句 08",
+      "short": "短句 08",
+      "desc": "公开英中语料精选 · 第 8 组",
+      "words": [
+        {
+          "word": "Ignore it.",
+          "meaning": "不放在眼裡。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2649249 (CK) & #5396469 (xjjAstrus)"
+        },
+        {
+          "word": "Is it far?",
+          "meaning": "遠嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1308427 (CK) & #6559044 (xjjAstrus)"
+        },
+        {
+          "word": "Is it you?",
+          "meaning": "是你吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1259560 (Scott) & #10696048 (GlossaMatik)"
+        },
+        {
+          "word": "It rained.",
+          "meaning": "下了雨。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1435651 (mattpbooth) & #2481833 (alvations)"
+        },
+        {
+          "word": "It snowed.",
+          "meaning": "下雪了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1181168 (Eldad) & #780269 (Martha)"
+        },
+        {
+          "word": "It's cold.",
+          "meaning": "天很冷。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1813 (CK) & #334647 (fucongcong)"
+        },
+        {
+          "word": "It's food.",
+          "meaning": "它是食物。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2187210 (CK) & #4887700 (musclegirlxyp)"
+        },
+        {
+          "word": "It's free.",
+          "meaning": "它是免費的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #435782 (CK) & #825127 (Martha)"
+        },
+        {
+          "word": "It's late.",
+          "meaning": "很晚了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #31195 (CK) & #745892 (fucongcong)"
+        },
+        {
+          "word": "It's mine.",
+          "meaning": "是我的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2123592 (CK) & #13614516 (LeviHighway)"
+        },
+        {
+          "word": "It's true.",
+          "meaning": "這是真的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #54868 (CK) & #771357 (Martha)"
+        },
+        {
+          "word": "Keep them.",
+          "meaning": "留着吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111633 (CK) & #5092637 (mirrorvan)"
+        },
+        {
+          "word": "Let me go!",
+          "meaning": "放開我！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #250112 (CK) & #13111597 (LeviHighway)"
+        },
+        {
+          "word": "Let me in.",
+          "meaning": "让我进去。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #277466 (CK) & #333350 (fucongcong)"
+        },
+        {
+          "word": "Lie still.",
+          "meaning": "躺着不动。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1839430 (CK) & #5092579 (mirrorvan)"
+        },
+        {
+          "word": "Look back!",
+          "meaning": "回头看！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #240166 (CK) & #5102163 (mirrorvan)"
+        },
+        {
+          "word": "Move over.",
+          "meaning": "腾一下地方。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1553407 (CK) & #5102267 (mirrorvan)"
+        },
+        {
+          "word": "Of course!",
+          "meaning": "當然!",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433730 (CK) & #771439 (Martha)"
+        },
+        {
+          "word": "Read this.",
+          "meaning": "念这个。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1098659 (cntrational) & #5092431 (mirrorvan)"
+        },
+        {
+          "word": "Search me.",
+          "meaning": "搜尋我。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #328870 (fcbond) & #13138982 (LeviHighway)"
+        }
+      ]
+    },
+    {
+      "id": "common-09",
+      "name": "常用短句 09",
+      "short": "短句 09",
+      "desc": "公开英中语料精选 · 第 9 组",
+      "words": [
+        {
+          "word": "See above.",
+          "meaning": "参见上文。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #273621 (CM) & #333511 (fucongcong)"
+        },
+        {
+          "word": "She cried.",
+          "meaning": "她哭了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #313193 (CK) & #5092280 (mirrorvan)"
+        },
+        {
+          "word": "She tried.",
+          "meaning": "她试过了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #309976 (CK) & #5092274 (mirrorvan)"
+        },
+        {
+          "word": "She walks.",
+          "meaning": "她在行走。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #316925 (CK) & #5092290 (mirrorvan)"
+        },
+        {
+          "word": "Sit tight.",
+          "meaning": "耐心等着。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #40196 (CM) & #5092221 (mirrorvan)"
+        },
+        {
+          "word": "Slow down.",
+          "meaning": "慢一點。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2187252 (CK) & #4754645 (egg0073)"
+        },
+        {
+          "word": "Start now.",
+          "meaning": "馬上開始。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111523 (CK) & #13531817 (LeviHighway)"
+        },
+        {
+          "word": "Stay calm.",
+          "meaning": "保持冷靜。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #788304 (hrin) & #778870 (Martha)"
+        },
+        {
+          "word": "Stay down!",
+          "meaning": "趴着！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1777435 (Spamster) & #5092568 (mirrorvan)"
+        },
+        {
+          "word": "Stay home.",
+          "meaning": "待在家裡。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #8624434 (Adelpa) & #13138840 (LeviHighway)"
+        },
+        {
+          "word": "Stop that!",
+          "meaning": "住手。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #651592 (orbpic) & #5092387 (mirrorvan)"
+        },
+        {
+          "word": "Take care!",
+          "meaning": "照顾好自己。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #324861 (CK) & #510765 (fucongcong)"
+        },
+        {
+          "word": "Take mine.",
+          "meaning": "拿我的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111483 (CK) & #9958257 (GlossaMatik)"
+        },
+        {
+          "word": "Thank you.",
+          "meaning": "谢谢。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1876041 (Asma) & #5094881 (musclegirlxyp)"
+        },
+        {
+          "word": "Then what?",
+          "meaning": "那又怎樣?",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #53035 (CM) & #51 (fucongcong)"
+        },
+        {
+          "word": "They left.",
+          "meaning": "他们离开了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111368 (CK) & #8696255 (crescat)"
+        },
+        {
+          "word": "Time's up.",
+          "meaning": "时间到了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6611926 (Eccles17) & #5094825 (Jin_Dehong)"
+        },
+        {
+          "word": "Try again.",
+          "meaning": "再試一次。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #31723 (CK) & #824621 (Martha)"
+        },
+        {
+          "word": "Turn left.",
+          "meaning": "向左转。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #464284 (lukaszpp) & #465034 (fucongcong)"
+        },
+        {
+          "word": "Wait here.",
+          "meaning": "在这等着。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1841188 (CK) & #5102308 (mirrorvan)"
+        }
+      ]
+    },
+    {
+      "id": "common-10",
+      "name": "常用短句 10",
+      "short": "短句 10",
+      "desc": "公开英中语料精选 · 第 10 组",
+      "words": [
+        {
+          "word": "Watch out!",
+          "meaning": "当心！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #375828 (megamanenm) & #5092162 (mirrorvan)"
+        },
+        {
+          "word": "Well done!",
+          "meaning": "做得好！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #464478 (lukaszpp) & #4261676 (egg0073)"
+        },
+        {
+          "word": "Who cares?",
+          "meaning": "爱谁谁。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #40434 (CK) & #5092226 (mirrorvan)"
+        },
+        {
+          "word": "Who is he?",
+          "meaning": "他是誰？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #347331 (sysko) & #6147815 (xjjAstrus)"
+        },
+        {
+          "word": "Who knows?",
+          "meaning": "谁知道？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #276369 (CK) & #395531 (GlossaMatik)"
+        },
+        {
+          "word": "Who's she?",
+          "meaning": "她是谁？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2203797 (CK) & #4887707 (musclegirlxyp)"
+        },
+        {
+          "word": "Work more.",
+          "meaning": "做更多工作。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #10248874 (ddnktr) & #13150950 (LeviHighway)"
+        },
+        {
+          "word": "You stink.",
+          "meaning": "你身上发臭了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #4834656 (shekitten) & #7771683 (jiangche)"
+        },
+        {
+          "word": "All aboard!",
+          "meaning": "请上船！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #22121 (CM) & #5092195 (mirrorvan)"
+        },
+        {
+          "word": "Am I wrong?",
+          "meaning": "我錯了嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #410779 (CK) & #825125 (Martha)"
+        },
+        {
+          "word": "Are you up?",
+          "meaning": "你起床了嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1841739 (CK) & #10221072 (xjjAstrus)"
+        },
+        {
+          "word": "Be careful!",
+          "meaning": "小心!",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2047579 (CK) & #11207038 (klzlueylx)"
+        },
+        {
+          "word": "Be on time.",
+          "meaning": "要守时！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2244995 (CK) & #8743793 (crescat)"
+        },
+        {
+          "word": "Be patient.",
+          "meaning": "耐心等着。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1486456 (Spamster) & #5092221 (mirrorvan)"
+        },
+        {
+          "word": "Begin work.",
+          "meaning": "開始工作。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11924391 (CK) & #13150947 (LeviHighway)"
+        },
+        {
+          "word": "Birds sing.",
+          "meaning": "鳥兒歌唱。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #278174 (CK) & #819283 (Martha)"
+        },
+        {
+          "word": "Can I help?",
+          "meaning": "我可以幫忙嗎?",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #266051 (CK) & #908384 (Martha)"
+        },
+        {
+          "word": "Come on in.",
+          "meaning": "进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #348107 (Zifre) & #5102310 (mirrorvan)"
+        },
+        {
+          "word": "Cut it out!",
+          "meaning": "少來了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #29900 (CK) & #13201792 (LeviHighway)"
+        },
+        {
+          "word": "Do you box?",
+          "meaning": "你玩拳擊嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11866751 (CK) & #13138274 (LeviHighway)"
+        }
+      ]
+    },
+    {
+      "id": "common-11",
+      "name": "常用短句 11",
+      "short": "短句 11",
+      "desc": "公开英中语料精选 · 第 11 组",
+      "words": [
+        {
+          "word": "Do you run?",
+          "meaning": "你跑步嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11952131 (CK) & #13138262 (LeviHighway)"
+        },
+        {
+          "word": "Don't fret.",
+          "meaning": "別擔心。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1520777 (Spamster) & #395933 (Martha)"
+        },
+        {
+          "word": "Don't move!",
+          "meaning": "别动！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111911 (CK) & #2531345 (fenfang557)"
+        },
+        {
+          "word": "Don't wait.",
+          "meaning": "不要等待！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1292208 (CK) & #4970132 (wzhd)"
+        },
+        {
+          "word": "Fill it up.",
+          "meaning": "把它填滿。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #322631 (CK) & #825952 (Martha)"
+        },
+        {
+          "word": "Follow him.",
+          "meaning": "跟著他走。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433754 (CK) & #819287 (Martha)"
+        },
+        {
+          "word": "Go on home.",
+          "meaning": "回家吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2230772 (CK) & #5102214 (mirrorvan)"
+        },
+        {
+          "word": "Go wash up.",
+          "meaning": "去洗洗吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2230782 (CK) & #8696177 (crescat)"
+        },
+        {
+          "word": "God exists.",
+          "meaning": "上帝存在。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433457 (CK) & #819291 (Martha)"
+        },
+        {
+          "word": "Good night.",
+          "meaning": "晚安。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2362724 (NotApplicable) & #4463431 (maple)"
+        },
+        {
+          "word": "Have faith.",
+          "meaning": "有信念。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6480956 (OsoHombre) & #13138801 (LeviHighway)"
+        },
+        {
+          "word": "He gave in.",
+          "meaning": "他让步了.",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #296376 (CK) & #1424209 (asosan)"
+        },
+        {
+          "word": "He is a DJ.",
+          "meaning": "他是一个 DJ 。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #288669 (CK) & #1878329 (sadhen)"
+        },
+        {
+          "word": "He is busy.",
+          "meaning": "他很忙。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1349951 (sacredceltic) & #343715 (fucongcong)"
+        },
+        {
+          "word": "He is lazy.",
+          "meaning": "他很懒。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #299797 (CK) & #343917 (fucongcong)"
+        },
+        {
+          "word": "He is mean.",
+          "meaning": "他很凶。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #482973 (minshirui) & #334863 (fucongcong)"
+        },
+        {
+          "word": "He is poor.",
+          "meaning": "他很穷。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #516601 (kebukebu) & #336441 (fucongcong)"
+        },
+        {
+          "word": "He is tall.",
+          "meaning": "他高。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #773336 (marloncori) & #4887716 (musclegirlxyp)"
+        },
+        {
+          "word": "He laughed.",
+          "meaning": "他笑了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #299650 (Sprachprofi) & #336964 (fucongcong)"
+        },
+        {
+          "word": "Hey, relax.",
+          "meaning": "嘿，放松点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #325177 (CM) & #5102212 (mirrorvan)"
+        }
+      ]
+    },
+    {
+      "id": "common-12",
+      "name": "常用短句 12",
+      "short": "短句 12",
+      "desc": "公开英中语料精选 · 第 12 组",
+      "words": [
+        {
+          "word": "How lovely!",
+          "meaning": "多可爱啊！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1913086 (CK) & #5092632 (mirrorvan)"
+        },
+        {
+          "word": "How's work?",
+          "meaning": "工作怎么样？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #245394 (CK) & #5100103 (mirrorvan)"
+        },
+        {
+          "word": "Hurry home.",
+          "meaning": "赶快回家。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1841177 (CK) & #5092584 (mirrorvan)"
+        },
+        {
+          "word": "I am a man.",
+          "meaning": "我是个男人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #386704 (Mouseneb) & #333655 (fucongcong)"
+        },
+        {
+          "word": "I am short.",
+          "meaning": "我个头矮。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436273 (lukaszpp) & #4265202 (notabene)"
+        },
+        {
+          "word": "I can cook.",
+          "meaning": "我会做饭。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245639 (CK) & #4456369 (plutowu)"
+        },
+        {
+          "word": "I can swim.",
+          "meaning": "我會游泳。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #256178 (CK) & #918075 (Martha)"
+        },
+        {
+          "word": "I can't go.",
+          "meaning": "我不能走。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1951742 (CK) & #7771688 (jiangche)"
+        },
+        {
+          "word": "I chew gum.",
+          "meaning": "我嚼口香糖。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2528462 (BoriQa) & #9956903 (GlossaMatik)"
+        },
+        {
+          "word": "I eat here.",
+          "meaning": "我在這裡吃。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #449105 (CK) & #826251 (Martha)"
+        },
+        {
+          "word": "I envy her.",
+          "meaning": "我嫉妒她。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1414039 (Eldad) & #5359462 (egg0073)"
+        },
+        {
+          "word": "I envy him.",
+          "meaning": "我羡慕他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #259949 (CK) & #2076343 (sadhen)"
+        },
+        {
+          "word": "I feel sad.",
+          "meaning": "我很难过。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #5263414 (CK) & #333736 (fucongcong)"
+        },
+        {
+          "word": "I heard it.",
+          "meaning": "我聽到了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245911 (CK) & #8730182 (shou)"
+        },
+        {
+          "word": "I know him.",
+          "meaning": "我認識他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #71751 (CK) & #825892 (Martha)"
+        },
+        {
+          "word": "I like tea.",
+          "meaning": "我喜欢茶。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #253293 (CK) & #399985 (fucongcong)"
+        },
+        {
+          "word": "I like you.",
+          "meaning": "我喜歡你。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #410751 (CK) & #762004 (Martha)"
+        },
+        {
+          "word": "I miss him.",
+          "meaning": "我想念他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #479775 (AniDeer) & #482707 (biglion)"
+        },
+        {
+          "word": "I miss you.",
+          "meaning": "我想你。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1308 (brauliobezerra) & #813490 (fucongcong)"
+        },
+        {
+          "word": "I need you.",
+          "meaning": "我需要你。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #17735 (CK) & #512853 (fucongcong)"
+        }
+      ]
+    },
+    {
+      "id": "common-13",
+      "name": "常用短句 13",
+      "short": "短句 13",
+      "desc": "公开英中语料精选 · 第 13 组",
+      "words": [
+        {
+          "word": "I promised.",
+          "meaning": "我答应了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2123633 (CK) & #10194942 (GlossaMatik)"
+        },
+        {
+          "word": "I think so.",
+          "meaning": "我想是這樣的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #254072 (CK) & #824631 (Martha)"
+        },
+        {
+          "word": "I use this.",
+          "meaning": "我使用这个。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1356774 (sacredceltic) & #1533414 (CLARET)"
+        },
+        {
+          "word": "I want you.",
+          "meaning": "我想要你。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #17707 (CK) & #604627 (CLARET)"
+        },
+        {
+          "word": "I'll do it.",
+          "meaning": "我會做的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433474 (CK) & #819461 (Martha)"
+        },
+        {
+          "word": "I'm a hero.",
+          "meaning": "我是個英雄。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #25509 (CK) & #826001 (Martha)"
+        },
+        {
+          "word": "I'm a lady.",
+          "meaning": "我是个女人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11170525 (CK) & #7774367 (jiangche)"
+        },
+        {
+          "word": "I'm a liar.",
+          "meaning": "我是个骗子。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1468181 (AMIKEMA) & #8685539 (crescat)"
+        },
+        {
+          "word": "I'm buying.",
+          "meaning": "我买了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1844179 (CK) & #389383 (fucongcong)"
+        },
+        {
+          "word": "I'm coming.",
+          "meaning": "我来啦。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #52081 (CK) & #419683 (GlossaMatik)"
+        },
+        {
+          "word": "I'm eating.",
+          "meaning": "我正在吃东西。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1189719 (Vortarulo) & #1790133 (sadhen)"
+        },
+        {
+          "word": "I'm faster.",
+          "meaning": "我更快。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #3378201 (CK) & #3378200 (GlossaMatik)"
+        },
+        {
+          "word": "I'm humble.",
+          "meaning": "我是謙虛的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2202962 (CK) & #5611553 (verdastelo9604)"
+        },
+        {
+          "word": "I'm sleepy.",
+          "meaning": "我困了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1438701 (tim1452) & #1358461 (sadhen)"
+        },
+        {
+          "word": "I'm so fat.",
+          "meaning": "我好胖哦。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1339 (Zifre) & #50 (fucongcong)"
+        },
+        {
+          "word": "I'm thirty.",
+          "meaning": "我三十歲。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111679 (CK) & #8767504 (xjjAstrus)"
+        },
+        {
+          "word": "I'm twelve.",
+          "meaning": "我十二岁了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2069142 (halfb1t) & #9959852 (GlossaMatik)"
+        },
+        {
+          "word": "Is he tall?",
+          "meaning": "他长得高吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #302406 (CK) & #8866914 (crescat)"
+        },
+        {
+          "word": "Is it true?",
+          "meaning": "是真的吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #378827 (CK) & #3377988 (GlossaMatik)"
+        },
+        {
+          "word": "It's great.",
+          "meaning": "真是太好了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #3824325 (CK) & #5942060 (verdastelo9604)"
+        }
+      ]
+    },
+    {
+      "id": "common-14",
+      "name": "常用短句 14",
+      "short": "短句 14",
+      "desc": "公开英中语料精选 · 第 14 组",
+      "words": [
+        {
+          "word": "It's green.",
+          "meaning": "是綠色。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2187213 (CK) & #13112082 (LeviHighway)"
+        },
+        {
+          "word": "It's night.",
+          "meaning": "是晚上了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2187224 (CK) & #6047459 (verdastelo9604)"
+        },
+        {
+          "word": "It's wrong.",
+          "meaning": "不对。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1537010 (Spamster) & #10961087 (xjjAstrus)"
+        },
+        {
+          "word": "Just relax.",
+          "meaning": "放松点吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1555685 (Spamster) & #5102290 (mirrorvan)"
+        },
+        {
+          "word": "Keep it up!",
+          "meaning": "坚持。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #45024 (CK) & #5092492 (mirrorvan)"
+        },
+        {
+          "word": "Keep quiet!",
+          "meaning": "保持安静！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #272075 (CK) & #5102187 (mirrorvan)"
+        },
+        {
+          "word": "Let him in.",
+          "meaning": "让他进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #464814 (CK) & #3032023 (sadhen)"
+        },
+        {
+          "word": "Let me see.",
+          "meaning": "让我想一想。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #65316 (CK) & #707208 (Yashanti)"
+        },
+        {
+          "word": "Let me try.",
+          "meaning": "让我试试。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1554612 (CK) & #333051 (fucongcong)"
+        },
+        {
+          "word": "Let's play.",
+          "meaning": "让我们玩耍吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #324520 (CK) & #9956028 (GlossaMatik)"
+        },
+        {
+          "word": "Let's pray.",
+          "meaning": "让我们开始祈祷吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2187249 (CK) & #8673663 (crescat)"
+        },
+        {
+          "word": "Let's walk.",
+          "meaning": "我们走走吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2007935 (CK) & #5897892 (verdastelo9604)"
+        },
+        {
+          "word": "Look at me.",
+          "meaning": "看着我",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #262412 (CK) & #12615453 (Enzo)"
+        },
+        {
+          "word": "Look there.",
+          "meaning": "看那里。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1635351 (Amastan) & #5092523 (mirrorvan)"
+        },
+        {
+          "word": "No comment.",
+          "meaning": "无可奉告。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #873323 (U2FS) & #7774602 (jiangche)"
+        },
+        {
+          "word": "No kidding?",
+          "meaning": "真的？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1585482 (ngdongit) & #1397360 (mtdot)"
+        },
+        {
+          "word": "No problem!",
+          "meaning": "没问题！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #413611 (blay_paul) & #2043289 (sadhen)"
+        },
+        {
+          "word": "Oh, really?",
+          "meaning": "噢，真的嗎?",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2570909 (Hybrid) & #2771144 (cienias)"
+        },
+        {
+          "word": "Once again.",
+          "meaning": "再一次。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433729 (CK) & #826049 (Martha)"
+        },
+        {
+          "word": "Please sit.",
+          "meaning": "请用座。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #478180 (CK) & #8500212 (black333)"
+        }
+      ]
+    },
+    {
+      "id": "common-15",
+      "name": "常用短句 15",
+      "short": "短句 15",
+      "desc": "公开英中语料精选 · 第 15 组",
+      "words": [
+        {
+          "word": "She smiled.",
+          "meaning": "她笑了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #311898 (CK) & #5092276 (mirrorvan)"
+        },
+        {
+          "word": "Stand back!",
+          "meaning": "往后站！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1894221 (Spamster) & #5092607 (mirrorvan)"
+        },
+        {
+          "word": "Start here.",
+          "meaning": "從這裡開始。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111524 (CK) & #13531819 (LeviHighway)"
+        },
+        {
+          "word": "Stay sharp.",
+          "meaning": "保持警惕。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1627331 (Spamster) & #5092516 (mirrorvan)"
+        },
+        {
+          "word": "Stay still.",
+          "meaning": "别动。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111509 (CK) & #9958178 (GlossaMatik)"
+        },
+        {
+          "word": "Stay there.",
+          "meaning": "留在这里别动。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #462476 (lukaszpp) & #5102231 (mirrorvan)"
+        },
+        {
+          "word": "Step aside.",
+          "meaning": "让开。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #40051 (CK) & #5092217 (mirrorvan)"
+        },
+        {
+          "word": "Step on it!",
+          "meaning": "快一點！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #786811 (hrin) & #4754629 (egg0073)"
+        },
+        {
+          "word": "Study hard.",
+          "meaning": "好好学习。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #53465 (CK) & #5092230 (mirrorvan)"
+        },
+        {
+          "word": "That hurts.",
+          "meaning": "真疼。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #462526 (lukaszpp) & #5092328 (mirrorvan)"
+        },
+        {
+          "word": "That's odd.",
+          "meaning": "奇怪。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1453153 (Spamster) & #917754 (GlossaMatik)"
+        },
+        {
+          "word": "That's wet.",
+          "meaning": "那是湿的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6532456 (CK) & #9970073 (GlossaMatik)"
+        },
+        {
+          "word": "Time flies.",
+          "meaning": "時光飛逝。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #263886 (CK) & #718352 (egg0073)"
+        },
+        {
+          "word": "Turn right.",
+          "meaning": "向右转。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #464290 (lukaszpp) & #5092330 (mirrorvan)"
+        },
+        {
+          "word": "We laughed.",
+          "meaning": "我们笑了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1922452 (teapot) & #5092668 (mirrorvan)"
+        },
+        {
+          "word": "We lost it.",
+          "meaning": "我们失去了它。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2241150 (CK) & #4844980 (pig8322)"
+        },
+        {
+          "word": "We'll cook.",
+          "meaning": "我们会做饭的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2203631 (CK) & #2780382 (GlossaMatik)"
+        },
+        {
+          "word": "We're boys.",
+          "meaning": "我們是男孩。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6874274 (CK) & #825895 (Martha)"
+        },
+        {
+          "word": "We're late.",
+          "meaning": "我們遲到了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2107352 (CK) & #848203 (Martha)"
+        },
+        {
+          "word": "What is it?",
+          "meaning": "它是什么？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #42849 (brauliobezerra) & #4887708 (musclegirlxyp)"
+        }
+      ]
+    },
+    {
+      "id": "common-16",
+      "name": "常用短句 16",
+      "short": "短句 16",
+      "desc": "公开英中语料精选 · 第 16 组",
+      "words": [
+        {
+          "word": "What's new?",
+          "meaning": "有什么新鲜事吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #25029 (CK) & #794256 (fucongcong)"
+        },
+        {
+          "word": "Where am I?",
+          "meaning": "我在哪裡？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #255212 (adjusting) & #884699 (Martha)"
+        },
+        {
+          "word": "Who are we?",
+          "meaning": "我們是誰？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2254698 (CK) & #6146408 (xjjAstrus)"
+        },
+        {
+          "word": "Who is she?",
+          "meaning": "她是谁？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #315731 (CK) & #4887707 (musclegirlxyp)"
+        },
+        {
+          "word": "Who's next?",
+          "meaning": "下一个是谁？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2561317 (Hybrid) & #7768204 (jiangche)"
+        },
+        {
+          "word": "Who's that?",
+          "meaning": "这是谁啊？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #742806 (rpglover64) & #9958407 (GlossaMatik)"
+        },
+        {
+          "word": "Wood burns.",
+          "meaning": "木材可燃。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #323576 (CK) & #826256 (Martha)"
+        },
+        {
+          "word": "You can go.",
+          "meaning": "您可以走了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1553295 (CK) & #396894 (GlossaMatik)"
+        },
+        {
+          "word": "You got me.",
+          "meaning": "算你狠。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2254995 (CK) & #2485289 (fenfang557)"
+        },
+        {
+          "word": "You may go.",
+          "meaning": "您可以走了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #518553 (CK) & #396894 (GlossaMatik)"
+        },
+        {
+          "word": "Are we done?",
+          "meaning": "我们完成了吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1553536 (CK) & #1783788 (sadhen)"
+        },
+        {
+          "word": "Are you mad?",
+          "meaning": "您生气了吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #18965 (CK) & #476597 (fucongcong)"
+        },
+        {
+          "word": "Are you new?",
+          "meaning": "你是新来的吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #429820 (CM) & #429821 (GlossaMatik)"
+        },
+        {
+          "word": "Are you sad?",
+          "meaning": "你傷心嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1755584 (Betsemes) & #6073888 (verdastelo9604)"
+        },
+        {
+          "word": "Be friendly.",
+          "meaning": "友善点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111962 (CK) & #5092663 (mirrorvan)"
+        },
+        {
+          "word": "Be punctual.",
+          "meaning": "要守时！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111959 (CK) & #8743793 (crescat)"
+        },
+        {
+          "word": "Break it up!",
+          "meaning": "停手！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245010 (CK) & #5093963 (mirrorvan)"
+        },
+        {
+          "word": "Can I begin?",
+          "meaning": "我可以开始了吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245038 (CK) & #10194956 (GlossaMatik)"
+        },
+        {
+          "word": "Can I start?",
+          "meaning": "我可以开始了吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #9230028 (CK) & #10194956 (GlossaMatik)"
+        },
+        {
+          "word": "Can you see?",
+          "meaning": "你能看吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1553530 (CK) & #1783787 (sadhen)"
+        }
+      ]
+    },
+    {
+      "id": "common-17",
+      "name": "常用短句 17",
+      "short": "短句 17",
+      "desc": "公开英中语料精选 · 第 17 组",
+      "words": [
+        {
+          "word": "Can you ski?",
+          "meaning": "你能滑雪嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2748477 (CM) & #13161169 (LeviHighway)"
+        },
+        {
+          "word": "Come inside.",
+          "meaning": "进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111930 (CK) & #5102310 (mirrorvan)"
+        },
+        {
+          "word": "Count me in.",
+          "meaning": "算我一个.",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #42880 (CK) & #1424217 (asosan)"
+        },
+        {
+          "word": "Did it help?",
+          "meaning": "有用嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #7744125 (raggione) & #13109968 (LeviHighway)"
+        },
+        {
+          "word": "Did you eat?",
+          "meaning": "吃了嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #9606050 (megamanenm) & #13274623 (LeviHighway)"
+        },
+        {
+          "word": "Do as I say.",
+          "meaning": "按我說的做。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2029931 (Spamster) & #6150007 (verdastelo9604)"
+        },
+        {
+          "word": "Don't laugh.",
+          "meaning": "别笑！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1771554 (Scott) & #9641453 (jin1)"
+        },
+        {
+          "word": "Don't leave!",
+          "meaning": "別走！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #872936 (CK) & #6131474 (verdastelo9604)"
+        },
+        {
+          "word": "Don't panic!",
+          "meaning": "不要恐慌！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #810774 (Zaphod) & #6119462 (verdastelo9604)"
+        },
+        {
+          "word": "Don't shoot.",
+          "meaning": "停火。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1972643 (CK) & #5092693 (mirrorvan)"
+        },
+        {
+          "word": "Don't shout.",
+          "meaning": "不许大叫。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #279585 (CK) & #2393083 (fenfang557)"
+        },
+        {
+          "word": "Don't smile.",
+          "meaning": "不要微笑。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111902 (CK) & #8577720 (GlossaMatik)"
+        },
+        {
+          "word": "Don't worry.",
+          "meaning": "你不要着急。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #506446 (rtomharper) & #394139 (GlossaMatik)"
+        },
+        {
+          "word": "Get dressed.",
+          "meaning": "你穿點東西。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111832 (CK) & #8727932 (shou)"
+        },
+        {
+          "word": "Get serious.",
+          "meaning": "认真点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #268457 (CK) & #346790 (fucongcong)"
+        },
+        {
+          "word": "Get started.",
+          "meaning": "開始。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111827 (CK) & #13525483 (LeviHighway)"
+        },
+        {
+          "word": "Have a look.",
+          "meaning": "请看一看。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245539 (CK) & #8935907 (crescat)"
+        },
+        {
+          "word": "He is alone.",
+          "meaning": "他獨自一人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #293708 (CK) & #825136 (Martha)"
+        },
+        {
+          "word": "He was busy.",
+          "meaning": "他很忙。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #303699 (CK) & #343715 (fucongcong)"
+        },
+        {
+          "word": "He's a liar.",
+          "meaning": "他是個騙子。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1522255 (erikspen) & #8767447 (xjjAstrus)"
+        }
+      ]
+    },
+    {
+      "id": "common-18",
+      "name": "常用短句 18",
+      "short": "短句 18",
+      "desc": "公开英中语料精选 · 第 18 组",
+      "words": [
+        {
+          "word": "He's strong.",
+          "meaning": "他很強壯。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #295297 (CK) & #819293 (Martha)"
+        },
+        {
+          "word": "Here we are!",
+          "meaning": "我們到了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #54174 (CK) & #819471 (Martha)"
+        },
+        {
+          "word": "Here, catch!",
+          "meaning": "这里，快抓住。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6858683 (Hybrid) & #6858750 (SherryChen)"
+        },
+        {
+          "word": "How are you?",
+          "meaning": "你們好嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #373320 (CK) & #1761553 (egg0073)"
+        },
+        {
+          "word": "How curious!",
+          "meaning": "真奇怪。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1913085 (CK) & #1705791 (sadhen)"
+        },
+        {
+          "word": "How is life?",
+          "meaning": "生活怎么样？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2205973 (freddy1) & #402747 (GlossaMatik)"
+        },
+        {
+          "word": "How strange!",
+          "meaning": "真奇怪。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1913092 (CK) & #1705791 (sadhen)"
+        },
+        {
+          "word": "I also went.",
+          "meaning": "我也去了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #262358 (CK) & #400490 (GlossaMatik)"
+        },
+        {
+          "word": "I am coming.",
+          "meaning": "我來了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #65918 (CK) & #826249 (Martha)"
+        },
+        {
+          "word": "I am online.",
+          "meaning": "我上网了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #436415 (lukaszpp) & #797368 (GlossaMatik)"
+        },
+        {
+          "word": "I buy tapes.",
+          "meaning": "我買磁帶。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #435445 (CK) & #832833 (Martha)"
+        },
+        {
+          "word": "I can drive.",
+          "meaning": "我會開車。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #744722 (CK) & #881297 (Martha)"
+        },
+        {
+          "word": "I can't say.",
+          "meaning": "我不能说。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #24897 (CK) & #796833 (fucongcong)"
+        },
+        {
+          "word": "I don't lie.",
+          "meaning": "我不說謊。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245722 (CK) & #6065390 (verdastelo9604)"
+        },
+        {
+          "word": "I eat bread.",
+          "meaning": "我吃面包。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1867478 (CK) & #843482 (fucongcong)"
+        },
+        {
+          "word": "I feel cold.",
+          "meaning": "我觉得冷。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #21124 (CK) & #352054 (fucongcong)"
+        },
+        {
+          "word": "I feel fine.",
+          "meaning": "我感觉很好。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #321586 (CK) & #784051 (fucongcong)"
+        },
+        {
+          "word": "I feel sick.",
+          "meaning": "我有点恶心。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #759379 (vgigregg) & #8626613 (xjjAstrus)"
+        },
+        {
+          "word": "I feel weak.",
+          "meaning": "我感到虚弱。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245759 (CK) & #6086795 (verdastelo9604)"
+        },
+        {
+          "word": "I got lucky.",
+          "meaning": "我运气很好。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2199425 (Hybrid) & #437296 (fucongcong)"
+        }
+      ]
+    },
+    {
+      "id": "common-19",
+      "name": "常用短句 19",
+      "short": "短句 19",
+      "desc": "公开英中语料精选 · 第 19 组",
+      "words": [
+        {
+          "word": "I have news.",
+          "meaning": "我有消息。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #3330281 (CK) & #13048167 (maina)"
+        },
+        {
+          "word": "I have time.",
+          "meaning": "我有时间。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245901 (CK) & #4859550 (musclegirlxyp)"
+        },
+        {
+          "word": "I have wine.",
+          "meaning": "我有酒。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1764447 (CK) & #5617204 (verdastelo9604)"
+        },
+        {
+          "word": "I heard you.",
+          "meaning": "我聽你的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #885698 (Trailsend) & #884751 (Tajfun)"
+        },
+        {
+          "word": "I like blue.",
+          "meaning": "我喜欢蓝色。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2245933 (CK) & #3378086 (GlossaMatik)"
+        },
+        {
+          "word": "I like fish.",
+          "meaning": "我喜欢鱼。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #256891 (CK) & #5551033 (verdastelo9604)"
+        },
+        {
+          "word": "I like jazz.",
+          "meaning": "我喜歡爵士樂。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #321631 (CK) & #826284 (Martha)"
+        },
+        {
+          "word": "I like them.",
+          "meaning": "我喜欢他们。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2747576 (CK) & #7771664 (jiangche)"
+        },
+        {
+          "word": "I like wine.",
+          "meaning": "我喜欢葡萄酒。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #5828948 (CK) & #9958185 (GlossaMatik)"
+        },
+        {
+          "word": "I live here.",
+          "meaning": "我住在這。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #444986 (CK) & #1488531 (egg0073)"
+        },
+        {
+          "word": "I lost face.",
+          "meaning": "我丟臉了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #252374 (CM) & #8572029 (verdastelo9604)"
+        },
+        {
+          "word": "I need glue.",
+          "meaning": "我需要胶水。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2631795 (Joseph) & #5576802 (verdastelo9604)"
+        },
+        {
+          "word": "I need help.",
+          "meaning": "我需要帮助。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #582309 (CM) & #7768354 (jiangche)"
+        },
+        {
+          "word": "I overslept.",
+          "meaning": "我睡过头了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #258769 (CK) & #335166 (fucongcong)"
+        },
+        {
+          "word": "I read lips.",
+          "meaning": "我读唇语。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2246047 (CK) & #10260764 (GlossaMatik)"
+        },
+        {
+          "word": "I said that.",
+          "meaning": "我是那樣說的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433643 (CK) & #824597 (Martha)"
+        },
+        {
+          "word": "I smell gas.",
+          "meaning": "我聞到瓦斯味。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #681055 (Source_VOA) & #1440981 (egg0073)"
+        },
+        {
+          "word": "I trust him.",
+          "meaning": "我信赖他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1258628 (CK) & #808210 (fucongcong)"
+        },
+        {
+          "word": "I trust you.",
+          "meaning": "我信任你。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #457741 (sacredceltic) & #1878344 (sadhen)"
+        },
+        {
+          "word": "I want more.",
+          "meaning": "我想要更多。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #521096 (CK) & #3742594 (egg0073)"
+        }
+      ]
+    },
+    {
+      "id": "common-20",
+      "name": "常用短句 20",
+      "short": "短句 20",
+      "desc": "公开英中语料精选 · 第 20 组",
+      "words": [
+        {
+          "word": "I was alone.",
+          "meaning": "我茕茕孑立，形影相吊。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2208338 (CK) & #10537181 (howie)"
+        },
+        {
+          "word": "I was lucky.",
+          "meaning": "我运气很好。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #256144 (CK) & #437296 (fucongcong)"
+        },
+        {
+          "word": "I was wrong.",
+          "meaning": "我搞错了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #472431 (blay_paul) & #476229 (fucongcong)"
+        },
+        {
+          "word": "I went, too.",
+          "meaning": "我也去了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1300817 (CK) & #400490 (GlossaMatik)"
+        },
+        {
+          "word": "I will obey.",
+          "meaning": "我会听从指示。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2247576 (CK) & #5691239 (verdastelo9604)"
+        },
+        {
+          "word": "I work here.",
+          "meaning": "我在這裡工作。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #730034 (CK) & #1953193 (egg0073)"
+        },
+        {
+          "word": "I'll attend.",
+          "meaning": "我會參加。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #435424 (CK) & #819296 (Martha)"
+        },
+        {
+          "word": "I'll get in.",
+          "meaning": "我會進去。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #321895 (CK) & #824616 (Martha)"
+        },
+        {
+          "word": "I'm a loser.",
+          "meaning": "我是個不成器的人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1201482 (CM) & #1448587 (egg0073)"
+        },
+        {
+          "word": "I'm a slave.",
+          "meaning": "我是個奴隸。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #10204809 (shekitten) & #6760109 (xjjAstrus)"
+        },
+        {
+          "word": "I'm a woman.",
+          "meaning": "我是个女人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1122514 (Shishir) & #7774367 (jiangche)"
+        },
+        {
+          "word": "I'm at home.",
+          "meaning": "我在家。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #404046 (zipangu) & #336238 (fucongcong)"
+        },
+        {
+          "word": "I'm curious.",
+          "meaning": "我很好奇。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1396179 (CK) & #335059 (fucongcong)"
+        },
+        {
+          "word": "I'm healthy.",
+          "meaning": "我身体很好。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #259288 (CK) & #3378000 (GlossaMatik)"
+        },
+        {
+          "word": "I'm injured.",
+          "meaning": "我受伤了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6196250 (CK) & #10699406 (GlossaMatik)"
+        },
+        {
+          "word": "I'm kidding.",
+          "meaning": "我开玩笑。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111715 (CK) & #398518 (GlossaMatik)"
+        },
+        {
+          "word": "I'm praying.",
+          "meaning": "我在祈禱。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #3530803 (ConqueRRoR) & #6065393 (verdastelo9604)"
+        },
+        {
+          "word": "I'm reading.",
+          "meaning": "我在读书。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1349059 (sacredceltic) & #5640765 (verdastelo9604)"
+        },
+        {
+          "word": "I'm relaxed.",
+          "meaning": "我很放松。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111695 (CK) & #10023027 (GlossaMatik)"
+        },
+        {
+          "word": "I'm serious.",
+          "meaning": "我是認真的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433675 (CK) & #824668 (Martha)"
+        }
+      ]
+    },
+    {
+      "id": "common-21",
+      "name": "常用短句 21",
+      "short": "短句 21",
+      "desc": "公开英中语料精选 · 第 21 组",
+      "words": [
+        {
+          "word": "I'm thirsty.",
+          "meaning": "我渴了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1814 (CK) & #465911 (fucongcong)"
+        },
+        {
+          "word": "I'm wounded.",
+          "meaning": "我受伤了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111666 (CK) & #10699406 (GlossaMatik)"
+        },
+        {
+          "word": "Is he right?",
+          "meaning": "他对吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #300372 (CK) & #9953366 (GlossaMatik)"
+        },
+        {
+          "word": "Is it tasty?",
+          "meaning": "好吃嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #5758419 (CM) & #4061623 (egg0073)"
+        },
+        {
+          "word": "Is it yours?",
+          "meaning": "这是你的吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #42344 (CK) & #1311790 (vicch)"
+        },
+        {
+          "word": "It can't be!",
+          "meaning": "这不可能！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1501 (CK) & #334699 (fucongcong)"
+        },
+        {
+          "word": "It's a fake.",
+          "meaning": "这是一个伪造品。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2249002 (CK) & #630264 (CLARET)"
+        },
+        {
+          "word": "It's my job.",
+          "meaning": "這是我份內的事。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433521 (CK) & #824695 (Martha)"
+        },
+        {
+          "word": "It's spring.",
+          "meaning": "春天了",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #456241 (lukaszpp) & #5114843 (xjjAstrus)"
+        },
+        {
+          "word": "It's unique.",
+          "meaning": "它很獨特。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #12198115 (CK) & #13214809 (LeviHighway)"
+        },
+        {
+          "word": "Just say no.",
+          "meaning": "只要說不。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #827234 (Scott) & #827525 (Martha)"
+        },
+        {
+          "word": "Keep trying.",
+          "meaning": "继续努力。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1629911 (Spamster) & #5092521 (mirrorvan)"
+        },
+        {
+          "word": "Let me know.",
+          "meaning": "讓我知道。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1228083 (CK) & #4741990 (egg0073)"
+        },
+        {
+          "word": "Let's begin.",
+          "meaning": "讓我們開始吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #387427 (CK) & #819465 (Martha)"
+        },
+        {
+          "word": "Let's leave.",
+          "meaning": "走吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2007931 (CK) & #334277 (fucongcong)"
+        },
+        {
+          "word": "Let's start!",
+          "meaning": "讓我們開始吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #387428 (CK) & #819465 (Martha)"
+        },
+        {
+          "word": "Life is fun.",
+          "meaning": "人生是有趣的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #435772 (CK) & #771359 (Martha)"
+        },
+        {
+          "word": "Look around.",
+          "meaning": "四处看看。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1271905 (Lich) & #5092470 (mirrorvan)"
+        },
+        {
+          "word": "Lunch is on.",
+          "meaning": "午餐送到了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #64177 (Zifre) & #1304156 (tsayng)"
+        },
+        {
+          "word": "Make a list.",
+          "meaning": "列一个列表。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2249574 (CK) & #10199329 (slo_oth)"
+        }
+      ]
+    },
+    {
+      "id": "common-22",
+      "name": "常用短句 22",
+      "short": "短句 22",
+      "desc": "公开英中语料精选 · 第 22 组",
+      "words": [
+        {
+          "word": "Many thanks.",
+          "meaning": "非常感谢！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #322178 (CK) & #334426 (fucongcong)"
+        },
+        {
+          "word": "Money talks.",
+          "meaning": "金钱万能。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #18631 (CK) & #5092154 (mirrorvan)"
+        },
+        {
+          "word": "Nice timing.",
+          "meaning": "好时机。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1329340 (Scott) & #5092489 (mirrorvan)"
+        },
+        {
+          "word": "No one came.",
+          "meaning": "没有人来了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2238072 (gleki) & #501581 (fucongcong)"
+        },
+        {
+          "word": "OK, you win.",
+          "meaning": "行，你赢了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2722194 (Hybrid) & #10449478 (GlossaMatik)"
+        },
+        {
+          "word": "OK. I agree.",
+          "meaning": "好。我同意。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #433874 (CK) & #824718 (Martha)"
+        },
+        {
+          "word": "Please come.",
+          "meaning": "请来吧。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #324997 (CK) & #5102210 (mirrorvan)"
+        },
+        {
+          "word": "Please sing.",
+          "meaning": "请唱歌。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1937071 (CK) & #5092671 (mirrorvan)"
+        },
+        {
+          "word": "Release him.",
+          "meaning": "放开他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1841180 (CK) & #5092602 (mirrorvan)"
+        },
+        {
+          "word": "She bit him.",
+          "meaning": "她咬了他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #887002 (CK) & #8940729 (crescat)"
+        },
+        {
+          "word": "She hit him.",
+          "meaning": "她打了他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #887215 (CK) & #5670795 (verdastelo9604)"
+        },
+        {
+          "word": "Should I go?",
+          "meaning": "我该去吗?",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1454593 (CK) & #414024 (fucongcong)"
+        },
+        {
+          "word": "Show him in.",
+          "meaning": "让他进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #307894 (CK) & #3032023 (sadhen)"
+        },
+        {
+          "word": "Stand aside.",
+          "meaning": "一边站着。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1935050 (Spamster) & #5092669 (mirrorvan)"
+        },
+        {
+          "word": "Step inside.",
+          "meaning": "进来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1841184 (CK) & #5102310 (mirrorvan)"
+        },
+        {
+          "word": "That's life.",
+          "meaning": "這就是生活。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #515472 (CK) & #771492 (Martha)"
+        },
+        {
+          "word": "That's mine.",
+          "meaning": "那是我的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1841577 (CK) & #6728904 (verdastelo9604)"
+        },
+        {
+          "word": "That's neat.",
+          "meaning": "那很棒。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #7371381 (Hybrid) & #10021240 (GlossaMatik)"
+        },
+        {
+          "word": "That's soft.",
+          "meaning": "这很软。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #3447128 (CK) & #7772143 (jiangche)"
+        },
+        {
+          "word": "That's tofu.",
+          "meaning": "那是豆腐。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #11568262 (shekitten) & #3377901 (GlossaMatik)"
+        }
+      ]
+    },
+    {
+      "id": "common-23",
+      "name": "常用短句 23",
+      "short": "短句 23",
+      "desc": "公开英中语料精选 · 第 23 组",
+      "words": [
+        {
+          "word": "That's true.",
+          "meaning": "這是真的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #618799 (aandrusiak) & #771357 (Martha)"
+        },
+        {
+          "word": "They hugged.",
+          "meaning": "他们拥抱。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2111370 (CK) & #5698029 (verdastelo9604)"
+        },
+        {
+          "word": "They kissed.",
+          "meaning": "他们亲吻了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2006560 (Spamster) & #5102369 (mirrorvan)"
+        },
+        {
+          "word": "This is ice.",
+          "meaning": "這是冰塊。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1211442 (alec) & #1205944 (cienias)"
+        },
+        {
+          "word": "Turn around.",
+          "meaning": "转过来。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #464282 (lukaszpp) & #5092329 (mirrorvan)"
+        },
+        {
+          "word": "Turn it off.",
+          "meaning": "把它关掉。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #41719 (CK) & #8877851 (crescat)"
+        },
+        {
+          "word": "Wait for me.",
+          "meaning": "等等我。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2253852 (CK) & #7773139 (jiangche)"
+        },
+        {
+          "word": "Was I wrong?",
+          "meaning": "我错了吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #25506 (CK) & #335862 (fucongcong)"
+        },
+        {
+          "word": "We both won.",
+          "meaning": "我們都贏了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2241033 (CK) & #6145390 (verdastelo9604)"
+        },
+        {
+          "word": "We can rest.",
+          "meaning": "我们可以休息。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #3046439 (Whitney) & #3031987 (sadhen)"
+        },
+        {
+          "word": "We know him.",
+          "meaning": "我們認識他。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #262783 (CK) & #873466 (Martha)"
+        },
+        {
+          "word": "We like you.",
+          "meaning": "我们喜欢你们。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #6681958 (CK) & #8496239 (gumblex)"
+        },
+        {
+          "word": "We want one.",
+          "meaning": "我們要一個。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2241471 (CK) & #6057679 (xjjAstrus)"
+        },
+        {
+          "word": "What a game!",
+          "meaning": "这游戏太棒了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #8910143 (CK) & #13285176 (Ayer)"
+        },
+        {
+          "word": "What a pain!",
+          "meaning": "烦死人。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #282276 (CK) & #405412 (GlossaMatik)"
+        },
+        {
+          "word": "What a pity!",
+          "meaning": "太可惜了！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #24885 (CK) & #332578 (fucongcong)"
+        },
+        {
+          "word": "What is new?",
+          "meaning": "有什么新鲜事吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #376063 (megamanenm) & #794256 (fucongcong)"
+        },
+        {
+          "word": "What's that?",
+          "meaning": "那是什么？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #66989 (CK) & #465906 (fucongcong)"
+        },
+        {
+          "word": "What's this?",
+          "meaning": "這是什麼啊？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #413821 (CK) & #4 (Martha)"
+        },
+        {
+          "word": "Who are you?",
+          "meaning": "你是谁？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #356200 (yorickvidal) & #395853 (GlossaMatik)"
+        }
+      ]
+    },
+    {
+      "id": "common-24",
+      "name": "常用短句 24",
+      "short": "短句 24",
+      "desc": "公开英中语料精选 · 第 24 组",
+      "words": [
+        {
+          "word": "Who drew it?",
+          "meaning": "誰畫的？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #442064 (CK) & #819363 (Martha)"
+        },
+        {
+          "word": "Who is next?",
+          "meaning": "下一个是谁？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #801609 (Eldad) & #7768204 (jiangche)"
+        },
+        {
+          "word": "Who is that?",
+          "meaning": "那是谁？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2176388 (dafp) & #4789686 (400S)"
+        },
+        {
+          "word": "Who's dying?",
+          "meaning": "誰要死了？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2203655 (CK) & #8215690 (verdastelo9604)"
+        },
+        {
+          "word": "Whose is it?",
+          "meaning": "这是谁的？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #873579 (CK) & #1314463 (vicch)"
+        },
+        {
+          "word": "Wood floats.",
+          "meaning": "木头会漂浮。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #1869662 (ghoti) & #5102316 (mirrorvan)"
+        },
+        {
+          "word": "Work slowly.",
+          "meaning": "干活慢点。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #30124 (CK) & #5092211 (mirrorvan)"
+        },
+        {
+          "word": "Yes, I know.",
+          "meaning": "是的，我知道。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #35504 (Scott) & #834241 (Martha)"
+        },
+        {
+          "word": "You cheated.",
+          "meaning": "你作弊了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2549802 (CK) & #10635232 (gumblex)"
+        },
+        {
+          "word": "You made it.",
+          "meaning": "你做到了。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2549800 (CK) & #8215696 (verdastelo9604)"
+        },
+        {
+          "word": "You're dumb.",
+          "meaning": "你很愚蠢。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #10519000 (Adelpa) & #993698 (leoyzy)"
+        },
+        {
+          "word": "You're here.",
+          "meaning": "你在这里。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2202941 (CK) & #7768155 (jiangche)"
+        },
+        {
+          "word": "You're mine.",
+          "meaning": "你是我的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2217883 (CK) & #8686674 (crescat)"
+        },
+        {
+          "word": "You're safe.",
+          "meaning": "你是安全的。",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2203311 (CK) & #10699370 (GlossaMatik)"
+        },
+        {
+          "word": "You're sick!",
+          "meaning": "你有病！",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #34756 (CM) & #791591 (fucongcong)"
+        },
+        {
+          "word": "Anything new?",
+          "meaning": "有什么新鲜事吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #25313 (CM) & #794256 (fucongcong)"
+        },
+        {
+          "word": "Are you busy?",
+          "meaning": "你忙嗎？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #68948 (adjusting) & #1241266 (tsayng)"
+        },
+        {
+          "word": "Are you done?",
+          "meaning": "你做好了嗎?",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #2244941 (CK) & #765243 (Martha)"
+        },
+        {
+          "word": "Are you free?",
+          "meaning": "你有空吗?",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #434238 (lukaszpp) & #10275184 (miaojiandao)"
+        },
+        {
+          "word": "Are you lost?",
+          "meaning": "您迷路了吗？",
+          "attribution": "CC-BY 2.0 (France) Attribution: tatoeba.org #280393 (CK) & #465006 (fucongcong)"
+        }
+      ]
+    }
+  ]
+}
