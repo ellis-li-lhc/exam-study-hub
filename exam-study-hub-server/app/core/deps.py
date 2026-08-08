@@ -5,7 +5,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
-from app.core.security import decode_access_token
+from app.core.security import decode_access_token_claims
 from app.crud import user as crud_user
 from app.models.user import User
 
@@ -26,12 +26,13 @@ def get_current_user(
     if credentials is None:
         raise unauthorized
 
-    user_id = decode_access_token(credentials.credentials)
-    if user_id is None:
+    claims = decode_access_token_claims(credentials.credentials)
+    if claims is None:
         raise unauthorized
+    user_id, password_version = claims
 
     user = crud_user.get_by_id(db, user_id)
-    if user is None:
+    if user is None or user.password_version != password_version:
         raise unauthorized
     return user
 

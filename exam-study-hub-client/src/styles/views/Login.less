@@ -431,9 +431,26 @@
   min-height: 32px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 12px;
   margin: -2px 0 16px;
+}
+
+.forgot-password-link {
+  padding: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.password-reset-intro {
+  margin: -4px 0 20px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.password-reset-dialog :deep(.el-dialog__body) {
+  padding-top: 8px;
 }
 
 .register-tip {
@@ -672,8 +689,8 @@
 
   .auth-options {
     align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
+    flex-wrap: wrap;
+    gap: 4px 12px;
   }
 
   .verification-code-row {

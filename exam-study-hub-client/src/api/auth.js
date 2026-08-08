@@ -11,6 +11,16 @@ export function sendRegistrationCode(data) {
   return http.post('/auth/email-code', data)
 }
 
+// 通过 Turnstile 后发送密码找回验证码
+export function sendPasswordResetCode(data) {
+  return http.post('/auth/password-reset/code', data)
+}
+
+// 使用邮箱验证码设置新密码
+export function resetPassword(data) {
+  return http.post('/auth/password-reset', data)
+}
+
 // 登录  → POST /api/auth/login  返回 { access_token, token_type, user }
 export function login(data) {
   return http.post('/auth/login', data)

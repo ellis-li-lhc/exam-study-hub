@@ -33,11 +33,21 @@ def digest_verification_code(email: str, code: str) -> str:
     return hmac.new(settings.secret_key.encode(), message, hashlib.sha256).hexdigest()
 
 
+def digest_password_reset_code(email: str, code: str) -> str:
+    """为密码找回验证码生成与注册验证码隔离的摘要。"""
+    message = f"password-reset:{normalize_email(email)}:{code}".encode()
+    return hmac.new(settings.secret_key.encode(), message, hashlib.sha256).hexdigest()
+
+
 def code_matches(email: str, code: str, expected_digest: str) -> bool:
     return hmac.compare_digest(digest_verification_code(email, code), expected_digest)
 
 
-async def verify_turnstile(token: str, remote_ip: str) -> bool:
+def password_reset_code_matches(email: str, code: str, expected_digest: str) -> bool:
+    return hmac.compare_digest(digest_password_reset_code(email, code), expected_digest)
+
+
+async def verify_turnstile(token: str, remote_ip: str, expected_action: str = "register") -> bool:
     if not settings.turnstile_secret_key:
         raise EmailServiceError("Turnstile 尚未配置")
 
@@ -57,7 +67,7 @@ async def verify_turnstile(token: str, remote_ip: str) -> bool:
         raise EmailServiceError("Turnstile 验证服务暂时不可用") from exc
 
     # action 由前端渲染时固定，可防止其他页面的 token 被挪用。
-    return bool(result.get("success")) and result.get("action") in (None, "", "register")
+    return bool(result.get("success")) and result.get("action") in (None, "", expected_action)
 
 
 async def send_verification_email(email: str, code: str) -> None:
@@ -79,6 +89,43 @@ async def send_verification_email(email: str, code: str) -> None:
           </div>
         """,
         "text": f"你的上岸计划注册验证码是 {code}，{expiry} 分钟内有效。如非你本人操作，请忽略这封邮件。",
+    }
+
+    try:
+        async with httpx.AsyncClient(timeout=10.0, trust_env=False) as client:
+            response = await client.post(
+                RESEND_EMAIL_URL,
+                headers={
+                    "Authorization": f"Bearer {settings.resend_api_key}",
+                    "Content-Type": "application/json",
+                },
+                json=payload,
+            )
+            response.raise_for_status()
+    except httpx.HTTPError as exc:
+        raise EmailServiceError("验证码邮件发送失败") from exc
+
+
+async def send_password_reset_email(email: str, code: str) -> None:
+    """发送密码找回验证码，不复用注册邮件文案。"""
+    if not settings.resend_api_key or not settings.resend_from_email:
+        raise EmailServiceError("Resend 尚未配置")
+
+    safe_code = html.escape(code)
+    expiry = settings.email_code_expire_minutes
+    payload = {
+        "from": settings.resend_from_email,
+        "to": [normalize_email(email)],
+        "subject": f"【上岸计划】密码找回验证码 {code}",
+        "html": f"""
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#172033;line-height:1.7;max-width:560px;margin:auto">
+            <h2 style="color:#1e3a8a">重置你的登录密码</h2>
+            <p>你正在为“上岸计划”账号设置新密码，请在页面中输入下方验证码：</p>
+            <div style="margin:24px 0;padding:16px 20px;border-radius:12px;background:#f3f6fc;color:#1e3a8a;font-size:30px;font-weight:700;letter-spacing:8px;text-align:center">{safe_code}</div>
+            <p>验证码在 {expiry} 分钟内有效。如非你本人操作，请忽略这封邮件。</p>
+          </div>
+        """,
+        "text": f"你的上岸计划密码找回验证码是 {code}，{expiry} 分钟内有效。如非你本人操作，请忽略这封邮件。",
     }
 
     try:

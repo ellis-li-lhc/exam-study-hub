@@ -64,11 +64,13 @@ def update_role(db: Session, user: User, role: str) -> User:
     return user
 
 
-def set_password(db: Session, user: User, new_password: str) -> User:
-    """管理员重置用户密码（存哈希，不保存明文）。"""
+def set_password(db: Session, user: User, new_password: str, *, commit: bool = True) -> User:
+    """重置用户密码并提升令牌版本，使旧登录态失效。"""
     user.hashed_password = hash_password(new_password)
-    db.commit()
-    db.refresh(user)
+    user.password_version += 1
+    if commit:
+        db.commit()
+        db.refresh(user)
     return user
 
 

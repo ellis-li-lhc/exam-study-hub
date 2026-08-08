@@ -11,7 +11,8 @@
 import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 
 const props = defineProps({
-  siteKey: { type: String, required: true }
+  siteKey: { type: String, required: true },
+  action: { type: String, default: 'register' }
 })
 const emit = defineEmits(['verified', 'expired', 'error'])
 
@@ -50,7 +51,7 @@ async function renderWidget() {
     if (!containerRef.value || widgetId !== undefined) return
     widgetId = turnstile.render(containerRef.value, {
       sitekey: props.siteKey,
-      action: 'register',
+      action: props.action,
       size: 'flexible',
       theme: 'light',
       callback: token => emit('verified', token),

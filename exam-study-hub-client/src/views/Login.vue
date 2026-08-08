@@ -91,6 +91,7 @@
                 <TurnstileWidget
                   ref="turnstileRef"
                   :site-key="turnstileSiteKey"
+                  action="register"
                   @verified="handleTurnstileVerified"
                   @expired="turnstileToken = ''"
                   @error="handleTurnstileError"
@@ -131,6 +132,7 @@
             </template>
             <div v-if="mode === 'login'" class="auth-options">
               <el-checkbox v-model="rememberUsername">记住密码</el-checkbox>
+              <el-button link type="primary" class="forgot-password-link" @click="openForgotPassword">忘记密码？</el-button>
             </div>
             <p v-else class="register-tip"><el-icon><CircleCheck /></el-icon> 注册即创建独立学习空间，进度可跨设备同步。</p>
             <el-button type="primary" size="large" native-type="submit" class="auth-submit" :loading="loading" @click="submit">
@@ -138,6 +140,67 @@
               <el-icon v-if="!loading" class="el-icon--right"><ArrowRight /></el-icon>
             </el-button>
           </el-form>
+
+          <el-dialog
+            v-model="forgotOpen"
+            title="找回密码"
+            width="min(520px, calc(100vw - 32px))"
+            :close-on-click-modal="false"
+            destroy-on-close
+            class="password-reset-dialog"
+          >
+            <p class="password-reset-intro">输入注册邮箱，验证身份后即可设置新的登录密码。</p>
+            <el-form ref="resetFormRef" :model="resetForm" :rules="resetRules" label-position="top" @submit.prevent>
+              <el-form-item label="注册邮箱" prop="email">
+                <el-input v-model="resetForm.email" size="large" type="email" autocomplete="email" placeholder="请输入注册时使用的邮箱" :prefix-icon="Message" />
+              </el-form-item>
+              <el-form-item label="安全验证" class="turnstile-form-item">
+                <TurnstileWidget
+                  ref="resetTurnstileRef"
+                  :site-key="turnstileSiteKey"
+                  action="password-reset"
+                  @verified="handleResetTurnstileVerified"
+                  @expired="resetTurnstileToken = ''"
+                  @error="handleResetTurnstileError"
+                />
+              </el-form-item>
+              <el-form-item label="邮箱验证码" prop="verificationCode">
+                <div class="verification-code-row">
+                  <el-input
+                    v-model="resetForm.verificationCode"
+                    size="large"
+                    inputmode="numeric"
+                    autocomplete="one-time-code"
+                    maxlength="6"
+                    placeholder="6 位数字"
+                    :prefix-icon="Key"
+                    @input="resetForm.verificationCode = resetForm.verificationCode.replace(/\D/g, '').slice(0, 6)"
+                  />
+                  <el-button
+                    class="send-code-button"
+                    native-type="button"
+                    :loading="sendingResetCode"
+                    :disabled="resetCountdown > 0 || !turnstileSiteKey"
+                    @click="sendResetCode"
+                  >
+                    {{ resetCountdown > 0 ? `${resetCountdown}s 后重发` : '获取验证码' }}
+                  </el-button>
+                </div>
+                <p class="verification-delivery-tip"><el-icon><InfoFilled /></el-icon>验证码邮件可能被归入垃圾邮件或广告邮件，请留意并将发件人加入白名单。</p>
+                <p v-if="resetCodeSentForCurrentEmail" class="verification-hint" aria-live="polite"><el-icon><CircleCheck /></el-icon>如果该邮箱已注册，验证码已发送，10 分钟内有效。</p>
+              </el-form-item>
+              <el-form-item label="新密码" prop="newPassword">
+                <el-input v-model="resetForm.newPassword" size="large" type="password" show-password autocomplete="new-password" placeholder="至少 6 位字符" :prefix-icon="Lock" />
+              </el-form-item>
+              <el-form-item label="确认新密码" prop="confirmPassword">
+                <el-input v-model="resetForm.confirmPassword" size="large" type="password" show-password autocomplete="new-password" placeholder="请再次输入新密码" :prefix-icon="Lock" @keyup.enter="submitPasswordReset" />
+              </el-form-item>
+            </el-form>
+            <template #footer>
+              <el-button @click="forgotOpen = false">取消</el-button>
+              <el-button type="primary" :loading="resetLoading" @click="submitPasswordReset">确认重置密码</el-button>
+            </template>
+          </el-dialog>
 
           <div class="release-note">
             <el-icon><InfoFilled /></el-icon>
@@ -150,7 +213,7 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import {
@@ -167,7 +230,7 @@ import {
   User
 } from '@element-plus/icons-vue'
 import { useAuthStore } from '../stores/auth'
-import { sendRegistrationCode } from '../api'
+import { resetPassword, sendPasswordResetCode, sendRegistrationCode } from '../api'
 import TurnstileWidget from '../components/TurnstileWidget.vue'
 
 const auth = useAuthStore()
@@ -195,11 +258,31 @@ const form = reactive({
   verificationCode: ''
 })
 
+const forgotOpen = ref(false)
+const resetLoading = ref(false)
+const sendingResetCode = ref(false)
+const resetCountdown = ref(0)
+const resetTurnstileToken = ref('')
+const sentResetEmail = ref('')
+const resetTurnstileRef = ref()
+const resetFormRef = ref()
+const resetForm = reactive({
+  email: '',
+  verificationCode: '',
+  newPassword: '',
+  confirmPassword: ''
+})
+
 let countdownTimer
+let resetCountdownTimer
 
 const normalizedEmail = computed(() => form.email.trim().toLowerCase())
 const codeSentForCurrentEmail = computed(() => (
   Boolean(sentEmail.value) && sentEmail.value === normalizedEmail.value
+))
+const normalizedResetEmail = computed(() => resetForm.email.trim().toLowerCase())
+const resetCodeSentForCurrentEmail = computed(() => (
+  Boolean(sentResetEmail.value) && sentResetEmail.value === normalizedResetEmail.value
 ))
 
 onMounted(() => {
@@ -219,6 +302,31 @@ const rules = {
   ]
 }
 
+const validateConfirmPassword = (_rule, value, callback) => {
+  if (!value) {
+    callback(new Error('请再次输入新密码'))
+  } else if (value !== resetForm.newPassword) {
+    callback(new Error('两次输入的密码不一致'))
+  } else {
+    callback()
+  }
+}
+
+const resetRules = {
+  email: [
+    { required: true, message: '请输入注册邮箱', trigger: 'blur' },
+    { type: 'email', message: '邮箱格式不正确', trigger: 'blur' }
+  ],
+  verificationCode: [
+    { required: true, message: '请输入邮箱验证码', trigger: 'blur' },
+    { pattern: /^\d{6}$/, message: '验证码为 6 位数字', trigger: 'blur' }
+  ],
+  newPassword: [
+    { required: true, min: 6, max: 128, message: '密码长度需为 6-128 位', trigger: 'blur' }
+  ],
+  confirmPassword: [{ validator: validateConfirmPassword, trigger: 'blur' }]
+}
+
 // 切换登录/注册时清掉上一次的校验提示
 watch(mode, () => {
   formRef.value?.clearValidate()
@@ -227,6 +335,15 @@ watch(mode, () => {
 
 watch(normalizedEmail, email => {
   if (sentEmail.value && sentEmail.value !== email) form.verificationCode = ''
+})
+
+watch(normalizedResetEmail, email => {
+  if (sentResetEmail.value && sentResetEmail.value !== email) {
+    resetForm.verificationCode = ''
+    sentResetEmail.value = ''
+    resetCountdown.value = 0
+    window.clearInterval(resetCountdownTimer)
+  }
 })
 
 watch(rememberUsername, remember => {
@@ -278,6 +395,15 @@ function startCountdown(seconds) {
   }, 1000)
 }
 
+function startResetCountdown(seconds) {
+  window.clearInterval(resetCountdownTimer)
+  resetCountdown.value = seconds
+  resetCountdownTimer = window.setInterval(() => {
+    resetCountdown.value -= 1
+    if (resetCountdown.value <= 0) window.clearInterval(resetCountdownTimer)
+  }, 1000)
+}
+
 async function sendCode() {
   const emailValid = await formRef.value.validateField('email').then(() => true).catch(() => false)
   if (!emailValid) return
@@ -301,6 +427,97 @@ async function sendCode() {
   } finally {
     sendingCode.value = false
     turnstileRef.value?.reset()
+  }
+}
+
+async function openForgotPassword() {
+  const loginEmail = normalizedEmail.value
+  const currentResetEmail = normalizedResetEmail.value
+  const keepCurrentFlow = Boolean(
+    sentResetEmail.value
+    && sentResetEmail.value === currentResetEmail
+    && (!loginEmail || loginEmail === currentResetEmail)
+  )
+
+  resetForm.email = loginEmail || currentResetEmail
+  if (!keepCurrentFlow) {
+    resetForm.verificationCode = ''
+    resetForm.newPassword = ''
+    resetForm.confirmPassword = ''
+    sentResetEmail.value = ''
+    resetCountdown.value = 0
+    window.clearInterval(resetCountdownTimer)
+  }
+  resetTurnstileToken.value = ''
+  forgotOpen.value = true
+  await nextTick()
+  resetFormRef.value?.clearValidate()
+}
+
+function handleResetTurnstileVerified(token) {
+  resetTurnstileToken.value = token
+}
+
+function handleResetTurnstileError() {
+  resetTurnstileToken.value = ''
+  ElMessage.error('人机验证加载失败，请刷新后重试')
+}
+
+async function sendResetCode() {
+  const emailValid = await resetFormRef.value.validateField('email').then(() => true).catch(() => false)
+  if (!emailValid) return
+  if (!resetTurnstileToken.value) {
+    ElMessage.warning('请先完成人机验证')
+    return
+  }
+
+  sendingResetCode.value = true
+  try {
+    const result = await sendPasswordResetCode({
+      email: normalizedResetEmail.value,
+      turnstile_token: resetTurnstileToken.value
+    })
+    sentResetEmail.value = normalizedResetEmail.value
+    resetForm.verificationCode = ''
+    startResetCountdown(result.resend_after || 60)
+    ElMessage.success('如果该邮箱已注册，验证码已发送，请查收邮件')
+  } catch (error) {
+    ElMessage.error(error.message || '验证码发送失败，请稍后重试')
+  } finally {
+    sendingResetCode.value = false
+    resetTurnstileRef.value?.reset()
+  }
+}
+
+async function submitPasswordReset() {
+  const valid = await resetFormRef.value.validate().catch(() => false)
+  if (!valid) return
+  if (!resetCodeSentForCurrentEmail.value) {
+    ElMessage.warning('请先获取当前邮箱的验证码')
+    return
+  }
+
+  resetLoading.value = true
+  try {
+    await resetPassword({
+      email: normalizedResetEmail.value,
+      verification_code: resetForm.verificationCode,
+      new_password: resetForm.newPassword
+    })
+    forgotOpen.value = false
+    form.password = ''
+    resetForm.email = ''
+    resetForm.verificationCode = ''
+    resetForm.newPassword = ''
+    resetForm.confirmPassword = ''
+    sentResetEmail.value = ''
+    resetCountdown.value = 0
+    window.clearInterval(resetCountdownTimer)
+    ElMessage.success('密码已重置，请使用新密码登录')
+  } catch (error) {
+    ElMessage.error(error.message || '密码重置失败，请稍后重试')
+  } finally {
+    resetLoading.value = false
   }
 }
 
@@ -334,7 +551,10 @@ async function submit() {
   }
 }
 
-onBeforeUnmount(() => window.clearInterval(countdownTimer))
+onBeforeUnmount(() => {
+  window.clearInterval(countdownTimer)
+  window.clearInterval(resetCountdownTimer)
+})
 </script>
 
 <style scoped lang="less" src="../styles/views/Login.less"></style>

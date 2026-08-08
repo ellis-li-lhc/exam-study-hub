@@ -15,6 +15,7 @@ class User(Base):
     username: Mapped[str] = mapped_column(String(64), unique=True, index=True)
     email: Mapped[str | None] = mapped_column(String(255), unique=True, index=True, nullable=True)
     hashed_password: Mapped[str] = mapped_column(String(255))
+    password_version: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     # 角色：'user' 普通用户 / 'admin' 管理员。默认普通用户。
     role: Mapped[str] = mapped_column(String(16), default="user", server_default="user")
     email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
@@ -61,6 +62,26 @@ class EmailVerificationCode(Base):
     每次发送都留一条记录，便于按邮箱和 IP 做持久化限流。
     """
     __tablename__ = "email_verification_codes"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    email: Mapped[str] = mapped_column(String(255), index=True)
+    code_digest: Mapped[str] = mapped_column(String(64))
+    request_ip: Mapped[str] = mapped_column(String(64), index=True)
+    attempts: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    consumed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), index=True
+    )
+
+
+class PasswordResetCode(Base):
+    """密码找回验证码发送记录。
+
+    与注册验证码分表，避免注册验证码被重复用于重置密码；同样只保存
+    HMAC 摘要，不保存六位验证码明文。
+    """
+    __tablename__ = "password_reset_codes"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     email: Mapped[str] = mapped_column(String(255), index=True)

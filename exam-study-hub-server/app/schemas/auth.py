@@ -25,6 +25,17 @@ class EmailCodeResponse(BaseModel):
     resend_after: int
 
 
+class PasswordResetRequest(BaseModel):
+    """通过邮箱验证码设置新密码。"""
+    email: EmailStr
+    verification_code: str = Field(pattern=r"^\d{6}$")
+    new_password: str = Field(min_length=6, max_length=128)
+
+
+class PasswordResetResponse(BaseModel):
+    reset: bool = True
+
+
 class LoginRequest(BaseModel):
     """登录入参。"""
     username: str
