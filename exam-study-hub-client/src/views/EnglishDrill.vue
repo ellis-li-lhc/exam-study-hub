@@ -1,5 +1,5 @@
 <template>
-  <div class="drill-page page-stack">
+  <div class="drill-page page-stack" :class="{ 'has-listen-player': listenActive }">
     <section class="page-intro">
       <div><span class="section-kicker">英语特训</span><h2>先把单词地基打牢</h2><p>核心词、造句框架、固定搭配、基础语法，每块都能边学边测、记录掌握进度。基础越弱，越要先过单词关。</p></div>
     </section>
@@ -28,13 +28,24 @@
           </div>
           <div class="toolbar-right">
             <el-checkbox v-model="onlyUnknown" label="只看未掌握" border />
-            <el-button @click="store.markCurrentBatch(true)">本组全标已掌握</el-button>
+            <el-button :type="currentBatchAllKnown ? 'warning' : 'default'" plain @click="handleCurrentBatchMastery">
+              <el-icon><Close v-if="currentBatchAllKnown" /><Check v-else /></el-icon>
+              {{ currentBatchAllKnown ? '一键取消掌握' : '一键全部掌握' }}
+            </el-button>
+            <el-button type="success" plain @click="startListening">
+              <el-icon><Headset /></el-icon>{{ listenActive ? '重新听本组' : '开始听词' }}
+            </el-button>
             <el-button type="primary" @click="startVocabTest"><el-icon><EditPen /></el-icon>本组自测</el-button>
           </div>
         </section>
 
         <section class="word-grid">
-          <article v-for="word in visibleWords" :key="word.id" class="word-card" :class="{ known: store.isKnown(word.id) }">
+          <article
+            v-for="word in visibleWords"
+            :key="word.id"
+            class="word-card"
+            :class="{ known: store.isKnown(word.id), listening: listenActive && activeListenWord?.id === word.id }"
+          >
             <div class="word-main">
               <div class="word-top">
                 <strong class="speakable" @click="speak(word.word)">{{ word.word }}</strong>
@@ -44,7 +55,7 @@
               </div>
               <p class="meaning">{{ word.meaning }}</p>
             </div>
-            <el-button class="known-toggle" :type="store.isKnown(word.id) ? 'success' : 'default'" :plain="!store.isKnown(word.id)" circle :aria-label="store.isKnown(word.id) ? `取消 ${word.word} 掌握标记` : `标记 ${word.word} 已掌握`" :title="store.isKnown(word.id) ? '取消掌握标记' : '标记已掌握'" @click="store.toggleKnown(word.id)"><el-icon><Check /></el-icon></el-button>
+            <el-button class="known-toggle" :type="store.isKnown(word.id) ? 'success' : 'default'" :plain="!store.isKnown(word.id)" circle :aria-label="store.isKnown(word.id) ? `取消 ${word.word} 掌握标记` : `标记 ${word.word} 已掌握`" :title="store.isKnown(word.id) ? '取消掌握标记' : '标记已掌握'" @click="toggleWordMastery(word.id)"><el-icon><Check /></el-icon></el-button>
           </article>
           <el-empty v-if="visibleWords.length === 0" description="本组单词都已掌握，进入下一组吧" :image-size="80" />
         </section>
@@ -153,11 +164,59 @@
         <el-button v-else type="primary" @click="testOpen = false">完成</el-button>
       </template>
     </el-dialog>
+
+    <Transition name="listen-player">
+      <section v-if="listenActive" class="listen-player" role="region" aria-label="听词模式播放器">
+        <el-button class="listen-dismiss" circle text aria-label="结束听词" title="结束听词" @click="stopListening(true)">
+          <el-icon><Close /></el-icon>
+        </el-button>
+
+        <div class="listen-summary" aria-live="polite">
+          <div class="listen-heading">
+            <span class="listen-status"><el-icon><Headset /></el-icon>{{ listenPaused ? '已暂停' : listenPhase }}</span>
+            <div class="listen-word">
+              <strong>{{ activeListenWord?.word }}</strong>
+              <span v-if="activeListenWord?.phonetic">/{{ activeListenWord.phonetic }}/</span>
+            </div>
+          </div>
+          <p>{{ activeListenWord?.meaning }}</p>
+        </div>
+
+        <div class="listen-progress">
+          <span>第 {{ listenIndex + 1 }} / {{ listenQueue.length }} 个</span>
+          <el-progress :percentage="listenPercent" :show-text="false" :stroke-width="6" />
+        </div>
+
+        <div class="listen-controls">
+          <el-button circle plain :disabled="listenIndex === 0" aria-label="上一个单词" title="上一个单词" @click="previousListenWord">
+            <el-icon><ArrowLeft /></el-icon>
+          </el-button>
+          <el-button class="listen-toggle" circle type="primary" :aria-label="listenPaused ? '继续播放' : '暂停播放'" :title="listenPaused ? '继续播放' : '暂停播放'" @click="toggleListenPause">
+            <el-icon><VideoPlay v-if="listenPaused" /><VideoPause v-else /></el-icon>
+          </el-button>
+          <el-button circle plain :disabled="listenIndex >= listenQueue.length - 1" aria-label="下一个单词" title="下一个单词" @click="nextListenWord">
+            <el-icon><ArrowRight /></el-icon>
+          </el-button>
+          <el-button circle plain aria-label="重读当前单词" title="重读当前单词" @click="replayListenWord">
+            <el-icon><RefreshRight /></el-icon>
+          </el-button>
+        </div>
+
+        <div class="listen-options">
+          <el-select v-model="listenRate" class="listen-rate" aria-label="朗读语速" @change="handleListenRateChange">
+            <el-option label="0.8×" :value="0.8" />
+            <el-option label="1.0×" :value="1" />
+            <el-option label="1.2×" :value="1.2" />
+          </el-select>
+          <el-checkbox v-model="listenOnlyUnknown" label="仅未掌握" border @change="rebuildListenQueue" />
+        </div>
+      </section>
+    </Transition>
   </div>
 </template>
 
 <script setup>
-import { computed, reactive, ref } from 'vue'
+import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useVocabularyStore } from '../stores/vocabulary'
 import { useEnglishProgressStore } from '../stores/englishProgress'
@@ -179,6 +238,21 @@ const activeGrammarId = ref(grammar.sections[0].id)
 const activeGrammarSection = computed(() => grammar.sections.find(section => section.id === activeGrammarId.value) || grammar.sections[0])
 
 const visibleWords = computed(() => onlyUnknown.value ? store.currentWords.filter(word => !store.isKnown(word.id)) : store.currentWords)
+const currentBatchAllKnown = computed(() => store.currentWords.length > 0 && store.currentBatchKnown === store.currentWords.length)
+
+// 听词模式：对当前组创建一份播放快照，避免掌握状态变化打乱正在播放的顺序。
+const listenActive = ref(false)
+const listenPaused = ref(false)
+const listenPhase = ref('准备播放')
+const listenQueue = ref([])
+const listenIndex = ref(0)
+const listenRate = ref(1)
+const listenOnlyUnknown = ref(false)
+const activeListenWord = computed(() => listenQueue.value[listenIndex.value] || null)
+const listenPercent = computed(() => listenQueue.value.length ? Math.round((listenIndex.value + 1) / listenQueue.value.length * 100) : 0)
+
+let listenRunId = 0
+let listenTimer = null
 
 function itemKey(dataset, item) { return `${dataset.ns}:${dataset.activeId.value}|${item.word}` }
 function activeItemGroup(dataset) { return dataset.data.groups.find(group => group.id === dataset.activeId.value) || dataset.data.groups[0] }
@@ -190,6 +264,21 @@ function countKnownItems(dataset) {
 function groupKnownCount(dataset) {
   const group = activeItemGroup(dataset)
   return progress.countKnown(group.words.map(item => `${dataset.ns}:${group.id}|${item.word}`))
+}
+
+function toggleWordMastery(id) {
+  store.toggleKnown(id)
+}
+
+function handleCurrentBatchMastery() {
+  if (currentBatchAllKnown.value) {
+    store.markCurrentBatch(false)
+    ElMessage.success('已取消本组全部掌握标记')
+    return
+  }
+
+  store.markCurrentBatch(true)
+  ElMessage.success('已标记本组全部单词为已掌握')
 }
 
 function grammarKey(index) { return `gra:${activeGrammarId.value}|${index}` }
@@ -290,11 +379,10 @@ function loadVoices() {
 if ('speechSynthesis' in window) {
   loadVoices()
   // getVoices() 首次常为空，声音列表异步就绪后会触发该事件
-  window.speechSynthesis.onvoiceschanged = loadVoices
+  window.speechSynthesis.addEventListener('voiceschanged', loadVoices)
 }
 
-// 按优先级挑高质量英文声音；排除名字带 compact（精简/低质量）的
-function pickBestVoice() {
+function pickBestEnglishVoice() {
   const voices = cachedVoices.length ? cachedVoices : (window.speechSynthesis?.getVoices() || [])
   const en = voices.filter(v => /^en[-_]?/i.test(v.lang))
   if (!en.length) return null
@@ -313,16 +401,196 @@ function pickBestVoice() {
   return pool.find(v => !/compact/i.test(v.name)) || pool[0]
 }
 
+function pickBestChineseVoice() {
+  const voices = cachedVoices.length ? cachedVoices : (window.speechSynthesis?.getVoices() || [])
+  const zh = voices.filter(v => /^zh[-_]?/i.test(v.lang))
+  if (!zh.length) return null
+  const mainland = zh.filter(v => /zh[-_]?(CN|Hans)/i.test(v.lang))
+  const pool = mainland.length ? mainland : zh
+  const preferred = [
+    /Google.*(普通话|Mandarin|Chinese)/i,
+    /Microsoft.*(Xiaoxiao|Yunxi|Natural)/i,
+    /Tingting/i,
+    /Meijia/i
+  ]
+  for (const re of preferred) {
+    const hit = pool.find(v => re.test(v.name) && !/compact/i.test(v.name))
+    if (hit) return hit
+  }
+  return pool.find(v => !/compact/i.test(v.name)) || pool[0]
+}
+
 function speak(text) {
   if (!('speechSynthesis' in window)) { ElMessage.warning('当前浏览器不支持语音朗读'); return }
+  if (listenActive.value && !listenPaused.value) pauseListening()
   window.speechSynthesis.cancel()
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = 'en-US'
   utterance.rate = 0.9
-  const voice = pickBestVoice()
+  const voice = pickBestEnglishVoice()
   if (voice) utterance.voice = voice
   window.speechSynthesis.speak(utterance)
 }
+
+function clearListenSpeech() {
+  listenRunId += 1
+  if (listenTimer) {
+    window.clearTimeout(listenTimer)
+    listenTimer = null
+  }
+  window.speechSynthesis?.cancel()
+}
+
+function scheduleListenStep(callback, delay, runId) {
+  listenTimer = window.setTimeout(() => {
+    listenTimer = null
+    if (listenActive.value && !listenPaused.value && runId === listenRunId) callback()
+  }, delay)
+}
+
+function speakListenSegment(text, language, voice, onComplete, runId) {
+  if (!text || runId !== listenRunId) { onComplete(); return }
+  const utterance = new SpeechSynthesisUtterance(text)
+  utterance.lang = language
+  utterance.rate = listenRate.value
+  if (voice) utterance.voice = voice
+  utterance.onend = () => {
+    if (runId === listenRunId) onComplete()
+  }
+  utterance.onerror = event => {
+    if (runId === listenRunId && event.error !== 'canceled' && event.error !== 'interrupted') onComplete()
+  }
+  window.speechSynthesis.speak(utterance)
+}
+
+function playActiveListenWord() {
+  if (!listenActive.value || listenPaused.value || !activeListenWord.value) return
+  clearListenSpeech()
+  const runId = listenRunId
+  const word = activeListenWord.value
+  listenPhase.value = '正在读英文'
+  speakListenSegment(word.word, 'en-US', pickBestEnglishVoice(), () => {
+    scheduleListenStep(() => {
+      listenPhase.value = '正在读中文'
+      speakListenSegment(word.meaning, 'zh-CN', pickBestChineseVoice(), () => {
+        scheduleListenStep(advanceListenWord, 1200, runId)
+      }, runId)
+    }, 500, runId)
+  }, runId)
+}
+
+function finishListening() {
+  clearListenSpeech()
+  listenActive.value = false
+  listenPaused.value = false
+  listenPhase.value = '播放完成'
+  ElMessage.success('本组单词已播放完成')
+}
+
+function advanceListenWord() {
+  if (listenIndex.value >= listenQueue.value.length - 1) {
+    finishListening()
+    return
+  }
+  listenIndex.value += 1
+  playActiveListenWord()
+}
+
+function startListening() {
+  if (!('speechSynthesis' in window)) { ElMessage.warning('当前浏览器不支持语音朗读'); return }
+  if (onlyUnknown.value) listenOnlyUnknown.value = true
+  const pool = listenOnlyUnknown.value ? store.currentWords.filter(word => !store.isKnown(word.id)) : store.currentWords
+  if (!pool.length) { ElMessage.warning('当前组没有可播放的单词'); return }
+  clearListenSpeech()
+  listenQueue.value = [...pool]
+  listenIndex.value = 0
+  listenActive.value = true
+  listenPaused.value = false
+  playActiveListenWord()
+}
+
+function pauseListening() {
+  if (!listenActive.value) return
+  clearListenSpeech()
+  listenPaused.value = true
+  listenPhase.value = '已暂停'
+}
+
+function resumeListening() {
+  if (!listenActive.value) return
+  listenPaused.value = false
+  playActiveListenWord()
+}
+
+function toggleListenPause() {
+  if (listenPaused.value) resumeListening()
+  else pauseListening()
+}
+
+function previousListenWord() {
+  if (listenIndex.value === 0) return
+  listenIndex.value -= 1
+  listenPaused.value = false
+  playActiveListenWord()
+}
+
+function nextListenWord() {
+  if (listenIndex.value >= listenQueue.value.length - 1) return
+  listenIndex.value += 1
+  listenPaused.value = false
+  playActiveListenWord()
+}
+
+function replayListenWord() {
+  listenPaused.value = false
+  playActiveListenWord()
+}
+
+function handleListenRateChange() {
+  if (listenActive.value && !listenPaused.value) playActiveListenWord()
+}
+
+function rebuildListenQueue() {
+  if (!listenActive.value) return
+  const currentId = activeListenWord.value?.id
+  const nextQueue = listenOnlyUnknown.value ? store.currentWords.filter(word => !store.isKnown(word.id)) : store.currentWords
+  if (!nextQueue.length) {
+    stopListening()
+    ElMessage.info('当前组没有未掌握单词')
+    return
+  }
+  listenQueue.value = [...nextQueue]
+  const currentIndex = nextQueue.findIndex(word => word.id === currentId)
+  listenIndex.value = currentIndex >= 0 ? currentIndex : 0
+  listenPaused.value = false
+  playActiveListenWord()
+}
+
+function stopListening(showMessage = false) {
+  clearListenSpeech()
+  listenActive.value = false
+  listenPaused.value = false
+  listenQueue.value = []
+  listenIndex.value = 0
+  listenPhase.value = '准备播放'
+  if (showMessage) ElMessage.info('已结束听词模式')
+}
+
+watch(() => store.currentBatch, () => {
+  if (listenActive.value) {
+    stopListening()
+    ElMessage.info('已切换词组，听词模式已结束')
+  }
+})
+
+watch(activeTab, tab => {
+  if (listenActive.value && tab !== 'words') stopListening()
+})
+
+onBeforeUnmount(() => {
+  clearListenSpeech()
+  window.speechSynthesis?.removeEventListener('voiceschanged', loadVoices)
+})
 
 function confirmReset() {
   ElMessageBox.confirm('将清空所有单词掌握记录，确定重置吗？', '重置背词进度', { type: 'warning' })
