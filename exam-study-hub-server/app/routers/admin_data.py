@@ -1,5 +1,7 @@
 from collections import Counter, defaultdict
-from fastapi import APIRouter, Depends, Query
+from hashlib import sha256
+
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func
 from sqlalchemy.orm import Session, selectinload
 
@@ -8,6 +10,7 @@ from app.db.session import get_db
 from app.models.catalog import (
     AdmissionPlan,
     AdmissionScore,
+    DataIssueResolution,
     Institution,
     Major,
     Province,
@@ -24,6 +27,10 @@ from app.schemas.admin_data import (
     CatalogMajorItem,
     CatalogProvinceItem,
     CatalogResponse,
+    DataIssueCounts,
+    DataIssueItem,
+    DataIssueListResponse,
+    DataIssueStatusUpdate,
     ImportBatchItem,
     InstitutionListResponse,
     QuestionQualityResponse,
@@ -252,6 +259,83 @@ def question_quality(db: Session) -> QuestionQualityResponse:
     return QuestionQualityResponse(subjects=subjects, issues=issues)
 
 
+def issue_key(issue_type: str, identity: str) -> str:
+    """用校验对象生成稳定键，避免题干或专业名直接暴露在 URL 中。"""
+    digest = sha256(identity.encode("utf-8")).hexdigest()
+    return f"{issue_type}:{digest}"
+
+
+def data_issues(db: Session) -> list[DataIssueItem]:
+    """生成可定位的问题明细，并合并管理员此前的处理状态。"""
+    issues: list[DataIssueItem] = []
+
+    questions = db.query(Question).join(QuestionTopic).options(selectinload(Question.topic)).order_by(
+        QuestionTopic.subject, QuestionTopic.name, Question.id,
+    ).all()
+    questions_by_stem: dict[str, list[Question]] = defaultdict(list)
+    for question in questions:
+        stem = (question.stem or "").strip()
+        if stem:
+            questions_by_stem[stem].append(question)
+
+    for stem, duplicates in questions_by_stem.items():
+        if len(duplicates) < 2:
+            continue
+        display_stem = stem if len(stem) <= 48 else f"{stem[:48]}…"
+        issues.append(DataIssueItem(
+            key=issue_key("duplicate_question", stem),
+            issue_type="duplicate_question",
+            severity="warning",
+            title=f"重复题干：{display_stem}",
+            detail=f"共 {len(duplicates)} 道题题干完全一致，多出 {len(duplicates) - 1} 道待确认。",
+            related_records=[
+                f"题目 #{question.id} · {question.topic.subject} / {question.topic.name}"
+                for question in duplicates
+            ],
+            status="open",
+        ))
+
+    known_major_names = {item.name for item in db.query(Major).all()}
+    plans = db.query(AdmissionPlan).options(selectinload(AdmissionPlan.institution)).filter(
+        ~AdmissionPlan.major_name.in_(known_major_names)
+    ).order_by(AdmissionPlan.year.desc(), AdmissionPlan.major_name, AdmissionPlan.id).all()
+    for plan in plans:
+        institution_name = plan.institution.name if plan.institution else "未知院校"
+        issues.append(DataIssueItem(
+            key=issue_key("unmapped_plan", str(plan.id)),
+            issue_type="unmapped_plan",
+            severity="warning",
+            title=f"未映射专业：{plan.major_name}",
+            detail="该招生计划的专业名无法匹配到当前专业主数据，请补充映射或确认无需展示。",
+            related_records=[
+                f"计划 #{plan.id} · {institution_name} · {plan.year} · 代码 {plan.major_code}"
+            ],
+            status="open",
+        ))
+
+    if not issues:
+        return issues
+
+    keys = [item.key for item in issues]
+    resolutions = {
+        item.issue_key: item
+        for item in db.query(DataIssueResolution).filter(DataIssueResolution.issue_key.in_(keys)).all()
+    }
+    user_ids = {item.updated_by_user_id for item in resolutions.values() if item.updated_by_user_id is not None}
+    user_names = {
+        item.id: item.username
+        for item in db.query(User).filter(User.id.in_(user_ids)).all()
+    } if user_ids else {}
+    for item in issues:
+        resolution = resolutions.get(item.key)
+        if resolution is None:
+            continue
+        item.status = resolution.status
+        item.status_updated_at = resolution.updated_at
+        item.status_updated_by = user_names.get(resolution.updated_by_user_id, "已删除管理员")
+    return issues
+
+
 @router.get("/summary", response_model=AdminDataSummary)
 def data_summary(
     _admin: User = Depends(get_current_admin),
@@ -266,6 +350,62 @@ def data_summary(
         AdminStat(key="questions", label="题库题目", value=db.query(Question).count(), tone="neutral"),
     ]
     return AdminDataSummary(stats=stats, validation=build_validation_summary(db))
+
+
+@router.get("/issues", response_model=DataIssueListResponse)
+def list_data_issues(
+    status: str = Query("open", pattern="^(open|resolved|ignored|all)$"),
+    _admin: User = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+):
+    """列出可处理的数据质量问题；默认只看待处理项。"""
+    items = data_issues(db)
+    counts = DataIssueCounts(
+        open=sum(item.status == "open" for item in items),
+        resolved=sum(item.status == "resolved" for item in items),
+        ignored=sum(item.status == "ignored" for item in items),
+    )
+    if status != "all":
+        items = [item for item in items if item.status == status]
+    return DataIssueListResponse(items=items, counts=counts)
+
+
+@router.patch("/issues/{issue_key}", response_model=DataIssueItem)
+def update_data_issue_status(
+    issue_key: str,
+    data: DataIssueStatusUpdate,
+    admin: User = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+):
+    """只更新问题处置状态，不修改原始题库或招生数据。"""
+    current_issues = {item.key: item for item in data_issues(db)}
+    issue = current_issues.get(issue_key)
+    if issue is None:
+        raise HTTPException(status_code=404, detail="问题不存在或已随数据修复")
+
+    resolution = db.query(DataIssueResolution).filter_by(issue_key=issue_key).first()
+    if data.status == "open":
+        if resolution is not None:
+            db.delete(resolution)
+            db.commit()
+        return issue
+
+    if resolution is None:
+        resolution = DataIssueResolution(
+            issue_key=issue_key,
+            status=data.status,
+            updated_by_user_id=admin.id,
+        )
+        db.add(resolution)
+    else:
+        resolution.status = data.status
+        resolution.updated_by_user_id = admin.id
+    db.commit()
+    db.refresh(resolution)
+    issue.status = resolution.status
+    issue.status_updated_at = resolution.updated_at
+    issue.status_updated_by = admin.username
+    return issue
 
 
 @router.get("/institutions", response_model=InstitutionListResponse)

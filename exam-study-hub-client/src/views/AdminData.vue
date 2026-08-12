@@ -22,8 +22,8 @@
 
     <el-alert
       v-if="summary"
-      :type="summary.validation.passed ? 'success' : 'error'"
-      :title="summary.validation.passed ? '数据硬校验通过' : `数据硬校验发现 ${summary.validation.issues.length} 个问题`"
+      :type="summary.validation.passed ? (issueCounts.open ? 'warning' : 'success') : 'error'"
+      :title="validationTitle"
       :closable="false"
       show-icon
     />
@@ -142,6 +142,52 @@
           <el-table-column prop="message" label="问题说明" min-width="260" />
         </el-table>
         <el-empty v-if="questionQuality && !questionQuality.issues.length" description="题库质量检查未发现问题" :image-size="72" />
+      </el-tab-pane>
+
+      <el-tab-pane :label="issueTabLabel" name="issues">
+        <section class="issue-summary">
+          <div>
+            <h3>数据问题处理中心</h3>
+            <p>对校验发现的问题进行确认和追踪。处理状态不会直接修改原始题库或招生数据。</p>
+          </div>
+          <el-radio-group v-model="issueStatusFilter" size="small" @change="loadIssues">
+            <el-radio-button label="open">待处理 {{ issueCounts.open }}</el-radio-button>
+            <el-radio-button label="resolved">已处理 {{ issueCounts.resolved }}</el-radio-button>
+            <el-radio-button label="ignored">已忽略 {{ issueCounts.ignored }}</el-radio-button>
+            <el-radio-button label="all">全部</el-radio-button>
+          </el-radio-group>
+        </section>
+
+        <el-alert
+          class="issue-help"
+          type="info"
+          title="“已处理”表示已在其他数据维护流程中修正；“忽略”表示确认无需处理。要重新跟进时可恢复为待处理。"
+          :closable="false"
+          show-icon
+        />
+
+        <div v-loading="issueLoading" class="issue-list">
+          <article v-for="issue in dataIssues" :key="issue.key" class="issue-card">
+            <header>
+              <div>
+                <el-tag type="warning" effect="plain">{{ issueTypeLabel(issue.issue_type) }}</el-tag>
+                <el-tag :type="issueStatusTag(issue.status)" effect="plain" class="status-tag">{{ issueStatusLabel(issue.status) }}</el-tag>
+              </div>
+              <div class="issue-actions">
+                <el-button v-if="issue.status !== 'resolved'" size="small" type="success" plain @click="changeIssueStatus(issue, 'resolved')">标为已处理</el-button>
+                <el-button v-if="issue.status !== 'ignored'" size="small" plain @click="changeIssueStatus(issue, 'ignored')">忽略</el-button>
+                <el-button v-if="issue.status !== 'open'" size="small" text @click="changeIssueStatus(issue, 'open')">恢复待处理</el-button>
+              </div>
+            </header>
+            <h4>{{ issue.title }}</h4>
+            <p>{{ issue.detail }}</p>
+            <ul>
+              <li v-for="record in issue.related_records" :key="record">{{ record }}</li>
+            </ul>
+            <small v-if="issue.status_updated_at" class="issue-meta">{{ issueStatusLabel(issue.status) }}：{{ issue.status_updated_by || '管理员' }} · {{ formatTime(issue.status_updated_at) }}</small>
+          </article>
+          <el-empty v-if="!issueLoading && !dataIssues.length" :description="issueEmptyText" :image-size="72" />
+        </div>
       </el-tab-pane>
 
       <el-tab-pane label="主数据" name="catalog">
@@ -272,9 +318,11 @@ import { isCityInProvince } from '../data/regions'
 import {
   getAdminCatalog,
   getAdminDataSummary,
+  getAdminDataIssues,
   getAdminImportBatches,
   getAdminInstitutions,
   getAdminQuestionQuality,
+  updateAdminDataIssue,
 } from '../api'
 
 const activeTab = ref('institutions')
@@ -284,6 +332,10 @@ const summary = ref(null)
 const batches = ref([])
 const questionQuality = ref(null)
 const catalog = ref(null)
+const dataIssues = ref([])
+const issueCounts = reactive({ open: 0, resolved: 0, ignored: 0 })
+const issueLoading = ref(false)
+const issueStatusFilter = ref('open')
 const institutions = ref({ total: 0, items: [] })
 const institutionFilters = reactive({
   province: '',
@@ -295,6 +347,18 @@ const institutionFilters = reactive({
 const catalogFilters = reactive({
   category: '',
   keyword: '',
+})
+
+const issueTabLabel = computed(() => issueCounts.open ? `问题处理 (${issueCounts.open})` : '问题处理')
+const validationTitle = computed(() => {
+  if (!summary.value) return ''
+  if (!summary.value.validation.passed) return `数据硬校验发现 ${summary.value.validation.issues.length} 个问题`
+  if (issueCounts.open) return `数据硬校验通过，仍有 ${issueCounts.open} 项待处理警告`
+  return '数据硬校验通过，暂无待处理警告'
+})
+const issueEmptyText = computed(() => {
+  const labels = { open: '暂无待处理问题', resolved: '暂无已处理问题', ignored: '暂无已忽略问题', all: '暂无数据问题' }
+  return labels[issueStatusFilter.value]
 })
 
 const catalogOverview = computed(() => {
@@ -378,6 +442,54 @@ function formatNumber(value) {
   return Number(value || 0).toLocaleString('zh-CN')
 }
 
+function formatTime(value) {
+  if (!value) return ''
+  const date = new Date(value)
+  const pad = number => String(number).padStart(2, '0')
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}`
+}
+
+function issueTypeLabel(type) {
+  return type === 'duplicate_question' ? '重复题干' : '专业映射'
+}
+
+function issueStatusLabel(status) {
+  return { open: '待处理', resolved: '已处理', ignored: '已忽略' }[status] || status
+}
+
+function issueStatusTag(status) {
+  return { open: 'warning', resolved: 'success', ignored: 'info' }[status] || 'info'
+}
+
+async function loadIssues() {
+  issueLoading.value = true
+  try {
+    const response = await getAdminDataIssues(issueStatusFilter.value)
+    dataIssues.value = response.items
+    Object.assign(issueCounts, response.counts)
+  } catch (error) {
+    ElMessage.error(error.message || '加载问题处理中心失败')
+  } finally {
+    issueLoading.value = false
+  }
+}
+
+async function changeIssueStatus(issue, status) {
+  try {
+    const updated = await updateAdminDataIssue(issue.key, status)
+    const index = dataIssues.value.findIndex(item => item.key === issue.key)
+    if (status === 'open' || issueStatusFilter.value === 'all' || issueStatusFilter.value === status) {
+      if (index >= 0) dataIssues.value[index] = updated
+    } else if (index >= 0) {
+      dataIssues.value.splice(index, 1)
+    }
+    await loadIssues()
+    ElMessage.success(`已标记为${issueStatusLabel(status)}`)
+  } catch (error) {
+    ElMessage.error(error.message || '更新问题状态失败')
+  }
+}
+
 async function reloadInstitutions() {
   institutionLoading.value = true
   try {
@@ -398,16 +510,19 @@ async function reloadInstitutions() {
 async function refreshAll() {
   loading.value = true
   try {
-    const [summaryData, batchData, questionData, catalogData] = await Promise.all([
+    const [summaryData, batchData, questionData, catalogData, issueData] = await Promise.all([
       getAdminDataSummary(),
       getAdminImportBatches(),
       getAdminQuestionQuality(),
       getAdminCatalog(),
+      getAdminDataIssues(issueStatusFilter.value),
     ])
     summary.value = summaryData
     batches.value = batchData
     questionQuality.value = questionData
     catalog.value = catalogData
+    dataIssues.value = issueData.items
+    Object.assign(issueCounts, issueData.counts)
     await reloadInstitutions()
   } catch (error) {
     ElMessage.error(error.message || '加载数据管理信息失败')

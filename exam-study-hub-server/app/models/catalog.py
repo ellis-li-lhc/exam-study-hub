@@ -1,5 +1,7 @@
 # 招生目录相关的数据库表模型。第一版先建「专业」这一组。
-from sqlalchemy import ForeignKey, String, Integer, UniqueConstraint, Text, JSON
+from datetime import datetime, timezone
+
+from sqlalchemy import DateTime, ForeignKey, String, Integer, UniqueConstraint, Text, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -165,3 +167,24 @@ class Question(Base):
     sort_order: Mapped[int] = mapped_column(Integer, default=0)
 
     topic: Mapped["QuestionTopic"] = relationship(back_populates="questions")
+
+
+class DataIssueResolution(Base):
+    """管理员对数据质量问题的处理记录。
+
+    问题本身仍由实时校验生成；本表只记录“已处理 / 已忽略”的运营状态，
+    不直接改动招生数据或题库内容。
+    """
+    __tablename__ = "data_issue_resolutions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    issue_key: Mapped[str] = mapped_column(String(96), unique=True, index=True)
+    status: Mapped[str] = mapped_column(String(16))  # resolved / ignored
+    # 管理员账号被删除时保留处置记录，只清空操作者关联。
+    updated_by_user_id: Mapped[int | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL"), index=True, nullable=True,
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc),
+        onupdate=lambda: datetime.now(timezone.utc),
+    )

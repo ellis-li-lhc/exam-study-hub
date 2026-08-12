@@ -10,6 +10,7 @@ from app.models.catalog import (  # noqa: F401
     ProvinceControlScore,
     QuestionTopic,
     Question,
+    DataIssueResolution,
 )
 from app.models.user import (  # noqa: F401
     EmailVerificationCode,

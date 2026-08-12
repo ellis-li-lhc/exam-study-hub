@@ -1,3 +1,6 @@
+from datetime import datetime
+from typing import Literal
+
 from pydantic import BaseModel
 
 
@@ -72,6 +75,33 @@ class QuestionSubjectQuality(BaseModel):
 class QuestionQualityResponse(BaseModel):
     subjects: list[QuestionSubjectQuality]
     issues: list[ValidationIssue]
+
+
+class DataIssueItem(BaseModel):
+    key: str
+    issue_type: Literal["duplicate_question", "unmapped_plan"]
+    severity: Literal["warning"]
+    title: str
+    detail: str
+    related_records: list[str]
+    status: Literal["open", "resolved", "ignored"]
+    status_updated_at: datetime | None = None
+    status_updated_by: str | None = None
+
+
+class DataIssueCounts(BaseModel):
+    open: int = 0
+    resolved: int = 0
+    ignored: int = 0
+
+
+class DataIssueListResponse(BaseModel):
+    items: list[DataIssueItem]
+    counts: DataIssueCounts
+
+
+class DataIssueStatusUpdate(BaseModel):
+    status: Literal["open", "resolved", "ignored"]
 
 
 class CatalogProvinceItem(BaseModel):

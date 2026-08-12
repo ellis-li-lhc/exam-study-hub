@@ -46,6 +46,16 @@ export function getAdminQuestionQuality() {
   return http.get('/admin/data/question-quality')
 }
 
+// 可处理的数据质量问题 → GET /api/admin/data/issues
+export function getAdminDataIssues(status = 'open') {
+  return http.get('/admin/data/issues', { params: { status } })
+}
+
+// 标记数据问题为已处理 / 已忽略 / 待处理 → PATCH /api/admin/data/issues/{key}
+export function updateAdminDataIssue(issueKey, status) {
+  return http.patch(`/admin/data/issues/${encodeURIComponent(issueKey)}`, { status })
+}
+
 // 省份 / 专业主数据维护入口 → GET /api/admin/data/catalog
 export function getAdminCatalog() {
   return http.get('/admin/data/catalog')
