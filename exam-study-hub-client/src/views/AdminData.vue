@@ -28,7 +28,8 @@
       show-icon
     />
 
-    <el-tabs v-model="activeTab" class="data-tabs">
+    <div ref="dataTabsRef" :style="dataTabsStyle" @pointerdown.capture="rememberTabScrollPosition">
+    <el-tabs v-model="activeTab" class="data-tabs" @tab-change="restoreTabScrollPosition">
       <el-tab-pane label="院校数据" name="institutions">
         <el-alert
           class="scope-alert"
@@ -307,11 +308,12 @@
         <el-empty v-if="summary && !summary.validation.issues.length" description="数据校验通过，未发现硬规则问题" :image-size="72" />
       </el-tab-pane>
     </el-tabs>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, nextTick, onMounted, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { Refresh, Search } from '@element-plus/icons-vue'
 import { isCityInProvince } from '../data/regions'
@@ -326,6 +328,9 @@ import {
 } from '../api'
 
 const activeTab = ref('institutions')
+const dataTabsRef = ref(null)
+const dataTabsMinHeight = ref(0)
+const lastTabScrollPosition = ref(null)
 const loading = ref(false)
 const institutionLoading = ref(false)
 const summary = ref(null)
@@ -350,6 +355,7 @@ const catalogFilters = reactive({
 })
 
 const issueTabLabel = computed(() => issueCounts.open ? `问题处理 (${issueCounts.open})` : '问题处理')
+const dataTabsStyle = computed(() => dataTabsMinHeight.value ? { minHeight: `${dataTabsMinHeight.value}px` } : undefined)
 const validationTitle = computed(() => {
   if (!summary.value) return ''
   if (!summary.value.validation.passed) return `数据硬校验发现 ${summary.value.validation.issues.length} 个问题`
@@ -417,6 +423,48 @@ const groupedCatalogMajors = computed(() => {
   }
   return [...categoryMap.values()].filter(group => group.majors.length)
 })
+
+// 不同标签的内容高度差很大。必须在标签面板替换前记住位置，否则浏览器
+// 会先因页面变短而把位置裁回顶部。
+function rememberTabScrollPosition(event) {
+  if (!event.target.closest('.el-tabs__item')) return
+  const scrollContainer = document.scrollingElement
+  if (!scrollContainer) return
+  const scrollPosition = { top: scrollContainer.scrollTop, left: scrollContainer.scrollLeft }
+  const tabsElement = dataTabsRef.value
+  if (!tabsElement) return
+
+  // 在标签内容被 Element Plus 替换前同步锁定当前高度，避免浏览器先将
+  // 超出新页面高度的滚动位置裁掉。随后再让 Vue 接管这个最小高度。
+  dataTabsMinHeight.value = Math.max(dataTabsMinHeight.value, tabsElement.offsetHeight)
+  tabsElement.style.minHeight = `${dataTabsMinHeight.value}px`
+  lastTabScrollPosition.value = scrollPosition
+}
+
+function restoreTabScrollPosition() {
+  const scrollPosition = lastTabScrollPosition.value
+  const scrollContainer = document.scrollingElement
+  const tabsElement = dataTabsRef.value
+  if (!scrollPosition || !scrollContainer || !tabsElement) return
+
+  // 让标签组件先完成面板替换，再恢复滚动；否则它的内部定位会覆盖恢复值。
+  requestAnimationFrame(() => {
+    void nextTick().then(() => {
+      const requiredScrollHeight = scrollPosition.top + scrollContainer.clientHeight
+      const currentScrollHeight = scrollContainer.scrollHeight
+      if (currentScrollHeight < requiredScrollHeight) {
+        dataTabsMinHeight.value = Math.max(
+          dataTabsMinHeight.value,
+          tabsElement.offsetHeight + requiredScrollHeight - currentScrollHeight,
+        )
+      }
+      requestAnimationFrame(() => {
+        scrollContainer.scrollTo({ top: scrollPosition.top, left: scrollPosition.left, behavior: 'auto' })
+      })
+    })
+  })
+}
+
 
 function qualityTag(value) {
   if (value === '完整') return 'success'
