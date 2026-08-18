@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 REPO_URL="${REPO_URL:-https://github.com/ellis-li-lhc/exam-study-hub.git}"
-RELEASE_REF="${RELEASE_REF:-c6cb143}"
+RELEASE_REF="${RELEASE_REF:-c6cb143d4d71749532a202d8de1d1935d22f42d7}"
 APP_DIR="${APP_DIR:-/opt/exam-study-hub}"
 WEB_DIR="${WEB_DIR:-/var/www/exam-study-hub}"
 BACKUP_BASE="${BACKUP_BASE:-/var/backups/exam-study-hub}"
