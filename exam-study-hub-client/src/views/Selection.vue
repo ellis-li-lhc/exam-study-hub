@@ -7,7 +7,7 @@
 
     <el-form label-position="top" class="profile-form" @submit.prevent>
       <el-card shadow="never" class="form-card">
-        <template #header><div class="form-heading"><span>1</span><div><h3>我可以在哪报名？</h3><p>支持多选。目前江苏、河南已接入公开招生数据，其余省份陆续接入。</p></div></div></template>
+        <template #header><div class="form-heading"><span>1</span><div><h3>我可以在哪报名？</h3><p>支持多选。目前江苏、河南、浙江已接入公开招生数据，其余省份陆续接入。</p></div></div></template>
         <el-select v-model="draft.provinces" multiple filterable size="large" placeholder="选择报考省份" class="province-select">
           <el-option v-for="province in chinaProvinces" :key="province.value" :label="province.label" :value="province.value" :disabled="!isProvinceAvailable(province.value)">
             <span>{{ province.label }}</span>

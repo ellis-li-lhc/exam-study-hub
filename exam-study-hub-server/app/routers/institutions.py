@@ -14,6 +14,7 @@ router = APIRouter(prefix="/api/institutions", tags=["institutions"])
 PROVIDER_BY_PROVINCE = {
     "jiangsu": "江苏省教育考试院",
     "henan": "河南省教育考试院",
+    "zhejiang": "浙江省教育考试院",
 }
 
 

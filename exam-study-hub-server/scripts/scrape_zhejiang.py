@@ -32,6 +32,26 @@ CONTROL_SOURCES = [
         "year": 2023,
         "url": "https://www.zjzs.net/art/2023/11/17/art_53_5973.html",
     },
+    {
+        "year": 2022,
+        "url": "https://www.zjzs.net/art/2022/11/25/art_53_5031.html",
+    },
+    {
+        "year": 2021,
+        "url": "https://www.zjzs.net/art/2021/11/24/art_53_5964.html",
+    },
+    {
+        "year": 2020,
+        "url": "https://www.zjzs.net/art/2020/11/23/art_53_5986.html",
+    },
+    {
+        "year": 2019,
+        "url": "https://www.zjzs.net/art/2019/11/21/art_53_5983.html",
+    },
+    {
+        "year": 2018,
+        "url": "https://www.zjzs.net/art/2018/11/22/art_155_8386.html",
+    },
 ]
 
 CATEGORY_NAME_MAP = {

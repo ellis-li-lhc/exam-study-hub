@@ -3,7 +3,8 @@
 
 export const provinceOptions = [
   { value: 'henan', label: '河南', note: '户籍地，可直接按当年公告准备材料' },
-  { value: 'jiangsu', label: '江苏', note: '工作地，非户籍报名需核验居住证或连续社保' }
+  { value: 'jiangsu', label: '江苏', note: '工作地，非户籍报名需核验居住证或连续社保' },
+  { value: 'zhejiang', label: '浙江', note: '已接入2025官方招生专业目录，计划人数以报名系统为准' }
 ]
 
 export const stageTemplates = [

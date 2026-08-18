@@ -62,7 +62,7 @@
       </el-card>
     </section>
 
-    <el-alert title="河南/江苏公开数据试运行版：2025 公开数据 + 2026 备考规划参考；院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
+    <el-alert title="河南/江苏/浙江公开数据试运行版：浙江已接入2025官方招生专业目录，但计划人数与院校线暂未公开；院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
   </div>
 </template>
 

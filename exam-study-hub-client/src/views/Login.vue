@@ -45,7 +45,7 @@
 
         <div class="story-footer">
           <span><el-icon><CircleCheck /></el-icon> 学习进度云端同步</span>
-          <span><el-icon><CircleCheck /></el-icon> 河南 / 江苏公开数据试运行</span>
+          <span><el-icon><CircleCheck /></el-icon> 河南 / 江苏 / 浙江公开数据试运行</span>
         </div>
       </section>
 

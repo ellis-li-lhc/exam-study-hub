@@ -332,7 +332,7 @@ export const useApplicationStore = defineStore('application', () => {
         provinceOptions.value = data.map(item => ({ value: item.code, label: item.name, note: item.note }))
       }
     } catch (error) {
-      console.warn('加载省份列表失败，已使用本地苏/豫兜底', error)
+      console.warn('加载省份列表失败，已使用本地苏/豫/浙兜底', error)
     }
   }
 

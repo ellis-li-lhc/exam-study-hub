@@ -38,7 +38,7 @@ export const chinaProvinces = [
 ]
 
 // 当前已开放报考的省份（有真实招生数据）。其余省份在下拉中禁用。
-export const availableProvinces = ['jiangsu', 'henan']
+export const availableProvinces = ['jiangsu', 'henan', 'zhejiang']
 
 // 城市偏好中的特殊选项：保留在所选招生省份内招生、但校本部不在该省的院校。
 export const OUTSIDE_PROVINCE_CITY = '__outside_province__'
@@ -46,7 +46,8 @@ export const OUTSIDE_PROVINCE_CITY_LABEL = '省外院校'
 
 export const provinceCityOptions = {
   jiangsu: ['南京', '无锡', '徐州', '常州', '苏州', '南通', '连云港', '淮安', '盐城', '扬州', '镇江', '泰州', '宿迁'],
-  henan: ['郑州', '开封', '洛阳', '平顶山', '安阳', '鹤壁', '新乡', '焦作', '濮阳', '许昌', '漯河', '三门峡', '南阳', '商丘', '信阳', '周口', '驻马店', '济源']
+  henan: ['郑州', '开封', '洛阳', '平顶山', '安阳', '鹤壁', '新乡', '焦作', '濮阳', '许昌', '漯河', '三门峡', '南阳', '商丘', '信阳', '周口', '驻马店', '济源'],
+  zhejiang: ['杭州', '宁波', '温州', '嘉兴', '湖州', '绍兴', '金华', '衢州', '舟山', '台州', '丽水']
 }
 
 export function isProvinceAvailable(value) {

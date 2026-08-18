@@ -80,6 +80,12 @@ def run():
             .count()
         )
         zhejiang_control_count = db.query(ProvinceControlScore).filter_by(province_id=zhejiang.id).count()
+        zhejiang_plan_count = (
+            db.query(AdmissionPlan)
+            .join(Institution)
+            .filter(Institution.province_id == zhejiang.id)
+            .count()
+        )
 
         if henan_institution_count != 39:
             fail(f"河南院校数应为 39，实际 {henan_institution_count}")
@@ -93,11 +99,14 @@ def run():
             fail(f"江苏院校科类分数应为 171，实际 {jiangsu_score_count}")
         if jiangsu_plan_count != 89:
             fail(f"江苏本科征求计划应为 89，实际 {jiangsu_plan_count}")
-        if zhejiang_control_count != 24:
-            fail(f"浙江省控线应为 24，实际 {zhejiang_control_count}")
+        if zhejiang_control_count != 64:
+            fail(f"浙江省控线应为 64，实际 {zhejiang_control_count}")
+        if zhejiang_plan_count != 541:
+            fail(f"浙江招生专业目录应为 541，实际 {zhejiang_plan_count}")
 
         print("数据校验通过：专业 66 个；河南院校 39 所，院校科类分数 90 条，专业计划 199 条，省控线 26 条；"
-              "江苏院校科类分数 171 条，本科征求计划 89 条；浙江省控线 24 条。")
+              "江苏院校科类分数 171 条，本科征求计划 89 条；"
+              "浙江省控线 64 条，招生专业目录 541 条。")
     finally:
         db.close()
 

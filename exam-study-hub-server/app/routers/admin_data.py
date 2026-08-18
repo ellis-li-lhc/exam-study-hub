@@ -49,7 +49,8 @@ EXPECTED_COUNTS = {
     "henan_control": 26,
     "jiangsu_score": 171,
     "jiangsu_plan": 89,
-    "zhejiang_control": 24,
+    "zhejiang_control": 64,
+    "zhejiang_plan": 541,
 }
 LEGACY_MAJOR_CODES = ["business", "accounting", "law", "education", "computer", "chinese"]
 
@@ -171,6 +172,13 @@ def build_validation_summary(db: Session) -> ValidationSummary:
             "浙江省控线",
             db.query(ProvinceControlScore).filter_by(province_id=zhejiang.id).count(),
             EXPECTED_COUNTS["zhejiang_control"],
+        )
+        add_count_issue(
+            issues,
+            "浙江数据",
+            "浙江招生专业目录",
+            db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == zhejiang.id).count(),
+            EXPECTED_COUNTS["zhejiang_plan"],
         )
 
     missing_city_count = db.query(Institution).filter(

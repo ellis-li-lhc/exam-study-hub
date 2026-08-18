@@ -87,7 +87,7 @@
       <el-main class="main-content">
         <section class="release-notice" aria-label="数据试运行说明">
           <div>
-            <strong>河南/江苏公开数据试运行版</strong>
+            <strong>河南/江苏/浙江公开数据试运行版</strong>
             <span>2025 公开数据 + 2026 备考规划参考</span>
           </div>
           <p>院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。</p>
