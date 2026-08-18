@@ -132,10 +132,15 @@
                     </div>
                   </template>
                   <div class="knowledge-results result-knowledge-nav">
-                    <button v-for="item in knowledgeDetailsBySubject(subject)" :key="item.id" :class="{ active: activeResultGroup(subject)?.id === item.id }" @click="setResultGroup(subject, item.id)">
+                    <button v-for="item in knowledgeDetailsBySubject(subject)" :key="item.id" :class="{ active: activeResultGroup(subject)?.id === item.id }" :aria-pressed="activeResultGroup(subject)?.id === item.id" @click="setResultGroup(subject, item.id)">
                       <span :class="masteryClass(item.mastery)">{{ item.mastery }}%</span>
-                      <div><strong>{{ item.name }}</strong><small>{{ item.subject }} · 答对 {{ item.correct }}/{{ item.total }}</small></div>
-                      <el-tag :type="item.mastery >= 60 ? 'success' : 'warning'" size="small">{{ item.mastery >= 60 ? '基础可用' : '优先补强' }}</el-tag>
+                      <div class="knowledge-result-copy">
+                        <strong>{{ item.name }}</strong>
+                        <small>
+                          <span>{{ item.subject }} · 答对 {{ item.correct }}/{{ item.total }}</span>
+                          <span :class="['knowledge-result-state', item.mastery >= 60 ? 'is-ready' : 'is-priority']"><i aria-hidden="true"></i>{{ item.mastery >= 60 ? '基础可用' : '优先补强' }}</span>
+                        </small>
+                      </div>
                     </button>
                   </div>
                 </el-card>
@@ -226,10 +231,15 @@
                     </div>
                   </template>
                   <div class="knowledge-results result-knowledge-nav">
-                    <button v-for="item in knowledgeDetailsBySubject(subject)" :key="item.id" :class="{ active: activeResultGroup(subject)?.id === item.id }" @click="setResultGroup(subject, item.id)">
+                    <button v-for="item in knowledgeDetailsBySubject(subject)" :key="item.id" :class="{ active: activeResultGroup(subject)?.id === item.id }" :aria-pressed="activeResultGroup(subject)?.id === item.id" @click="setResultGroup(subject, item.id)">
                       <span :class="masteryClass(item.mastery)">{{ item.mastery }}%</span>
-                      <div><strong>{{ item.name }}</strong><small>{{ item.subject }} · 答对 {{ item.correct }}/{{ item.total }}</small></div>
-                      <el-tag :type="item.mastery >= 60 ? 'success' : 'warning'" size="small">{{ item.mastery >= 60 ? '基础可用' : '优先补强' }}</el-tag>
+                      <div class="knowledge-result-copy">
+                        <strong>{{ item.name }}</strong>
+                        <small>
+                          <span>{{ item.subject }} · 答对 {{ item.correct }}/{{ item.total }}</span>
+                          <span :class="['knowledge-result-state', item.mastery >= 60 ? 'is-ready' : 'is-priority']"><i aria-hidden="true"></i>{{ item.mastery >= 60 ? '基础可用' : '优先补强' }}</span>
+                        </small>
+                      </div>
                     </button>
                   </div>
                 </el-card>

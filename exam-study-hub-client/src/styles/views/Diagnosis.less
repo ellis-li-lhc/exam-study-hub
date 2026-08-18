@@ -494,10 +494,12 @@
 }
 .knowledge-results button {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
   align-items: center;
-  gap: 9px;
-  padding: 9px;
+  gap: 11px;
+  min-height: 64px;
+  padding: 10px 12px;
   border: 1px solid transparent;
   border-radius: 11px;
   text-align: left;
@@ -509,14 +511,18 @@
   border-color: #bfd4ff;
   background: #fafdff;
 }
+.knowledge-results button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 2px;
+}
 .knowledge-results button.active {
   border-color: #7aa7f7;
   background: #edf5ff;
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08);
 }
 .knowledge-results button > span {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
@@ -536,30 +542,47 @@
   color: #b06b00;
   background: #fff0ce;
 }
-.knowledge-results button > div {
-  flex: 1;
+.knowledge-result-copy {
+  min-width: 0;
 }
 .knowledge-results strong,
 .knowledge-results small {
   display: block;
 }
 .knowledge-results strong {
-  max-width: 170px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   color: var(--ink);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
 }
 .knowledge-results small {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 9px;
+  margin-top: 3px;
   color: var(--text-muted);
   font-size: 0.65rem;
+  line-height: 1.35;
 }
-.knowledge-results :deep(.el-tag) {
-  height: 28px;
-  padding: 0 8px;
-  border-radius: 10px;
-  font-size: 0.68rem;
+.knowledge-result-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.knowledge-result-state i {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: currentColor;
+}
+.knowledge-result-state.is-priority {
+  color: #a85d00;
+}
+.knowledge-result-state.is-ready {
+  color: #08765a;
 }
 .answer-review-card {
   overflow: hidden;
