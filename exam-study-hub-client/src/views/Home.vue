@@ -62,7 +62,7 @@
       </el-card>
     </section>
 
-    <el-alert title="河南/江苏/浙江公开数据试运行版：浙江已接入2025官方招生专业目录，但计划人数与院校线暂未公开；院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
+    <el-alert title="河南/江苏/浙江/广东公开数据试运行版：广东已接入2025招生计划、第一志愿投档线及省控线；浙江计划人数与院校线暂未公开。院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
   </div>
 </template>
 

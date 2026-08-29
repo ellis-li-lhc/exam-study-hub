@@ -15,6 +15,7 @@ PROVIDER_BY_PROVINCE = {
     "jiangsu": "江苏省教育考试院",
     "henan": "河南省教育考试院",
     "zhejiang": "浙江省教育考试院",
+    "guangdong": "广东省教育考试院",
 }
 
 
@@ -52,6 +53,7 @@ def read_institutions(
         scores = [
             ScoreRead(
                 year=s.year,
+                category_code=s.category_code,
                 category_name=s.category_name,
                 major_category=KELEI_TO_CATEGORY.get(s.category_name),
                 score=s.score,
@@ -68,6 +70,7 @@ def read_institutions(
                 year=p.year,
                 major_code=p.major_code,
                 major_name=p.major_name,
+                category_code=p.category_code,
                 category_name=p.category_name,
                 plan_count=p.plan_count,
                 line_type=p.line_type,

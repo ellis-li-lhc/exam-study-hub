@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class ScoreRead(BaseModel):
     year: int
+    category_code: str | None = None
     category_name: str          # 科类名，如 专升本经管类
     major_category: str | None = None   # 对应的专业类别，如 经济管理类
     score: int | None = None
@@ -15,6 +16,7 @@ class PlanRead(BaseModel):
     year: int
     major_code: str
     major_name: str
+    category_code: str | None = None
     category_name: str | None = None
     plan_count: int | None = None
     line_type: str | None = None

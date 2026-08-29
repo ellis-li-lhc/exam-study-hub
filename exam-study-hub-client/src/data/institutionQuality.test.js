@@ -6,6 +6,7 @@ import {
   institutionDataProfile,
   latestReferenceScore,
   matchedPlansForMajor,
+  referenceScoresForMajor,
   validScores,
 } from './institutionQuality.js'
 
@@ -32,6 +33,20 @@ test('latestReferenceScore returns the newest valid reference line', () => {
   }
 
   assert.deepEqual(latestReferenceScore(school), { year: 2025, score: 117 })
+})
+
+test('referenceScoresForMajor matches Guangdong plan group to its投档 line', () => {
+  const school = {
+    majorMatch: 'exact',
+    plans: [{ major_name: '工商管理', category_code: '103' }],
+    scores: [
+      { year: 2025, category_code: '12101', category_name: '专升本文史中医类', score: 160 },
+      { year: 2025, category_code: '11103', category_name: '专升本理工经管类', score: 102 },
+    ],
+  }
+
+  assert.deepEqual(referenceScoresForMajor(school, '工商管理').map(item => item.score), [102])
+  assert.equal(latestReferenceScore(school, '工商管理').score, 102)
 })
 
 test('matchedPlansForMajor only trusts exact major plans', () => {

@@ -12,8 +12,23 @@ export function validScores(school) {
     .filter(item => Number.isFinite(item.score))
 }
 
-export function latestReferenceScore(school) {
+export function referenceScoresForMajor(school, majorName) {
   const scores = validScores(school)
+  const plans = matchedPlansForMajor(school, majorName)
+  if (!plans.length) return scores
+
+  const categoryCodes = new Set(plans.map(item => String(item.category_code || item.categoryCode || '')).filter(Boolean))
+  const categoryNames = new Set(plans.map(item => item.category_name || item.categoryName).filter(Boolean))
+  const matched = scores.filter(item => {
+    const scoreCode = String(item.category_code || item.categoryCode || '')
+    return [...categoryCodes].some(code => scoreCode === code || scoreCode.endsWith(code))
+      || categoryNames.has(item.category_name || item.categoryName)
+  })
+  return matched.length ? matched : scores
+}
+
+export function latestReferenceScore(school, majorName) {
+  const scores = referenceScoresForMajor(school, majorName)
   return scores.length
     ? scores.slice().sort((a, b) => Number(b.year || 0) - Number(a.year || 0))[0]
     : null

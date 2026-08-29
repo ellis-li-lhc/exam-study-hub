@@ -24,6 +24,9 @@ def run():
         zhejiang = db.scalars(select(Province).where(Province.code == "zhejiang")).first()
         if zhejiang is None:
             fail("缺少浙江省份记录")
+        guangdong = db.scalars(select(Province).where(Province.code == "guangdong")).first()
+        if guangdong is None:
+            fail("缺少广东省份记录")
 
         major_count = db.query(Major).count()
         if major_count != 66:
@@ -86,6 +89,20 @@ def run():
             .filter(Institution.province_id == zhejiang.id)
             .count()
         )
+        guangdong_institution_count = db.query(Institution).filter_by(province_id=guangdong.id).count()
+        guangdong_score_count = (
+            db.query(AdmissionScore)
+            .join(Institution)
+            .filter(Institution.province_id == guangdong.id)
+            .count()
+        )
+        guangdong_plan_count = (
+            db.query(AdmissionPlan)
+            .join(Institution)
+            .filter(Institution.province_id == guangdong.id)
+            .count()
+        )
+        guangdong_control_count = db.query(ProvinceControlScore).filter_by(province_id=guangdong.id).count()
 
         if henan_institution_count != 39:
             fail(f"河南院校数应为 39，实际 {henan_institution_count}")
@@ -103,10 +120,19 @@ def run():
             fail(f"浙江省控线应为 64，实际 {zhejiang_control_count}")
         if zhejiang_plan_count != 541:
             fail(f"浙江招生专业目录应为 541，实际 {zhejiang_plan_count}")
+        if guangdong_institution_count != 79:
+            fail(f"广东院校数应为 79，实际 {guangdong_institution_count}")
+        if guangdong_score_count != 199:
+            fail(f"广东院校科目组投档线应为 199，实际 {guangdong_score_count}")
+        if guangdong_plan_count != 746:
+            fail(f"广东招生专业计划应为 746，实际 {guangdong_plan_count}")
+        if guangdong_control_count != 9:
+            fail(f"广东省控线应为 9，实际 {guangdong_control_count}")
 
         print("数据校验通过：专业 66 个；河南院校 39 所，院校科类分数 90 条，专业计划 199 条，省控线 26 条；"
               "江苏院校科类分数 171 条，本科征求计划 89 条；"
-              "浙江省控线 64 条，招生专业目录 541 条。")
+              "浙江省控线 64 条，招生专业目录 541 条；"
+              "广东院校 79 所，院校科目组投档线 199 条，招生专业计划 746 条，省控线 9 条。")
     finally:
         db.close()
 

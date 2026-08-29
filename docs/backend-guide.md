@@ -453,7 +453,12 @@ from pathlib import Path
 from app.db.session import SessionLocal
 from app.models.catalog import Province, Major, MajorSubject
 
-PROVINCES = [{"code": "henan", "name": "河南"}, {"code": "jiangsu", "name": "江苏"}]
+PROVINCES = [
+    {"code": "henan", "name": "河南"},
+    {"code": "jiangsu", "name": "江苏"},
+    {"code": "zhejiang", "name": "浙江"},
+    {"code": "guangdong", "name": "广东"},
+]
 
 def run():
     db = SessionLocal()

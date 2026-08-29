@@ -51,6 +51,10 @@ EXPECTED_COUNTS = {
     "jiangsu_plan": 89,
     "zhejiang_control": 64,
     "zhejiang_plan": 541,
+    "guangdong_institution": 79,
+    "guangdong_score": 199,
+    "guangdong_plan": 746,
+    "guangdong_control": 9,
 }
 LEGACY_MAJOR_CODES = ["business", "accounting", "law", "education", "computer", "chinese"]
 
@@ -78,12 +82,15 @@ def build_validation_summary(db: Session) -> ValidationSummary:
     henan = db.query(Province).filter_by(code="henan").first()
     jiangsu = db.query(Province).filter_by(code="jiangsu").first()
     zhejiang = db.query(Province).filter_by(code="zhejiang").first()
+    guangdong = db.query(Province).filter_by(code="guangdong").first()
     if henan is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少河南省份记录"))
     if jiangsu is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少江苏省份记录"))
     if zhejiang is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少浙江省份记录"))
+    if guangdong is None:
+        issues.append(ValidationIssue(severity="error", area="省份", message="缺少广东省份记录"))
 
     major_count = db.query(Major).count()
     add_count_issue(issues, "专业主数据", "专业主数据", major_count, EXPECTED_COUNTS["major"])
@@ -179,6 +186,36 @@ def build_validation_summary(db: Session) -> ValidationSummary:
             "浙江招生专业目录",
             db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == zhejiang.id).count(),
             EXPECTED_COUNTS["zhejiang_plan"],
+        )
+
+    if guangdong is not None:
+        add_count_issue(
+            issues,
+            "广东数据",
+            "广东院校数",
+            db.query(Institution).filter_by(province_id=guangdong.id).count(),
+            EXPECTED_COUNTS["guangdong_institution"],
+        )
+        add_count_issue(
+            issues,
+            "广东数据",
+            "广东院校科目组投档线",
+            db.query(AdmissionScore).join(Institution).filter(Institution.province_id == guangdong.id).count(),
+            EXPECTED_COUNTS["guangdong_score"],
+        )
+        add_count_issue(
+            issues,
+            "广东数据",
+            "广东招生专业计划",
+            db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == guangdong.id).count(),
+            EXPECTED_COUNTS["guangdong_plan"],
+        )
+        add_count_issue(
+            issues,
+            "广东数据",
+            "广东省控线",
+            db.query(ProvinceControlScore).filter_by(province_id=guangdong.id).count(),
+            EXPECTED_COUNTS["guangdong_control"],
         )
 
     missing_city_count = db.query(Institution).filter(

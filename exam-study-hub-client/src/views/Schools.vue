@@ -5,7 +5,7 @@
       <el-button @click="router.push('/profile')"><el-icon><Edit /></el-icon>修改专业</el-button>
     </section>
 
-    <el-alert title="河南/江苏/浙江公开数据试运行版：浙江已接入2025官方招生专业目录，但计划人数与院校线暂未公开；院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
+    <el-alert title="河南/江苏/浙江/广东公开数据试运行版：广东已接入2025招生计划、第一志愿投档线及省控线；浙江计划人数与院校线暂未公开。院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
 
     <div class="subject-strip">
       <span><el-icon><Tickets /></el-icon>统考科目</span>
@@ -37,7 +37,7 @@
 
       <aside class="compare-panel" v-if="selected">
         <span class="section-kicker">目标预览</span><h3>{{ selected.name }}</h3><p>{{ store.selectedMajor?.category }} · {{ selected.duration }}</p>
-        <div class="score-history"><div v-for="score in selected.scores" :key="score.year"><span>{{ score.year }}</span><b>{{ score.score }}</b><i :style="{ width: barWidth(score.score) }"></i></div></div>
+        <div class="score-history"><div v-for="score in selectedReferenceScores" :key="`${score.year}-${score.category_code || score.category_name}`"><span>{{ score.year }}</span><b>{{ score.score }}</b><i :style="{ width: barWidth(score.score) }"></i></div></div>
         <dl><div><dt>教学点</dt><dd>{{ selected.teachingSite }}</dd></div><div><dt>学位条件</dt><dd>{{ selected.degree }}</dd></div>
           <div><dt>招生省份</dt><dd>{{ provinceName(selected.province) }}</dd></div>
           <div><dt>院校所在地</dt><dd>{{ selected.city }}<el-tag v-if="!isLocalSchool(selected)" size="small" type="warning" effect="dark" class="source-badge">外省院校</el-tag></dd></div>
@@ -71,7 +71,7 @@ import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useApplicationStore } from '../stores/application'
 import { cityPreferenceLabel, isCityInProvince } from '../data/regions'
-import { institutionDataProfile, latestReferenceScore, matchedPlansForMajor } from '../data/institutionQuality'
+import { institutionDataProfile, latestReferenceScore, matchedPlansForMajor, referenceScoresForMajor } from '../data/institutionQuality'
 const router=useRouter();const store=useApplicationStore();const selected=computed(()=>store.selectedInstitution)
 const provinceText=computed(()=>store.selectedProvinces.map(item=>item.label).join('、'))
 const cityText=computed(()=>(store.profile.cities||[]).map(cityPreferenceLabel).join('、'))
@@ -83,7 +83,8 @@ const emptySchoolsText=computed(()=>{
   if (cityText.value) return `所选所在地偏好（${cityText.value}）暂无该科类招生院校，试试取消所在地筛选或勾选省外院校`
   return '所选省份暂无该类别的招生院校数据'
 })
-const maxScore=computed(()=>Math.max(120,...(selected.value?.scores||[]).map(s=>s.score||0)))
+const selectedReferenceScores=computed(()=>referenceScoresForMajor(selected.value, store.selectedMajor?.name))
+const maxScore=computed(()=>Math.max(120,...selectedReferenceScores.value.map(s=>s.score||0)))
 const barWidth=score=>`${Math.min(100,Math.round((score||0)/maxScore.value*100))}%`
 const matchStats=computed(() => store.filteredInstitutions.reduce((stats, school) => {
   stats[school.majorMatch === 'exact' ? 'exact' : 'category'] += 1
@@ -103,7 +104,7 @@ const matchDetail=school=>school.majorMatch === 'exact'
 const qualityProfile=school=>institutionDataProfile(school, store.selectedMajor)
 const selectedProfile=computed(()=>selected.value ? qualityProfile(selected.value) : institutionDataProfile(null, store.selectedMajor))
 const scoreText=school=>{
-  const score = latestReferenceScore(school)?.score
+  const score = latestReferenceScore(school, store.selectedMajor?.name)?.score
   return Number.isFinite(Number(score)) ? `${score} 分` : '暂无参考线'
 }
 const tuitionText=school=>school.tuition !== null && school.tuition !== undefined && school.tuition !== '' && Number.isFinite(Number(school.tuition)) ? `¥${school.tuition}/年` : '暂未获取'

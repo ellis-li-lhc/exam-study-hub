@@ -23,3 +23,12 @@ test('cityPreferenceLabel renders special outside-province preference for users'
   assert.equal(cityPreferenceLabel(OUTSIDE_PROVINCE_CITY), OUTSIDE_PROVINCE_CITY_LABEL)
   assert.equal(cityPreferenceLabel('洛阳'), '洛阳')
 })
+
+test('Guangdong is available and distinguishes local from outside-province schools', () => {
+  const localGuangdongSchool = { province: 'guangdong', city: '广州' }
+  const outsideGuangdongSchool = { province: 'guangdong', city: '北京' }
+
+  assert.equal(matchesCityPreference(localGuangdongSchool, ['广州']), true)
+  assert.equal(matchesCityPreference(outsideGuangdongSchool, ['广州']), false)
+  assert.equal(matchesCityPreference(outsideGuangdongSchool, [OUTSIDE_PROVINCE_CITY]), true)
+})
