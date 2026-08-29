@@ -706,16 +706,24 @@
 
 @media (max-height: 760px) and (min-width: 981px) {
   .auth-page {
-    height: 100vh;
-    height: 100dvh;
-    min-height: 0;
+    // DevTools、浏览器缩放和小屏笔记本都会压低有效视口高度。
+    // 保持紧凑样式，但让超出的内容由页面正常滚动，不能再被裁掉。
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: 16px 32px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    place-items: start center;
   }
 
   .auth-shell {
-    height: calc(100dvh - 32px);
-    min-height: 0;
+    height: auto;
+    min-height: min(720px, calc(100dvh - 32px));
+  }
+
+  // 这些绝对定位的背景圆形会被算进可滚动溢出，造成只有空白区域的假滚动条。
+  .auth-orb {
+    display: none;
   }
 
   .auth-story {
@@ -723,7 +731,8 @@
   }
 
   .story-copy {
-    margin-bottom: 16px;
+    // 不能保留默认的 auto 上边距，否则在短视口中左栏会把内容挤出容器。
+    margin: 34px 0 16px;
   }
 
   .story-copy h1 {
@@ -783,7 +792,8 @@
   }
 
   .auth-shell {
-    height: calc(100dvh - 24px);
+    height: auto;
+    min-height: min(720px, calc(100dvh - 24px));
     border-radius: 22px;
   }
 
