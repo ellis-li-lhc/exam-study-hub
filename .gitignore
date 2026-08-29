@@ -13,6 +13,14 @@ dist-ssr
 *.local
 **/.env
 
+# Local deployment/review materials are intentionally kept out of Git.
+/deploy/
+/.codex-audit/
+/docs/*部署*
+/docs/*发布指南*
+/docs/*deployment*
+/scripts/deploy-*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
