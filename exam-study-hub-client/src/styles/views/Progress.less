@@ -79,6 +79,25 @@
 .progress-grid.three {
   grid-template-columns: repeat(3, 1fr);
 }
+.practice-explainer {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: .74rem;
+  line-height: 1.5;
+}
+.practice-trends { display: grid; gap: 9px; }
+.practice-trend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: #f6f8fc;
+}
+.practice-trend-row strong, .practice-trend-row small { display: block; }
+.practice-trend-row strong { color: var(--ink); font-size: .78rem; }
+.practice-trend-row small, .practice-trend-row span { color: var(--text-secondary); font-size: .7rem; }
 .progress-card {
   border-radius: 20px;
   border-color: var(--line);
@@ -281,4 +300,5 @@
   .test-main {
     grid-template-columns: 1fr;
   }
+  .practice-trend-row { align-items: flex-start; flex-direction: column; }
 }

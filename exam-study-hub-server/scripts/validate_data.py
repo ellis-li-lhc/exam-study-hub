@@ -27,6 +27,38 @@ def run():
         guangdong = db.scalars(select(Province).where(Province.code == "guangdong")).first()
         if guangdong is None:
             fail("缺少广东省份记录")
+        shanghai = db.query(Province).filter_by(code="shanghai").one_or_none()
+        if shanghai is None:
+            fail("缺少上海省份记录")
+        shandong = db.query(Province).filter_by(code="shandong").one_or_none()
+        if shandong is None:
+            fail("缺少山东省份记录")
+        hebei = db.query(Province).filter_by(code="hebei").one_or_none()
+        if hebei is None:
+            fail("缺少河北省份记录")
+        for label, actual, expected in (
+            ("院校", db.query(Institution).filter_by(province_id=hebei.id).count(), 87),
+            ("专升本计划", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == hebei.id).count(), 1709),
+            ("院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == hebei.id).count(), 0),
+            ("分人群省控线", db.query(ProvinceControlScore).filter_by(province_id=hebei.id).count(), 45),
+        ):
+            if actual != expected: fail(f"河北{label}应为 {expected}，实际 {actual}")
+        for label, actual, expected in (
+            ("院校", db.query(Institution).filter_by(province_id=shandong.id).count(), 89),
+            ("目录及征集记录", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == shandong.id).count(), 2738),
+            ("院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == shandong.id).count(), 0),
+            ("省控线", db.query(ProvinceControlScore).filter_by(province_id=shandong.id).count(), 29),
+        ):
+            if actual != expected: fail(f"山东{label}应为 {expected}，实际 {actual}")
+        shanghai_counts = {
+            "院校": (db.query(Institution).filter_by(province_id=shanghai.id).count(), 40),
+            "专业目录及计划": (db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == shanghai.id).count(), 679),
+            "院校实际录取线": (db.query(AdmissionScore).join(Institution).filter(Institution.province_id == shanghai.id).count(), 0),
+            "市控线": (db.query(ProvinceControlScore).filter_by(province_id=shanghai.id).count(), 24),
+        }
+        for label, (actual, expected) in shanghai_counts.items():
+            if actual != expected:
+                fail(f"上海{label}应为 {expected}，实际 {actual}")
 
         major_count = db.query(Major).count()
         if major_count != 66:
@@ -122,17 +154,20 @@ def run():
             fail(f"浙江招生专业目录应为 541，实际 {zhejiang_plan_count}")
         if guangdong_institution_count != 79:
             fail(f"广东院校数应为 79，实际 {guangdong_institution_count}")
-        if guangdong_score_count != 199:
-            fail(f"广东院校科目组投档线应为 199，实际 {guangdong_score_count}")
-        if guangdong_plan_count != 746:
-            fail(f"广东招生专业计划应为 746，实际 {guangdong_plan_count}")
-        if guangdong_control_count != 9:
-            fail(f"广东省控线应为 9，实际 {guangdong_control_count}")
+        if guangdong_score_count != 573:
+            fail(f"广东院校科目组投档线应为 573，实际 {guangdong_score_count}")
+        if guangdong_plan_count != 841:
+            fail(f"广东招生计划应为 841（主批次746、征集95），实际 {guangdong_plan_count}")
+        if guangdong_control_count != 27:
+            fail(f"广东省控线应为 27，实际 {guangdong_control_count}")
 
         print("数据校验通过：专业 66 个；河南院校 39 所，院校科类分数 90 条，专业计划 199 条，省控线 26 条；"
               "江苏院校科类分数 171 条，本科征求计划 89 条；"
               "浙江省控线 64 条，招生专业目录 541 条；"
-              "广东院校 79 所，院校科目组投档线 199 条，招生专业计划 746 条，省控线 9 条。")
+              "广东院校 79 所，院校科目组投档线 573 条，主批次计划 746 条、征集明细 95 条，省控线 27 条；"
+              "上海院校 40 所，2026目录269条、2025主批次279条及征求131条，市控线24条，院校实际录取线0条；"
+              "山东院校89所，2026目录952条、2025目录873条及两次征集465/448条，省控线29条，院校实际录取线0条；"
+              "河北院校87所，2024/2025计划885/824条，分人群省控线45条，院校实际录取线0条。")
     finally:
         db.close()
 

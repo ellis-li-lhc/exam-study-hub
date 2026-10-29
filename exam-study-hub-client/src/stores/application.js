@@ -10,21 +10,24 @@ import {
   buildMilestones,
   buildStageFocusPlan,
   buildWeaknessBacklog,
+  daysUntilTarget,
   fmtDate,
   getExamDate,
+  getPlanningYear,
   normalizeReviewQueue,
   resolveTaskMode,
   reviewKeyFor,
 } from '../data/planner'
 import { isCityInProvince, matchesCityPreference } from '../data/regions'
+import { durationForMajor, institutionSelectionCode, normalizeInstitutionScores, scoresForMajorSelection } from '../data/institutionQuality'
+import { verifiedReferenceScore } from '../data/targetPlan'
 
 const STORAGE_KEY = 'adult-upgrade-mvp-state'
 const DIAGNOSTIC_VERSION = 'docs-json-question-bank-v1'
-const PLAN_TASK_VERSION = 'diagnostic-route-v3'
+const PLAN_TASK_VERSION = 'diagnostic-route-v4'
 
 function getDefaultYear() {
-  const now = new Date()
-  return now.getMonth() + 1 <= 10 ? now.getFullYear() : now.getFullYear() + 1
+  return getPlanningYear()
 }
 
 function loadSavedState() {
@@ -82,6 +85,7 @@ export const useApplicationStore = defineStore('application', () => {
   const tasks = ref(Array.isArray(saved.tasks) ? saved.tasks : [])
   const tasksVersion = ref(saved.tasksVersion || null)
   const stageTests = ref(saved.stageTests || [])
+  const practiceAttempts = ref(Array.isArray(saved.practiceAttempts) ? saved.practiceAttempts : [])
   // 今天的任务是哪一天生成的（用于「每天自动刷新当日任务」）
   const tasksDate = ref(saved.tasksDate || null)
   // 复习队列：阶段测试沉淀的薄弱知识点，会被插入每日任务（动态纠偏）
@@ -95,17 +99,6 @@ export const useApplicationStore = defineStore('application', () => {
   const institutions = ref([])
   const institutionsLoaded = ref(false)
   const institutionsError = ref(null)
-
-  // 取某院校对应「选中专业科类」的投档线，归一成 [{year, score}]。
-  // 后端数据每条 score 带 majorCategory；无该字段时用整表 scores。
-  function relevantScores(item, category) {
-    const list = item.scores || []
-    const tagged = list.filter(s => s.majorCategory != null)
-    if (!tagged.length) return list
-    return tagged
-      .filter(s => s.majorCategory === category && s.score != null)
-      .map(s => ({ year: s.year, score: s.score, tuition: s.tuition }))
-  }
 
   const selectedMajor = computed(() => {
     const major = majorOptions.value.find(item => item.code === profile.value.majorCode)
@@ -127,8 +120,8 @@ export const useApplicationStore = defineStore('application', () => {
         return (item.majors || []).includes(profile.value.majorCode)
       })
       .map(item => {
-        const scores = relevantScores(item, category)
-        return { ...item, scores, tuition: scores[0]?.tuition ?? item.tuition ?? null }
+        const scores = scoresForMajorSelection(item, selectedMajor.value)
+        return { ...item, scores, duration: durationForMajor(item, selectedMajor.value?.name), tuition: scores[0]?.tuition ?? item.tuition ?? null }
       })
       .sort((a, b) => {
         const aLocal = isCityInProvince(a.province, a.city)
@@ -144,15 +137,9 @@ export const useApplicationStore = defineStore('application', () => {
   const profileComplete = computed(() => profile.value.provinces.length > 0 && Boolean(profile.value.majorCode))
   const diagnosisComplete = computed(() => diagnostic.value.completed)
   const currentScore = computed(() => Object.values(diagnostic.value.subjectScores).reduce((sum, value) => sum + Number(value || 0), 0))
-  const referenceScore = computed(() => {
-    const scores = (selectedInstitution.value?.scores || [])
-      .filter(item => item.score !== null && item.score !== undefined)
-      .map(item => Number(item.score))
-      .filter(score => Number.isFinite(score))
-    return scores.length ? Math.max(...scores) : 120
-  })
-  const targetScore = computed(() => referenceScore.value + 30)
-  const scoreGap = computed(() => Math.max(0, targetScore.value - currentScore.value))
+  const referenceScore = computed(() => verifiedReferenceScore(selectedInstitution.value, selectedMajor.value?.name))
+  const targetScore = computed(() => referenceScore.value == null ? null : referenceScore.value + 30)
+  const scoreGap = computed(() => targetScore.value == null ? null : Math.max(0, targetScore.value - currentScore.value))
   const SUBJECT_MAX = 150
   // 分科目标：结合诊断结果分配，而非平均/固定权重。
   // 思路：以诊断折算分为各科起点，把“目标总分-当前总分”的增量按
@@ -182,7 +169,9 @@ export const useApplicationStore = defineStore('application', () => {
     })
 
     const currentTotal = items.reduce((sum, item) => sum + item.current, 0)
-    const totalTarget = Math.min(SUBJECT_MAX * subjects.length, Math.round(targetScore.value * 1.05))
+    const totalTarget = targetScore.value == null
+      ? currentTotal
+      : Math.min(SUBJECT_MAX * subjects.length, Math.round(targetScore.value * 1.05))
     let remaining = Math.max(0, totalTarget - currentTotal)
 
     let guard = 0
@@ -235,16 +224,20 @@ export const useApplicationStore = defineStore('application', () => {
   const weeklyHours = computed(() => profile.value.mode === 'plan'
     ? Number(profile.value.weekdayHours) * 5 + Number(profile.value.weekendHours) * 2
     : Number(diagnostic.value.weeklyHours || 0))
-  const estimatedWeeks = computed(() => Math.max(6, Math.ceil((scoreGap.value * 2.1 + 60) / Math.max(weeklyHours.value, 1))))
+  const estimatedWeeks = computed(() => scoreGap.value == null
+    ? null
+    : Math.max(6, Math.ceil((scoreGap.value * 2.1 + 60) / Math.max(weeklyHours.value, 1))))
   const overallProgress = computed(() => Math.round(tasks.value.filter(item => item.done).length / Math.max(tasks.value.length, 1) * 100))
   const stages = computed(() => stageFocusPlan.value.map(stage => ({
     ...stage,
     status: stage.id < currentStage.value ? 'completed' : stage.id === currentStage.value ? 'active' : 'pending'
   })))
 
-  // 参考考试日（当年 10 月第 4 个周六）与距考试天数。
+  // 这是计划提前达标日，预留最后一周冲刺；不等同于官方考试日。
   const examDate = computed(() => fmtDate(getExamDate(Number(profile.value.examYear) || getDefaultYear())))
-  const daysUntilExam = computed(() => Math.max(0, Math.round((new Date(examDate.value) - new Date()) / 86400000)))
+  const targetDatePassed = computed(() => fmtDate(new Date()) >= examDate.value)
+  const suggestedExamYear = computed(() => Math.max(Number(profile.value.examYear) + 1 || 0, getPlanningYear()))
+  const daysUntilExam = computed(() => daysUntilTarget(getExamDate(Number(profile.value.examYear) || getDefaultYear())))
 
   // 达标里程碑：把四个阶段铺到 [开始日, 考试日]，给出每阶段起止日期。
   // 未来阶段从「今天」起算，所以进度落后时会自动压缩 —— 即“重排期”。
@@ -272,6 +265,7 @@ export const useApplicationStore = defineStore('application', () => {
   // 目标分可行性：用「分差所需有效学时」对比「到目标考期的可用学时」。
   // 所需学时沿用 estimatedWeeks 的口径（分差×2.1 + 60），保证两处数字一致。
   const feasibility = computed(() => {
+    if (scoreGap.value == null) return null
     const requiredHours = Math.round(scoreGap.value * 2.1 + 60)
     const weeksLeft = daysUntilExam.value / 7
     const weekly = Math.max(0, weeklyHours.value)
@@ -317,7 +311,8 @@ export const useApplicationStore = defineStore('application', () => {
     diagnostic.value.completed ||
     currentStage.value > 1 ||
     stageTests.value.length > 0 ||
-    reviewQueue.value.length > 0
+    reviewQueue.value.length > 0 ||
+    practiceAttempts.value.length > 0
   )
 
   function selectInstitution(code) {
@@ -342,11 +337,12 @@ export const useApplicationStore = defineStore('application', () => {
     try {
       const data = await getInstitutions()
       institutions.value = (data || []).map(item => ({
-        code: item.code,
+        code: institutionSelectionCode(item),
+        officialCode: item.code,
         name: item.name,
         province: item.province,
         city: item.city || '—',
-        duration: item.duration || '2.5 年',
+        duration: item.duration || '暂未获取',
         tuition: item.tuition ?? null,
         teachingSite: item.teaching_site || '以院校招生简章为准',
         degree: item.degree || '以院校学位授予要求为准',
@@ -355,16 +351,10 @@ export const useApplicationStore = defineStore('application', () => {
         majors: normalizeMajorCodes(item.majors || []),
         majorMatch: item.major_match || 'category',
         plans: item.plans || [],
-        scores: (item.scores || [])
-          .map(s => ({
-            year: s.year,
-            score: s.score,
-            tuition: s.tuition,
-            majorCategory: s.major_category,
-            lineType: s.line_type,
-            round: s.round
-          }))
-          .sort((a, b) => a.year - b.year),
+        activeCatalogYear: item.active_catalog_year ?? null,
+        controlScores: item.control_scores || [],
+        supplementalData: item.supplemental_data || null,
+        scores: normalizeInstitutionScores(item.scores || []),
       }))
       institutionsLoaded.value = true
     } catch (error) {
@@ -394,6 +384,7 @@ export const useApplicationStore = defineStore('application', () => {
     currentStage.value = 1
     stageTests.value = []
     reviewQueue.value = []
+    practiceAttempts.value = []
     tasks.value = []
     tasksDate.value = null
     tasksVersion.value = null
@@ -415,12 +406,37 @@ export const useApplicationStore = defineStore('application', () => {
   function toggleTask(taskId) {
     const task = tasks.value.find(item => item.id === taskId)
     if (!task) return
-    const wasDone = task.done
     task.done = !task.done
-    // 完成的是复习任务：连续掌握会降权、延后复习；稳定 3 轮后从队列移除。
-    if (!wasDone && task.done && task.reviewKey) {
-      markReviewPassed(task.reviewKey)
+  }
+
+  // 练习结果是学习证据；勾选任务只记录执行，不代表知识点已掌握。
+  function recordPracticeResult({ subject, knowledgeName, correctCount, totalQuestions, taskId, taskDate }) {
+    if (!subject || !knowledgeName || !Number.isFinite(totalQuestions) || totalQuestions < 1
+      || !Number.isFinite(correctCount) || correctCount < 0 || correctCount > totalQuestions) return null
+    const accuracy = Math.round(correctCount / totalQuestions * 100)
+    const date = fmtDate(new Date())
+    const baseline = diagnostic.value.knowledgeDetails?.find(item => item.subject === subject && item.name === knowledgeName)
+    const attempt = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      date,
+      subject,
+      knowledgeName,
+      correctCount,
+      totalQuestions,
+      accuracy,
+      baselineMastery: baseline?.mastery ?? null,
     }
+    practiceAttempts.value = [...practiceAttempts.value, attempt].slice(-200)
+    if (taskDate === tasksDate.value && taskDate === date) {
+      const task = tasks.value.find(item => item.id === Number(taskId) && item.subject === subject && (!item.knowledgeName || item.knowledgeName === knowledgeName))
+      if (task) task.done = true
+    }
+    const point = { subject, knowledgeName }
+    reconcileStageTestReviews({
+      weakPoints: accuracy < 60 ? [point] : [],
+      testedPoints: [point],
+    }, date)
+    return attempt
   }
 
   function upsertReviews(points, options = {}) {
@@ -504,6 +520,12 @@ export const useApplicationStore = defineStore('application', () => {
   // 重新生成「今天」的任务（计划模式）。
   function regenerateTasks() {
     const today = fmtDate(new Date())
+    if (targetDatePassed.value) {
+      tasks.value = []
+      tasksDate.value = today
+      tasksVersion.value = PLAN_TASK_VERSION
+      return
+    }
     tasks.value = buildDailyTasks({
       subjectTargets: subjectTargets.value,
       currentStage: currentStage.value,
@@ -522,6 +544,10 @@ export const useApplicationStore = defineStore('application', () => {
   function ensureTodayTasks() {
     if (profile.value.mode !== 'plan') return
     const today = fmtDate(new Date())
+    if (targetDatePassed.value) {
+      if (tasks.value.length) regenerateTasks()
+      return
+    }
     if (tasksDate.value !== today || tasksVersion.value !== PLAN_TASK_VERSION || !tasks.value.length) regenerateTasks()
   }
 
@@ -583,6 +609,7 @@ export const useApplicationStore = defineStore('application', () => {
     if ('tasksVersion' in blob) tasksVersion.value = blob.tasksVersion
     else if (Array.isArray(blob.tasks)) tasksVersion.value = null
     if (Array.isArray(blob.stageTests)) stageTests.value = blob.stageTests
+    if (Array.isArray(blob.practiceAttempts)) practiceAttempts.value = blob.practiceAttempts
     if ('tasksDate' in blob) tasksDate.value = blob.tasksDate
     if (Array.isArray(blob.reviewQueue)) reviewQueue.value = normalizeReviewQueue(blob.reviewQueue, fmtDate(new Date()))
   }
@@ -605,6 +632,7 @@ export const useApplicationStore = defineStore('application', () => {
     tasks.value = []
     tasksVersion.value = null
     stageTests.value = []
+    practiceAttempts.value = []
     tasksDate.value = null
     reviewQueue.value = []
     institutions.value = []
@@ -612,7 +640,7 @@ export const useApplicationStore = defineStore('application', () => {
     institutionsError.value = null
   }
 
-  watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, tasksVersion, stageTests, tasksDate, reviewQueue], () => {
+  watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, tasksVersion, stageTests, practiceAttempts, tasksDate, reviewQueue], () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       profile: profile.value,
       selectedInstitutionCode: selectedInstitutionCode.value,
@@ -621,6 +649,7 @@ export const useApplicationStore = defineStore('application', () => {
       tasks: tasks.value,
       tasksVersion: tasksVersion.value,
       stageTests: stageTests.value,
+      practiceAttempts: practiceAttempts.value,
       tasksDate: tasksDate.value,
       reviewQueue: reviewQueue.value
     }))
@@ -639,6 +668,7 @@ export const useApplicationStore = defineStore('application', () => {
     tasks,
     tasksVersion,
     stageTests,
+    practiceAttempts,
     tasksDate,
     reviewQueue,
     selectedMajor,
@@ -662,6 +692,8 @@ export const useApplicationStore = defineStore('application', () => {
     overallProgress,
     stages,
     examDate,
+    targetDatePassed,
+    suggestedExamYear,
     daysUntilExam,
     planMilestones,
     planMode,
@@ -676,6 +708,7 @@ export const useApplicationStore = defineStore('application', () => {
     resetDiagnostic,
     resetLearningProgress,
     toggleTask,
+    recordPracticeResult,
     addReviews,
     markReviewPassed,
     regenerateTasks,

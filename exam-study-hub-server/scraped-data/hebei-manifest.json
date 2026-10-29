@@ -1,0 +1,66 @@
+{
+  "province": "hebei",
+  "checked_at": "2026-10-29T15:05:45.703862+00:00",
+  "institutions": 87,
+  "plan_rows": 1709,
+  "plan_rows_by_year": {
+    "2024": 885,
+    "2025": 824
+  },
+  "control_rows": 45,
+  "institution_score_rows": 0,
+  "latest_available_catalog_year": 2025,
+  "sources": [
+    {
+      "path": "sources/hebei/plan-2024.html",
+      "url": "https://www.hebeea.edu.cn/c/2024-11-20/488610.html",
+      "sha256": "bda7931e70e645abb11e281039a582f893efb4daf6643acca7fd38833226a861"
+    },
+    {
+      "path": "sources/hebei/plan-2024.pdf",
+      "url": "https://file.hebeea.edu.cn/files/article/2024/11/20241119090127_572.pdf",
+      "sha256": "6e3f3670f6b9ddaf4f453369c108e8786bcff7e473856e92860426d4dc143e42",
+      "rows": 885,
+      "institutions": 84,
+      "plan_count": 122118
+    },
+    {
+      "path": "sources/hebei/plan-2025.html",
+      "url": "https://www.hebeea.edu.cn/c/2025-11-13/489224.html",
+      "sha256": "ef5bf45f4b06597021f0e74bcfd23430739261bf7af9386c402fb2f87a2976fd"
+    },
+    {
+      "path": "sources/hebei/plan-2025.pdf",
+      "url": "https://file.hebeea.edu.cn/files/article/2025/11/20251113133649_120.pdf",
+      "sha256": "e35e06f0f3b4f01f7b49e84171b3ba9814e872a27ccc7f2c8d645533b6ae420d",
+      "rows": 824,
+      "institutions": 84,
+      "plan_count": 108889
+    },
+    {
+      "path": "sources/hebei/controls-2023-university.html",
+      "url": "https://jxjy.hebuet.edu.cn/info/1163/2203.htm",
+      "sha256": "f77551584c3b33dbef682e8ec2401192f5dc57519ebf297ff61dd78df2e8ebe0"
+    },
+    {
+      "path": "sources/hebei/controls-2024.html",
+      "url": "https://www.hebeea.edu.cn/c/2024-11-20/489573.html",
+      "sha256": "96aa0ac76b24d904a0f7a2310e2c6dca3a3fb44dab1b5eb75caeb8a7a2f9bb8a"
+    },
+    {
+      "path": "sources/hebei/controls-2025.html",
+      "url": "https://www.hebeea.edu.cn/c/2025-11-13/489357.html",
+      "sha256": "b24c6f51a1e604de06077f36e71bf19bd424f431775150bf3ca8673ee48b6063"
+    },
+    {
+      "path": "sources/hebei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    }
+  ],
+  "limitations": [
+    "未取得2026完整目录及征集逐专业明细",
+    "未收录院校实际录取线或2026省控线",
+    "2023官方高校转载仅提供统考生线，农民工线未知"
+  ]
+}

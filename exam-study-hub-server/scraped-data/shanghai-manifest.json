@@ -1,0 +1,58 @@
+{
+  "province": "shanghai",
+  "checked_at": "2026-10-29T14:28:42.387859+00:00",
+  "institutions": 40,
+  "plan_rows_by_year_round": {
+    "2025/主批次": 279,
+    "2025/征求志愿": 131,
+    "2026/招生专业目录": 269
+  },
+  "control_rows": 24,
+  "institution_score_rows": 0,
+  "limitations": [
+    "未收录院校实际录取线；市控线独立保存，不能视为院校录取线",
+    "2026目录未公布计划人数，保留null",
+    "专业目录包含委托培养及非英语语种，请核对报考条件"
+  ],
+  "sources": [
+    {
+      "path": "sources/shanghai/plan-2025.pdf",
+      "url": "https://www.shmeea.edu.cn/download/20251117/01.pdf",
+      "sha256": "c09d876216de03499da70a96aebd41c2220e13f14273a74ad9524bbbad345ef2",
+      "rows": 279,
+      "institution_count": 37,
+      "plan_count": 35426
+    },
+    {
+      "path": "sources/shanghai/collection-2025.pdf",
+      "url": "https://www.shmeea.edu.cn/download/20251209/02.pdf",
+      "sha256": "7ee0d9b188cf19784f5eaa3f7d4f26c43102b8fadad312c27bc4df61d9cedc03",
+      "rows": 131,
+      "institution_count": 23,
+      "plan_count": 644
+    },
+    {
+      "path": "sources/shanghai/catalog-2026.pdf",
+      "url": "https://www.shmeea.edu.cn/resource/upload/www/202608/27143612fgxg.pdf",
+      "sha256": "cc915e1ac13c273f7ebb4582f7678a4d4b4b95edad53ec1ef636b9bba6f119de",
+      "rows": 269,
+      "institution_count": 38,
+      "plan_count": null
+    },
+    {
+      "path": "sources/shanghai/controls-2023.html",
+      "url": "https://www.shmeea.edu.cn/page/08000/20231124/17990.html",
+      "sha256": "2a9e33d1de94c36dc52c7e6a855d2dc01dfb6c379710f3d43755d640f42619a9"
+    },
+    {
+      "path": "sources/shanghai/controls-2024.html",
+      "url": "https://www.shmeea.edu.cn/page/05200/20241119/18902.html",
+      "sha256": "61f7253fee13884841e86ce167d7c79d0c47353a396690a2703b81c16a59cd74"
+    },
+    {
+      "path": "sources/shanghai/controls-2025.html",
+      "url": "https://www.shmeea.edu.cn/page/08000/20251117/19852.html",
+      "sha256": "a2db13a55d8019ed13554d1ef71ccce1e8df61f1d5ae49e1f6b34ea6503a7427"
+    }
+  ]
+}

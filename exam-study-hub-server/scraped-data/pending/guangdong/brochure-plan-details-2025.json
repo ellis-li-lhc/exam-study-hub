@@ -1,0 +1,1955 @@
+[
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "英语"
+    ],
+    "major_name": "英语",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "1",
+      "英语",
+      "文学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、大学语文"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "音乐学"
+    ],
+    "major_name": "音乐学",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "2",
+      "音乐学",
+      "艺术学",
+      "非脱产",
+      "2.5年",
+      "5070元/学年",
+      "政治、英语、艺术概论"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "5070元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "数学与应用数学"
+    ],
+    "major_name": "数学与应用数学",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "3",
+      "数学与应用数学",
+      "理学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "化学工程与工艺"
+    ],
+    "major_name": "化学工程与工艺",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "4",
+      "化学工程与工艺",
+      "工学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "地理信息科学"
+    ],
+    "major_name": "地理信息科学",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "5",
+      "地理信息科学",
+      "理学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "电子信息工程"
+    ],
+    "major_name": "电子信息工程",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "6",
+      "电子信息工程",
+      "工学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "土木工程"
+    ],
+    "major_name": "土木工程",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "7",
+      "土木工程",
+      "工学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "工程管理"
+    ],
+    "major_name": "工程管理",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "8",
+      "工程管理",
+      "工学",
+      "非脱产",
+      "2.5年",
+      "2500元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2500元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "财务管理"
+    ],
+    "major_name": "财务管理",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "9",
+      "财务管理",
+      "管理学",
+      "非脱产",
+      "2.5年",
+      "2500元/学年",
+      "政治、英语、高数（二）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2500元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "法学"
+    ],
+    "major_name": "法学",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "10",
+      "法学",
+      "法学",
+      "非脱产",
+      "2.5年",
+      "2500元/学年",
+      "政治、英语、民法"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2500元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "汉语言文学"
+    ],
+    "major_name": "汉语言文学",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "11",
+      "汉语言文学",
+      "文学",
+      "非脱产",
+      "2.5年",
+      "2500元/学年",
+      "政治、英语、大学语文"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2500元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "学前教育"
+    ],
+    "major_name": "学前教育",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "12",
+      "学前教育",
+      "教育学",
+      "非脱产",
+      "2.5年",
+      "2500元/学年",
+      "政治、英语、教育理论"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2500元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "小学教育"
+    ],
+    "major_name": "小学教育",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "13",
+      "小学教育",
+      "教育学",
+      "非脱产",
+      "2.5年",
+      "2500元/学年",
+      "政治、英语、教育理论"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2500元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "体育教育"
+    ],
+    "major_name": "体育教育",
+    "source_id": "school-10577-99f45fae0796",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "14",
+      "体育教育",
+      "教育学",
+      "非脱产",
+      "2.5年",
+      "2875元/学年",
+      "政治、英语、教育理论"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制",
+    "tuition_raw": "2875元/学年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "法学"
+    ],
+    "major_name": "法学",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "1",
+      "030101K",
+      "法学",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "学前教育"
+    ],
+    "major_name": "学前教育",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "2",
+      "040106",
+      "学前教育",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "体育教育"
+    ],
+    "major_name": "体育教育",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "3",
+      "040201",
+      "体育教育",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "汉语言文学"
+    ],
+    "major_name": "汉语言文学",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "4",
+      "050101",
+      "汉语言文学",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "英语"
+    ],
+    "major_name": "英语",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "5",
+      "050201",
+      "英语",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "数学与应用数学"
+    ],
+    "major_name": "数学与应用数学",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "6",
+      "070101",
+      "数学与应用数学",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "地理信息科学"
+    ],
+    "major_name": "地理信息科学",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "7",
+      "070504",
+      "地理信息科学",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "电子信息工程"
+    ],
+    "major_name": "电子信息工程",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "8",
+      "080701",
+      "电子信息工程",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "土木工程"
+    ],
+    "major_name": "土木工程",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "9",
+      "081001",
+      "土木工程",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "化学工程与工艺"
+    ],
+    "major_name": "化学工程与工艺",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "10",
+      "081301",
+      "化学工程与工艺",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "工程管理"
+    ],
+    "major_name": "工程管理",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "11",
+      "120103",
+      "工程管理",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "财务管理"
+    ],
+    "major_name": "财务管理",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "12",
+      "120204",
+      "财务管理",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "音乐学"
+    ],
+    "major_name": "音乐学",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "13",
+      "130202",
+      "音乐学",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10577",
+    "year": 2025,
+    "major_names": [
+      "小学教育"
+    ],
+    "major_name": "小学教育",
+    "source_id": "school-10577-dc1187f6ece1",
+    "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+    "source_table": 0,
+    "source_row": [
+      "14",
+      "040107",
+      "小学教育",
+      "专升本",
+      "非脱产",
+      "2.5年",
+      "2025年",
+      "新增"
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10585",
+    "year": 2025,
+    "major_names": [
+      "体育教育"
+    ],
+    "major_name": "体育教育",
+    "source_id": "school-10585-46a3ba457e78",
+    "source_url": "https://cjb.gzsport.edu.cn/info/13791",
+    "source_table": 0,
+    "source_row": [
+      "专科起点本科",
+      "体育教育",
+      "教育类",
+      "非脱产",
+      "3",
+      "2800/年",
+      "政治、外语、教育理论",
+      "10月下旬（全国成人高校统一招生考试时间）"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制（年）",
+    "tuition_raw": "2800/年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10585",
+    "year": 2025,
+    "major_names": [
+      "体育教育"
+    ],
+    "major_name": "体育教育",
+    "source_id": "school-10585-af5bd4174468",
+    "source_url": "https://cjb.gzsport.edu.cn/info/14504",
+    "source_table": 0,
+    "source_row": [
+      "专科起点本科",
+      "体育教育",
+      "2001",
+      "教育类",
+      "非脱产",
+      "3",
+      "2800/年",
+      "政治、外语、教育理论",
+      "35"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制（年）",
+    "tuition_raw": "2800/年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10585",
+    "year": 2025,
+    "major_names": [
+      "运动训练"
+    ],
+    "major_name": "运动训练",
+    "source_id": "school-10585-af5bd4174468",
+    "source_url": "https://cjb.gzsport.edu.cn/info/14504",
+    "source_table": 0,
+    "source_row": [
+      "专科起点本科",
+      "运动训练",
+      "2003",
+      "教育类",
+      "非脱产",
+      "3",
+      "2800/年",
+      "政治、外语、教育理论",
+      "30"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制（年）",
+    "tuition_raw": "2800/年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "汉语言文学"
+    ],
+    "major_name": "汉语言文学",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "汉语言文学",
+      "三年",
+      "文史",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "英语"
+    ],
+    "major_name": "英语",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "英语",
+      "三年",
+      "文史",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "土木工程"
+    ],
+    "major_name": "土木工程",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "土木工程",
+      "三年",
+      "理工",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "工程管理"
+    ],
+    "major_name": "工程管理",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "工程管理",
+      "三年",
+      "经管",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "电气工程及其自动化"
+    ],
+    "major_name": "电气工程及其自动化",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "电气工程及其自动化",
+      "三年",
+      "理工",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "工商管理"
+    ],
+    "major_name": "工商管理",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "工商管理",
+      "三年",
+      "经管",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "会计学"
+    ],
+    "major_name": "会计学",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "会计学",
+      "三年",
+      "经管",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "11349",
+    "year": 2025,
+    "major_names": [
+      "机械工程"
+    ],
+    "major_name": "机械工程",
+    "source_id": "school-11349-8894fd2fc61c",
+    "source_url": "https://www.wyu.edu.cn/cj/info/1016/6061.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "非脱产",
+      "机械工程",
+      "三年",
+      "理工",
+      ""
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "三年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10504",
+    "year": 2025,
+    "major_names": [
+      "机械设计制造及其自动化"
+    ],
+    "major_name": "机械设计制造及其自动化",
+    "source_id": "school-10504-9ca24fb41992",
+    "source_url": "https://jxjy.hzau.edu.cn/info/1047/5445.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "机械设计制造及其自动化",
+      "2.5",
+      "理工类",
+      "湖北、广东、新疆"
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10504",
+    "year": 2025,
+    "major_names": [
+      "食品质量与安全"
+    ],
+    "major_name": "食品质量与安全",
+    "source_id": "school-10504-9ca24fb41992",
+    "source_url": "https://jxjy.hzau.edu.cn/info/1047/5445.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "食品质量与安全",
+      "2.5",
+      "理工类",
+      "湖北、广东、山西"
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10504",
+    "year": 2025,
+    "major_names": [
+      "农林经济管理"
+    ],
+    "major_name": "农林经济管理",
+    "source_id": "school-10504-9ca24fb41992",
+    "source_url": "https://jxjy.hzau.edu.cn/info/1047/5445.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本",
+      "农林经济管理",
+      "2.5",
+      "经济管理类",
+      "湖北、广东、西藏、安徽"
+    ],
+    "level_evidence": "专升本",
+    "review_status": "matched_table_row",
+    "duration_raw": "2.5",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10699",
+    "year": 2025,
+    "major_names": [
+      "机械设计制造及其自动化",
+      "电气工程及其自动化",
+      "计算机科学与技术",
+      "土木工程",
+      "化学工程与工艺",
+      "飞行器动力工程",
+      "飞行器控制与信息工程"
+    ],
+    "major_name": "机械设计制造及其自动化、土木工程、计算机科学与技术、电气工程及其自动化、飞行器动力工程、飞行器控制与信息工程、化学工程与工艺",
+    "source_id": "school-10699-07cf5a2e1d12",
+    "source_url": "https://jxjy.nwpu.edu.cn/info/1033/4985.htm",
+    "source_table": 0,
+    "source_row": [
+      "专升本（非脱产）",
+      "机械设计制造及其自动化、土木工程、计算机科学与技术、电气工程及其自动化、飞行器动力工程、飞行器控制与信息工程、化学工程与工艺",
+      "理工类",
+      "3710"
+    ],
+    "level_evidence": "专升本（非脱产）",
+    "review_status": "matched_table_row",
+    "tuition_raw": "3710",
+    "tuition_header": "学费标准（元/年）"
+  },
+  {
+    "institution_code": "10699",
+    "year": 2025,
+    "major_names": [
+      "国际经济与贸易",
+      "信息管理与信息系统",
+      "工商管理",
+      "会计学"
+    ],
+    "major_name": "会计学、工商管理、国际经济与贸易、信息管理与信息系统",
+    "source_id": "school-10699-07cf5a2e1d12",
+    "source_url": "https://jxjy.nwpu.edu.cn/info/1033/4985.htm",
+    "source_table": 0,
+    "source_row": [
+      "专升本（非脱产）",
+      "会计学、工商管理、国际经济与贸易、信息管理与信息系统",
+      "经管类",
+      "2880"
+    ],
+    "level_evidence": "专升本（非脱产）",
+    "review_status": "matched_table_row",
+    "tuition_raw": "2880",
+    "tuition_header": "学费标准（元/年）"
+  },
+  {
+    "institution_code": "10699",
+    "year": 2025,
+    "major_names": [
+      "法学"
+    ],
+    "major_name": "法学",
+    "source_id": "school-10699-07cf5a2e1d12",
+    "source_url": "https://jxjy.nwpu.edu.cn/info/1033/4985.htm",
+    "source_table": 0,
+    "source_row": [
+      "专升本（非脱产）",
+      "法学",
+      "法学类",
+      "2880"
+    ],
+    "level_evidence": "专升本（非脱产）",
+    "review_status": "matched_table_row",
+    "tuition_raw": "2880",
+    "tuition_header": "学费标准（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "英语"
+    ],
+    "major_name": "英语",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "英语",
+      "非脱产",
+      "3",
+      "2875",
+      "政治、英语大学语文"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "汉语言文学"
+    ],
+    "major_name": "汉语言文学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "汉语言文学",
+      "非脱产",
+      "3",
+      "2500",
+      "政治、英语大学语文"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2500",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "法学"
+    ],
+    "major_name": "法学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "法学",
+      "非脱产",
+      "3",
+      "2500",
+      "政治、英语、民法"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2500",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "水产养殖学"
+    ],
+    "major_name": "水产养殖学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "水产养殖学",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语生态学基础"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "农学"
+    ],
+    "major_name": "农学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "农学",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语生态学基础"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "动物医学"
+    ],
+    "major_name": "动物医学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "动物医学",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语生态学基础"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "园林"
+    ],
+    "major_name": "园林",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "园林",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语生态学基础"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "工商管理"
+    ],
+    "major_name": "工商管理",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "工商管理",
+      "非脱产",
+      "3",
+      "2500",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2500",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "行政管理"
+    ],
+    "major_name": "行政管理",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "行政管理",
+      "非脱产",
+      "3",
+      "2500",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2500",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "会计学"
+    ],
+    "major_name": "会计学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "会计学",
+      "非脱产",
+      "3",
+      "2500",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2500",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "工程管理"
+    ],
+    "major_name": "工程管理",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "工程管理",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "电气工程及其自动化"
+    ],
+    "major_name": "电气工程及其自动化",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "电气工程及其自动化",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "机械设计制造及其自动化"
+    ],
+    "major_name": "机械设计制造及其自动化",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "机械设计制造及其自动化",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "大气科学"
+    ],
+    "major_name": "大气科学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "大气科学",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "航海技术"
+    ],
+    "major_name": "航海技术",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "航海技术",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "环境科学"
+    ],
+    "major_name": "环境科学",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "环境科学",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "食品质量与安全"
+    ],
+    "major_name": "食品质量与安全",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "食品质量与安全",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "国际经济与贸易"
+    ],
+    "major_name": "国际经济与贸易",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "国际经济与贸易",
+      "非脱产",
+      "3",
+      "2500",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2500",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "计算机科学与技术"
+    ],
+    "major_name": "计算机科学与技术",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "计算机科学与技术",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "物联网工程"
+    ],
+    "major_name": "物联网工程",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "物联网工程",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "船舶与海洋工程"
+    ],
+    "major_name": "船舶与海洋工程",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "船舶与海洋工程",
+      "非脱产",
+      "3",
+      "2875",
+      "政治英语高等数学(二)"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "2875",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10566",
+    "year": 2025,
+    "major_names": [
+      "视觉传达设计"
+    ],
+    "major_name": "视觉传达设计",
+    "source_id": "school-10566-b15a24ca853e",
+    "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+    "source_table": 2,
+    "source_row": [
+      "专科起点本科",
+      "视觉传达设计",
+      "非脱产",
+      "3",
+      "5000",
+      "政治、英语艺术概论"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制(年)",
+    "tuition_raw": "5000",
+    "tuition_header": "学费（元/年）"
+  },
+  {
+    "institution_code": "10585",
+    "year": 2025,
+    "major_names": [
+      "体育教育"
+    ],
+    "major_name": "体育教育",
+    "source_id": "school-10585-31e9011dea82",
+    "source_url": "http://cjb.gzsport.edu.cn:80/info/14504",
+    "source_table": 0,
+    "source_row": [
+      "专科起点本科",
+      "体育教育",
+      "2001",
+      "教育类",
+      "非脱产",
+      "3",
+      "2800/年",
+      "政治、外语、教育理论",
+      "35"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制（年）",
+    "tuition_raw": "2800/年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10585",
+    "year": 2025,
+    "major_names": [
+      "运动训练"
+    ],
+    "major_name": "运动训练",
+    "source_id": "school-10585-31e9011dea82",
+    "source_url": "http://cjb.gzsport.edu.cn:80/info/14504",
+    "source_table": 0,
+    "source_row": [
+      "专科起点本科",
+      "运动训练",
+      "2003",
+      "教育类",
+      "非脱产",
+      "3",
+      "2800/年",
+      "政治、外语、教育理论",
+      "30"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制（年）",
+    "tuition_raw": "2800/年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10585",
+    "year": 2025,
+    "major_names": [
+      "体育教育"
+    ],
+    "major_name": "体育教育",
+    "source_id": "school-10585-b61f9614c223",
+    "source_url": "http://cjb.gzsport.edu.cn:80/info/13791",
+    "source_table": 0,
+    "source_row": [
+      "专科起点本科",
+      "体育教育",
+      "教育类",
+      "非脱产",
+      "3",
+      "2800/年",
+      "政治、外语、教育理论",
+      "10月下旬（全国成人高校统一招生考试时间）"
+    ],
+    "level_evidence": "专科起点本科",
+    "review_status": "matched_table_row",
+    "duration_raw": "3",
+    "duration_header": "学制（年）",
+    "tuition_raw": "2800/年",
+    "tuition_header": "收费标准"
+  },
+  {
+    "institution_code": "10822",
+    "year": 2025,
+    "major_names": [
+      "工商管理"
+    ],
+    "major_name": "工商管理",
+    "source_id": "school-10822-b479b1cb200f",
+    "source_url": "https://jxjy.baiyunu.edu.cn/info/1191/8651.htm",
+    "source_table": 0,
+    "source_row": [
+      "1",
+      "工商管理",
+      "经济管理类",
+      "2.5年",
+      "业余",
+      "政治英语高等数学（二）",
+      "校本部"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10822",
+    "year": 2025,
+    "major_names": [
+      "计算机科学与技术"
+    ],
+    "major_name": "计算机科学与技术",
+    "source_id": "school-10822-b479b1cb200f",
+    "source_url": "https://jxjy.baiyunu.edu.cn/info/1191/8651.htm",
+    "source_table": 0,
+    "source_row": [
+      "2",
+      "计算机科学与技术",
+      "理工类",
+      "2.5年",
+      "函授",
+      "政治英语高等数学（二）",
+      "校本部"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10822",
+    "year": 2025,
+    "major_names": [
+      "机械设计制造及其自动化"
+    ],
+    "major_name": "机械设计制造及其自动化",
+    "source_id": "school-10822-b479b1cb200f",
+    "source_url": "https://jxjy.baiyunu.edu.cn/info/1191/8651.htm",
+    "source_table": 0,
+    "source_row": [
+      "3",
+      "机械设计制造及其自动化",
+      "理工类",
+      "2.5年",
+      "函授",
+      "政治英语高等数学（二）",
+      "校本部"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10822",
+    "year": 2025,
+    "major_names": [
+      "工程造价"
+    ],
+    "major_name": "工程造价",
+    "source_id": "school-10822-b479b1cb200f",
+    "source_url": "https://jxjy.baiyunu.edu.cn/info/1191/8651.htm",
+    "source_table": 0,
+    "source_row": [
+      "4",
+      "工程造价",
+      "经济管理类",
+      "2.5年",
+      "函授",
+      "政治英语高等数学（二）",
+      "校本部"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "学制"
+  },
+  {
+    "institution_code": "10822",
+    "year": 2025,
+    "major_names": [
+      "机械设计制造及其自动化",
+      "计算机科学与技术",
+      "工程造价",
+      "工商管理"
+    ],
+    "major_name": "工商管理、计算机科学与技术、机械设计制造及其自动化、工程造价",
+    "source_id": "school-10822-b479b1cb200f",
+    "source_url": "https://jxjy.baiyunu.edu.cn/info/1191/8651.htm",
+    "source_table": 1,
+    "source_row": [
+      "专升本科",
+      "工商管理、计算机科学与技术、机械设计制造及其自动化、工程造价",
+      "第一年：3600元第二年：3600元最后半年1800元",
+      "9000元"
+    ],
+    "level_evidence": "专升本科",
+    "review_status": "matched_table_row",
+    "tuition_raw": "第一年：3600元第二年：3600元最后半年1800元",
+    "tuition_header": "学费标准(元/年)"
+  },
+  {
+    "institution_code": "10698",
+    "year": 2025,
+    "major_names": [
+      "电气工程及其自动化"
+    ],
+    "major_name": "电气工程及其自动化",
+    "source_id": "school-10698-b4667c77ff9e",
+    "source_url": "https://sce.xjtu.edu.cn/info/1811/24113.htm",
+    "source_table": 2,
+    "source_row": [
+      "3",
+      "电气工程及其自动化",
+      "工学",
+      "非脱产",
+      "2.5年",
+      "理工类",
+      "3710元/年",
+      "陕西、安徽、广东、江苏、河北、辽宁、宁夏、青海、福建（3年）"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "最低修业年限",
+    "tuition_raw": "3710元/年",
+    "tuition_header": "学费标准"
+  },
+  {
+    "institution_code": "10698",
+    "year": 2025,
+    "major_names": [
+      "土木工程"
+    ],
+    "major_name": "土木工程",
+    "source_id": "school-10698-b4667c77ff9e",
+    "source_url": "https://sce.xjtu.edu.cn/info/1811/24113.htm",
+    "source_table": 2,
+    "source_row": [
+      "5",
+      "土木工程",
+      "工学",
+      "非脱产",
+      "2.5年",
+      "理工类",
+      "3710元/年",
+      "陕西、安徽、广东、浙江、重庆"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "最低修业年限",
+    "tuition_raw": "3710元/年",
+    "tuition_header": "学费标准"
+  },
+  {
+    "institution_code": "10698",
+    "year": 2025,
+    "major_names": [
+      "工商管理"
+    ],
+    "major_name": "工商管理",
+    "source_id": "school-10698-b4667c77ff9e",
+    "source_url": "https://sce.xjtu.edu.cn/info/1811/24113.htm",
+    "source_table": 2,
+    "source_row": [
+      "13",
+      "工商管理",
+      "管理学",
+      "非脱产",
+      "2.5年",
+      "经管类",
+      "2880元/年",
+      "陕西、江苏、广东、辽宁、宁夏、青海、浙江、重庆"
+    ],
+    "level_evidence": null,
+    "review_status": "table_extracted_requires_review",
+    "duration_raw": "2.5年",
+    "duration_header": "最低修业年限",
+    "tuition_raw": "2880元/年",
+    "tuition_header": "学费标准"
+  }
+]

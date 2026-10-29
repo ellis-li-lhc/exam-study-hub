@@ -61,6 +61,7 @@ class Institution(Base):
     tuition: Mapped[int | None] = mapped_column(Integer, nullable=True)
     teaching_site: Mapped[str | None] = mapped_column(String(255), nullable=True)
     degree: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    supplemental_data: Mapped[dict | None] = mapped_column(JSON, nullable=True)
 
     scores: Mapped[list["AdmissionScore"]] = relationship(
         back_populates="institution", cascade="all, delete-orphan"
@@ -113,6 +114,12 @@ class AdmissionPlan(Base):
     line_type: Mapped[str] = mapped_column(String(32))
     round: Mapped[str | None] = mapped_column(String(64), nullable=True)
     source: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    study_form: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    teaching_site: Mapped[str | None] = mapped_column(Text, nullable=True)
+    tuition_amount: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    tuition_unit: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    tuition_raw: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    enrollment_scope: Mapped[str | None] = mapped_column(String(64), nullable=True)
 
     institution: Mapped["Institution"] = relationship(back_populates="plans")
 

@@ -174,6 +174,7 @@ export function startAutoSync() {
       appStore.tasks,
       appStore.tasksVersion,
       appStore.stageTests,
+      appStore.practiceAttempts,
       appStore.tasksDate,
       appStore.reviewQueue,
       engStore.knownKeys,

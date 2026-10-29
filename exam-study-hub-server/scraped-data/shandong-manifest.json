@@ -1,0 +1,138 @@
+{
+  "province": "shandong",
+  "checked_at": "2026-10-29T14:51:52.422198+00:00",
+  "institutions": 89,
+  "program_rows": 2738,
+  "program_rows_by_year_round": {
+    "2025/招生专业目录": 873,
+    "2026/招生专业目录": 952,
+    "2025/第一次征集志愿": 465,
+    "2025/第二次征集志愿": 448
+  },
+  "control_rows": 29,
+  "institution_score_rows": 0,
+  "sources": [
+    {
+      "path": "sources/shandong/catalog-2025.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=7026",
+      "sha256": "99f660e0138600f1f138a871b5dbcc6221759cf731d6e3f8c13f5a01bf92a7b3"
+    },
+    {
+      "path": "sources/shandong/catalog-2025.xls",
+      "url": "https://www.sdzk.cn/Floadup/file/20250826/6389181420201527561730930.xls",
+      "sha256": "f50bfa85db5584fd7211ac1a2fbb9c97000f8a37cbe61d72c4eeff92abf9220f",
+      "rows": 873,
+      "institutions": 84,
+      "excluded_levels": {
+        "高职（专科）": 1022,
+        "高中起点本科": 230
+      },
+      "source_data_rows": 2125,
+      "plan_count": null,
+      "batch_reminder": null,
+      "footnotes": []
+    },
+    {
+      "path": "sources/shandong/catalog-2026.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=7348",
+      "sha256": "0c6dc03d770b3a300122cd237f4bd1865f7a290a6e77214109624c6192c078a4"
+    },
+    {
+      "path": "sources/shandong/catalog-2026.xlsx",
+      "url": "https://www.sdzk.cn/Floadup/file/20260826/6392332047617500952996405.xlsx",
+      "sha256": "ce8abacbf1a9ed2ecbe1307ce0a1af8839dc1332a1b39a1e43142f1fdafa228f",
+      "rows": 952,
+      "institutions": 87,
+      "excluded_levels": {
+        "高职（专科）": 1055,
+        "高中起点本科": 225
+      },
+      "source_data_rows": 2232,
+      "plan_count": null,
+      "batch_reminder": null,
+      "footnotes": [
+        "✱本目录信息截止至2026年8月24日，后续如有变化，将及时在我院官网公布。"
+      ]
+    },
+    {
+      "path": "sources/shandong/collection1-2025.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=7096",
+      "sha256": "6f65676e49b8c8f402f05df81f462176ad234c5f2444ad7df52ab4654c2a1d61"
+    },
+    {
+      "path": "sources/shandong/collection1-2025.xls",
+      "url": "https://www.sdzk.cn/Floadup/file/20251213/6390122307221753192498480.xls",
+      "sha256": "d82e37227401d093097c5ea0e059a4f7e32776e8da60f1c0c5cd8229879d4f6c",
+      "rows": 465,
+      "institutions": 59,
+      "excluded_levels": {
+        "高职（专科）": 197,
+        "高中起点本科": 77
+      },
+      "source_data_rows": 739,
+      "plan_count": 8180,
+      "batch_reminder": "填报提醒：1.中国消防救援学院专升本层次抢险救援指挥与技术专业只招收经所在总队级单位批准报考的在职消防救援人员，请考生务必查看学校招生章程，确定是否具有报考资格。\n         2.山东管理学院、青岛理工大学、青岛科技大学、山东理工大学、齐鲁工业大学、青岛农业大学、山东体育学院、山东工艺美术学院、泰山学院9所院校的艺体类专业在征集志愿阶段认可其他学校艺体类加试考生合格名单，本校及他校艺体加试合格考生均可报名。",
+      "footnotes": []
+    },
+    {
+      "path": "sources/shandong/collection2-2025.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=7113",
+      "sha256": "5b1f4385b1c375797e92692d14e106bb94f3931fb9ebeea875460a2f0ddb16b8"
+    },
+    {
+      "path": "sources/shandong/collection2-2025.xls",
+      "url": "https://www.sdzk.cn/Floadup/file/20251217/6390157090293786768422343.xls",
+      "sha256": "130fd40a36b87a2f073e160edf50e30d2997796911deefa6dab0c8353857d51b",
+      "rows": 448,
+      "institutions": 57,
+      "excluded_levels": {
+        "高职（专科）": 83,
+        "高中起点本科": 65
+      },
+      "source_data_rows": 596,
+      "plan_count": 7173,
+      "batch_reminder": "填报提醒：1.中国消防救援学院专升本层次抢险救援指挥与技术专业只招收经所在总队级单位批准报考的在职消防救援人员，请考生务必查看学校招生章程，确定是否具有报考资格。\n         2.山东管理学院、青岛理工大学、青岛科技大学、山东理工大学、齐鲁工业大学、青岛农业大学、山东体育学院、山东工艺美术学院、泰山学院9所院校的艺体类专业在征集志愿阶段认可其他学校艺体类加试考生合格名单，本校及他校艺体加试合格考生均可报名。",
+      "footnotes": []
+    },
+    {
+      "path": "sources/shandong/controls-2023.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=6382",
+      "sha256": "bb77ce9d123a0670aed7ec0878ef750a12189c5854f0eaacbc079a3453913854"
+    },
+    {
+      "path": "sources/shandong/controls-2023.png",
+      "url": "https://www.sdzk.cn/Floadup/image/20231121/6383617703936837785896992.png",
+      "sha256": "460bdba846455d7bf6bf8a76a569a2f7dfe7bd6ef0e3392a1139317d4356e78e"
+    },
+    {
+      "path": "sources/shandong/controls-2024.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=6738",
+      "sha256": "198f265ff681cc87226b6f91d4e20f15b33afd159d9977b92ab6e1dbdadf544b"
+    },
+    {
+      "path": "sources/shandong/controls-2024.png",
+      "url": "https://www.sdzk.cn/Floadup/image/20241125/6386812164196963954636792.png",
+      "sha256": "7026cca4ed7cb0f84b87ea8f65da1349deacfbd020613cebe037dd94e50d4cfc"
+    },
+    {
+      "path": "sources/shandong/controls-2025.html",
+      "url": "https://www.sdzk.cn/NewsInfo.aspx?NewsID=7077",
+      "sha256": "aaf831517d269b380c286461ece7ba51b35ddfa0b42b567a7efbdb59e8ed126e"
+    },
+    {
+      "path": "sources/shandong/controls-2025.png",
+      "url": "https://www.sdzk.cn/Floadup/image/20251123/6389949885451560281575876.png",
+      "sha256": "f78e2486a8fab09d56f2d43a735bb399c908cadd7b7fddb2d628b31bb81341d8"
+    },
+    {
+      "path": "sources/shandong/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    }
+  ],
+  "limitations": [
+    "目录未公布首次志愿计划人数、学费和教学点，不作推断",
+    "尚未收录院校实际录取线或2026省控线",
+    "职业本科及限制招生对象的专业保留完整名称与条件"
+  ]
+}

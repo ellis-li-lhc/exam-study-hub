@@ -52,9 +52,21 @@ EXPECTED_COUNTS = {
     "zhejiang_control": 64,
     "zhejiang_plan": 541,
     "guangdong_institution": 79,
-    "guangdong_score": 199,
-    "guangdong_plan": 746,
-    "guangdong_control": 9,
+    "guangdong_score": 573,
+    "guangdong_plan": 841,
+    "guangdong_control": 27,
+    "shanghai_institution": 40,
+    "shanghai_plan": 679,
+    "shanghai_score": 0,
+    "shanghai_control": 24,
+    "shandong_institution": 89,
+    "shandong_plan": 2738,
+    "shandong_score": 0,
+    "shandong_control": 29,
+    "hebei_institution": 87,
+    "hebei_plan": 1709,
+    "hebei_score": 0,
+    "hebei_control": 45,
 }
 LEGACY_MAJOR_CODES = ["business", "accounting", "law", "education", "computer", "chinese"]
 
@@ -83,6 +95,29 @@ def build_validation_summary(db: Session) -> ValidationSummary:
     jiangsu = db.query(Province).filter_by(code="jiangsu").first()
     zhejiang = db.query(Province).filter_by(code="zhejiang").first()
     guangdong = db.query(Province).filter_by(code="guangdong").first()
+    shanghai = db.query(Province).filter_by(code="shanghai").first()
+    shandong = db.query(Province).filter_by(code="shandong").first()
+    hebei = db.query(Province).filter_by(code="hebei").first()
+    if hebei is None:
+        issues.append(ValidationIssue(severity="error", area="省份", message="缺少河北省份记录"))
+    else:
+        for key, label, query in (
+            ("institution", "院校", db.query(Institution).filter_by(province_id=hebei.id)),
+            ("plan", "专升本计划", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == hebei.id)),
+            ("score", "院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == hebei.id)),
+            ("control", "分人群省控线", db.query(ProvinceControlScore).filter_by(province_id=hebei.id)),
+        ):
+            add_count_issue(issues, "河北数据", f"河北{label}", query.count(), EXPECTED_COUNTS[f"hebei_{key}"])
+    if shandong is None:
+        issues.append(ValidationIssue(severity="error", area="省份", message="缺少山东省份记录"))
+    else:
+        for key, label, query in (
+            ("institution", "院校", db.query(Institution).filter_by(province_id=shandong.id)),
+            ("plan", "目录及征集记录", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == shandong.id)),
+            ("score", "院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == shandong.id)),
+            ("control", "省控线", db.query(ProvinceControlScore).filter_by(province_id=shandong.id)),
+        ):
+            add_count_issue(issues, "山东数据", f"山东{label}", query.count(), EXPECTED_COUNTS[f"shandong_{key}"])
     if henan is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少河南省份记录"))
     if jiangsu is None:
@@ -91,6 +126,16 @@ def build_validation_summary(db: Session) -> ValidationSummary:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少浙江省份记录"))
     if guangdong is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少广东省份记录"))
+    if shanghai is None:
+        issues.append(ValidationIssue(severity="error", area="省份", message="缺少上海省份记录"))
+    else:
+        for key, label, query in (
+            ("institution", "院校", db.query(Institution).filter_by(province_id=shanghai.id)),
+            ("plan", "专业目录及计划", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == shanghai.id)),
+            ("score", "院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == shanghai.id)),
+            ("control", "市控线", db.query(ProvinceControlScore).filter_by(province_id=shanghai.id)),
+        ):
+            add_count_issue(issues, "上海数据", f"上海{label}", query.count(), EXPECTED_COUNTS[f"shanghai_{key}"])
 
     major_count = db.query(Major).count()
     add_count_issue(issues, "专业主数据", "专业主数据", major_count, EXPECTED_COUNTS["major"])

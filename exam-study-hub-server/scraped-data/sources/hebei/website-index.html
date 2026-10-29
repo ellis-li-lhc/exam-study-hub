@@ -1,0 +1,234 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" >
+var basePath='/hebck';
+    var ua = navigator.userAgent;
+    var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+        isIphone = ua.match(/(iPhone\sOS)\s([\d_]+)/),
+        isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+        isMobile = ipad || isIphone || isAndroid;
+    if (isMobile) {
+        location.href = basePath+ "/website/brower";
+    }
+    var uaWin = ua.toLowerCase();
+    if (uaWin.match(/MicroMessenger/i) == 'micromessenger') {
+        location.href = basePath + "/website/brower";
+    }
+
+</script>
+<!--[if lt IE 10]>
+<script>
+location.href = basePath + "/website/brower";
+</script>
+<![endif]-->
+
+
+<link rel="stylesheet" href="/hebck/assets/website/css/portal.css" />
+<html>
+<head>
+    <title>河北省成人高校招生网上报名系统</title>
+    <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="/hebck/assets/images/favicon.ico" rel="icon">
+
+    <script> var server_base_path = "/hebck";</script>
+<script type="text/javascript" src="/hebck/assets/libs/jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        .gg:link, .gg:visited, .gg:hover, .gg:active {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+	<div class="top" style="width:95%;">
+		<div class="top_left" style="width:650px;margin-left: 120px;">
+			<img src="/hebck/assets/website/images/portal/top_title.png" style="margin-top: -13px; overflow:hidden;">
+		</div>
+        <div class="top_right">
+            <ul>
+                <li><a href="/hebck/website/bmlctj" target="_blank" style="color: black;text-decoration: none;">报名流程图解</a>
+                <li><a href="/hebck/website/sjlxfs" target="_blank" style="color: red;text-decoration: none;font-weight: bold;">各市考试机构联系方式</a></li>
+                
+                <li><a href="/hebck/website/lxfs" target="_blank" style="color: black;text-decoration: none;">审核点联系方式</a>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--banner -->
+<div class="banner">
+    <div class="banner_cont">
+        <div class="banner_font" style="width: 100%; float: none; margin-top: 0px; ">
+            <p class="banner_cont_big_font" style="width: 100%; margin: 0 auto;">
+                <table style="width: 100%;border:0px;">
+                    <tr>
+                        <td style="width: 80%;line-height: 40px;text-align: left;">
+                            <p style="font-size: 24px;">通知公告</p>
+                            <a href="https://www.hebeea.edu.cn/c/2026-08-21/493270.html" style="font-size: 20px;text-decoration: none;" target="_blank" class="gg" >2026年河北省成人高校招生报名公告（一）（报名条件、时间安排及报名流程）</a><br>
+                            <a href="https://www.hebeea.edu.cn/c/2026-08-21/493272.html" style="font-size: 20px;text-decoration: none;" target="_blank" class="gg">2026年河北省成人高校招生报名公告（二）（材料上传要求）</a><br>
+                            <a href="https://www.hebeea.edu.cn/c/2026-08-21/493274.html" style="font-size: 20px;text-decoration: none;" target="_blank" class="gg">2026年河北省成人高考网上报名演示视频 </a><br>
+                            <a href="https://www.hebeea.edu.cn/c/2026-08-21/493273.html" style="font-size: 20px;text-decoration: none;" target="_blank" class="gg">2026年河北省成人高校招生报考问答</a><br>
+                            
+                            
+                        </td>
+                        <td style="width: 40%;border: 0px;"><img src="/hebck/assets/website/images/portal/index_banner_small.png"></td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- 开放模块列表 -->
+<div class="mlist">
+    <div class="mlist_con">
+ 
+        <div class="mlist_con_item"  style="pointer-events: none;" >
+            <div class="mlist_circle"  style="background-color: gainsboro;" >
+                <img src="/hebck/assets/website/images/portal/icon_index_01.png" onclick="checkOpen('WSBM','网上报名','/hebck/website/login')" style="cursor:pointer;">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('WSBM','网上报名','/hebck/website/login');">网上报名</a></div>
+            
+                <div class="mlist_summary">暂未开放</div>
+            
+            
+        </div>
+
+        <div class="mlist_con_item"  style="pointer-events: none;" >
+            <div class="mlist_circle"  style="background-color: gainsboro;" >
+                <img src="/hebck/assets/website/images/portal/icon_index_01.png" onclick="checkOpen('KSHCX','考生号查询','/hebck/xxcx/index')" style="cursor:pointer;">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('KSHCX','考生号查询','/hebck/xxcx/index');">考生号查询</a></div>
+            
+                <div class="mlist_summary">暂未开放</div>
+            
+            
+        </div>
+      
+        <!-- 
+        <div class="mlist_con_item"  style="pointer-events: none;" >
+            <div class="mlist_circle"  style="background-color: gainsboro;" >
+                <img src="/hebck/assets/website/images/portal/icon_index_05.png">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('WSTF','网上退费','/hebck/website/wstf/login');">网上退费</a></div>
+            
+                <div class="mlist_summary">暂未开放</div>
+            
+            
+        </div>
+         -->
+ 
+        <div class="mlist_con_item" >
+            <div class="mlist_circle" >
+                <img src="/hebck/assets/website/images/portal/icon_index_04.png">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('ZKZDYCX','准考证打印及查询','/hebck/website/zkz/index');">准考证打印及查询</a></div>
+            
+            
+                <div class="mlist_summary">2026年10月10日至<br />2026年12月31日</div>
+            
+        </div>
+               
+        <div class="mlist_con_item"  style="pointer-events: none;" >
+            <div class="mlist_circle"  style="background-color: gainsboro;" >
+                <img src="/hebck/assets/website/images/portal/icon_index_05.png">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('KSCJCX','考生成绩查询','http://xxcx.hebeea.edu.cn/hebeea.xxcx/crgk/cjcx');">考生成绩查询</a></div>
+            
+                <div class="mlist_summary">暂未开放</div>
+            
+            
+        </div>
+        
+        <div class="mlist_con_item"  style="pointer-events: none;" >
+            <div class="mlist_circle"  style="background-color: gainsboro;" >
+                <img src="/hebck/assets/website/images/portal/icon_index_03.png" onclick="checkOpen('ZJZYTB','征集志愿填报','/hebck/website/zjzy/index')" style="cursor:pointer;">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('ZJZYTB','征集志愿填报','/hebck/website/zjzy/index');">征集志愿填报</a></div>
+            
+                <div class="mlist_summary">暂未开放</div>
+            
+            
+        </div>
+        
+        <div class="mlist_con_item"  style="pointer-events: none;" >
+            <div class="mlist_circle"  style="background-color: gainsboro;" >
+                <img src="/hebck/assets/website/images/portal/icon_index_05.png">
+            </div>
+            <div class="mlist_title"><a href="javascript:checkOpen('LQCX','录取结果查询','http://xxcx.hebeea.edu.cn/hebeea.xxcx/crgk/lqcx');">录取结果查询</a></div>
+            
+                <div class="mlist_summary">暂未开放</div>
+            
+            
+        </div>
+
+        <div class="mlist_con_item" >
+            <div class="mlist_circle" >
+                <img src="/hebck/assets/website/images/portal/icon_index_05.png">
+            </div>
+            <div class="mlist_title"><a href="/hebck/managemant/login">管理系统</a></div>
+            <div class="mlist_summary">面向招办及高校</div>
+        </div>
+
+    </div>
+</div>
+
+<div style="text-align: center;margin-top: 5px;font-size:15px;color: #666666"><span style="color:red;">温馨提示：</span>本系统在开放期间于每日22点至次日6点进行系统维护；建议使用Chrome、Edge浏览器访问本系统。<span style="color: #fff;">(67)</span></div>
+<!-- 底部-->
+
+
+<div class="bottom">
+   <p style="margin-top: 25px; line-height: 28px; font-size:15px; margin-bottom: 25px;">
+	        办公地址：河北省石家庄市红旗大街231号　邮编：050091<br/>
+	        版权所有：河北省教育考试院 冀ICP备05002806号
+   </p>
+</div>
+		
+
+<script>
+    $("#dl_btn").click(function(){
+        $("#submitForm").submit();
+    })
+    /* 图形验证码 */
+    $('img.login-captcha').click(function () {
+        this.src = this.src + '?t=' + (new Date).getTime();
+    });
+    function checkOpen(type,typeName,url) {
+        var flag=true;
+        $.ajax({
+            url:'/hebck/website/checkOpen',
+            async:false,
+            type:'post',
+            data: { 'type': type},
+            success: function (result) {
+                if(result.success){
+                    flag=true;
+                    window.location.href =url;  //刷新页面
+                }else{
+                    alert(typeName+"尚未开启！");
+                    flag=false;
+                    window.location.reload()  //刷新页面
+                }
+            }
+        })
+        return flag;
+    }
+
+</script>
+</body>
+</html>

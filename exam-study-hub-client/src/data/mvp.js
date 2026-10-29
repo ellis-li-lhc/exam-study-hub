@@ -5,7 +5,10 @@ export const provinceOptions = [
   { value: 'henan', label: '河南', note: '户籍地，可直接按当年公告准备材料' },
   { value: 'jiangsu', label: '江苏', note: '工作地，非户籍报名需核验居住证或连续社保' },
   { value: 'zhejiang', label: '浙江', note: '已接入2025官方招生专业目录，计划人数以报名系统为准' },
-  { value: 'guangdong', label: '广东', note: '已接入2025官方招生计划、第一志愿投档线及省控线' }
+  { value: 'guangdong', label: '广东', note: '已接入2025官方招生计划、第一志愿投档线及省控线' },
+  { value: 'shanghai', label: '上海', note: '已接入2026专业目录、2025招生计划和征求计划；市控线独立展示，暂无院校录取线' },
+  { value: 'shandong', label: '山东', note: '已接入2026及2025专业目录、2025两次征集计划；省控线独立展示，暂无院校实际录取线' },
+  { value: 'hebei', label: '河北', note: '已接入2024—2025专升本计划，仅历史参考；未取得2026完整目录，省控线按适用人群区分' }
 ]
 
 export const stageTemplates = [

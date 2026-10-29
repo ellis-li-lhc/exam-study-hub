@@ -1,0 +1,1045 @@
+[
+  {
+    "major_name": "中医学",
+    "plan_count": 3,
+    "system_major_code": "zhongyi",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "中国画",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "中药学",
+    "plan_count": 6,
+    "system_major_code": "zhongyao",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "中西医临床医学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "临床医学",
+    "plan_count": 6,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "书法学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "互联网金融",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "交通工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "交通管理",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "交通运输",
+    "plan_count": 5,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "人力资源管理",
+    "plan_count": 26,
+    "system_major_code": "renli-ziyuan",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "人工智能",
+    "plan_count": 1,
+    "system_major_code": "rengong-zhineng",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "会计学",
+    "plan_count": 34,
+    "system_major_code": "kuaiji",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "体育教育",
+    "plan_count": 5,
+    "system_major_code": "tiyu-jiaoyu",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "侦查学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "信息管理与信息系统",
+    "plan_count": 2,
+    "system_major_code": "xinxi-guanli",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "公共事业管理",
+    "plan_count": 4,
+    "system_major_code": "gonggong-shiye",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "农学",
+    "plan_count": 4,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "农林经济管理",
+    "plan_count": 2,
+    "system_major_code": "nonglin-jingji",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "冶金工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "制药工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "动物医学",
+    "plan_count": 4,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "动物科学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "化妆品科学与技术",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "化学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "化学工程与工艺",
+    "plan_count": 7,
+    "system_major_code": "huagong",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "医学影像学",
+    "plan_count": 3,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "医学检验技术",
+    "plan_count": 5,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "历史学",
+    "plan_count": 3,
+    "system_major_code": "lishi",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "口腔医学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "商务英语",
+    "plan_count": 3,
+    "system_major_code": "shangwu-yingyu",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "园林",
+    "plan_count": 5,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "国际商务",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "国际经济与贸易",
+    "plan_count": 18,
+    "system_major_code": "guomao",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "土木工程",
+    "plan_count": 20,
+    "system_major_code": "tumu",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "地理信息科学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "地理科学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "城乡规划",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "大数据与会计",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "大数据管理与应用",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "大气科学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "学前教育",
+    "plan_count": 16,
+    "system_major_code": "xueqian",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "安全工程",
+    "plan_count": 4,
+    "system_major_code": "anquan",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "宝石及材料工艺学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "小学教育",
+    "plan_count": 10,
+    "system_major_code": "xiaoxue-jiaoyu",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "工业设计",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "工商管理",
+    "plan_count": 35,
+    "system_major_code": "gongshang-guanli",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "工程管理",
+    "plan_count": 12,
+    "system_major_code": "gongcheng-guanli",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "工程造价",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "市场营销",
+    "plan_count": 16,
+    "system_major_code": "shichang-yingxiao",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "广告学",
+    "plan_count": 1,
+    "system_major_code": "guanggao",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "应用化学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "应用心理学",
+    "plan_count": 2,
+    "system_major_code": "yingyong-xinli",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "康复治疗学",
+    "plan_count": 6,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "建筑学",
+    "plan_count": 2,
+    "system_major_code": "jianzhuxue",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "心理学",
+    "plan_count": 3,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "思想政治教育",
+    "plan_count": 4,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "投资学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "抢险救援指挥与技术",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "护理学",
+    "plan_count": 11,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "教育学",
+    "plan_count": 3,
+    "system_major_code": "jiaoyuxue",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "教育技术学",
+    "plan_count": 1,
+    "system_major_code": "jiaoyu-jishu",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "数字媒体技术",
+    "plan_count": 4,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "数字媒体艺术",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "数学与应用数学",
+    "plan_count": 7,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "数据科学与大数据技术",
+    "plan_count": 1,
+    "system_major_code": "dashuju",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "旅游管理",
+    "plan_count": 1,
+    "system_major_code": "lvyou-guanli",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "无机非金属材料工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "日语",
+    "plan_count": 2,
+    "system_major_code": "riyu",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "智能科学与技术",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "服装与服饰设计",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "机械工程",
+    "plan_count": 4,
+    "system_major_code": "jixie-gongcheng",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "机械电子工程",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "机械设计制造及其自动化",
+    "plan_count": 21,
+    "system_major_code": "jixie-zhizao",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "机械设计制造及自动化",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "林学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "标准化工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "档案学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "水产养殖学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "水利水电工程",
+    "plan_count": 3,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "水文与水资源工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "汉语国际教育",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "汉语言文学",
+    "plan_count": 23,
+    "system_major_code": "hanyu-yanwen",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "汽车服务工程",
+    "plan_count": 5,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "汽车服务工程技术",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "治安学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "法学",
+    "plan_count": 29,
+    "system_major_code": "faxue",
+    "system_category": "法学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "法律",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "测绘工程",
+    "plan_count": 1,
+    "system_major_code": "cehui",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "消防工程",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "消防指挥",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "港口航道与海岸工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "烹饪与营养教育",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "物流管理",
+    "plan_count": 6,
+    "system_major_code": "wuliu-guanli",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "物理学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "物联网工程",
+    "plan_count": 2,
+    "system_major_code": "wulianwang",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "特殊教育",
+    "plan_count": 2,
+    "system_major_code": "teshu-jiaoyu",
+    "system_category": "教育学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "环境工程",
+    "plan_count": 4,
+    "system_major_code": "huanjing",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "环境科学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "环境艺术设计",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "环境设计",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "现代物流管理",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "生物科学",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "电子信息工程",
+    "plan_count": 9,
+    "system_major_code": "dianzi-xinxi",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "电子商务",
+    "plan_count": 14,
+    "system_major_code": "dianzi-shangwu",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "电气工程及其自动化",
+    "plan_count": 30,
+    "system_major_code": "dianqi",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "石油工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "社会工作",
+    "plan_count": 8,
+    "system_major_code": "shehui-gongzuo",
+    "system_category": "法学类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "秘书学",
+    "plan_count": 1,
+    "system_major_code": "mishu",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "经济学",
+    "plan_count": 1,
+    "system_major_code": "jingjixue",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "绘画",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "给排水科学与工程",
+    "plan_count": 4,
+    "system_major_code": "jipaishui",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "统计学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "网络与新媒体",
+    "plan_count": 3,
+    "system_major_code": "xinmeiti",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "网络工程",
+    "plan_count": 5,
+    "system_major_code": "wangluo-gongcheng",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "美术学",
+    "plan_count": 4,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "自动化",
+    "plan_count": 3,
+    "system_major_code": "zidonghua",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "航海技术",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "船舶与海洋工程",
+    "plan_count": 2,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "艺术设计学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "英语",
+    "plan_count": 15,
+    "system_major_code": "yingyu",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "茶学",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "药学",
+    "plan_count": 8,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "行政管理",
+    "plan_count": 27,
+    "system_major_code": "xingzheng-guanli",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "视觉传达设计",
+    "plan_count": 8,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "计算机应用工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "计算机科学与技术",
+    "plan_count": 42,
+    "system_major_code": "jisuanji",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "财务会计教育",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "财务管理",
+    "plan_count": 21,
+    "system_major_code": "caiwu-guanli",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "质量管理工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "车辆工程",
+    "plan_count": 5,
+    "system_major_code": "cheliang",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "轮机工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "软件工程",
+    "plan_count": 10,
+    "system_major_code": "ruanjian",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "软件工程技术",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "运动训练",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "通信工程",
+    "plan_count": 4,
+    "system_major_code": "tongxin",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "道路桥梁与渡河工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "酒店管理",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "金融学",
+    "plan_count": 11,
+    "system_major_code": "jinrong",
+    "system_category": "经济管理类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "金融工程",
+    "plan_count": 3,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "针灸推拿学",
+    "plan_count": 1,
+    "system_major_code": "zhenjiu",
+    "system_category": "文史中医类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "铁道工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "音乐学",
+    "plan_count": 5,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "音乐表演",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "风景园林",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "飞行器动力工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "飞行器控制与信息工程",
+    "plan_count": 1,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  },
+  {
+    "major_name": "食品科学与工程",
+    "plan_count": 1,
+    "system_major_code": "shipin",
+    "system_category": "理工类",
+    "mapping_status": "mapped"
+  },
+  {
+    "major_name": "食品质量与安全",
+    "plan_count": 7,
+    "system_major_code": null,
+    "system_category": null,
+    "mapping_status": "missing_major_master"
+  }
+]

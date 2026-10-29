@@ -1,0 +1,242 @@
+[
+  {
+    "province": "shanghai",
+    "institution_code": "901",
+    "institution_name": "复旦大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "902",
+    "institution_name": "同济大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "904",
+    "institution_name": "华东理工大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "905",
+    "institution_name": "华东师范大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "906",
+    "institution_name": "上海外国语大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "908",
+    "institution_name": "东华大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "911",
+    "institution_name": "华东政法大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "912",
+    "institution_name": "上海体育大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "913",
+    "institution_name": "上海海洋大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "914",
+    "institution_name": "上海海事大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "917",
+    "institution_name": "上海电力大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "918",
+    "institution_name": "上海大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "919",
+    "institution_name": "上海对外经贸大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "920",
+    "institution_name": "上海立信会计金融学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "921",
+    "institution_name": "上海师范大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "924",
+    "institution_name": "上海理工大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "925",
+    "institution_name": "上海中医药大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "926",
+    "institution_name": "上海商学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "927",
+    "institution_name": "上海第二工业大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "928",
+    "institution_name": "上海工程技术大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "929",
+    "institution_name": "上海应用技术大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "930",
+    "institution_name": "上海电机学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "931",
+    "institution_name": "上海建桥学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "932",
+    "institution_name": "上海杉达学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "944",
+    "institution_name": "上海健康医学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "973",
+    "institution_name": "上海立达学院",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "975",
+    "institution_name": "上海中侨职业技术大学",
+    "city": "上海"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "976",
+    "institution_name": "北京交通大学",
+    "city": "北京"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "979",
+    "institution_name": "南京师范大学",
+    "city": "南京"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "980",
+    "institution_name": "西安交通大学",
+    "city": "西安"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "981",
+    "institution_name": "湖南师范大学",
+    "city": "长沙"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "982",
+    "institution_name": "江苏科技大学",
+    "city": "镇江"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "987",
+    "institution_name": "中国石油大学(华东)",
+    "city": "青岛"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "988",
+    "institution_name": "中国地质大学(武汉)",
+    "city": "武汉"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "989",
+    "institution_name": "武汉理工大学",
+    "city": "武汉"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "990",
+    "institution_name": "四川农业大学",
+    "city": "雅安"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "991",
+    "institution_name": "东北财经大学",
+    "city": "大连"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "992",
+    "institution_name": "西北大学",
+    "city": "西安"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "993",
+    "institution_name": "南昌大学",
+    "city": "南昌"
+  },
+  {
+    "province": "shanghai",
+    "institution_code": "994",
+    "institution_name": "大连海事大学",
+    "city": "大连"
+  }
+]

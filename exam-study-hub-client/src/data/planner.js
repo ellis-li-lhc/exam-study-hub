@@ -34,6 +34,21 @@ export function getExamDate(year) {
   return new Date(year, 9, lastSat - 7)            // 倒数第二个周六（目标达标日）
 }
 
+// 新建档案默认选择仍有规划时间的年度。已保存的年度由用户自行调整。
+export function getPlanningYear(today = new Date()) {
+  const date = toDate(today)
+  const year = date.getFullYear()
+  return fmt(date) >= fmt(getExamDate(year)) ? year + 1 : year
+}
+
+export function daysUntilTarget(targetDate, today = new Date()) {
+  const target = toDate(targetDate)
+  const current = toDate(today)
+  const targetDay = new Date(target.getFullYear(), target.getMonth(), target.getDate())
+  const currentDay = new Date(current.getFullYear(), current.getMonth(), current.getDate())
+  return Math.max(0, Math.round((targetDay - currentDay) / 86400000))
+}
+
 // 把四个阶段按「建议周数」铺到 [开始日, 考试日] 区间上，算出每个阶段的起止日期。
 // 关键点：未来阶段始终从「今天」往后铺——今天越晚，剩余阶段自动压缩，
 // 这就是计划随进度/测试结果动态纠偏（重排期）的体现。
@@ -312,6 +327,7 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
     tasks.push({
       id: id++,
       subject: item.subject,
+      knowledgeName: item.knowledgeName,
       title: `${taskStage >= 3 ? '错题复盘' : '复习薄弱点'}：${item.knowledgeName}`,
       duration,
       type: item.masteryHits ? `复习巩固 · 第 ${item.masteryHits + 1} 轮` : '复习巩固',
@@ -334,6 +350,7 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
     tasks.push({
       id: id++,
       subject: point.subject,
+      knowledgeName: point.name,
       title: `${point.name} · ${stage.verb}`,
       duration: stage.minutes,
       type: stage.type,
@@ -370,6 +387,7 @@ export function buildDailyTasks({ subjectTargets, currentStage, weekdayHours, we
       tasks.push({
         id: id++,
         subject: s.subject,
+        knowledgeName: point.name,
         title: `${point.name} · ${stage.verb}`,
         duration: stage.minutes,
         type: stage.type,

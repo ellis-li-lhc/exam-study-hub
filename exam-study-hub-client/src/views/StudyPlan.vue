@@ -1,6 +1,13 @@
 <template>
   <div class="plan-page page-stack">
-    <section class="page-intro"><div><span class="section-kicker">STEP 05</span><h2>{{ store.profile.mode==='plan'?'我的最短达标计划':'我的自主学习路线' }}</h2><p>距考试 {{ store.daysUntilExam }} 天（{{ store.examDate }}） · 每周 {{ store.weeklyHours }} 小时 · 目标 {{ store.targetScore }} 分</p></div><el-tag size="large">{{ store.profile.mode==='plan'?'计划模式':'自主模式' }}</el-tag></section>
+    <section class="page-intro"><div><span class="section-kicker">STEP 05</span><h2>{{ store.profile.mode==='plan'?'我的最短达标计划':'我的自主学习路线' }}</h2><p>目标达标日 {{ store.examDate }}（{{ store.targetDatePassed ? '已到期' : `还有 ${store.daysUntilExam} 天` }}） · 每周 {{ store.weeklyHours }} 小时 · 目标 {{ store.targetScore ?? '待核实' }} 分</p></div><el-tag size="large">{{ store.profile.mode==='plan'?'计划模式':'自主模式' }}</el-tag></section>
+
+    <el-alert v-if="store.targetDatePassed" type="warning" show-icon :closable="false"
+      :title="`${store.profile.examYear} 年目标达标日已到期，学习路线暂停生成。请先调整到新的报考年度。`">
+      <template #default><el-button text type="primary" @click="router.push('/profile')">调整报考年度</el-button></template>
+    </el-alert>
+
+    <template v-if="!store.targetDatePassed">
 
     <section class="stage-overview"><div v-for="stage in store.planMilestones" :key="stage.id" class="stage-node" :class="stage.status"><span><el-icon v-if="stage.status==='completed'"><Check /></el-icon><template v-else>{{ stage.id }}</template></span><div><small>阶段 {{ stage.id }}</small><strong>{{ stage.name }}</strong><p>{{ stage.startDate.slice(5) }} ~ {{ stage.endDate.slice(5) }}</p></div></div></section>
 
@@ -69,6 +76,7 @@
                   <span v-if="task.sprint"> · {{ task.modeLabel }}</span>
                 </small>
               </span>
+              <el-button class="practice-button" size="small" type="primary" plain @click="openPractice(task)">开始练习</el-button>
             </div>
           </div>
         </template>
@@ -78,12 +86,14 @@
             <li v-for="point in selfOrder" :key="point.id">
               <div class="self-order-top"><strong>{{ point.name }}</strong><b :class="point.mastery < 60 ? 'weak' : ''">{{ point.mastery }}%</b></div>
               <small>{{ point.subject }} · 答对 {{ point.correct }}/{{ point.total }}</small>
+              <el-button size="small" text type="primary" @click="openPractice(point)">练习这个知识点</el-button>
             </li>
           </ol>
           <el-empty v-else description="完成入学诊断后，这里会按薄弱知识点给出建议学习顺序" :image-size="60" />
         </div>
       </aside>
     </section>
+    </template>
 
     <el-dialog v-model="testDialog" :title="`阶段 ${testingStage} · ${currentStageName}测试`" width="min(760px, 94vw)" top="4vh" class="stage-test-dialog" destroy-on-close>
       <template v-if="!testResult">
@@ -145,12 +155,14 @@
 
 <script setup>
 import { computed, onMounted, reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { ElMessageBox } from 'element-plus'
 import { fetchDiagnosticGroups } from '../data/diagnostic-questions'
 import { buildStageQuestions, stageThreshold, summarizeStageCoverage } from '../data/stageTest'
 import { useApplicationStore } from '../stores/application'
 
 const store = useApplicationStore()
+const router = useRouter()
 const testDialog = ref(false)
 const testResult = ref(null)
 const testingStage = ref(store.currentStage)
@@ -224,6 +236,15 @@ function openStageTest() {
   testResult.value = null
   Object.keys(testAnswers).forEach(key => delete testAnswers[key])
   testDialog.value = true
+}
+
+function openPractice(task) {
+  router.push({ name: 'Practice', query: {
+    subject: task.subject,
+    topic: task.knowledgeName || task.name || undefined,
+    taskId: task.duration ? task.id : undefined,
+    taskDate: task.duration ? store.tasksDate : undefined,
+  } })
 }
 
 function submitTest() {

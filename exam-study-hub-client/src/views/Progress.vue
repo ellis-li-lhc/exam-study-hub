@@ -19,10 +19,13 @@
       <dl>
         <div><dt>今日任务</dt><dd>{{ completedTasks }}/{{ store.tasks.length }}</dd></div>
         <div><dt>诊断基线分</dt><dd>{{ store.currentScore }}</dd></div>
-        <div><dt>目标分</dt><dd>{{ store.targetScore }}</dd></div>
-        <div><dt>距考试</dt><dd>{{ store.daysUntilExam }} 天</dd></div>
+        <div><dt>目标分</dt><dd>{{ store.targetScore ?? '待核实' }}</dd></div>
+        <div><dt>距目标达标日</dt><dd>{{ store.targetDatePassed ? '已到期' : `${store.daysUntilExam} 天` }}</dd></div>
       </dl>
     </section>
+
+    <el-alert v-if="store.targetDatePassed" type="warning" show-icon :closable="false"
+      title="目标达标日已到期。历史练习仍可查看，调整报考年度后会重新排期。" />
 
     <section class="progress-grid three">
       <el-card shadow="never" class="progress-card">
@@ -32,7 +35,7 @@
             <span>第 {{ store.currentStage }} / 4 阶段</span>
           </div>
         </template>
-        <div class="milestone-list">
+        <div v-if="!store.targetDatePassed" class="milestone-list">
           <div
             v-for="stage in store.planMilestones"
             :key="stage.id"
@@ -53,6 +56,7 @@
             </div>
           </div>
         </div>
+        <el-empty v-else description="调整报考年度后显示新的阶段时间轴" :image-size="64" />
       </el-card>
 
       <el-card shadow="never" class="progress-card">
@@ -135,6 +139,19 @@
           </div>
         </div>
       </el-card>
+      <el-card shadow="never" class="progress-card">
+        <template #header>
+          <div class="card-heading"><h3>知识点练习变化</h3><span>最近 {{ practiceTrends.length }} 个知识点</span></div>
+        </template>
+        <p class="practice-explainer">对比同一知识点的入学诊断和最近一次练习正确率。题量较少，仅用于观察练习变化，不换算总分。</p>
+        <div v-if="practiceTrends.length" class="practice-trends">
+          <div v-for="item in practiceTrends" :key="`${item.subject}-${item.knowledgeName}`" class="practice-trend-row">
+            <div><strong>{{ item.knowledgeName }}</strong><small>{{ item.subject }} · {{ item.date }} · 答对 {{ item.correctCount }}/{{ item.totalQuestions }}</small></div>
+            <span>诊断 {{ item.baselineMastery == null ? '—' : `${item.baselineMastery}%` }} → 练习 {{ item.accuracy }}%</span>
+          </div>
+        </div>
+        <el-empty v-else description="从学习路线进入知识点练习后，这里会显示作答变化" :image-size="64" />
+      </el-card>
     </section>
   </div>
 </template>
@@ -165,6 +182,14 @@ const visibleReviews = computed(() => {
 const sortedTests = computed(() =>
   [...(store.stageTests || [])].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
 )
+const practiceTrends = computed(() => {
+  const latest = new Map()
+  ;[...(store.practiceAttempts || [])].reverse().forEach(item => {
+    const key = `${item.subject}:${item.knowledgeName}`
+    if (!latest.has(key) && subjects.value.includes(item.subject)) latest.set(key, item)
+  })
+  return [...latest.values()].slice(0, 8)
+})
 
 const statusLabel = (status) => ({ completed: '已完成', active: '进行中', pending: '未开始' })[status] || status
 const statusType = (status) => ({ completed: 'success', active: 'primary', pending: 'info' })[status] || 'info'

@@ -5,8 +5,9 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.core.deps import get_current_user
 from app.crud import institution as crud_inst
-from app.crud.institution import KELEI_TO_CATEGORY, DEFAULT_DURATION
-from app.schemas.institution import InstitutionRead, PlanRead, ScoreRead, SourceRead
+from app.crud.institution import KELEI_TO_CATEGORY
+from app.schemas.institution import ControlScoreRead, InstitutionRead, PlanRead, ScoreRead, SourceRead
+from app.models.catalog import Major, ProvinceControlScore
 
 router = APIRouter(prefix="/api/institutions", tags=["institutions"])
 
@@ -16,6 +17,9 @@ PROVIDER_BY_PROVINCE = {
     "henan": "河南省教育考试院",
     "zhejiang": "浙江省教育考试院",
     "guangdong": "广东省教育考试院",
+    "shanghai": "上海市教育考试院",
+    "shandong": "山东省教育招生考试院",
+    "hebei": "河北省教育考试院",
 }
 
 
@@ -31,16 +35,34 @@ def read_institutions(
     province_map = crud_inst.province_code_by_id(db)
     cat_to_codes = crud_inst.majors_by_category(db)
     code_by_major_name = crud_inst.major_code_by_name(db)
+    major_categories = {major.name: major.category for major in db.query(Major).all()}
+    controls_by_province = {}
+    for control in db.query(ProvinceControlScore).filter_by(level="专升本").all():
+        controls_by_province.setdefault(control.province_id, []).append(ControlScoreRead(
+            year=control.year, category_name=control.category_name, score=control.score,
+            line_type=control.line_type, source_url=control.source, round=control.round,
+        ))
 
     results = []
     for inst in crud_inst.list_institutions(db, province_code=province):
         province_code = province_map.get(inst.province_id, "")
+        active_year = (inst.supplemental_data or {}).get("active_catalog_year")
+        plan_details = (inst.supplemental_data or {}).get("plan_details", {})
         if inst.plans:
             # 有公开专业计划：只认真实专业名称能匹配到本系统专业 code 的专业。
             offered = sorted({
                 code_by_major_name[plan.major_name]
                 for plan in inst.plans
                 if plan.major_name in code_by_major_name
+                and (active_year is None or (plan.year == active_year and plan.plan_count != 0))
+                and (province_code != "hebei" or major_categories[plan.major_name] == {
+                    "文史类": "文史中医类", "中医类": "文史中医类",
+                }.get(plan.category_name, plan.category_name))
+                # The current study curriculum supports English; retain Japanese
+                # source rows but do not advertise them as supported study targets.
+                and (province_code != "shanghai" or plan_details.get(
+                    f"{plan.year}/{plan.round}/{plan.major_code}", {}
+                ).get("foreign_language") in ("英语", "不限制"))
             })
             major_match = "exact"
         else:
@@ -75,6 +97,16 @@ def read_institutions(
                 plan_count=p.plan_count,
                 line_type=p.line_type,
                 round=p.round,
+                study_form=p.study_form,
+                teaching_site=p.teaching_site,
+                tuition_amount=p.tuition_amount,
+                tuition_unit=p.tuition_unit,
+                tuition_raw=p.tuition_raw,
+                enrollment_scope=p.enrollment_scope,
+                source_url=p.source,
+                **{field: plan_details.get(f"{p.year}/{p.round}/{p.major_code}", {}).get(field)
+                   for field in ("study_duration_raw", "minimum_study_duration_raw", "major_direction", "foreign_language", "remarks",
+                                 "institution_code_raw", "applicant_group", "source_page")},
             )
             for p in sorted(inst.plans, key=lambda item: (item.year, item.major_code))
         ]
@@ -103,7 +135,7 @@ def read_institutions(
             name=inst.name,
             province=province_code,
             city=inst.city,
-            duration=inst.duration or DEFAULT_DURATION,
+            duration=inst.duration,
             tuition=inst.tuition,
             teaching_site=inst.teaching_site,
             degree=inst.degree,
@@ -112,6 +144,9 @@ def read_institutions(
             plans=plans,
             scores=scores,
             source=source,
+            supplemental_data=inst.supplemental_data,
+            active_catalog_year=active_year,
+            control_scores=controls_by_province.get(inst.province_id, []) if province_code in ("shanghai", "shandong", "hebei") else [],
         ))
 
     # 若指定了专业，只返回开设该专业的院校

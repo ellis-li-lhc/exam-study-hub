@@ -177,7 +177,8 @@
   color: #047857;
   background: #dff7ec;
 }
-.quality-reference {
+.quality-reference,
+.quality-catalog {
   color: var(--primary);
   background: #e7efff;
 }
@@ -307,4 +308,20 @@
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
+}
+.supplement-note {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.supplement-list {
+  margin: 8px 0;
+  padding-left: 18px;
+  li { margin: 8px 0; overflow-wrap: anywhere; }
+  small { display: block; color: var(--text-secondary); }
+}
+.supplement-detail {
+  margin: 8px 0;
+  summary { cursor: pointer; }
+  p { white-space: pre-line; overflow-wrap: anywhere; }
 }

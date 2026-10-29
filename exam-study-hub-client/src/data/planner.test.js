@@ -6,8 +6,10 @@ import {
   buildDailyTasks,
   buildStageFocusPlan,
   buildWeaknessBacklog,
+  daysUntilTarget,
   fmtDate,
   getExamDate,
+  getPlanningYear,
   resolveTaskMode,
 } from './planner.js'
 
@@ -63,7 +65,9 @@ test('buildDailyTasks puts stage-test review items before new focus tasks', () =
   })
 
   assert.equal(tasks[0].title, '复习薄弱点：动词时态')
+  assert.equal(tasks[0].knowledgeName, '动词时态')
   assert.equal(tasks[1].title, '极限计算 · 基础概念与高频题')
+  assert.equal(tasks[1].knowledgeName, '极限计算')
   assert.equal(tasks.every(task => task.duration > 0), true)
 })
 
@@ -110,4 +114,15 @@ test('resolveTaskMode switches into sprint style near the exam date', () => {
 
 test('getExamDate keeps the target day before the final October weekend buffer', () => {
   assert.equal(fmtDate(getExamDate(2026)), '2026-10-24')
+})
+
+test('getPlanningYear moves to the next cycle after the target date', () => {
+  assert.equal(getPlanningYear(new Date(2026, 9, 23)), 2026)
+  assert.equal(getPlanningYear(new Date(2026, 9, 24)), 2027)
+  assert.equal(getPlanningYear(new Date(2026, 9, 25)), 2027)
+})
+
+test('daysUntilTarget counts calendar days regardless of the current time', () => {
+  assert.equal(daysUntilTarget(getExamDate(2026), new Date(2026, 9, 23, 23, 50)), 1)
+  assert.equal(daysUntilTarget(getExamDate(2026), new Date(2026, 9, 25, 0, 5)), 0)
 })

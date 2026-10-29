@@ -522,9 +522,31 @@ def run():
         db.commit()
         print(f"新增专业计划 {plan_added} 条（共 {db.query(AdmissionPlan).count()}）")
 
+        from scripts.seed_guangdong_supplements import import_guangdong_supplements
+        supplement_counts = import_guangdong_supplements(db)
+        db.commit()
+        print(f"广东补充资料：{supplement_counts}")
+
+        from scripts.seed_shanghai import import_shanghai
+        shanghai_counts = import_shanghai(db)
+        db.commit()
+        print(f"上海资料：{shanghai_counts}")
+
+        from scripts.seed_shandong import import_shandong
+        shandong_counts = import_shandong(db)
+        db.commit()
+        print(f"山东资料：{shandong_counts}")
+
+        from scripts.seed_hebei import import_hebei
+        hebei_counts = import_hebei(db)
+        db.commit()
+        print(f"河北资料：{hebei_counts}")
+
         # —— 回填院校所在市（按名称映射，可重复运行）——
         city_updated = 0
         for inst in db.query(Institution).all():
+            if (inst.supplemental_data or {}).get("city_source_url"):
+                continue  # Keep the province importer's explicit official city reference.
             city = CITY_BY_NAME.get(inst.name)
             if city and inst.city != city:
                 inst.city = city

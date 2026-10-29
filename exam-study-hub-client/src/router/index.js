@@ -32,6 +32,7 @@ const routes = [
       { path: 'target', name: 'Target', component: () => import('../views/Target.vue'), meta: { title: '目标分分析', icon: 'Aim' } },
       { path: 'plan', name: 'StudyPlan', component: () => import('../views/StudyPlan.vue'), meta: { title: '学习路线', icon: 'Calendar' } },
       { path: 'progress', name: 'Progress', component: () => import('../views/Progress.vue'), meta: { title: '学习进度', icon: 'TrendCharts' } },
+      { path: 'practice', name: 'Practice', component: () => import('../views/Practice.vue'), meta: { title: '知识点练习', icon: 'EditPen' } },
       { path: 'admin/users', name: 'AdminUsers', component: () => import('../views/AdminUsers.vue'), meta: { title: '用户管理', icon: 'Setting', admin: true } },
       { path: 'admin/data', name: 'AdminData', component: () => import('../views/AdminData.vue'), meta: { title: '数据管理', icon: 'DataBoard', admin: true } },
       { path: 'selection', redirect: '/profile' }
@@ -46,9 +47,9 @@ const router = createRouter({
 })
 
 // 流程守卫：按「档案 → 院校 → 诊断」的先后顺序解锁后续步骤，避免跳步进入数据尚未就绪的页面。
-const NEED_PROFILE = ['Schools', 'Diagnosis', 'Target', 'StudyPlan', 'Progress']
-const NEED_INSTITUTION = ['Diagnosis', 'Target', 'StudyPlan', 'Progress']
-const NEED_DIAGNOSIS = ['Target', 'StudyPlan', 'Progress']
+const NEED_PROFILE = ['Schools', 'Diagnosis', 'Target', 'StudyPlan', 'Progress', 'Practice']
+const NEED_INSTITUTION = ['Diagnosis', 'Target', 'StudyPlan', 'Progress', 'Practice']
+const NEED_DIAGNOSIS = ['Target', 'StudyPlan', 'Progress', 'Practice']
 
 router.beforeEach((to) => {
   startRouteLoading()

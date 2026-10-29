@@ -4,7 +4,7 @@
       <div class="welcome-copy">
         <span class="section-kicker">{{ store.profile.examYear }} 成人高考专升本</span>
         <h2>{{ greeting }}，今天从最重要的一步开始。</h2>
-        <p v-if="store.profileComplete">当前目标是 {{ provinceText }}的{{ store.selectedMajor?.name }}。先完成诊断，再让学习时间真正花在能提分的地方。</p>
+        <p v-if="store.profileComplete">当前目标是 {{ provinceText }}的{{ store.selectedMajor?.name }}。{{ store.diagnosisComplete ? '按薄弱知识点推进今日任务，用练习结果跟踪变化。' : '先完成诊断，再让学习时间真正花在能提分的地方。' }}</p>
         <p v-else>还没有建立报考档案。先选定报考省份和报考类别，系统才能帮你匹配招生院校、生成入学诊断和学习计划。</p>
         <div class="welcome-actions">
           <el-button type="primary" size="large" @click="router.push(nextAction.path)">
@@ -17,12 +17,17 @@
         <el-progress type="dashboard" :percentage="scorePercentage" :width="154" :stroke-width="12" color="#1d4ed8">
           <template #default>
             <strong>{{ store.diagnosisComplete ? store.currentScore : '--' }}</strong>
-            <span>/ {{ store.targetScore }} 目标分</span>
+            <span>/ {{ store.targetScore ?? '待核实' }} 目标分</span>
           </template>
         </el-progress>
-        <small>{{ store.diagnosisComplete ? `还差 ${store.scoreGap} 分` : '完成诊断后计算差距' }}</small>
+        <small>{{ !store.diagnosisComplete ? '完成诊断后计算差距' : store.scoreGap == null ? '参考线待核实，暂不计算分差' : `还差 ${store.scoreGap} 分` }}</small>
       </div>
     </section>
+
+    <el-alert v-if="store.targetDatePassed" type="warning" show-icon :closable="false"
+      :title="`${store.profile.examYear} 年目标达标日 ${store.examDate} 已到期，建议改为 ${store.suggestedExamYear} 年后重新生成路线。`">
+      <template #default><el-button text type="primary" @click="router.push('/profile')">调整报考年度</el-button></template>
+    </el-alert>
 
     <section class="metrics-grid">
       <article v-for="metric in metrics" :key="metric.label" class="metric-card">
@@ -46,11 +51,12 @@
       <el-card shadow="never" class="today-card">
         <template #header><div class="card-heading"><div><span class="section-kicker">今日节奏</span><h3>{{ store.profile.mode === 'plan' ? `${store.tasks.length} 项学习任务` : '自主学习建议' }}</h3></div><el-tag>{{ store.profile.mode === 'plan' ? '计划模式' : '自主模式' }}</el-tag></div></template>
         <template v-if="store.profile.mode === 'plan'">
-          <label v-for="task in store.tasks" :key="task.id" class="mini-task" :class="{ done: task.done }">
+          <div v-for="task in store.tasks" :key="task.id" class="mini-task" :class="{ done: task.done }">
             <el-checkbox :model-value="task.done" @change="store.toggleTask(task.id)" />
             <span><strong>{{ task.subject }}</strong><small>{{ task.title }}</small></span>
             <b>{{ task.duration }} 分</b>
-          </label>
+            <el-button size="small" text type="primary" @click="openPractice(task)">去练习</el-button>
+          </div>
           <el-button text type="primary" @click="router.push('/plan')">查看完整学习路线</el-button>
         </template>
         <div v-else class="self-study-empty">
@@ -62,7 +68,7 @@
       </el-card>
     </section>
 
-    <el-alert title="河南/江苏/浙江/广东公开数据试运行版：广东已接入2025招生计划、第一志愿投档线及省控线；浙江计划人数与院校线暂未公开。院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
+    <el-alert title="河南/江苏/浙江/广东/上海/山东/河北公开数据试运行版：上海、山东已有2026目录，河北收录2024—2025计划作历史参考；三地暂无院校实际录取线，省市控线独立展示。报考以当年官方公告为准。" type="info" show-icon :closable="false" />
   </div>
 </template>
 
@@ -80,8 +86,10 @@ onMounted(() => store.ensureTodayTasks())
 const hour = new Date().getHours()
 const greeting = hour < 12 ? '早上好' : hour < 18 ? '下午好' : '晚上好'
 const provinceText = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
-const scorePercentage = computed(() => store.diagnosisComplete ? Math.min(100, Math.round(store.currentScore / store.targetScore * 100)) : 0)
-const nextAction = computed(() => !store.profileComplete
+const scorePercentage = computed(() => store.diagnosisComplete && store.targetScore ? Math.min(100, Math.round(store.currentScore / store.targetScore * 100)) : 0)
+const nextAction = computed(() => store.targetDatePassed && store.profileComplete
+  ? { label: '调整报考年度', path: '/profile' }
+  : !store.profileComplete
   ? { label: '建立报考档案', path: '/profile' }
   : !store.selectedInstitution
     ? { label: '选择目标院校', path: '/schools' }
@@ -93,14 +101,14 @@ const metrics = computed(() => [
   { label: '可报考省份', value: `${store.selectedProvinces.length} 个`, note: provinceText.value, icon: 'Location', tone: 'blue' },
   { label: '考试科目', value: `${store.selectedMajor?.subjects.length || 0} 科`, note: store.selectedMajor?.subjects.join(' · '), icon: 'Tickets', tone: 'mint' },
   { label: '每周学习', value: `${store.weeklyHours} 小时`, note: store.profile.mode === 'plan' ? '系统自动排期' : '由你自主安排', icon: 'Clock', tone: 'amber' },
-  { label: '距考试', value: `${store.daysUntilExam} 天`, note: `考试日 ${store.examDate}`, icon: 'TrendCharts', tone: 'violet' }
+  { label: '距目标达标日', value: store.targetDatePassed ? '已到期' : `${store.daysUntilExam} 天`, note: `规划日期 ${store.examDate} · 非官方考试日`, icon: 'TrendCharts', tone: 'violet' }
 ])
 
 const journey = computed(() => [
   { title: '报考档案', desc: '省份、报考类别与学习模式', path: '/profile', status: store.profileComplete ? 'done' : 'active' },
   { title: '目标院校', desc: '查看学费、学制与历史分数', path: '/schools', status: store.selectedInstitution ? 'done' : store.profileComplete ? 'active' : 'pending' },
   { title: '入学诊断', desc: '评估基础、速度和错题类型', path: '/diagnosis', status: store.diagnosisComplete ? 'done' : store.selectedInstitution ? 'active' : 'pending' },
-  { title: '目标分数', desc: '参考线 + 30 分安全目标', path: '/target', status: store.diagnosisComplete ? 'done' : 'pending' },
+  { title: '目标分数', desc: '参考线 + 30 分安全目标', path: '/target', status: store.targetScore != null ? 'done' : store.diagnosisComplete ? 'active' : 'pending' },
   {
     title: '学习与纠偏',
     desc: '四阶段路线和阶段测试',
@@ -113,6 +121,14 @@ const journey = computed(() => [
   }
 ])
 const completedFlow = computed(() => journey.value.filter(item => item.status === 'done').length)
+function openPractice(task) {
+  router.push({ name: 'Practice', query: {
+    subject: task.subject,
+    topic: task.knowledgeName || undefined,
+    taskId: task.id,
+    taskDate: store.tasksDate,
+  } })
+}
 </script>
 
 <style scoped lang="less" src="../styles/views/Home.less"></style>

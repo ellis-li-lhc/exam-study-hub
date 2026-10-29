@@ -7,7 +7,7 @@
 
     <el-form label-position="top" class="profile-form" @submit.prevent>
       <el-card shadow="never" class="form-card">
-        <template #header><div class="form-heading"><span>1</span><div><h3>我可以在哪报名？</h3><p>支持多选。目前江苏、河南、浙江、广东已接入公开招生数据，其余省份陆续接入。</p></div></div></template>
+        <template #header><div class="form-heading"><span>1</span><div><h3>我可以在哪报名？</h3><p>支持多选。目前江苏、河南、浙江、广东、上海、山东、河北已接入公开招生数据；河北计划为2024—2025年历史参考，其余省份陆续接入。</p></div></div></template>
         <el-select v-model="draft.provinces" multiple filterable size="large" placeholder="选择报考省份" class="province-select">
           <el-option v-for="province in chinaProvinces" :key="province.value" :label="province.label" :value="province.value" :disabled="!isProvinceAvailable(province.value)">
             <span>{{ province.label }}</span>
@@ -28,12 +28,12 @@
       </el-card>
 
       <el-card shadow="never" class="form-card">
-        <template #header><div class="form-heading"><span>2</span><div><h3>参考哪个考试年度？</h3><p>1～10 月默认当年，11～12 月默认下一年，仍可手动修改。</p></div></div></template>
+        <template #header><div class="form-heading"><span>2</span><div><h3>参考哪个考试年度？</h3><p>目标达标日过后，新档案默认下一年度；已有档案可手动调整。</p></div></div></template>
         <div class="year-row">
           <el-select v-model="draft.examYear" filterable size="large" aria-label="参考考试年度">
             <el-option v-for="year in yearOptions" :key="year" :label="`${year} 年成人高考`" :value="year" />
           </el-select>
-          <div class="year-note"><el-icon><Calendar /></el-icon><span>当前按 {{ draft.examYear }} 年考试周期规划，10 月后自动切换下一年度。</span></div>
+          <div class="year-note"><el-icon><Calendar /></el-icon><span>当前按 {{ draft.examYear }} 年考试周期规划；保存后可随时调整。</span></div>
         </div>
       </el-card>
 
@@ -84,11 +84,12 @@ import {
   isProvinceAvailable,
 } from '../data/regions'
 import { subjectsForCategory } from '../data/majors'
+import { getPlanningYear } from '../data/planner'
 
-const router = useRouter(); const store = useApplicationStore(); const currentYear = new Date().getFullYear()
+const router = useRouter(); const store = useApplicationStore(); const currentYear = getPlanningYear()
 const draft = reactive(JSON.parse(JSON.stringify(store.profile)))
 if (!Array.isArray(draft.cities)) draft.cities = []
-const yearOptions = [currentYear, currentYear + 1, currentYear + 2]
+const yearOptions = [...new Set([Number(draft.examYear), currentYear, currentYear + 1, currentYear + 2])].sort((a, b) => a - b)
 const weeklyTotal = computed(() => Number(draft.weekdayHours) * 5 + Number(draft.weekendHours) * 2)
 const canSave = computed(() => draft.provinces.length > 0 && draft.majorCode && draft.mode)
 // 院校所在地偏好：展示所选招生省份内的本省城市；如存在跨省招生院校，追加“省外院校”选项。

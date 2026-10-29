@@ -21,6 +21,30 @@ class PlanRead(BaseModel):
     plan_count: int | None = None
     line_type: str | None = None
     round: str | None = None
+    study_form: str | None = None
+    teaching_site: str | None = None
+    tuition_amount: int | None = None
+    tuition_unit: str | None = None
+    tuition_raw: str | None = None
+    enrollment_scope: str | None = None
+    source_url: str | None = None
+    study_duration_raw: str | None = None
+    minimum_study_duration_raw: str | None = None
+    major_direction: str | None = None
+    foreign_language: str | None = None
+    remarks: str | None = None
+    institution_code_raw: str | None = None
+    applicant_group: str | None = None
+    source_page: int | None = None
+
+
+class ControlScoreRead(BaseModel):
+    year: int
+    category_name: str
+    score: int | None = None
+    line_type: str
+    source_url: str | None = None
+    round: str | None = None
 
 
 class SourceRead(BaseModel):
@@ -46,3 +70,6 @@ class InstitutionRead(BaseModel):
     plans: list[PlanRead] = []
     scores: list[ScoreRead] = []
     source: SourceRead | None = None
+    supplemental_data: dict | None = None
+    active_catalog_year: int | None = None
+    control_scores: list[ControlScoreRead] = []

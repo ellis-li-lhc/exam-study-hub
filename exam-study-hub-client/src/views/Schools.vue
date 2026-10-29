@@ -5,7 +5,7 @@
       <el-button @click="router.push('/profile')"><el-icon><Edit /></el-icon>修改专业</el-button>
     </section>
 
-    <el-alert title="河南/江苏/浙江/广东公开数据试运行版：广东已接入2025招生计划、第一志愿投档线及省控线；浙江计划人数与院校线暂未公开。院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。" type="info" show-icon :closable="false" />
+    <el-alert :title="dataNotice" type="info" show-icon :closable="false" />
 
     <div class="subject-strip">
       <span><el-icon><Tickets /></el-icon>统考科目</span>
@@ -44,7 +44,50 @@
           <div><dt>匹配口径</dt><dd>{{ matchDetail(selected) }}</dd></div>
           <div><dt>数据完整度</dt><dd><span class="quality-detail">{{ selectedProfile.label }} · {{ selectedProfile.completed }}/{{ selectedProfile.total }}</span><br>{{ selectedProfile.summary }}</dd></div>
           <div v-if="matchedPlans.length"><dt>匹配专业计划</dt><dd>{{ matchedPlansText }}</dd></div>
-          <div><dt>参考线来源</dt><dd>
+          <div v-if="selectedControlScores.length"><dt>{{ provinceName(selected.province) }}最低控制线（非院校录取线）</dt><dd>
+            <ul class="supplement-list"><li v-for="line in selectedControlScores" :key="`${line.year}-${line.category_name}-${line.round}`">
+              {{ line.year }} 年 · {{ line.category_name }}<span v-if="selected.province === 'hebei'"> · 统考生</span> · {{ line.score }} 分
+              <a :href="line.source_url" target="_blank" rel="noopener" class="source-link">查看来源公告</a>
+            </li></ul>
+            <p class="supplement-note">这是全省市该科类最低控制线，不能据此判断院校录取或生成院校提分目标；2026年控制线暂未收录。</p>
+          </dd></div>
+          <div v-if="selectedSpecialControlScores.length"><dt>农民工考生专项控制线</dt><dd>
+            <ul class="supplement-list"><li v-for="line in selectedSpecialControlScores" :key="`${line.year}-${line.category_name}-${line.round}`">
+              {{ line.year }} 年 · {{ line.category_name }} · {{ line.score }} 分
+              <a :href="line.source_url" target="_blank" rel="noopener" class="source-link">查看来源公告</a>
+            </li></ul>
+            <p class="supplement-note">仅适用于相应专项资格及计划，不能作为普通统考生参考线。2023年专项线暂未收录。</p>
+          </dd></div>
+          <div v-if="detailedPlans.length"><dt>专业详情与报考条件</dt><dd>
+            <p class="supplement-note">每条记录仅适用于标注年份和批次；未公布的人数、学费及教学点保留为未知。直属、委托培养和职业本科须核对招生对象与条件。</p>
+            <ul class="supplement-list"><li v-for="plan in detailedPlans" :key="`${plan.year}-${plan.major_code}-${plan.round}`">
+              <span>{{ plan.year }} 年 · {{ plan.round }} · 专业代码 {{ plan.major_code }}</span><br>
+              <p v-if="plan.institution_code_raw">当年院校编号 {{ plan.institution_code_raw }} · {{ plan.applicant_group }}</p>
+              <strong>{{ plan.teaching_site || '教学点暂未获取' }}</strong><br>
+              {{ tuitionForPlanText(plan) }} · {{ plan.plan_count == null ? '计划人数未公布' : `${plan.plan_count} 人` }}
+              <p v-if="plan.study_duration_raw">学制 {{ plan.study_duration_raw }}<span v-if="plan.minimum_study_duration_raw"> · 最低学习年限 {{ plan.minimum_study_duration_raw }}</span></p>
+              <p v-if="plan.study_form || plan.enrollment_scope">{{ plan.study_form }} · {{ plan.enrollment_scope }}</p>
+              <p v-if="plan.foreign_language">外语语种 {{ plan.foreign_language }}</p>
+              <p v-if="plan.remarks">{{ plan.remarks }}</p>
+              <a v-if="plan.source_url" :href="plan.source_page ? `${plan.source_url}#page=${plan.source_page}` : plan.source_url" target="_blank" rel="noopener" class="source-link">查看官方计划</a>
+            </li></ul>
+          </dd></div>
+          <div v-if="verifiedFacts.length"><dt>已核验院校说明</dt><dd>
+            <details v-for="fact in verifiedFacts" :key="`${fact.year}-${fact.source_id}-${fact.field}`" class="supplement-detail">
+              <summary>{{ fact.year }} 年 · {{ factLabels[fact.field] || '院校说明' }}</summary>
+              <p>{{ fact.source_excerpt }}</p>
+              <a :href="fact.source_url" target="_blank" rel="noopener" class="source-link">查看院校原文</a>
+            </details>
+          </dd></div>
+          <div v-if="supplementDocuments.length"><dt>院校补充资料</dt><dd>
+            <details class="supplement-detail"><summary>{{ supplementDocuments.length }} 份官方资料（内容待逐项核验）</summary>
+              <ul class="supplement-list"><li v-for="doc in supplementDocuments" :key="doc.source_id">
+                <a :href="doc.source_url" target="_blank" rel="noopener">{{ doc.title }}</a>
+                <small>{{ doc.review_status === 'ocr_requires_review' ? '图片识别内容待核验' : '已收录来源，字段待核验' }}</small>
+              </li></ul>
+            </details>
+          </dd></div>
+          <div><dt>招生数据来源</dt><dd>
             <template v-if="selected.source && selected.source.confidence === 'verified'">
               {{ sourceLabel(selected.source) }}
               <el-tag size="small" type="success" effect="dark" class="source-badge">已核实</el-tag>
@@ -71,11 +114,16 @@ import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useApplicationStore } from '../stores/application'
 import { cityPreferenceLabel, isCityInProvince } from '../data/regions'
-import { institutionDataProfile, latestReferenceScore, matchedPlansForMajor, referenceScoresForMajor } from '../data/institutionQuality'
+import { controlScoresForMajor, institutionDataProfile, latestReferenceScore, matchedPlansForMajor, referenceScoresForMajor, tuitionForMajorText, tuitionForPlanText, verifiedFactsForMajor } from '../data/institutionQuality'
 const router=useRouter();const store=useApplicationStore();const selected=computed(()=>store.selectedInstitution)
 const provinceText=computed(()=>store.selectedProvinces.map(item=>item.label).join('、'))
 const cityText=computed(()=>(store.profile.cities||[]).map(cityPreferenceLabel).join('、'))
 const provinceName=code=>store.provinceOptions.find(item=>item.value===code)?.label
+const dataNotice=computed(()=>store.profile.provinces.includes('hebei')
+  ? '河北目前收录2024—2025年专升本招生计划，仅作历史参考；尚未取得2026完整目录和本科征集明细。统考生与农民工考生控制线分开标注，暂无院校实际录取线。'
+  : store.profile.provinces.includes('shandong')
+  ? '山东已接入2026及2025专升本目录、2025两次征集计划、2023—2025省控线。暂无院校实际录取线；2026目录未公布计划人数、学费和教学点。限制报考条件以当年公告为准。'
+  : '已接入河南、江苏、浙江、广东、上海、山东、河北公开招生资料。省市控线、院校线及征集计划分开标注，资料仅适用于对应年份和批次，以当年官方公告为准。')
 const emptySchoolsText=computed(()=>{
   if (store.institutionsError) return '院校数据加载失败，请刷新页面或稍后重试'
   if (!store.institutionsLoaded) return '正在加载院校数据…'
@@ -84,6 +132,9 @@ const emptySchoolsText=computed(()=>{
   return '所选省份暂无该类别的招生院校数据'
 })
 const selectedReferenceScores=computed(()=>referenceScoresForMajor(selected.value, store.selectedMajor?.name))
+const selectedControlScores=computed(()=>controlScoresForMajor(selected.value, store.selectedMajor?.name))
+const selectedSpecialControlScores=computed(()=>selected.value?.province === 'hebei'
+  ? controlScoresForMajor(selected.value, store.selectedMajor?.name, { applicantGroup: '农民工考生' }) : [])
 const maxScore=computed(()=>Math.max(120,...selectedReferenceScores.value.map(s=>s.score||0)))
 const barWidth=score=>`${Math.min(100,Math.round((score||0)/maxScore.value*100))}%`
 const matchStats=computed(() => store.filteredInstitutions.reduce((stats, school) => {
@@ -97,7 +148,7 @@ const matchHint=computed(() => {
   return `当前省份暂无完整公开专业计划，下列院校按 ${store.selectedMajor?.category} 科类参考线匹配。`
 })
 const isLocalSchool=school=>isCityInProvince(school.province, school.city)
-const matchModeLabel=school=>school.majorMatch === 'exact' ? '专业计划匹配' : '科类参考匹配'
+const matchModeLabel=school=>school.province === 'hebei' ? `${school.activeCatalogYear}年计划参考` : school.majorMatch === 'exact' ? '专业计划匹配' : '科类参考匹配'
 const matchDetail=school=>school.majorMatch === 'exact'
   ? `公开专业计划包含 ${store.selectedMajor?.name}`
   : `按 ${store.selectedMajor?.category} 科类参考线匹配，具体专业以当年招生计划为准`
@@ -105,14 +156,19 @@ const qualityProfile=school=>institutionDataProfile(school, store.selectedMajor)
 const selectedProfile=computed(()=>selected.value ? qualityProfile(selected.value) : institutionDataProfile(null, store.selectedMajor))
 const scoreText=school=>{
   const score = latestReferenceScore(school, store.selectedMajor?.name)?.score
-  return Number.isFinite(Number(score)) ? `${score} 分` : '暂无参考线'
+  return score != null && Number.isFinite(Number(score)) ? `${score} 分` : '暂无参考线'
 }
-const tuitionText=school=>school.tuition !== null && school.tuition !== undefined && school.tuition !== '' && Number.isFinite(Number(school.tuition)) ? `¥${school.tuition}/年` : '暂未获取'
+const tuitionText=school=>tuitionForMajorText(school, store.selectedMajor?.name)
 const matchedPlans=computed(() => {
   return matchedPlansForMajor(selected.value, store.selectedMajor?.name)
 })
+const detailedPlans=computed(()=>matchedPlans.value.filter(plan=>plan.teaching_site || plan.tuition_raw || plan.study_duration_raw || plan.enrollment_scope || plan.remarks)
+  .slice().sort((a,b)=>b.year-a.year || String(a.round).localeCompare(String(b.round), 'zh')))
+const verifiedFacts=computed(()=>verifiedFactsForMajor(selected.value, store.selectedMajor?.name))
+const supplementDocuments=computed(()=>selected.value?.supplementalData?.documents || [])
+const factLabels={ duration_years:'学制', study_years_range:'修业年限', duration_by_major:'分专业学制', tuition_rules:'收费说明' }
 const matchedPlansText=computed(() => matchedPlans.value
-  .map(plan => `${plan.major_name}${plan.plan_count != null ? ` ${plan.plan_count}人` : ''}`)
+  .map(plan => `${plan.year}年${plan.round || ''} · ${plan.major_name}${plan.plan_count != null ? ` ${plan.plan_count}人` : ''}`)
   .join('、'))
 function sourceLabel(source) {
   const label = `${source.provider || ''} · ${source.year} 年${source.line_type || ''}`

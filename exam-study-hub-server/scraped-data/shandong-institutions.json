@@ -1,0 +1,714 @@
+[
+  {
+    "province": "shandong",
+    "institution_code": "006",
+    "institution_name": "山东工程职业技术大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "011",
+    "institution_name": "山东外事职业大学",
+    "latest_catalog_year": 2026,
+    "city": "威海",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "028",
+    "institution_name": "齐鲁师范学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "042",
+    "institution_name": "潍坊理工学院",
+    "latest_catalog_year": 2026,
+    "city": "潍坊",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "051",
+    "institution_name": "山东政法学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "053",
+    "institution_name": "山东青年政治学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "054",
+    "institution_name": "山东管理学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "055",
+    "institution_name": "山东农业工程学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "056",
+    "institution_name": "山东财经大学东方学院",
+    "latest_catalog_year": 2026,
+    "city": "泰安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "057",
+    "institution_name": "聊城大学东昌学院",
+    "latest_catalog_year": 2026,
+    "city": "聊城",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "060",
+    "institution_name": "山东开放大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.sdou.edu.cn/col/col9859/index.html"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "076",
+    "institution_name": "青岛农业大学海都学院",
+    "latest_catalog_year": 2026,
+    "city": "烟台",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "087",
+    "institution_name": "青岛开放大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.qingdao.gov.cn/ywdt/zwzl/ggqsydwgk/jy_208048/gdxx/qdkfdx/zsks/zsjh/202507/t20250715_9852866.shtml"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "088",
+    "institution_name": "齐鲁理工学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "094",
+    "institution_name": "青岛理工大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "095",
+    "institution_name": "青岛科技大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "096",
+    "institution_name": "山东科技大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "100",
+    "institution_name": "山东工商学院",
+    "latest_catalog_year": 2026,
+    "city": "烟台",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "101",
+    "institution_name": "青岛大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "102",
+    "institution_name": "烟台大学",
+    "latest_catalog_year": 2026,
+    "city": "烟台",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "103",
+    "institution_name": "山东理工大学",
+    "latest_catalog_year": 2026,
+    "city": "淄博",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "104",
+    "institution_name": "山东建筑大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "105",
+    "institution_name": "齐鲁工业大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "106",
+    "institution_name": "潍坊学院",
+    "latest_catalog_year": 2026,
+    "city": "潍坊",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "107",
+    "institution_name": "山东农业大学",
+    "latest_catalog_year": 2026,
+    "city": "泰安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "108",
+    "institution_name": "青岛农业大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "110",
+    "institution_name": "山东警察学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "111",
+    "institution_name": "山东中医药大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "112",
+    "institution_name": "山东第一医科大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "113",
+    "institution_name": "山东第二医科大学",
+    "latest_catalog_year": 2026,
+    "city": "潍坊",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "114",
+    "institution_name": "山东医药大学",
+    "latest_catalog_year": 2026,
+    "city": "滨州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "115",
+    "institution_name": "济宁医学院",
+    "latest_catalog_year": 2026,
+    "city": "济宁",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "116",
+    "institution_name": "山东财经大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "117",
+    "institution_name": "山东体育学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "118",
+    "institution_name": "山东艺术学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "119",
+    "institution_name": "山东工艺美术学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "120",
+    "institution_name": "济南大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "121",
+    "institution_name": "山东师范大学",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "122",
+    "institution_name": "聊城大学",
+    "latest_catalog_year": 2026,
+    "city": "聊城",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "123",
+    "institution_name": "曲阜师范大学",
+    "latest_catalog_year": 2026,
+    "city": "济宁",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "124",
+    "institution_name": "鲁东大学",
+    "latest_catalog_year": 2026,
+    "city": "烟台",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "126",
+    "institution_name": "山东航空学院",
+    "latest_catalog_year": 2026,
+    "city": "滨州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "128",
+    "institution_name": "临沂大学",
+    "latest_catalog_year": 2026,
+    "city": "临沂",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "129",
+    "institution_name": "泰山学院",
+    "latest_catalog_year": 2026,
+    "city": "泰安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "130",
+    "institution_name": "济宁学院",
+    "latest_catalog_year": 2026,
+    "city": "济宁",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "131",
+    "institution_name": "菏泽学院",
+    "latest_catalog_year": 2026,
+    "city": "菏泽",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "133",
+    "institution_name": "枣庄学院",
+    "latest_catalog_year": 2026,
+    "city": "枣庄",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "139",
+    "institution_name": "德州学院",
+    "latest_catalog_year": 2026,
+    "city": "德州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "140",
+    "institution_name": "青岛滨海学院",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "141",
+    "institution_name": "齐鲁医药学院",
+    "latest_catalog_year": 2026,
+    "city": "淄博",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "143",
+    "institution_name": "烟台南山学院",
+    "latest_catalog_year": 2026,
+    "city": "烟台",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "155",
+    "institution_name": "山东交通学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "164",
+    "institution_name": "山东女子学院",
+    "latest_catalog_year": 2026,
+    "city": "济南",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "170",
+    "institution_name": "潍坊科技学院",
+    "latest_catalog_year": 2026,
+    "city": "潍坊",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "185",
+    "institution_name": "山东石油化工学院",
+    "latest_catalog_year": 2026,
+    "city": "东营",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "188",
+    "institution_name": "青岛黄海学院",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "189",
+    "institution_name": "青岛恒星科技学院",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "203",
+    "institution_name": "中央财经大学",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "204",
+    "institution_name": "北京交通大学",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "207",
+    "institution_name": "北京科技大学",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "208",
+    "institution_name": "中国海洋大学",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "209",
+    "institution_name": "中国消防救援学院",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "210",
+    "institution_name": "北京体育大学",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "213",
+    "institution_name": "北京化工大学",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "214",
+    "institution_name": "北京外国语大学",
+    "latest_catalog_year": 2025,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "216",
+    "institution_name": "中国地质大学(武汉)",
+    "latest_catalog_year": 2025,
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "238",
+    "institution_name": "中国药科大学",
+    "latest_catalog_year": 2026,
+    "city": "南京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "247",
+    "institution_name": "西安电子科技大学",
+    "latest_catalog_year": 2026,
+    "city": "西安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "249",
+    "institution_name": "中国石油大学(华东)",
+    "latest_catalog_year": 2026,
+    "city": "青岛",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "320",
+    "institution_name": "华北电力大学(保定)",
+    "latest_catalog_year": 2026,
+    "city": "保定",
+    "city_source_url": "https://www.ncepu.edu.cn/xxgk/xxzc/index.htm"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "332",
+    "institution_name": "南京师范大学",
+    "latest_catalog_year": 2026,
+    "city": "南京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "333",
+    "institution_name": "大连海事大学",
+    "latest_catalog_year": 2026,
+    "city": "大连",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "334",
+    "institution_name": "东华理工大学",
+    "latest_catalog_year": 2026,
+    "city": "抚州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "374",
+    "institution_name": "河南大学",
+    "latest_catalog_year": 2026,
+    "city": "开封",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "376",
+    "institution_name": "三峡大学",
+    "latest_catalog_year": 2026,
+    "city": "宜昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "414",
+    "institution_name": "河北工业大学",
+    "latest_catalog_year": 2026,
+    "city": "天津",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "437",
+    "institution_name": "沈阳药科大学",
+    "latest_catalog_year": 2026,
+    "city": "沈阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "438",
+    "institution_name": "延边大学",
+    "latest_catalog_year": 2026,
+    "city": "延边朝鲜族自治州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "451",
+    "institution_name": "长春工业大学",
+    "latest_catalog_year": 2026,
+    "city": "长春",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "452",
+    "institution_name": "黑龙江大学",
+    "latest_catalog_year": 2026,
+    "city": "哈尔滨",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "457",
+    "institution_name": "哈尔滨工程大学",
+    "latest_catalog_year": 2026,
+    "city": "哈尔滨",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "461",
+    "institution_name": "西南交通大学",
+    "latest_catalog_year": 2026,
+    "city": "成都",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "475",
+    "institution_name": "南京信息工程大学",
+    "latest_catalog_year": 2026,
+    "city": "南京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "562",
+    "institution_name": "兰州交通大学",
+    "latest_catalog_year": 2026,
+    "city": "兰州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "250",
+    "institution_name": "中国矿业大学(北京)",
+    "latest_catalog_year": 2026,
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "321",
+    "institution_name": "应急管理大学",
+    "latest_catalog_year": 2026,
+    "city": "廊坊",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "377",
+    "institution_name": "武汉科技大学",
+    "latest_catalog_year": 2026,
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "473",
+    "institution_name": "南京邮电大学",
+    "latest_catalog_year": 2026,
+    "city": "南京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  },
+  {
+    "province": "shandong",
+    "institution_code": "474",
+    "institution_name": "河海大学",
+    "latest_catalog_year": 2026,
+    "city": "南京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls"
+  }
+]

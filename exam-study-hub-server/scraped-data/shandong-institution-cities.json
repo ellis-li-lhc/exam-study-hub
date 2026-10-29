@@ -1,0 +1,530 @@
+{
+  "006": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1441,
+    "source_city_raw": "济南市"
+  },
+  "011": {
+    "city": "威海",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1451,
+    "source_city_raw": "威海市"
+  },
+  "028": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1458,
+    "source_city_raw": "济南市"
+  },
+  "042": {
+    "city": "潍坊",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1445,
+    "source_city_raw": "潍坊市"
+  },
+  "051": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1457,
+    "source_city_raw": "济南市"
+  },
+  "053": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1459,
+    "source_city_raw": "济南市"
+  },
+  "054": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1461,
+    "source_city_raw": "济南市"
+  },
+  "055": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1462,
+    "source_city_raw": "济南市"
+  },
+  "056": {
+    "city": "泰安",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1455,
+    "source_city_raw": "泰安市"
+  },
+  "057": {
+    "city": "聊城",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1443,
+    "source_city_raw": "聊城市"
+  },
+  "060": {
+    "city": "济南",
+    "source_url": "https://www.sdou.edu.cn/col/col9859/index.html"
+  },
+  "076": {
+    "city": "烟台",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1453,
+    "source_city_raw": "烟台市"
+  },
+  "087": {
+    "city": "青岛",
+    "source_url": "https://www.qingdao.gov.cn/ywdt/zwzl/ggqsydwgk/jy_208048/gdxx/qdkfdx/zsks/zsjh/202507/t20250715_9852866.shtml"
+  },
+  "088": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1454,
+    "source_city_raw": "济南市"
+  },
+  "094": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1399,
+    "source_city_raw": "青岛市"
+  },
+  "095": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1397,
+    "source_city_raw": "青岛市"
+  },
+  "096": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1395,
+    "source_city_raw": "青岛市"
+  },
+  "100": {
+    "city": "烟台",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1432,
+    "source_city_raw": "烟台市"
+  },
+  "101": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1427,
+    "source_city_raw": "青岛市"
+  },
+  "102": {
+    "city": "烟台",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1428,
+    "source_city_raw": "烟台市"
+  },
+  "103": {
+    "city": "淄博",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1402,
+    "source_city_raw": "淄博市"
+  },
+  "104": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1400,
+    "source_city_raw": "济南市"
+  },
+  "105": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1401,
+    "source_city_raw": "济南市"
+  },
+  "106": {
+    "city": "潍坊",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1429,
+    "source_city_raw": "潍坊市"
+  },
+  "107": {
+    "city": "泰安",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1403,
+    "source_city_raw": "泰安市"
+  },
+  "108": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1404,
+    "source_city_raw": "青岛市"
+  },
+  "110": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1430,
+    "source_city_raw": "济南市"
+  },
+  "111": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1408,
+    "source_city_raw": "济南市"
+  },
+  "112": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1406,
+    "source_city_raw": "济南市"
+  },
+  "113": {
+    "city": "潍坊",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1405,
+    "source_city_raw": "潍坊市"
+  },
+  "114": {
+    "city": "滨州",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1407,
+    "source_city_raw": "滨州市"
+  },
+  "115": {
+    "city": "济宁",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1409,
+    "source_city_raw": "济宁市"
+  },
+  "116": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1420,
+    "source_city_raw": "济南市"
+  },
+  "117": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1421,
+    "source_city_raw": "济南市"
+  },
+  "118": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1422,
+    "source_city_raw": "济南市"
+  },
+  "119": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1426,
+    "source_city_raw": "济南市"
+  },
+  "120": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1398,
+    "source_city_raw": "济南市"
+  },
+  "121": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1410,
+    "source_city_raw": "济南市"
+  },
+  "122": {
+    "city": "聊城",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1412,
+    "source_city_raw": "聊城市"
+  },
+  "123": {
+    "city": "济宁",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1411,
+    "source_city_raw": "济宁市"
+  },
+  "124": {
+    "city": "烟台",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1415,
+    "source_city_raw": "烟台市"
+  },
+  "126": {
+    "city": "滨州",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1414,
+    "source_city_raw": "滨州市"
+  },
+  "128": {
+    "city": "临沂",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1416,
+    "source_city_raw": "临沂市"
+  },
+  "129": {
+    "city": "泰安",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1417,
+    "source_city_raw": "泰安市"
+  },
+  "130": {
+    "city": "济宁",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1418,
+    "source_city_raw": "济宁市"
+  },
+  "131": {
+    "city": "菏泽",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1419,
+    "source_city_raw": "菏泽市"
+  },
+  "133": {
+    "city": "枣庄",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1425,
+    "source_city_raw": "枣庄市"
+  },
+  "139": {
+    "city": "德州",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1413,
+    "source_city_raw": "德州市"
+  },
+  "140": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1424,
+    "source_city_raw": "青岛市"
+  },
+  "141": {
+    "city": "淄博",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1423,
+    "source_city_raw": "淄博市"
+  },
+  "143": {
+    "city": "烟台",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1434,
+    "source_city_raw": "烟台市"
+  },
+  "155": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1431,
+    "source_city_raw": "济南市"
+  },
+  "164": {
+    "city": "济南",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1433,
+    "source_city_raw": "济南市"
+  },
+  "170": {
+    "city": "潍坊",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1435,
+    "source_city_raw": "潍坊市"
+  },
+  "185": {
+    "city": "东营",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1447,
+    "source_city_raw": "东营市"
+  },
+  "188": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1438,
+    "source_city_raw": "青岛市"
+  },
+  "189": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1437,
+    "source_city_raw": "青岛市"
+  },
+  "203": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 35,
+    "source_city_raw": "北京市"
+  },
+  "204": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 8,
+    "source_city_raw": "北京市"
+  },
+  "207": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 12,
+    "source_city_raw": "北京市"
+  },
+  "208": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1394,
+    "source_city_raw": "青岛市"
+  },
+  "209": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 39,
+    "source_city_raw": "北京市"
+  },
+  "210": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 43,
+    "source_city_raw": "北京市"
+  },
+  "213": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 14,
+    "source_city_raw": "北京市"
+  },
+  "214": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 31,
+    "source_city_raw": "北京市"
+  },
+  "216": {
+    "city": "武汉",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1753,
+    "source_city_raw": "武汉市"
+  },
+  "238": {
+    "city": "南京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 787,
+    "source_city_raw": "南京市"
+  },
+  "247": {
+    "city": "西安",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 2735,
+    "source_city_raw": "西安市"
+  },
+  "249": {
+    "city": "青岛",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1396,
+    "source_city_raw": "青岛市"
+  },
+  "320": {
+    "city": "保定",
+    "source_url": "https://www.ncepu.edu.cn/xxgk/xxzc/index.htm"
+  },
+  "332": {
+    "city": "南京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 788,
+    "source_city_raw": "南京市"
+  },
+  "333": {
+    "city": "大连",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 440,
+    "source_city_raw": "大连市"
+  },
+  "334": {
+    "city": "抚州",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1274,
+    "source_city_raw": "抚州市"
+  },
+  "374": {
+    "city": "开封",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1577,
+    "source_city_raw": "开封市"
+  },
+  "376": {
+    "city": "宜昌",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1777,
+    "source_city_raw": "宜昌市"
+  },
+  "414": {
+    "city": "天津",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 158,
+    "source_city_raw": "天津市"
+  },
+  "437": {
+    "city": "沈阳",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 450,
+    "source_city_raw": "沈阳市"
+  },
+  "438": {
+    "city": "延边朝鲜族自治州",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 546,
+    "source_city_raw": "延边朝鲜族自治州"
+  },
+  "451": {
+    "city": "长春",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 549,
+    "source_city_raw": "长春市"
+  },
+  "452": {
+    "city": "哈尔滨",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 614,
+    "source_city_raw": "哈尔滨市"
+  },
+  "457": {
+    "city": "哈尔滨",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 617,
+    "source_city_raw": "哈尔滨市"
+  },
+  "461": {
+    "city": "成都",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 2403,
+    "source_city_raw": "成都市"
+  },
+  "475": {
+    "city": "南京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 780,
+    "source_city_raw": "南京市"
+  },
+  "562": {
+    "city": "兰州",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 2832,
+    "source_city_raw": "兰州市"
+  },
+  "250": {
+    "city": "北京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 56,
+    "source_city_raw": "北京市"
+  },
+  "321": {
+    "city": "廊坊",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 181,
+    "source_city_raw": "廊坊市"
+  },
+  "377": {
+    "city": "武汉",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 1750,
+    "source_city_raw": "武汉市"
+  },
+  "473": {
+    "city": "南京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 775,
+    "source_city_raw": "南京市"
+  },
+  "474": {
+    "city": "南京",
+    "source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_row": 776,
+    "source_city_raw": "南京市"
+  }
+}

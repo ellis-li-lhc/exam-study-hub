@@ -1,0 +1,800 @@
+[
+  {
+    "province": "guangdong",
+    "institution_code": "10004",
+    "institution_name": "北京交通大学",
+    "documents": [
+      {
+        "source_id": "school-10004-ba538da692da",
+        "year": 2025,
+        "title": "北京交通大学2025年成人高等学历教育招生章程",
+        "source_url": "https://jxjy.bjtu.edu.cn/cms/zsjzsub/127271.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10163",
+    "institution_name": "沈阳药科大学",
+    "documents": [
+      {
+        "source_id": "school-10163-d3c050708b8d",
+        "year": 2025,
+        "title": "2025年成人高等教育招生简章",
+        "source_url": "https://sce.syphu.edu.cn/info/1014/2918.htm",
+        "review_status": "ocr_requires_review"
+      },
+      {
+        "source_id": "school-10163-beb74e67c8ae",
+        "year": 2025,
+        "title": "沈阳药科大学2025年新增高等学历继续教育校外教学点公示",
+        "source_url": "https://sce.syphu.edu.cn/info/1014/1978.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10287",
+    "institution_name": "南京航空航天大学",
+    "documents": [
+      {
+        "source_id": "school-10287-3926ad9fe0f2",
+        "year": 2025,
+        "title": "高等学历继续教育2025年招生简章",
+        "source_url": "https://jxjy.nuaa.edu.cn/_t959/2025/0408/c18369a372148/page.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10294",
+    "institution_name": "河海大学",
+    "documents": [
+      {
+        "source_id": "school-10294-5ded5a5efac2",
+        "year": 2025,
+        "title": "【2025-04-24】关于印发《河海大学高等学历继续教育校外教学点管理办法（修订）》的通知",
+        "source_url": "https://jjy.hhu.edu.cn/2025/0424/c14575a301878/page.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10294-4710efc946b1",
+        "year": 2025,
+        "title": "【2025-03-12】关于印发《河海大学授予高等学历继续教育本科毕业生学士学位管理办法（修订）》的通知",
+        "source_url": "https://jjy.hhu.edu.cn/2025/0312/c14576a299456/page.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10316",
+    "institution_name": "中国药科大学",
+    "documents": [
+      {
+        "source_id": "school-10316-01cdd1fdaeb4",
+        "year": 2025,
+        "title": "中国药科大学2025年高等学历继续教育招生简章",
+        "source_url": "https://jjy.cpu.edu.cn/6d/79/c12891a224633/pagem.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "attachment-cb5aa0480a4866c9",
+        "year": 2025,
+        "title": "中国药科大学2025年高等学历继续教育招生简章附件",
+        "source_url": "https://jjy.cpu.edu.cn/_upload/article/files/26/d0/e1c8f3de49dea95653cd7c78fb7d/0a92b69f-0413-44e8-88d4-6232c6b8bde0.pdf",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10504",
+    "institution_name": "华中农业大学",
+    "documents": [
+      {
+        "source_id": "school-10504-9e66c5822ce0",
+        "year": 2025,
+        "title": "华中农业大学关于2025年高等学历继续教育新增校外教学点情况... 2025-01-20",
+        "source_url": "https://jxjy.hzau.edu.cn/info/1033/4415.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10559",
+    "institution_name": "暨南大学",
+    "documents": [
+      {
+        "source_id": "school-10559-a85fffab702e",
+        "year": 2025,
+        "title": "暨南大学高等学历继续教育2025年招生简章 2025-09-05",
+        "source_url": "https://jyxy.jnu.edu.cn/2025/0905/c28079a842109/page.htm",
+        "review_status": "ocr_requires_review"
+      },
+      {
+        "source_id": "attachment-d294a5d0de3a3dc1",
+        "year": 2025,
+        "title": "暨南大学高等学历继续教育2025年招生简章 2025-09-05附件",
+        "source_url": "https://jyxy.jnu.edu.cn/_upload/article/files/1c/b3/50c624444e4289f4335064647036/a191f01f-e682-4249-bc84-1176788bcc8a.pdf",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10560",
+    "institution_name": "汕头大学",
+    "documents": [
+      {
+        "source_id": "school-10560-bc0d6220f250",
+        "year": 2025,
+        "title": "关于2025年汕头大学高等学历继续教育校外教学点设置方案的公示 2025-02-28",
+        "source_url": "https://info.stu.edu.cn/info/1320/3134.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10566",
+    "institution_name": "广东海洋大学",
+    "documents": [
+      {
+        "source_id": "school-10566-b15a24ca853e",
+        "year": 2025,
+        "title": "广东海洋大学2025年高等学历继续教育招生简章",
+        "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "10566",
+        "institution_name": "广东海洋大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_years",
+        "value": 3,
+        "source_id": "school-10566-b15a24ca853e",
+        "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+        "source_excerpt": "专升本（学制三年）",
+        "review_status": "verified_text"
+      },
+      {
+        "institution_code": "10566",
+        "institution_name": "广东海洋大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "tuition_rules",
+        "value": {
+          "文史财经管理": 2500,
+          "理工农林外语": 2875,
+          "艺术": 5000
+        },
+        "source_id": "school-10566-b15a24ca853e",
+        "source_url": "https://jxjy.gdou.edu.cn/info/1115/6616.htm",
+        "source_excerpt": "专升本（学制三年）：文史、财经、管理类2500元/年；理工、农林、外语类2875元/年，艺术类5000元/年。",
+        "review_status": "verified_text",
+        "tuition_unit": "per_academic_year"
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10572",
+    "institution_name": "广州中医药大学",
+    "documents": [
+      {
+        "source_id": "school-10572-89e3f9be1f59",
+        "year": 2025,
+        "title": "广州中医药大学高等学历继续教育2025年招生简章",
+        "source_url": "https://jxjyxy.gzucm.edu.cn/info/1004/2285.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10572-a8ddbfe18913",
+        "year": 2025,
+        "title": "广州中医药大学高等学历继续教育2025年招生简章.pdf",
+        "source_url": "https://jxjyxy.gzucm.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1629578132&wbfileid=16129563",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10574",
+    "institution_name": "华南师范大学",
+    "documents": [
+      {
+        "source_id": "school-10574-2f5bb8709943",
+        "year": 2025,
+        "title": "华南师范大学高等学历继续教育2025年招生简章",
+        "source_url": "https://gdou.scnu.edu.cn/entity/first/firstInfoNews_toInfoNews.action?bean.id=ff8080819744a2010197cf528c4158cf",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10576",
+    "institution_name": "韶关学院",
+    "documents": [
+      {
+        "source_id": "school-10576-1434ecde2d79",
+        "year": 2025,
+        "title": "28 2025-02 关于韶关学院高等学历继续教育2025年拟招生专业及校外教学点设置的公示 根据《广东省教育厅关于做好2025年高校高等学历继续教育校外教学点设置工作的通知》（粤教规函〔2025〕3号）文件精神，现对我校高等学历继续教育2025年拟招生专业、校外教学点设置予以公示。公示期为：2025年2月28日—2025年3月10日。公示期间，如有异议，请向我校继续教育学院反映。联系电话：0751- 8614242、8617565。附件：韶关学院高等学历继续教育拟招生专业、校外教学点汇总表 ... 详情",
+        "source_url": "https://www.sgu.edu.cn/jxjyxy/info/1036/2981.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10577",
+    "institution_name": "惠州学院",
+    "documents": [
+      {
+        "source_id": "school-10577-99f45fae0796",
+        "year": 2025,
+        "title": "惠州学院2025年高等学历继续教育招生简章",
+        "source_url": "https://dlc.hzu.edu.cn/2025/0704/c11476a269114/page.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10577-dc1187f6ece1",
+        "year": 2025,
+        "title": "我校2025年度高等学历继续教育招生专业和校外教学点顺利通过教育部备案",
+        "source_url": "https://dlc.hzu.edu.cn/2025/0708/c11447a269156/page.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10585",
+    "institution_name": "广州体育学院",
+    "documents": [
+      {
+        "source_id": "school-10585-46a3ba457e78",
+        "year": 2025,
+        "title": "广州体育学院 2025年成人高等学历继续教育招生简章 - 继续教育学院",
+        "source_url": "https://cjb.gzsport.edu.cn/info/13791",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10585-af5bd4174468",
+        "year": 2025,
+        "title": "广州体育学院2025年成人高等学历继续教育招生简章 - 继续教育学院",
+        "source_url": "https://cjb.gzsport.edu.cn/info/14504",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10585-31e9011dea82",
+        "year": 2025,
+        "title": "▸ 广州体育学院2025年成人高等学历继续教育招生简章",
+        "source_url": "http://cjb.gzsport.edu.cn:80/info/14504",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10585-b61f9614c223",
+        "year": 2025,
+        "title": "▸ 广州体育学院 2025年成人高等学历继续教育招生简章",
+        "source_url": "http://cjb.gzsport.edu.cn:80/info/13791",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10588",
+    "institution_name": "广东技术师范大学",
+    "documents": [
+      {
+        "source_id": "school-10588-cd93000303ae",
+        "year": 2025,
+        "title": "Guangdong Polytechnic Normal University",
+        "source_url": "https://jxjy.gpnu.edu.cn/__local/5/CF/17/4CF624FB7037FACBCB94C69A4CB_33887D9F_153A03.pdf",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10588-abc4e0dcea5d",
+        "year": 2025,
+        "title": "广东技术师范大学2025年高等学历继续教育招生简章",
+        "source_url": "https://jxjy.gpnu.edu.cn/info/1073/2330.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10590",
+    "institution_name": "深圳大学",
+    "documents": [
+      {
+        "source_id": "school-10590-6e1f9e8a9660",
+        "year": 2025,
+        "title": "深圳大学2025年成人高等教育招生章程",
+        "source_url": "https://cce.szu.edu.cn/info/1025/4502.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10590-0b20b0478201",
+        "year": 2025,
+        "title": "深圳大学高等学历继续教育本科毕业生学士学位授予补充规定2025",
+        "source_url": "https://cce.szu.edu.cn/__local/A/AE/9A/D10605139CC21A07828999D4D89_86912128_6B7A8.pdf",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "10590",
+        "institution_name": "深圳大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_years",
+        "value": 3,
+        "source_id": "school-10590-6e1f9e8a9660",
+        "source_url": "https://cce.szu.edu.cn/info/1025/4502.htm",
+        "source_excerpt": "专升本专业（学制3年）",
+        "review_status": "verified_text"
+      },
+      {
+        "institution_code": "10590",
+        "institution_name": "深圳大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "tuition_rules",
+        "value": {
+          "艺术类": 5000,
+          "其他科类": 3000
+        },
+        "source_id": "school-10590-6e1f9e8a9660",
+        "source_url": "https://cce.szu.edu.cn/info/1025/4502.htm",
+        "source_excerpt": "专升本：艺术类5000元/学年，其他科类3000元/学年。",
+        "review_status": "verified_text",
+        "tuition_unit": "per_academic_year"
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10592",
+    "institution_name": "广东财经大学",
+    "documents": [
+      {
+        "source_id": "school-10592-f067789746ae",
+        "year": 2025,
+        "title": "广东财经大学高等学历继续教育2025年招生简章",
+        "source_url": "https://ae.gdufe.edu.cn/2025/0704/c4851a223199/page.htm",
+        "review_status": "ocr_requires_review"
+      },
+      {
+        "source_id": "attachment-a62e340807428ba0",
+        "year": 2025,
+        "title": "广东财经大学高等学历继续教育2025年招生简章附件",
+        "source_url": "https://ae.gdufe.edu.cn/_upload/article/files/3f/42/e05b7a9c49ee8525880ccd75be72/c775522b-1d0f-46c6-a354-3e495c37fe87.pdf",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10613",
+    "institution_name": "西南交通大学",
+    "documents": [
+      {
+        "source_id": "school-10613-61e59d3396be",
+        "year": 2025,
+        "title": "西南交通大学2025 年高等学历继续教育（成人高等",
+        "source_url": "https://sce.swjtu.edu.cn/UserFiles/File/202507/20250711183421888.pdf",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10613-2baa07ab6bce",
+        "year": 2025,
+        "title": "西南交通大学2025年拟备案高等学历继续教育教学点公示-合作发展处",
+        "source_url": "https://hzc.swjtu.edu.cn/info/1052/18497.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "10613",
+        "institution_name": "西南交通大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_years",
+        "value": 2.5,
+        "source_id": "school-10613-61e59d3396be",
+        "source_url": "https://sce.swjtu.edu.cn/UserFiles/File/202507/20250711183421888.pdf",
+        "source_excerpt": "学制：专升本学制 2.5 年，最长学习年限 5 年。",
+        "review_status": "verified_text",
+        "maximum_study_years": 5
+      },
+      {
+        "institution_code": "10613",
+        "institution_name": "西南交通大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "tuition_rules",
+        "value": {
+          "理工类": 3120,
+          "经管类": 2880
+        },
+        "source_id": "school-10613-61e59d3396be",
+        "source_url": "https://sce.swjtu.edu.cn/UserFiles/File/202507/20250711183421888.pdf",
+        "source_excerpt": "收费标准：理工类 3120 元/年，经管类 2880 元/年。",
+        "review_status": "verified_text",
+        "tuition_unit": "per_academic_year"
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10698",
+    "institution_name": "西安交通大学",
+    "documents": [
+      {
+        "source_id": "school-10698-397bdfa340fc",
+        "year": 2025,
+        "title": "西安交通大学高等学历继续教育（成人高等教育）2025年招生章程 2025-07-28",
+        "source_url": "https://sce.xjtu.edu.cn/info/1811/25343.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10698-b4667c77ff9e",
+        "year": 2025,
+        "title": "2025年西安交通大学高等学历继续教育（成人高等教育）招生简章 2025-04-14",
+        "source_url": "https://sce.xjtu.edu.cn/info/1811/24113.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "10698",
+        "institution_name": "西安交通大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_years",
+        "value": 2.5,
+        "source_id": "school-10698-397bdfa340fc",
+        "source_url": "https://sce.xjtu.edu.cn/info/1811/25343.htm",
+        "source_excerpt": "专科起点升本科最低修业年限2.5年（学制2.5年），最高修业年限不超过 5年",
+        "review_status": "verified_text",
+        "maximum_study_years": 5
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10699",
+    "institution_name": "西北工业大学",
+    "documents": [
+      {
+        "source_id": "school-10699-07cf5a2e1d12",
+        "year": 2025,
+        "title": "西北工业大学2025年高等学历继续教育招生简章-继续教育管理中心",
+        "source_url": "https://jxjy.nwpu.edu.cn/info/1033/4985.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-10699-78094a8aa1c5",
+        "year": 2025,
+        "title": "关于2025年度拟申报备案高等学历继续教育校外教学点的公示",
+        "source_url": "https://jxjy.nwpu.edu.cn/info/1033/4815.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "10699",
+        "institution_name": "西北工业大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "study_years_range",
+        "value": {
+          "minimum": 2.5,
+          "maximum": 5
+        },
+        "source_id": "school-10699-07cf5a2e1d12",
+        "source_url": "https://jxjy.nwpu.edu.cn/info/1033/4985.htm",
+        "source_excerpt": "专升本修业年限为2.5-5年（面向福建省招生专业修业年限为3-5年）",
+        "review_status": "verified_text",
+        "scope_note": "按广东招生记录匹配；保留福建例外原文，不套用到广东"
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "10822",
+    "institution_name": "广东白云学院",
+    "documents": [
+      {
+        "source_id": "school-10822-b479b1cb200f",
+        "year": 2025,
+        "title": "2025-10-15招生简章 广东白云学院成人高等教育2025年专升本招生简章 2025年面向社会招收成人高等教育专升本专业4个",
+        "source_url": "https://jxjy.baiyunu.edu.cn/info/1191/8651.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11078",
+    "institution_name": "广州大学",
+    "documents": [
+      {
+        "source_id": "school-11078-6111deb986d7",
+        "year": 2025,
+        "title": "广州大学2025年成人高等教育招生章程-广州大学",
+        "source_url": "https://www.gzhu.edu.cn/info/1087/27437.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-11078-b3c665a598c7",
+        "year": 2025,
+        "title": "14 2025.07 2025年广州大学成人高等教育招生简章",
+        "source_url": "https://cj.gzhu.edu.cn/info/1014/1235.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "11078",
+        "institution_name": "广州大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_years",
+        "value": 3,
+        "source_id": "school-11078-6111deb986d7",
+        "source_url": "https://www.gzhu.edu.cn/info/1087/27437.htm",
+        "source_excerpt": "专科起点升本科：学制3年，在校最长学习年限5年。",
+        "review_status": "verified_text",
+        "maximum_study_years": 5
+      },
+      {
+        "institution_code": "11078",
+        "institution_name": "广州大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "tuition_rules",
+        "value": {
+          "文史财经管理": 2500,
+          "理工外语": 2875
+        },
+        "source_id": "school-11078-6111deb986d7",
+        "source_url": "https://www.gzhu.edu.cn/info/1087/27437.htm",
+        "source_excerpt": "（一）文史、财经、管理专业学费：本科2500元/生·学年；专科2300元/生·学年。\n（二）理工、外语类专业学费：本科2875元/生·学年；专科2645元/生·学年。",
+        "review_status": "verified_text",
+        "tuition_unit": "per_academic_year",
+        "scope_note": "仅取本科收费；不将专科标准套入专升本"
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11105",
+    "institution_name": "中国人民警察大学",
+    "documents": [
+      {
+        "source_id": "school-11105-76cfef87a534",
+        "year": 2025,
+        "title": "2025年成人高等教育招生章程 中国人民警察大学2025年成人高等教育招生章程第一章 总 则第一条 为保证中国人民警察大学（以下简称我校）成人高等教育招生工作顺利开展，规范招生行为，维护考生合法权益，根据《中华人民共和国教育法》《中华人... 查看详情>> 08-08 2025",
+        "source_url": "https://www.cppu.edu.cn/jxjy/info/1052/1781.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-11105-c66021c87937",
+        "year": 2025,
+        "title": "2025年高等学历继续教育招生指南 中国人民警察大学2025年高等学历继续教育招生指南中国人民警察大学是公安部直属普通高等学校，学校代码为11105。高等学历继续教育坚持服务国家安全战略和经济社会发展需要，以满足学习者发展需求为导向，以提升学... 查看详情>> 07-08 2025",
+        "source_url": "https://www.cppu.edu.cn/jxjy/info/1052/1772.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "11105",
+        "institution_name": "中国人民警察大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_by_major",
+        "value": {
+          "边防管理": 2.5,
+          "警卫学": 2.5,
+          "公安政治工作": 3,
+          "消防工程": 2.5,
+          "消防指挥": 3
+        },
+        "source_id": "school-11105-76cfef87a534",
+        "source_url": "https://www.cppu.edu.cn/jxjy/info/1052/1781.htm",
+        "source_excerpt": "（一）边防管理（专科起点升本科），学习形式为非脱产，学制为2.5年。\n（二）警卫学（专科起点升本科），学习形式为非脱产，学制为2.5年。\n（三）公安政治工作（专科起点升本科），学习形式为非脱产，学制为3年。\n（四）消防工程（专科起点升本科），学习形式为非脱产，学制为2.5年。\n（五）消防指挥（专科起点升本科），学习形式为非脱产，学制为3年。",
+        "review_status": "verified_text",
+        "scope_note": "仅现有专业名称命中的记录使用；不能当成全校统一学制"
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11106",
+    "institution_name": "广州航海学院",
+    "documents": [
+      {
+        "source_id": "school-11106-dc5e2e8e1c27",
+        "year": 2025,
+        "title": "广州航海学院2025年成人高等教育招生指南-继续教育学院",
+        "source_url": "https://jxjy.gzmtu.edu.cn/info/1049/2571.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-11106-94b9bbac9b55",
+        "year": 2025,
+        "title": "广州航海学院2025年成人高等教育招生指南.pdf",
+        "source_url": "https://jxjy.gzmtu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1331658116&wbfileid=1851560",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11347",
+    "institution_name": "仲恺农业工程学院",
+    "documents": [
+      {
+        "source_id": "school-11347-1cc377d3cf5d",
+        "year": 2025,
+        "title": "招生简章册子2025.08",
+        "source_url": "https://jxjy.zhku.edu.cn/__local/1/42/2E/F41B09AF8F64207534537E8897E_BDD7D4A0_3D1FBA.pdf",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11540",
+    "institution_name": "广东金融学院",
+    "documents": [
+      {
+        "source_id": "school-11540-95033c6aae64",
+        "year": 2025,
+        "title": "2025-07-17广东金融学院2025年高等学历继续教育招生简章",
+        "source_url": "https://jxjy.gduf.edu.cn/info/1063/3145.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11819",
+    "institution_name": "东莞理工学院",
+    "documents": [
+      {
+        "source_id": "school-11819-d7e5794658c1",
+        "year": 2025,
+        "title": "2025年高等学历继续教育招生简章-东莞理工学院继续教育学院",
+        "source_url": "https://cjy.dgut.edu.cn/info/1374/13679.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "11845",
+    "institution_name": "广东工业大学",
+    "documents": [
+      {
+        "source_id": "school-11845-5f6280e26ba5",
+        "year": 2025,
+        "title": "广东工业大学2025年成人高等教育招生简章-广东工业大学继续教育学院",
+        "source_url": "https://jxjyxy.gdut.edu.cn/info/1010/2293.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "12121",
+    "institution_name": "南方医科大学",
+    "documents": [
+      {
+        "source_id": "school-12121-104f0724ccd9",
+        "year": 2025,
+        "title": "2025年南方医科大学成人高等教育招生简章2025-06-30",
+        "source_url": "https://portal.smu.edu.cn/smuce/info/2151/20521.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-12121-0ba68ed06b55",
+        "year": 2025,
+        "title": "南方医科大学2025年高等学历继续教育校外教学点设置公示公告2025-01-21",
+        "source_url": "https://portal.smu.edu.cn/smuce/info/2151/20531.htm",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "attachment-1b845ed3c9dec977",
+        "year": 2025,
+        "title": "2025年南方医科大学成人高等教育招生简章2025-06-30附件",
+        "source_url": "https://portal.smu.edu.cn/__local/4/0C/04/2076386AB6701406F6F0B3564D2_B7B48668_BAFE1.pdf",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": [
+      {
+        "institution_code": "12121",
+        "institution_name": "南方医科大学",
+        "year": 2025,
+        "level": "专升本",
+        "field": "duration_years",
+        "value": 3,
+        "source_id": "attachment-1b845ed3c9dec977",
+        "source_url": "https://portal.smu.edu.cn/__local/4/0C/04/2076386AB6701406F6F0B3564D2_B7B48668_BAFE1.pdf",
+        "source_excerpt": "专升本学制三年，在校学习时间 2.5 年-5 年（最快两年半可申请毕业）",
+        "review_status": "verified_text",
+        "minimum_study_years": 2.5,
+        "maximum_study_years": 5
+      }
+    ]
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "12619",
+    "institution_name": "广州南方学院",
+    "documents": [
+      {
+        "source_id": "school-12619-f451f3e42e3a",
+        "year": 2025,
+        "title": "广州南方学院继续教育学院 2025 年招生简章",
+        "source_url": "https://jx.nfu.edu.cn/__local/B/66/C9/EFC61B342A793BA56A6CBB4B8AE_984D7C47_84669.pdf",
+        "review_status": "source_captured_requires_field_review"
+      },
+      {
+        "source_id": "school-12619-9ea1ad3c4608",
+        "year": 2025,
+        "title": "07-10 广州南方学院2025年成人高等学历教育招生简章",
+        "source_url": "https://jx.nfu.edu.cn/info/1351/7661.htm",
+        "review_status": "source_captured_requires_field_review"
+      }
+    ],
+    "facts": []
+  },
+  {
+    "province": "guangdong",
+    "institution_code": "13714",
+    "institution_name": "广州工商学院",
+    "documents": [
+      {
+        "source_id": "school-13714-9719a589b565",
+        "year": 2025,
+        "title": "12/23广州工商学院继续教育学院2025年招生简章",
+        "source_url": "https://www.gzgs.edu.cn/cjc/info/1094/1328.htm",
+        "review_status": "ocr_requires_review"
+      }
+    ],
+    "facts": []
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "captured_date": "2026-10-22",
+  "integrated_date": "2026-10-23",
+  "province": "guangdong",
+  "import_policy": "scores, controls, collection details and verified facts only; OCR and ambiguous table fields remain pending",
+  "files": [
+    {
+      "file": "guangdong-adult-collection-plan-2025.json",
+      "records": 95,
+      "sha256": "9317da30e3009aaa71ab03cd76ce818058bf5d17100a641605080a6955b0473d"
+    },
+    {
+      "file": "guangdong-adult-control-scores-history.json",
+      "records": 18,
+      "sha256": "d26e6654e5b9041a9aa1c98fc502ff198a327ebe142dc380f1203ccc7f14130e"
+    },
+    {
+      "file": "guangdong-adult-control-scores.json",
+      "records": 9,
+      "sha256": "afb0716d226553c79c72f3839a407fb81b550ec5ce0e6a97b760eb24aa7cb4fd"
+    },
+    {
+      "file": "guangdong-adult-program-plan-2025.json",
+      "records": 746,
+      "sha256": "973634f809fc9c54ec1b878827fc4ba194a4783498dc674181910eb89009993a"
+    },
+    {
+      "file": "guangdong-adult-scores-history.json",
+      "records": 374,
+      "sha256": "3ad557b3070aa5de9b6ef30e20e1ccfc951c3b108ade1647e6f90bbe1e6a9566"
+    },
+    {
+      "file": "guangdong-adult-scores.json",
+      "records": 199,
+      "sha256": "4471dac67a400bd91f823e54d394f4631007c03ec412afedec4a2598db435d8a"
+    },
+    {
+      "file": "guangdong-institution-supplements-2025.json",
+      "records": 31,
+      "sha256": "11b6a769761d101581e5e6a977d19c50a7a9d414741642d3590cd8c544a0f670"
+    }
+  ]
+}

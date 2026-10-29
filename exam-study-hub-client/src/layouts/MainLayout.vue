@@ -87,7 +87,7 @@
       <el-main class="main-content">
         <section class="release-notice" aria-label="数据试运行说明">
           <div>
-            <strong>河南/江苏/浙江/广东公开数据试运行版</strong>
+            <strong>河南/江苏/浙江/广东/上海/山东/河北公开数据试运行版</strong>
             <span>2025 公开数据 + 2026 备考规划参考</span>
           </div>
           <p>院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。</p>
@@ -247,13 +247,13 @@ async function handleMenuSelect(path) {
 const provinceLabel = computed(() => store.selectedProvinces.map(item => item.label).join('、'))
 const goalScoreText = computed(() => {
   if (!store.selectedInstitution) return '选择院校后生成'
-  return store.diagnosisComplete ? String(store.targetScore) : '诊断后生成'
+  return store.diagnosisComplete ? (store.targetScore == null ? '待核实' : String(store.targetScore)) : '诊断后生成'
 })
 const contextChips = computed(() => [
   { label: '专业', value: store.selectedMajor?.name || '未建档', tone: 'blue' },
   { label: '年度', value: `${store.profile.examYear || '—'} 年`, tone: 'neutral' },
-  { label: '目标分', value: store.diagnosisComplete ? String(store.targetScore) : '诊断后生成', tone: 'green' },
-  { label: '倒计时', value: `${store.daysUntilExam} 天`, tone: 'amber' }
+  { label: '目标分', value: store.diagnosisComplete ? (store.targetScore == null ? '待核实' : String(store.targetScore)) : '诊断后生成', tone: 'green' },
+  { label: '达标日', value: store.targetDatePassed ? '已到期' : `${store.daysUntilExam} 天`, tone: 'amber' }
 ])
 const completedSteps = computed(() => [
   store.profileComplete,
