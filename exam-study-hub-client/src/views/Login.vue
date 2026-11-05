@@ -14,7 +14,7 @@
         </div>
 
         <div class="story-copy">
-          <span class="story-kicker">2026 备考季 · 从现在开始</span>
+          <span class="story-kicker">{{ planningYear }} 备考季 · 从现在开始</span>
           <h1 id="auth-story-title">把“想上岸”，<br />变成每天看得见的进度。</h1>
           <p>从报考选择、入学诊断到每日学习计划，把复杂的备考过程拆成下一步就能完成的小目标。</p>
         </div>
@@ -45,7 +45,7 @@
 
         <div class="story-footer">
           <span><el-icon><CircleCheck /></el-icon> 学习进度云端同步</span>
-          <span><el-icon><CircleCheck /></el-icon> 河南 / 江苏 / 浙江 / 广东公开数据试运行</span>
+          <span><el-icon><CircleCheck /></el-icon> {{ availableProvinceText }}公开数据试运行</span>
         </div>
       </section>
 
@@ -144,67 +144,87 @@
           <el-dialog
             v-model="forgotOpen"
             title="找回密码"
-            width="min(520px, calc(100vw - 32px))"
+            width="min(560px, calc(100vw - 32px))"
+            align-center
+            append-to-body
             :close-on-click-modal="false"
             destroy-on-close
             class="password-reset-dialog"
           >
-            <p class="password-reset-intro">输入注册邮箱，验证身份后即可设置新的登录密码。</p>
-            <el-form ref="resetFormRef" :model="resetForm" :rules="resetRules" label-position="top" @submit.prevent>
-              <el-form-item label="注册邮箱" prop="email">
-                <el-input v-model="resetForm.email" size="large" type="email" autocomplete="email" placeholder="请输入注册时使用的邮箱" :prefix-icon="Message" />
-              </el-form-item>
-              <el-form-item label="安全验证" class="turnstile-form-item">
-                <TurnstileWidget
-                  ref="resetTurnstileRef"
-                  :site-key="turnstileSiteKey"
-                  action="password-reset"
-                  @verified="handleResetTurnstileVerified"
-                  @expired="resetTurnstileToken = ''"
-                  @error="handleResetTurnstileError"
-                />
-              </el-form-item>
-              <el-form-item label="邮箱验证码" prop="verificationCode">
-                <div class="verification-code-row">
-                  <el-input
-                    v-model="resetForm.verificationCode"
-                    size="large"
-                    inputmode="numeric"
-                    autocomplete="one-time-code"
-                    maxlength="6"
-                    placeholder="6 位数字"
-                    :prefix-icon="Key"
-                    @input="resetForm.verificationCode = resetForm.verificationCode.replace(/\D/g, '').slice(0, 6)"
-                  />
-                  <el-button
-                    class="send-code-button"
-                    native-type="button"
-                    :loading="sendingResetCode"
-                    :disabled="resetCountdown > 0 || !turnstileSiteKey"
-                    @click="sendResetCode"
-                  >
-                    {{ resetCountdown > 0 ? `${resetCountdown}s 后重发` : '获取验证码' }}
-                  </el-button>
+            <template #header="{ titleId }">
+              <div class="reset-heading">
+                <span class="reset-heading-icon" aria-hidden="true"><el-icon><Lock /></el-icon></span>
+                <div>
+                  <h2 :id="titleId">找回密码</h2>
+                  <p>通过注册邮箱验证，重新设置登录密码。</p>
                 </div>
-                <p class="verification-delivery-tip"><el-icon><InfoFilled /></el-icon>验证码邮件可能被归入垃圾邮件或广告邮件，请留意并将发件人加入白名单。</p>
-                <p v-if="resetCodeSentForCurrentEmail" class="verification-hint" aria-live="polite"><el-icon><CircleCheck /></el-icon>如果该邮箱已注册，验证码已发送，10 分钟内有效。</p>
-              </el-form-item>
-              <el-form-item label="新密码" prop="newPassword">
-                <el-input v-model="resetForm.newPassword" size="large" type="password" show-password autocomplete="new-password" placeholder="至少 6 位字符" :prefix-icon="Lock" />
-              </el-form-item>
-              <el-form-item label="确认新密码" prop="confirmPassword">
-                <el-input v-model="resetForm.confirmPassword" size="large" type="password" show-password autocomplete="new-password" placeholder="请再次输入新密码" :prefix-icon="Lock" @keyup.enter="submitPasswordReset" />
-              </el-form-item>
+              </div>
+            </template>
+            <el-form ref="resetFormRef" :model="resetForm" :rules="resetRules" label-position="top" class="reset-form" @submit.prevent>
+              <section class="reset-section" aria-labelledby="reset-verify-title">
+                <h3 id="reset-verify-title" class="reset-section-title"><span>01</span>验证注册邮箱</h3>
+                <el-form-item label="注册邮箱" prop="email">
+                  <el-input v-model="resetForm.email" size="large" type="email" autocomplete="email" placeholder="请输入注册时使用的邮箱" :prefix-icon="Message" />
+                </el-form-item>
+                <el-form-item label="安全验证" class="turnstile-form-item">
+                  <TurnstileWidget
+                    ref="resetTurnstileRef"
+                    :site-key="turnstileSiteKey"
+                    action="password-reset"
+                    @verified="handleResetTurnstileVerified"
+                    @expired="resetTurnstileToken = ''"
+                    @error="handleResetTurnstileError"
+                  />
+                </el-form-item>
+                <el-form-item label="邮箱验证码" prop="verificationCode">
+                  <div class="verification-code-row">
+                    <el-input
+                      v-model="resetForm.verificationCode"
+                      size="large"
+                      inputmode="numeric"
+                      autocomplete="one-time-code"
+                      maxlength="6"
+                      placeholder="6 位数字"
+                      :prefix-icon="Key"
+                      @input="resetForm.verificationCode = resetForm.verificationCode.replace(/\D/g, '').slice(0, 6)"
+                    />
+                    <el-button
+                      class="send-code-button"
+                      native-type="button"
+                      :loading="sendingResetCode"
+                      :disabled="resetCountdown > 0 || !turnstileSiteKey"
+                      @click="sendResetCode"
+                    >
+                      {{ resetCountdown > 0 ? `${resetCountdown}s 后重发` : '获取验证码' }}
+                    </el-button>
+                  </div>
+                  <p class="verification-delivery-tip"><el-icon><InfoFilled /></el-icon>未收到邮件？请检查垃圾邮件或广告邮件。</p>
+                  <p v-if="resetCodeSentForCurrentEmail" class="verification-hint" aria-live="polite"><el-icon><CircleCheck /></el-icon>如果该邮箱已注册，验证码已发送，10 分钟内有效。</p>
+                </el-form-item>
+              </section>
+              <section class="reset-section" aria-labelledby="reset-password-title">
+                <h3 id="reset-password-title" class="reset-section-title"><span>02</span>设置新密码<small>至少 6 位字符</small></h3>
+                <div class="reset-password-fields">
+                  <el-form-item label="新密码" prop="newPassword">
+                    <el-input v-model="resetForm.newPassword" size="large" type="password" show-password autocomplete="new-password" placeholder="至少 6 位字符" :prefix-icon="Lock" />
+                  </el-form-item>
+                  <el-form-item label="确认新密码" prop="confirmPassword">
+                    <el-input v-model="resetForm.confirmPassword" size="large" type="password" show-password autocomplete="new-password" placeholder="再次输入新密码" :prefix-icon="Lock" @keyup.enter="submitPasswordReset" />
+                  </el-form-item>
+                </div>
+              </section>
             </el-form>
             <template #footer>
-              <el-button @click="forgotOpen = false">取消</el-button>
-              <el-button type="primary" :loading="resetLoading" @click="submitPasswordReset">确认重置密码</el-button>
+              <div class="reset-actions">
+                <el-button class="reset-cancel" @click="forgotOpen = false">返回登录</el-button>
+                <el-button type="primary" class="reset-confirm" :loading="resetLoading" @click="submitPasswordReset">重置密码<el-icon v-if="!resetLoading" class="el-icon--right"><ArrowRight /></el-icon></el-button>
+              </div>
             </template>
           </el-dialog>
 
           <div class="release-note">
             <el-icon><InfoFilled /></el-icon>
-            <p><strong>公开数据试运行版</strong><span>2025 公开数据 + 2026 备考规划参考，院校与录取信息以当年官方发布为准。</span></p>
+            <p><strong>公开数据试运行版</strong><span>历年公开数据 · {{ planningYear }} 备考规划参考，院校与录取信息以当年官方发布为准。</span></p>
           </div>
         </div>
       </section>
@@ -232,7 +252,11 @@ import {
 import { useAuthStore } from '../stores/auth'
 import { resetPassword, sendPasswordResetCode, sendRegistrationCode } from '../api'
 import TurnstileWidget from '../components/TurnstileWidget.vue'
+import { getPlanningYear } from '../data/planner'
+import { provinceOptions } from '../data/mvp'
 
+const planningYear = getPlanningYear()
+const availableProvinceText = provinceOptions.map(province => province.label).join(' / ')
 const auth = useAuthStore()
 const router = useRouter()
 const route = useRoute()
@@ -558,3 +582,4 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped lang="less" src="../styles/views/Login.less"></style>
+<style lang="less" src="../styles/views/PasswordReset.less"></style>

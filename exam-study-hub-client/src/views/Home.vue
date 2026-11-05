@@ -2,7 +2,7 @@
   <div class="dashboard-page">
     <section class="welcome-panel">
       <div class="welcome-copy">
-        <span class="section-kicker">{{ store.profile.examYear }} 成人高考专升本</span>
+        <span class="section-kicker">{{ store.profile.examYear }} 成人高考专升本{{ store.targetDatePassed ? ' · 历史备考档案（已到期）' : '' }}</span>
         <h2>{{ greeting }}，今天从最重要的一步开始。</h2>
         <p v-if="store.profileComplete">当前目标是 {{ provinceText }}的{{ store.selectedMajor?.name }}。{{ store.diagnosisComplete ? '按薄弱知识点推进今日任务，用练习结果跟踪变化。' : '先完成诊断，再让学习时间真正花在能提分的地方。' }}</p>
         <p v-else>还没有建立报考档案。先选定报考省份和报考类别，系统才能帮你匹配招生院校、生成入学诊断和学习计划。</p>

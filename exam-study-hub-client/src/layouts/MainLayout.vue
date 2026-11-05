@@ -88,7 +88,7 @@
         <section class="release-notice" aria-label="数据试运行说明">
           <div>
             <strong>河南/江苏/浙江/广东/上海/山东/河北公开数据试运行版</strong>
-            <span>2025 公开数据 + 2026 备考规划参考</span>
+            <span>历年公开数据 · {{ planningYear }} 备考规划参考</span>
           </div>
           <p>院校/专业/录取以当年考试院和院校招生简章为准，不构成录取承诺。</p>
         </section>
@@ -124,7 +124,9 @@ import { ElMessageBox } from 'element-plus'
 import { Loading } from '@element-plus/icons-vue'
 import { useApplicationStore } from '../stores/application'
 import { useAuthStore } from '../stores/auth'
+import { getPlanningYear } from '../data/planner'
 
+const planningYear = getPlanningYear()
 const route = useRoute()
 const router = useRouter()
 const store = useApplicationStore()
