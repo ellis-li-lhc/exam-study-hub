@@ -29,7 +29,8 @@ test('Hebei ordinary and migrant-worker controls stay separate for supported cou
     assert.equal(verifiedReferenceScore(school, major.name), null)
     checked++
   }
-  assert.equal(checked, 586)
+  // Two corrected economic-management curricula recover six supported 2025 rows.
+  assert.equal(checked, 592)
   assert.equal(controlScoresForMajor(schoolFor('142'), '汉语言文学').at(-1).score, 103)
   assert.equal(controlScoresForMajor(schoolFor('142'), '汉语言文学', { applicantGroup: '农民工考生' }).at(-1).score, 102)
 })

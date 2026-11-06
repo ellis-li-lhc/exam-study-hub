@@ -1,0 +1,865 @@
+[
+  {
+    "institution_code": "10022",
+    "institution_name": "北京林业大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "北京市海淀区清华东路35号",
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4111010022",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10107",
+    "institution_name": "石家庄铁道大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "河北省石家庄市北二环东路17号石家庄铁道大学继续教育学院招生办春晖楼305室",
+    "city": "石家庄",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4113010107",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10151",
+    "institution_name": "大连海事大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "辽宁省大连市沙河口区杨树南街43号",
+    "city": "大连",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4121010151",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10163",
+    "institution_name": "沈阳药科大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "辽宁省沈阳市沈河区文化路103号",
+    "city": "沈阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4121010163",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10300",
+    "institution_name": "南京信息工程大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "南京市宁六路219号南京信息工程大学继续教育学院亚培楼W404",
+    "city": "南京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4132010300",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10405",
+    "institution_name": "东华理工大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "江西省抚州市学府路56号办公楼346",
+    "city": "抚州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4136010405",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10488",
+    "institution_name": "武汉科技大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖北省武汉市洪山区雄楚大道199号",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142010488",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10489",
+    "institution_name": "长江大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖北省荆州市学苑路1号",
+    "city": "荆州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142010489",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10490",
+    "institution_name": "武汉工程大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "湖北省武汉市东湖新技术开发区光谷一路206号",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142010490",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10491",
+    "institution_name": "中国地质大学(武汉)",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖北省武汉市鲁磨路388号",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142010491",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10500",
+    "institution_name": "湖北工业大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "武汉市洪山区南李路28号",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142010500",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10507",
+    "institution_name": "湖北中医药大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html"
+    ],
+    "address_raw": "湖北省武汉市洪山区黄家湖西路16号",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142010507",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10530",
+    "institution_name": "湘潭大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "湖南省湘潭市雨湖区湘潭大学",
+    "city": "湘潭",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010530",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10531",
+    "institution_name": "吉首大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "湖南省吉首市人民南路120号",
+    "city": "湘西",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010531",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10534",
+    "institution_name": "湖南科技大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html"
+    ],
+    "address_raw": "湖南省湘潭市雨湖区北二环路",
+    "city": "湘潭",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010534",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10536",
+    "institution_name": "长沙理工大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "长沙市天心区赤岭路45号长沙理工大学继续教育学院",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010536",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10537",
+    "institution_name": "湖南农业大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市芙蓉区农大路1号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010537",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10538",
+    "institution_name": "中南林业科技大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "湖南省长沙市天心区韶山南路498号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010538",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10541",
+    "institution_name": "湖南中医药大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1"
+    ],
+    "address_raw": "湖南省长沙市雨花区韶山中路113号湖南中医药大学（东塘校区）继续教育学院",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010541",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10542",
+    "institution_name": "湖南师范大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html"
+    ],
+    "address_raw": "湖南省长沙市岳麓区麓山南路153号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010542",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10543",
+    "institution_name": "湖南理工大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省岳阳市湘北大道学院路",
+    "city": "岳阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010543",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10545",
+    "institution_name": "湘南学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省郴州市苏仙区郴州大道889号",
+    "city": "郴州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010545",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10546",
+    "institution_name": "衡阳师范学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "湖南省衡阳市珠晖区衡花路16号",
+    "city": "衡阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010546",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10547",
+    "institution_name": "邵阳学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html"
+    ],
+    "address_raw": "湖南省邵阳市大祥区学院路邵阳学院七里坪校区",
+    "city": "邵阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010547",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10548",
+    "institution_name": "怀化学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省怀化市鹤城区金海路138号",
+    "city": "怀化",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010548",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10549",
+    "institution_name": "湖南文理学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "湖南省常德市武陵区洞庭大道3150号",
+    "city": "常德",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010549",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10551",
+    "institution_name": "湖南科技学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省永州市零陵区杨梓塘路130号",
+    "city": "永州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010551",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10554",
+    "institution_name": "湖南工商大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "长沙市岳麓区岳麓大道459号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010554",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10555",
+    "institution_name": "南华大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html"
+    ],
+    "address_raw": "湖南省衡阳市蒸湘区常胜西路28号",
+    "city": "衡阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010555",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10613",
+    "institution_name": "西南交通大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "四川省成都市金牛区二环路北一段111号西南交通大学继续教育学院",
+    "city": "成都",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4151010613",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10702",
+    "institution_name": "西安工业大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "陕西省西安市碑林区金花北路4号西安工业大学金花校区",
+    "city": "西安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4161010702",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10705",
+    "institution_name": "西安石油大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "陕西省西安市雁塔区丈八东路11号西安石油大学明德校区",
+    "city": "西安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4161010705",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10732",
+    "institution_name": "兰州交通大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "甘肃省兰州市安宁区安宁西路88号",
+    "city": "兰州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4162010732",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10792",
+    "institution_name": "天津城建大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "天津市西青区津静路26号",
+    "city": "天津",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4112010792",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10823",
+    "institution_name": "长沙医学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "湖南省长沙市望城区雷锋大道1501号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010823",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11072",
+    "institution_name": "江汉大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖北省武汉市经济技术开发区三角湖路8号",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142011072",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11075",
+    "institution_name": "三峡大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖北省宜昌市大学路8号",
+    "city": "宜昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4142011075",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11077",
+    "institution_name": "长沙学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市开福区洪山街道洪山路98号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011077",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11342",
+    "institution_name": "湖南工程学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省湘潭市岳塘区福星东路88号",
+    "city": "湘潭",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011342",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11414",
+    "institution_name": "中国石油大学(北京)",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "北京市昌平区府学路18号中国石油大学（北京）网络与继续教育学院学历继续教育中心",
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4111011414",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11527",
+    "institution_name": "湖南城市学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省益阳市迎宾东路518号",
+    "city": "益阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011527",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11528",
+    "institution_name": "湖南工学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省衡阳市珠晖区衡花路18号",
+    "city": "衡阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011528",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11532",
+    "institution_name": "湖南财政经济学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市岳麓区枫林一路139号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011532",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11535",
+    "institution_name": "湖南工业大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1"
+    ],
+    "address_raw": "湖南省株洲市天元区湖南工业大学崇德楼503",
+    "city": "株洲",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011535",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "11538",
+    "institution_name": "湖南女子学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市中意一路160号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143011538",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "12214",
+    "institution_name": "湖南医药学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省怀化市鹤城区锦溪南路492号",
+    "city": "怀化",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143012214",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "12662",
+    "institution_name": "张家界学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省张家界市永定区大庸桥街道热水坑温泉路1号",
+    "city": "张家界",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143012662",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "13806",
+    "institution_name": "长沙师范学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市长沙县星沙街道徐特立路9号",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143013806",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "13809",
+    "institution_name": "湖南应用技术学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省常德市鼎城区善卷路2058号",
+    "city": "常德",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143013809",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "13836",
+    "institution_name": "湖南信息学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市星沙经济开发区毛塘工业园",
+    "city": "长沙",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143013836",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "13924",
+    "institution_name": "湖南交通工程学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省衡阳市蒸湘区解放西路430号",
+    "city": "衡阳",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143013924",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "50774",
+    "institution_name": "涟源钢铁总厂职工大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省娄底市娄星区黄泥塘街道办事处涟钢技工学校（涟源钢铁总厂职工大学）",
+    "city": "娄底",
+    "city_source_url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "50793",
+    "institution_name": "湖南航空工业职工工学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1"
+    ],
+    "address_raw": "湖南省株洲市石峰区智慧路128号",
+    "city": "株洲",
+    "city_source_url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "51306",
+    "institution_name": "湖南开放大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省长沙市天心区青园路168号",
+    "city": "长沙",
+    "city_source_url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "51310",
+    "institution_name": "益阳教育学院",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "address_raw": "湖南省益阳市康富北路5号",
+    "city": "益阳",
+    "city_source_url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "51767",
+    "institution_name": "湖南纺织职工大学",
+    "source_urls": [
+      "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1"
+    ],
+    "address_raw": "湖南省湘潭市雨湖区高岭路7号",
+    "city": "湘潭",
+    "city_source_url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10030",
+    "institution_name": "北京外国语大学",
+    "address_raw": null,
+    "source_urls": [
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4111010030",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10553",
+    "institution_name": "湖南人文科技学院",
+    "address_raw": null,
+    "source_urls": [
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "city": "娄底",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4143010553",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10635",
+    "institution_name": "西南大学",
+    "address_raw": null,
+    "source_urls": [
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "city": "重庆",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4150010635",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10077",
+    "institution_name": "河北地质大学",
+    "address_raw": null,
+    "source_urls": [
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html"
+    ],
+    "city": "石家庄",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4113010077",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  },
+  {
+    "institution_code": "10027",
+    "institution_name": "北京师范大学",
+    "address_raw": null,
+    "source_urls": [
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html"
+    ],
+    "city": "北京",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "national_institution_code": "4111010027",
+    "identity_basis": "湖南省招生院校代码；按代码跨年关联，原始校名保留于来源记录",
+    "province": "hunan"
+  }
+]

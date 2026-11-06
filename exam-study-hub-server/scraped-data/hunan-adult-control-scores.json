@@ -1,0 +1,178 @@
+[
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "11",
+    "category_name": "文史中医类",
+    "score": 195,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "13",
+    "category_name": "理工类",
+    "score": 122,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "14",
+    "category_name": "经济管理类",
+    "score": 124,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "15",
+    "category_name": "法学类",
+    "score": 211,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "16",
+    "category_name": "教育学类",
+    "score": 127,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "17",
+    "category_name": "农学类",
+    "score": 153,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "18",
+    "category_name": "医学类",
+    "score": 163,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2024,
+    "level": "专升本",
+    "category_code": "12",
+    "category_name": "艺术类",
+    "score": 161,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "11",
+    "category_name": "文史中医类",
+    "score": 184,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "13",
+    "category_name": "理工类",
+    "score": 116,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "14",
+    "category_name": "经济管理类",
+    "score": 127,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "15",
+    "category_name": "法学类",
+    "score": 191,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "16",
+    "category_name": "教育学类",
+    "score": 186,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "17",
+    "category_name": "农学类",
+    "score": 148,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "18",
+    "category_name": "医学类",
+    "score": 161,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  },
+  {
+    "province": "hunan",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "12",
+    "category_name": "艺术类",
+    "score": 102,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html"
+  }
+]

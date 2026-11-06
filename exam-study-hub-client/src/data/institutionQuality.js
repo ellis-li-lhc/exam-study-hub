@@ -1,3 +1,7 @@
+import { examMajors } from './majors.js'
+
+const majorCategoryByName = new Map(examMajors.map(major => [major.name, major.category]))
+const strictCategoryProvinces = new Set(['hebei', 'hubei', 'hunan', 'jiangxi', 'anhui', 'fujian', 'sichuan', 'chongqing', 'beijing', 'guangxi'])
 const EMPTY_VALUES = new Set(['', '—', '-', '暂无', '暂未获取', '以院校招生简章为准', '以院校学位授予要求为准'])
 
 export function hasMeaningfulValue(value) {
@@ -78,7 +82,15 @@ export function tuitionForPlanText(plan) {
 
 export function matchedPlansForMajor(school, majorName) {
   if (!school || !majorName || school.majorMatch !== 'exact') return []
-  return (school.plans || []).filter(plan => plan.major_name === majorName || plan.majorName === majorName)
+  const expectedCategory = majorCategoryByName.get(majorName)
+  return (school.plans || []).filter(plan => {
+    const rawCategory = plan.category_name || plan.categoryName
+    const category = ['文史类', '中医类'].includes(rawCategory) ? '文史中医类' : rawCategory
+    return plan.selection_eligible !== false
+      && (plan.major_name === majorName || plan.majorName === majorName)
+      && (!strictCategoryProvinces.has(school.province) || !expectedCategory || category === expectedCategory)
+      && (!school.activeCatalogRound || Number(plan.year) !== Number(school.activeCatalogYear) || plan.round === school.activeCatalogRound)
+  })
 }
 
 export function activePlansForMajor(school, majorName) {
@@ -99,7 +111,7 @@ export function controlScoresForMajor(school, majorName, { applicantGroup = '统
 export function institutionSelectionCode(institution) {
   // New province codes collide with existing province codes. Namespace
   // these selections while preserving all existing saved institution choices.
-  return ['shandong', 'hebei'].includes(institution?.province) ? `${institution.province}:${institution.code}` : institution?.code
+  return ['shandong', 'hebei', 'hubei', 'hunan', 'jiangxi', 'anhui', 'fujian', 'sichuan', 'chongqing', 'beijing', 'guangxi'].includes(institution?.province) ? `${institution.province}:${institution.code}` : institution?.code
 }
 
 export function tuitionForMajorText(school, majorName) {
@@ -149,9 +161,9 @@ export function institutionDataProfile(school, selectedMajor) {
     summary = '有参考线，但来源或专业计划信息仍需补齐。'
   } else if (hasExactPlan && hasVerifiedSource) {
     level = 'catalog'
-    label = '目录已核实'
+    label = school.activeCatalogRound ? '计划已核实' : '目录已核实'
     tone = 'info'
-    summary = '已核实公开招生专业目录，暂未收录院校实际录取线。省市控线仅为最低控制线参考。'
+    summary = '已核实公开招生资料，暂未收录院校实际录取线。省市控线仅为最低控制线参考。'
   }
 
   return {

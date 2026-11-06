@@ -1,0 +1,152 @@
+{
+  "province": "jiangxi",
+  "catalog_year": 2026,
+  "counts": {
+    "institutions": 14,
+    "programs": 297,
+    "controls": 8,
+    "category_collections": 0
+  },
+  "sources": [
+    {
+      "path": "sources/jiangxi/brochure-jxnu-2026.html",
+      "url": "https://jxjy.jxnu.edu.cn/_t1358/2026/0720/c6348a296560/page.htm",
+      "sha256": "958f866832859711cad44e21dd26678f308368fe60b8915b22bc7a5aa4b1d0fa"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxau-2026.html",
+      "url": "https://cjy.jxau.edu.cn/info/1040/12141.htm",
+      "sha256": "e564884d44c13048d5594220c09e00c15b3cca5b82ce414f8b13ca36a5ce3ee6"
+    },
+    {
+      "path": "sources/jiangxi/brochure-nchu-2026.html",
+      "url": "https://jxjy.nchu.edu.cn/xljydt/content_193333",
+      "sha256": "91f7934dbb3fd9d60f0f3d2bc24358f609f3351dea59887b727126f05e87ee2e"
+    },
+    {
+      "path": "sources/jiangxi/controls-2025.html",
+      "url": "https://ycxycj.jxycu.edu.cn/2025/1205/c271a147915/page.psp",
+      "sha256": "ab570617a81df96975cd13c34ed8ef44a16a370b64a364463d5cf7022b951278"
+    },
+    {
+      "path": "sources/jiangxi/brochure-gnnu-2026.html",
+      "url": "https://jx.gnnu.edu.cn/info/1025/7707.htm",
+      "sha256": "42cd6a87720f9a43de56844aa084e6a80bd886c81e726e5183f966af72089783"
+    },
+    {
+      "path": "sources/jiangxi/brochure-ecjtu-2026.html",
+      "url": "https://jxjy.ecjtu.edu.cn/info/1021/9020.htm",
+      "sha256": "aea0e83e36d7fc4012ce7ccb328eac633e28b5b2d22e18985a9978931d480658"
+    },
+    {
+      "path": "sources/jiangxi/brochure-ecut-2026.html",
+      "url": "https://jxjy.ecut.edu.cn/2b/a6/c9390a142246/page.htm",
+      "sha256": "a1cd943fd9ca8ca2027ef8b719a1b34a06a6a624f2a531a7ac9289e1b0bf747b"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxust-2026.html",
+      "url": "https://jxjy.jxust.edu.cn/info/1028/2111.htm",
+      "sha256": "05c7af39470793a7ec207d6139bb88a544cb4b73500bc5388185b759f4330e26"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxycu-2026.html",
+      "url": "https://ycxycj.jxycu.edu.cn/_t982/2026/0717/c272a153981/page.htm",
+      "sha256": "f7ae7d66fb9833b0ef00028cf9e17ce101302d6cc5568ef42858e5de60d21850"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxutcm-2026.html",
+      "url": "https://jxjy.jxutcm.edu.cn/info/1190/6100.htm",
+      "sha256": "6f26d347762bf0dd8b9badc27eee39db1af8cc4de048fa80fb26e4d225850008"
+    },
+    {
+      "path": "sources/jiangxi/brochure-juwp-2026.html",
+      "url": "https://adult.juwp.edu.cn/info/2003/6737.htm",
+      "sha256": "a83b3ae9c40a9be4844f911434a4aaabd02a0acc2165a1b0b9e68aa8888c7f74"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxufe-2026.html",
+      "url": "https://cjxy.jxufe.edu.cn/news-show-2768.html",
+      "sha256": "0014253d5a54bc6d5d9c1ea4cc028e7ae2719f15cbae61f54d09b4b9d355e5ea"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxufe-other-2026.html",
+      "url": "https://cjxy.jxufe.edu.cn/news-show-2766.html",
+      "sha256": "7c37d9aa7aae3a735dfd01405788af71740cd520c97c3a444ab2b41dda1f9f5c"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxstnu-2026.html",
+      "url": "https://jxjyxy.jxstnu.edu.cn/info/1241/32249.htm",
+      "sha256": "937fc6732af360261187593a80440d139b10bdaeba8ef4ce02d244334ee302f1"
+    },
+    {
+      "path": "sources/jiangxi/brochure-xyc-2026.html",
+      "url": "https://jxjy.xyc.edu.cn/info/1762/8131.htm",
+      "sha256": "cb233c1629e27fe86993bb313c2340e3b520c7f0d17144e3c9e5c23a0c2f5a4e"
+    },
+    {
+      "path": "sources/jiangxi/brochure-ncu-2026.html",
+      "url": "https://sce.ncu.edu.cn/xwhd/tzgg/d905c7341c604986850637fd7c028ae1.htm",
+      "sha256": "c97e1f88b7e3283fe0fc3b48a318281b81637428963d112552a163476374e26f"
+    },
+    {
+      "path": "sources/jiangxi/brochure-jxufe-2026.pdf",
+      "url": "https://cjxy.jxufe.edu.cn/uploadfile/186/Attachment/239df4f8d4.pdf",
+      "sha256": "6bb0b05ce76c61f9fbe700680ec15f9829f619716e0b9f21019f2a8699a3a18c"
+    },
+    {
+      "path": "sources/jiangxi/brochure-xyc-2026-1.jpg",
+      "url": "https://jxjy.xyc.edu.cn/__local/D/55/B1/53B641001FCB81BBA20A1A75682_6271B527_45BD4.jpg",
+      "sha256": "6b37ed88337ce63077e8c093d47dd03be00699bc421ac5fcc7c8a06700c517d1"
+    },
+    {
+      "path": "sources/jiangxi/brochure-xyc-2026-2.jpg",
+      "url": "https://jxjy.xyc.edu.cn/__local/7/73/64/BD6392232138635FA63E90F22CF_307460BA_87C4D.jpg",
+      "sha256": "8ffa4209ef7001244254984bc249b6fdc9f920bf6d92c15a92fd738adbd0ca90"
+    },
+    {
+      "path": "sources/jiangxi/policy-2026.html",
+      "url": "https://jx.gnnu.edu.cn/info/1024/7817.htm",
+      "sha256": "bc947cb7e34f998c1106fad536f9c6bce3868240e7044486ab9841ca9c104c12"
+    },
+    {
+      "path": "sources/jiangxi/brochure-ncu-2026.pdf",
+      "url": "https://sce.ncu.edu.cn/docs/2026-07/f5a7b5744fac4081a755715bbce6bf43.pdf",
+      "sha256": "33ffc8a381e71bc8ba50431f039cb28819bdfd7701154c9ed7d43f59a250f6a2"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    },
+    {
+      "path": "sources/jiangxi/brochure-xyc-2026-reviewed.json",
+      "url": "https://jxjy.xyc.edu.cn/__local/7/73/64/BD6392232138635FA63E90F22CF_307460BA_87C4D.jpg",
+      "sha256": "3b6a4cd2502c1291633977bbbb93f13ecc7f170460bbe6896d15564e4ac84f74",
+      "role": "visually_reviewed_extraction"
+    },
+    {
+      "path": "sources/jiangxi/brochure-ncu-2026-reviewed.json",
+      "url": "https://sce.ncu.edu.cn/docs/2026-07/f5a7b5744fac4081a755715bbce6bf43.pdf",
+      "sha256": "a74f1c4cb478118a9c598d79bfb0af852c86b5747387d972b3cd21319ca53c97",
+      "role": "visually_reviewed_extraction"
+    },
+    {
+      "path": "sources/hubei/exam-categories-2026.txt",
+      "url": "https://www.hbea.edu.cn/files/2026-08/2026%E5%B9%B4%E6%88%90%E4%BA%BA%E9%AB%98%E8%80%83%E8%80%83%E7%94%9F%E6%8A%A5%E5%90%8D%E9%A1%BB%E7%9F%A5%E9%99%84%E4%BB%B6.doc",
+      "sha256": "c8d6616f1028b6aff66019c759f5c1138078bdb04d014d7d0cf9d91a3b530834",
+      "role": "national_exam_category_crosscheck"
+    },
+    {
+      "path": "sources/hubei/exam-categories-2026.doc",
+      "url": "https://www.hbea.edu.cn/files/2026-08/2026%E5%B9%B4%E6%88%90%E4%BA%BA%E9%AB%98%E8%80%83%E8%80%83%E7%94%9F%E6%8A%A5%E5%90%8D%E9%A1%BB%E7%9F%A5%E9%99%84%E4%BB%B6.doc",
+      "sha256": "c79baf6257e0fe7c9424825ef8e7a681cdb8cd9848afe8cf79044e7f0ec47cb7",
+      "role": "national_exam_category_crosscheck"
+    }
+  ],
+  "limitations": [
+    "专业目录非人数计划；未公布字段为null",
+    "暂无院校实际录取分数线",
+    "暂无2027专业目录",
+    "江西覆盖14校官方简章及教学点公告，非全省完整目录；仅2025普通统考省控线；未核实科类及科目冲突不作备考目标"
+  ]
+}

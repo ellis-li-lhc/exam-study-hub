@@ -1,0 +1,1683 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>重庆开放大学</title><META Name="keywords" Content="重庆开放大学" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="重庆开放大学成立于1979年，是由重庆市人民政府举办，经教育部批准独立设置的高等学校。" />
+    <style>
+        /**全局样式**/
+        html,
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;}
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;}
+
+        body {
+            min-width: 1200px;
+            min-height: 600px;}
+
+        /**顶部导航栏样式**/
+        .menu-wrapper {
+            width: 100vw;
+            height: 95px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            transition: background-color 1.5s !important;
+            /**全屏banner和内容切换时，样式变化**/
+            z-index: 100;}
+
+        #menu-wrapper {
+            background-image: none;
+            background-color: #93210e;
+            box-shadow: 0 0 4px gray;
+            color: white;}
+
+        .logo-wrapper>img {
+            height: 54px;}
+
+        .menu-item-wrapper {
+            margin-left: 0.6vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;}
+
+        .menu-item-wrapper>div {
+            position: relative;
+            margin-left: 0.6vw;}
+
+        .menu-item-wrapper>div>a {
+            font-size: 16px;
+            padding: 0.6vw;
+            text-decoration: none;
+            color: hsla(0, 0%, 100%, .5);
+            box-sizing: border-box;}
+
+        .menu-item-wrapper>div>a:hover {
+            color: hsla(0, 0%, 100%, 0.8);}
+
+        .menu-second-lik {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+            top: 30px;}
+
+        .menu-btn-wrapper {
+            position: relative;
+            width: 120px;
+            display: none;}
+
+        #menu-wrapper .menu-second-lik {
+            background-color: rgba(147, 33, 14, 0.5);}
+
+        .menu-list>a:hover,
+        .menu-second-lik>a:hover {
+            color: hsla(0, 0%, 100%, .8);
+            background-color: rgba(0, 0, 0);}
+
+        #menu-wrapper .menu-list>a:hover,
+        #menu-wrapper .menu-second-lik>a:hover {
+            background-color: rgba(147, 33, 14);}
+
+        /**窗口小于1400时，调整弹性间隔**/
+        @media screen and (max-width: 1400px) {
+            .menu-item-wrapper {
+                margin-left: 0.2vw;}
+
+            .menu-item-wrapper>div {
+                margin-left: 0.2vw;}
+
+            .menu-item-wrapper>div>a {
+                padding: 0.4vw 0.2vw;}
+
+            .menu-second-lik {
+                top: 25px;}
+        }
+
+        /**窗口小于1200时隐藏菜单，显示menu-btn，调整弹性间隔**/
+        @media screen and (max-width: 1217px) {
+            .menu-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;}
+
+            #menu-item-wrapper {
+                display: none;}
+
+            #menu-btn-wrapper {
+                display: inline-block;}
+        }
+
+        .menu-btn-wrapper>img {
+            width: 48px;
+            opacity: 0.4;
+            cursor: pointer;}
+
+        .menu-btn-wrapper>img:hover {
+            opacity: 0.7;}
+
+        .menu-list {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;}
+
+        .menu-list>a,
+        .menu-second-lik>a {
+            font-size: 16px;
+            padding: 0.7vw;
+            text-decoration: none;
+            color: hsla(0, 0%, 100%, .5);
+            background-color: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            border-bottom: 1px dashed hsla(0, 0%, 100%, .5);
+            white-space: nowrap;
+            width: 100%;}
+
+        /**全屏banner样式**/
+        .full-banner-wrapper {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            min-width: 1200px;
+            min-height: 600px;
+            overflow: hidden;}
+
+        .full-banner {
+            width: 100vw;
+            height: 100vh;
+            min-width: 1200px;
+            min-height: 600px;
+            overflow: hidden;
+            position: absolute;}
+
+        .full-banner img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            min-width: 1200px;
+            min-height: 600px;}
+
+        /**利用组件自动生成的id，覆盖组件默认样式**/
+        /**banner组件的图片父元素div**/
+        /**beginEditable**/
+        #flashBoxu_u2_ {
+            width: 100vw !important;
+            height: 100vh !important;}
+
+        #flashBoxu_u2_ ul {
+            right: 150px !important;
+            bottom: 50px !important;
+            font: 16px Tahoma !important;}
+
+        #flashBoxu_u2_ ul li {
+            width: auto !important;
+            height: auto !important;
+            line-height: 12px !important;
+            margin-right: 15px !important;
+            background-color: rgba(0, 0, 0, 0.3) !important;
+            color: hsla(0, 0%, 100%, .5);
+            padding: 5px 15px;
+            border-radius: 2px;}
+
+        #flashBoxu_u2_ ul li.hover {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            color: #93210e !important;
+            border: none !important;}
+        .full-banner table tbody tr td div {
+    height: 100% !important;
+    width: 100% !important;}
+        /**endEditable**/
+        /**主要内容区样式**/
+        .content-wrapper {
+            position: fixed;
+            width: 100vw;
+            min-width: 1200px;
+            top: 100vh;
+            box-sizing: border-box;
+            background-color: white;
+            padding-top: 155px;
+            transition: top .7s cubic-bezier(0.5, 0, 0.2, 1);}
+
+        #content-wrapper {
+            top: 0;
+            position: relative;}
+
+        /**第一个模块：校园新闻**/
+        .news-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 1200px;
+            margin: 0 auto;}
+
+        .news-banner-wrapper,
+        .news-title-wrapper {
+            /*border: 1px solid green;*/
+            width: 560px;
+            height: 375px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;}
+
+        .news-banner-img-wrapper,
+        .news-title-list {
+            width: 560px;
+            height: 320px;
+            overflow: hidden;}
+
+        .news-banner-img-wrapper img {
+            width: 560px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 2px;}
+
+        /**覆盖文章图片banner变换组件样式**/
+        /**beginEditable**/
+        .imagechangenews_pnode,
+        .imagechangenews_fnode {
+            bottom: 5px !important;
+            border-radius: 2px;}
+
+        a.imagechangenews_fnode:link {
+            background-color: #93210e !important;}
+
+        /**endEditable**/
+        .news-icon,
+        .notice-icon,
+        .media-icon {
+            color: #93210e;
+            width: 560px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;}
+
+        .news-more {
+            color: #93210e;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;}
+
+        .news-more-wrapper {
+            width: 560px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;}
+
+        .news-more-wrapper>a {
+            text-decoration: none;}
+
+        #branch-news-more {
+            display: none;}
+
+        .news-icon>img,
+        .news-more>img,
+        .notice-icon>img,
+        .media-icon>img {
+            width: 1.2rem;}
+
+        .news-icon>img,
+        .notice-icon>img,
+        .media-icon>img {
+            margin-right: 5px;}
+
+        .active-news {
+            font-weight: bold !important;}
+
+        #head-news {
+            margin-right: 30px;}
+
+        #branch-news-title-list {
+            display: none;}
+
+        .news-more {
+            justify-content: flex-end !important;
+            cursor: pointer;}
+
+        .news-title-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;}
+
+        .news-title-list>a {
+            width: 560px;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;}
+
+        .news-title-list>a:hover {
+            color: #93210e;}
+
+        .news-title-list>a>img {
+            width: 13px;
+            height: 13px;
+            margin-right: 5px;}
+
+        .news-title-list>a>span.title-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 440px;
+            /*border: 1px solid green;*/
+            display: inline-block;
+            box-sizing: border-box;
+            font-size: 16px;}
+
+        .news-title-list>a>span.title-date {
+            width: 102px;
+            text-align: right;
+            display: inline-block;
+            box-sizing: border-box;}
+
+        /**第二个模块：通知公告**/
+        .notice-media-wrapper {
+            width: 1200px;
+            height: 375px;
+            /*border: 1px solid black;*/
+            margin: 100px auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;}
+
+        .notice-wrapper,
+        .media-wrapper {
+            width: 560px;
+            height: 375px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;}
+
+        .notice-icon>a,
+        .media-icon>a {
+            text-decoration: none;
+            color: #93210e;}
+
+        .media-title-list {
+            width: 560px;
+            height: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;}
+
+        /**子元素media-title比父元素宽10px，居中，加边框正合适**/
+        /**父元素高度比其父元素高10px，两边对齐，忽略透明边框正好**/
+        .media-title {
+            width: 570px;
+            height: 100px;
+            border: 5px solid rgba(147, 33, 14, 0);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;}
+
+        .media-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s, opacity 0.5s;}
+
+        .media-title>span {
+            width: 300px;}
+
+        .media-title:hover {
+            background-color: #93210e;
+            border: 5px solid rgba(147, 33, 14, 1);
+            color: white !important;
+            cursor: pointer;}
+
+        /**加5px外边距**/
+        .media-title img {
+            width: 180px;
+            height: 90px;
+            object-fit: cover;}
+
+        /**第三个模块：教学与服务**/
+        .teaching-wrapper {
+            width: 100%;
+            height: 300px;
+            background-color: #93210e;
+            min-width: 1200px;}
+
+        .teaching {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;}
+
+        .teaching-icon {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;}
+
+        .teaching-icon>img {
+            width: 1.3rem;
+            margin-right: 5px;}
+
+        .teaching-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 1200px;
+            height: 150px;}
+
+        .teaching-item {
+            width: 110px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            cursor: pointer;}
+
+        .teaching-item-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 110px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;}
+
+        .teaching-item-icon img {
+            width: 70px;
+            height: 70px;}
+
+        /**第四个模块：专题网站**/
+        .site-wrapper {
+            margin: 100px auto;
+            width: 1200px;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;}
+
+        .site-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            color: #93210e;}
+
+        .site-icon>img {
+            width: 1.2rem;
+            margin-right: 5px;}
+
+        .site-list {
+            width: 1200px;
+            height: 210px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;}
+
+        .site-item {
+            width: 200px;
+            height: 210px;
+            overflow: hidden;
+            position: relative;
+            color: white;
+            cursor: pointer;}
+
+        .site-item>a>img {
+            width: 200px;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 2px;}
+
+        .site-item>span {
+            width: 200px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-top: 2px solid white;
+            position: absolute;
+            bottom: -40px;
+            background-color: #93210e;
+            transition: bottom .3s;}
+
+        /**第五个模块：底部**/
+        .footer-wrapper {
+            width: 100%;
+            height: 300px;
+            min-width: 1200px;
+            background-color: #372828;}
+
+        .footer {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;}
+
+        .footer-logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 1200px;
+            height: 100px;}
+
+        .footer-logo-qr>img {
+            width: 100px;
+            height: 100px;
+            margin-right: 40px;}
+
+        #footer-logo {
+            width: 200px;}
+
+        .footer-link-country {
+            margin-right: 40px;
+            position: relative;
+            display: inline-block;}
+
+        .footer-link-city {
+            position: relative;
+            display: inline-block;}
+
+        #country-btn,
+        #city-btn {
+            border: none;
+            background-color: #372828;
+            color: white;
+            padding: 20px 15px;
+            font-size: 16px;
+            cursor: pointer;}
+
+        .triangle-icon {
+            margin-left: 1px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-bottom: 8px solid white;}
+
+        .link-list {
+            width: 430px;
+            height: 550px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: flex-start;
+            position: absolute;
+            bottom: 50px;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1;
+            border: 1px solid rgba(0, 0, 0, .15);
+            display: none;}
+
+        .link-list>a {
+            text-decoration: none;
+            padding: 5px 8px;
+            margin: 3px;
+            color: black;
+            border-radius: 2px;}
+
+        .link-list>a:hover {
+            background-color: #93210e;
+            color: white;}
+
+        .footer-copyright {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 1200px;
+            color: white;}
+
+        .search-btn {
+            border-radius: 5px;
+            margin-left: 0.6vw;
+            border: 1px solid hsla(0, 0%, 100%, .5);}
+
+        .search-btn form {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;}
+
+        .search-btn input[type=text] {
+            outline: none;
+            background-color: transparent;
+            color: white;
+            border: none;
+            width: 140px;
+            height: 18px;
+            padding: 5px;}
+
+        .search-btn input::placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input::-webkit-input-placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input::-moz-placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input::-ms-input-placeholder {
+            color: hsla(0, 0%, 100%, .5);}
+
+        .search-btn input[type=button] {
+            border: none;
+            padding: 0;
+            opacity: 0.5;
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+            background-color: transparent;
+            background-image: url(images/search.png);}
+
+        .search-btn input[type=button]:hover {
+            cursor: pointer;
+            opacity: 0.8;}
+
+        .media-title-list img {
+            width: auto;
+            height: auto;
+            max-width: 200px;
+            max-height: 100%;}
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background: url(images/logo_index/menlian-1000X2000gai.jpg) no-repeat center center / cover;
+            margin: 0;
+            overflow: hidden;
+            box-sizing: border-box;}
+
+        .main a {
+            text-decoration: none;
+            color: #fff;}
+
+                       .main .left,
+        .main .right {
+            position: absolute;
+            top: 22.5%;}
+
+       .main  .left {
+            left: 13%;}
+
+        .main .right {
+            left: 56%;}
+
+        .main .link-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0 20px;}
+
+        .main .link-wrapper .logo {
+            width: 520px;
+            height: 119px;}
+
+        .link-wrapper .move {
+            width: 50px;
+            height: 42px;}
+
+        @media (max-width: 1600px) {
+            .left {
+                left: 8%;}
+
+            .right {
+                left: 55%;}
+
+            .link-wrapper .logo {
+                width: 417.5px;
+                height: 100px;}
+        }
+
+        @media (max-width: 1300px) {
+            .left {
+                left: 2%;}
+
+            .right {
+                left: 51%;}
+        }
+
+        @media (max-width: 1024px) {
+            .main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px 0;
+                background-image: url(images/logo_index/yidongduanyemiankaidabeijing.jpg);}
+
+
+            .main .left,
+            .main .right {
+                position: static;}
+        }
+
+        @media (max-width: 768px) {
+
+            .link-wrapper .logo {
+                width: 278.3px;
+                height: 66.66px;}
+
+            .link-wrapper .move {
+                width: 40px;
+                height: 32px;}
+        }
+
+        .content {
+            display: none;}
+    </style>
+
+
+    <script>
+        
+        
+        window.onload = function () {
+            
+            var url = window.location.href;
+
+            if (url.indexOf("cqdd") > 0) {
+
+                document.getElementById("beian").innerHTML = '渝ICP备05003321号-12';
+                document.getElementById("gabeian").innerHTML = '渝公网安备50010702501569号';
+
+            }
+        }
+
+
+    </script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b7a475c53535742000000034354 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1482,'/index.jsp',-1,1836362038)</script>
+</head>
+<!--整个body最小min-width:1280px-->
+
+<body>          
+   
+   
+   
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT>
+    <div class="main">
+        <div class="left kaida">
+            <a class="link-wrapper" href="##" target="_self">
+                <img class="logo" src="images/logo_index/kaida.png" alt="重庆开放大学">
+                <img class="move" src="images/logo_index/dongtaitubiao1lazhang.gif" alt="动态图片">
+            </a>
+        </div>
+        <div class="right">
+            <a class="link-wrapper" href="https://www.cqtbi.edu.cn?s=cqtbi" target="_self">
+                <img class="logo" src="images/logo_index/gongshang.png" alt="重庆工商职业学院">
+                <img class="move" src="images/logo_index/dongtaitubiao1lazhang.gif" alt="动态图片">
+            </a>
+        </div>
+    </div>
+    <div class="content">
+ 
+        <!--菜单：绝对定位，两种样式变换，包含框长度100%（body）,弹性上下左右居中，每个菜单项固定间隔-->
+        <div class="menu-wrapper">
+            <div class="logo-wrapper">
+                <img src="images/logo1.png" />
+                <!--<img src="images/logo2.png" />-->
+            </div>
+            <div class="menu-item-wrapper" id="menu-item-wrapper">
+                                <div data-linkname="id1452">
+                    <a href="" target="_blank">学校概况</a>
+                     <div class="menu-second-lik" id="id1452">
+                                <a href="xxgk/xxjj.htm" target="_blank">学校简介</a>
+                                <a href="xxgk/xrld.htm" target="_blank">现任领导</a>
+                                <a href="xxgk/jgsz2.htm" target="_blank">机构设置</a>
+                                <a href="http://ycjy.cqdd.cq.cn/info/1073/1200.htm" target="_blank">办学网络</a>
+                                <a href="https://www.cqtbi.edu.cn/xxgkn/jbxx/xxjgsz_bxgm_bxjbqkd.htm" target="_blank">信息公开</a>
+                    </div>
+                </div>
+                <div data-linkname="id1458">
+                    <a href="" target="_blank">新闻动态</a>
+                     <div class="menu-second-lik" id="id1458">
+                                <a href="xwdt/xyxw.htm" target="_blank">校园新闻</a>
+                                <a href="xwdt/txzx.htm" target="_blank">体系资讯</a>
+                                <a href="xwdt/tzgg.htm" target="_blank">通知公告</a>
+                                <a href="xwdt/mtgz.htm" target="_blank">媒体关注</a>
+                    </div>
+                </div>
+                <div data-linkname="id1463">
+                    <a href="" target="_blank">教学科研</a>
+                     <div class="menu-second-lik" id="id1463">
+                                <a href="http://ycjy.cqdd.cq.cn/index.htm" target="_blank">教务教学</a>
+                                <a href="https://keyan.cqtbi.edu.cn/" target="_blank">科研管理</a>
+                                <a href="https://xbbjb.cqtbi.edu.cn/xbm/journal/index.html" target="_blank">学报</a>
+                    </div>
+                </div>
+                <div data-linkname="id1471">
+                    <a href="https://www.cqzsjy.cn" target="_blank">终身学习</a>
+                     <div class="menu-second-lik" id="id1471">
+                    </div>
+                </div>
+                <div data-linkname="id1472">
+                    <a href="https://www.cqxfyh.cn" target="_blank">学分银行</a>
+                     <div class="menu-second-lik" id="id1472">
+                    </div>
+                </div>
+                <div data-linkname="id1473">
+                    <a href="" target="_blank">学习资源</a>
+                     <div class="menu-second-lik" id="id1473">
+                                <a href="http://www.ouchn.cn/" target="_blank">国家开放大学学习网</a>
+                                <a href="http://jx.cqou.edu.cn/" target="_blank">重庆开放大学学习网</a>
+                                <a href="http://rs.cqdd.cq.cn:8000/site/default.aspx" target="_blank">国家数字化学习资源中心重庆分中心</a>
+                                <a href="http://wxy.cqdd.cq.cn/" target="_blank">微学院</a>
+                                <a href="https://lyx.cqou.edu.cn" target="_blank">终身学习资源</a>
+                                <a href="http://fxlpx.cqou.edu.cn" target="_blank">非学历培训</a>
+                    </div>
+                </div>
+                <div data-linkname="id1480">
+                    <a href="https://ycjy.cqou.edu.cn/index.htm" target="_blank">招生信息</a>
+                     <div class="menu-second-lik" id="id1480">
+                    </div>
+                </div>
+                <div data-linkname="id1481">
+                    <a href="lxwm.htm" target="_blank">联系我们</a>
+                     <div class="menu-second-lik" id="id1481">
+                    </div>
+                </div>
+
+            </div>
+            <div class="search-btn">
+                <div>
+<form action="cqou/a_search_result.jsp?wbtreeid=1482" method="post" name="_l_s_c_form" id="_l_s_c_form" onsubmit="return _submit_search_comprehensive();" style="display: inline;">
+<input type="text" name="kw_temp" id="kw_temp" value="" placeholder="请输入关键字搜索">
+<input type="hidden" name="kw" id="kw" value="">
+<input type="hidden" name="ot" id="ot" value="1">
+<input type="hidden" name="rg" id="rg" value="4">
+<input type="hidden" name="tg" id="tg" value="5">
+<input type="hidden" name="clid" id="clid" value="0">
+<input type="hidden" name="_lucenen_search_comprehensive" id="_lucenen_search_comprehensive" value="">
+<input type="button" onclick="return _submit_search_comprehensive();">
+</form>
+</div>
+<script type="text/javascript">
+function _submit_search_comprehensive()
+{
+    if(document.getElementById("_lucenen_search_comprehensive"))
+    {
+        if(document.getElementById("kw_temp"))
+        {
+            var kw = document.getElementById("kw_temp").value;
+            if(kw==null||kw=="")
+            {
+                alert("请输入检索内容");
+                return false;
+            }
+            if(window.toFF==1)
+            {
+                document.getElementById("kw_temp").value = Simplized(kw);
+            }else
+            {
+                document.getElementById("kw_temp").value = kw;            
+            }
+            var  base64 = new Base64();
+            document.getElementById("kw").value = base64.encode(document.getElementById("kw_temp").value);
+            new VsbFormFunc().disableAutoEnable(document.getElementById("kw_temp"));
+            document.getElementById("_l_s_c_form").submit();
+        }
+    }
+}
+</script><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+            </div>
+            <!--宽度小于1217时显示菜单隐藏图标-->
+            <div class="menu-btn-wrapper" id="menu-btn-wrapper">
+                <img src="images/menu-btn.png" id="menu-btn" />
+                <div class="menu-list" id="menu-list">
+                    <a href="#">学院概况</a>
+                    <a href="#">新闻动态</a>
+                    <a href="#">教学科研</a>
+                    <a href="#">终身学习</a>
+                    <a href="#">学习资源</a>
+                    <a href="#">学分银行</a>
+                    <a href="#">招生信息</a>
+                    <a href="#">联系我们</a>
+                </div>
+            </div>
+        </div>
+        <!--全屏banner：2000*1000-->
+        <div class="full-banner-wrapper" id="full-banner-wrapper">
+            <!--由站群组件动态获取-->
+            <div class="full-banner">
+                <style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u3_{
+    width:1000px;
+    height:200px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u3_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u3_ ul{
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u3_ ul li{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u3_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u3_"><a href="https://cpc.people.com.cn/GB/67481/462775/index.html" target="_blank"><img src="images/ershijiewuzhong.png" border="0" width="1000" height="200" /></a><img src="images/hongyanguanlidezhangzhengzhongqingduan.jpg" border="0" width="1000" height="200" /><img src="images/dibajiewangluo.jpg" border="0" width="1000" height="200" /><a href="https://www.12371.cn/special/djsx/" target="_blank"><img src="images/xuexiguanchexijinpingdangjiansixiang.jpg" border="0" width="1000" height="200" /></a></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u3_");</SCRIPT>
+            </div>
+            <!--轮播图左右切换按钮-->
+            <!--利用自带组件，取消-->
+        </div>
+        <!--主要内容区-->
+        <div class="content-wrapper">
+            <!--第一个模块：校园新闻-->
+            <div class="news-wrapper">
+                <div class="news-banner-wrapper">
+                    <span class="news-icon">
+                        <img src="images/news-icon.png" />
+                        <span id="head-news" class="active-news">校园动态</span>
+                        <img src="images/news-icon.png" />
+                        <span id="branch-news">体系资讯</span>
+                    </span>
+                    <!--新闻banner，动态组件-->
+                    <div class="news-banner-img-wrapper">
+                        
+<LINK href="/system/resource/style/component/news/list/imagechangenews.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="/system/resource/js/news/imagechangenews.js"></script><script language="JavaScript">
+var u_u4_icn = new ImageChangeNews("u_u4_", 560, 320, 4, 2.0, false, false, false, true, false,"#u_u4_centerCutImg");
+
+//初始化图片, 并启动定时
+function u_u4_init_img()
+{
+
+    u_u4_icn.addimg("\/__local\/B\/67\/0F\/B63469E33B18764F865F32EA4D3_08E05B9E_3A00.png", "info\/1459\/24683.htm", "", "","【简讯】我校21名同学荣获国家开放大学优秀毕业生");
+
+    u_u4_icn.addimg("\/__local\/5\/91\/D7\/2C84AB831B0BEA0B87F531397F3_A284C207_D52C.jpg", "info\/1459\/24682.htm", "", "","【学习贯彻党的二十届五中全会精神】学校召开干部大会 传达五中全会精神");
+
+    u_u4_icn.addimg("\/__local\/A\/FE\/EF\/2352A41976BB65BCD34A9C2F5D8_35EB9625_B966E.png", "info\/1459\/24680.htm", "", "","我校第一次获得“挑战杯”主体赛特等奖");
+
+    u_u4_icn.addimg("\/__local\/1\/0E\/35\/D9B7FB93AFE87113F664A12A780_D06121FD_E93F.jpg", "info\/1459\/24679.htm", "", "","【学习贯彻党的二十届五中全会精神】学校召开党委理论学习中心组（扩大）会议");
+
+    u_u4_icn.changeimg(0);
+}
+</script><table cellspacing="0" cellpadding="0" border="0" style="padding:0px margin:0px; border:0px">
+    <tr><td>
+        <div id="u_u4_centerCutImg" style="OVERFLOW: hidden;height:320px;width:560px">
+            <div id="u_u4_div" align="center" style="padding:0px;margin:0px;border:0px solid black;background-color:#000000;FILTER: progid:DXImageTransform.Microsoft.RevealTrans (duration=2.0,transition=23);height:320px;width:560px">
+                <div id="u_u4_imgdiv" style="padding:0px;border:0px;"><a id="u_u4_url" target="_blank"><img id="u_u4_pic" border="0" src="/system/resource/images/space.gif"></a></div>
+            </div>
+            <div style="filter:alpha(style=1,opacity=10,finishOpacity=80);width:560px;height:19px;text-align:right;top:-19px;position:relative;padding:0px;margin:0px;border:0px;">
+<a href="javascript:u_u4_icn.changeimg(0)" ; id="u_u4_selectNode0" class="imagechangenews_pnode" target="_self">1</a><a href="javascript:u_u4_icn.changeimg(1)" ; id="u_u4_selectNode1" class="imagechangenews_pnode" target="_self">2</a><a href="javascript:u_u4_icn.changeimg(2)" ; id="u_u4_selectNode2" class="imagechangenews_pnode" target="_self">3</a><a href="javascript:u_u4_icn.changeimg(3)" ; id="u_u4_selectNode3" class="imagechangenews_pnode" target="_self">4</a>
+            </div></div></td></tr>
+<div align="center" display="none" style="overflow:hidden;text-overflow:ellipsis;height:0px;width:560px;"><a target="_blank" class="titlestyle251970" id="u_u4_newstitle"></a></div><div align="left" display="none" style="overflow:hidden;text-overflow:ellipsis;height:0px;width:560px;padding-left:2px;padding-right:2px"><a target="_blank" class="summarystyle251970" id="u_u4_newssummary"></a></div>   
+</table><SCRIPT language="JavaScript">u_u4_init_img();</SCRIPT>
+                    </div>
+                </div>
+                <div class="news-title-wrapper">
+                    <div class="news-more-wrapper">
+                        <a href="http://www.cqdd.cq.cn/xwdt/xyxw.htm" id="head-news-more">
+                            <span class="news-more">
+                                查看更多
+                                <img src="images/more-icon.png" />
+                            </span>
+                        </a>
+                        <a href="http://www.cqdd.cq.cn/xwdt/txzx.htm" id="branch-news-more">
+                            <span class="news-more">
+                                查看更多
+                                <img src="images/more-icon.png" />
+                            </span>
+                        </a>
+                    </div>
+                    <!--新闻列表，动态组件，9条-->
+                    <div id="head-news-title-list" class="news-title-list">
+                        <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><a href="https://www.news.cn/zt/xxgcddesjwzqh/index.html">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">中国共产党第二十届中央委员会第五次全体会议在北京开始举行</span>
+ <span class="title-date">2026/10/26
+</a>
+<a href="info/1459/24683.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【简讯】我校21名同学荣获国家开放大学优秀毕业生</span>
+ <span class="title-date">2026/11/06
+</a>
+<a href="info/1459/24682.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【学习贯彻党的二十届五中全会精神】学校召开干部大会 传达五中全会精神</span>
+ <span class="title-date">2026/11/05
+</a>
+<a href="info/1459/24680.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">我校第一次获得“挑战杯”主体赛特等奖</span>
+ <span class="title-date">2026/11/04
+</a>
+<a href="info/1459/24679.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【学习贯彻党的二十届五中全会精神】学校召开党委理论学习中心组（扩大）会议</span>
+ <span class="title-date">2026/11/04
+</a>
+<a href="info/1459/24677.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆工商职业学院环艺教师作品入选首届和美乡村建设艺术实践大展</span>
+ <span class="title-date">2026/11/03
+</a>
+<a href="info/1459/24678.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">市教委职成教处党支部来校联合开展主题党日活动</span>
+ <span class="title-date">2026/11/03
+</a>
+<a href="info/1459/24675.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">学校召开2026年度实地教学检查专家沟通会</span>
+ <span class="title-date">2026/11/02
+</a>
+<a href="info/1459/24673.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【学习贯彻党的二十届五中全会精神】我校师生热议学习贯彻党的二十届五中全会精神</span>
+ <span class="title-date">2026/10/31
+</a>
+<script>_showDynClickBatch(['dynclicks_u5_24650','dynclicks_u5_24683','dynclicks_u5_24682','dynclicks_u5_24680','dynclicks_u5_24679','dynclicks_u5_24677','dynclicks_u5_24678','dynclicks_u5_24675','dynclicks_u5_24673'],[24650,24683,24682,24680,24679,24677,24678,24675,24673],"wbnews", 1836362038)</script>
+
+                    </div>
+                    <div id="branch-news-title-list" class="news-title-list">
+                        <a href="info/1460/24661.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学办学体系基层单位举行2026年秋季新生开学典礼</span>
+ <span class="title-date">2026/10/28
+</a>
+<a href="info/1460/24642.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">垫江学院举行2026年秋期开学典礼暨2024年春期毕业典礼</span>
+ <span class="title-date">2026/10/23
+</a>
+<a href="info/1460/24541.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学垫江学院召开第42个教师节座谈会</span>
+ <span class="title-date">2026/09/17
+</a>
+<a href="info/1460/24278.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【简讯】彭水学院赴秀山学院开展调研交流</span>
+ <span class="title-date">2026/06/11
+</a>
+<a href="info/1460/24248.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【简讯】黔江学院开展“行走的思政课”系列社会实践活动</span>
+ <span class="title-date">2026/06/03
+</a>
+<a href="info/1460/24190.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">【简讯】渝中学院开展“行走的特色思政课堂”系列实践活动</span>
+ <span class="title-date">2026/05/22
+</a>
+<a href="info/1460/24129.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">垫江学院师生赴垫江党建文化公园开展“行走的思政课”活动</span>
+ <span class="title-date">2026/05/12
+</a>
+<a href="info/1460/24083.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">垫江县委书记陈德川到重庆开放大学垫江学院调研指导工作</span>
+ <span class="title-date">2026/04/27
+</a>
+<a href="info/1460/24079.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">江津学院赴我院考察交流</span>
+ <span class="title-date">2026/04/27
+</a>
+<script>_showDynClickBatch(['dynclicks_u6_24661','dynclicks_u6_24642','dynclicks_u6_24541','dynclicks_u6_24278','dynclicks_u6_24248','dynclicks_u6_24190','dynclicks_u6_24129','dynclicks_u6_24083','dynclicks_u6_24079'],[24661,24642,24541,24278,24248,24190,24129,24083,24079],"wbnews", 1836362038)</script>
+
+                    </div>
+                </div>
+            </div>
+            <!--第二个模块-->
+            <div class="notice-media-wrapper">
+                <div class="notice-wrapper">
+                    <span class="notice-icon">
+                        <img src="images/notice-icon.png" />
+                        <a href="http://www.cqdd.cq.cn/xwdt/tzgg.htm">通知公告</a>
+                    </span>
+                    <!--通知列表,共用news-title-list样式，站群组件-->
+                    <div class="news-title-list">
+                        <a href="info/1461/24633.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院关于公开选拔会计与金融学院院长的公告</span>
+ <span class="title-date">2026/10/20
+</a>
+<a href="info/1461/24651.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2026年考核招聘非事业编制博士人才公告（第二批）</span>
+ <span class="title-date">2026/10/26
+</a>
+<a href="info/1461/24614.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2026年考核招聘非事业编制正高级职称教师公告（第三批）</span>
+ <span class="title-date">2026/10/14
+</a>
+<a href="info/1461/23996.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学  重庆工商职业学院  2026年职业技能等级认定工作通告</span>
+ <span class="title-date">2026/03/06
+</a>
+<a href="info/1461/23856.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2025年华岩校区5号、6号门面招租（第三次）结果公告</span>
+ <span class="title-date">2025/11/25
+</a>
+<a href="info/1461/23845.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2025年华岩校区5号、6号门面招租公告（第三次).</span>
+ <span class="title-date">2025/11/17
+</a>
+<a href="info/1461/23836.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2025年华岩校区5号、6号门面招标结果公告（第二次）</span>
+ <span class="title-date">2025/11/12
+</a>
+<a href="info/1461/23827.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2025年10月华岩校区5号、6号门面招租公告（第二次)</span>
+ <span class="title-date">2025/11/04
+</a>
+<a href="info/1461/23808.htm">
+ <img src="./images/dot-icon.png">
+ <span class="title-text">重庆开放大学重庆工商职业学院2025年10月华岩校区5号、6号门面招标结果公告</span>
+ <span class="title-date">2025/10/30
+</a>
+<script>_showDynClickBatch(['dynclicks_u7_24633','dynclicks_u7_24651','dynclicks_u7_24614','dynclicks_u7_23996','dynclicks_u7_23856','dynclicks_u7_23845','dynclicks_u7_23836','dynclicks_u7_23827','dynclicks_u7_23808'],[24633,24651,24614,23996,23856,23845,23836,23827,23808],"wbnews", 1836362038)</script>
+
+                    </div>
+                </div>
+                <!--媒体关注，图片列表和标题列表分开-->
+                <div class="media-wrapper">
+                    <div class="media-icon">
+                        <img src="images/media-icon.png" />
+                        <a href="http://www.cqdd.cq.cn/xwdt/mtgz.htm">媒体关注</a>
+                    </div>
+                    <!--图片标题列表，动态组件，3条-->
+                    <div class="media-title-list">
+                        <script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>       <a href="https://mp.weixin.qq.com/s/5HVLb5hgkTTNhSANr7350w" class="media-title">
+                            <img src="/__local/5/A5/D5/E5E3E93DCDB8A6879618BAAA769_744428B7_2D47A.jpg" />
+                            <span>【重庆学校思政工作者】重庆高校师生热议学习贯彻党的二十届五中全会精神（三）</span>
+                        </a>
+        
+       <a href="https://wap.cqrb.cn/xcq/NewsDetail?classId=1551&newsId=2809698&staticUrl=https%3A%2F%2Ft.cqrb.cn%2F5aZOq&RandomTime=1793413129730" class="media-title">
+                            <img src="/__local/1/DD/C8/4BBE3D25890934DFFC1D865677B_E765DC37_7F7C.png" />
+                            <span>【重庆日报】民生观察｜一杯奶茶钱能学AI、剪视频、中医养生……职校“银发课堂”火了！</span>
+                        </a>
+        
+       <a href="https://www.cqnews.net/web/content_1565329332447236096.html" class="media-title">
+                            <img src="/__local/C/95/C0/FAA4565A022226A97AB161DC331_273C15E2_23396.jpeg" />
+                            <span>【第1眼TV-华龙网】AI科技让健康守护“触手可及”！重庆工商职业学院助力银龄拥抱智慧新生活</span>
+                        </a>
+        
+<script>_showDynClickBatch(['dynclicks_u8_24681','dynclicks_u8_24674','dynclicks_u8_24668'],[24681,24674,24668],"wbnews", 1836362038)</script>
+
+                    </div>
+                </div>
+            </div>
+            <!--第三个模块：教学与服务-->
+            <div class="teaching-wrapper">
+                <div class="teaching">
+                    <div class="teaching-icon">
+                        <img src="images/edu-icon.png" />
+                        教学与服务
+                    </div>
+                    <div class="teaching-list">
+                        <div class="teaching-item">
+                            <div class="teaching-item-icon">
+                                <a href="http://szxy.cqtbi.edu.cn/cqdddt/index.html"><img src="images/1.png" /></a>
+                            </div>
+                            <span>智慧校园</span>
+                        </div>
+                        <div class="teaching-item">
+                            <div class="teaching-item-icon">
+                                <a href="http://www.ouchn.cn/"><img src="images/2.png" /></a>
+                            </div>
+                            <span>国开学习网</span>
+                        </div>
+                        <!-- <div class="teaching-item">
+                            <div class="teaching-item-icon">
+                                <a href="http://wxy.cqdd.cq.cn/"><img src="./images/3.png" /></a>
+                            </div>
+                            <span>微学院</span>
+                        </div> -->
+                        <div class="teaching-item">
+                            <div class="teaching-item-icon">
+                                <a href="https://elib.cqou.edu.cn/"><img src="images/4.png" /></a>
+                            </div>
+                            <span>数字图书馆</span>
+                        </div>
+                        <div class="teaching-item">
+                            <div class="teaching-item-icon">
+                                <a href="https://www.cqxfyh.cn/"><img src="images/5.png" /></a>
+                            </div>
+                            <span>学分银行</span>
+                        </div>
+                        <div class="teaching-item">
+                            <div class="teaching-item-icon">
+                                <a href="https://www.cqzsjy.cn"><img src="images/6.png" /></a>
+                            </div>
+                            <span>终身学习网</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--第四个模块：专题网站-->
+            <div class="site-wrapper">
+                <div class="site-icon">
+                    <img src="images/site-icon.png" />
+                    专题网站
+                </div>
+                <div class="site-list">          <div class="site-item">
+              <a href="https://www.eol.cn/kaifang/cqkfdxcyzszt/">
+              <img src="images/zhumengqiangguojianshefenjin.jpg">
+              </a>
+              <span>2026年师生才艺展</span>
+          </div>
+          <div class="site-item">
+              <a href="http://jw.cq.gov.cn/tsshzysx/">
+              <img src="images/s3.png">
+              </a>
+              <span>习近平新时代中国特色社会主义思想</span>
+          </div>
+          <div class="site-item">
+              <a href="https://cpc.people.com.cn/GB/67481/462775/index.html">
+              <img src="images/xuexiguanchedangdeershijiewuzhongquanhuijingshen.jpg">
+              </a>
+              <span>学习贯彻党的二十届五中全会精神</span>
+          </div>
+          <div class="site-item">
+              <a href="https://dsjyjy.cqtbi.edu.cn/wkds/dssy.htm">
+              <img src="images/s2.png">
+              </a>
+              <span>微课大赛</span>
+          </div>
+          <div class="site-item">
+              <a href="http://www.smartedu.cn">
+              <img src="images/4892a9aa2bbd24617fbb5deec13e2b8.jpg">
+              </a>
+              <span>国家智慧教育服务平台</span>
+          </div>
+          <div class="site-item">
+              <a href="https://mp.weixin.qq.com/s?__biz=MzIyMTEyNTIzNA==&mid=2649408365&idx=1&sn=a77d1bb6da38fa77edc9b318cc06374b&chksm=8e4bb9e95293126">
+              <img src="images/6331a83812d368ea0d4f0cd3f77b52e.jpg">
+              </a>
+              <span>教育强市</span>
+          </div>
+</div>
+            </div>
+            <!--第五个模块：底部-->
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-logo">
+                        <div class="footer-logo-qr">
+                            <img src="images/qr0.jpg" />
+                            <img src="images/qr1.jpg" />
+                        </div>
+                        <img id="footer-logo" src="images/logo1.png" />
+                        <div class="footer-link-wrapper">
+                            <div class="footer-link-country">
+                                <button id="country-btn">国家开放大学办学体系<span class="triangle-icon"></span></button>
+                                <div class="link-list">
+                                    <a href="http://www.ouchn.edu.cn">国家开放大学</a>
+                                    <a href="http://www.bjou.edu.cn">北京开放大学</a>
+                                    <a href="http://www.tjrtvu.edu.cn">天津开放大学</a>
+                                    <a href="http://www.hebnetu.edu.cn">河北开放大学</a>
+                                    <a href="http://www.imrtvu.edu.cn">内蒙古开放大学</a>
+                                    <a href="http://www.lntvu.com">辽宁开放大学</a>
+                                    <a href="http://www.sytvu.cn">沈阳开放大学</a>
+                                    <a href="http://www.dlrtvu.edu.cn">大连开放大学</a>
+                                    <a href="http://www.jlrtvu.jl.cn">吉林开放大学</a>
+                                    <a href="http://www.ccrtvu.com">长春开放大学</a>
+                                    <a href="http://www.hljrtvu.org.cn/kfdxwz/app_web/kfdx/index.html">黑龙江开放大学</a>
+                                    <a href="http://www.hrbou.org.cn">哈尔冰开放大学</a>
+                                    <a href="http://www.shou.org.cn">上海开放大学</a>
+                                    <a href="http://www.jsou.cn">江苏开放大学</a>
+                                    <a href="http://www.njou.edu.cn">南京开放大学</a>
+                                    <a href="http://www.zjtvu.edu.cn">浙江开放大学</a>
+                                    <a href="https://www.nbou.cn">宁波开放大学</a>
+                                    <a href="https://www.ahou.edu.cn/portal/">安徽开放大学</a>
+                                    <a href="http://www.fjrtvu.edu.cn">福建开放大学</a>
+                                    <a href="https://www.xmcu.edu.cn">厦门开放大学</a>
+                                    <a href="http://www.jxrtvu.com">江西西开放大学</a>
+                                    <a href="http://www.qdopenu.cn">青岛开放大学</a>
+                                    <a href="https://www.open.ha.cn">河南开放大学</a>
+                                    <a href="http://www.hubtvu.edu.cn">湖北开放大学</a>
+                                    <a href="http://www.whtvu.com.cn">武汉开放大学</a>
+                                    <a href="http://www.hnrtu.edu.cn">湖南开放大学</a>
+                                    <a href="http://www.gdrtvu.edu.cn">广东开放大学</a>
+                                    <a href="https://www.szou.edu.cn">深圳开放大学</a>
+                                    <a href="http://www.gxou.com.cn">广西开放大学</a>
+                                    <a href="https://www.hainou.cn/">海南开放大学</a>
+                                    <a href="https://www.scou.cn">四川开放大学</a>
+                                    <a href="https://www.cdou.edu.cn/cdou/">成都开放大学</a>
+                                    <a href="http://www.cqdd.cq.cn">重庆开放大学</a>
+                                    <a href="https://www.gztvu.com">贵州开放大学</a>
+                                    <a href="http://www.ynou.cn">云南开放大学</a>
+                                    <a href="http://www.sxrtvu.edu">陕西开放大学</a>
+                                    <a href="http://www.xartvu.sn.cn">西安开放大学</a>
+                                    <a href="http://www.gsrtvu.cn">甘肃开放大学</a>
+                                    <a href="http://www.qhrtvu.edu.cn">青海开放大学</a>
+                                    <a href="http://www.nxtvu.edu.cn">宁夏开放大学</a>
+                                    <a href="https://www.xjou.cn">新疆开放大学</a>
+                                    <a href="https://www.btou.cn/">新疆兵团开放大学</a>
+                                </div>
+                            </div>
+                            <div class="footer-link-city">
+                                <button id="city-btn">重庆开放大学办学体系<span class="triangle-icon"></span></button>
+                                <div class="link-list">
+                                    <a href="https://syxy.cqou.edu.cn/">教育实验学院</a>
+                                    <a href="##">万州学院</a>
+                                    <a href="##">巫山学院</a>
+                                    <a href="http://www.cqpsts.com/Item/list.asp?id=1187">食品医药学院</a>
+                                    <a href="http://www.fltvu.com/">涪陵学院</a>
+                                    <a href="##">垫江学院</a>
+                                    <a href="##">北碚学院</a>
+                                    <a href="##">黔江学院</a>
+                                    <a href="##">南川学院</a>
+                                    <a href="##">大足学院</a>
+                                    <a href="##">永川学院</a>
+                                    <a href="##">武隆学院</a>
+                                    <a href="##">綦江工作站</a>
+                                    <a href="##">江津学院</a>
+                                    <a href="##">酉阳分校</a>
+                                    <a href="##">潼南学院</a>
+                                    <a href="##">合川学院</a>
+                                    <a href="##">彭水学院</a>
+                                    <a href="##">开州学院</a>
+                                    <a href="##">渝中学院</a>
+                                    <a href="##">秀山学院</a>
+                                    <a href="##">城口工作站</a>
+                                    <a href="##">南岸学院</a>
+                                    <a href="http://www.szddjxx.com/">石柱学院</a>
+                                    <a href="##">云阳学院</a>
+                                    <a href="##">沙坪坝学院</a>
+                                    <a href="##">壁山学习中心</a>
+                                    <a href="##">梁平学院</a>
+                                    <a href="##">大渡口学院</a>
+                                    <a href="##">荣昌学院</a>
+                                    <a href="##">忠县工作站</a>
+                                    <a href="##">巴南学院</a>
+                                    <a href="##">江北分校</a>
+                                    <a href="##">巫溪工作站</a>
+                                    <a href="##">渝北学院</a>
+                                    <a href="http://www.cqfjdd.cn/">奉节学院</a>
+                                    <a href="##">丰都学院</a>
+                                    <a href="##">九龙坡学院</a>
+                                    <a href="##">经贸学院</a>
+                                    <a href="##">万盛学习中心</a>
+                                    <a href="##">长寿学院</a>
+                                    <a href="##">建筑工程学院</a>
+                                    <a href="##">重庆工程学院学习中心</a>
+                                    <a href="##">铜梁学院</a>
+                                    <a href="##">企业管理院</a>
+                                    <a href="##">城市建设与管理学院</a>
+                                    <a href="##">重庆水利电力职业技术学院学习中心</a>
+                                    <a href="##">重庆市城市建设高级技工学校学习中心</a>
+                                    <a href="##">四川仪表工业学校学习中心</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <span>版权：重庆开放大学</span>
+                        <span>华岩校区地址：重庆市九龙坡区华龙大道1号 <br>石桥铺校区地址：重庆市九龙坡区石桥铺科园一路9号</span>
+                        <span>邮编：400052</span>
+                        <span><a id="beian" href="https://beian.miit.gov.cn/#/Integrated/index" style="color:#fff;">渝ICP备05003321号-15</a></span>
+                        <span><a id="gabeian" href="https://www.beian.gov.cn/portal/index.do" style="color:#fff;">渝公网安备50010702505614号</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const query = new URLSearchParams(window.location.search);
+            if (query.get('s')) {
+                const mainDom = document.querySelector('.main')
+                const contentDom = document.querySelector('.content')
+                mainDom.style.display = 'none'
+                contentDom.style.display = 'block'
+                const cleanUrl = window.location.href.split('?')[0]; // 去掉查询字符串部分
+                history.replaceState(null, '', cleanUrl);
+              }
+    </script>
+    <script>
+        const schoolDom = document.querySelector('.kaida')
+        const mainDom = document.querySelector('.main')
+        const contentDom = document.querySelector('.content')
+        schoolDom.addEventListener('click', () => {
+            mainDom.style.display = 'none'
+            contentDom.style.display = 'block'
+        })
+    </script>
+</body>
+<script>
+    // 导航菜单和按钮切换
+    const menuBtn = document.getElementById('menu-btn')
+    const menuList = document.getElementById('menu-list')
+    menuBtn.onclick = () => {
+        menuList.style.display = 'flex'
+    }
+    menuList.onmouseleave = () => {
+        menuList.style.display = 'none'
+    }
+    // 二级菜单显示控制
+    [...document.querySelectorAll('.menu-item-wrapper>div')].forEach((item) => {
+        item.addEventListener('mouseover', function (e) {
+            document.querySelector(`#${e.currentTarget.dataset.linkname}`) ? document.querySelector(`#${e.currentTarget.dataset.linkname}`).style.display = 'flex' : ''
+        })
+        item.addEventListener('mouseleave', function (e) {
+            document.querySelector(`#${e.currentTarget.dataset.linkname}`) ? document.querySelector(`#${e.currentTarget.dataset.linkname}`).style.display = 'none' : ''
+        })
+    })
+    // 对全屏banner监听wheel
+    function hiddenBanner(e) {
+        if (e.deltaY > 50) { // 向下滚动
+            e.preventDefault() // 取消滚动本身默认带来的页面滚动效果
+            document.querySelector('.menu-wrapper').setAttribute('id', 'menu-wrapper')
+            document.querySelector('.content-wrapper').setAttribute('id', 'content-wrapper')
+        }
+    }
+    document.querySelector('.full-banner-wrapper').onwheel = hiddenBanner
+    //
+    function showBanner(e) {
+        const scrollTop = document.documentElement.scrollTop
+        if (scrollTop === 0 && e.deltaY < 0) {
+            document.querySelector('.menu-wrapper').setAttribute('id', '')
+            document.querySelector('.content-wrapper').setAttribute('id', '')
+        }
+    }
+    document.querySelector('.content-wrapper').onwheel = showBanner
+
+    // 市校动态与分校动态切换
+    function newsSwitch() {
+        const headNews = document.getElementById('head-news')
+        const branchNews = document.getElementById('branch-news')
+        const headNewsTitleList = document.getElementById('head-news-title-list')
+        const branchNewsTitleList = document.getElementById('branch-news-title-list')
+        const headNewMore = document.getElementById('head-news-more')
+        const branchNewMore = document.getElementById('branch-news-more')
+        headNews.onclick = () => {
+            headNews.setAttribute('class', 'active-news')
+            branchNews.setAttribute('class', '')
+            headNewsTitleList.style.display = 'flex'
+            branchNewsTitleList.style.display = 'none'
+            headNewMore.style.display = 'inline-block'
+            branchNewMore.style.display = 'none'
+        }
+        branchNews.onclick = () => {
+            headNews.setAttribute('class', '')
+            branchNews.setAttribute('class', 'active-news')
+            headNewsTitleList.style.display = 'none'
+            branchNewsTitleList.style.display = 'flex'
+            headNewMore.style.display = 'none'
+            branchNewMore.style.display = 'inline-block'
+        }
+    }
+    newsSwitch()
+
+    // 监听教学与服务模块，鼠标移上去之后切换成动态图
+    function showTeachingIconDy() {
+        [...document.querySelectorAll('.teaching-item-icon img')].forEach((item, index) => {
+            item.addEventListener('mouseover', function () {
+                item.setAttribute('src', `./images/${index + 1}.gif`)
+            })
+            item.addEventListener('mouseout', function () {
+                setTimeout(function () {
+                    item.setAttribute('src', `./images/${index + 1}.png`)
+                }, 2000)
+            })
+        })
+    }
+    showTeachingIconDy()
+    // 监听专题网站模块，鼠标移动至该模块时，底部标题过渡显示
+    function showSiteTitle() {
+        [...document.querySelectorAll('.site-item')].forEach((item, index) => {
+            item.addEventListener('mouseover', () => {
+                [...document.querySelectorAll('.site-item span')][index].style.bottom = '0px'
+            })
+            item.addEventListener('mouseout', () => {
+                [...document.querySelectorAll('.site-item span')][index].style.bottom = '-40px'
+            })
+        })
+    }
+    showSiteTitle()
+    // 底部超链接列表显示与隐藏
+    function showLinkListToggle() {
+        document.getElementById('country-btn').onclick = () => {
+            document.querySelector('.footer-link-country .link-list').style.display = 'flex'
+        }
+        document.getElementById('city-btn').onclick = () => {
+            document.querySelector('.footer-link-city .link-list').style.display = 'flex'
+        }
+        document.querySelector('.footer-link-country').onmouseleave = () => {
+            document.querySelector('.footer-link-country .link-list').style.display = 'none'
+        }
+        document.querySelector('.footer-link-city').onmouseleave = () => {
+            document.querySelector('.footer-link-city .link-list').style.display = 'none'
+        }
+    }
+    showLinkListToggle()
+
+    // 设置所有超链接的跳转方式
+    Array.from(document.getElementsByTagName('a')).forEach((item) => {
+        if (item.getAttribute('target') !== '_self') {
+            item.setAttribute('target', '_blank')
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>云南省招考频道</title>
+		<meta name="description"
+			content="云南省招考频道主要负责组织、管理全省研究生、普通高校、中专学校、成人学校的招生考试工作，组织、管理全省自学考试、教师资格考试、大学英语四（六）级考试以及社会考试工作。" />
+		<meta name="keywords" content="云南省招考频道,云南省招生考试院,云南招考,云南招生,云南招考频道,招考频道,云南招生网" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="https://www.ynzs.cn/icon/icon-ynzs.ico" />
+		<script src="https://www.ynzs.cn/js/vue.min.js" type="text/javascript"></script>
+		<script src="https://www.ynzs.cn/js/layui/layui.js" type="text/javascript"></script>		
+		<script src="https://www.ynzs.cn/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script id="rrbayJs" src="https://www.ynzs.cn/canyou/js/wza.min.js" referrerpolicy="origin" ></script>
+		<link href="https://www.ynzs.cn/js/layui/css/layui.css" rel="stylesheet" media="all" />
+		<link href="https://www.ynzs.cn/css/style.css?v=202405080002" rel="stylesheet" media="all" />
+		<link href="https://www.ynzs.cn/css/style_h5.css?v=2025032103" rel="stylesheet" media="all">
+		<script type="text/javascript">
+			window.onload = function() {
+				var make=window.location.search;
+				var webdiv = document.getElementById("webhtml");
+				var wapdiv = document.getElementById("waphtml");
+				if(make!="?pc"){
+					if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+						webdiv.style.display = "none";
+						wapdiv.style.display = "block";
+					}
+					else{
+						webdiv.style.display = "block";
+						wapdiv.style.display = "none";
+					}
+				}
+				jQuery(".txtMarquee-top").slide({
+					mainCell: ".cxuzhi ul",
+					autoPlay: true,
+					effect: "topMarquee",
+					vis: 5,
+					interTime: 50
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container" id="webhtml" style="display: none;">
+			<!-- 公共头-开始 -->
+			<div class="public-head">
+				<img src="https://www.ynzs.cn/images/bg_top.png" class="bg-head" />
+				<div class="head-body">
+					<div class="head-body-top">
+						<img src="https://www.ynzs.cn/images/img_logo.png" class="head-logo" />
+						<div class="head-right">
+							<p>网站支持IPV6<a id="wzayd"title="网站信息无障碍工具条" href="javascript:;" class="wzayd" accesskey="g">网站无障碍</a><a id="wzaElder" class="wzaElder" style="display: inline-block;" href="javascript:void(0);" accesskey="o">长者模式</a></p>
+							<div class="input-group">
+								<form id="ajaxElement_1_755" action="https://www.ynzs.cn/html/search_result.html" target="_blank">
+									<input id="word" name="word" type="text" class="keyword layui-input"
+										onfocus="this.value=''" id="keyWords" placeholder="关键字" autocomplete="off">
+									<span class="input-group-btn">
+										<button class="layui-btn" id="ajaxElement_1_755" type="button"
+											onclick="document.getElementById('ajaxElement_1_755').submit();return false;"
+											type="submit" target="_blank">
+											<i class="layui-icon layui-icon-search"></i>
+										</button>
+									</span>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- 菜单-开始 -->
+					<div class="meu-nav">
+						<ul class="layui-nav">
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/index.html">首页</a>
+							</li>
+							<li class="layui-nav-item "><a href="https://www.ynzs.cn/html/service_hall.html">服务大厅</a></li>
+							<li class="layui-nav-item "><a href="https://www.ynzs.cn/html/web/xxgk-yjsgk/index.html">信息公开</a>
+								<dl class="layui-nav-child">
+									<dd><a href="https://www.ynzs.cn/html/web/xxgk-yjsgk/index.html">预决算公开</a></dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-crgk/index.html">公示公开</a>
+									</dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item layui-this">
+								<a href="https://www.ynzs.cn/html/web/zkdt-ptgk/index.html">招考动态</a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-ptgk/index.html">普通高考</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-yjsks/index.html">研究生考试</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-ptzsb/index.html">普通专升本</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-crgk/index.html">成人高考</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-wnzgz/index.html">中职、五年制高职</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-ysty/index.html">艺术、体育</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-zxks/index.html">自学考试</a>
+									</dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/html/web/shks-jsjdjks/index.html">社会考试</a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-jsjdjks/index.html">计算机等级考试</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-yyslj/index.html">英语四六级</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-jszgks/index.html">教师资格考试</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-tgjsks/index.html">特岗教师考试</a>
+									</dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/html/web/zcwj/index.html">政策文件</a>
+							</li>
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/html/web/zzjg/index.html">组织机构</a>
+							</li>
+							<li class="layui-nav-item "><a href="https://www.ynzs.cn/html/content/28.html">联系我们</a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="https://www.ynzs.cn/html/content/28.html">处室电话</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/Contact-zkjddh/index.html">招考监督电话</a>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<!-- 菜单-结束 -->
+				</div>
+			</div>
+			<!-- 公共头-结束 -->
+			<div class="public-body">
+				<!-- 页面路径-开始 -->
+				<div class="public-root">
+					<img src="https://www.ynzs.cn/images/icon_nav_home.png" class="home" />
+					您当前位置：
+					<a href="https://www.ynzs.cn/index.html">首页</a><img src="https://www.ynzs.cn/images/icon_nav.png" class="nav-arrow"><a target="" class="nav-text" href="javascript:;">招考动态</a><img src="https://www.ynzs.cn/images/icon_nav.png" class="nav-arrow"><a href="https://www.ynzs.cn/html/web/zkdt-crgk/index.html">成人高考</a>
+				</div>
+				<!-- 页面路径-结束 -->
+				<div class="public-content">
+					<div class="org-article-detail">
+						<div class="org-detail-title">
+							<h1>云南省2026年成人高考答考生问</h1>
+							<div><span>时间：2026年09月01日</span>
+							<span>来源：
+							云南省招生考试院</span></div>
+						</div>
+						<div class="comm-detail-content">
+							<div>
+								<p style="line-height: 1.75em;"><strong>1.云南省2026年成人高考报名时间？</strong></p><p style="line-height: 1.75em;">答：云南省2026年成人高考报名时间为：2026年9月3—11日。考生报名包含注册、报名资格审核、网上缴费3个步骤，其中：</p><p style="line-height: 1.75em;">注册时间：9月3—6日17:00；</p><p style="line-height: 1.75em;">报名、资格审核时间：9月3—9日17:00；</p><p style="line-height: 1.75em;">网上缴费时间：9月10—11日17:00。</p><p><br/></p><p style="line-height: 1.75em;"><strong>2.云南省成人高考报名政策在哪里查看？有哪些咨询渠道？</strong></p><p style="line-height: 1.75em;">答：云南省2026年成人高考有关政策信息均通过<a href="http://www.ynzs.cn" target="_self">云南省招考频道</a>和云南省招生考试院官方微信公众号发布。</p><p style="line-height: 1.75em;">考生可通过阅读报考须知了解报名政策，如有报名政策、资格审核等疑问可咨询报名点，联系方式见《2026年云南省成人高考报名点及联系电话》。如对招生专业、收费、授课地点、上课形式等有疑问，可咨询有关高校，联系方式见《2026年云南省成人高校招生院校咨询及违规举报联系方式》，也可直接在网上报名系统查询。</p><p><br/></p><p style="line-height: 1.75em;"><strong>3.云南省成人高考的招生对象有哪些？</strong></p><p style="line-height: 1.75em;">答：符合下列条件的中国公民可以报名：</p><p style="line-height: 1.75em;">（1）遵守中华人民共和国宪法和法律；</p><p style="line-height: 1.75em;">（2）国家承认学历的各类高、中等学校在校生以外的从业人员和社会其他人员；</p><p style="line-height: 1.75em;">（3）身体健康，生活能自理，不影响所报专业学习。</p><p style="line-height: 1.75em;">（4）具有云南省户籍或持有云南省公安机关签发的有效期内居住证，年满18周岁（2008年12月31日前出生）。</p><p><br/></p><p style="line-height: 1.75em;"><strong>4.哪些人员不得报考成人高考？</strong></p><p style="line-height: 1.75em;">答：以下人员不得报考：</p><p style="line-height: 1.75em;">（1）国家承认学历的各类高等、中等学校（含高职、中专、中职和技工学校）在校生；</p><p style="line-height: 1.75em;">（2）在其他省（自治区、直辖市）重复报考者；</p><p style="line-height: 1.75em;">（3）因违反国家教育考试规定被给予暂停参加成人高校招生考试处理且仍处于停考期者；</p><p style="line-height: 1.75em;">（4）因触犯刑法受到刑事处罚且尚在处罚期内的，不得报考。</p><p><br/></p><p style="line-height: 1.75em;"><strong>5.外省户籍考生可以在云南参加成人高考吗？</strong></p><p style="line-height: 1.75em;">答：外省户籍考生持有云南省公安机关签发的有效期内的居住证，可以在云南报考成人高考。服役地点在云南的现役军人报考，如无云南户籍或居住证，网上报名时应在户籍类型选择“驻滇部队现役军人”，根据系统提示上传军官证（士兵证）、所在部队旅（团）级以上单位政治部门出具的部队同意报考证明原件扫描件，并由考生本人携带身份证和以上材料原件，于9月3—9日17:00前往部队所在地的报名点现场审核。</p><p><br/></p><p style="line-height: 1.75em;"><strong>6.在非户口所在地报考考生应具备什么条件？</strong></p><p style="line-height: 1.75em;">答：考生原则上应选择户口所在地报名点，如确需在非户口所在地报考的，应符合报名点要求，具体请查看各报名点公告或咨询报名点。</p><p><br/></p><p style="line-height: 1.75em;"><strong>7.成人高考具体怎么报名？报名流程是什么？</strong></p><p style="line-height: 1.75em;">答：云南省成人高考报名统一实行网上报名、网上审核、网上缴费，特殊情况系统将提示考生前往现场审核。2026年<a href="https://ck.ynzs.cn/" target="_self">云南省成人高校和成人中专招生考试报名系统</a>地址为https://ck.ynzs.cn/。所有参加统一考试以及申请免试入学的人员，必须由本人按时办理网上报名手续，逾期不补。</p><p style="line-height: 1.75em;">考生可通过<a href="http://www.ynzs.cn" target="_self">云南省招考频道</a>首页顶部点击“服务大厅”后，选择“成人高考”栏目的“在线报名 志愿填报”进入报名系统开始报名，也可以直接进入<a href="https://ck.ynzs.cn/" target="_self">成人高考网上报名系统</a>开始报名。考生须通过成人高考网上报名系统完成报名注册、照片上传、身份验证、志愿填报、资格审核和网上缴费等工作。报名入口将于9月3日开放，建议考生报名时使用360浏览器或谷歌浏览器。</p><p><br/></p><p style="line-height: 1.75em;"><strong>8.考生可以委托他人、机构代为报名吗？有什么风险？</strong></p><p style="line-height: 1.75em;">答：考生报名须本人自主操作，并妥善保管个人账号、密码及验证码。严禁各类中介机构、团体、个人代替考生报名。若自行委托他人代办报名，由此造成的信息泄露、填报错误、审核失败、影响考试及学籍注册等一切后果，均由考生本人自行承担。</p><p><br/></p><p style="line-height: 1.75em;"><strong>9.考生登录密码遗忘怎么办？考生身份证号或手机号被他人注册怎么办？</strong></p><p style="line-height: 1.75em;">答：考生如遗忘报名系统登录密码，可以凭本人身份证号、注册用手机号进行密码找回。如发现身份证号或手机号被占用，应在注册截止时间前凭本人身份证到报名点现场申请注销并重新注册。考生应保持电话畅通，因考生手机停机、关机、变更手机号或未及时浏览短信等造成的后果由考生本人承担。</p><p><br/></p><p style="line-height: 1.75em;"><strong>10.报名信息提交后发现填错了，可以修改吗？</strong></p><p style="line-height: 1.75em;">答：审核截止时间前，审核未通过的考生可以修改除姓名、手机号、身份证号外的有关信息并重新上传符合要求的材料。报名截止、审核通过后，考生因个人原因要求更改相关信息的，不予受理。请考生填报时仔细核对，确保信息准确无误。</p><p><br/></p><p style="line-height: 1.75em;"><strong>11.成人高等学历教育是什么性质? 成人高等学历教育是否国家认可？成人高校与普通高校的毕业证书和学位证书是否一样？</strong></p><p style="line-height: 1.75em;">答：成人高等学历教育为教育部核准的国民教育系列高等学历教育。凡通过全国统一招生考试而取得入学资格，经过在校（籍）学习，达到毕业要求，可获得教育部电子注册、国家承认的成人高校学历文凭。成人高校毕业证书以及学位证书上都标有“成人教育”字样。</p><p><br/></p><p style="line-height: 1.75em;"><strong>12.成人高考培养层次有哪些？有哪些学习形式及学习年限？</strong></p><p style="line-height: 1.75em;">答：云南省成人高校招生有四个层次：专科起点升本科（简称专升本）、高中起点升本科（简称高起本）、高中起点升专科（简称高起专）、成人中专。</p><p style="line-height: 1.75em;">成人高校的学习形式分脱产、非脱产两种，脱产最短学习时间为：高起本四年、高起专和专升本两年，非脱产最短学习时间为：高起本五年、高起专和专升本两年半。成人中专学习年限为一到三年。</p><p style="line-height: 1.75em;">考生报考前应认真了解报考专业的层次、学习形式、修业年限和招生范围，如有疑问及时向招生院校咨询。</p><p><br/></p><p style="line-height: 1.75em;"><strong>13.报考专科起点本科应具有什么学历，如何进行验证？</strong></p><p style="line-height: 1.75em;">答：报考成人高校专升本的考生必须是已取得经教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科毕业证书、本科结业证书或以上证书的人员，其学历证书必须经教育部学历电子注册。</p><p style="line-height: 1.75em;">报名时，考生需注册学信网账号，并下载“学信网”手机APP，在完成照片采集后，使用学信网APP扫描报名系统中的学历验证二维码进行学历验证，由学信网自动反馈验证结果。“学信网”验证不通过的考生，必须上传专科或专科以上毕业证书原件扫描件和与本人信息一致的“学信网”出具的教育部学历证书电子注册备案表或学历认证报告、教育部学籍在线验证报告（学籍状态为毕业状态）；凭国外文凭、港澳台文凭报考专升本的考生提供教育部留学服务中心出具的《国（境）外学历学位认证书》原件扫描件；因变更姓名或身份证号信息导致学历校验未通过的考生，还须上传有更改记录的户口本（簿）或公安机关出具的更改记录材料。同时，还需签署《专升本网上学历验证未通过考生承诺书》。</p><p style="line-height: 1.75em;">根据教育部和云南省有关文件要求，新生入学报到时，高校要使用网上录取系统和省招生考试院提供的考生电子档案信息，核查录取新生的身份、录取通知书、学历文凭、有关证书等入学资格是否符合有关规定。凡前置学历未经教育部学历电子注册以及不符合医学类有关专业报考条件等规定要求的，一律不得予以新生学籍注册。</p><p><br/></p><p style="line-height: 1.75em;"><strong>14.报考专科起点升本科的考生，是否要求与原所学专业一致？</strong></p><p style="line-height: 1.75em;">答：除报考医学门类的考生外，原则上不要求与原所学专业一致。考生应本着从实际工作出发、学以致用的原则报考。</p><p><br/></p><p style="line-height: 1.75em;"><strong>15.报考高起本、高起专需要什么学历？</strong></p><p style="line-height: 1.75em;">答：报考高起本或高起专的考生应具有高级中等教育学校毕业证书或者具有同等学力（年满18周岁）。</p><p><br/></p><p style="line-height: 1.75em;"><strong>16.2026年有哪些成人院校、专业参与招生？</strong></p><p style="line-height: 1.75em;">答：详见《2026年云南省成人高校、成人中专招生专业目录》，也可以在报名系统查询。</p><p><br/></p><p style="line-height: 1.75em;"><strong>17.考生如何填报志愿？</strong></p><p style="line-height: 1.75em;">答：考生在网上报名的同时填报志愿。每个考生可填报一个院校一个专业志愿，志愿应在《2026年云南省成人高校、成人中专招生专业目录》内选择。不在专业目录内的院校和专业不具备招生资格。</p><p style="line-height: 1.75em;">考生应根据自身报考层次、学习意向，自主选择对应院校和专业填报志愿，填报前需仔细查看院校招生章程、专业学习要求及招生范围，确认无误后提交。</p><p><br/></p><p style="line-height: 1.75em;"><strong>18.哪些考生需要现场审核？如何现场审核？</strong></p><p style="line-height: 1.75em;">答：涉及个人身份信息的特殊情况，如手机号或身份证号码被占用、身份信息有误、无云南户籍或居住证的现役军人审核等，需要考生本人携带身份证原件、系统提示有关材料前往报名点现场审核。</p><p style="line-height: 1.75em;">其他考生无须进行现场审核，考生按提示上传报考材料后选择报名点，由报名点网上审核。考生应及时关注网上审核结果，如审核不通过可重新补充有关材料或按报名点意见前往现场审核。</p><p><br/></p><p style="line-height: 1.75em;"><strong>19.成人高考报名考试费标准是多少？</strong></p><p style="line-height: 1.75em;">答：云南省成人高考考生报名时须缴纳报名考试费，标准为25元/科。</p><p style="line-height: 1.75em;">高中起点本、专科报名考试费100元。专升本艺术类报名考试费75元，专升本其他类报名考试费100元。申请免试的考生不收费，免试审核未通过需要参加考试须补交报名考试费100元。</p><p><br/></p><p style="line-height: 1.75em;"><strong>20.哪些考生可以申请免试？</strong></p><p style="line-height: 1.75em;">答：（1）符合以下条件之一的人员，同时具备高中毕业文化程度（专科起点升本科的，应具备教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科或专科以上毕业证书），由考生本人申请，经逐级审核并公示后，可免试进入成人高等学校学习。</p><p style="line-height: 1.75em;">①获得“全国劳动模范” “全国先进工作者”称号，“全国五一劳动奖章”获得者。</p><p style="line-height: 1.75em;">②奥运会、世界杯赛和世界杯锦标赛的奥运会项目前八名获得者、非奥运会项目前六名获得者；亚运会、亚洲杯赛和亚洲锦标赛的奥运会项目前六名获得者，非奥运会项目前三名获得者；全运会、全国锦标赛和全国冠军赛的奥运会项目前三名获得者、非奥运会项目冠军获得者。上述运动员经本人申请并出具省级体育行政部门审核的《优秀运动员申请免试进入成人高等学校学习推荐表》（国家体育总局监制）。</p><p style="line-height: 1.75em;">（2）符合下列条件的人员，凭全日制普通高职（专科）毕业证书、身份证和有关项目考核合格证，经逐级审核并公示后，可申请免试就读云南省省内成人高校专升本。</p><p style="line-height: 1.75em;">①参加“三支一扶”（支教、支农、支医和扶贫）的人员，服务期满凭《高校毕业生“三支一扶”服务合格证书》。</p><p style="line-height: 1.75em;">②参加“大学生志愿服务西部计划”的人员，凭《大学生志愿服务西部计划志愿服务证》。</p><p style="line-height: 1.75em;">③参加“农村义务教育阶段学校教师特设岗位计划”的教师，凭《云南省特岗教师转聘为在编教师审批表》。</p><p style="line-height: 1.75em;">④参加“选聘高校毕业生到村任职”的人员，任期完成后凭县级以上部门颁发的《合格证》。</p><p style="line-height: 1.75em;">（3）退役士兵（自主就业退役士兵、自主择业军转干部、复员干部三类退役军人），凭教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科或专科以上毕业证书、身份证和退役证（义务兵/士官退出现役证、军官转业证书、军官复员证书）和《云南省退役军人申请成人高考专升本免试身份认定表》，经逐级审核、公示后，可申请免试就读云南省省内成人高校专升本。</p><p style="line-height: 1.75em;">（4）申请专升本免试的考生须上传符合条件的专科或专科以上毕业证书及符合免试条件的材料原件扫描件。如专升本学历网上验证未通过的，考生还须上传中国高等教育学历认证报告或教育部学历证书电子注册备案表、教育部学籍在线验证报告（须毕业状态）原件扫描件。</p><p style="line-height: 1.75em;">（5）各类申请免试就读成人高校的人员，如免试申请条件不符合要求或公示不通过，符合报考条件的可向报名点申请参加当年成人高考统一考试。</p><p><br/></p><p style="line-height: 1.75em;"><strong>21.成人高考各层次考试科目有哪些？如何购买考试用书？</strong></p><p style="line-height: 1.75em;">答：（1）专科起点本科考试科目：政治、英语和专业基础课、思想道德修养与法律基础，其中艺术类不加试思想道德修养与法律基础。各科类专业基础课的具体考试科目请通过报名系统查询。也可以在报名结束后下载查阅考生报名登记表。</p><p style="line-height: 1.75em;">（2）高中起点本科考试科目：语文、数学（文、理）、英语、史地综合（或理化综合）。</p><p style="line-height: 1.75em;">（3）高中起点专科考试科目：语文、数学（文、理）、英语、思想道德修养与法律基础。</p><p style="line-height: 1.75em;">（4）专业课加试。除规定的统考科目外，招生院校根据专业要求进行专业课加试。其中<strong>艺术、体育类专业必须加试专业课</strong>，其他专业是否加试由招生院校自行决定。报考需加试专业的考生应及时与招生院校联系，按规定进行加试。专业加试成绩合格的考生才能进行投档录取。</p><p style="line-height: 1.75em;">（5）考试用书购买。教育部统考科目不指定教材，考生可根据考试科目自行至书店或网店购买，注意书籍使用的大纲应为《全国各类成人高等学校招生考试大纲（2024年版）》。《思想道德修养与法律基础》考试用书（2026年版）在<a href="https://ck.ynzs.cn/" target="_self">报名系统</a>上订购，定价25元。<strong>我院对其他渠道购买的盗版和假冒书籍内容的准确性和真实性不负任何责任</strong>。</p><p><br/></p><p style="line-height: 1.75em;"><strong>22.成人高考哪些专业需要进行专业加试？</strong></p><p style="line-height: 1.75em;">答：报考艺术、体育类专业考生，须按招生院校规定的时间和地点参加由招生院校组织的专业课加试。相关专业已在《2026年云南省成人高校、成人中专招生专业目录》中备注。</p><p><br/></p><p style="line-height: 1.75em;"><strong>23. 2026年成人高考考试时间、考试地点如何安排？</strong></p><p style="line-height: 1.75em;">答：2026年成人高考考试时间为2026年10月17—18日。成人高考在全省16个州市安排考点，考点由报名点所在州市根据实际情况统筹安排。</p><p><br/></p><p style="line-height: 1.75em;"><strong>24.国家教育考试中哪些行为是违规行为？哪些行为是触犯《中华人民共和国刑法》的违法行为？</strong></p><p style="line-height: 1.75em;">答：考生应认真学习《中华人民共和国教育法》《国家教育考试违规处理办法》（教育部令第33号）《中华人民共和国刑法》《最高人民法院、最高人民检察院关于办理组织考试作弊等刑事案件适用法律若干问题的解释》等涉及考试违规违纪作弊处理的法律法规，了解考场规则，珍惜个人的诚信记录、名誉及前程，摒弃各种侥幸心理，自觉遵守考点、考场纪律，服从统一管理，共同维护考试环境。</p><p style="line-height: 1.75em;">在成人高考中组织作弊，买卖或提供作弊器材、试题及答案；代替他人或者让他人代替自己参加考试的行为都将触犯刑法，构成犯罪，按照《中华人民共和国刑法》《最高人民法院、最高人民检察院关于办理组织考试作弊等刑事案件适用法律若干问题的解释》等法律规定，将取消所有科目的考试成绩，还将受到停止报名资格、记入诚信档案、纳入失信范围等处罚，情节严重触犯刑法的，将移送司法机关追究法律责任。</p><p style="line-height: 1.75em;"><strong>特别提醒</strong>：考生如有未按规定擅自离开考场、考试结束后继续答题、将试卷带出考场等行为，将取消当次科目考试成绩。严禁携带任何书籍、资料、草稿纸及手机、计算器、智能手表手环、蓝牙耳机等通信、计算、存储设备进入考场，一经发现，将根据违禁物品种类按规定进行处理，取消当次科目甚至所有科目考试成绩。</p><p><br/></p><p style="line-height: 1.75em;"><strong>25.如何查询录取结果？录取通知书什么时候邮寄？</strong></p><p style="line-height: 1.75em;">答：12月下旬开始，考生可通过云南省招考频道或云南省招生考试院微信公众号查询录取结果，各招生院校根据录取结果陆续向考生寄出录取通知书，录取通知书具体邮寄时间可在查询到录取结果后咨询录取院校。</p><p><br/></p><p style="line-height: 1.75em;"><strong>26.学校如何进行新生复查？</strong></p><p style="line-height: 1.75em;">答：已录取的新生报到时须进行新生复查。新生入学注册期间，招生院校负责对已报到的新生信息进行全面复查。对新生报到所需录取通知书、身份证、加分照顾和免试入学资格证明等材料与录取新生名册、电子档案逐一进行比对核查，通过“人证识别”等技术严防冒名顶替。凡不符合条件或弄虚作假、违纪舞弊者，按有关规定取消其入学资格，记入《考生考试诚信档案》。</p><p style="line-height: 1.75em;">专升本考生的专科毕业证书由招生院校负责复查。对不能通过学籍电子注册的专升本新生，必须对考生报名时的最后学历进行复核，不能提供经教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科毕业证书、本科结业证书或以上证书的人员，由招生院校取消其入学资格。</p><p><br/></p><p style="line-height: 1.75em;"><strong>27.成人高考学费如何缴纳？学费标准是多少？</strong></p><p style="line-height: 1.75em;">答：考生录取入校后，每年学费均由就读学校按物价部门批准的收费标准予以收取。具体情况可咨询录取院校。</p><p style="line-height: 1.75em;">特别提醒：考生不要提前将学费交给培训机构或教学点，避免上当受骗。</p><p><br/></p><p style="line-height: 1.75em;"><strong>28.社会机构宣称的“保过、包录取、免学习、快速拿证”可信吗？</strong></p><p style="line-height: 1.75em;">答：成人高考是全国统一考试，无“保过、包过、免考拿证”渠道，所有宣称违规保录、快速拿证的机构均为虚假宣传。考生务必自主报名、诚信备考、谨防诈骗，切勿私下缴纳高额违规费用。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+						<!-- 公共页脚-开始 -->
+			<div class="public-footer">
+				<div class="footer-body">
+					<a href="http://bszs.conac.cn/sitename?method=show&id=512D1BAE019B5A06E053012819ACD62D" target="_blank">
+					<img src="https://www.ynzs.cn/images/blue.png" class="logo" />
+					</a>
+					<div class="text">
+						<p>云南省招生考试院</p>
+						<p>Copyright © 2008-2026 www.ynzs.cn All Rights Reserved</p>
+						<p>
+							昆明市五华区学府路61号  邮编：650223
+						</p>
+						<p>
+							<a href="https://beian.miit.gov.cn/" target="_blank">网站备案号：滇ICP备06002948号-1</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							<img src="https://www.ynzs.cn/images/beian.png"/>
+							<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53010202001056" target="_blank">滇公网安备 53010202001056号</a>
+						</p>
+					</div>
+					<ul class="count">
+					 <li class="count-item"><h3 id="DataCountToday"></h3> 今日浏览量（次）</li>
+					 <li class="count-item"><h3 id="DataCountYear"></h3> 今年浏览量（次）</li>
+					 <script type="text/javascript">
+					 	$(document).ready(function(){
+					 		getData();
+					 		setInterval(function(){
+					 			getData();
+					 		},3000000);
+					 	});
+					 	function getData(){
+					 		$.ajax({
+					 		  url: 'https://apis.ynzs.cn/api/v1/Tj/getdataresult', 
+					 		  type: 'GET',
+					 		  dataType: 'json',
+					 		  success: function(data) { 
+					 			$('#DataCountToday').html(data.data.day.toLocaleString());
+					 			$('#DataCountYear').html(data.data.year.toLocaleString());
+					 		  }
+					 		});
+					 	}
+					 </script>
+					</ul>
+					<div class="images">
+						<div>
+							<img src="https://www.ynzs.cn/images/icon_code01.png" />
+							<p>官方公众号</p>
+						</div>
+					</div>
+					<span style="display:none">
+					<script>var _hmt = _hmt || [];
+						(function() {
+						var hm = document.createElement("script");
+						hm.src = "https://hm.baidu.com/hm.js?3b1bbee1880e6d8244199dc60d06df04";
+						var s = document.getElementsByTagName("script")[0]; 
+						s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+					</span>
+				</div>
+			</div>
+			<!-- 公共页脚-结束 -->
+		</div>
+		<!-- H5开始 -->
+		<div class="clear-overfloat" id="waphtml" style="display: none;">
+			<!-- 顶部 -->
+			<div class="header">
+				<a href="javascript:;" onClick="javascript:history.back(-1);"}><img class="back-icon" src="https://www.ynzs.cn/images/icon_back_g.png"></a>
+				<a href="https://www.ynzs.cn/html/h5/home.html"><img class="home-icon" src="https://www.ynzs.cn/images/icon_home_g.png"></a>
+				<div class="header__text">详情</div>
+			</div>
+			<div class="placeholder"></div>
+			
+			<div class="detail-box">
+				<div class="news-title">
+					<h3 class="ellipsis-2">云南省2026年成人高考答考生问</h3>
+					<h5>2026-09-01 16:40:03</h5>
+				</div>
+				<div class="news-content">
+					<p style="line-height: 1.75em;"><strong>1.云南省2026年成人高考报名时间？</strong></p><p style="line-height: 1.75em;">答：云南省2026年成人高考报名时间为：2026年9月3—11日。考生报名包含注册、报名资格审核、网上缴费3个步骤，其中：</p><p style="line-height: 1.75em;">注册时间：9月3—6日17:00；</p><p style="line-height: 1.75em;">报名、资格审核时间：9月3—9日17:00；</p><p style="line-height: 1.75em;">网上缴费时间：9月10—11日17:00。</p><p><br/></p><p style="line-height: 1.75em;"><strong>2.云南省成人高考报名政策在哪里查看？有哪些咨询渠道？</strong></p><p style="line-height: 1.75em;">答：云南省2026年成人高考有关政策信息均通过<a href="http://www.ynzs.cn" target="_self">云南省招考频道</a>和云南省招生考试院官方微信公众号发布。</p><p style="line-height: 1.75em;">考生可通过阅读报考须知了解报名政策，如有报名政策、资格审核等疑问可咨询报名点，联系方式见《2026年云南省成人高考报名点及联系电话》。如对招生专业、收费、授课地点、上课形式等有疑问，可咨询有关高校，联系方式见《2026年云南省成人高校招生院校咨询及违规举报联系方式》，也可直接在网上报名系统查询。</p><p><br/></p><p style="line-height: 1.75em;"><strong>3.云南省成人高考的招生对象有哪些？</strong></p><p style="line-height: 1.75em;">答：符合下列条件的中国公民可以报名：</p><p style="line-height: 1.75em;">（1）遵守中华人民共和国宪法和法律；</p><p style="line-height: 1.75em;">（2）国家承认学历的各类高、中等学校在校生以外的从业人员和社会其他人员；</p><p style="line-height: 1.75em;">（3）身体健康，生活能自理，不影响所报专业学习。</p><p style="line-height: 1.75em;">（4）具有云南省户籍或持有云南省公安机关签发的有效期内居住证，年满18周岁（2008年12月31日前出生）。</p><p><br/></p><p style="line-height: 1.75em;"><strong>4.哪些人员不得报考成人高考？</strong></p><p style="line-height: 1.75em;">答：以下人员不得报考：</p><p style="line-height: 1.75em;">（1）国家承认学历的各类高等、中等学校（含高职、中专、中职和技工学校）在校生；</p><p style="line-height: 1.75em;">（2）在其他省（自治区、直辖市）重复报考者；</p><p style="line-height: 1.75em;">（3）因违反国家教育考试规定被给予暂停参加成人高校招生考试处理且仍处于停考期者；</p><p style="line-height: 1.75em;">（4）因触犯刑法受到刑事处罚且尚在处罚期内的，不得报考。</p><p><br/></p><p style="line-height: 1.75em;"><strong>5.外省户籍考生可以在云南参加成人高考吗？</strong></p><p style="line-height: 1.75em;">答：外省户籍考生持有云南省公安机关签发的有效期内的居住证，可以在云南报考成人高考。服役地点在云南的现役军人报考，如无云南户籍或居住证，网上报名时应在户籍类型选择“驻滇部队现役军人”，根据系统提示上传军官证（士兵证）、所在部队旅（团）级以上单位政治部门出具的部队同意报考证明原件扫描件，并由考生本人携带身份证和以上材料原件，于9月3—9日17:00前往部队所在地的报名点现场审核。</p><p><br/></p><p style="line-height: 1.75em;"><strong>6.在非户口所在地报考考生应具备什么条件？</strong></p><p style="line-height: 1.75em;">答：考生原则上应选择户口所在地报名点，如确需在非户口所在地报考的，应符合报名点要求，具体请查看各报名点公告或咨询报名点。</p><p><br/></p><p style="line-height: 1.75em;"><strong>7.成人高考具体怎么报名？报名流程是什么？</strong></p><p style="line-height: 1.75em;">答：云南省成人高考报名统一实行网上报名、网上审核、网上缴费，特殊情况系统将提示考生前往现场审核。2026年<a href="https://ck.ynzs.cn/" target="_self">云南省成人高校和成人中专招生考试报名系统</a>地址为https://ck.ynzs.cn/。所有参加统一考试以及申请免试入学的人员，必须由本人按时办理网上报名手续，逾期不补。</p><p style="line-height: 1.75em;">考生可通过<a href="http://www.ynzs.cn" target="_self">云南省招考频道</a>首页顶部点击“服务大厅”后，选择“成人高考”栏目的“在线报名 志愿填报”进入报名系统开始报名，也可以直接进入<a href="https://ck.ynzs.cn/" target="_self">成人高考网上报名系统</a>开始报名。考生须通过成人高考网上报名系统完成报名注册、照片上传、身份验证、志愿填报、资格审核和网上缴费等工作。报名入口将于9月3日开放，建议考生报名时使用360浏览器或谷歌浏览器。</p><p><br/></p><p style="line-height: 1.75em;"><strong>8.考生可以委托他人、机构代为报名吗？有什么风险？</strong></p><p style="line-height: 1.75em;">答：考生报名须本人自主操作，并妥善保管个人账号、密码及验证码。严禁各类中介机构、团体、个人代替考生报名。若自行委托他人代办报名，由此造成的信息泄露、填报错误、审核失败、影响考试及学籍注册等一切后果，均由考生本人自行承担。</p><p><br/></p><p style="line-height: 1.75em;"><strong>9.考生登录密码遗忘怎么办？考生身份证号或手机号被他人注册怎么办？</strong></p><p style="line-height: 1.75em;">答：考生如遗忘报名系统登录密码，可以凭本人身份证号、注册用手机号进行密码找回。如发现身份证号或手机号被占用，应在注册截止时间前凭本人身份证到报名点现场申请注销并重新注册。考生应保持电话畅通，因考生手机停机、关机、变更手机号或未及时浏览短信等造成的后果由考生本人承担。</p><p><br/></p><p style="line-height: 1.75em;"><strong>10.报名信息提交后发现填错了，可以修改吗？</strong></p><p style="line-height: 1.75em;">答：审核截止时间前，审核未通过的考生可以修改除姓名、手机号、身份证号外的有关信息并重新上传符合要求的材料。报名截止、审核通过后，考生因个人原因要求更改相关信息的，不予受理。请考生填报时仔细核对，确保信息准确无误。</p><p><br/></p><p style="line-height: 1.75em;"><strong>11.成人高等学历教育是什么性质? 成人高等学历教育是否国家认可？成人高校与普通高校的毕业证书和学位证书是否一样？</strong></p><p style="line-height: 1.75em;">答：成人高等学历教育为教育部核准的国民教育系列高等学历教育。凡通过全国统一招生考试而取得入学资格，经过在校（籍）学习，达到毕业要求，可获得教育部电子注册、国家承认的成人高校学历文凭。成人高校毕业证书以及学位证书上都标有“成人教育”字样。</p><p><br/></p><p style="line-height: 1.75em;"><strong>12.成人高考培养层次有哪些？有哪些学习形式及学习年限？</strong></p><p style="line-height: 1.75em;">答：云南省成人高校招生有四个层次：专科起点升本科（简称专升本）、高中起点升本科（简称高起本）、高中起点升专科（简称高起专）、成人中专。</p><p style="line-height: 1.75em;">成人高校的学习形式分脱产、非脱产两种，脱产最短学习时间为：高起本四年、高起专和专升本两年，非脱产最短学习时间为：高起本五年、高起专和专升本两年半。成人中专学习年限为一到三年。</p><p style="line-height: 1.75em;">考生报考前应认真了解报考专业的层次、学习形式、修业年限和招生范围，如有疑问及时向招生院校咨询。</p><p><br/></p><p style="line-height: 1.75em;"><strong>13.报考专科起点本科应具有什么学历，如何进行验证？</strong></p><p style="line-height: 1.75em;">答：报考成人高校专升本的考生必须是已取得经教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科毕业证书、本科结业证书或以上证书的人员，其学历证书必须经教育部学历电子注册。</p><p style="line-height: 1.75em;">报名时，考生需注册学信网账号，并下载“学信网”手机APP，在完成照片采集后，使用学信网APP扫描报名系统中的学历验证二维码进行学历验证，由学信网自动反馈验证结果。“学信网”验证不通过的考生，必须上传专科或专科以上毕业证书原件扫描件和与本人信息一致的“学信网”出具的教育部学历证书电子注册备案表或学历认证报告、教育部学籍在线验证报告（学籍状态为毕业状态）；凭国外文凭、港澳台文凭报考专升本的考生提供教育部留学服务中心出具的《国（境）外学历学位认证书》原件扫描件；因变更姓名或身份证号信息导致学历校验未通过的考生，还须上传有更改记录的户口本（簿）或公安机关出具的更改记录材料。同时，还需签署《专升本网上学历验证未通过考生承诺书》。</p><p style="line-height: 1.75em;">根据教育部和云南省有关文件要求，新生入学报到时，高校要使用网上录取系统和省招生考试院提供的考生电子档案信息，核查录取新生的身份、录取通知书、学历文凭、有关证书等入学资格是否符合有关规定。凡前置学历未经教育部学历电子注册以及不符合医学类有关专业报考条件等规定要求的，一律不得予以新生学籍注册。</p><p><br/></p><p style="line-height: 1.75em;"><strong>14.报考专科起点升本科的考生，是否要求与原所学专业一致？</strong></p><p style="line-height: 1.75em;">答：除报考医学门类的考生外，原则上不要求与原所学专业一致。考生应本着从实际工作出发、学以致用的原则报考。</p><p><br/></p><p style="line-height: 1.75em;"><strong>15.报考高起本、高起专需要什么学历？</strong></p><p style="line-height: 1.75em;">答：报考高起本或高起专的考生应具有高级中等教育学校毕业证书或者具有同等学力（年满18周岁）。</p><p><br/></p><p style="line-height: 1.75em;"><strong>16.2026年有哪些成人院校、专业参与招生？</strong></p><p style="line-height: 1.75em;">答：详见《2026年云南省成人高校、成人中专招生专业目录》，也可以在报名系统查询。</p><p><br/></p><p style="line-height: 1.75em;"><strong>17.考生如何填报志愿？</strong></p><p style="line-height: 1.75em;">答：考生在网上报名的同时填报志愿。每个考生可填报一个院校一个专业志愿，志愿应在《2026年云南省成人高校、成人中专招生专业目录》内选择。不在专业目录内的院校和专业不具备招生资格。</p><p style="line-height: 1.75em;">考生应根据自身报考层次、学习意向，自主选择对应院校和专业填报志愿，填报前需仔细查看院校招生章程、专业学习要求及招生范围，确认无误后提交。</p><p><br/></p><p style="line-height: 1.75em;"><strong>18.哪些考生需要现场审核？如何现场审核？</strong></p><p style="line-height: 1.75em;">答：涉及个人身份信息的特殊情况，如手机号或身份证号码被占用、身份信息有误、无云南户籍或居住证的现役军人审核等，需要考生本人携带身份证原件、系统提示有关材料前往报名点现场审核。</p><p style="line-height: 1.75em;">其他考生无须进行现场审核，考生按提示上传报考材料后选择报名点，由报名点网上审核。考生应及时关注网上审核结果，如审核不通过可重新补充有关材料或按报名点意见前往现场审核。</p><p><br/></p><p style="line-height: 1.75em;"><strong>19.成人高考报名考试费标准是多少？</strong></p><p style="line-height: 1.75em;">答：云南省成人高考考生报名时须缴纳报名考试费，标准为25元/科。</p><p style="line-height: 1.75em;">高中起点本、专科报名考试费100元。专升本艺术类报名考试费75元，专升本其他类报名考试费100元。申请免试的考生不收费，免试审核未通过需要参加考试须补交报名考试费100元。</p><p><br/></p><p style="line-height: 1.75em;"><strong>20.哪些考生可以申请免试？</strong></p><p style="line-height: 1.75em;">答：（1）符合以下条件之一的人员，同时具备高中毕业文化程度（专科起点升本科的，应具备教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科或专科以上毕业证书），由考生本人申请，经逐级审核并公示后，可免试进入成人高等学校学习。</p><p style="line-height: 1.75em;">①获得“全国劳动模范” “全国先进工作者”称号，“全国五一劳动奖章”获得者。</p><p style="line-height: 1.75em;">②奥运会、世界杯赛和世界杯锦标赛的奥运会项目前八名获得者、非奥运会项目前六名获得者；亚运会、亚洲杯赛和亚洲锦标赛的奥运会项目前六名获得者，非奥运会项目前三名获得者；全运会、全国锦标赛和全国冠军赛的奥运会项目前三名获得者、非奥运会项目冠军获得者。上述运动员经本人申请并出具省级体育行政部门审核的《优秀运动员申请免试进入成人高等学校学习推荐表》（国家体育总局监制）。</p><p style="line-height: 1.75em;">（2）符合下列条件的人员，凭全日制普通高职（专科）毕业证书、身份证和有关项目考核合格证，经逐级审核并公示后，可申请免试就读云南省省内成人高校专升本。</p><p style="line-height: 1.75em;">①参加“三支一扶”（支教、支农、支医和扶贫）的人员，服务期满凭《高校毕业生“三支一扶”服务合格证书》。</p><p style="line-height: 1.75em;">②参加“大学生志愿服务西部计划”的人员，凭《大学生志愿服务西部计划志愿服务证》。</p><p style="line-height: 1.75em;">③参加“农村义务教育阶段学校教师特设岗位计划”的教师，凭《云南省特岗教师转聘为在编教师审批表》。</p><p style="line-height: 1.75em;">④参加“选聘高校毕业生到村任职”的人员，任期完成后凭县级以上部门颁发的《合格证》。</p><p style="line-height: 1.75em;">（3）退役士兵（自主就业退役士兵、自主择业军转干部、复员干部三类退役军人），凭教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科或专科以上毕业证书、身份证和退役证（义务兵/士官退出现役证、军官转业证书、军官复员证书）和《云南省退役军人申请成人高考专升本免试身份认定表》，经逐级审核、公示后，可申请免试就读云南省省内成人高校专升本。</p><p style="line-height: 1.75em;">（4）申请专升本免试的考生须上传符合条件的专科或专科以上毕业证书及符合免试条件的材料原件扫描件。如专升本学历网上验证未通过的，考生还须上传中国高等教育学历认证报告或教育部学历证书电子注册备案表、教育部学籍在线验证报告（须毕业状态）原件扫描件。</p><p style="line-height: 1.75em;">（5）各类申请免试就读成人高校的人员，如免试申请条件不符合要求或公示不通过，符合报考条件的可向报名点申请参加当年成人高考统一考试。</p><p><br/></p><p style="line-height: 1.75em;"><strong>21.成人高考各层次考试科目有哪些？如何购买考试用书？</strong></p><p style="line-height: 1.75em;">答：（1）专科起点本科考试科目：政治、英语和专业基础课、思想道德修养与法律基础，其中艺术类不加试思想道德修养与法律基础。各科类专业基础课的具体考试科目请通过报名系统查询。也可以在报名结束后下载查阅考生报名登记表。</p><p style="line-height: 1.75em;">（2）高中起点本科考试科目：语文、数学（文、理）、英语、史地综合（或理化综合）。</p><p style="line-height: 1.75em;">（3）高中起点专科考试科目：语文、数学（文、理）、英语、思想道德修养与法律基础。</p><p style="line-height: 1.75em;">（4）专业课加试。除规定的统考科目外，招生院校根据专业要求进行专业课加试。其中<strong>艺术、体育类专业必须加试专业课</strong>，其他专业是否加试由招生院校自行决定。报考需加试专业的考生应及时与招生院校联系，按规定进行加试。专业加试成绩合格的考生才能进行投档录取。</p><p style="line-height: 1.75em;">（5）考试用书购买。教育部统考科目不指定教材，考生可根据考试科目自行至书店或网店购买，注意书籍使用的大纲应为《全国各类成人高等学校招生考试大纲（2024年版）》。《思想道德修养与法律基础》考试用书（2026年版）在<a href="https://ck.ynzs.cn/" target="_self">报名系统</a>上订购，定价25元。<strong>我院对其他渠道购买的盗版和假冒书籍内容的准确性和真实性不负任何责任</strong>。</p><p><br/></p><p style="line-height: 1.75em;"><strong>22.成人高考哪些专业需要进行专业加试？</strong></p><p style="line-height: 1.75em;">答：报考艺术、体育类专业考生，须按招生院校规定的时间和地点参加由招生院校组织的专业课加试。相关专业已在《2026年云南省成人高校、成人中专招生专业目录》中备注。</p><p><br/></p><p style="line-height: 1.75em;"><strong>23. 2026年成人高考考试时间、考试地点如何安排？</strong></p><p style="line-height: 1.75em;">答：2026年成人高考考试时间为2026年10月17—18日。成人高考在全省16个州市安排考点，考点由报名点所在州市根据实际情况统筹安排。</p><p><br/></p><p style="line-height: 1.75em;"><strong>24.国家教育考试中哪些行为是违规行为？哪些行为是触犯《中华人民共和国刑法》的违法行为？</strong></p><p style="line-height: 1.75em;">答：考生应认真学习《中华人民共和国教育法》《国家教育考试违规处理办法》（教育部令第33号）《中华人民共和国刑法》《最高人民法院、最高人民检察院关于办理组织考试作弊等刑事案件适用法律若干问题的解释》等涉及考试违规违纪作弊处理的法律法规，了解考场规则，珍惜个人的诚信记录、名誉及前程，摒弃各种侥幸心理，自觉遵守考点、考场纪律，服从统一管理，共同维护考试环境。</p><p style="line-height: 1.75em;">在成人高考中组织作弊，买卖或提供作弊器材、试题及答案；代替他人或者让他人代替自己参加考试的行为都将触犯刑法，构成犯罪，按照《中华人民共和国刑法》《最高人民法院、最高人民检察院关于办理组织考试作弊等刑事案件适用法律若干问题的解释》等法律规定，将取消所有科目的考试成绩，还将受到停止报名资格、记入诚信档案、纳入失信范围等处罚，情节严重触犯刑法的，将移送司法机关追究法律责任。</p><p style="line-height: 1.75em;"><strong>特别提醒</strong>：考生如有未按规定擅自离开考场、考试结束后继续答题、将试卷带出考场等行为，将取消当次科目考试成绩。严禁携带任何书籍、资料、草稿纸及手机、计算器、智能手表手环、蓝牙耳机等通信、计算、存储设备进入考场，一经发现，将根据违禁物品种类按规定进行处理，取消当次科目甚至所有科目考试成绩。</p><p><br/></p><p style="line-height: 1.75em;"><strong>25.如何查询录取结果？录取通知书什么时候邮寄？</strong></p><p style="line-height: 1.75em;">答：12月下旬开始，考生可通过云南省招考频道或云南省招生考试院微信公众号查询录取结果，各招生院校根据录取结果陆续向考生寄出录取通知书，录取通知书具体邮寄时间可在查询到录取结果后咨询录取院校。</p><p><br/></p><p style="line-height: 1.75em;"><strong>26.学校如何进行新生复查？</strong></p><p style="line-height: 1.75em;">答：已录取的新生报到时须进行新生复查。新生入学注册期间，招生院校负责对已报到的新生信息进行全面复查。对新生报到所需录取通知书、身份证、加分照顾和免试入学资格证明等材料与录取新生名册、电子档案逐一进行比对核查，通过“人证识别”等技术严防冒名顶替。凡不符合条件或弄虚作假、违纪舞弊者，按有关规定取消其入学资格，记入《考生考试诚信档案》。</p><p style="line-height: 1.75em;">专升本考生的专科毕业证书由招生院校负责复查。对不能通过学籍电子注册的专升本新生，必须对考生报名时的最后学历进行复核，不能提供经教育部审定核准的国民教育系列高等学校、高等教育自学考试机构颁发的专科毕业证书、本科结业证书或以上证书的人员，由招生院校取消其入学资格。</p><p><br/></p><p style="line-height: 1.75em;"><strong>27.成人高考学费如何缴纳？学费标准是多少？</strong></p><p style="line-height: 1.75em;">答：考生录取入校后，每年学费均由就读学校按物价部门批准的收费标准予以收取。具体情况可咨询录取院校。</p><p style="line-height: 1.75em;">特别提醒：考生不要提前将学费交给培训机构或教学点，避免上当受骗。</p><p><br/></p><p style="line-height: 1.75em;"><strong>28.社会机构宣称的“保过、包录取、免学习、快速拿证”可信吗？</strong></p><p style="line-height: 1.75em;">答：成人高考是全国统一考试，无“保过、包过、免考拿证”渠道，所有宣称违规保录、快速拿证的机构均为虚假宣传。考生务必自主报名、诚信备考、谨防诈骗，切勿私下缴纳高额违规费用。</p>
+				</div>
+			</div>
+		</div>
+		<!-- H5结束 -->
+	</body>
+</html>

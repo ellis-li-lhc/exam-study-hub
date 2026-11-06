@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="11">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_12005"> 
+                          <td >12005</td> 
+                          <td >安徽理工大学</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽机电职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12006"> 
+                          <td >12006</td> 
+                          <td >安徽理工大学</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽工业职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12007"> 
+                          <td >12007</td> 
+                          <td >安徽理工大学</td> 
+                          <td >车辆工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12008"> 
+                          <td >12008</td> 
+                          <td >安徽理工大学</td> 
+                          <td >车辆工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12009"> 
+                          <td >12009</td> 
+                          <td >安徽理工大学</td> 
+                          <td >车辆工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽机电职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12010"> 
+                          <td >12010</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12011"> 
+                          <td >12011</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学滁州市机械工业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12012"> 
+                          <td >12012</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学蚌埠工业与商贸职业技术学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12013"> 
+                          <td >12013</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学淮北职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12014"> 
+                          <td >12014</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12015"> 
+                          <td >12015</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽机电职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12016"> 
+                          <td >12016</td> 
+                          <td >安徽理工大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽工业职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12017"> 
+                          <td >12017</td> 
+                          <td >安徽理工大学</td> 
+                          <td >机器人工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12018"> 
+                          <td >12018</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12019"> 
+                          <td >12019</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学滁州市机械工业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12020"> 
+                          <td >12020</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学蚌埠工业与商贸职业技术学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12021"> 
+                          <td >12021</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学淮北职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12022"> 
+                          <td >12022</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12023"> 
+                          <td >12023</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽机电职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12024"> 
+                          <td >12024</td> 
+                          <td >安徽理工大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽工业职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12025"> 
+                          <td >12025</td> 
+                          <td >安徽理工大学</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12026"> 
+                          <td >12026</td> 
+                          <td >安徽理工大学</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学滁州市机械工业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12027"> 
+                          <td >12027</td> 
+                          <td >安徽理工大学</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学蚌埠工业与商贸职业技术学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12028"> 
+                          <td >12028</td> 
+                          <td >安徽理工大学</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学淮北职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12029"> 
+                          <td >12029</td> 
+                          <td >安徽理工大学</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12030"> 
+                          <td >12030</td> 
+                          <td >安徽理工大学</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽工业职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12031"> 
+                          <td >12031</td> 
+                          <td >安徽理工大学</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12032"> 
+                          <td >12032</td> 
+                          <td >安徽理工大学</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学滁州市机械工业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12033"> 
+                          <td >12033</td> 
+                          <td >安徽理工大学</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学蚌埠工业与商贸职业技术学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12034"> 
+                          <td >12034</td> 
+                          <td >安徽理工大学</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学淮北职业技术学院校外教学点</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12005&nbsp;安徽理工大学&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学安徽机电职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12006&nbsp;安徽理工大学&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学安徽工业职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12007&nbsp;安徽理工大学&nbsp;&nbsp;车辆工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学校本部教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12008&nbsp;安徽理工大学&nbsp;&nbsp;车辆工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12009&nbsp;安徽理工大学&nbsp;&nbsp;车辆工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学安徽机电职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12010&nbsp;安徽理工大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学校本部教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12011&nbsp;安徽理工大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学滁州市机械工业学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12012&nbsp;安徽理工大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学蚌埠工业与商贸职业技术学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12013&nbsp;安徽理工大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学淮北职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12014&nbsp;安徽理工大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加�

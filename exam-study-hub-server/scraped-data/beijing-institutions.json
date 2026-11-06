@@ -1,0 +1,784 @@
+[
+  {
+    "province": "beijing",
+    "institution_code": "001",
+    "institution_name": "北京市东城区职工业余大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/001/00170?schoolcode=001&specialtycode=00170&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/001/00171?schoolcode=001&specialtycode=00171&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/001/00172?schoolcode=001&specialtycode=00172&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "002",
+    "institution_name": "北京市西城经济科学大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/002/00270?schoolcode=002&specialtycode=00270&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "004",
+    "institution_name": "北京宣武红旗业余大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/004/00470?schoolcode=004&specialtycode=00470&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "005",
+    "institution_name": "北京市朝阳区职工大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/005/00570?schoolcode=005&specialtycode=00570&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/005/00571?schoolcode=005&specialtycode=00571&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "008",
+    "institution_name": "北京市石景山区业余大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/008/00871?schoolcode=008&specialtycode=00871&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/008/00870?schoolcode=008&specialtycode=00870&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "011",
+    "institution_name": "北京市总工会职工大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/011/01170?schoolcode=011&specialtycode=01170&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "018",
+    "institution_name": "首钢工学院",
+    "city": "北京",
+    "national_institution_code": "4111011831",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/018/01870?schoolcode=018&specialtycode=01870&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "024",
+    "institution_name": "北京医药职工大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/024/02470?schoolcode=024&specialtycode=02470&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "046",
+    "institution_name": "首都联合职工大学",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/046/04670?schoolcode=046&specialtycode=04670&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/046/04671?schoolcode=046&specialtycode=04671&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/046/04672?schoolcode=046&specialtycode=04672&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/046/04673?schoolcode=046&specialtycode=04673&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "051",
+    "institution_name": "首都医科大学",
+    "city": "北京",
+    "national_institution_code": "4111010025",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/051/05170?schoolcode=051&specialtycode=05170&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/051/05172?schoolcode=051&specialtycode=05172&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/051/05175?schoolcode=051&specialtycode=05175&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/051/05176?schoolcode=051&specialtycode=05176&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "052",
+    "institution_name": "首都师范大学",
+    "city": "北京",
+    "national_institution_code": "4111010028",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/052/05260?schoolcode=052&specialtycode=05260&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/052/05261?schoolcode=052&specialtycode=05261&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "057",
+    "institution_name": "北京农学院",
+    "city": "北京",
+    "national_institution_code": "4111010020",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/057/05770?schoolcode=057&specialtycode=05770&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/057/05771?schoolcode=057&specialtycode=05771&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/057/05772?schoolcode=057&specialtycode=05772&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "068",
+    "institution_name": "北京联合大学",
+    "city": "北京",
+    "national_institution_code": "4111011417",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06861?schoolcode=068&specialtycode=06861&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06862?schoolcode=068&specialtycode=06862&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06864?schoolcode=068&specialtycode=06864&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06865?schoolcode=068&specialtycode=06865&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06866?schoolcode=068&specialtycode=06866&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06863?schoolcode=068&specialtycode=06863&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/068/06860?schoolcode=068&specialtycode=06860&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "078",
+    "institution_name": "北京物资学院",
+    "city": "北京",
+    "national_institution_code": "4111010037",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/078/07871?schoolcode=078&specialtycode=07871&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/078/07872?schoolcode=078&specialtycode=07872&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/078/07873?schoolcode=078&specialtycode=07873&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/078/07870?schoolcode=078&specialtycode=07870&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "079",
+    "institution_name": "北京信息科技大学",
+    "city": "北京",
+    "national_institution_code": "4111011232",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/079/07973?schoolcode=079&specialtycode=07973&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/079/07974?schoolcode=079&specialtycode=07974&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/079/07975?schoolcode=079&specialtycode=07975&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/079/07970?schoolcode=079&specialtycode=07970&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/079/07971?schoolcode=079&specialtycode=07971&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/079/07972?schoolcode=079&specialtycode=07972&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "083",
+    "institution_name": "北京电影学院",
+    "city": "北京",
+    "national_institution_code": "4111010050",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/083/08370?schoolcode=083&specialtycode=08370&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/083/08371?schoolcode=083&specialtycode=08371&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/083/08372?schoolcode=083&specialtycode=08372&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "084",
+    "institution_name": "中国戏曲学院",
+    "city": "北京",
+    "national_institution_code": "4111010049",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08481?schoolcode=084&specialtycode=08481&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08470?schoolcode=084&specialtycode=08470&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08471?schoolcode=084&specialtycode=08471&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08472?schoolcode=084&specialtycode=08472&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08473?schoolcode=084&specialtycode=08473&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08474?schoolcode=084&specialtycode=08474&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08475?schoolcode=084&specialtycode=08475&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08476?schoolcode=084&specialtycode=08476&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08477?schoolcode=084&specialtycode=08477&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08478?schoolcode=084&specialtycode=08478&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08479?schoolcode=084&specialtycode=08479&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/084/08480?schoolcode=084&specialtycode=08480&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "085",
+    "institution_name": "北京舞蹈学院",
+    "city": "北京",
+    "national_institution_code": "4111010051",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/085/08570?schoolcode=085&specialtycode=08570&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/085/08571?schoolcode=085&specialtycode=08571&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/085/08572?schoolcode=085&specialtycode=08572&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "087",
+    "institution_name": "北京石油化工学院",
+    "city": "北京",
+    "national_institution_code": "4111010017",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/087/08770?schoolcode=087&specialtycode=08770&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/087/08771?schoolcode=087&specialtycode=08771&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/087/08772?schoolcode=087&specialtycode=08772&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "088",
+    "institution_name": "北京印刷学院",
+    "city": "北京",
+    "national_institution_code": "4111010015",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08875?schoolcode=088&specialtycode=08875&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08876?schoolcode=088&specialtycode=08876&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08877?schoolcode=088&specialtycode=08877&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08871?schoolcode=088&specialtycode=08871&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08872?schoolcode=088&specialtycode=08872&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08873?schoolcode=088&specialtycode=08873&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08874?schoolcode=088&specialtycode=08874&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08870?schoolcode=088&specialtycode=08870&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/088/08878?schoolcode=088&specialtycode=08878&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "160",
+    "institution_name": "北京教育学院",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/160/16070?schoolcode=160&specialtycode=16070&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/160/16071?schoolcode=160&specialtycode=16071&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/160/16075?schoolcode=160&specialtycode=16075&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/160/16073?schoolcode=160&specialtycode=16073&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/160/16072?schoolcode=160&specialtycode=16072&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/160/16074?schoolcode=160&specialtycode=16074&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "161",
+    "institution_name": "北京金融科技学院",
+    "city": "北京",
+    "national_institution_code": "4111013630",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/161/16170?schoolcode=161&specialtycode=16170&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/161/16171?schoolcode=161&specialtycode=16171&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/161/16173?schoolcode=161&specialtycode=16173&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/161/16174?schoolcode=161&specialtycode=16174&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/161/16172?schoolcode=161&specialtycode=16172&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/161/16175?schoolcode=161&specialtycode=16175&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "243",
+    "institution_name": "中国消防救援学院",
+    "city": "北京",
+    "national_institution_code": "4111010039",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/243/24370?schoolcode=243&specialtycode=24370&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/243/24371?schoolcode=243&specialtycode=24371&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/243/24372?schoolcode=243&specialtycode=24372&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "260",
+    "institution_name": "北京体育大学",
+    "city": "北京",
+    "national_institution_code": "4111010043",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/260/26070?schoolcode=260&specialtycode=26070&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/260/26071?schoolcode=260&specialtycode=26071&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/260/26072?schoolcode=260&specialtycode=26072&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/260/26073?schoolcode=260&specialtycode=26073&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "266",
+    "institution_name": "中央戏剧学院",
+    "city": "北京",
+    "national_institution_code": "4111010048",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/266/26670?schoolcode=266&specialtycode=26670&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/266/26671?schoolcode=266&specialtycode=26671&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "273",
+    "institution_name": "北京师范大学",
+    "city": "北京",
+    "national_institution_code": "4111010027",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/273/27370?schoolcode=273&specialtycode=27370&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/273/27371?schoolcode=273&specialtycode=27371&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/273/27373?schoolcode=273&specialtycode=27373&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/273/27372?schoolcode=273&specialtycode=27372&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "274",
+    "institution_name": "北京化工大学",
+    "city": "北京",
+    "national_institution_code": "4111010010",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27479?schoolcode=274&specialtycode=27479&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27480?schoolcode=274&specialtycode=27480&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27481?schoolcode=274&specialtycode=27481&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27482?schoolcode=274&specialtycode=27482&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27470?schoolcode=274&specialtycode=27470&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27471?schoolcode=274&specialtycode=27471&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27472?schoolcode=274&specialtycode=27472&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27473?schoolcode=274&specialtycode=27473&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27474?schoolcode=274&specialtycode=27474&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27475?schoolcode=274&specialtycode=27475&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27476?schoolcode=274&specialtycode=27476&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27477?schoolcode=274&specialtycode=27477&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/274/27478?schoolcode=274&specialtycode=27478&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "276",
+    "institution_name": "北京理工大学",
+    "city": "北京",
+    "national_institution_code": "4111010007",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27670?schoolcode=276&specialtycode=27670&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27671?schoolcode=276&specialtycode=27671&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27672?schoolcode=276&specialtycode=27672&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27673?schoolcode=276&specialtycode=27673&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27674?schoolcode=276&specialtycode=27674&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27675?schoolcode=276&specialtycode=27675&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27676?schoolcode=276&specialtycode=27676&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27677?schoolcode=276&specialtycode=27677&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27678?schoolcode=276&specialtycode=27678&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27679?schoolcode=276&specialtycode=27679&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27680?schoolcode=276&specialtycode=27680&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27681?schoolcode=276&specialtycode=27681&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27682?schoolcode=276&specialtycode=27682&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27683?schoolcode=276&specialtycode=27683&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/276/27684?schoolcode=276&specialtycode=27684&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "277",
+    "institution_name": "北京科技大学",
+    "city": "北京",
+    "national_institution_code": "4111010008",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27770?schoolcode=277&specialtycode=27770&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27771?schoolcode=277&specialtycode=27771&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27772?schoolcode=277&specialtycode=27772&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27776?schoolcode=277&specialtycode=27776&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27777?schoolcode=277&specialtycode=27777&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27778?schoolcode=277&specialtycode=27778&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27780?schoolcode=277&specialtycode=27780&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27781?schoolcode=277&specialtycode=27781&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27782?schoolcode=277&specialtycode=27782&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27773?schoolcode=277&specialtycode=27773&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27779?schoolcode=277&specialtycode=27779&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27783?schoolcode=277&specialtycode=27783&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27774?schoolcode=277&specialtycode=27774&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/277/27775?schoolcode=277&specialtycode=27775&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "278",
+    "institution_name": "北京交通大学",
+    "city": "北京",
+    "national_institution_code": "4111010004",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27878?schoolcode=278&specialtycode=27878&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27879?schoolcode=278&specialtycode=27879&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27880?schoolcode=278&specialtycode=27880&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27881?schoolcode=278&specialtycode=27881&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27870?schoolcode=278&specialtycode=27870&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27871?schoolcode=278&specialtycode=27871&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27872?schoolcode=278&specialtycode=27872&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27873?schoolcode=278&specialtycode=27873&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27874?schoolcode=278&specialtycode=27874&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27875?schoolcode=278&specialtycode=27875&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27876?schoolcode=278&specialtycode=27876&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/278/27877?schoolcode=278&specialtycode=27877&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "282",
+    "institution_name": "北京林业大学",
+    "city": "北京",
+    "national_institution_code": "4111010022",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28270?schoolcode=282&specialtycode=28270&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28280?schoolcode=282&specialtycode=28280&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28281?schoolcode=282&specialtycode=28281&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28282?schoolcode=282&specialtycode=28282&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28283?schoolcode=282&specialtycode=28283&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28284?schoolcode=282&specialtycode=28284&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28285?schoolcode=282&specialtycode=28285&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28286?schoolcode=282&specialtycode=28286&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28287?schoolcode=282&specialtycode=28287&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28271?schoolcode=282&specialtycode=28271&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28272?schoolcode=282&specialtycode=28272&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28273?schoolcode=282&specialtycode=28273&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28274?schoolcode=282&specialtycode=28274&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28275?schoolcode=282&specialtycode=28275&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28276?schoolcode=282&specialtycode=28276&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28277?schoolcode=282&specialtycode=28277&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28278?schoolcode=282&specialtycode=28278&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/282/28279?schoolcode=282&specialtycode=28279&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "284",
+    "institution_name": "中国传媒大学",
+    "city": "北京",
+    "national_institution_code": "4111010033",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28472?schoolcode=284&specialtycode=28472&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28473?schoolcode=284&specialtycode=28473&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28474?schoolcode=284&specialtycode=28474&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28470?schoolcode=284&specialtycode=28470&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28471?schoolcode=284&specialtycode=28471&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28475?schoolcode=284&specialtycode=28475&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28476?schoolcode=284&specialtycode=28476&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/284/28477?schoolcode=284&specialtycode=28477&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "287",
+    "institution_name": "北京中医药大学",
+    "city": "北京",
+    "national_institution_code": "4111010026",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/287/28770?schoolcode=287&specialtycode=28770&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/287/28771?schoolcode=287&specialtycode=28771&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/287/28772?schoolcode=287&specialtycode=28772&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/287/28773?schoolcode=287&specialtycode=28773&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "288",
+    "institution_name": "中国政法大学",
+    "city": "北京",
+    "national_institution_code": "4111010053",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/288/28870?schoolcode=288&specialtycode=28870&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "289",
+    "institution_name": "北京外国语大学",
+    "city": "北京",
+    "national_institution_code": "4111010030",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28973?schoolcode=289&specialtycode=28973&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28974?schoolcode=289&specialtycode=28974&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28975?schoolcode=289&specialtycode=28975&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28976?schoolcode=289&specialtycode=28976&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28977?schoolcode=289&specialtycode=28977&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28978?schoolcode=289&specialtycode=28978&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28972?schoolcode=289&specialtycode=28972&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28970?schoolcode=289&specialtycode=28970&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/289/28971?schoolcode=289&specialtycode=28971&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "292",
+    "institution_name": "对外经济贸易大学",
+    "city": "北京",
+    "national_institution_code": "4111010036",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29270?schoolcode=292&specialtycode=29270&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29271?schoolcode=292&specialtycode=29271&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29272?schoolcode=292&specialtycode=29272&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29273?schoolcode=292&specialtycode=29273&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29274?schoolcode=292&specialtycode=29274&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29275?schoolcode=292&specialtycode=29275&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29276?schoolcode=292&specialtycode=29276&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29277?schoolcode=292&specialtycode=29277&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29278?schoolcode=292&specialtycode=29278&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29279?schoolcode=292&specialtycode=29279&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29280?schoolcode=292&specialtycode=29280&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29281?schoolcode=292&specialtycode=29281&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29282?schoolcode=292&specialtycode=29282&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29283?schoolcode=292&specialtycode=29283&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/292/29284?schoolcode=292&specialtycode=29284&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "293",
+    "institution_name": "中央民族大学",
+    "city": "北京",
+    "national_institution_code": "4111010052",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29370?schoolcode=293&specialtycode=29370&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29371?schoolcode=293&specialtycode=29371&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29372?schoolcode=293&specialtycode=29372&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29373?schoolcode=293&specialtycode=29373&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29374?schoolcode=293&specialtycode=29374&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29376?schoolcode=293&specialtycode=29376&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29377?schoolcode=293&specialtycode=29377&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29378?schoolcode=293&specialtycode=29378&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29379?schoolcode=293&specialtycode=29379&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29380?schoolcode=293&specialtycode=29380&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29381?schoolcode=293&specialtycode=29381&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29382?schoolcode=293&specialtycode=29382&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29383?schoolcode=293&specialtycode=29383&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29384?schoolcode=293&specialtycode=29384&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29385?schoolcode=293&specialtycode=29385&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29375?schoolcode=293&specialtycode=29375&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/293/29386?schoolcode=293&specialtycode=29386&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "294",
+    "institution_name": "中国地质大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011415",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29470?schoolcode=294&specialtycode=29470&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29481?schoolcode=294&specialtycode=29481&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29471?schoolcode=294&specialtycode=29471&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29472?schoolcode=294&specialtycode=29472&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29478?schoolcode=294&specialtycode=29478&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29479?schoolcode=294&specialtycode=29479&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29482?schoolcode=294&specialtycode=29482&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29483?schoolcode=294&specialtycode=29483&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29487?schoolcode=294&specialtycode=29487&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29488?schoolcode=294&specialtycode=29488&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29473?schoolcode=294&specialtycode=29473&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29474?schoolcode=294&specialtycode=29474&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29475?schoolcode=294&specialtycode=29475&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29476?schoolcode=294&specialtycode=29476&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29477?schoolcode=294&specialtycode=29477&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29480?schoolcode=294&specialtycode=29480&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29484?schoolcode=294&specialtycode=29484&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29485?schoolcode=294&specialtycode=29485&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29486?schoolcode=294&specialtycode=29486&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29489?schoolcode=294&specialtycode=29489&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/294/29490?schoolcode=294&specialtycode=29490&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "299",
+    "institution_name": "华北电力大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111010054",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/299/29970?schoolcode=299&specialtycode=29970&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/299/29971?schoolcode=299&specialtycode=29971&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "300",
+    "institution_name": "中国矿业大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011413",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/300/30070?schoolcode=300&specialtycode=30070&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/300/30071?schoolcode=300&specialtycode=30071&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/300/30072?schoolcode=300&specialtycode=30072&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "316",
+    "institution_name": "中央音乐学院",
+    "city": "北京",
+    "national_institution_code": "4111010045",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/316/31670?schoolcode=316&specialtycode=31670&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/316/31671?schoolcode=316&specialtycode=31671&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/316/31672?schoolcode=316&specialtycode=31672&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "317",
+    "institution_name": "中央美术学院",
+    "city": "北京",
+    "national_institution_code": "4111010047",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/317/31770?schoolcode=317&specialtycode=31770&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/317/31771?schoolcode=317&specialtycode=31771&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/317/31772?schoolcode=317&specialtycode=31772&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/317/31773?schoolcode=317&specialtycode=31773&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "318",
+    "institution_name": "中央财经大学",
+    "city": "北京",
+    "national_institution_code": "4111010034",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/318/31870?schoolcode=318&specialtycode=31870&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/318/31871?schoolcode=318&specialtycode=31871&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "382",
+    "institution_name": "中国石油大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011414",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38284?schoolcode=382&specialtycode=38284&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38285?schoolcode=382&specialtycode=38285&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38286?schoolcode=382&specialtycode=38286&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38287?schoolcode=382&specialtycode=38287&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38288?schoolcode=382&specialtycode=38288&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38289?schoolcode=382&specialtycode=38289&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38290?schoolcode=382&specialtycode=38290&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38265?schoolcode=382&specialtycode=38265&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38266?schoolcode=382&specialtycode=38266&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38267?schoolcode=382&specialtycode=38267&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38268?schoolcode=382&specialtycode=38268&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38269?schoolcode=382&specialtycode=38269&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38270?schoolcode=382&specialtycode=38270&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38271?schoolcode=382&specialtycode=38271&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38272?schoolcode=382&specialtycode=38272&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38273?schoolcode=382&specialtycode=38273&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38274?schoolcode=382&specialtycode=38274&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38275?schoolcode=382&specialtycode=38275&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38276?schoolcode=382&specialtycode=38276&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38277?schoolcode=382&specialtycode=38277&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38278?schoolcode=382&specialtycode=38278&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38279?schoolcode=382&specialtycode=38279&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38280?schoolcode=382&specialtycode=38280&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38281?schoolcode=382&specialtycode=38281&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38282?schoolcode=382&specialtycode=38282&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/382/38283?schoolcode=382&specialtycode=38283&examId=6311"
+    ]
+  },
+  {
+    "province": "beijing",
+    "institution_code": "421",
+    "institution_name": "民航管理干部学院",
+    "city": "北京",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+    "source_urls": [
+      "https://query.bjeea.cn/queryService/rest/plan/116/421/42172?schoolcode=421&specialtycode=42172&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/421/42170?schoolcode=421&specialtycode=42170&examId=6311",
+      "https://query.bjeea.cn/queryService/rest/plan/116/421/42171?schoolcode=421&specialtycode=42171&examId=6311"
+    ]
+  }
+]

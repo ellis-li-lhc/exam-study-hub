@@ -33,6 +33,33 @@ def run():
         shandong = db.query(Province).filter_by(code="shandong").one_or_none()
         if shandong is None:
             fail("缺少山东省份记录")
+        from app.routers.admin_data import EXPECTED_COUNTS
+        for code, name in (("hunan", "湖南"), ("jiangxi", "江西"), ("anhui", "安徽"), ("fujian", "福建"), ("sichuan", "四川"), ("chongqing", "重庆"), ("beijing", "北京"), ("guangxi", "广西")):
+            province = db.query(Province).filter_by(code=code).one_or_none()
+            if province is None: fail(f"缺少{name}省份记录")
+            schools = db.query(Institution).filter_by(province_id=province.id).all()
+            counts = {
+                "institution": len(schools),
+                "plan": db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == province.id).count(),
+                "score": db.query(AdmissionScore).join(Institution).filter(Institution.province_id == province.id).count(),
+                "control": db.query(ProvinceControlScore).filter_by(province_id=province.id).count(),
+                "collection": sum(len((school.supplemental_data or {}).get("category_collection_plans", [])) for school in schools),
+            }
+            for key, actual in counts.items():
+                expected = EXPECTED_COUNTS[f"{code}_{key}"]
+                if actual != expected: fail(f"{name}{key}应为 {expected}，实际 {actual}")
+            print(f"{name}校验通过：{counts}")
+        hubei = db.query(Province).filter_by(code="hubei").one_or_none()
+        if hubei is None: fail("缺少湖北省份记录")
+        for label, actual, expected in (
+            ("院校", db.query(Institution).filter_by(province_id=hubei.id).count(), 9),
+            ("目录", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id==hubei.id).count(), 85),
+            ("院校线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id==hubei.id).count(), 0),
+            ("省控线", db.query(ProvinceControlScore).filter_by(province_id=hubei.id).count(), 24),
+            ("科类征集", sum(len((s.supplemental_data or {}).get("category_collection_plans", [])) for s in db.query(Institution).filter_by(province_id=hubei.id)), 25),
+        ):
+            if actual != expected: fail(f"湖北{label}应为 {expected}，实际 {actual}")
+        print("湖北校验通过：9所院校、85条专业目录、24条省控线、25条院校科类征集；暂无院校录取线")
         hebei = db.query(Province).filter_by(code="hebei").one_or_none()
         if hebei is None:
             fail("缺少河北省份记录")

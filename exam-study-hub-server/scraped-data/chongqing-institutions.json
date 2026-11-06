@@ -1,0 +1,434 @@
+[
+  {
+    "province": "chongqing",
+    "institution_code": "10010",
+    "institution_name": "北京化工大学",
+    "city": "北京",
+    "national_institution_code": "4111010010",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10034",
+    "institution_name": "中央财经大学",
+    "city": "北京",
+    "national_institution_code": "4111010034",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10051",
+    "institution_name": "北京舞蹈学院",
+    "city": "北京",
+    "national_institution_code": "4111010051",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10054",
+    "institution_name": "华北电力大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111010054",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10159",
+    "institution_name": "中国医科大学",
+    "city": "沈阳",
+    "national_institution_code": "4121010159",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10163",
+    "institution_name": "沈阳药科大学",
+    "city": "沈阳",
+    "national_institution_code": "4121010163",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10200",
+    "institution_name": "东北师范大学",
+    "city": "长春",
+    "national_institution_code": "4122010200",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10294",
+    "institution_name": "河海大学",
+    "city": "南京",
+    "national_institution_code": "4132010294",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10613",
+    "institution_name": "西南交通大学",
+    "city": "成都",
+    "national_institution_code": "4151010613",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10614",
+    "institution_name": "电子科技大学",
+    "city": "成都",
+    "national_institution_code": "4151010614",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10617",
+    "institution_name": "重庆邮电大学",
+    "city": "重庆",
+    "national_institution_code": "4150010617",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10618",
+    "institution_name": "重庆交通大学",
+    "city": "重庆",
+    "national_institution_code": "4150010618",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10626",
+    "institution_name": "四川农业大学",
+    "city": "雅安",
+    "national_institution_code": "4151010626",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10631",
+    "institution_name": "重庆医科大学",
+    "city": "重庆",
+    "national_institution_code": "4150010631",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10635",
+    "institution_name": "西南大学",
+    "city": "重庆",
+    "national_institution_code": "4150010635",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10637",
+    "institution_name": "重庆师范大学",
+    "city": "重庆",
+    "national_institution_code": "4150010637",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10642",
+    "institution_name": "重庆文理学院",
+    "city": "重庆",
+    "national_institution_code": "4150010642",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10643",
+    "institution_name": "重庆三峡科技大学",
+    "city": "重庆",
+    "national_institution_code": "4150010643",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10647",
+    "institution_name": "长江师范学院",
+    "city": "重庆",
+    "national_institution_code": "4150010647",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10650",
+    "institution_name": "四川外国语大学",
+    "city": "重庆",
+    "national_institution_code": "4150010650",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10651",
+    "institution_name": "西南财经大学",
+    "city": "成都",
+    "national_institution_code": "4151010651",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10652",
+    "institution_name": "西南政法大学",
+    "city": "重庆",
+    "national_institution_code": "4150010652",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "10698",
+    "institution_name": "西安交通大学",
+    "city": "西安",
+    "national_institution_code": "4161010698",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "11105",
+    "institution_name": "中国人民警察大学",
+    "city": "廊坊",
+    "national_institution_code": "4113011105",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "11414",
+    "institution_name": "中国石油大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011414",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "11551",
+    "institution_name": "重庆科技大学",
+    "city": "重庆",
+    "national_institution_code": "4150011551",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "11660",
+    "institution_name": "重庆理工大学",
+    "city": "重庆",
+    "national_institution_code": "4150011660",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "11799",
+    "institution_name": "重庆工商大学",
+    "city": "重庆",
+    "national_institution_code": "4150011799",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "12608",
+    "institution_name": "重庆工程学院",
+    "city": "重庆",
+    "national_institution_code": "4150012608",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "12616",
+    "institution_name": "重庆城市科技学院",
+    "city": "重庆",
+    "national_institution_code": "4150012616",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "13588",
+    "institution_name": "重庆外语外事学院",
+    "city": "重庆",
+    "national_institution_code": "4150013588",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "13589",
+    "institution_name": "重庆对外经贸学院",
+    "city": "重庆",
+    "national_institution_code": "4150013589",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "13591",
+    "institution_name": "重庆工商大学派斯学院",
+    "city": "重庆",
+    "national_institution_code": "4150013591",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "14388",
+    "institution_name": "重庆第二师范学院",
+    "city": "重庆",
+    "national_institution_code": "4150014388",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "14830",
+    "institution_name": "重庆中医药学院",
+    "city": "重庆",
+    "national_institution_code": "4150014830",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  },
+  {
+    "province": "chongqing",
+    "institution_code": "51866",
+    "institution_name": "重庆开放大学",
+    "city": "重庆",
+    "national_institution_code": null,
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "http://www.cqdd.cq.cn",
+    "source_urls": [
+      "https://ck.cqksy.cn/czPage/info_zszy_show"
+    ]
+  }
+]

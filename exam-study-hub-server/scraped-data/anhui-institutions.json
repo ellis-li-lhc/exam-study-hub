@@ -1,0 +1,854 @@
+[
+  {
+    "province": "anhui",
+    "institution_code": "101",
+    "institution_name": "安徽财经大学",
+    "city": "蚌埠",
+    "national_institution_code": "4134010378",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "104",
+    "institution_name": "安徽大学",
+    "city": "合肥",
+    "national_institution_code": "4134010357",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "106",
+    "institution_name": "安徽工程大学",
+    "city": "芜湖",
+    "national_institution_code": "4134010363",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "109",
+    "institution_name": "安徽工业大学",
+    "city": "马鞍山",
+    "national_institution_code": "4134010360",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "111",
+    "institution_name": "安徽开放大学",
+    "city": "合肥",
+    "national_institution_code": null,
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://bm.ahtvu.ah.cn/",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "116",
+    "institution_name": "安徽建筑大学",
+    "city": "合肥",
+    "national_institution_code": "4134010878",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "118",
+    "institution_name": "安徽科技工程大学",
+    "city": "滁州",
+    "national_institution_code": "4134010879",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "120",
+    "institution_name": "安徽理工大学",
+    "city": "淮南",
+    "national_institution_code": "4134010361",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "123",
+    "institution_name": "安徽农业大学",
+    "city": "合肥",
+    "national_institution_code": "4134010364",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "125",
+    "institution_name": "安徽三联学院",
+    "city": "合肥",
+    "national_institution_code": "4134010959",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "128",
+    "institution_name": "安徽师范大学",
+    "city": "芜湖",
+    "national_institution_code": "4134010370",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "129",
+    "institution_name": "安徽外国语学院",
+    "city": "合肥",
+    "national_institution_code": "4134013065",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "132",
+    "institution_name": "安徽新华学院",
+    "city": "合肥",
+    "national_institution_code": "4134012216",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "135",
+    "institution_name": "安徽医科大学",
+    "city": "合肥",
+    "national_institution_code": "4134010366",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "137",
+    "institution_name": "安徽艺术学院",
+    "city": "合肥",
+    "national_institution_code": "4134014682",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "140",
+    "institution_name": "安徽中医药大学",
+    "city": "合肥",
+    "national_institution_code": "4134010369",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "142",
+    "institution_name": "安庆师范大学",
+    "city": "安庆",
+    "national_institution_code": "4134010372",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "144",
+    "institution_name": "蚌埠工商学院",
+    "city": "蚌埠",
+    "national_institution_code": "4134013611",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "146",
+    "institution_name": "蚌埠学院",
+    "city": "蚌埠",
+    "national_institution_code": "4134011305",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "147",
+    "institution_name": "蚌埠医科大学",
+    "city": "蚌埠",
+    "national_institution_code": "4134010367",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "148",
+    "institution_name": "亳州学院",
+    "city": "亳州",
+    "national_institution_code": "4134012926",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "150",
+    "institution_name": "巢湖学院",
+    "city": "合肥",
+    "national_institution_code": "4134010380",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "151",
+    "institution_name": "池州学院",
+    "city": "池州",
+    "national_institution_code": "4134011306",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "154",
+    "institution_name": "滁州学院",
+    "city": "滁州",
+    "national_institution_code": "4134010377",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "157",
+    "institution_name": "阜阳师范大学",
+    "city": "阜阳",
+    "national_institution_code": "4134010371",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "159",
+    "institution_name": "合肥师范学院",
+    "city": "合肥",
+    "national_institution_code": "4134014098",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "163",
+    "institution_name": "合肥大学",
+    "city": "合肥",
+    "national_institution_code": "4134011059",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "164",
+    "institution_name": "合肥城市学院",
+    "city": "合肥",
+    "national_institution_code": "4134013615",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "167",
+    "institution_name": "淮北师范大学",
+    "city": "淮北",
+    "national_institution_code": "4134010373",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "168",
+    "institution_name": "淮北理工学院",
+    "city": "淮北",
+    "national_institution_code": "4134013620",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "170",
+    "institution_name": "淮南师范学院",
+    "city": "淮南",
+    "national_institution_code": "4134010381",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "172",
+    "institution_name": "黄山学院",
+    "city": "黄山",
+    "national_institution_code": "4134010375",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "174",
+    "institution_name": "合肥经济学院",
+    "city": "合肥",
+    "national_institution_code": "4134013616",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "180",
+    "institution_name": "宿州学院",
+    "city": "宿州",
+    "national_institution_code": "4134010379",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "183",
+    "institution_name": "铜陵学院",
+    "city": "铜陵",
+    "national_institution_code": "4134010383",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "185",
+    "institution_name": "皖江工学院",
+    "city": "马鞍山",
+    "national_institution_code": "4134014203",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "186",
+    "institution_name": "皖南医科大学",
+    "city": "芜湖",
+    "national_institution_code": "4134010368",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "187",
+    "institution_name": "皖西学院",
+    "city": "六安",
+    "national_institution_code": "4134010376",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "200",
+    "institution_name": "长江大学",
+    "city": "荆州",
+    "national_institution_code": "4142010489",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "202",
+    "institution_name": "北京理工大学",
+    "city": "北京",
+    "national_institution_code": "4111010007",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "203",
+    "institution_name": "北京外国语大学",
+    "city": "北京",
+    "national_institution_code": "4111010030",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "204",
+    "institution_name": "北京科技大学",
+    "city": "北京",
+    "national_institution_code": "4111010008",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "205",
+    "institution_name": "北京体育大学",
+    "city": "北京",
+    "national_institution_code": "4111010043",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "206",
+    "institution_name": "北京舞蹈学院",
+    "city": "北京",
+    "national_institution_code": "4111010051",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "207",
+    "institution_name": "河海大学",
+    "city": "南京",
+    "national_institution_code": "4132010294",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "208",
+    "institution_name": "南昌航空大学",
+    "city": "南昌",
+    "national_institution_code": "4136010406",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "218",
+    "institution_name": "南京农业大学",
+    "city": "南京",
+    "national_institution_code": "4132010307",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "219",
+    "institution_name": "南京林业大学",
+    "city": "南京",
+    "national_institution_code": "4132010298",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "220",
+    "institution_name": "南京审计大学",
+    "city": "南京",
+    "national_institution_code": "4132011287",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "221",
+    "institution_name": "南京师范大学",
+    "city": "南京",
+    "national_institution_code": "4132010319",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "223",
+    "institution_name": "青岛理工大学",
+    "city": "青岛",
+    "national_institution_code": "4137010429",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "229",
+    "institution_name": "沈阳药科大学",
+    "city": "沈阳",
+    "national_institution_code": "4121010163",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "234",
+    "institution_name": "西安建筑科技大学",
+    "city": "西安",
+    "national_institution_code": "4161010703",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "237",
+    "institution_name": "中国地质大学(武汉)",
+    "city": "武汉",
+    "national_institution_code": "4142010491",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "238",
+    "institution_name": "中国消防救援学院",
+    "city": "北京",
+    "national_institution_code": "4111010039",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "239",
+    "institution_name": "中国矿业大学",
+    "city": "徐州",
+    "national_institution_code": "4132010290",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "240",
+    "institution_name": "中国人民警察大学",
+    "city": "廊坊",
+    "national_institution_code": "4113011105",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "241",
+    "institution_name": "中国石油大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011414",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "245",
+    "institution_name": "中央财经大学",
+    "city": "北京",
+    "national_institution_code": "4111010034",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "246",
+    "institution_name": "中南财经政法大学",
+    "city": "武汉",
+    "national_institution_code": "4142010520",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "251",
+    "institution_name": "武汉理工大学",
+    "city": "武汉",
+    "national_institution_code": "4142010497",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "253",
+    "institution_name": "湖南师范大学",
+    "city": "长沙",
+    "national_institution_code": "4143010542",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "255",
+    "institution_name": "西安电子科技大学",
+    "city": "西安",
+    "national_institution_code": "4161010701",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "256",
+    "institution_name": "西北大学",
+    "city": "西安",
+    "national_institution_code": "4161010697",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "257",
+    "institution_name": "湖北师范大学",
+    "city": "黄石",
+    "national_institution_code": "4142010513",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "258",
+    "institution_name": "武汉工程大学",
+    "city": "武汉",
+    "national_institution_code": "4142010490",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "259",
+    "institution_name": "武汉轻工大学",
+    "city": "武汉",
+    "national_institution_code": "4142010496",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "262",
+    "institution_name": "西北工业大学",
+    "city": "西安",
+    "national_institution_code": "4161010699",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "265",
+    "institution_name": "湖北工业大学",
+    "city": "武汉",
+    "national_institution_code": "4142010500",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "270",
+    "institution_name": "延安大学",
+    "city": "延安",
+    "national_institution_code": "4161010719",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  },
+  {
+    "province": "anhui",
+    "institution_code": "299",
+    "institution_name": "长安大学",
+    "city": "西安",
+    "national_institution_code": "4161010710",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://crbm.ahzsks.cn/enrollMajor"
+    ]
+  }
+]

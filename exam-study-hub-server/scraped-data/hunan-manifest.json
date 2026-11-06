@@ -1,0 +1,58 @@
+{
+  "province": "hunan",
+  "catalog_year": 2026,
+  "counts": {
+    "institutions": 61,
+    "programs": 677,
+    "controls": 16,
+    "category_collections": 238
+  },
+  "sources": [
+    {
+      "path": "sources/hunan/catalog-last-2026.html",
+      "url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798426.htm?div=-1",
+      "sha256": "bc49bab24a8be5c2c8930ee01a50b4d512a2a07ecce524b6ce56ef3196d798df"
+    },
+    {
+      "path": "sources/hunan/catalog-prev-2026.html",
+      "url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798425.htm?div=-1",
+      "sha256": "1036e7b83c615353a49b0a84b825ed36ac3ede2ebc5127dc2bfd0385b22a9641"
+    },
+    {
+      "path": "sources/hunan/controls-2025.html",
+      "url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251205_33863694.html",
+      "sha256": "cfc2aed3c519e47eb6d13933966d5bb8660e687bafa634b80b7d794b683d8195"
+    },
+    {
+      "path": "sources/hunan/controls-2024.html",
+      "url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202412/t20241207_33519858.html",
+      "sha256": "c5a48fd293a04b1b3448c8393c8edc27fb2e2e92c4fe7fd750fe0543c3b5509c"
+    },
+    {
+      "path": "sources/hunan/collection-2025-1.html",
+      "url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251215_33870819.html",
+      "sha256": "99f7f9d48dd3953fdfb38dcd513d2ffd34f701d6326f359356d37a3e852f900b"
+    },
+    {
+      "path": "sources/hunan/collection-2025-2.html",
+      "url": "https://jyt.hunan.gov.cn/jyt/sjyt/hnsjyksy/web/ksyzkzx/202512/t20251222_33876036.html",
+      "sha256": "37300b1da934a4d2f11750897a7769ded43ea3aae11b69a5d3212af9ebd38266"
+    },
+    {
+      "path": "sources/hunan/catalog-page7-2026.html",
+      "url": "https://epaper.voc.com.cn/hnrb/html/2026-08/25/content_1798424.htm?div=-1",
+      "sha256": "b2759aa3a5a016e94fd561a95650c38d8b76d1f36530bf6e99c1868cdee3609a"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    }
+  ],
+  "limitations": [
+    "专业目录非人数计划；未公布字段为null",
+    "暂无院校实际录取分数线",
+    "暂无2027专业目录",
+    "湖南2026专业目录为湖南日报7—9版；未公布人数、学费、学制和专业教学点；历史征集按科类/轮次单列"
+  ]
+}

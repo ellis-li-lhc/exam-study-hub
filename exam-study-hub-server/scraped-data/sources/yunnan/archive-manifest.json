@@ -1,0 +1,40 @@
+{
+  "status": "pending_curriculum_adaptation_not_imported",
+  "sources": [
+    {
+      "path": "notice-2026.html",
+      "url": "https://www.ynzs.cn/html/content/9029.html",
+      "sha256": "ad3657b5a5e33c4f67d07fd6c03e724275b3dd409c7dde6e5b8a07d3f818c456"
+    },
+    {
+      "path": "catalog-2026.xlsx",
+      "url": "https://www.ynzs.cn/upload/files/2026/9/8665c56d7a71871d.xlsx",
+      "sha256": "9c74fc3e1a677e8c5732a68a930a0953d32db081329a20fe09eb5662814e1a04"
+    },
+    {
+      "path": "controls-2025.html",
+      "url": "https://www.ynzs.cn/html/content/8222.html",
+      "sha256": "e605e0e2fdd34d75a659df32ba37b6a825dedb14c3fc40c131be68b8758f1236"
+    },
+    {
+      "path": "controls-2024.html",
+      "url": "https://www.ynzs.cn/html/content/7444.html",
+      "sha256": "f40ff0de4b1c9817248a207989f6398f2ed7631b82d662a949a0c1d59395c68e"
+    },
+    {
+      "path": "controls-2024.png",
+      "url": "https://www.ynzs.cn/upload/images/2024/11/c1420bcc1e5b9a40.png",
+      "sha256": "3830520fad67574817b0e4e63abe1aae939356fdcffd2db9e54c689f7f705d0b"
+    },
+    {
+      "path": "controls-2025.png",
+      "url": "https://www.ynzs.cn/upload/images/2025/11/27214a5f9add856f.png",
+      "sha256": "384581c9e0e453bf7465c5da8d832355637291873b9bd7c9cf9f29177cebe507"
+    },
+    {
+      "path": "faq-2026.html",
+      "url": "https://www.ynzs.cn/html/content/9031.html",
+      "sha256": "f8bd590cdbecd962eb6473afcbd6bbdd52a31b9d8eadba5379b1ef0e9f36fc44"
+    }
+  ]
+}

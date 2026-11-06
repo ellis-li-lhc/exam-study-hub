@@ -7,6 +7,17 @@
 
     <el-alert :title="dataNotice" type="info" show-icon :closable="false" />
 
+    <el-card v-if="categoryCollections.length" shadow="never">
+      <details>
+        <summary>历年院校科类征集计划 · {{ categoryCollections.length }} 条（点击展开）</summary>
+        <p class="supplement-note">这是历史征集余缺人数，只到院校与科类，不代表当前招生人数，也不能分摊为具体专业计划。仅有征集记录的院校不作为专业报考目标。</p>
+        <ul class="supplement-list"><li v-for="row in categoryCollections" :key="`${row.province}-${row.school}-${row.year}-${row.round}-${row.study_form}-${row.category_name}`">
+          {{ provinceName(row.province) }} · {{ row.year }} 年 · {{ row.round }} · {{ row.school }} · {{ row.category_name }} · {{ row.study_form }} · {{ row.plan_count }} 人
+          <a :href="row.source_url" target="_blank" rel="noopener" class="source-link">查看官方征集公告</a>
+        </li></ul>
+      </details>
+    </el-card>
+
     <div class="subject-strip">
       <span><el-icon><Tickets /></el-icon>统考科目</span>
       <el-tag v-for="subject in store.selectedMajor?.subjects" :key="subject" effect="plain">{{ subject }}</el-tag>
@@ -61,12 +72,13 @@
           <div v-if="detailedPlans.length"><dt>专业详情与报考条件</dt><dd>
             <p class="supplement-note">每条记录仅适用于标注年份和批次；未公布的人数、学费及教学点保留为未知。直属、委托培养和职业本科须核对招生对象与条件。</p>
             <ul class="supplement-list"><li v-for="plan in detailedPlans" :key="`${plan.year}-${plan.major_code}-${plan.round}`">
-              <span>{{ plan.year }} 年 · {{ plan.round }} · 专业代码 {{ plan.major_code }}</span><br>
-              <p v-if="plan.institution_code_raw">当年院校编号 {{ plan.institution_code_raw }} · {{ plan.applicant_group }}</p>
+              <span>{{ plan.year }} 年 · {{ plan.round }} · 专业代码 {{ ['hubei', 'hunan', 'jiangxi', 'anhui', 'fujian', 'sichuan', 'chongqing', 'beijing', 'guangxi'].includes(selected.province) ? (plan.major_code_raw || '未公布') : plan.major_code }}</span><br>
+              <p v-if="plan.institution_code_raw">当年院校编号 {{ plan.institution_code_raw }}<span v-if="plan.applicant_group"> · {{ plan.applicant_group }}</span></p>
               <strong>{{ plan.teaching_site || '教学点暂未获取' }}</strong><br>
               {{ tuitionForPlanText(plan) }} · {{ plan.plan_count == null ? '计划人数未公布' : `${plan.plan_count} 人` }}
-              <p v-if="plan.study_duration_raw">学制 {{ plan.study_duration_raw }}<span v-if="plan.minimum_study_duration_raw"> · 最低学习年限 {{ plan.minimum_study_duration_raw }}</span></p>
-              <p v-if="plan.study_form || plan.enrollment_scope">{{ plan.study_form }} · {{ plan.enrollment_scope }}</p>
+              <p v-if="plan.study_duration_raw || plan.minimum_study_duration_raw"><span v-if="plan.study_duration_raw">学制 {{ plan.study_duration_raw }}</span><span v-if="plan.minimum_study_duration_raw">{{ plan.study_duration_raw ? ' · ' : '' }}最低学习年限 {{ plan.minimum_study_duration_raw }}</span></p>
+              <p v-if="plan.major_direction">专业方向 {{ plan.major_direction }}</p>
+              <p v-if="plan.study_form || plan.enrollment_scope">{{ [plan.study_form, plan.enrollment_scope].filter(Boolean).join(' · ') }}</p>
               <p v-if="plan.foreign_language">外语语种 {{ plan.foreign_language }}</p>
               <p v-if="plan.remarks">{{ plan.remarks }}</p>
               <a v-if="plan.source_url" :href="plan.source_page ? `${plan.source_url}#page=${plan.source_page}` : plan.source_url" target="_blank" rel="noopener" class="source-link">查看官方计划</a>
@@ -119,11 +131,27 @@ const router=useRouter();const store=useApplicationStore();const selected=comput
 const provinceText=computed(()=>store.selectedProvinces.map(item=>item.label).join('、'))
 const cityText=computed(()=>(store.profile.cities||[]).map(cityPreferenceLabel).join('、'))
 const provinceName=code=>store.provinceOptions.find(item=>item.value===code)?.label
-const dataNotice=computed(()=>store.profile.provinces.includes('hebei')
-  ? '河北目前收录2024—2025年专升本招生计划，仅作历史参考；尚未取得2026完整目录和本科征集明细。统考生与农民工考生控制线分开标注，暂无院校实际录取线。'
-  : store.profile.provinces.includes('shandong')
-  ? '山东已接入2026及2025专升本目录、2025两次征集计划、2023—2025省控线。暂无院校实际录取线；2026目录未公布计划人数、学费和教学点。限制报考条件以当年公告为准。'
-  : '已接入河南、江苏、浙江、广东、上海、山东、河北公开招生资料。省市控线、院校线及征集计划分开标注，资料仅适用于对应年份和批次，以当年官方公告为准。')
+const categoryCollections=computed(()=>store.institutions
+  .filter(s=>store.profile.provinces.includes(s.province))
+  .flatMap(s=>(s.categoryCollectionPlans || []).map(row=>({...row,province:s.province,school:row.institution_name || s.name}))))
+const coverageNotes={
+  anhui:'安徽已抓取2026公开查询全部37页专升本目录，71所院校1104条专业/教学点记录（485个院校专业组合）；2024—2025省控线单列。21条专项限制记录不作为普通备考目标，招生人数未公布。',
+  fujian:'福建已抓取2026公开查询全部25页，并筛出40所院校468条专升本记录（242个院校专业组合）；2025省控线单列。10条定向或委培等限制记录不作为普通备考目标，招生人数未公布；学费原文未注明计费周期的，不能当作年学费。',
+  sichuan:'四川当前采用2026年11月5日第二次公布的49校1240条专升本计划，合计49031人；10条限定招生记录不作为普通目标。8月1329条目录保留历史，不参与当前匹配；2024—2025省控线单列，人数并非2027招生安排。',
+  chongqing:'重庆已抓取2026官方公开查询36所院校472条专升本记录（250个院校专业组合）；2024—2025省控线单列。12条单位或委培等限制记录不作为普通备考目标；外语为英语，人数未作为公开计划导入，收费周期以原文为准。',
+  beijing:'北京已抓取2026考试院公开专升本目录全部45所院校287条专业及教学点记录（197个院校专业及方向组合）；2024—2025市控线单列。10条限定招生记录不作为普通备考目标，目录未公布人数及学费，外语为英语。',
+  guangxi:'广西已抓取2026考试院完整公开目录988条各层次记录，仅导入55所院校569条专升本记录（561个院校专业组合）；2024—2025省控线单列。9条单位限制记录不作为普通备考目标；未公开人数，收费按原文区分年费、学期费及总学费。',
+  hunan:'湖南已接入2026省级目录56所院校677条专升本专业，学费、学制、人数和专业教学点未公布；2024—2025省控线及2025两轮科类征集分别展示。另5校仅有历史征集资料。',
+  jiangxi:'江西接入14所院校2026年官方资料297条专业/教学点记录（255个院校专业组合），含3条科类待核实或科目冲突记录，已排除出备考目标，非全省完整目录；2025普通统考省控线独立展示，不含“一村一名大学生”专项，未公布字段保持未知。',
+  hubei:'湖北当前接入5所院校2026年简章85条专业，非全省完整目录；2023—2025省控线和2024—2025院校科类征集计划分别展示。',
+  hebei:'河北目前收录2024—2025年专升本计划，仅作历史参考；尚未取得2026完整目录和本科征集明细。统考生与农民工考生控制线分开标注。',
+  shandong:'山东已接入2026及2025专升本目录、2025两次征集计划、2023—2025省控线。2026目录未公布计划人数、学费和教学点。'
+}
+const dataNotice=computed(()=>{
+  const notes=store.profile.provinces.map(code=>coverageNotes[code]).filter(Boolean)
+  return notes.length ? notes.join(' ')+'以上省份暂无院校实际录取线，报考以当年官方公告为准。'
+    : '已接入河南、江苏、浙江、广东、上海、山东、河北、湖北、湖南、江西、安徽、福建、四川、重庆、北京、广西公开招生资料。省市控线、院校线及征集计划分开标注，资料仅适用于对应年份和批次，以当年官方公告为准。'
+})
 const emptySchoolsText=computed(()=>{
   if (store.institutionsError) return '院校数据加载失败，请刷新页面或稍后重试'
   if (!store.institutionsLoaded) return '正在加载院校数据…'

@@ -1,0 +1,35 @@
+{
+  "province": "sichuan",
+  "catalog_year": 2026,
+  "release_date": "2026-11-05",
+  "active_catalog_round": "2026年第二次公布",
+  "coverage_note": "四川2026年11月5日第二次公布49校1240条专升本计划，合计49031人；10条限定招生不作普通目标。8月1329条目录另存历史，不参与当前匹配；2024—2025省控线16条单列，暂无院校实际录取线",
+  "counts": {
+    "institutions": 49,
+    "programs": 1240,
+    "plan_count": 49031,
+    "ordinary_target_excluded_records": 10
+  },
+  "superseded_catalogue": {
+    "records": 1329,
+    "removed_professional_keys": 89,
+    "new_professional_keys": 0
+  },
+  "sources": [
+    {
+      "path": "sources/sichuan/current-plans-2026.html",
+      "url": "https://www.sceea.cn/Html/202611/NewsDetail_5012_4.html",
+      "sha256": "c3467677814432df50a4cfb505f7dc4fcaad10e6f302768810ee51cd0a35a084"
+    },
+    {
+      "path": "sources/sichuan/current-plans-index-2026.html",
+      "url": "https://www.sceea.cn/Html/202611/Newsdetail_5012_1.html",
+      "sha256": "e7397601c67e907ab9509d51531cdf3e4f4888aea48633779ac938a0c4a685ff"
+    }
+  ],
+  "limitations": [
+    "人数为2026年第二次公布计划，非实际录取人数或2027计划",
+    "八月目录保留历史，不用于当前目标匹配",
+    "专业代号原文保留；不足6位时内部补零只用于跨版本关联"
+  ]
+}

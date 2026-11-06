@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="13">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_12065"> 
+                          <td >12065</td> 
+                          <td >安徽理工大学</td> 
+                          <td >人力资源管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12066"> 
+                          <td >12066</td> 
+                          <td >安徽理工大学</td> 
+                          <td >人力资源管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽机电职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12067"> 
+                          <td >12067</td> 
+                          <td >安徽理工大学</td> 
+                          <td >人力资源管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >安徽理工大学安徽工业职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12068"> 
+                          <td >12068</td> 
+                          <td >安徽理工大学</td> 
+                          <td >临床医学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12069"> 
+                          <td >12069</td> 
+                          <td >安徽理工大学</td> 
+                          <td >医学检验技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12070"> 
+                          <td >12070</td> 
+                          <td >安徽理工大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >安徽理工大学校本部教学点</td>                       
+                         </tr>
+                        <tr id="zy_12071"> 
+                          <td >12071</td> 
+                          <td >安徽理工大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >安徽理工大学滁州市机械工业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12301"> 
+                          <td >12301</td> 
+                          <td >安徽农业大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12302"> 
+                          <td >12302</td> 
+                          <td >安徽农业大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学宿州职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12303"> 
+                          <td >12303</td> 
+                          <td >安徽农业大学</td> 
+                          <td >英语</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12304"> 
+                          <td >12304</td> 
+                          <td >安徽农业大学</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12305"> 
+                          <td >12305</td> 
+                          <td >安徽农业大学</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学铜陵理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12306"> 
+                          <td >12306</td> 
+                          <td >安徽农业大学</td> 
+                          <td >材料科学与工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12307"> 
+                          <td >12307</td> 
+                          <td >安徽农业大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12308"> 
+                          <td >12308</td> 
+                          <td >安徽农业大学</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学铜陵理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12309"> 
+                          <td >12309</td> 
+                          <td >安徽农业大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12310"> 
+                          <td >12310</td> 
+                          <td >安徽农业大学</td> 
+                          <td >智能科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12311"> 
+                          <td >12311</td> 
+                          <td >安徽农业大学</td> 
+                          <td >测绘工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12312"> 
+                          <td >12312</td> 
+                          <td >安徽农业大学</td> 
+                          <td >食品质量与安全</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12313"> 
+                          <td >12313</td> 
+                          <td >安徽农业大学</td> 
+                          <td >市场营销</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12314"> 
+                          <td >12314</td> 
+                          <td >安徽农业大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学安徽省农业广播电视学校和县分校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12315"> 
+                          <td >12315</td> 
+                          <td >安徽农业大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12316"> 
+                          <td >12316</td> 
+                          <td >安徽农业大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学铜陵理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12317"> 
+                          <td >12317</td> 
+                          <td >安徽农业大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学宿州职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12318"> 
+                          <td >12318</td> 
+                          <td >安徽农业大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学安徽安庆技师学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_12319"> 
+                          <td >12319</td> 
+                          <td >安徽农业大学</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_12320"> 
+                          <td >12320</td> 
+                          <td >安徽农业大学</td> 
+                          <td >农林经济管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学中共肥东县委党校校外教学点。面向“一村一名大学生”人才培养工程招生</td>                       
+                         </tr>
+                        <tr id="zy_12321"> 
+                          <td >12321</td> 
+                          <td >安徽农业大学</td> 
+                          <td >农林经济管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学无为市农业技术推广中心校外教学点。面向“一村一名大学生”人才培养工程招生</td>                       
+                         </tr>
+                        <tr id="zy_12322"> 
+                          <td >12322</td> 
+                          <td >安徽农业大学</td> 
+                          <td >农林经济管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学中共霍邱县委党校校外教学点。面向“一村一名大学生”人才培养工程招生</td>                       
+                         </tr>
+                        <tr id="zy_12323"> 
+                          <td >12323</td> 
+                          <td >安徽农业大学</td> 
+                          <td >农林经济管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/生/年</td> 
+                          <td >安徽农业大学砀山开放大学校外教学点。面向“一村一名大学生”人才培养工程招生</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12065&nbsp;安徽理工大学&nbsp;&nbsp;人力资源管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学中国人民解放军海军第一职工中等专业学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12066&nbsp;安徽理工大学&nbsp;&nbsp;人力资源管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学安徽机电职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12067&nbsp;安徽理工大学&nbsp;&nbsp;人力资源管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学安徽工业职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12068&nbsp;安徽理工大学&nbsp;&nbsp;临床医学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学校本部教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12069&nbsp;安徽理工大学&nbsp;&nbsp;医学检验技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学校本部教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12070&nbsp;安徽理工大学&nbsp;&nbsp;护理学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学校本部教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12071&nbsp;安徽理工大学&nbsp;&nbsp;护理学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽理工大学滁州市机械工业学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12301&nbsp;安徽农业大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12302&nbsp;安徽农业大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学宿州职业技术学院校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12303&nbsp;安徽农业大学&nbsp;&nbsp;英语</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12304&nbsp;安徽农业大学&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12305&nbsp;安徽农业大学&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学铜陵理工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12306&nbsp;安徽农业大学&nbsp;&nbsp;材料科学与工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12307&nbsp;安徽农业大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12308&nbsp;安徽农业大学&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学铜陵理工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12309&nbsp;安徽农业大学&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12310&nbsp;安徽农业大学&nbsp;&nbsp;智能科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12311&nbsp;安徽农业大学&nbsp;&nbsp;测绘工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12312&nbsp;安徽农业大学&nbsp;&nbsp;食品质量与安全</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12313&nbsp;安徽农业大学&nbsp;&nbsp;市场营销</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12314&nbsp;安徽农业大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学安徽省农业广播电视学校和县分校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12315&nbsp;安徽农业大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/生/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽农业大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">12316&nbsp;安徽农业大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>

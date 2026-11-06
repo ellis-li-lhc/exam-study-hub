@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>云南省招考频道</title>
+		<meta name="description"
+			content="云南省招考频道主要负责组织、管理全省研究生、普通高校、中专学校、成人学校的招生考试工作，组织、管理全省自学考试、教师资格考试、大学英语四（六）级考试以及社会考试工作。" />
+		<meta name="keywords" content="云南省招考频道,云南省招生考试院,云南招考,云南招生,云南招考频道,招考频道,云南招生网" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="https://www.ynzs.cn/icon/icon-ynzs.ico" />
+		<script src="https://www.ynzs.cn/js/vue.min.js" type="text/javascript"></script>
+		<script src="https://www.ynzs.cn/js/layui/layui.js" type="text/javascript"></script>		
+		<script src="https://www.ynzs.cn/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script id="rrbayJs" src="https://www.ynzs.cn/canyou/js/wza.min.js" referrerpolicy="origin" ></script>
+		<link href="https://www.ynzs.cn/js/layui/css/layui.css" rel="stylesheet" media="all" />
+		<link href="https://www.ynzs.cn/css/style.css?v=202405080002" rel="stylesheet" media="all" />
+		<link href="https://www.ynzs.cn/css/style_h5.css?v=2025032103" rel="stylesheet" media="all">
+		<script type="text/javascript">
+			window.onload = function() {
+				var make=window.location.search;
+				var webdiv = document.getElementById("webhtml");
+				var wapdiv = document.getElementById("waphtml");
+				if(make!="?pc"){
+					if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+						webdiv.style.display = "none";
+						wapdiv.style.display = "block";
+					}
+					else{
+						webdiv.style.display = "block";
+						wapdiv.style.display = "none";
+					}
+				}
+				jQuery(".txtMarquee-top").slide({
+					mainCell: ".cxuzhi ul",
+					autoPlay: true,
+					effect: "topMarquee",
+					vis: 5,
+					interTime: 50
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container" id="webhtml" style="display: none;">
+			<!-- 公共头-开始 -->
+			<div class="public-head">
+				<img src="https://www.ynzs.cn/images/bg_top.png" class="bg-head" />
+				<div class="head-body">
+					<div class="head-body-top">
+						<img src="https://www.ynzs.cn/images/img_logo.png" class="head-logo" />
+						<div class="head-right">
+							<p>网站支持IPV6<a id="wzayd"title="网站信息无障碍工具条" href="javascript:;" class="wzayd" accesskey="g">网站无障碍</a><a id="wzaElder" class="wzaElder" style="display: inline-block;" href="javascript:void(0);" accesskey="o">长者模式</a></p>
+							<div class="input-group">
+								<form id="ajaxElement_1_755" action="https://www.ynzs.cn/html/search_result.html" target="_blank">
+									<input id="word" name="word" type="text" class="keyword layui-input"
+										onfocus="this.value=''" id="keyWords" placeholder="关键字" autocomplete="off">
+									<span class="input-group-btn">
+										<button class="layui-btn" id="ajaxElement_1_755" type="button"
+											onclick="document.getElementById('ajaxElement_1_755').submit();return false;"
+											type="submit" target="_blank">
+											<i class="layui-icon layui-icon-search"></i>
+										</button>
+									</span>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- 菜单-开始 -->
+					<div class="meu-nav">
+						<ul class="layui-nav">
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/index.html">首页</a>
+							</li>
+							<li class="layui-nav-item "><a href="https://www.ynzs.cn/html/service_hall.html">服务大厅</a></li>
+							<li class="layui-nav-item "><a href="https://www.ynzs.cn/html/web/xxgk-yjsgk/index.html">信息公开</a>
+								<dl class="layui-nav-child">
+									<dd><a href="https://www.ynzs.cn/html/web/xxgk-yjsgk/index.html">预决算公开</a></dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-crgk/index.html">公示公开</a>
+									</dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item layui-this">
+								<a href="https://www.ynzs.cn/html/web/zkdt-ptgk/index.html">招考动态</a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-ptgk/index.html">普通高考</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-yjsks/index.html">研究生考试</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-ptzsb/index.html">普通专升本</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-crgk/index.html">成人高考</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-wnzgz/index.html">中职、五年制高职</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-ysty/index.html">艺术、体育</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/zkdt-zxks/index.html">自学考试</a>
+									</dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/html/web/shks-jsjdjks/index.html">社会考试</a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-jsjdjks/index.html">计算机等级考试</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-yyslj/index.html">英语四六级</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-jszgks/index.html">教师资格考试</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/shks-tgjsks/index.html">特岗教师考试</a>
+									</dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/html/web/zcwj/index.html">政策文件</a>
+							</li>
+							<li class="layui-nav-item ">
+								<a href="https://www.ynzs.cn/html/web/zzjg/index.html">组织机构</a>
+							</li>
+							<li class="layui-nav-item "><a href="https://www.ynzs.cn/html/content/28.html">联系我们</a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="https://www.ynzs.cn/html/content/28.html">处室电话</a>
+									</dd>
+									<dd>
+										<a href="https://www.ynzs.cn/html/web/Contact-zkjddh/index.html">招考监督电话</a>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<!-- 菜单-结束 -->
+				</div>
+			</div>
+			<!-- 公共头-结束 -->
+			<div class="public-body">
+				<!-- 页面路径-开始 -->
+				<div class="public-root">
+					<img src="https://www.ynzs.cn/images/icon_nav_home.png" class="home" />
+					您当前位置：
+					<a href="https://www.ynzs.cn/index.html">首页</a><img src="https://www.ynzs.cn/images/icon_nav.png" class="nav-arrow"><a target="" class="nav-text" href="javascript:;">招考动态</a><img src="https://www.ynzs.cn/images/icon_nav.png" class="nav-arrow"><a href="https://www.ynzs.cn/html/web/zkdt-crgk/index.html">成人高考</a>
+				</div>
+				<!-- 页面路径-结束 -->
+				<div class="public-content">
+					<div class="org-article-detail">
+						<div class="org-detail-title">
+							<h1>2024年云南省成人高校招生成绩查询方式及最低录取控制分数线</h1>
+							<div><span>时间：2024年11月21日</span>
+							<span>来源：
+							云南省招生考试院</span></div>
+						</div>
+						<div class="comm-detail-content">
+							<div>
+								<p style="line-height: 1.75em;"><strong>一、成绩查询方式</strong></p><p style="line-height: 1.75em;">2024年云南省成人高考成绩于11月20日公布。考生可通过以下2种方式进行查询：</p><p style="line-height: 1.75em;">1. 云南省招考频道网站（www.ynzs.cn）→服务大厅→成人高考→成绩查询，输入考生准考证号和身份证号进行查询。</p><p style="line-height: 1.75em;">2. 微信公众号（云南省招生考试院）→右下角点击“服务”→服务大厅→成人高考→成绩查询，输入考生准考证号和身份证号进行查询。</p><p style="line-height: 1.75em;"><br/></p><p style="line-height: 1.75em;"><strong>二、2024年云南省成人高校招生最低录取控制分数线</strong></p><p style="text-align: center;"><img src="https://www.ynzs.cn/upload/images/2024/11/c1420bcc1e5b9a40.png" title="image.png" alt="image.png"/></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">注：1.外语专业的外语单科成绩：本科必须达到40分，专科必须达到30分。</span></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">2.没有招生计划的专业类别不划定最低录取控制分数线。成人中专实行免试录取。</span></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">3.艺术、体育类专业考生专业加试成绩合格才能进行投档录取。</span></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">4.云南省2024年成人高校、成人中专招生录取工作将于12月进行。12月下旬考生可通过云南省招生考试院官网、微信公众号、成人高考系统查询录取结果。</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+						<!-- 公共页脚-开始 -->
+			<div class="public-footer">
+				<div class="footer-body">
+					<a href="http://bszs.conac.cn/sitename?method=show&id=512D1BAE019B5A06E053012819ACD62D" target="_blank">
+					<img src="https://www.ynzs.cn/images/blue.png" class="logo" />
+					</a>
+					<div class="text">
+						<p>云南省招生考试院</p>
+						<p>Copyright © 2008-2026 www.ynzs.cn All Rights Reserved</p>
+						<p>
+							昆明市五华区学府路61号  邮编：650223
+						</p>
+						<p>
+							<a href="https://beian.miit.gov.cn/" target="_blank">网站备案号：滇ICP备06002948号-1</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							<img src="https://www.ynzs.cn/images/beian.png"/>
+							<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53010202001056" target="_blank">滇公网安备 53010202001056号</a>
+						</p>
+					</div>
+					<ul class="count">
+					 <li class="count-item"><h3 id="DataCountToday"></h3> 今日浏览量（次）</li>
+					 <li class="count-item"><h3 id="DataCountYear"></h3> 今年浏览量（次）</li>
+					 <script type="text/javascript">
+					 	$(document).ready(function(){
+					 		getData();
+					 		setInterval(function(){
+					 			getData();
+					 		},3000000);
+					 	});
+					 	function getData(){
+					 		$.ajax({
+					 		  url: 'https://apis.ynzs.cn/api/v1/Tj/getdataresult', 
+					 		  type: 'GET',
+					 		  dataType: 'json',
+					 		  success: function(data) { 
+					 			$('#DataCountToday').html(data.data.day.toLocaleString());
+					 			$('#DataCountYear').html(data.data.year.toLocaleString());
+					 		  }
+					 		});
+					 	}
+					 </script>
+					</ul>
+					<div class="images">
+						<div>
+							<img src="https://www.ynzs.cn/images/icon_code01.png" />
+							<p>官方公众号</p>
+						</div>
+					</div>
+					<span style="display:none">
+					<script>var _hmt = _hmt || [];
+						(function() {
+						var hm = document.createElement("script");
+						hm.src = "https://hm.baidu.com/hm.js?3b1bbee1880e6d8244199dc60d06df04";
+						var s = document.getElementsByTagName("script")[0]; 
+						s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+					</span>
+				</div>
+			</div>
+			<!-- 公共页脚-结束 -->
+		</div>
+		<!-- H5开始 -->
+		<div class="clear-overfloat" id="waphtml" style="display: none;">
+			<!-- 顶部 -->
+			<div class="header">
+				<a href="javascript:;" onClick="javascript:history.back(-1);"}><img class="back-icon" src="https://www.ynzs.cn/images/icon_back_g.png"></a>
+				<a href="https://www.ynzs.cn/html/h5/home.html"><img class="home-icon" src="https://www.ynzs.cn/images/icon_home_g.png"></a>
+				<div class="header__text">详情</div>
+			</div>
+			<div class="placeholder"></div>
+			
+			<div class="detail-box">
+				<div class="news-title">
+					<h3 class="ellipsis-2">2024年云南省成人高校招生成绩查询方式及最低录取控制分数线</h3>
+					<h5>2024-11-21 18:07:04</h5>
+				</div>
+				<div class="news-content">
+					<p style="line-height: 1.75em;"><strong>一、成绩查询方式</strong></p><p style="line-height: 1.75em;">2024年云南省成人高考成绩于11月20日公布。考生可通过以下2种方式进行查询：</p><p style="line-height: 1.75em;">1. 云南省招考频道网站（www.ynzs.cn）→服务大厅→成人高考→成绩查询，输入考生准考证号和身份证号进行查询。</p><p style="line-height: 1.75em;">2. 微信公众号（云南省招生考试院）→右下角点击“服务”→服务大厅→成人高考→成绩查询，输入考生准考证号和身份证号进行查询。</p><p style="line-height: 1.75em;"><br/></p><p style="line-height: 1.75em;"><strong>二、2024年云南省成人高校招生最低录取控制分数线</strong></p><p style="text-align: center;"><img src="https://www.ynzs.cn/upload/images/2024/11/c1420bcc1e5b9a40.png" title="image.png" alt="image.png"/></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">注：1.外语专业的外语单科成绩：本科必须达到40分，专科必须达到30分。</span></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">2.没有招生计划的专业类别不划定最低录取控制分数线。成人中专实行免试录取。</span></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">3.艺术、体育类专业考生专业加试成绩合格才能进行投档录取。</span></p><p style="line-height: 1.75em;"><span style="font-family: 楷体, 楷体_GB2312, SimKai;">4.云南省2024年成人高校、成人中专招生录取工作将于12月进行。12月下旬考生可通过云南省招生考试院官网、微信公众号、成人高考系统查询录取结果。</span></p>
+				</div>
+			</div>
+		</div>
+		<!-- H5结束 -->
+	</body>
+</html>

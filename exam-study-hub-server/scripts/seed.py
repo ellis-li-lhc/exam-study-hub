@@ -198,8 +198,8 @@ MAJORS = [
      "subjects": ["政治", "英语", "高等数学（一）"]},
     {"code": "rengong-zhineng", "name": "人工智能", "category": "理工类",
      "subjects": ["政治", "英语", "高等数学（一）"]},
-    {"code": "xinxi-guanli", "name": "信息管理与信息系统", "category": "理工类",
-     "subjects": ["政治", "英语", "高等数学（一）"]},
+    {"code": "xinxi-guanli", "name": "信息管理与信息系统", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
     {"code": "dianzi-xinxi", "name": "电子信息工程", "category": "理工类",
      "subjects": ["政治", "英语", "高等数学（一）"]},
     {"code": "tongxin", "name": "通信工程", "category": "理工类",
@@ -252,8 +252,8 @@ MAJORS = [
      "subjects": ["政治", "英语", "教育理论"]},
     {"code": "teshu-jiaoyu", "name": "特殊教育", "category": "教育学类",
      "subjects": ["政治", "英语", "教育理论"]},
-    {"code": "yingyong-xinli", "name": "应用心理学", "category": "教育学类",
-     "subjects": ["政治", "英语", "教育理论"]},
+    {"code": "yingyong-xinli", "name": "应用心理学", "category": "经济管理类",
+     "subjects": ["政治", "英语", "高等数学（二）"]},
     {"code": "shehui-tiyu", "name": "社会体育指导与管理", "category": "教育学类",
      "subjects": ["政治", "英语", "教育理论"]},
     {"code": "hanyu-yanwen", "name": "汉语言文学", "category": "文史中医类",
@@ -541,6 +541,31 @@ def run():
         hebei_counts = import_hebei(db)
         db.commit()
         print(f"河北资料：{hebei_counts}")
+
+        from scripts.seed_hubei import import_hubei
+        hubei_counts = import_hubei(db)
+        db.commit()
+        print(f"湖北资料：{hubei_counts}")
+
+        from scripts.seed_hunan_jiangxi import import_hunan_jiangxi
+        new_counts = import_hunan_jiangxi(db)
+        db.commit()
+        print(f"湖南、江西资料：{new_counts}")
+
+        from scripts.seed_anhui_fujian import import_anhui_fujian
+        provincial_counts = import_anhui_fujian(db)
+        db.commit()
+        print(f"安徽、福建资料：{provincial_counts}")
+
+        from scripts.seed_sichuan_chongqing import import_sichuan_chongqing
+        southwest_counts = import_sichuan_chongqing(db)
+        db.commit()
+        print(f"四川、重庆资料：{southwest_counts}")
+
+        from scripts.seed_beijing_guangxi import import_beijing_guangxi
+        beijing_guangxi_counts = import_beijing_guangxi(db)
+        db.commit()
+        print(f"北京、广西资料：{beijing_guangxi_counts}")
 
         # —— 回填院校所在市（按名称映射，可重复运行）——
         city_updated = 0

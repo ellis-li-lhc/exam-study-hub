@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="27">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_16402"> 
+                          <td >16402</td> 
+                          <td >合肥城市学院</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >未指定收费标准</td> 
+                          <td >校本部</td>                       
+                         </tr>
+                        <tr id="zy_16403"> 
+                          <td >16403</td> 
+                          <td >合肥城市学院</td> 
+                          <td >工程管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >未指定收费标准</td> 
+                          <td >校本部</td>                       
+                         </tr>
+                        <tr id="zy_16404"> 
+                          <td >16404</td> 
+                          <td >合肥城市学院</td> 
+                          <td >市场营销</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >未指定收费标准</td> 
+                          <td >校本部</td>                       
+                         </tr>
+                        <tr id="zy_16405"> 
+                          <td >16405</td> 
+                          <td >合肥城市学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >未指定收费标准</td> 
+                          <td >校本部</td>                       
+                         </tr>
+                        <tr id="zy_16406"> 
+                          <td >16406</td> 
+                          <td >合肥城市学院</td> 
+                          <td >人力资源管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >未指定收费标准</td> 
+                          <td >校本部</td>                       
+                         </tr>
+                        <tr id="zy_16701"> 
+                          <td >16701</td> 
+                          <td >淮北师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >淮北师范大学萧县函授学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16702"> 
+                          <td >16702</td> 
+                          <td >淮北师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16703"> 
+                          <td >16703</td> 
+                          <td >淮北师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >淮北师范大学亳州幼儿师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16704"> 
+                          <td >16704</td> 
+                          <td >淮北师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >淮北师范大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_16705"> 
+                          <td >16705</td> 
+                          <td >淮北师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >淮北师范大学安徽省灵璧师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16706"> 
+                          <td >16706</td> 
+                          <td >淮北师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >淮北师范大学固镇县职业技术学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16710"> 
+                          <td >16710</td> 
+                          <td >淮北师范大学</td> 
+                          <td >英语</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1600</td> 
+                          <td >淮北师范大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_16716"> 
+                          <td >16716</td> 
+                          <td >淮北师范大学</td> 
+                          <td >音乐学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >艺术类</td> 
+                          <td >二年半</td> 
+                          <td >2000</td> 
+                          <td >淮北师范大学校本部。加试</td>                       
+                         </tr>
+                        <tr id="zy_16722"> 
+                          <td >16722</td> 
+                          <td >淮北师范大学</td> 
+                          <td >美术学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >艺术类</td> 
+                          <td >二年半</td> 
+                          <td >2200</td> 
+                          <td >淮北师范大学校本部。加试</td>                       
+                         </tr>
+                        <tr id="zy_16725"> 
+                          <td >16725</td> 
+                          <td >淮北师范大学</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学萧县函授学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16726"> 
+                          <td >16726</td> 
+                          <td >淮北师范大学</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16727"> 
+                          <td >16727</td> 
+                          <td >淮北师范大学</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学亳州幼儿师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16728"> 
+                          <td >16728</td> 
+                          <td >淮北师范大学</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_16729"> 
+                          <td >16729</td> 
+                          <td >淮北师范大学</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学安徽省灵璧师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16731"> 
+                          <td >16731</td> 
+                          <td >淮北师范大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学萧县函授学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16732"> 
+                          <td >16732</td> 
+                          <td >淮北师范大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16733"> 
+                          <td >16733</td> 
+                          <td >淮北师范大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学亳州幼儿师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16734"> 
+                          <td >16734</td> 
+                          <td >淮北师范大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_16738"> 
+                          <td >16738</td> 
+                          <td >淮北师范大学</td> 
+                          <td >经济学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16739"> 
+                          <td >16739</td> 
+                          <td >淮北师范大学</td> 
+                          <td >经济学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学亳州幼儿师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16740"> 
+                          <td >16740</td> 
+                          <td >淮北师范大学</td> 
+                          <td >经济学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_16743"> 
+                          <td >16743</td> 
+                          <td >淮北师范大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学萧县函授学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16744"> 
+                          <td >16744</td> 
+                          <td >淮北师范大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16745"> 
+                          <td >16745</td> 
+                          <td >淮北师范大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学亳州幼儿师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_16746"> 
+                          <td >16746</td> 
+                          <td >淮北师范大学</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1300</td> 
+                          <td >淮北师范大学校本部</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16402&nbsp;合肥城市学院&nbsp;&nbsp;土木工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">未指定收费标准</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16403&nbsp;合肥城市学院&nbsp;&nbsp;工程管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">未指定收费标准</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16404&nbsp;合肥城市学院&nbsp;&nbsp;市场营销</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">未指定收费标准</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16405&nbsp;合肥城市学院&nbsp;&nbsp;财务管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">未指定收费标准</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16406&nbsp;合肥城市学院&nbsp;&nbsp;人力资源管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">未指定收费标准</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16701&nbsp;淮北师范大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学萧县函授学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16702&nbsp;淮北师范大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16703&nbsp;淮北师范大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学亳州幼儿师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16704&nbsp;淮北师范大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16705&nbsp;淮北师范大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学安徽省灵璧师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16706&nbsp;淮北师范大学&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学固镇县职业技术学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16710&nbsp;淮北师范大学&nbsp;&nbsp;英语</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1600</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16716&nbsp;淮北师范大学&nbsp;&nbsp;音乐学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">艺术类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">2000</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部。加试</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16722&nbsp;淮北师范大学&nbsp;&nbsp;美术学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">艺术类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">2200</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部。加试</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16725&nbsp;淮北师范大学&nbsp;&nbsp;数学与应用数学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学萧县函授学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16726&nbsp;淮北师范大学&nbsp;&nbsp;数学与应用数学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16727&nbsp;淮北师范大学&nbsp;&nbsp;数学与应用数学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学亳州幼儿师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16728&nbsp;淮北师范大学&nbsp;&nbsp;数学与应用数学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16729&nbsp;淮北师范大学&nbsp;&nbsp;数学与应用数学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学安徽省灵璧师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16731&nbsp;淮北师范大学&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学萧县函授学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16732&nbsp;淮北师范大学&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16733&nbsp;淮北师范大学&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学亳州幼儿师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16734&nbsp;淮北师范大学&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16738&nbsp;淮北师范大学&nbsp;&nbsp;经济学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16739&nbsp;淮北师范大学&nbsp;&nbsp;经济学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学亳州幼儿师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16740&nbsp;淮北师范大学&nbsp;&nbsp;经济学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16743&nbsp;淮北师范大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学萧县函授学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16744&nbsp;淮北师范大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学舒城职业学校（安徽省舒城师范学校）校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16745&nbsp;淮北师范大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学亳州幼儿师范学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">16746&nbsp;淮北师范大学&nbsp;&nbsp;会计学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮北师范大学校本部</div>
+                    </div>
+            </div>
+        </div>
+    
+
+        </div>
+        
+		<div id="pagination" class="paginationH"></div>
+    </div>
+    
+    
+			
+
+
+</div>
+ <!-- 页脚 -->
+    <footer>
+            <div class="copyright">
+                <p>版权所有：安徽省教育招生考试院 皖ICP备05021720号</p>
+            </div>
+    </footer>
+    
+<script src="resources/js/jquery-3.7.1.min.js"></script>
+
+	    <script>
+    
+    // 初始化页面
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        // 滚动显示/隐藏返回顶部按钮
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        // 点击返回顶部
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    
+    });
+    
+        // 移动菜单切换
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            // 切换菜单图标
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // 点击菜单项后关闭移动菜单
+        const menuItems = document.querySelectorAll('.mobile-menu a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // 页面滚动时改变导航栏样式
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+            }
+        });
+        
+        // 当前年份更新
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+<script src="resources/js/myPagination.js"></script>	
+<script type="text/javascript">
+$(function() {
+	getKl('');
+	initload();
+});	
+
+
+function initload(){
+ var total = parseInt('37');
+	if(total < 1)
+	var pagin =	$('#pagination').css('display','none')
+	new myPagination({
+        id: 'pagination',
+        curPage:'27', //初始页码
+        pageTotal: total==0?1:total, //总页数
+		pageAmount: 30,  //每页多少条--写死
+        dataTotal: '1,104', //总共多少条数据
+        showPageTotalFlag:true, //是否显示数据统计
+        showSkipInputFlag:true, //是否支持跳转
+        getPage: function (page) {
+        	if(page == $('#currPage').val())
+        		return true;
+        	$('#currPage').val(page);
+        	$('#frmSubmit').submit();
+        }
+    })
+}
+
+function search(){
+	$("#currPage").val(1);
+	$('#frmSubmit').submit();
+}
+
+function getKl(kldm){
+   var ccdm=$("#ccdm").val();
+   $("#kldm option:gt(0)").remove();	
+	if(ccdm!=""){
+			$.ajax({
+				type: "POST",
+				url: "getKldmByCcdm",
+				data: {"ccdm":ccdm},
+				dataType: "json",
+				success: function(data){
+					var array = data.rows;
+					for(var i = 0; i < array.length; i++){
+						var sel="";
+		 		        if(array[i].sjdm==kldm)sel="selected";		
+						$("#kldm").append("<option value="+array[i].sjdm+" "+sel+">"+array[i].sjmc+"</option>");
+					}
+
+				}
+			});
+
+	  }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+<title>重庆市成人高校招生全国统一考试网上报名系统</title>
+<link rel="stylesheet" href="/static/layui/css/layui.css"></link>
+<link rel="stylesheet" href="/static/css/base.css"></link>
+<link rel="stylesheet" href="/static/css/sigup.css"></link>
+<link rel="shortcut icon" href="/static/js/czstu/logo.png"></link>
+<style>
+.layui-btn {
+	height: auto;
+	white-space: normal;
+}
+</style>
+</head>
+<body>
+		<div class="layui-bg-green top"></div>
+		<blockquote class="tittle" style="margin-top: 1px;margin-left: 1px;">招生院校专业列表<span id="zyccinfo"></span></blockquote>
+		<div class="layui-row layui-form margin_top">
+				<div class="layui-col-xs2 layui-col-sm2 layui-col-md2 input_pad">
+					 <select name="ccselect" id="ccselect" lay-filter="ccselect" ><option value="">请选择层次</option></select>	
+				</div>
+				<div class="layui-col-xs2 layui-col-sm2 layui-col-md2 input_pad">
+					 <select name="klselect" id="klselect" lay-filter="klselect" ><option value="">请选择科类</option></select>	
+				</div>
+				<div class="layui-col-xs2 layui-col-sm2 layui-col-md2 input_pad">
+					 <select name="xxxsselect" id="xxxsselect" lay-filter="xxxsselect" ><option value="">请选择学习形式</option></select>	
+				</div>
+				<div class="layui-col-xs2 layui-col-sm2 layui-col-md2 input_pad">
+					<input type="text" name="zymcinput" id="zymcinput"   placeholder="请输入专业名称" autocomplete="off" class="layui-input"></input>
+				</div>
+				<div class="layui-col-xs2 layui-col-sm2 layui-col-md2 input_pad">
+					<button id="jcsearch" class="layui-btn layui-btn-radius" lay-filter="formDemo">查询</button>
+				</div>
+		</div>
+		<table class="layui-hide" id="zylist"  lay-filter="zylist"></table>
+	<script src="/static/layui/layui.js"></script>
+	<script src="/static/dist/js/jquery.min.js"></script>
+	<script src="/static/js/czstu/action.common.home.js?v=0.0.1"></script>
+	<script src="/static/js/czstu/action.info.zszy.show.js"></script>
+</body>
+</html>

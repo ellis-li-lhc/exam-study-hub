@@ -1,0 +1,156 @@
+[
+  {
+    "institution_name": "江西师范大学",
+    "source_urls": [
+      "https://jxjy.jxnu.edu.cn/_t1358/2026/0720/c6348a296560/page.htm"
+    ],
+    "institution_code": "4136010414",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "江西农业大学",
+    "source_urls": [
+      "https://cjy.jxau.edu.cn/info/1040/12141.htm"
+    ],
+    "institution_code": "4136010410",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "南昌航空大学",
+    "source_urls": [
+      "https://jxjy.nchu.edu.cn/xljydt/content_193333"
+    ],
+    "institution_code": "4136010406",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "赣南师范大学",
+    "source_urls": [
+      "https://jx.gnnu.edu.cn/info/1025/7707.htm"
+    ],
+    "institution_code": "4136010418",
+    "city": "赣州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "华东交通大学",
+    "source_urls": [
+      "https://jxjy.ecjtu.edu.cn/info/1021/9020.htm"
+    ],
+    "institution_code": "4136010404",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "东华理工大学",
+    "source_urls": [
+      "https://jxjy.ecut.edu.cn/2b/a6/c9390a142246/page.htm"
+    ],
+    "institution_code": "4136010405",
+    "city": "抚州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "江西理工大学",
+    "source_urls": [
+      "https://jxjy.jxust.edu.cn/info/1028/2111.htm"
+    ],
+    "institution_code": "4136010407",
+    "city": "赣州",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "宜春学院",
+    "source_urls": [
+      "https://ycxycj.jxycu.edu.cn/_t982/2026/0717/c272a153981/page.htm"
+    ],
+    "institution_code": "4136010417",
+    "city": "宜春",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "江西中医药大学",
+    "source_urls": [
+      "https://jxjy.jxutcm.edu.cn/info/1190/6100.htm"
+    ],
+    "institution_code": "4136010412",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "江西水利电力大学",
+    "source_urls": [
+      "https://adult.juwp.edu.cn/info/2003/6737.htm"
+    ],
+    "institution_code": "4136011319",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "江西财经大学",
+    "source_urls": [
+      "https://cjxy.jxufe.edu.cn/news-show-2768.html"
+    ],
+    "institution_code": "4136010421",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "江西科技师范大学",
+    "source_urls": [
+      "https://jxjyxy.jxstnu.edu.cn/info/1241/32249.htm"
+    ],
+    "institution_code": "4136011318",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "新余学院",
+    "source_urls": [
+      "https://jxjy.xyc.edu.cn/info/1762/8131.htm"
+    ],
+    "institution_code": "4136011508",
+    "city": "新余",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  },
+  {
+    "institution_name": "南昌大学",
+    "source_urls": [
+      "https://sce.ncu.edu.cn/xwhd/tzgg/d905c7341c604986850637fd7c028ae1.htm"
+    ],
+    "institution_code": "4136010403",
+    "city": "南昌",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码",
+    "province": "jiangxi"
+  }
+]

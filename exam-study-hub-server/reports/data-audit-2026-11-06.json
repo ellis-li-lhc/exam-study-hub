@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "provinces": [
+    {
+      "province": "hubei",
+      "institutions": 9,
+      "professional_records": 85,
+      "controls": 24,
+      "collections": 25,
+      "restricted_records": 0,
+      "current_round": null
+    },
+    {
+      "province": "hunan",
+      "institutions": 61,
+      "professional_records": 677,
+      "controls": 16,
+      "collections": 238,
+      "restricted_records": 0,
+      "current_round": null
+    },
+    {
+      "province": "jiangxi",
+      "institutions": 14,
+      "professional_records": 297,
+      "controls": 8,
+      "collections": 0,
+      "restricted_records": 3,
+      "current_round": null
+    },
+    {
+      "province": "anhui",
+      "institutions": 71,
+      "professional_records": 1104,
+      "controls": 16,
+      "collections": 0,
+      "restricted_records": 21,
+      "current_round": null
+    },
+    {
+      "province": "fujian",
+      "institutions": 40,
+      "professional_records": 468,
+      "controls": 8,
+      "collections": 0,
+      "restricted_records": 10,
+      "current_round": null
+    },
+    {
+      "province": "sichuan",
+      "institutions": 49,
+      "professional_records": 2569,
+      "controls": 16,
+      "collections": 0,
+      "restricted_records": 20,
+      "current_round": "2026年第二次公布"
+    },
+    {
+      "province": "chongqing",
+      "institutions": 36,
+      "professional_records": 472,
+      "controls": 16,
+      "collections": 0,
+      "restricted_records": 12,
+      "current_round": null
+    },
+    {
+      "province": "beijing",
+      "institutions": 45,
+      "professional_records": 287,
+      "controls": 16,
+      "collections": 0,
+      "restricted_records": 10,
+      "current_round": null
+    },
+    {
+      "province": "guangxi",
+      "institutions": 55,
+      "professional_records": 569,
+      "controls": 16,
+      "collections": 0,
+      "restricted_records": 9,
+      "current_round": null
+    }
+  ],
+  "source_files_checked": 735,
+  "errors": [],
+  "category_scope_notes": [
+    {
+      "province": "hunan",
+      "type": "unsupported_category_variant",
+      "rows": 1,
+      "variants": [
+        {
+          "name": "网络与新媒体",
+          "category": "艺术类",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "province": "anhui",
+      "type": "unsupported_category_variant",
+      "rows": 1,
+      "variants": [
+        {
+          "name": "网络与新媒体",
+          "category": "艺术类",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "province": "sichuan",
+      "type": "unsupported_category_variant",
+      "rows": 2,
+      "variants": [
+        {
+          "name": "网络与新媒体",
+          "category": "艺术类",
+          "records": 2
+        }
+      ]
+    },
+    {
+      "province": "chongqing",
+      "type": "unsupported_category_variant",
+      "rows": 10,
+      "variants": [
+        {
+          "name": "网络与新媒体",
+          "category": "艺术类",
+          "records": 10
+        }
+      ]
+    },
+    {
+      "province": "guangxi",
+      "type": "unsupported_category_variant",
+      "rows": 2,
+      "variants": [
+        {
+          "name": "网络与新媒体",
+          "category": "艺术类",
+          "records": 2
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "institutions": 380,
+    "professional_records": 6528,
+    "controls": 136,
+    "collections": 263,
+    "restricted_records": 85
+  }
+}

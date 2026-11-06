@@ -1,0 +1,482 @@
+[
+  {
+    "province": "fujian",
+    "institution_code": "1001",
+    "institution_name": "北京林业大学",
+    "city": "北京",
+    "national_institution_code": "4111010022",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1002",
+    "institution_name": "中国消防救援学院",
+    "city": "北京",
+    "national_institution_code": "4111010039",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1003",
+    "institution_name": "中国戏曲学院",
+    "city": "北京",
+    "national_institution_code": "4111010049",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1004",
+    "institution_name": "大连海事大学",
+    "city": "大连",
+    "national_institution_code": "4121010151",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1005",
+    "institution_name": "东北农业大学",
+    "city": "哈尔滨",
+    "national_institution_code": "4123010224",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1006",
+    "institution_name": "上海电力大学",
+    "city": "上海",
+    "national_institution_code": "4131010256",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1007",
+    "institution_name": "河海大学",
+    "city": "南京",
+    "national_institution_code": "4132010294",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1008",
+    "institution_name": "中国药科大学",
+    "city": "南京",
+    "national_institution_code": "4132010316",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1009",
+    "institution_name": "浙江工业大学",
+    "city": "杭州",
+    "national_institution_code": "4133010337",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1010",
+    "institution_name": "嘉兴大学",
+    "city": "嘉兴",
+    "national_institution_code": "4133010354",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1012",
+    "institution_name": "福州大学",
+    "city": "福州",
+    "national_institution_code": "4135010386",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1013",
+    "institution_name": "福建理工大学",
+    "city": "福州",
+    "national_institution_code": "4135010388",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1014",
+    "institution_name": "福建农林大学",
+    "city": "福州",
+    "national_institution_code": "4135010389",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1015",
+    "institution_name": "集美大学",
+    "city": "厦门",
+    "national_institution_code": "4135010390",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1016",
+    "institution_name": "福建医科大学",
+    "city": "福州",
+    "national_institution_code": "4135010392",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1017",
+    "institution_name": "福建中医药大学",
+    "city": "福州",
+    "national_institution_code": "4135010393",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1018",
+    "institution_name": "福建师范大学",
+    "city": "福州",
+    "national_institution_code": "4135010394",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1019",
+    "institution_name": "闽江大学",
+    "city": "福州",
+    "national_institution_code": "4135010395",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1020",
+    "institution_name": "武夷学院",
+    "city": "南平",
+    "national_institution_code": "4135010397",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1021",
+    "institution_name": "宁德师范学院",
+    "city": "宁德",
+    "national_institution_code": "4135010398",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1022",
+    "institution_name": "泉州师范学院",
+    "city": "泉州",
+    "national_institution_code": "4135010399",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1023",
+    "institution_name": "闽南师范大学",
+    "city": "漳州",
+    "national_institution_code": "4135010402",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1024",
+    "institution_name": "长江大学",
+    "city": "荆州",
+    "national_institution_code": "4142010489",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1025",
+    "institution_name": "中国地质大学(武汉)",
+    "city": "武汉",
+    "national_institution_code": "4142010491",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1026",
+    "institution_name": "电子科技大学",
+    "city": "成都",
+    "national_institution_code": "4151010614",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1027",
+    "institution_name": "西安交通大学",
+    "city": "西安",
+    "national_institution_code": "4161010698",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1028",
+    "institution_name": "西北工业大学",
+    "city": "西安",
+    "national_institution_code": "4161010699",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1029",
+    "institution_name": "西北民族大学",
+    "city": "兰州",
+    "national_institution_code": "4162010742",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1030",
+    "institution_name": "厦门理工学院",
+    "city": "厦门",
+    "national_institution_code": "4135011062",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1031",
+    "institution_name": "三明学院",
+    "city": "三明",
+    "national_institution_code": "4135011311",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1032",
+    "institution_name": "龙岩学院",
+    "city": "龙岩",
+    "national_institution_code": "4135011312",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1033",
+    "institution_name": "福建商学院",
+    "city": "福州",
+    "national_institution_code": "4135011313",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1037",
+    "institution_name": "莆田学院",
+    "city": "莆田",
+    "national_institution_code": "4135011498",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1040",
+    "institution_name": "仰恩大学",
+    "city": "泉州",
+    "national_institution_code": "4135011784",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1045",
+    "institution_name": "厦门医学院",
+    "city": "厦门",
+    "national_institution_code": "4135012631",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1049",
+    "institution_name": "厦门工学院",
+    "city": "厦门",
+    "national_institution_code": "4135013115",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1050",
+    "institution_name": "福州外语外贸学院",
+    "city": "福州",
+    "national_institution_code": "4135013762",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1053",
+    "institution_name": "泉州信息工程学院",
+    "city": "泉州",
+    "national_institution_code": "4135013766",
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1079",
+    "institution_name": "福建教育学院",
+    "city": "福州",
+    "national_institution_code": null,
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://jyt.fujian.gov.cn/xxgk/zfxxgkzl/zfxxgkml/zcwj/202212/t20221219_6080963.htm",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  },
+  {
+    "province": "fujian",
+    "institution_code": "1080",
+    "institution_name": "福建开放大学",
+    "city": "福州",
+    "national_institution_code": null,
+    "identity_basis": "省级公开招生院校代码；城市按教育部名单或学校/教育厅官方地址核验",
+    "city_source_url": "https://www.fjou.edu.cn/",
+    "source_urls": [
+      "https://ckcz.eeafj.cn/ShowReport.wx"
+    ]
+  }
+]

@@ -1,0 +1,1670 @@
+{
+  "province": "sichuan",
+  "province_name": "四川",
+  "catalog_year": 2026,
+  "coverage_note": "已接入2026省级公开专升本目录49校1329条记录（406个院校专业组合）；2024—2025省控线16条单列。10条限定招生记录不作普通备考目标；人数未作为公开计划导入，暂无院校实际录取线",
+  "counts": {
+    "institutions": 49,
+    "programs": 1329,
+    "controls": 16,
+    "category_collections": 0
+  },
+  "public_query": {
+    "pages": 55,
+    "all_level_records": 1329,
+    "zsb_records": 1329,
+    "completeness": "all_55_official_catalogue_images",
+    "ordinary_target_excluded_records": 10,
+    "school_major_pairs": 406
+  },
+  "sources": [
+    {
+      "path": "sources/sichuan/catalog-index-2026.html",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_1.html",
+      "sha256": "ac6a27ffe3ddfc6e53611c6fb8713f41bd3f11cf6a97becb13aaafbcb1b9f355"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026.html",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "eaf22316c34bc1be45d1a6c1d4608aa9322de65d6da1790b8e891afb7ba1b0f1"
+    },
+    {
+      "path": "sources/sichuan/controls-2025.html",
+      "url": "https://www.sceea.cn/Html/202511/Newsdetail_4496.html",
+      "sha256": "251d2f7acc38d7a94b88764acb2f7aa3b11faf92566295b5753fb482c4ee44b5"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-001.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185844_0671.png",
+      "sha256": "1d6a3cf14c38a2867ae0b168aa6d19e2f08c5c2304cdff510a43c32a9fb591fe"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-002.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185844_7985.png",
+      "sha256": "2853c54106a612fab260e243e34d0636a923667dcbc5d8246b883bf12028ef78"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-003.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185845_5415.png",
+      "sha256": "e3beed378b7fd31b846f31322e92159e008ed4cd09b0793181e7d32cbd879e84"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-004.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185846_3578.png",
+      "sha256": "f4ac044f876fd3a431a368c37ee6c382f50a02c079ad4d6d99295f91d7deb8b8"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-005.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185847_1612.png",
+      "sha256": "79cb395ed43dfa805ea6ffc543bf2cc7a8fb3d12c8e076086e712c6ad4883ca5"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-006.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185847_9748.png",
+      "sha256": "dad5712b465784fae8a8b8efd1f08cffef972a61663b600425c195d6c1335273"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-007.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185848_7854.png",
+      "sha256": "b2188450a04428a4c13a0f7e896d11d997bf454f7a3a9d1360d40d007506a041"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-008.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185849_5903.png",
+      "sha256": "6e2f1b1349d1fe118db472dc179db42dc315d2415a370c3f374613eab02b53c3"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-009.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185850_4021.png",
+      "sha256": "428692bcae3c19be6dcd76d9319cc9b6ee1159fbc05da3512f0b8c1ef897003e"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-010.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185851_2335.png",
+      "sha256": "c21a968d877d3e2c44e605a0e45fffc81f860e7fb4920c2ec4d06decd92ae986"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-011.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185852_0649.png",
+      "sha256": "fe22665ffdcdc782c67c2561ae7b4e288fc1d34f82225b0671d7eaa70734bcb5"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-012.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185852_8556.png",
+      "sha256": "ecb0eebda0376212fe912febe539abbafc25843515fe9540a02d84be800381cd"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-013.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185853_6402.png",
+      "sha256": "f67bb0f46e3123c69617680374b4b2130abca9997361b2b3da9c41badb179deb"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-014.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185854_4293.png",
+      "sha256": "04503662264f7a8bf30981ed26dfc4a86beca15101cc28683dd99d93137a3869"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-015.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185855_2325.png",
+      "sha256": "0a8dfd0fc1da59e7aca60f6d213c0161438245d6d359e48b33ad4c06c58737d3"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-016.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185855_9795.png",
+      "sha256": "d743177a9ddd1a286e0e5936190f114cb8344069d5a60f920e26e91b451be83f"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-017.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185856_7649.png",
+      "sha256": "7292d04a40e65404969c90684f6dfe3dde9506cab3cd8368d0560dfdbbc657e3"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-018.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185857_4635.png",
+      "sha256": "e82850544b9263bc2cbc1906f9a991192f3b61410eeef0ea58ff143ece96e50b"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-019.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185858_1462.png",
+      "sha256": "f2ccb25f9d2c948839435a0be465fcac9273b5a058acf7d00a265b3c9589d0e0"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-020.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185858_9365.png",
+      "sha256": "5010f5e387d6a4c785d655c97917504c418ceeb106858859d29e94d4a94ccd7b"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-021.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185949_4877.png",
+      "sha256": "29791c7d5e065959c097990271ee719a6daa6c9fe391992190f0e8bd40922f07"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-022.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185950_4227.png",
+      "sha256": "d9ea9f2d8856d6cc851a7e4dfbc0ae0a313d7ac6fc0e21890175b155f754b196"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-023.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185951_3246.png",
+      "sha256": "5485613a4b6ac1aa4494e563c7285ffa35096a591fdb10f1fca5caaf775a98ef"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-024.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185952_0377.png",
+      "sha256": "c330b9a92019bad3b990db03889927971a4ace660edcec8847544708a6c4adee"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-025.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185952_7514.png",
+      "sha256": "a24dcf8e3c96e45abcef8b388d224a0b0485aa5a2620964cbb0ef6af8e02db34"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-026.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185953_5814.png",
+      "sha256": "9270e8204aeda6a1048cda456f41a18e2d92bfa63a3ecb39b77142b7b8dfd5df"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-027.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185954_7337.png",
+      "sha256": "6eaaefc3b51ca0965703e5db56203d93040d81f63581e0c69610d0c1f368760a"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-028.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185955_7095.png",
+      "sha256": "057d586dd9776c8bd1bf17fa0f520f99956fca9f85493adc4ee203d036393abc"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-029.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185956_5939.png",
+      "sha256": "9d440ee327fb288a9e35bb6ad40750406ab02cca385ad16787b9db953ea4cd0e"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-030.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185957_3586.png",
+      "sha256": "48edca1c110504e2ef15c9ff8731d05b54fff3b4e0bb7c091abcc9d137eda026"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-031.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185958_1990.png",
+      "sha256": "d718bbe46c1e8c45ff38282fdd2b6f3f3f8b04507ae37785a21af85160208911"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-032.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185958_9999.png",
+      "sha256": "27af4b01d0a8fdc44fe4642b28a0fc080e38b5b2b7575e7cb5d8b3ed531544b8"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-033.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827185959_9048.png",
+      "sha256": "bbcf0c13c3cd75d761a9ac5077d8c48a293a6a2fe1176405b81fe2861fe7c1de"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-034.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190000_5991.png",
+      "sha256": "ba65e2b4dec36a3f83565a084610517a5396d2bef1860f3b8a72f8729602f981"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-035.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190001_3646.png",
+      "sha256": "c1677cffd449720b22b67f42a55c933a1ecf1189d286408dd90ee68da1552cd4"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-036.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190002_1184.png",
+      "sha256": "4a5ed37dafc421034c563df117945e7430304bac0b9ac02e77e8751d7046f2cb"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-037.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190002_9018.png",
+      "sha256": "5479514779a6eb862b3138489d3d69279fc74708a42b5f8756f00adbcd9357dd"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-038.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190003_5740.png",
+      "sha256": "948b767e2e2251e540c0f0c0e847e76297b9acc54df9a899f42ae3326c1a02d2"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-039.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190004_2880.png",
+      "sha256": "edb9a692294ae7b93220ecbd3904b726b3139c695d3542e36322e4ff0a7cc863"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-040.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190005_0015.png",
+      "sha256": "a2d18b3a3f6aab88d51b2207000ed256b5b53bf859289f5cda12d7365dbf58a3"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-041.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190101_2904.png",
+      "sha256": "40c60f47dcbd1b2441c4af867836a0d647d8e267ba32ba69b963cd1d95f64791"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-042.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190101_9992.png",
+      "sha256": "23f865762040a8b9af2d71a7f0b6c8ef0fcaa5940efe2636285c995112f8860d"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-043.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190102_7030.png",
+      "sha256": "6b193d951545daff19404d5f4c4bd7f692f29f6dc0bf15e1b0ad8ba1abbc2322"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-044.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190103_5034.png",
+      "sha256": "f28aa4fbd7b50bb2ba28e4917f7668a565b825bab768af620c478fe607923710"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-045.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190104_3086.png",
+      "sha256": "1c64170d73e42ba685cf0ae8211472c6885742d6d96b3a97325c55f12426964d"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-046.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190105_1988.png",
+      "sha256": "06de6b222a7d1644705031941bec97108f929771a91e6c0acbde1eaa6377c488"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-047.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190105_8878.png",
+      "sha256": "96b5221a3f6aabf594db7daeb82a68e66465b47d4c7d392c4d559a05d65c6cfe"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-048.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190106_7647.png",
+      "sha256": "7655aeebce620524c76bd10da10a0d61ee2c5b971404ef3c2eff00c1e728a3a1"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-049.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190107_7138.png",
+      "sha256": "1d606297f6b63e72c28970ec744973e3d1998616ae703338b40e934d5203b0b1"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-050.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png",
+      "sha256": "2847d5d6da6c98f867bf72bb4870162ca78998483b5fb5453fe685766756f27b"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-051.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190109_5250.png",
+      "sha256": "ec1ecd9f3feed50081c92c223be2859586870b7c0ba9ef9cc16e58eabbd17ac4"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-052.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190111_2533.png",
+      "sha256": "b4844c90afefd9219013b48a21f63e241c1f1452a147c55ef8db11f5edb9dbf5"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-053.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190112_1916.png",
+      "sha256": "59cdb6b14847cd43c709e2e7114d1c4c2f05b5b750badcf28eb0ad61f5eb8193"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-054.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190113_5677.png",
+      "sha256": "7c1b085d7b9ab41c03d23970afda54699c903146cfe2f8693846d81b979ebe3e"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-055.png",
+      "url": "https://www.sceea.cn/Upload/image/20260827/20260827190113_9991.png",
+      "sha256": "19840f7a456a146acc674dee63d85eb747052df9ac86ceb9b30af4519cb29d71"
+    },
+    {
+      "path": "sources/sichuan/controls-2024.html",
+      "url": "https://www.sceea.cn/Html/202411/Newsdetail_3990.html",
+      "sha256": "8a5f6b69aaa3a0476027363a0a5a03dabb1972090c75c8c00b20cd60d8f3b282"
+    },
+    {
+      "path": "sources/sichuan/identity-scou.html",
+      "url": "https://www.scou.cn",
+      "sha256": "2ac73f25148a503433da57585faebdafa9bea00c70ffa5060038192dc6d3398a"
+    },
+    {
+      "path": "sources/sichuan/current-plans-2026.html",
+      "url": "https://www.sceea.cn/Html/202611/NewsDetail_5012_4.html",
+      "sha256": "c3467677814432df50a4cfb505f7dc4fcaad10e6f302768810ee51cd0a35a084"
+    },
+    {
+      "path": "sources/sichuan/current-plans-index-2026.html",
+      "url": "https://www.sceea.cn/Html/202611/Newsdetail_5012_1.html",
+      "sha256": "e7397601c67e907ab9509d51531cdf3e4f4888aea48633779ac938a0c4a685ff"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    },
+    {
+      "path": "sources/sichuan/catalog-reviewed-2026.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "21d62116083a2d02ec7b1341266eb3cb31be18d5f2b46e07103d7f9ed543702a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-001.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "6a3bfcc6191c6ae082ba2b26d644967c7cb8feda228c07f5da79aca3a5a31d0a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-001.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "9595bd4d4c23be908357c98d69052818c9975edf2687df196df276efd6b38ac6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-001.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "115b75970c28018e6f2c588edd222d801fdb67ad323846134c8e17c0e98fd7e4",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-001.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4d5bc8f288897c5127c016778797fa599d253fe39add238eab55648a3121aec6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-002.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a9334f9f3b8f3fd01ca30e71bdd77e8ef1235197e43e5c47e3d30986ccde3f93",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-002.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "abdec6939956e81a75b1691ffeaa1afa5ca7fe8f2c68bac73f59fca729272d84",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-002.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d0d3ee845337209accdf95ae470aff32c6be259c87b491cfaa46dc4171b8136a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-002.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "f55ebd53de12898664fbd008e25f9fe298ddee34f3cf40684089d7686d13696f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-003.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "3d9cfef6e818805c08e8906dfef4aa00b0d835a43e0064f8a3768aed321f413c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-003.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "850cefacc36288448d20c78befaa70098617d807e2de58b6da1e62a2ef3847aa",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-003.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c2fbe8f17de5b4d78bbb2fc35bca2b22b622203d35ad91135728df9b453202cb",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-003.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8c6ef6a4a71a4b46ad8ebd1557e17bf04e0d83fcffe1d1a96331739c7ea46eef",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-004.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c75ee1bef09ed3a3a096cfe3821cf2f37762376769191f755d1bf2d865ca2f2b",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-004.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c86eec73f105f6db2fb5b1929f690c84e8eb0c2af31df3e0b4a7ea261da82baf",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-004.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d03906f49b4dddf369c87346e28d6d5af0e0b91007f8148c892026e1fb3b9c2e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-004.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "dd90dff9253991ac238fb77ae4d1a6e4c1dcd8a253508d6573efaca135fef8da",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-005.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a38db1b445e8bba449977ad2b5fbb64b1fea8237be913b7495696d4ed2f59f34",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-005.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8b970a5012efde40b4c37a72fe1b80a8e18c6a5ffe59fa21f1838814dcf4cf4f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-005.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "5e1dcaa52f86aa6db1b212346cf45080a2d1b8f5c21fdd0bf6b5763687dbd817",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-005.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "221c4157df228adf6970918db2d85ba2f91b03479639326967abaef54a13c069",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-006.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bed5c75115544c171bd8ac07c7ae4a45dbf50b86d1a140656a1fceff5f1c87db",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-006.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "5c1d4b74b76e9d4b74415370a1d00abacd09ea412ff309a3b5d77e417d755ee9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-006.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "85139ce20dd6b7ed1b9038bda8308398bf666a2c95ca622969952307b32a4942",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-006.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "dd79e24ef03b3ce34e7261748f7391059d964f0247d0f505badb9eae412670b7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-007.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0f4099f16e890ccd34912bafba7b88899d5da21644df00baff18957e09e0aa72",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-007.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4c2abe3f32bc8b4defe76548ac82077d2de168a3e47cdc85bb0be4a21bcc3f49",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-007.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d9e8c251fd17a5888f8847905a335481520400ce36f9c4ac0eab2582d02fc80e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-007.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c9e2d2be5fb3a39121f5cd31c9a1725a5b549fae88cc15ce6bc2713458133999",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-008.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "253c825883b0a5e47a04c2aebcd938ea7864068a97a290f743e6401cd28af61c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-008.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a9d43889370e9771a9513acc7249492b702520879173260023e1d7d994212b16",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-008.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "60cdf0226988d482c1c72ba61c1bcc8d9be64423eee24003e2a4cdfaef5894cc",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-008.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "721e4d69a90466556429cd520d4d91c61ea04069a0a69592be682bccbe708762",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-009.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "55dd44d4bcaf7ba45591e9e3dda78d3b9093621f80873708e2ffb440b38bf17e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-009.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c38c4571b61ada46c6028fa1e38c12f536e33af58ed4d5fd5bb5275144c5a3fd",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-009.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c92f2a1c97da4a0bc526363934a21c6b0fd2a86f62f85137e9e3273988b905ec",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-009.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8cb35d1a10d75c5e5f6a6fd5461ab40daa89d035c5a2bd074c13dc915bef998c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-010.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "ea033aebcae1c4679a9d61fc54ada09c8676f109dbd5503c65f05cdedd3f7854",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-010.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d57aeca9853f5c9d7fd51dff46c9d166c2f10cc7596e1188697ae44359748687",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-010.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "5ffd76aad79b444c808e7a21c6c35b1c2bff0f70c36717836eac3ae524309781",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-010.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "374aadc617b6ee070364b265538518a98d89dfe14478e5ea934899900fd92cdc",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-011.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0448df44534c92afde73ab650fd4cc68f2570b8308ee0aad24ff1fdf3302a3f3",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-011.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "3e381cad92ee04fe37954cddcbeee63d180bcaffad33a40540993f8dd205fa6f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-011.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b140c6f0cb31282355a7b6cc1c157046e84eda2649d2f53a16fe1b83803c3cca",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-011.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "45e6dffc41bdaf748517015e8294f67c1c6671f7d840c60cc2646c2500e3792c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-012.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fe7de3d66a84729f7006f62b8237c8fe0263dc04a280c9fbf348bb0cf70db28b",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-012.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "566f1f2d9e408f1e8eb8bf487bda2b4189e16b3c0e4ecc02e7f9e59a95fd2626",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-012.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "aff0a1f80251935b63e3af5eeea43e5ede1f95da443bad8ec14f3005545cb470",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-012.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "7fbced4da64293d4e80875b3bea3dc989b7db6f62cdfcff6f5621577db45c2ea",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-013.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "69086178e671aecbe2f528b02228d67e8f14df0b559920c175ae991334191651",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-013.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "990616bbbffcf2e610cd2d8a93af227d49b9092747cf5c2679aed71d1c35c2b7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-013.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bd8cb66f0bd879c32102e856d413f6c8821f2919f10fc6fb1430d63df76e5178",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-013.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2354c946fae737a4ba07a89ed4a9b05a86cd0bb933c857da3ca9e257bab4b386",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-014.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c1bbf0f051586ecc52dfc2181da62531b6135920fe4a9134d3c764e6a314372d",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-014.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "ef974e5f1b952f9ec6ac8d23c656e09d28f0815dcf6b3d8446e5243ae76c2516",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-014.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a14141b845d8101289856d6a1e3c267866083589c3f95dfaf4bb79726b422270",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-014.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c0a13acea990940d3ed5bdf8b3ea25d40e4bad829a2f6a0058a70b79c4f2e339",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-015.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "04b94990a8bba6c44e8e8a68d70da8c1dcc18a807eff4ea1b7acc47eef318571",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-015.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "261e7fb4b323570d95910c86e8ccc414ed33333f054b055e746feff7a91664c7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-015.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4114a78c53184baf00f7586a30d9c8c1f9b9d208df3fed6de141fee647fc2ead",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-015.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "84699235fac8619d8275e862798ae454193b196433ec8933d68210c4a76e4f7a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-016.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "35577c0897570fa06ea890c5aae102923d854df85ccb2029be12112524a2e70f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-016.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "149bc0d2f83e9f1896c779369395841f062f611e4682b46a5be84f6a57dc14d6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-016.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "5b93586590358b134a66e902d4ceac35be648de787ed8f01b200984f782139ff",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-016.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bbbd04a1cfe173da6af3c503d14476d9a41575ba26041669fada348d1db9c295",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-017.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "963336e4e9bb469c1f40c033780622b5027aa4b0dd1348ad4ead7d5bbd72bd7a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-017.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0b1fc3ab1dd778f71984f8f08ea70f17c01a27176aee63bd0c9ba84da056115a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-017.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "f4e61ddf385895395f2a51e6772791cdd7d1b5c78f34d70fb559d6bd1f9e9cea",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-017.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "97eb1d3bfa5de18aaf28e21d4808a345dc9794e2b599b0cc41aa27b60371b68e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-018.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "018fbc4c52a026558a919eaede16296c23e2cf1e69f202277cb419241a3d2fe9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-018.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2b9b4f8cca144f7f608d076368647b143a5a797b06f7db47bd9713dcc81fbf83",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-018.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "963a48e9ea091a0bcf657307e5420241f89f80dc98d1196cf44b92361b2f8c23",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-018.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "477b9f9d1801f0f8c30bcf6f59c9b44fdfb2b07e5920625349700855d773a29a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-019.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "489e9a018c84e4f6c2edd26de8722f65c113646689f39beec326f896885afc54",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-019.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "6c1a904f1286e30681f6397ec1e6326e6571f7240bc15cb6433a11498c25ff7a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-019.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a15807fb2810007fdf6528e84b3d74436d596e5ae2105356cc8f090752f9ccb9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-019.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fd02ed68e7bcad267a437fecbb1e97df90a7e76ad27d43d1ba59b72264ae3cb5",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-020.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "9efaf98e5db5464e947e39d8cc3041e1863d199b41894d774491048415f78bab",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-020.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8ba5e59a3130479f48be8fc4d937916e54278c793acb65e2411c0b21fdd5c7af",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-020.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "cb6373eea2e9494be1982143f522ae49a64c2d17eaa29bee971a754be0b2d8b8",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-020.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0f3726e153fc6e19124043695d1c4e38ca69cc3cb29567f68d3065cbc333e204",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-021.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "90efae41aa33eb0f1d9d43e263a59542669078985d74c53876b2221dae49a118",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-021.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2b23898c1d39c8c2bd84153df73dca9e5c481af597ff004a8364e477541ac61f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-021.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "9f48f43cceb4d5c10cab13e1d93afecf4a97d67dfab44e20133a531f4a513c4c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-021.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c3294639ce1d74cdc04427c128e3fb3b61de188c826da49c979a27e3f807dec2",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-022.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8852a900625b1a7b1bbce375fb631c07f8e7e2c642a1347c8484891536950328",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-022.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "20b01e3f2b795ed958b1d238a72c3a4b335012f2d4b79e6540c95e4cc099de54",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-022.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "544281beece1550558fe8a0accd889080d0d33d902d07f2156ce2e887c35773f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-022.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "68c19870fda151be319b8e76cb3c3e2afc02960c97b0bc38657f7f836451b7e0",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-023.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "34426b794758dfa26d67a5200077df7f3209c3b5d86372aa80f4953fa4f54bc7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-023.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4b107b3eee64c3f1f8fef6f5ccca5856347e474b104142c3ca06e7d473eec909",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-023.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "53cfcfdd7ac916aaccf76aefc43193c6de7f5d6f4e3b513cc3584583e4d0624d",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-023.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "9b9127ae1130de92fbf8f45b96acb0f63b3bc562a5a3edcf6563532f42e50d4f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-024.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fcfd94451422acec57c37ec2bfad4ba9953fbe6c42cfbe6be39c84aff613c4af",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-024.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8ec9d861f8cb2455a80ac4726f01580c15857a89dc515ff3149b347fe62e1fd5",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-024.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "f9856ec3fcc1d8b6cc6871b816ba24a3f2052b419c81ce55ccc3784d65e5b65e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-024.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "70da4b5687215738436a4eab77a16acd0f736d7bb8cbf81f5992bf815646f162",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-025.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "acda605d72e322ea9f3b91b3b68bf67882236e566a81c9e019a3e845000f3f9a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-025.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "16990230702b9dbd0e36298b3f34caa1a48e4771907d4fea7c208280560279a5",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-025.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "f2a6932b5c0dc8b73b6950384521a079dbf45b48f8af48b0e6471b170d33a71a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-025.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d37889e0f91253593d75b5aeb9fb396b4e28b62350c8e9e7ddb563e137a05f5f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-026.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0a9b024f865d6a92c4966d2bba739029b01217bd7b00d01bdfbfbbba8c051841",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-026.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b9cf7a169e5c3e5a23e84b61126d873b9ec2372bf04822c237f824cd20245eb3",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-026.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "52d689232b8395e2d29d28b0cb70a9b4b190ac2f9aa1a2c4aefda8b7da679619",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-026.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "cbe8e3a05a10727bba0d8493d177919d23eee8de2daf08d78967bc107499b156",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-027.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "ccd09957295037a6b6e9115b062f06f016a935862f22e2801d401a45a3bd7335",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-027.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "70895729debbc791f256a301f2be586a2abacf5e770cb333f6b7c9068270a41a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-027.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0be49313bd4297a667bc4a31659ecef7bbd8073bbade046a192ebfd3fddcbd9f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-027.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "072972650e32aaa3ef9c7e5c1b13440e04b6530105b8dc20ca30b86e57f600f5",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-028.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "3fce6f7ec10321fc621ab70f38088922424f0ba1b4dc8f1196f7b30fdd9c74e7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-028.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "55361f7ba8dd7716cf1b05940bdf3fc818595181e0e7f086ae57055d5dd8bab7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-028.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2064d05628deacdf1b953d2f6d8845ed3f9d149b862159d683eb2a751fcf10f0",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-028.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "6641ba76dfa5179ab676741858ae6bd201326962603d6a431b0ad90daa2b0173",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-029.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fbfcb3e4aa86d462e872ce5cf1abec5cd02662f90d00283335659d2f690e7a68",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-029.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fe79b25fe53be7bd2703e32eedc950d0a6c660aa38c36fe31e27b83b915f1e4c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-029.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "41889d6a58cff2db6c4da7d439930df2a25afbff3252016cdacf4d151f5603c1",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-029.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "18f5f79dc5d92654e1e7bff4fa6dcc65e2aec9f4292ccd122ec49cbe5a45a8e6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-030.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4a2f7fc3ac8a5180615e973216659d47ec20d92a7e574c41469f1823514041d9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-030.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "71b9b48113be5abab8b0966d2d0bfd35eb40cfe8e653d372080bc44bf11fa0ba",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-030.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "08e90b9a5646a479bc05caf639013d81072395a0a5c4783e9eb5ff88470e437f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-030.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "325dcae6c37c062e8016da902f68419c1b0af41c6a76980c8d5dd791fe44b4e2",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-031.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4f5e06f8361bba11c783737bb3d0931ac0472f73a28da82448772eb77fd22332",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-031.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "1932a52f8c587dd713fd1b1bf9770610930ca3f969a79184d641ed32f102b439",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-031.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2dc71232e58806265aa13142791d83c8f1f70028d4af92ef530f11d6be143308",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-031.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a9a97c8ffafa9b7e811f1cd4f02a012e9f0d75aca34771f1b4363fdeefec117d",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-032.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "3a59db565718a1add8dd72be6190a8b88d7545f0fccb0d75710bdc2ff4f1ff54",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-032.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "86113dbdab446eddedc7abdaae7c9e66b4c9507e787758f557598a4fdcaf0ab3",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-032.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "679c3deab6cbb839ed01a07d3784ddf8cc4a9fe7b563732c04577ba89d7848ab",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-032.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "829a35d31573426b9096f1e4710ad15112a3a74a6da38cd17593243032cff1e9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-033.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "74a875ecd60d9c022031d05bbe0a7b88217c70c0ff2a378c44d36e2b304c9d80",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-033.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "59559202fda032da71af96380cb0885d81e44e8e7e94ff89c22a638a16db37e8",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-033.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bddf87368300f8423695b6315df977d70aa5ee34d477b1734b0975d2f5942ee0",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-033.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0443d8b5e5e566f7f1dd1e75e6284c79b6f2376a1b94dd1dc0fb371791585ae9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-034.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "84d56d103c316e26bf80650e003287ba0fc917cfae01a2bc3dad16d9289c6478",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-034.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4deaa9f603ccf81ce4036565499ff0b49da71e0ce9dfe907f289918b4ac3e857",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-034.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "77eea811c943551df1f4e16dae33a5f3c4b2bd638fd9bad56bfd20ff3c796410",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-034.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a8884eb8e5bd2ff6a04f26fcd352cdec7d21b3eaeae0c2af186a48ba65c69ca6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-035.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "719c3567afb07166cbf5c1e718e4cd2713fe0b71232089486c4154e06916ff29",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-035.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "e16aee2aca1dadd55cad5573df556fca2caf792b0ac7e82597c760f281edd597",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-035.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0d22b8ebc41629a0f210f92d98c723218e400b742d9c23e210efeb99b8aac8d1",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-035.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "ed459c8a62d19da7a3d254b5be5a53a06dbdd42988a585fe11a3751d0e2a0449",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-036.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4b8dc745a5b0c61198dc6632e59aaedd7134eea0e0ec1707b69c24e542ecc034",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-036.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "06f950c3301fe3ab6bfed460a99645dab3af61501fa46d329c000e98f0e73df6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-036.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bd025310a9802b34b00c8c8bb48badbc3d44e474cb431767c4a4978f86f7a1df",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-036.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "1ecfdde80352b54ceb286b117000d598b4d3b30bf915cd2dbb10270cec6c4732",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-037.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "7ebbe2f9e52be4ec11b3a6f1136497f8d3105253a1883685ec006eca47041df4",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-037.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b6e8a7d799329b8be873b173dddcc6b37ba33a89ca6465af4074bd65f01a6c93",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-037.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fc6e273df81b3c624e927e85ddd75fea34f4ed78aea874b7feba92e7b05a46a0",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-037.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "fe8e7f81a9e51373c4382b524b66eb1c2f7b3207cd2d5f5cf4757ab37d5bf96b",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-038.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "9233ce03b14042f2a62b9175fe5efcd18caff03aca62014e86b603f8327f28fe",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-038.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "edb8c6136176ea0bf2f34e2c29cd7d4d549afea97d86358ce701160727c7189b",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-038.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "7282bd95170fe36e3d673b12e38c7e42acadb951d00b191f91d6518a1f8de9fc",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-038.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "162be1d7fa2fd3ff6f3975b6addcbe537a5fd5069cb2d9b88197a182f71c5c09",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-039.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c43024de824328f9a35f89d6a8df880f04d73612b5961b893103e680aace8751",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-039.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "856d838fc9dc9d68f09564a41c3a314afc0b8be610a0e19a825677230919d644",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-039.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "4ec824a201fce8a2c12229403939c68823fd555eb7d3dbd34f45065dce011502",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-039.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "280e3329ae7d698051e9c844b64ddc37ecaec7c57324c9f0c95407f3a9480392",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-040.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b3ed708039d34a593908ca536eb9a046e3185af7cb4e14715eb7d93bb6a29b39",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-040.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a71be2e45c74918fdc23a9156ab714e79cc9c6618c4a751025060b693cade944",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-040.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "3d12513a2a4f4efc26b87fa1b00fe9bca8bbfc11fbc29266f8168b41a2f41a51",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-040.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "ca233069800c3a175e9a6c5d2da6959d6ddd98807eff3578ca4cdced95367a9c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-041.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c2030860673410e88641658c7efe6a16a873caae24c31c39f2abc9e9af385a2a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-041.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "f190156aef85811b8ad7720340121024a0d4c9c6e76b7b5927f7de2a9475527b",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-041.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "98927ea9c2085720a61c2fb9c7560eca6b3ec8d60b530f9f973ed92981aa397b",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-041.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "304cb1ddb41287615765cf5c2668b9531b92bb976f6133f0c31d4dc5fd6cd445",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-042.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "81021bf89b14c15041fa61ece2e8091406e10989158d80a5db4655ad249d64cd",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-042.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "530e7e04032ad6c3adc4eb28ab3a38de60f5bffd193bc2fc071d855d49359061",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-042.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b14895eafa179881717ec34b1edd85082e966f15f66fc04e0fd38652c86511da",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-042.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "c2b0883a3db9e73c1df73c3ad2796f5fa8840f7c35d7083c5fdebad15e510e8c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-043.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "44dba1b1c91ea0c491a47aee81ecdd77a07a127cde54653a5ff7deef7fad42ab",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-043.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d5badec9ed2af62aacc65f11d4c281e48bddfc869124bd845e3dd1d48717dd40",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-043.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d285fca4397485e1cb3be85255f8aa3adcd1e820ec0eb255d6e36040bb669f22",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-043.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "69ece726e9b313beac3a28736116e66c48badfd4c1b9d8ac118d62964bc608b9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-044.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bdae484b240143486669b3949ec3f0251f4a3d6590af397433457fbb4b3e13c7",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-044.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "7371942888616b2979e4e08ae4eeaa8781a25193880c6348bcc2d78766f22787",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-044.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d0a6e8175ac1dd342871ae894d56a0dc631ab02dba4a78f077706c9985c9726c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-044.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d9117afb83d7cc09bc354230725b3c8fbef622901dfcc574fc45732c04d79aa9",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-045.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "32116bc4e86f67b7e388539b8c7e2281fdd08112e78aa370a41a6913edb697e0",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-045.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "32690dd1407554fb9583f7a36963cf5d81a4aead0ea21045b122c506339918f1",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-045.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2131a4a55651797374b45cd0a4fada305967dcfe24ac980310d0c0e0ce9bda4a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-045.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "416925be83c7e5091b95ce85651f168f6d9ab00ab1f41597780872509dd5617e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-046.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "bc9f1ebd9c3c42bd54746bd396c1042fbd3185807f568779fdaead9571931e4e",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-046.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "5f1ffc3c12007f0ed340f7e30533c82756202dbfe241b92e7bc34eb9b670a4ac",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-046.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "103090ae56b624cf5624afb2a16d19b46dbb5fb359facf77d9491278a9c6239c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-046.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2a14e81c03eb6a95ed3335ce02a8d44f89b46380503e8a17ca0fa43460a6e9d8",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-047.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "7a5dbcf026cfce782c186799b9810cbf3b1feb2a85bcbb1cb615456719a210e4",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-047.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "cfd4500de45a29bde594b7b2f14aee471018b64649038f2290124e6e0afeca07",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-047.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "870d440f0eb18e3f8c1dcd8e57f5af97f42a88bcf71a55d43424a5c637b07cc3",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-047.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8482c0979a0f61cb1aeb47a33aa2af8dd5a551c7b2fa084182ef744957a09947",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-048.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "56c6689064ba3884560d63e317fba680ad214036cbdb02b19bf6cb9d3fa826b1",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-048.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "9991785c64d4160127aa1af674e9da8010f1793b603a7e069c1f13d86c91a72c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-048.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "116fea093668477737be546941b42957396c2da8111e3db9b894f344264c1a71",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-048.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "82aa9082c9e5b62a99467019a8e4a41ecaf8140c856dec9e1cff1d8101bbde58",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-049.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b239516a6053efbc073150d17731f2f21e471edb9ffa4673d863c432b886b702",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-049.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "6ae94c9b9b108f483b588389d963e724aacc5dae413eb61161269fa175c0ab54",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-049.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "80cc9fc30fc9b691c15779cc9e3f5ad00b5aa30573faa4dd3db281c60105309a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-049.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "e72f9ef6c8e4a7c0322db3c0af8a89ba248e6855b75efeaa061dc1fbb1b75cce",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-050.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "d7c302c57020e708b63d27e1b3a66a24bea4ddc6c75091e01816cf0300bd6f80",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-050.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8cc6c07289cf47bc2955a553766934280e23dc381d768da9dd8541a91824fc45",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-050.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a1c151502cb573b0626ed7a995ee041f0860728f2a36fc9863da48330ddf5fa6",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-050.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "5ee2cfa84bc3a6f0b40c6d561e2efe234cf4729a6e6ef607fc8c0d92f67dbd20",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-051.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "a874ef2f4e09141abae7d197d09e5c992f8e2e49e8bbd5f91691adab9e435d2d",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-051.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "6614b7b33380e716d75d669cc4f5003c09927f52b13f5ba79ef8322e788d395f",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-051.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "f3fc407af925437ab93f14fbf01e931b3dad649431a38af0b698a31eaa6f7104",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-051.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "987cb2754e3b2c5b44aa3423f5486cc1321ce0e4a1bf5b6acfe0c2e8f433e588",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-052.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2051a0bc4e1f09b2b8eb5e9af95b8fb93f10e6c0b29ab637be8b9de3e25e9d2d",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-052.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "dd05e12552e1848e303730bebea49c6d296667329e39be5557b2e310de30e136",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-052.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "6c1a1d166fed31ae5519116fe82b7a64737c93b01206bb7146b3b802196056f1",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-052.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "0057715474d75b5d1844151f6fb62bad63a3c0fac74ec74d7f725b51fe590d4c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-053.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "47db087a9d9e3f025ca6df65ec141e824ef20440dbc2ac385096b039c0d4d245",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-053.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "daac364f3bc802b51c9ea64175c83b1ff9f0becdeb4fa3aa73f0e64829e31d0a",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-053.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "8bc28d593059376076bc943a9b246509056b65f789a317cfe7376f643a394b7d",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-053.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "185c03f2b845641b6e298493904d1f8208dd75df80791488321fe7501f165ac3",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-054.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "73fc5161a9636515cc4448de64c9e9a90aec7fe711be95da09a7d7d1d47a6ad2",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-054.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2391f43701565de2047e7e697013813a420843727754a0467c715438e06e019c",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-054.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "525bc17506db2148c916d55648246e3b7f626555c979e692a0cf008c124000eb",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-054.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "32bfbbbb840a2bc5b010154d0ce35ae9c8d158839d1e40bc66282044e91db337",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-055.columns.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "2fff7c6acfc588e9973e572b8966fcf00a6702c6209dd76fefee3ac117e22d15",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-055.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "b969a821ebe1889a6c1d8997ccbd1465a0d247ce2c5ac3f681324cf84224a716",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-055.rightrows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "3dde723dd64936cd55f7ddd0410098fba7b9e4d4bdea090b16ee248373e285e5",
+      "role": "image_extraction"
+    },
+    {
+      "path": "sources/sichuan/catalog-2026-055.rows.ocr.json",
+      "url": "https://www.sceea.cn/Html/202608/Newsdetail_4951_5.html",
+      "sha256": "13bfa45ade574f93599455e795150a0c6e56979d61b36a2ed8517edb8ce75d21",
+      "role": "image_extraction"
+    }
+  ],
+  "limitations": [
+    "2026目录为2027备考历史参考，不代表2027招生安排",
+    "省控线不是院校实际录取线；特殊专业资格要求仍需考生自行核实",
+    "同名专业可因教学点、地址等不同占多行，不能把记录数当作专业数",
+    "图片目录经网格分行、多次OCR比对与111处文字复核；图片或识别结果变化须重新核验",
+    "收费未注明周期时保留原文，不推算年学费"
+  ]
+}

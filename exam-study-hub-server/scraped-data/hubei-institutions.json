@@ -1,0 +1,136 @@
+[
+  {
+    "province": "hubei",
+    "name": "中南财经政法大学",
+    "official_codes_by_year": {
+      "2024": "545",
+      "2025": "545"
+    },
+    "source_urls": [
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202412/P020241223338935382266.pdf",
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/P020251219649285286532.pdf"
+    ],
+    "institution_name": "中南财经政法大学",
+    "institution_code": "4142010520.0",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "中国地质大学（武汉）",
+    "official_codes_by_year": {
+      "2025": "548"
+    },
+    "source_urls": [
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/P020251219649285286532.pdf"
+    ],
+    "institution_name": "中国地质大学（武汉）",
+    "institution_code": "4142010491.0",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "华中农业大学",
+    "official_codes_by_year": {
+      "2025": "554"
+    },
+    "source_urls": [
+      "https://jxjy.hzau.edu.cn/info/1047/8745.htm",
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/P020251219649285286532.pdf"
+    ],
+    "institution_name": "华中农业大学",
+    "institution_code": "4142010504.0",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "武汉理工大学",
+    "official_codes_by_year": {
+      "2024": "549",
+      "2025": "549"
+    },
+    "source_urls": [
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202412/P020241223338935382266.pdf",
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/P020251219649285286532.pdf"
+    ],
+    "institution_name": "武汉理工大学",
+    "institution_code": "4142010497.0",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "湖北中医药大学",
+    "official_codes_by_year": {},
+    "source_urls": [
+      "https://hbucm.edu.cn/info/1049/205401.htm"
+    ],
+    "institution_name": "湖北中医药大学",
+    "institution_code": "4142010507.0",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "湖北医药学院",
+    "official_codes_by_year": {},
+    "source_urls": [
+      "https://www.hbmu.edu.cn/2026/0525/c849a165540/page.htm"
+    ],
+    "institution_name": "湖北医药学院",
+    "institution_code": "4142010929.0",
+    "city": "十堰",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "湖北大学",
+    "official_codes_by_year": {},
+    "source_urls": [
+      "https://jjy.hubu.edu.cn/info/1060/2773.htm"
+    ],
+    "institution_name": "湖北大学",
+    "institution_code": "4142010512.0",
+    "city": "武汉",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "湖北工程学院",
+    "official_codes_by_year": {},
+    "source_urls": [
+      "https://cjxy.hbeu.edu.cn/info/1068/6053.htm"
+    ],
+    "institution_name": "湖北工程学院",
+    "institution_code": "4142010528.0",
+    "city": "孝感",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  },
+  {
+    "province": "hubei",
+    "name": "西北工业大学",
+    "official_codes_by_year": {
+      "2024": "704",
+      "2025": "704"
+    },
+    "source_urls": [
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202412/P020241223338935382266.pdf",
+      "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/P020251219649285286532.pdf"
+    ],
+    "institution_name": "西北工业大学",
+    "institution_code": "4161010699.0",
+    "city": "西安",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "identity_basis": "教育部学校标识码"
+  }
+]

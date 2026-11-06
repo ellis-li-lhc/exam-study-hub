@@ -1,0 +1,2086 @@
+{
+  "province": "beijing",
+  "province_name": "北京",
+  "catalog_year": 2026,
+  "coverage_note": "2026考试院公开专升本目录45校287条记录（197个院校专业及方向组合）；2024—2025省市控线16条单列。10条限定招生记录不作普通备考目标；人数未公布，暂无院校实际录取线",
+  "counts": {
+    "institutions": 45,
+    "programs": 287,
+    "controls": 16,
+    "category_collections": 0
+  },
+  "public_query": {
+    "all_level_records": 287,
+    "zsb_records": 287,
+    "completeness": "all_index_entries_and_287_details",
+    "ordinary_target_excluded_records": 10,
+    "school_major_direction_pairs": 197
+  },
+  "sources": [
+    {
+      "path": "sources/beijing/catalog-2026.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/showSpecialtyMenu?examId=6311&specialtyMenu=1",
+      "sha256": "85596f1e3a43325c9e05675e840a90c1562abc2024ee01cc048a948e21067cf5"
+    },
+    {
+      "path": "sources/beijing/portal-2026.html",
+      "url": "https://www.bjeea.cn/html/ckcz/",
+      "sha256": "36f8feef3400d26a07bfc0ff85fa38055148dd2eb4827f7f058f11da5ef3da7b"
+    },
+    {
+      "path": "sources/beijing/controls-index.html",
+      "url": "https://www.bjeea.cn/html/ckcz/ksdh/2021/0826/79364.html",
+      "sha256": "0df7039b2a982edd310043ad43f45ca182bcba19e3d0e8f068a9e2ad4540a688"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00170.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/001/00170",
+      "sha256": "23d9bb8431aaa06a1bdf2780097e5090ddbc4bff2baae58206aef4a92339ea57",
+      "method": "POST",
+      "body": "schoolcode=001&specialtycode=00170&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00171.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/001/00171",
+      "sha256": "fa537e8a8e428c52c1be8b9f81ae4fc7110fd02222b0657e38f33ab60cf8f9e5",
+      "method": "POST",
+      "body": "schoolcode=001&specialtycode=00171&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00172.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/001/00172",
+      "sha256": "5df1250324237a4ab624c2cc358d33ae39759c3a15184ad1eeffaa9d2117dd6f",
+      "method": "POST",
+      "body": "schoolcode=001&specialtycode=00172&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00270.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/002/00270",
+      "sha256": "d1db3fabfc9a02f2c9cfa9398d4489858dd5444df75cfe059b5ac977037cab5d",
+      "method": "POST",
+      "body": "schoolcode=002&specialtycode=00270&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00470.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/004/00470",
+      "sha256": "4dc56f63bd99246c75a5cb22cc3336ddf8d4c4d779d0cf4b959b078e75736e3d",
+      "method": "POST",
+      "body": "schoolcode=004&specialtycode=00470&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00570.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/005/00570",
+      "sha256": "29129fea8e099e18ee9e8544383aca25dbe0ca010a44c870e8b6d0343f68c5e1",
+      "method": "POST",
+      "body": "schoolcode=005&specialtycode=00570&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00571.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/005/00571",
+      "sha256": "5dedf7147ddc49a8964d661240ce7a2f32a977f95a790f2c79cd5feb3748ac68",
+      "method": "POST",
+      "body": "schoolcode=005&specialtycode=00571&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00871.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/008/00871",
+      "sha256": "3a31ad7d40301041ed3c5a55bdf616152304594a1e362e51838e1017551c1c16",
+      "method": "POST",
+      "body": "schoolcode=008&specialtycode=00871&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-00870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/008/00870",
+      "sha256": "d66cc196e7317fd766f091b66fa4318194c3c225177d31dcf7fdf7548e4d5ca0",
+      "method": "POST",
+      "body": "schoolcode=008&specialtycode=00870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-01170.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/011/01170",
+      "sha256": "fb07771789161794801ce4cbbb3174987070619e104398fa07b5ea4271832a5d",
+      "method": "POST",
+      "body": "schoolcode=011&specialtycode=01170&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-01870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/018/01870",
+      "sha256": "76a86ab9b11a42e28032c63c2023732be91e9650bc910642177dfea1578c5fac",
+      "method": "POST",
+      "body": "schoolcode=018&specialtycode=01870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-02470.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/024/02470",
+      "sha256": "2eee0d57746e6caa8682c4bf0591115235dc825980b4aef656a1221b9922b0f1",
+      "method": "POST",
+      "body": "schoolcode=024&specialtycode=02470&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-04670.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/046/04670",
+      "sha256": "4de3383443dd488c6270b07234a815721cc6067f258500728dbfa1fdcb916dbf",
+      "method": "POST",
+      "body": "schoolcode=046&specialtycode=04670&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-04671.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/046/04671",
+      "sha256": "da15b0e8dbd8bfb654376e5590cd55810e7fb1ab07addea7f1c4dbbede11bdf7",
+      "method": "POST",
+      "body": "schoolcode=046&specialtycode=04671&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-04672.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/046/04672",
+      "sha256": "8973603d575c48a256c024956419eabb0b4d6291034b640db81bfbd9147c035d",
+      "method": "POST",
+      "body": "schoolcode=046&specialtycode=04672&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-04673.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/046/04673",
+      "sha256": "278b3956389c4700551f41dd3b98df72a27d20bb86207f29ae877e3d0d7a844f",
+      "method": "POST",
+      "body": "schoolcode=046&specialtycode=04673&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05170.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/051/05170",
+      "sha256": "1d36af8c5cfd73d70f25fdbc7cbe00b1344c02594ff6fee8ff6c6bc84fd68c7b",
+      "method": "POST",
+      "body": "schoolcode=051&specialtycode=05170&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05172.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/051/05172",
+      "sha256": "c97c8299dcad6f1683d6228aa1d8e922dc12b3930431e0c7192ac01b589e9d5f",
+      "method": "POST",
+      "body": "schoolcode=051&specialtycode=05172&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05175.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/051/05175",
+      "sha256": "b1c1798354a593a2f834daa3b95072d5f2731ae31c88bde96546b52fa7e135ed",
+      "method": "POST",
+      "body": "schoolcode=051&specialtycode=05175&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05176.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/051/05176",
+      "sha256": "be63e89756b9783d4b32af5a9a3af0d2abd5aec0ff26f1e811abe174af650600",
+      "method": "POST",
+      "body": "schoolcode=051&specialtycode=05176&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05260.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/052/05260",
+      "sha256": "87f50605f4f283b82251ed561ba8a2a2faeecd967d26d2b8b9f04bab32583fa9",
+      "method": "POST",
+      "body": "schoolcode=052&specialtycode=05260&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05261.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/052/05261",
+      "sha256": "7d1865b83e4b8e2aa0b77ef45c3217edf2384fa13328e4ad1603d1fc431507ab",
+      "method": "POST",
+      "body": "schoolcode=052&specialtycode=05261&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05770.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/057/05770",
+      "sha256": "be8ac1fe9deb7e08a283cade86a6b06b1b7b9c75c7c247ff1c62939bf7339f2d",
+      "method": "POST",
+      "body": "schoolcode=057&specialtycode=05770&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05771.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/057/05771",
+      "sha256": "f706c61083cd49eaa846d8edb1bd5576920aaf7959b240e3df065d4cc7022b09",
+      "method": "POST",
+      "body": "schoolcode=057&specialtycode=05771&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-05772.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/057/05772",
+      "sha256": "5926ee65c67c659db269e38aac1df11aca47b0929bed657d5197ea8631c2ff0f",
+      "method": "POST",
+      "body": "schoolcode=057&specialtycode=05772&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06861.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06861",
+      "sha256": "2d03ec49e4e36787983f0946849d099c02fa10163a6328587beba04480d429ff",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06861&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06862.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06862",
+      "sha256": "ad56d2e470ffb4918fe68a0399e98350601a696cb7c7d8d85104d2d8be164ac3",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06862&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06864.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06864",
+      "sha256": "e8ba4b2c99dfa0f95a17d1ed5dc29f254bdbfe96fab5ab9bfbdb5b19663bf53b",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06864&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06865.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06865",
+      "sha256": "7ccc1ff1fc01930446f7938731cabec617b8715883c59c253aa2d5d42d55283a",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06865&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06866.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06866",
+      "sha256": "c009cd81704e2005c6f3f5f3f97ce8885363e1177e637b1f3bfe03f41d91fad0",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06866&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06863.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06863",
+      "sha256": "bc64ee27ede6486043fde4291f64b6e5f7a68d10f0c07fff97cb060f2840bfbc",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06863&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-06860.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/068/06860",
+      "sha256": "3c44b5f588b6ab77f994e3aa06fdd38d7a2ae3080b463f8f2f7903711c632c9f",
+      "method": "POST",
+      "body": "schoolcode=068&specialtycode=06860&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07871.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/078/07871",
+      "sha256": "3ef6661d1d7b6bed8129419c597c046b50a2b3648dd549722381fcb738555dea",
+      "method": "POST",
+      "body": "schoolcode=078&specialtycode=07871&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07872.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/078/07872",
+      "sha256": "71276f248649497d674acea9a073f947b2cf32a67969f873030dc184ac4b91b2",
+      "method": "POST",
+      "body": "schoolcode=078&specialtycode=07872&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07873.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/078/07873",
+      "sha256": "c4ad9ecbd6d60458569b143056133c72a80eea3aee2c3aabf78267749c2f1002",
+      "method": "POST",
+      "body": "schoolcode=078&specialtycode=07873&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/078/07870",
+      "sha256": "9293caf2f9b06a19840d9a03e729595abee5516662118a2ba0af18c7d61c30c3",
+      "method": "POST",
+      "body": "schoolcode=078&specialtycode=07870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07973.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/079/07973",
+      "sha256": "c3f5b8de56bbe50d137ccc7fe129194566e6543bb6db623f8181ac7b3ce25119",
+      "method": "POST",
+      "body": "schoolcode=079&specialtycode=07973&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07974.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/079/07974",
+      "sha256": "c8a930c12b73fb6034962ed199e9946cefbe51cc15129799d40dd0ae4b223e03",
+      "method": "POST",
+      "body": "schoolcode=079&specialtycode=07974&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07975.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/079/07975",
+      "sha256": "10092b2a01099134f821f102421d85341e71024aef558b9088b1264ef14ecf4c",
+      "method": "POST",
+      "body": "schoolcode=079&specialtycode=07975&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07970.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/079/07970",
+      "sha256": "c8d17b3486e7ec4c3b42b007976d0294d3a4d6ba861f893fc41559aed394f239",
+      "method": "POST",
+      "body": "schoolcode=079&specialtycode=07970&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07971.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/079/07971",
+      "sha256": "102141ffa57ad037767a04cbfbb46c0af5204b4cd1cc4d548b2bbbc1028cbce7",
+      "method": "POST",
+      "body": "schoolcode=079&specialtycode=07971&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-07972.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/079/07972",
+      "sha256": "240f6dc9e74f11b38bd3c77aff936828ae5efe3c1f05e128b7c44e13c52c9b99",
+      "method": "POST",
+      "body": "schoolcode=079&specialtycode=07972&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08370.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/083/08370",
+      "sha256": "3b57338a768940ffae99e841382bfbc1676bc8669943cca71ca3237878e5a054",
+      "method": "POST",
+      "body": "schoolcode=083&specialtycode=08370&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08371.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/083/08371",
+      "sha256": "b42e4b7ac52fe2e2dd3970da9cf2fcd94e87c25ded5c6a6248462c432bc0814c",
+      "method": "POST",
+      "body": "schoolcode=083&specialtycode=08371&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08372.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/083/08372",
+      "sha256": "e054b25744da012346c808f6b150a2525ae3d9d1929f1980720e18f51e9558ed",
+      "method": "POST",
+      "body": "schoolcode=083&specialtycode=08372&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08481.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08481",
+      "sha256": "160739b9305ccddd4ad1b8685c075254524f0151605ab641a8aedfd8aa2f0015",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08481&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08470.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08470",
+      "sha256": "037cb6446aa683da6891d764134129d8bf2444cd5d1bc15adea33b1a74ada9dc",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08470&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08471.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08471",
+      "sha256": "a87f44dfc923db054c938a3584121e8547d947fd9c07346496b071a7221e8c85",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08471&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08472.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08472",
+      "sha256": "e30bf05ce37267287eae35cd2e56ae260b43920edfe7c08b15b4ac8cefbb0856",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08472&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08473.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08473",
+      "sha256": "31b8aa31f428c704d93414cdc757f9f47710ac5c0535d1474210cec46da7d439",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08473&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08474.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08474",
+      "sha256": "6001e8aceb1e6d7de8c963eccfde23b9e5937865bfa947341a586ade1ce2e1f1",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08474&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08475.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08475",
+      "sha256": "2033256329bd205617015fef3b664d3cdf8826c2fc3936375398298c611916df",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08475&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08476.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08476",
+      "sha256": "2e061cfd46c5f711352914328df1c7bede74e39a1e705d06ebbcc8ded255629a",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08476&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08477.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08477",
+      "sha256": "e4edc1021609f9fd7cba654a21aea89ae7e833d99a09b001cf666c01812949c5",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08477&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08478.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08478",
+      "sha256": "d5208411672ff146e89367f5dadb4b71b1c23ca92dd178f4bf2eb023891775cf",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08478&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08479.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08479",
+      "sha256": "99994c90c0d518f04627a1049e68ca97466d92b940a70263649fa39298a5d7bf",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08479&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08480.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/084/08480",
+      "sha256": "05d3c6e602f90105b62e89f4d35dfa0cdce38461edba52a6043909586d0c3607",
+      "method": "POST",
+      "body": "schoolcode=084&specialtycode=08480&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08570.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/085/08570",
+      "sha256": "dab820c290e467c799898cb31093d0e3634b6cda2ea6a54a11bbaf36e0f7d0d7",
+      "method": "POST",
+      "body": "schoolcode=085&specialtycode=08570&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08571.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/085/08571",
+      "sha256": "6b16aec23177fdbd62651f2ada645ed5fc24c9942072a372d7973ed01c57466b",
+      "method": "POST",
+      "body": "schoolcode=085&specialtycode=08571&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08572.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/085/08572",
+      "sha256": "6cd3df83bfdf6c814bcc30358a69607482298476f590a32b0453a580fb8ca390",
+      "method": "POST",
+      "body": "schoolcode=085&specialtycode=08572&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08770.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/087/08770",
+      "sha256": "a6891cb359097d9168a1ecd6ad702bdb3aaa3e3df85c546a5d301187512bff1f",
+      "method": "POST",
+      "body": "schoolcode=087&specialtycode=08770&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08771.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/087/08771",
+      "sha256": "36a76b6198628b8d836e887eaea3d07ccba27af759dae08dc78e73ce9195d571",
+      "method": "POST",
+      "body": "schoolcode=087&specialtycode=08771&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08772.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/087/08772",
+      "sha256": "50aca09449373b893020ecdc45d7e4b69ec374cc9dd1c0356c8d27433f650b77",
+      "method": "POST",
+      "body": "schoolcode=087&specialtycode=08772&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08875.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08875",
+      "sha256": "382c87c65d22f556e2ae440305cfa2312f354198d1c082724e00b2c9ca878fd2",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08875&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08876.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08876",
+      "sha256": "683e8cd837c82bd5caf17bdb55c09d364de100aeb24260c231346c2aa784fe22",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08876&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08877.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08877",
+      "sha256": "0a085aef7c1e210eda43c924d95b12edf25c5b18cb634396619419957733eb2d",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08877&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08871.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08871",
+      "sha256": "9889646ee9865e72a2373c6eea4d48f15bb8c389dd32791ccf483f320bb27dc0",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08871&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08872.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08872",
+      "sha256": "d34c4197c22da0d6f924a056b76f660cafef7d4897f24365e17878d06ee0161b",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08872&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08873.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08873",
+      "sha256": "44c37a6a9efd2fda5a1a6cbf8c8c317d547b9d198a77459883e948db7a64cf3c",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08873&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08874.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08874",
+      "sha256": "03974981e24588efa0f109ca96ef4799a3f984427e2704ed4fac9d41386c356c",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08874&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08870",
+      "sha256": "a9fcc419b2009ca001c62503448e4889916b4f007ab4c9d1ceeb1dcdc56aef16",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-08878.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/088/08878",
+      "sha256": "dde02cd745efc8763f922628fd5697f53a74462e53e6dc71c6a9b3c9301ae149",
+      "method": "POST",
+      "body": "schoolcode=088&specialtycode=08878&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16070.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/160/16070",
+      "sha256": "5f0d27adb7620d282bd03e7c2a91c190064d4adbcb3acfe0685d853408bd3a51",
+      "method": "POST",
+      "body": "schoolcode=160&specialtycode=16070&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16071.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/160/16071",
+      "sha256": "d9d97c63cef50aa1ff35c82fa386ef4bb2da5ad39af94a5a54cd46774d917b1e",
+      "method": "POST",
+      "body": "schoolcode=160&specialtycode=16071&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16075.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/160/16075",
+      "sha256": "580ab66a45ab79a6b3c3b8bb0985bab27016698c15fdb3dd9837f715370fd62a",
+      "method": "POST",
+      "body": "schoolcode=160&specialtycode=16075&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16073.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/160/16073",
+      "sha256": "31395a4a1e3818868365666b01a5f9a225aa7e787c8065b0799d426acdc911ca",
+      "method": "POST",
+      "body": "schoolcode=160&specialtycode=16073&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16072.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/160/16072",
+      "sha256": "91fedec818c396d3c4cad39fbdada44a967444359b24b42a915d86ee3c222e79",
+      "method": "POST",
+      "body": "schoolcode=160&specialtycode=16072&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16074.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/160/16074",
+      "sha256": "ff8cf48a41aeb708acdfc55a56da85994a315122e9bb6de5604f015019dfa7ef",
+      "method": "POST",
+      "body": "schoolcode=160&specialtycode=16074&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16170.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/161/16170",
+      "sha256": "30a57d9aa1d806d06c35e978ce2a593ad00945d967765dbb83a611cf006258b1",
+      "method": "POST",
+      "body": "schoolcode=161&specialtycode=16170&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16171.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/161/16171",
+      "sha256": "f4e8deb3aa6e30d6427cdb53f04f3be13a20f868677ee59c8d75e1a8497cbd2f",
+      "method": "POST",
+      "body": "schoolcode=161&specialtycode=16171&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16173.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/161/16173",
+      "sha256": "b37631234c2deb8265fd9389103b6ca79f1ca3f169a249851e4407180d122b97",
+      "method": "POST",
+      "body": "schoolcode=161&specialtycode=16173&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16174.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/161/16174",
+      "sha256": "296645225607099924789d854c78c1feb18d7a5d065064257a1e5802e673593c",
+      "method": "POST",
+      "body": "schoolcode=161&specialtycode=16174&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16172.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/161/16172",
+      "sha256": "0df997a0f76e93a7e19bd8243259216e1c6b6700b1541049780fcfab2e6948b8",
+      "method": "POST",
+      "body": "schoolcode=161&specialtycode=16172&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-16175.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/161/16175",
+      "sha256": "529fc5cd364a94f0705a4b8715dfe96a2f249f2462b785adadbd0352af875945",
+      "method": "POST",
+      "body": "schoolcode=161&specialtycode=16175&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-24370.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/243/24370",
+      "sha256": "dc6f8602cbf0dfe5d6d91116f5337aa0abb3f881e279df6a2f318e47ccec19d0",
+      "method": "POST",
+      "body": "schoolcode=243&specialtycode=24370&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-24371.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/243/24371",
+      "sha256": "990aafa43ff0366b01d47d68261d79b8400287344dd7db56c703126570f73460",
+      "method": "POST",
+      "body": "schoolcode=243&specialtycode=24371&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-24372.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/243/24372",
+      "sha256": "293ec3699199f69e59365f269650544076b996c9072cfc4d2908ca6125bc04ec",
+      "method": "POST",
+      "body": "schoolcode=243&specialtycode=24372&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-26070.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/260/26070",
+      "sha256": "185b45fa87d538da0839d12783e55f62bf890dc81f9b086dd478033da9bad81f",
+      "method": "POST",
+      "body": "schoolcode=260&specialtycode=26070&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-26071.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/260/26071",
+      "sha256": "b1b69246ef996af860c57fc670eb775353be1325fbbf2a6a44e115a11562c8de",
+      "method": "POST",
+      "body": "schoolcode=260&specialtycode=26071&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-26072.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/260/26072",
+      "sha256": "709c5cded8252fe1d8a3675870798f8e462169c8e6728554f938989425c84607",
+      "method": "POST",
+      "body": "schoolcode=260&specialtycode=26072&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-26073.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/260/26073",
+      "sha256": "8bbb9a7262b27b29b6802d5b87731b185f4c039f8c28d1d186b019b19fcf35f4",
+      "method": "POST",
+      "body": "schoolcode=260&specialtycode=26073&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-26670.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/266/26670",
+      "sha256": "b66c263e1e24242487839ed15da11ead6c523420000dbe462da696639b55ea47",
+      "method": "POST",
+      "body": "schoolcode=266&specialtycode=26670&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-26671.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/266/26671",
+      "sha256": "a2e749509e32bd1551bdbcbee1f2eb3b48aee5bc9e08ba96d29a464ebb2c4731",
+      "method": "POST",
+      "body": "schoolcode=266&specialtycode=26671&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27370.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/273/27370",
+      "sha256": "57f93929cdec188be050a5eff8011f5c0c929565c9c01651a6cb15302f512c4e",
+      "method": "POST",
+      "body": "schoolcode=273&specialtycode=27370&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27371.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/273/27371",
+      "sha256": "44a42cc1328cf72746798e1e892c30d0616d200a215513955e0ec4aeb320b6a8",
+      "method": "POST",
+      "body": "schoolcode=273&specialtycode=27371&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27373.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/273/27373",
+      "sha256": "062bf397b1587dc2d795639e3868572d2ae9cd037cf9085fcc1f4f0be3a656ac",
+      "method": "POST",
+      "body": "schoolcode=273&specialtycode=27373&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27372.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/273/27372",
+      "sha256": "45303aecff9b5ae970063c5ce228a3359d6b4b91527d1f6ec8d38988b1aa9394",
+      "method": "POST",
+      "body": "schoolcode=273&specialtycode=27372&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27479.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27479",
+      "sha256": "3e25bcefa8d59b4fa248b775bc2ffca0eef0979f166c66cd13d51500f487c724",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27479&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27480.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27480",
+      "sha256": "110b073a9a34b90d2f0032da985b7f92be7ef1197f18538cc32fb3a52ba3aec9",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27480&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27481.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27481",
+      "sha256": "825f64e5a0c8bf0447639ba16d665a519bad4b4cfcbe3b69eeb8941e5d50b3aa",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27481&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27482.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27482",
+      "sha256": "f26b3913084e2e6d50278b686670313a947965afc41b19333a13922018f01360",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27482&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27470.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27470",
+      "sha256": "9444aada954d8ff609277d8771fadc72728259b67ca14a8fd2183803c8d0b91c",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27470&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27471.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27471",
+      "sha256": "fc0b6eb28a9280ed3a9243f0dae33520b52bd6f604a9d6133e5d367865f09c8a",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27471&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27472.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27472",
+      "sha256": "d341fe787983523c70094e250b4587bda06a302133fff764f40c53d1691ca336",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27472&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27473.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27473",
+      "sha256": "a560cf4fe6fcf397ec9aec69a34edfae8f5ed39199e1809a014d40be2a77013b",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27473&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27474.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27474",
+      "sha256": "f8c3872dae71d0b1d46fd49d7185a1f73f0df5abcb8bc94f30a2f75ce94bb651",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27474&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27475.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27475",
+      "sha256": "851cfd8f7208977ff06bab8040191a1227b77d6f86bd590b7a00f9979be14eef",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27475&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27476.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27476",
+      "sha256": "8f67ad84f77888c06c7b23a066a7d3e02226b2a42b335cbf891eae22e7c4ea25",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27476&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27477.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27477",
+      "sha256": "7f81883cf28f87f148126df5d2debac434be3388e26b1bcd26a0f21226d541b9",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27477&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27478.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/274/27478",
+      "sha256": "f8a52ff349dc48b54faa0471607ebc3657cdf0cd0e500840f75f3bb397226c01",
+      "method": "POST",
+      "body": "schoolcode=274&specialtycode=27478&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27670.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27670",
+      "sha256": "f69a91e4dbb6b4dd2f2f3d9583d73346338850a648772a7b26818e915a384caf",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27670&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27671.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27671",
+      "sha256": "072db0ee7a5e92a19e58a4be3ea811bd6a7230019b7fd145a9b55ef3ac1009b1",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27671&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27672.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27672",
+      "sha256": "968e3c84a3f066137ca6706f3873334205776b9a3e333e5ca1eeca3cb48d3206",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27672&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27673.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27673",
+      "sha256": "c2e5e03fa958136b909c47ad20a94015151b4b8d01b3e138d5b7360a8d2f010a",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27673&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27674.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27674",
+      "sha256": "a71a8abdf686ff32217f732018a58ec7edd61419412136894e7c11d6efea1863",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27674&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27675.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27675",
+      "sha256": "cb9309624524a69da044a89e919289de2d7dd00e23a34c239389637d38ffc811",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27675&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27676.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27676",
+      "sha256": "a413d69a19f3bce26028323374e15384b2229549edf97628459b070fe75cfc80",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27676&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27677.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27677",
+      "sha256": "04cb0a6e4eafb586e0606d6ac200772829c871e23574cd60855dc23e03cbeafc",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27677&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27678.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27678",
+      "sha256": "a9f934f6193598527f377744de95fe2fb1339f3343a107a2029b44d61a4152a6",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27678&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27679.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27679",
+      "sha256": "4b43cc9ab2406c2f14fe6dc3cb3e92b74f070d5545f06d79ec1ada2c28c9d0e5",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27679&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27680.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27680",
+      "sha256": "331b99d7de1ca2b1aba32b2d62bba8b07c243b2b77f8fa820da3cad88fd84370",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27680&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27681.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27681",
+      "sha256": "37b89eef90e2f5336effa17c43ffeeae68cbd83a271e258afa24af201948eb80",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27681&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27682.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27682",
+      "sha256": "2760a644e33c2e0a6032549bfc34c61a7a0139bd1b515fde5eaa2dad1332b3d9",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27682&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27683.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27683",
+      "sha256": "9a5226820f98b2d2093ab453fb89cc5811b80e1cc96717a12b3bbeb6bf0c8b18",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27683&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27684.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/276/27684",
+      "sha256": "82e3b8e5191651bd3558062eba73408f0bedd8a7fc48a48bb14c2af30a930fb0",
+      "method": "POST",
+      "body": "schoolcode=276&specialtycode=27684&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27770.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27770",
+      "sha256": "3057988a3a849f9c2732107c5aa64b86009697e0b3b833ca590d6a038e8feefe",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27770&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27771.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27771",
+      "sha256": "5d325486006759ddd37255525844fb945778540322982733b851d1525cd42866",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27771&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27772.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27772",
+      "sha256": "204e830692c7b577a5b64a23b16159cf01156a7637114d5eea546ab0142ccd8a",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27772&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27776.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27776",
+      "sha256": "e0b3bd9a35dad8e3294d248c1a79ec0477804f8f19a4fb3eb1ae849e54aaf822",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27776&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27777.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27777",
+      "sha256": "28026636b7ef2c505b07c87e0204643f7bbb66c4f73212b2fb68c2988a163b6d",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27777&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27778.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27778",
+      "sha256": "cd80e6664716bedf782fc3a51215e5095a6e6481708f471194661fca116e16ad",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27778&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27780.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27780",
+      "sha256": "fc4ef29604a741e17b94f0d783d54ec74480fa5995c685d399616e84acbf1c14",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27780&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27781.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27781",
+      "sha256": "3036d0f5f279578e652b174e93fbfdec4eab4417eccea553cb9086093ab65173",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27781&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27782.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27782",
+      "sha256": "9ca8fa2c7c3a7d0e2fb4bb0364c0068a5971db22d3905b6e7fd0a0f1edcc6da4",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27782&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27773.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27773",
+      "sha256": "e398b408fe29c1bdf598bc1c3c83151cf1aebba1f1f172cb56ff07c735863947",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27773&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27779.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27779",
+      "sha256": "0d74be888926fe8a1d47342b73f12fc2eb460deeac07fac42e83cb59e3609fbd",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27779&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27783.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27783",
+      "sha256": "82f3c20d8d547c78a3a80d50c3f5f349e1f4f0d6ccd8c6cf7abffc31e5c63c20",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27783&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27774.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27774",
+      "sha256": "acc6ed5716510dc52890e2f11607fbe878a978442748f0c2e3e668170097af47",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27774&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27775.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/277/27775",
+      "sha256": "75f62140715c550c95cde979e5e942bf8b6e3a8765dd2527ac9303becce783b4",
+      "method": "POST",
+      "body": "schoolcode=277&specialtycode=27775&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27878.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27878",
+      "sha256": "85fc4a808ca5bae9c626e497b28dd2ecd387311bc78e629d4794fe462a37ae41",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27878&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27879.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27879",
+      "sha256": "a466c925d50ad6c747f4a9eb3b6b1c47c214d4d486f6f5b0f97346bc86715ce5",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27879&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27880.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27880",
+      "sha256": "fafe4ccded300e3b516f90b5131b2da57a8c3194d1b8a68b7f4e2b7d7547a6b9",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27880&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27881.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27881",
+      "sha256": "115193fd8dcb2a1ca753c691cf6a62cd2e8b775c9f34b8cd6b69ee3e64aa2289",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27881&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27870",
+      "sha256": "dddf1e7e8852659539f6747dcbb22f14303f450321236c8a6120c4adeeb4748a",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27871.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27871",
+      "sha256": "aedd4b6f208664d610d7bc2625e5a900ff5ddb0c6b1a7615fd98c482b4370586",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27871&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27872.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27872",
+      "sha256": "e4792675ce8f1077938f7008cca0ee00a6c5d779d2ae6b1e1f6c2781ffd1427e",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27872&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27873.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27873",
+      "sha256": "a713bd0bedc642a6bde4effce2e2debf0adb0d077d1195724ddd931ad811a479",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27873&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27874.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27874",
+      "sha256": "012d7ce1bfa000a812c4c1b29c9681711caf6f7db9347f11c3d5bc256c90db4b",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27874&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27875.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27875",
+      "sha256": "889b648fe44c26cba1129117e7c5f9ef8c5c395259debe97fd8c03c8e6fe6643",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27875&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27876.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27876",
+      "sha256": "457a2a62c091fd3bbf8655a08cf5f5cc2622d2bd1c00a67869e427a5f316cbf6",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27876&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-27877.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/278/27877",
+      "sha256": "60f09abc01673c7d6958f10fefe37faee93c39cab1d4832fa463d61799035ed7",
+      "method": "POST",
+      "body": "schoolcode=278&specialtycode=27877&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28270.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28270",
+      "sha256": "0d9f6928d753e41c8ac7dc5594fac376222bd5dc05b529bd6f5273a145b72435",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28270&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28280.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28280",
+      "sha256": "429a4504c794847b92554dac172f5aef784b8a5786ee995b747dbba19b79f5e1",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28280&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28281.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28281",
+      "sha256": "4d59a295d1adcf320dd4c44fc973c7c27f72502b9640e2347ba387067a3ff8af",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28281&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28282.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28282",
+      "sha256": "2c3ee8a0fa7cd240f9b10e9317f58e291fc5c1ed4a11381f734f784bf696b9db",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28282&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28283.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28283",
+      "sha256": "abab85d6bf4279733998a9c30b7b4169417d1bdd91023dbc8758d28902e5b530",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28283&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28284.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28284",
+      "sha256": "b40a4ca9f15c458b9e2dec3d8faafcad63e6e2a2ee77034f4087be189a23d974",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28284&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28285.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28285",
+      "sha256": "ba0cde57044cb598e978f89f5022f1d01e42e1ffd1ee4517f559a61fd905defd",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28285&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28286.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28286",
+      "sha256": "ce1dd994c290d3fabd7e3815ae3c9ad1c33bb3914881c13e5c5044ee5482bc4e",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28286&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28287.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28287",
+      "sha256": "44f573bf8eaeea90c3c9c92c0b4a54b41fd9cc30d6c4a62ad9c2954170aeab80",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28287&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28271.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28271",
+      "sha256": "dbd1906b2592294fa1ff30f37dc36e7bd3d666759052813345b70138855f853b",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28271&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28272.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28272",
+      "sha256": "2f23b0ba1cfaa2f7028d35cad5b03517fde57435c478757c0136858661b180d5",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28272&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28273.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28273",
+      "sha256": "8b3b9d2fdac415e032c1d1c8e0b0e977258dd6a3c8b174165450c788677c8ba4",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28273&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28274.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28274",
+      "sha256": "31ae0fa34f7c3dd489d43529912b71db1ce0290bc842800dbceae0cce44bff92",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28274&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28275.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28275",
+      "sha256": "3ef0ad65a12e65320be675ab43d825cd7321380a25af500b95f806b60afd961f",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28275&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28276.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28276",
+      "sha256": "c40446ef0ba818f9b03d1d54a9909b054405ee9a8d2f2cb65243f2782757f091",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28276&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28277.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28277",
+      "sha256": "10dec57a205603bfc78400dd18cd81c9465d3ceb4cc5dfe347cb075f2b272775",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28277&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28278.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28278",
+      "sha256": "807e74b92427ab25094fba4535c3f6eaf9cd9971c1f5614641c58b52b43aa2f8",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28278&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28279.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/282/28279",
+      "sha256": "613994d7e3242b876ebb89f55b18214f74313291cdc5301f1f5ae49338f1eac5",
+      "method": "POST",
+      "body": "schoolcode=282&specialtycode=28279&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28472.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28472",
+      "sha256": "324ac6b7714d0acd97f52b6b1b10214b00e91173d100c584145d5982b73c1fd0",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28472&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28473.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28473",
+      "sha256": "964b4f67f6a90557dc8c6ce401e0411c68972f3b8428f23003487e22ff02a462",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28473&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28474.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28474",
+      "sha256": "6ad9a76ffdcec9ec2a6e1ea07a75cf609af15db5d8f18fe0c37322f091e44f90",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28474&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28470.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28470",
+      "sha256": "242323c39be637a5f63a576c03cd2b399c8109a0c7af1958b185c999de103ea7",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28470&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28471.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28471",
+      "sha256": "021c8e33758d521c448a43d455d3a044f46f5091499455dd62ce98c0c21b0c61",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28471&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28475.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28475",
+      "sha256": "5377d9cdd31546855b0b75790b76fab62ccdca67c716900891d44283dbc1fcdc",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28475&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28476.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28476",
+      "sha256": "7a0b3f6c5350599dbac0e04911e77706f83397d55d5e4b7ea66e71e19f651acc",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28476&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28477.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/284/28477",
+      "sha256": "b48a07f4daf017a478c3b9c7728c4943bb34ddda630d66037ad1e4cf20a3fbe6",
+      "method": "POST",
+      "body": "schoolcode=284&specialtycode=28477&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28770.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/287/28770",
+      "sha256": "50e8cee1d78a652a5d768580756e1d6923c1f4e47909ad1b96e26bee3a70f0df",
+      "method": "POST",
+      "body": "schoolcode=287&specialtycode=28770&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28771.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/287/28771",
+      "sha256": "70982d3dcea82259707d690d8d99c25e5be9a85d160281f1f3f8ef7a5b313125",
+      "method": "POST",
+      "body": "schoolcode=287&specialtycode=28771&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28772.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/287/28772",
+      "sha256": "2172d2ab24fc603cbb1903722a3bb3e4039c614d6a4fd8bd3ea8eee295d65863",
+      "method": "POST",
+      "body": "schoolcode=287&specialtycode=28772&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28773.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/287/28773",
+      "sha256": "3c248120c854f46861fe1064e184ab69266a2a604c9b45312fe88455a5b73d97",
+      "method": "POST",
+      "body": "schoolcode=287&specialtycode=28773&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/288/28870",
+      "sha256": "7a972a700c5d2b72a3f297ccbdba43c6bcffb88cf0ffae9ca195a7b7419b9df4",
+      "method": "POST",
+      "body": "schoolcode=288&specialtycode=28870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28973.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28973",
+      "sha256": "cfc89af256d08a07824811bc407dfde5c3d0f6223c43cadb917006509f572464",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28973&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28974.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28974",
+      "sha256": "54801b8c52ace8cc5097e30004dbebb0952f74d1d90437e0fa377b5a91bfe712",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28974&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28975.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28975",
+      "sha256": "c322668d426ae49b9aff69690402db9056eede0640432274a9e7bf35ccd6eb51",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28975&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28976.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28976",
+      "sha256": "05e94f0fe15765294eacfec495835a7f49b5a496c5747094e25c9c636f018bff",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28976&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28977.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28977",
+      "sha256": "08204acab79a6ee04d91156a4e7723a7e8bf0f39602dd73e28c0df2287e77ec9",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28977&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28978.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28978",
+      "sha256": "5b2762f411b3655e050f719efd9a9c7f06a625e805b7711aa2179c61e739d75d",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28978&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28972.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28972",
+      "sha256": "768635daee453d09d00b98b823f0075c54d5f2f8d6e5edbe717a0aa94d1b508a",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28972&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28970.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28970",
+      "sha256": "ce7a4b644ac0655d375f4ce2da0f49f4632e195d0a39aaa2f326af84390216f0",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28970&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-28971.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/289/28971",
+      "sha256": "bd0cb33822211282364064900275bde07b00cbeb4f8f9e6f29406cda40c83443",
+      "method": "POST",
+      "body": "schoolcode=289&specialtycode=28971&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29270.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29270",
+      "sha256": "f489fcd9709847a21ddbce9b78e12ace815050c96e5e0343d4b9e95f122eec0a",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29270&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29271.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29271",
+      "sha256": "cf9cb9792ed3d816fb09d19d31a73cab9254011d44bd00f7f66896d94f6530bc",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29271&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29272.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29272",
+      "sha256": "a9602e60b06979c60df0ae2679e0a85997633657b2898d313e7b39d16d6ec431",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29272&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29273.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29273",
+      "sha256": "c8f57cdf2faacc1e5506d02c362581355e2c9d90b6dd09b2a135aa81b6a00dfa",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29273&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29274.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29274",
+      "sha256": "9a47de0d4b83e3d0bd1c56760914f902e919fd694bee8741b93d80989e5c4056",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29274&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29275.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29275",
+      "sha256": "a7f1aeab6a5044cecf303fb5137d0a1bfe3e0831505644c8f47e045a348104bb",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29275&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29276.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29276",
+      "sha256": "2f886d909f6c7b69fbc94a6932e35700c90d3c38109653c2fed08e9a5413ae11",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29276&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29277.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29277",
+      "sha256": "34df64ee7b4c6d3b30212ef8b3bcacfa9ed6a718323fb8a40415a65550e9f81b",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29277&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29278.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29278",
+      "sha256": "918f1772d1cc6ea9f667bed5d30c8d95dfb7d4f4bfb1cc99a80a6919a7a4d0e0",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29278&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29279.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29279",
+      "sha256": "e22b15c8dfed64afcc8c595b21f7b25949792b5bdacf09cdd29aa499aae4c038",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29279&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29280.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29280",
+      "sha256": "08f2534986808e68763f21269eb26ad54273b4bbd80f1d4f51ae089c06b59c05",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29280&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29281.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29281",
+      "sha256": "bba5ca80c00e3e1dfe69c642fa80b1f292a8caeef551861101c060826c624110",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29281&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29282.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29282",
+      "sha256": "04e72d4870ef7e12bddf878621ebf24f1e70c8f028a181865a1aa14a3178a9fa",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29282&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29283.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29283",
+      "sha256": "322d882440e4cbbee61f1df5c38ac0999680b69aa67971e9103677f0205394a7",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29283&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29284.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/292/29284",
+      "sha256": "1c1a11c33f82a2921164ae047519f399106293a40f1b09febbe93eed0c91198e",
+      "method": "POST",
+      "body": "schoolcode=292&specialtycode=29284&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29370.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29370",
+      "sha256": "be464e080abd332ed6bfbd3373888195d7c815bb83add297d4bbc89df5058658",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29370&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29371.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29371",
+      "sha256": "cb1ecbb89af2b155277aa6f8005e643415b21eb27c8df89a3984ae36e7e205fc",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29371&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29372.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29372",
+      "sha256": "36149a07ce9bd846e639a48ca36f7ba477653b9a364cb223a85f1fe517293802",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29372&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29373.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29373",
+      "sha256": "c5899b3c1c3cce3803946c5185ca955c5cc349d4e6a2507626a94063c6e3e6e8",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29373&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29374.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29374",
+      "sha256": "7ac0946e099a4e12a630c99f096cc3b5768204ba84433384527d5379ac58c30b",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29374&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29376.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29376",
+      "sha256": "661ab1e5430f37595f27791bc377e93fc175e06c65709e336ed2cd3bb748fadf",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29376&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29377.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29377",
+      "sha256": "852cbadeb159736f547fcceec2e4519b18be700ec02258acb1217ab3b39c3bfd",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29377&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29378.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29378",
+      "sha256": "71eb2d593c30d07eb7b39261bf0e997e98a4e5428749d0aca1a66eb165419091",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29378&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29379.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29379",
+      "sha256": "7b69ea7f8e4bf3b9ef1de16fa4c2238f55fb1ff0a58762b5bb244b1e7dc8fc2d",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29379&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29380.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29380",
+      "sha256": "7fa34c7d63509cceca9d833623a6de696974530759b36613b5a3395bececa33b",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29380&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29381.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29381",
+      "sha256": "62b63fa442f36d80e956e16b7dc46b5e5840da63bca6f22ee32288b1e5c6c3ba",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29381&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29382.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29382",
+      "sha256": "1f9a4cee9e4a9c353f68a1fb78e2b98246c20ae3975ee0d1b477efe49dadcd08",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29382&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29383.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29383",
+      "sha256": "db57cd68f10f5040ab3535b5fb6bc3650ddc9f8013ba39050683004ee55e1ecb",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29383&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29384.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29384",
+      "sha256": "03b53c79aeb8ed99b2ad3062c0d573465f1ad6a82d9c0a20362155d1460f4e75",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29384&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29385.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29385",
+      "sha256": "3ddff4a80c561459772b9a260fdde330542bc0018c7a4753eb6c28796f2597b4",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29385&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29375.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29375",
+      "sha256": "ae3e75c03f146b52abbf926c8f54f3a4673dc9cfb8bb0fa74beda5ec081efc27",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29375&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29386.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/293/29386",
+      "sha256": "7648c60c58ea0b4df86d0a6baf3db0a15d44b624353fb9da1a65af53f4eab602",
+      "method": "POST",
+      "body": "schoolcode=293&specialtycode=29386&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29470.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29470",
+      "sha256": "98124484096ae0bf3e6641bd709e5dcfde4df4e91a418e24d9dd984125fcffb7",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29470&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29481.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29481",
+      "sha256": "184858e8e3434c9db35bcc33b7756b13b8b6b13857c5baec03475e8b06e20096",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29481&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29471.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29471",
+      "sha256": "42aea6cd406085c4996c0d3723a992ec94bff243af47930a2bc3fbb11873300f",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29471&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29472.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29472",
+      "sha256": "4212d40f4ff9dd5f67cd1d966bb5c40b423608ed7e260d74ae52353c78b741c8",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29472&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29478.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29478",
+      "sha256": "542834180e6b50106737d7c565c67c1ee7e33ed3d0ed761194ad7f12704015f2",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29478&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29479.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29479",
+      "sha256": "df51a59ab00d8a5f1d4e942e1f17bc30166b206778f1de8664b4bd52a5b85d09",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29479&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29482.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29482",
+      "sha256": "ffdee7ebeafbe7cbcfd1840284740d4021c1d6dfd07a65362aa3340d96ac8e76",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29482&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29483.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29483",
+      "sha256": "4e82528cf367f8a34e255f025bf41c76a53018529c17680e2f8a12615673ee33",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29483&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29487.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29487",
+      "sha256": "38d739fb7f1741ddb1742c5c601de44d555bdc9ff158df34f234d2ab20e72980",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29487&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29488.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29488",
+      "sha256": "9fb15e5566df64e7b6945e80634e20fd408060c28c4b59526fb71f2e71c9d7fc",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29488&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29473.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29473",
+      "sha256": "b0460ad554ebc3ad5dd8d5c5719f1c8d78dd627dbfbb03dc03e71a9e5d108078",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29473&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29474.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29474",
+      "sha256": "084d143c875d80dd08702fc26dfdd2e547d66f920f47da2e7f1901a9763ca8bc",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29474&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29475.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29475",
+      "sha256": "76cf0620a82f67241c58a480f9c746cc9c12819915867138a665b0c04b73b523",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29475&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29476.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29476",
+      "sha256": "73850befb61b354b6294ffccd15295b30a7a771ec5856c61ce9a52fbb302afd2",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29476&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29477.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29477",
+      "sha256": "f3c8c03c2da84c9bedfd5d7393f27bf0d5d8558778b1b7e8e9116eeffb906e5f",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29477&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29480.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29480",
+      "sha256": "fbcd00811ebfcb0f88bc70c7c4381dd60822ce6b7cb028e5e497cd09671abd2d",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29480&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29484.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29484",
+      "sha256": "f15304523392709f2fdf6cd7d753271494b4e0b2129babf2100d1b2661aa507b",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29484&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29485.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29485",
+      "sha256": "de540978570e33959059c2f6939eaf9149a8cd61fd6ea5bebd5e6a18512a9c58",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29485&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29486.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29486",
+      "sha256": "8e7591b7d0c6a5fbb8799588b0979d5175fd7268f1f4726132f4fb619d939615",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29486&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29489.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29489",
+      "sha256": "ddb8720263f29020bdc9b8bb493ec29399cf3fcb17727f4b864c535fc9f33c73",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29489&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29490.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/294/29490",
+      "sha256": "01556f8966f5d291d8b954c94d982d2c92939a782aef69f394404f01c1f1a621",
+      "method": "POST",
+      "body": "schoolcode=294&specialtycode=29490&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29970.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/299/29970",
+      "sha256": "8ab7cca1edb946f8d1cd596c461688c6fef2205e68a8799abbac4d37f5fe18e6",
+      "method": "POST",
+      "body": "schoolcode=299&specialtycode=29970&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-29971.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/299/29971",
+      "sha256": "5ac8f034f51523a4a03ba0df0924fe3a8bc8f516eca9b7bc639ce0aa787658f7",
+      "method": "POST",
+      "body": "schoolcode=299&specialtycode=29971&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-30070.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/300/30070",
+      "sha256": "82d12cec75f61aa70f8b54a79e51a71334a7e1fdbad0b9abc06cb7d36616e30a",
+      "method": "POST",
+      "body": "schoolcode=300&specialtycode=30070&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-30071.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/300/30071",
+      "sha256": "d408311e13aca7a26ffc89a2517cbc25f5f29d090ccbfc4613f9dd4f639131c9",
+      "method": "POST",
+      "body": "schoolcode=300&specialtycode=30071&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-30072.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/300/30072",
+      "sha256": "059008d702b86ab02fc252120eb7699ec62ab6f79d079f93280bef5b23454c02",
+      "method": "POST",
+      "body": "schoolcode=300&specialtycode=30072&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31670.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/316/31670",
+      "sha256": "119433807c36012fa235c64e74a2ee14cb586a8589e85fc83378e3e6bcf51165",
+      "method": "POST",
+      "body": "schoolcode=316&specialtycode=31670&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31671.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/316/31671",
+      "sha256": "4c8c61c4050ccb316b71fb613ebba8e98f652777bcc5a65a9f3a43a14d8a95b4",
+      "method": "POST",
+      "body": "schoolcode=316&specialtycode=31671&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31672.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/316/31672",
+      "sha256": "467a90588f6145f9a28c66d1c15e9e178edbf139a1ad82b3b408738f2cb4bf0d",
+      "method": "POST",
+      "body": "schoolcode=316&specialtycode=31672&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31770.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/317/31770",
+      "sha256": "7c8f2f67c99ac027ec5abf8ea1b3814558f7325ef11cd758fb945e839b27cc1d",
+      "method": "POST",
+      "body": "schoolcode=317&specialtycode=31770&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31771.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/317/31771",
+      "sha256": "2134871aa81fc8a922718053e92362608221f0024cfc73f9be8f4d2a974da6b1",
+      "method": "POST",
+      "body": "schoolcode=317&specialtycode=31771&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31772.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/317/31772",
+      "sha256": "20530ae05807715fb3c12687c40cd11e9975744365c5feec5950eb31a4920852",
+      "method": "POST",
+      "body": "schoolcode=317&specialtycode=31772&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31773.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/317/31773",
+      "sha256": "b517738cf16e42f1b699a05844a7199d9f9f789295cb0861d476ac6e7e8b0144",
+      "method": "POST",
+      "body": "schoolcode=317&specialtycode=31773&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31870.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/318/31870",
+      "sha256": "6539c0e55d44665ef14000b0a214892dcffce8ce40df066b113e8a2805a62963",
+      "method": "POST",
+      "body": "schoolcode=318&specialtycode=31870&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-31871.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/318/31871",
+      "sha256": "b6a10fb7c92e0e1c27428037020b8f50091f4e469471be5ed33d34e763697818",
+      "method": "POST",
+      "body": "schoolcode=318&specialtycode=31871&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38284.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38284",
+      "sha256": "a56a64a8b22032271162b1e4094cad62d11ad7c155d0fc0a8f9c824d5a5ce075",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38284&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38285.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38285",
+      "sha256": "92ef08d0ffd9081e57b59b8a1e8cbd29e06f02f9d155c60060c49abbcd4561c3",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38285&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38286.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38286",
+      "sha256": "c1f513ac9f3dcd811e5d4a571e3de7a92be018a05a32ceae84ce4c17719c5a6a",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38286&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38287.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38287",
+      "sha256": "33e159408b63a2717e27fa52550678cd9a046432186cd6f2a9710ec482421483",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38287&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38288.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38288",
+      "sha256": "31fdee5c193e6b9af9528ef4ed486db6ba5906cea063fb75c53b6dc98f72a852",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38288&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38289.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38289",
+      "sha256": "1a710b2abc3a2d93b023d4055f83d6a408c636a42594d2ad28a686fae344f095",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38289&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38290.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38290",
+      "sha256": "fcb082632f18c30d344ce536cc96b2799260c057fd97c63e8b2dec56433b3f6c",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38290&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38265.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38265",
+      "sha256": "a18da4b99933688fcaf37d6bf885a9245491b0fe9cb1153adf76420b4d32a725",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38265&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38266.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38266",
+      "sha256": "144fcc010c1f2d43999b9a9a5c35499594490689ed2046c1e51f378a71e97203",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38266&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38267.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38267",
+      "sha256": "66c3a9b48dce3f1eac641bbb5c6982017692b7a77b8ea28d756834e311efe366",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38267&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38268.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38268",
+      "sha256": "afccd1fb297f37cfa642ed63d6ebff371d245355f843bf90ccb0ebb48d9a04d9",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38268&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38269.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38269",
+      "sha256": "c5a899bfb512bf1f51033ccc94d26efd1b140a9b224b36a46c963f4e1be9d561",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38269&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38270.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38270",
+      "sha256": "220c74f40fdcdc67c8c05cbfb98ec74d06c2b368eb11485b0d1398c444f8ce14",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38270&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38271.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38271",
+      "sha256": "79ab3f908a08e2ab71d8c6c3f883eb50ee77dc27d85d865da3ba0e2f5017bd47",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38271&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38272.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38272",
+      "sha256": "b8daae8a815b7eaee82ff5e5c674fbfafa323c99d1350ac3f2f37b0891f85c0a",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38272&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38273.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38273",
+      "sha256": "cc1b281b6992800a520de1b9ba7f1e983c0d3001ae2b128080d32cbda88255de",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38273&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38274.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38274",
+      "sha256": "9d97d4bc291ac33f9ff366dfa787fad1293c8a3be0ac819df293f640ba0bffae",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38274&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38275.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38275",
+      "sha256": "891b0e5711d889f11b590f8174d49519db5a5ad7327e6c811e085877d6a44ee4",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38275&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38276.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38276",
+      "sha256": "e5329901806f3f8fb392d2740b740b60550953c0697b85b5d0a721c9e32007e1",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38276&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38277.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38277",
+      "sha256": "eae3dd8d9de821d78d5f920c9888a5c3b21822e0b248734399a588d18c7323a0",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38277&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38278.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38278",
+      "sha256": "6e857a5795f663af4c04e2bbf7c155c876389a0453eec7ed345d4b9e45b68cbb",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38278&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38279.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38279",
+      "sha256": "88e8337f441d3b1ba1fd2c8002a233bcc5422dc90116e3b7c20c6c6d3cce7d47",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38279&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38280.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38280",
+      "sha256": "a7c27ecb0247f91d1aff09383ad2b2e2918d5987ebd280d12fc101750dd81b60",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38280&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38281.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38281",
+      "sha256": "fed163feb4542d027d751c16bbf6915ff83c1498035e93479477c0d13d27319c",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38281&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38282.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38282",
+      "sha256": "e9d3db2c8c4c4b60209043b31ecefa51b1da6896bca73742ea5eb132a2e6d085",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38282&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-38283.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/382/38283",
+      "sha256": "94c1077c3b2069f83df4e4a3411ebc15e9a87f6e504a67167c776dca9b1112ad",
+      "method": "POST",
+      "body": "schoolcode=382&specialtycode=38283&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-42172.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/421/42172",
+      "sha256": "669daf44bfbf59da604e3a9d9cb1fbb902e2d76222653f40cda121786b72aea0",
+      "method": "POST",
+      "body": "schoolcode=421&specialtycode=42172&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-42170.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/421/42170",
+      "sha256": "906758fe8265bb94ce6914e657db7d9d670e63283592830ced9b9fb584cd098b",
+      "method": "POST",
+      "body": "schoolcode=421&specialtycode=42170&examId=6311"
+    },
+    {
+      "path": "sources/beijing/detail-2026-42171.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/421/42171",
+      "sha256": "af51141d893ce4461685cb6c69f1d5c94218c8cd04758b716e2771abd000eb2d",
+      "method": "POST",
+      "body": "schoolcode=421&specialtycode=42171&examId=6311"
+    },
+    {
+      "path": "sources/beijing/controls-2024.html",
+      "url": "https://www.bjeea.cn/html/ckcz/tzgg/2024/1115/86107.html",
+      "sha256": "79a24512f377113c20f056baae914ed026dee2f39132379a657f23066e9dbb39"
+    },
+    {
+      "path": "sources/beijing/controls-2025.html",
+      "url": "https://www.bjeea.cn/html/ckcz/tzgg/2025/1121/87658.html",
+      "sha256": "dbfbe7ff722b1ecea957ed8c600e97ca5366e46208d23670bff73d98fc422fe3"
+    },
+    {
+      "path": "sources/beijing/controls-2024.png",
+      "url": "https://www.bjeea.cn/uploads/allimg/241115/58-2411150ZJ1303.png",
+      "sha256": "502afa3853a8242f9d3d16116e721b508c93e013bb4520e92b85acec6b120341"
+    },
+    {
+      "path": "sources/beijing/controls-2025.png",
+      "url": "https://www.bjeea.cn/uploads/allimg/251121/58-2511210U21AL.png",
+      "sha256": "9e1a26e5e3b3b552de67e6d5a1791bed9aed88d305a99258117e41a1b929bfaf"
+    },
+    {
+      "path": "sources/beijing/detail-get-example-2026.html",
+      "url": "https://query.bjeea.cn/queryService/rest/plan/116/001/00170?examId=6311&schoolcode=001&specialtycode=00170",
+      "sha256": "23d9bb8431aaa06a1bdf2780097e5090ddbc4bff2baae58206aef4a92339ea57"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    },
+    {
+      "path": "sources/beijing/controls-reviewed.json",
+      "url": "https://www.bjeea.cn/html/ckcz/ksdh/2021/0826/79364.html",
+      "sha256": "1031b8447e3a4c9f0a4738aecb04aff05f6d76553498f2b6c12f7b96609d446f",
+      "role": "visually_reviewed_control_extraction"
+    }
+  ],
+  "limitations": [
+    "2026目录仅作2027备考历史参考，不代表2027招生计划",
+    "省市控线不是院校实际录取线；未公布人数，不推算人数",
+    "北京目录未公开学费；原始采集使用公开POST表单，回链加2026对应examId=6311等参数支持GET查看"
+  ]
+}

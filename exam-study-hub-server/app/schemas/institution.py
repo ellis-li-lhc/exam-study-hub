@@ -12,9 +12,23 @@ class ScoreRead(BaseModel):
     round: str | None = None
 
 
+class CategoryCollectionRead(BaseModel):
+    year: int
+    category_name: str
+    plan_count: int
+    line_type: str
+    round: str
+    source_url: str
+    study_form: str | None = None
+    institution_code_raw: str | None = None
+    granularity: str = "institution_category"
+
+
 class PlanRead(BaseModel):
+    selection_eligible: bool | None = True
     year: int
     major_code: str
+    major_code_raw: str | None = None
     major_name: str
     category_code: str | None = None
     category_name: str | None = None
@@ -72,4 +86,6 @@ class InstitutionRead(BaseModel):
     source: SourceRead | None = None
     supplemental_data: dict | None = None
     active_catalog_year: int | None = None
+    active_catalog_round: str | None = None
     control_scores: list[ControlScoreRead] = []
+    category_collection_plans: list[CategoryCollectionRead] = []

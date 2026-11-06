@@ -1,0 +1,10 @@
+{
+  "purpose": "verify legacy major category and exam corrections",
+  "sources": [
+    {
+      "path": "moe-subject-crosswalk-2017.html",
+      "url": "https://www.fvti.cn/jxjyxy/2018/0330/c1454a119413/page.htm",
+      "sha256": "702e9e6ab4decf383ce3d50c3433ed9cdde05cbd1c8d3c8ddc65eb7e76a59141"
+    }
+  ]
+}

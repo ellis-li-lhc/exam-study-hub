@@ -38,13 +38,22 @@ export const chinaProvinces = [
 ]
 
 // 当前已开放报考的省份（有真实招生数据）。其余省份在下拉中禁用。
-export const availableProvinces = ['jiangsu', 'henan', 'zhejiang', 'guangdong', 'shanghai', 'shandong', 'hebei']
+export const availableProvinces = ['jiangsu', 'henan', 'zhejiang', 'guangdong', 'shanghai', 'shandong', 'hebei', 'hubei', 'hunan', 'jiangxi', 'anhui', 'fujian', 'sichuan', 'chongqing', 'beijing', 'guangxi']
 
 // 城市偏好中的特殊选项：保留在所选招生省份内招生、但校本部不在该省的院校。
 export const OUTSIDE_PROVINCE_CITY = '__outside_province__'
 export const OUTSIDE_PROVINCE_CITY_LABEL = '省外院校'
 
 export const provinceCityOptions = {
+  beijing: ['北京'],
+  guangxi: ['南宁', '柳州', '桂林', '梧州', '北海', '防城港', '钦州', '贵港', '玉林', '百色', '贺州', '河池', '来宾', '崇左'],
+  sichuan: ['成都', '自贡', '攀枝花', '泸州', '德阳', '绵阳', '广元', '遂宁', '内江', '乐山', '南充', '眉山', '宜宾', '广安', '达州', '雅安', '巴中', '资阳', '阿坝', '甘孜', '凉山'],
+  chongqing: ['重庆'],
+  anhui: ['合肥', '芜湖', '蚌埠', '淮南', '马鞍山', '淮北', '铜陵', '安庆', '黄山', '阜阳', '宿州', '滁州', '六安', '宣城', '池州', '亳州'],
+  fujian: ['福州', '厦门', '莆田', '三明', '泉州', '漳州', '南平', '龙岩', '宁德'],
+  hunan: ['长沙', '株洲', '湘潭', '衡阳', '邵阳', '岳阳', '常德', '张家界', '益阳', '郴州', '永州', '怀化', '娄底', '湘西'],
+  jiangxi: ['南昌', '景德镇', '萍乡', '九江', '新余', '鹰潭', '赣州', '吉安', '宜春', '抚州', '上饶'],
+  hubei: ['武汉', '黄石', '十堰', '宜昌', '襄阳', '鄂州', '荆门', '孝感', '荆州', '黄冈', '咸宁', '随州', '恩施', '仙桃', '潜江', '天门', '神农架'],
   hebei: ['石家庄', '唐山', '秦皇岛', '邯郸', '邢台', '保定', '张家口', '承德', '沧州', '廊坊', '衡水'],
   shandong: ['济南', '青岛', '淄博', '枣庄', '东营', '烟台', '潍坊', '济宁', '泰安', '威海', '日照', '临沂', '德州', '聊城', '滨州', '菏泽'],
   shanghai: ['上海'],

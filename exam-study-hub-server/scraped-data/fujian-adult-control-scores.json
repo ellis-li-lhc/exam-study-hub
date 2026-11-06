@@ -1,0 +1,98 @@
+[
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "11",
+    "category_name": "文史中医类",
+    "category_name_raw": "文史中医类",
+    "score": 151,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "12",
+    "category_name": "艺术类",
+    "category_name_raw": "艺术类",
+    "score": 109,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "13",
+    "category_name": "理工类",
+    "category_name_raw": "理工类",
+    "score": 100,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "14",
+    "category_name": "经济管理类",
+    "category_name_raw": "经济管理类",
+    "score": 100,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "15",
+    "category_name": "法学类",
+    "category_name_raw": "法学类",
+    "score": 100,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "16",
+    "category_name": "教育学类",
+    "category_name_raw": "教育学类",
+    "score": 160,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "17",
+    "category_name": "农学类",
+    "category_name_raw": "农学类",
+    "score": 104,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  },
+  {
+    "province": "fujian",
+    "year": 2025,
+    "level": "专升本",
+    "category_code": "18",
+    "category_name": "医学类",
+    "category_name_raw": "医学类",
+    "score": 160,
+    "line_type": "省控线",
+    "round": "统考生",
+    "source_url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html"
+  }
+]

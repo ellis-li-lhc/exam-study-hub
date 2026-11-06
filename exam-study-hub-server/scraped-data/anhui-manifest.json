@@ -1,0 +1,334 @@
+{
+  "province": "anhui",
+  "province_name": "安徽",
+  "catalog_year": 2026,
+  "coverage_note": "已接入2026省级公开专升本目录71校1104条记录（485个院校专业组合），含不同教学点；16条历史省控线单列。21条专项限制记录不作普通备考目标；目录未公布人数，暂无院校实际录取线",
+  "counts": {
+    "institutions": 71,
+    "programs": 1104,
+    "controls": 16,
+    "category_collections": 0
+  },
+  "public_query": {
+    "pages": 37,
+    "all_level_records": 1104,
+    "zsb_records": 1104,
+    "completeness": "all_current_public_query_pages",
+    "ordinary_target_excluded_records": 21,
+    "school_major_pairs": 485
+  },
+  "sources": [
+    {
+      "path": "sources/anhui/faq-2026.html",
+      "url": "https://jyt.ah.gov.cn/tsdw/gdjyc/tzgg/40798706.html",
+      "sha256": "397e172678de0e4f0ba5f0281e2b3dce9e17165c99798a76a54f9a7dac0587f0"
+    },
+    {
+      "path": "sources/anhui/catalog-query-2026.html",
+      "url": "https://crbm.ahzsks.cn/enrollStuPlan",
+      "sha256": "ef7700173fce415ec14d120cc09dc91025725e48d41d6865be17f49de900f586"
+    },
+    {
+      "path": "sources/anhui/catalog-provincial-2026.xls",
+      "url": "https://jyt.ah.gov.cn/group3/M00/14/E0/wKg86mqNWRyAOrTWAAJiAM_9Gzw122.xls",
+      "sha256": "c59b378df464be04e5d63ad646195c7ff606f5aba7ad1e7a315356dddaa92679"
+    },
+    {
+      "path": "sources/anhui/teaching-sites-2026.xlsx",
+      "url": "https://jyt.ah.gov.cn/group3/M00/14/E0/wKg86mqNWSuACNlJAABiXzezE9I91.xlsx",
+      "sha256": "9285f23d54721bb2a243a375a43625646a58250d2d9996f3d5be31ba68ab4988"
+    },
+    {
+      "path": "sources/anhui/school-query-2026.html",
+      "url": "https://crbm.ahzsks.cn/enrollSchool",
+      "sha256": "73f15bc9ed3d3d35570a25ac138d63c451ad463588bcc8c09bd0f22073929bf9"
+    },
+    {
+      "path": "sources/anhui/controls-2025.html",
+      "url": "https://www.ahstu.edu.cn/jxjyxy/info/1048/4002.htm",
+      "sha256": "d44c6b339c1ccda81d3e8536f6c3241066e542d6240c366ef04362509916e56d"
+    },
+    {
+      "path": "sources/anhui/controls-2024.html",
+      "url": "https://www.ahstu.edu.cn/jxjyxy/info/1003/3581.htm",
+      "sha256": "3bb3b32a33a3fdbbc95befab3a6fd73a97cf1862edab2ee5166161726c36af5c"
+    },
+    {
+      "path": "sources/anhui/catalog-2026-001.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "d680e42b66c8cb40b386d150433faef527eac60a9573ab9880c3f3fbedfb1fac",
+      "method": "POST",
+      "body": "ccdm=1&currPage=1&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-002.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "bbbb233ce3811a6db61060736af10376d5afedd9e37e21ad15733ff7cb4e152d",
+      "method": "POST",
+      "body": "ccdm=1&currPage=2&yxmc=&zymc=&kldm=&xxxs=",
+      "metadata_record_count": 1104
+    },
+    {
+      "path": "sources/anhui/catalog-2026-003.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "f19712bdb624b1ae862abf61da0fb6acbd5e3c13d0b272a6eef31ef05f1080ac",
+      "method": "POST",
+      "body": "ccdm=1&currPage=3&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-004.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "62b6e19c3103b82e6abc7557fec06a720728d8f62cf713397d56f2b213fe1fa6",
+      "method": "POST",
+      "body": "ccdm=1&currPage=4&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-005.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "e384b01cf3591327e17148ce52bdd3046906daeab9dd9e496a33088f967e8467",
+      "method": "POST",
+      "body": "ccdm=1&currPage=5&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-006.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "f2fbc3f4a82766bcbab267c06208e1e4546078831b4878bf1333add6f8abb959",
+      "method": "POST",
+      "body": "ccdm=1&currPage=6&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-007.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "e0a8f83cd9d690ac7030879568c6bc2f34bf9ad23a8225e4f2226f919e4fe107",
+      "method": "POST",
+      "body": "ccdm=1&currPage=7&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-008.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "1589d90244f34c0616467043d300ee46028cb6182a63ba41fbca5830613672e1",
+      "method": "POST",
+      "body": "ccdm=1&currPage=8&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-009.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "1395f67efa0d24eabf4a8c9832ec9d0255eccd959b9d07d27e9562f7d3c5a47d",
+      "method": "POST",
+      "body": "ccdm=1&currPage=9&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-010.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "e5edcffb38422f6d2791e3c3a8b019be68b0acca7ec755dc8da485b47d2518bb",
+      "method": "POST",
+      "body": "ccdm=1&currPage=10&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-011.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "4724d4c32974265493938943ebb268355894c0b7aad5c9e7fe56052e1e85068c",
+      "method": "POST",
+      "body": "ccdm=1&currPage=11&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-012.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "b4c2c459c937fa2332038859590ea0fa6f41387a30283b3d71d613254a041b74",
+      "method": "POST",
+      "body": "ccdm=1&currPage=12&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-013.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "f617634bea98c5ec2d74f9c961bfedda063b8ee248afd55aad4175c89a434291",
+      "method": "POST",
+      "body": "ccdm=1&currPage=13&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-014.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "4bc36d7b29714bf8221282df6aaadfa8a45eb608ce79ee0e3ef99ec6f0cab668",
+      "method": "POST",
+      "body": "ccdm=1&currPage=14&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-015.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "317a568a8a0f173315b71875a1112db4b3375b9b389776111d6e7ce116f786d5",
+      "method": "POST",
+      "body": "ccdm=1&currPage=15&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-016.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "787a6da46e0ccbbef4cc63869730929d2c2085bfdb9356d585d3d9e5ab221a90",
+      "method": "POST",
+      "body": "ccdm=1&currPage=16&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-017.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "dc33198a86de359d4c8fee628392c33339d0322ca43ee86b7a3519c6d4920081",
+      "method": "POST",
+      "body": "ccdm=1&currPage=17&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-018.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "1cafaf0e31d6bae16b1a55a6f3011bb19a00c235fb85ef26d815bf4aa01f2186",
+      "method": "POST",
+      "body": "ccdm=1&currPage=18&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-019.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "6ca650761821910f56e9c3f3a6321982edd23d327518dc954069d2a126959529",
+      "method": "POST",
+      "body": "ccdm=1&currPage=19&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-020.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "f2672ca86348ec9de74ad0134eb784dfe93149aef223347f020f1a01ecb961f2",
+      "method": "POST",
+      "body": "ccdm=1&currPage=20&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-021.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "4a25cdf7db7850a9c4f2d89f46c18fe3566234101783049a80c56eae5d52877e",
+      "method": "POST",
+      "body": "ccdm=1&currPage=21&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-022.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "df637c807e78fac5633c41c87999c176ca62def3c4d1e2eff336564652aa2ac1",
+      "method": "POST",
+      "body": "ccdm=1&currPage=22&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-023.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "010ce2b22a488e3fdc289e625b9dff1e76f90727fc5c72bc67c023bf865c2b32",
+      "method": "POST",
+      "body": "ccdm=1&currPage=23&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-024.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "f7ff5b3f11770f0634a7b037678aac1d7161639e9d89f843231c3410b2a2f357",
+      "method": "POST",
+      "body": "ccdm=1&currPage=24&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-025.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "d34c365d40ce20499d0f97d2e6bb8fc463b7de68aeb1705d1ccab9f398609143",
+      "method": "POST",
+      "body": "ccdm=1&currPage=25&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-026.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "4121afe363b7ac10fa7a996ce6525117418d7f26bcc28abd6c44e96d30fdd9aa",
+      "method": "POST",
+      "body": "ccdm=1&currPage=26&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-027.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "72a775f453bd5178591dbe9390789b53bd7ec9c195871bc4a1374ea39af5fe1c",
+      "method": "POST",
+      "body": "ccdm=1&currPage=27&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-028.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "88d65ff10b30df0646b138eb95a6e1097ced2862f621ac0791c6024b1002ee58",
+      "method": "POST",
+      "body": "ccdm=1&currPage=28&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-029.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "22a51505f1b7e9123c1b373a3bcd291a6dad99159fbd75bf8d0e3da6b315dc57",
+      "method": "POST",
+      "body": "ccdm=1&currPage=29&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-030.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "91254d9d1e0bce15fe00248730a580edfe3035ccb6a0d9af88d29281f1ac5d72",
+      "method": "POST",
+      "body": "ccdm=1&currPage=30&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-031.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "cb4c32c67a2169ac22aeafdef10f988efd845e71cc3f0b9ed446eae8f66665ed",
+      "method": "POST",
+      "body": "ccdm=1&currPage=31&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-032.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "1c27a8cf44f8f866eda6fd2213ce88cebd8c1bde368e5b80f0863563bd99058a",
+      "method": "POST",
+      "body": "ccdm=1&currPage=32&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-033.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "8f8a2b65c1e540ac8f3f1518a3abc139819e94a7ef84e44dce6e54766d8df609",
+      "method": "POST",
+      "body": "ccdm=1&currPage=33&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-034.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "a81a77c7f38183e2a9cceeb93856b16809aaa7952d8b9994033ac735d7ecc2d8",
+      "method": "POST",
+      "body": "ccdm=1&currPage=34&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-035.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "94ab468061fac88347460088e9112676f788eb363a6bbb59908224a8b4fbf6d9",
+      "method": "POST",
+      "body": "ccdm=1&currPage=35&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-036.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "a68efbab201a55ecdad5f517ceacce9985834bb177cd3cd7d455c008d3130289",
+      "method": "POST",
+      "body": "ccdm=1&currPage=36&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/catalog-2026-037.html",
+      "url": "https://crbm.ahzsks.cn/enrollMajor",
+      "sha256": "ada80b635c63d6e17c66cfe080e386a0299132cca3b6da9bdee60d421f9149cf",
+      "method": "POST",
+      "body": "ccdm=1&currPage=37&yxmc=&zymc=&kldm=&xxxs="
+    },
+    {
+      "path": "sources/anhui/identity-ahou-admissions-2026.html",
+      "url": "https://bm.ahtvu.ah.cn/",
+      "sha256": "0404480d34c0067cedfd37a7593d7eb5da7c9e239a29938c2d8ecde7466daf71"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    }
+  ],
+  "limitations": [
+    "目录不是人数计划；无2027目录；2026资料仅作2027备考历史参考",
+    "省控线不是院校实际录取线；报考需符合相应专业资格",
+    "查询分页使用公开POST表单，source_filename和source_query_page绑定原始页；直接打开官方链接为默认查询首页",
+    "收费金额缺计费周期时保留原文，不推定为每年",
+    "安徽省属高校备案Excel只归档核对，不与省级招生目录重复入库"
+  ]
+}

@@ -1,0 +1,1150 @@
+{
+  "detail-2026-00170.html": {
+    "method": "POST",
+    "body": "schoolcode=001&specialtycode=00170&examId=6311"
+  },
+  "detail-2026-00171.html": {
+    "method": "POST",
+    "body": "schoolcode=001&specialtycode=00171&examId=6311"
+  },
+  "detail-2026-00172.html": {
+    "method": "POST",
+    "body": "schoolcode=001&specialtycode=00172&examId=6311"
+  },
+  "detail-2026-00270.html": {
+    "method": "POST",
+    "body": "schoolcode=002&specialtycode=00270&examId=6311"
+  },
+  "detail-2026-00470.html": {
+    "method": "POST",
+    "body": "schoolcode=004&specialtycode=00470&examId=6311"
+  },
+  "detail-2026-00570.html": {
+    "method": "POST",
+    "body": "schoolcode=005&specialtycode=00570&examId=6311"
+  },
+  "detail-2026-00571.html": {
+    "method": "POST",
+    "body": "schoolcode=005&specialtycode=00571&examId=6311"
+  },
+  "detail-2026-00871.html": {
+    "method": "POST",
+    "body": "schoolcode=008&specialtycode=00871&examId=6311"
+  },
+  "detail-2026-00870.html": {
+    "method": "POST",
+    "body": "schoolcode=008&specialtycode=00870&examId=6311"
+  },
+  "detail-2026-01170.html": {
+    "method": "POST",
+    "body": "schoolcode=011&specialtycode=01170&examId=6311"
+  },
+  "detail-2026-01870.html": {
+    "method": "POST",
+    "body": "schoolcode=018&specialtycode=01870&examId=6311"
+  },
+  "detail-2026-02470.html": {
+    "method": "POST",
+    "body": "schoolcode=024&specialtycode=02470&examId=6311"
+  },
+  "detail-2026-04670.html": {
+    "method": "POST",
+    "body": "schoolcode=046&specialtycode=04670&examId=6311"
+  },
+  "detail-2026-04671.html": {
+    "method": "POST",
+    "body": "schoolcode=046&specialtycode=04671&examId=6311"
+  },
+  "detail-2026-04672.html": {
+    "method": "POST",
+    "body": "schoolcode=046&specialtycode=04672&examId=6311"
+  },
+  "detail-2026-04673.html": {
+    "method": "POST",
+    "body": "schoolcode=046&specialtycode=04673&examId=6311"
+  },
+  "detail-2026-05170.html": {
+    "method": "POST",
+    "body": "schoolcode=051&specialtycode=05170&examId=6311"
+  },
+  "detail-2026-05172.html": {
+    "method": "POST",
+    "body": "schoolcode=051&specialtycode=05172&examId=6311"
+  },
+  "detail-2026-05175.html": {
+    "method": "POST",
+    "body": "schoolcode=051&specialtycode=05175&examId=6311"
+  },
+  "detail-2026-05176.html": {
+    "method": "POST",
+    "body": "schoolcode=051&specialtycode=05176&examId=6311"
+  },
+  "detail-2026-05260.html": {
+    "method": "POST",
+    "body": "schoolcode=052&specialtycode=05260&examId=6311"
+  },
+  "detail-2026-05261.html": {
+    "method": "POST",
+    "body": "schoolcode=052&specialtycode=05261&examId=6311"
+  },
+  "detail-2026-05770.html": {
+    "method": "POST",
+    "body": "schoolcode=057&specialtycode=05770&examId=6311"
+  },
+  "detail-2026-05771.html": {
+    "method": "POST",
+    "body": "schoolcode=057&specialtycode=05771&examId=6311"
+  },
+  "detail-2026-05772.html": {
+    "method": "POST",
+    "body": "schoolcode=057&specialtycode=05772&examId=6311"
+  },
+  "detail-2026-06861.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06861&examId=6311"
+  },
+  "detail-2026-06862.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06862&examId=6311"
+  },
+  "detail-2026-06864.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06864&examId=6311"
+  },
+  "detail-2026-06865.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06865&examId=6311"
+  },
+  "detail-2026-06866.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06866&examId=6311"
+  },
+  "detail-2026-06863.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06863&examId=6311"
+  },
+  "detail-2026-06860.html": {
+    "method": "POST",
+    "body": "schoolcode=068&specialtycode=06860&examId=6311"
+  },
+  "detail-2026-07871.html": {
+    "method": "POST",
+    "body": "schoolcode=078&specialtycode=07871&examId=6311"
+  },
+  "detail-2026-07872.html": {
+    "method": "POST",
+    "body": "schoolcode=078&specialtycode=07872&examId=6311"
+  },
+  "detail-2026-07873.html": {
+    "method": "POST",
+    "body": "schoolcode=078&specialtycode=07873&examId=6311"
+  },
+  "detail-2026-07870.html": {
+    "method": "POST",
+    "body": "schoolcode=078&specialtycode=07870&examId=6311"
+  },
+  "detail-2026-07973.html": {
+    "method": "POST",
+    "body": "schoolcode=079&specialtycode=07973&examId=6311"
+  },
+  "detail-2026-07974.html": {
+    "method": "POST",
+    "body": "schoolcode=079&specialtycode=07974&examId=6311"
+  },
+  "detail-2026-07975.html": {
+    "method": "POST",
+    "body": "schoolcode=079&specialtycode=07975&examId=6311"
+  },
+  "detail-2026-07970.html": {
+    "method": "POST",
+    "body": "schoolcode=079&specialtycode=07970&examId=6311"
+  },
+  "detail-2026-07971.html": {
+    "method": "POST",
+    "body": "schoolcode=079&specialtycode=07971&examId=6311"
+  },
+  "detail-2026-07972.html": {
+    "method": "POST",
+    "body": "schoolcode=079&specialtycode=07972&examId=6311"
+  },
+  "detail-2026-08370.html": {
+    "method": "POST",
+    "body": "schoolcode=083&specialtycode=08370&examId=6311"
+  },
+  "detail-2026-08371.html": {
+    "method": "POST",
+    "body": "schoolcode=083&specialtycode=08371&examId=6311"
+  },
+  "detail-2026-08372.html": {
+    "method": "POST",
+    "body": "schoolcode=083&specialtycode=08372&examId=6311"
+  },
+  "detail-2026-08481.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08481&examId=6311"
+  },
+  "detail-2026-08470.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08470&examId=6311"
+  },
+  "detail-2026-08471.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08471&examId=6311"
+  },
+  "detail-2026-08472.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08472&examId=6311"
+  },
+  "detail-2026-08473.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08473&examId=6311"
+  },
+  "detail-2026-08474.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08474&examId=6311"
+  },
+  "detail-2026-08475.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08475&examId=6311"
+  },
+  "detail-2026-08476.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08476&examId=6311"
+  },
+  "detail-2026-08477.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08477&examId=6311"
+  },
+  "detail-2026-08478.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08478&examId=6311"
+  },
+  "detail-2026-08479.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08479&examId=6311"
+  },
+  "detail-2026-08480.html": {
+    "method": "POST",
+    "body": "schoolcode=084&specialtycode=08480&examId=6311"
+  },
+  "detail-2026-08570.html": {
+    "method": "POST",
+    "body": "schoolcode=085&specialtycode=08570&examId=6311"
+  },
+  "detail-2026-08571.html": {
+    "method": "POST",
+    "body": "schoolcode=085&specialtycode=08571&examId=6311"
+  },
+  "detail-2026-08572.html": {
+    "method": "POST",
+    "body": "schoolcode=085&specialtycode=08572&examId=6311"
+  },
+  "detail-2026-08770.html": {
+    "method": "POST",
+    "body": "schoolcode=087&specialtycode=08770&examId=6311"
+  },
+  "detail-2026-08771.html": {
+    "method": "POST",
+    "body": "schoolcode=087&specialtycode=08771&examId=6311"
+  },
+  "detail-2026-08772.html": {
+    "method": "POST",
+    "body": "schoolcode=087&specialtycode=08772&examId=6311"
+  },
+  "detail-2026-08875.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08875&examId=6311"
+  },
+  "detail-2026-08876.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08876&examId=6311"
+  },
+  "detail-2026-08877.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08877&examId=6311"
+  },
+  "detail-2026-08871.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08871&examId=6311"
+  },
+  "detail-2026-08872.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08872&examId=6311"
+  },
+  "detail-2026-08873.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08873&examId=6311"
+  },
+  "detail-2026-08874.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08874&examId=6311"
+  },
+  "detail-2026-08870.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08870&examId=6311"
+  },
+  "detail-2026-08878.html": {
+    "method": "POST",
+    "body": "schoolcode=088&specialtycode=08878&examId=6311"
+  },
+  "detail-2026-16070.html": {
+    "method": "POST",
+    "body": "schoolcode=160&specialtycode=16070&examId=6311"
+  },
+  "detail-2026-16071.html": {
+    "method": "POST",
+    "body": "schoolcode=160&specialtycode=16071&examId=6311"
+  },
+  "detail-2026-16075.html": {
+    "method": "POST",
+    "body": "schoolcode=160&specialtycode=16075&examId=6311"
+  },
+  "detail-2026-16073.html": {
+    "method": "POST",
+    "body": "schoolcode=160&specialtycode=16073&examId=6311"
+  },
+  "detail-2026-16072.html": {
+    "method": "POST",
+    "body": "schoolcode=160&specialtycode=16072&examId=6311"
+  },
+  "detail-2026-16074.html": {
+    "method": "POST",
+    "body": "schoolcode=160&specialtycode=16074&examId=6311"
+  },
+  "detail-2026-16170.html": {
+    "method": "POST",
+    "body": "schoolcode=161&specialtycode=16170&examId=6311"
+  },
+  "detail-2026-16171.html": {
+    "method": "POST",
+    "body": "schoolcode=161&specialtycode=16171&examId=6311"
+  },
+  "detail-2026-16173.html": {
+    "method": "POST",
+    "body": "schoolcode=161&specialtycode=16173&examId=6311"
+  },
+  "detail-2026-16174.html": {
+    "method": "POST",
+    "body": "schoolcode=161&specialtycode=16174&examId=6311"
+  },
+  "detail-2026-16172.html": {
+    "method": "POST",
+    "body": "schoolcode=161&specialtycode=16172&examId=6311"
+  },
+  "detail-2026-16175.html": {
+    "method": "POST",
+    "body": "schoolcode=161&specialtycode=16175&examId=6311"
+  },
+  "detail-2026-24370.html": {
+    "method": "POST",
+    "body": "schoolcode=243&specialtycode=24370&examId=6311"
+  },
+  "detail-2026-24371.html": {
+    "method": "POST",
+    "body": "schoolcode=243&specialtycode=24371&examId=6311"
+  },
+  "detail-2026-24372.html": {
+    "method": "POST",
+    "body": "schoolcode=243&specialtycode=24372&examId=6311"
+  },
+  "detail-2026-26070.html": {
+    "method": "POST",
+    "body": "schoolcode=260&specialtycode=26070&examId=6311"
+  },
+  "detail-2026-26071.html": {
+    "method": "POST",
+    "body": "schoolcode=260&specialtycode=26071&examId=6311"
+  },
+  "detail-2026-26072.html": {
+    "method": "POST",
+    "body": "schoolcode=260&specialtycode=26072&examId=6311"
+  },
+  "detail-2026-26073.html": {
+    "method": "POST",
+    "body": "schoolcode=260&specialtycode=26073&examId=6311"
+  },
+  "detail-2026-26670.html": {
+    "method": "POST",
+    "body": "schoolcode=266&specialtycode=26670&examId=6311"
+  },
+  "detail-2026-26671.html": {
+    "method": "POST",
+    "body": "schoolcode=266&specialtycode=26671&examId=6311"
+  },
+  "detail-2026-27370.html": {
+    "method": "POST",
+    "body": "schoolcode=273&specialtycode=27370&examId=6311"
+  },
+  "detail-2026-27371.html": {
+    "method": "POST",
+    "body": "schoolcode=273&specialtycode=27371&examId=6311"
+  },
+  "detail-2026-27373.html": {
+    "method": "POST",
+    "body": "schoolcode=273&specialtycode=27373&examId=6311"
+  },
+  "detail-2026-27372.html": {
+    "method": "POST",
+    "body": "schoolcode=273&specialtycode=27372&examId=6311"
+  },
+  "detail-2026-27479.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27479&examId=6311"
+  },
+  "detail-2026-27480.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27480&examId=6311"
+  },
+  "detail-2026-27481.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27481&examId=6311"
+  },
+  "detail-2026-27482.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27482&examId=6311"
+  },
+  "detail-2026-27470.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27470&examId=6311"
+  },
+  "detail-2026-27471.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27471&examId=6311"
+  },
+  "detail-2026-27472.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27472&examId=6311"
+  },
+  "detail-2026-27473.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27473&examId=6311"
+  },
+  "detail-2026-27474.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27474&examId=6311"
+  },
+  "detail-2026-27475.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27475&examId=6311"
+  },
+  "detail-2026-27476.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27476&examId=6311"
+  },
+  "detail-2026-27477.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27477&examId=6311"
+  },
+  "detail-2026-27478.html": {
+    "method": "POST",
+    "body": "schoolcode=274&specialtycode=27478&examId=6311"
+  },
+  "detail-2026-27670.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27670&examId=6311"
+  },
+  "detail-2026-27671.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27671&examId=6311"
+  },
+  "detail-2026-27672.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27672&examId=6311"
+  },
+  "detail-2026-27673.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27673&examId=6311"
+  },
+  "detail-2026-27674.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27674&examId=6311"
+  },
+  "detail-2026-27675.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27675&examId=6311"
+  },
+  "detail-2026-27676.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27676&examId=6311"
+  },
+  "detail-2026-27677.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27677&examId=6311"
+  },
+  "detail-2026-27678.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27678&examId=6311"
+  },
+  "detail-2026-27679.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27679&examId=6311"
+  },
+  "detail-2026-27680.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27680&examId=6311"
+  },
+  "detail-2026-27681.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27681&examId=6311"
+  },
+  "detail-2026-27682.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27682&examId=6311"
+  },
+  "detail-2026-27683.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27683&examId=6311"
+  },
+  "detail-2026-27684.html": {
+    "method": "POST",
+    "body": "schoolcode=276&specialtycode=27684&examId=6311"
+  },
+  "detail-2026-27770.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27770&examId=6311"
+  },
+  "detail-2026-27771.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27771&examId=6311"
+  },
+  "detail-2026-27772.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27772&examId=6311"
+  },
+  "detail-2026-27776.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27776&examId=6311"
+  },
+  "detail-2026-27777.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27777&examId=6311"
+  },
+  "detail-2026-27778.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27778&examId=6311"
+  },
+  "detail-2026-27780.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27780&examId=6311"
+  },
+  "detail-2026-27781.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27781&examId=6311"
+  },
+  "detail-2026-27782.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27782&examId=6311"
+  },
+  "detail-2026-27773.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27773&examId=6311"
+  },
+  "detail-2026-27779.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27779&examId=6311"
+  },
+  "detail-2026-27783.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27783&examId=6311"
+  },
+  "detail-2026-27774.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27774&examId=6311"
+  },
+  "detail-2026-27775.html": {
+    "method": "POST",
+    "body": "schoolcode=277&specialtycode=27775&examId=6311"
+  },
+  "detail-2026-27878.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27878&examId=6311"
+  },
+  "detail-2026-27879.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27879&examId=6311"
+  },
+  "detail-2026-27880.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27880&examId=6311"
+  },
+  "detail-2026-27881.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27881&examId=6311"
+  },
+  "detail-2026-27870.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27870&examId=6311"
+  },
+  "detail-2026-27871.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27871&examId=6311"
+  },
+  "detail-2026-27872.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27872&examId=6311"
+  },
+  "detail-2026-27873.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27873&examId=6311"
+  },
+  "detail-2026-27874.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27874&examId=6311"
+  },
+  "detail-2026-27875.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27875&examId=6311"
+  },
+  "detail-2026-27876.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27876&examId=6311"
+  },
+  "detail-2026-27877.html": {
+    "method": "POST",
+    "body": "schoolcode=278&specialtycode=27877&examId=6311"
+  },
+  "detail-2026-28270.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28270&examId=6311"
+  },
+  "detail-2026-28280.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28280&examId=6311"
+  },
+  "detail-2026-28281.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28281&examId=6311"
+  },
+  "detail-2026-28282.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28282&examId=6311"
+  },
+  "detail-2026-28283.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28283&examId=6311"
+  },
+  "detail-2026-28284.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28284&examId=6311"
+  },
+  "detail-2026-28285.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28285&examId=6311"
+  },
+  "detail-2026-28286.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28286&examId=6311"
+  },
+  "detail-2026-28287.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28287&examId=6311"
+  },
+  "detail-2026-28271.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28271&examId=6311"
+  },
+  "detail-2026-28272.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28272&examId=6311"
+  },
+  "detail-2026-28273.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28273&examId=6311"
+  },
+  "detail-2026-28274.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28274&examId=6311"
+  },
+  "detail-2026-28275.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28275&examId=6311"
+  },
+  "detail-2026-28276.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28276&examId=6311"
+  },
+  "detail-2026-28277.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28277&examId=6311"
+  },
+  "detail-2026-28278.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28278&examId=6311"
+  },
+  "detail-2026-28279.html": {
+    "method": "POST",
+    "body": "schoolcode=282&specialtycode=28279&examId=6311"
+  },
+  "detail-2026-28472.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28472&examId=6311"
+  },
+  "detail-2026-28473.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28473&examId=6311"
+  },
+  "detail-2026-28474.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28474&examId=6311"
+  },
+  "detail-2026-28470.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28470&examId=6311"
+  },
+  "detail-2026-28471.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28471&examId=6311"
+  },
+  "detail-2026-28475.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28475&examId=6311"
+  },
+  "detail-2026-28476.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28476&examId=6311"
+  },
+  "detail-2026-28477.html": {
+    "method": "POST",
+    "body": "schoolcode=284&specialtycode=28477&examId=6311"
+  },
+  "detail-2026-28770.html": {
+    "method": "POST",
+    "body": "schoolcode=287&specialtycode=28770&examId=6311"
+  },
+  "detail-2026-28771.html": {
+    "method": "POST",
+    "body": "schoolcode=287&specialtycode=28771&examId=6311"
+  },
+  "detail-2026-28772.html": {
+    "method": "POST",
+    "body": "schoolcode=287&specialtycode=28772&examId=6311"
+  },
+  "detail-2026-28773.html": {
+    "method": "POST",
+    "body": "schoolcode=287&specialtycode=28773&examId=6311"
+  },
+  "detail-2026-28870.html": {
+    "method": "POST",
+    "body": "schoolcode=288&specialtycode=28870&examId=6311"
+  },
+  "detail-2026-28973.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28973&examId=6311"
+  },
+  "detail-2026-28974.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28974&examId=6311"
+  },
+  "detail-2026-28975.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28975&examId=6311"
+  },
+  "detail-2026-28976.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28976&examId=6311"
+  },
+  "detail-2026-28977.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28977&examId=6311"
+  },
+  "detail-2026-28978.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28978&examId=6311"
+  },
+  "detail-2026-28972.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28972&examId=6311"
+  },
+  "detail-2026-28970.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28970&examId=6311"
+  },
+  "detail-2026-28971.html": {
+    "method": "POST",
+    "body": "schoolcode=289&specialtycode=28971&examId=6311"
+  },
+  "detail-2026-29270.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29270&examId=6311"
+  },
+  "detail-2026-29271.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29271&examId=6311"
+  },
+  "detail-2026-29272.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29272&examId=6311"
+  },
+  "detail-2026-29273.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29273&examId=6311"
+  },
+  "detail-2026-29274.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29274&examId=6311"
+  },
+  "detail-2026-29275.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29275&examId=6311"
+  },
+  "detail-2026-29276.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29276&examId=6311"
+  },
+  "detail-2026-29277.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29277&examId=6311"
+  },
+  "detail-2026-29278.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29278&examId=6311"
+  },
+  "detail-2026-29279.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29279&examId=6311"
+  },
+  "detail-2026-29280.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29280&examId=6311"
+  },
+  "detail-2026-29281.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29281&examId=6311"
+  },
+  "detail-2026-29282.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29282&examId=6311"
+  },
+  "detail-2026-29283.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29283&examId=6311"
+  },
+  "detail-2026-29284.html": {
+    "method": "POST",
+    "body": "schoolcode=292&specialtycode=29284&examId=6311"
+  },
+  "detail-2026-29370.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29370&examId=6311"
+  },
+  "detail-2026-29371.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29371&examId=6311"
+  },
+  "detail-2026-29372.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29372&examId=6311"
+  },
+  "detail-2026-29373.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29373&examId=6311"
+  },
+  "detail-2026-29374.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29374&examId=6311"
+  },
+  "detail-2026-29376.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29376&examId=6311"
+  },
+  "detail-2026-29377.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29377&examId=6311"
+  },
+  "detail-2026-29378.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29378&examId=6311"
+  },
+  "detail-2026-29379.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29379&examId=6311"
+  },
+  "detail-2026-29380.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29380&examId=6311"
+  },
+  "detail-2026-29381.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29381&examId=6311"
+  },
+  "detail-2026-29382.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29382&examId=6311"
+  },
+  "detail-2026-29383.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29383&examId=6311"
+  },
+  "detail-2026-29384.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29384&examId=6311"
+  },
+  "detail-2026-29385.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29385&examId=6311"
+  },
+  "detail-2026-29375.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29375&examId=6311"
+  },
+  "detail-2026-29386.html": {
+    "method": "POST",
+    "body": "schoolcode=293&specialtycode=29386&examId=6311"
+  },
+  "detail-2026-29470.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29470&examId=6311"
+  },
+  "detail-2026-29481.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29481&examId=6311"
+  },
+  "detail-2026-29471.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29471&examId=6311"
+  },
+  "detail-2026-29472.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29472&examId=6311"
+  },
+  "detail-2026-29478.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29478&examId=6311"
+  },
+  "detail-2026-29479.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29479&examId=6311"
+  },
+  "detail-2026-29482.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29482&examId=6311"
+  },
+  "detail-2026-29483.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29483&examId=6311"
+  },
+  "detail-2026-29487.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29487&examId=6311"
+  },
+  "detail-2026-29488.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29488&examId=6311"
+  },
+  "detail-2026-29473.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29473&examId=6311"
+  },
+  "detail-2026-29474.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29474&examId=6311"
+  },
+  "detail-2026-29475.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29475&examId=6311"
+  },
+  "detail-2026-29476.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29476&examId=6311"
+  },
+  "detail-2026-29477.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29477&examId=6311"
+  },
+  "detail-2026-29480.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29480&examId=6311"
+  },
+  "detail-2026-29484.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29484&examId=6311"
+  },
+  "detail-2026-29485.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29485&examId=6311"
+  },
+  "detail-2026-29486.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29486&examId=6311"
+  },
+  "detail-2026-29489.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29489&examId=6311"
+  },
+  "detail-2026-29490.html": {
+    "method": "POST",
+    "body": "schoolcode=294&specialtycode=29490&examId=6311"
+  },
+  "detail-2026-29970.html": {
+    "method": "POST",
+    "body": "schoolcode=299&specialtycode=29970&examId=6311"
+  },
+  "detail-2026-29971.html": {
+    "method": "POST",
+    "body": "schoolcode=299&specialtycode=29971&examId=6311"
+  },
+  "detail-2026-30070.html": {
+    "method": "POST",
+    "body": "schoolcode=300&specialtycode=30070&examId=6311"
+  },
+  "detail-2026-30071.html": {
+    "method": "POST",
+    "body": "schoolcode=300&specialtycode=30071&examId=6311"
+  },
+  "detail-2026-30072.html": {
+    "method": "POST",
+    "body": "schoolcode=300&specialtycode=30072&examId=6311"
+  },
+  "detail-2026-31670.html": {
+    "method": "POST",
+    "body": "schoolcode=316&specialtycode=31670&examId=6311"
+  },
+  "detail-2026-31671.html": {
+    "method": "POST",
+    "body": "schoolcode=316&specialtycode=31671&examId=6311"
+  },
+  "detail-2026-31672.html": {
+    "method": "POST",
+    "body": "schoolcode=316&specialtycode=31672&examId=6311"
+  },
+  "detail-2026-31770.html": {
+    "method": "POST",
+    "body": "schoolcode=317&specialtycode=31770&examId=6311"
+  },
+  "detail-2026-31771.html": {
+    "method": "POST",
+    "body": "schoolcode=317&specialtycode=31771&examId=6311"
+  },
+  "detail-2026-31772.html": {
+    "method": "POST",
+    "body": "schoolcode=317&specialtycode=31772&examId=6311"
+  },
+  "detail-2026-31773.html": {
+    "method": "POST",
+    "body": "schoolcode=317&specialtycode=31773&examId=6311"
+  },
+  "detail-2026-31870.html": {
+    "method": "POST",
+    "body": "schoolcode=318&specialtycode=31870&examId=6311"
+  },
+  "detail-2026-31871.html": {
+    "method": "POST",
+    "body": "schoolcode=318&specialtycode=31871&examId=6311"
+  },
+  "detail-2026-38284.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38284&examId=6311"
+  },
+  "detail-2026-38285.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38285&examId=6311"
+  },
+  "detail-2026-38286.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38286&examId=6311"
+  },
+  "detail-2026-38287.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38287&examId=6311"
+  },
+  "detail-2026-38288.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38288&examId=6311"
+  },
+  "detail-2026-38289.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38289&examId=6311"
+  },
+  "detail-2026-38290.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38290&examId=6311"
+  },
+  "detail-2026-38265.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38265&examId=6311"
+  },
+  "detail-2026-38266.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38266&examId=6311"
+  },
+  "detail-2026-38267.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38267&examId=6311"
+  },
+  "detail-2026-38268.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38268&examId=6311"
+  },
+  "detail-2026-38269.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38269&examId=6311"
+  },
+  "detail-2026-38270.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38270&examId=6311"
+  },
+  "detail-2026-38271.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38271&examId=6311"
+  },
+  "detail-2026-38272.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38272&examId=6311"
+  },
+  "detail-2026-38273.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38273&examId=6311"
+  },
+  "detail-2026-38274.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38274&examId=6311"
+  },
+  "detail-2026-38275.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38275&examId=6311"
+  },
+  "detail-2026-38276.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38276&examId=6311"
+  },
+  "detail-2026-38277.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38277&examId=6311"
+  },
+  "detail-2026-38278.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38278&examId=6311"
+  },
+  "detail-2026-38279.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38279&examId=6311"
+  },
+  "detail-2026-38280.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38280&examId=6311"
+  },
+  "detail-2026-38281.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38281&examId=6311"
+  },
+  "detail-2026-38282.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38282&examId=6311"
+  },
+  "detail-2026-38283.html": {
+    "method": "POST",
+    "body": "schoolcode=382&specialtycode=38283&examId=6311"
+  },
+  "detail-2026-42172.html": {
+    "method": "POST",
+    "body": "schoolcode=421&specialtycode=42172&examId=6311"
+  },
+  "detail-2026-42170.html": {
+    "method": "POST",
+    "body": "schoolcode=421&specialtycode=42170&examId=6311"
+  },
+  "detail-2026-42171.html": {
+    "method": "POST",
+    "body": "schoolcode=421&specialtycode=42171&examId=6311"
+  }
+}

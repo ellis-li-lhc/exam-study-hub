@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="22">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_14811"> 
+                          <td >14811</td> 
+                          <td >亳州学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >亳州学院淮北供销学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14812"> 
+                          <td >14812</td> 
+                          <td >亳州学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >亳州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_14813"> 
+                          <td >14813</td> 
+                          <td >亳州学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >亳州学院明光市教师进修学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14814"> 
+                          <td >14814</td> 
+                          <td >亳州学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >亳州学院淮北供销学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14815"> 
+                          <td >14815</td> 
+                          <td >亳州学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >亳州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_14816"> 
+                          <td >14816</td> 
+                          <td >亳州学院</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >亳州学院明光市教师进修学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14817"> 
+                          <td >14817</td> 
+                          <td >亳州学院</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >亳州学院淮北供销学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14818"> 
+                          <td >14818</td> 
+                          <td >亳州学院</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650</td> 
+                          <td >亳州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15001"> 
+                          <td >15001</td> 
+                          <td >巢湖学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院安徽亳州机电信息工程学校教学点</td>                       
+                         </tr>
+                        <tr id="zy_15002"> 
+                          <td >15002</td> 
+                          <td >巢湖学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15003"> 
+                          <td >15003</td> 
+                          <td >巢湖学院</td> 
+                          <td >应用化学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300元/年</td> 
+                          <td >巢湖学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15004"> 
+                          <td >15004</td> 
+                          <td >巢湖学院</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1300元/年</td> 
+                          <td >巢湖学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15005"> 
+                          <td >15005</td> 
+                          <td >巢湖学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院安徽亳州机电信息工程学校教学点</td>                       
+                         </tr>
+                        <tr id="zy_15006"> 
+                          <td >15006</td> 
+                          <td >巢湖学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15007"> 
+                          <td >15007</td> 
+                          <td >巢湖学院</td> 
+                          <td >法学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院安徽亳州机电信息工程学校教学点</td>                       
+                         </tr>
+                        <tr id="zy_15008"> 
+                          <td >15008</td> 
+                          <td >巢湖学院</td> 
+                          <td >法学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15009"> 
+                          <td >15009</td> 
+                          <td >巢湖学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院安徽亳州机电信息工程学校教学点</td>                       
+                         </tr>
+                        <tr id="zy_15010"> 
+                          <td >15010</td> 
+                          <td >巢湖学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >巢湖学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15101"> 
+                          <td >15101</td> 
+                          <td >池州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15102"> 
+                          <td >15102</td> 
+                          <td >池州学院</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15103"> 
+                          <td >15103</td> 
+                          <td >池州学院</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15104"> 
+                          <td >15104</td> 
+                          <td >池州学院</td> 
+                          <td >市场营销</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15105"> 
+                          <td >15105</td> 
+                          <td >池州学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15106"> 
+                          <td >15106</td> 
+                          <td >池州学院</td> 
+                          <td >人力资源管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15107"> 
+                          <td >15107</td> 
+                          <td >池州学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >池州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15401"> 
+                          <td >15401</td> 
+                          <td >滁州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >滁州学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_15402"> 
+                          <td >15402</td> 
+                          <td >滁州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >滁州学院天长市金领成人助学培训中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_15403"> 
+                          <td >15403</td> 
+                          <td >滁州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >滁州学院定远县四方职业技术学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_15404"> 
+                          <td >15404</td> 
+                          <td >滁州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >滁州学院颍上技工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_15405"> 
+                          <td >15405</td> 
+                          <td >滁州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >滁州学院皖西经济技术学校校外教学点</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14811&nbsp;亳州学院&nbsp;&nbsp;学前教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院淮北供销学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14812&nbsp;亳州学院&nbsp;&nbsp;学前教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14813&nbsp;亳州学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院明光市教师进修学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14814&nbsp;亳州学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院淮北供销学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14815&nbsp;亳州学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14816&nbsp;亳州学院&nbsp;&nbsp;护理学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院明光市教师进修学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14817&nbsp;亳州学院&nbsp;&nbsp;护理学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院淮北供销学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14818&nbsp;亳州学院&nbsp;&nbsp;护理学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">医学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">亳州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15001&nbsp;巢湖学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院安徽亳州机电信息工程学校教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15002&nbsp;巢湖学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15003&nbsp;巢湖学院&nbsp;&nbsp;应用化学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15004&nbsp;巢湖学院&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1300元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15005&nbsp;巢湖学院&nbsp;&nbsp;财务管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院安徽亳州机电信息工程学校教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15006&nbsp;巢湖学院&nbsp;&nbsp;财务管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15007&nbsp;巢湖学院&nbsp;&nbsp;法学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">法学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院安徽亳州机电信息工程学校教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15008&nbsp;巢湖学院&nbsp;&nbsp;法学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">法学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15009&nbsp;巢湖学院&nbsp;&nbsp;学前教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院安徽亳州机电信息工程学校教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15010&nbsp;巢湖学院&nbsp;&nbsp;学前教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">巢湖学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15101&nbsp;池州学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15102&nbsp;池州学院&nbsp;&nbsp;数学与应用数学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15103&nbsp;池州学院&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15104&nbsp;池州学院&nbsp;&nbsp;市场营销</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15105&nbsp;池州学院&nbsp;&nbsp;财务管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15106&nbsp;池州学院&nbsp;&nbsp;人力资源管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管理类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15107&nbsp;池州学院&nbsp;&nbsp;学前教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">池州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15401&nbsp;滁州学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">滁州学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15402&nbsp;滁州学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">滁州学院天长市金领成人助学培训中心校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15403&nbsp;滁州学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">滁州学院定远县四方职业技术学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15404&nbsp;滁州学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">滁州学院颍上技工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">15405&nbsp;滁州学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">滁州学院皖西经济技术学校校外教学点</div>
+                    </div>
+            </div>
+        </div>
+    
+
+        </div>
+        
+		<div id="pagination" class="paginationH"></div>
+    </div>
+    
+    
+			
+
+
+</div>
+ <!-- 页脚 -->
+    <footer>
+            <div class="copyright">
+                <p>版权所有：安徽省教育招生考试院 皖ICP备05021720号</p>
+            </div>
+    </footer>
+    
+<script src="resources/js/jquery-3.7.1.min.js"></script>
+
+	    <script>
+    
+    // 初始化页面
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        // 滚动显示/隐藏返回顶部按钮
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        // 点击返回顶部
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    
+    });
+    
+        // 移动菜单切换
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            // 切换菜单图标
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // 点击菜单项后关闭移动菜单
+        const menuItems = document.querySelectorAll('.mobile-menu a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // 页面滚动时改变导航栏样式
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+            }
+        });
+        
+        // 当前年份更新
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+<script src="resources/js/myPagination.js"></script>	
+<script type="text/javascript">
+$(function() {
+	getKl('');
+	initload();
+});	
+
+
+function initload(){
+ var total = parseInt('37');
+	if(total < 1)
+	var pagin =	$('#pagination').css('display','none')
+	new myPagination({
+        id: 'pagination',
+        curPage:'22', //初始页码
+        pageTotal: total==0?1:total, //总页数
+		pageAmount: 30,  //每页多少条--写死
+        dataTotal: '1,104', //总共多少条数据
+        showPageTotalFlag:true, //是否显示数据统计
+        showSkipInputFlag:true, //是否支持跳转
+        getPage: function (page) {
+        	if(page == $('#currPage').val())
+        		return true;
+        	$('#currPage').val(page);
+        	$('#frmSubmit').submit();
+        }
+    })
+}
+
+function search(){
+	$("#currPage").val(1);
+	$('#frmSubmit').submit();
+}
+
+function getKl(kldm){
+   var ccdm=$("#ccdm").val();
+   $("#kldm option:gt(0)").remove();	
+	if(ccdm!=""){
+			$.ajax({
+				type: "POST",
+				url: "getKldmByCcdm",
+				data: {"ccdm":ccdm},
+				dataType: "json",
+				success: function(data){
+					var array = data.rows;
+					for(var i = 0; i < array.length; i++){
+						var sel="";
+		 		        if(array[i].sjdm==kldm)sel="selected";		
+						$("#kldm").append("<option value="+array[i].sjdm+" "+sel+">"+array[i].sjmc+"</option>");
+					}
+
+				}
+			});
+
+	  }
+}
+
+</script>
+
+</body>
+</html>

@@ -42,7 +42,52 @@ from app.schemas.admin_data import (
 router = APIRouter(prefix="/api/admin/data", tags=["admin-data"])
 
 EXPECTED_COUNTS = {
+    "beijing_institution": 45,
+    "beijing_plan": 287,
+    "beijing_score": 0,
+    "beijing_control": 16,
+    "beijing_collection": 0,
+    "guangxi_institution": 55,
+    "guangxi_plan": 569,
+    "guangxi_score": 0,
+    "guangxi_control": 16,
+    "guangxi_collection": 0,
+    "sichuan_institution": 49,
+    "sichuan_plan": 2569,
+    "sichuan_score": 0,
+    "sichuan_control": 16,
+    "sichuan_collection": 0,
+    "chongqing_institution": 36,
+    "chongqing_plan": 472,
+    "chongqing_score": 0,
+    "chongqing_control": 16,
+    "chongqing_collection": 0,
+    "anhui_institution": 71,
+    "anhui_plan": 1104,
+    "anhui_score": 0,
+    "anhui_control": 16,
+    "anhui_collection": 0,
+    "fujian_institution": 40,
+    "fujian_plan": 468,
+    "fujian_score": 0,
+    "fujian_control": 8,
+    "fujian_collection": 0,
+    "hunan_institution": 61,
+    "hunan_plan": 677,
+    "hunan_score": 0,
+    "hunan_control": 16,
+    "hunan_collection": 238,
+    "jiangxi_institution": 14,
+    "jiangxi_plan": 297,
+    "jiangxi_score": 0,
+    "jiangxi_control": 8,
+    "jiangxi_collection": 0,
     "major": 66,
+    "hubei_institution": 9,
+    "hubei_plan": 85,
+    "hubei_score": 0,
+    "hubei_control": 24,
+    "hubei_collection": 25,
     "henan_institution": 39,
     "henan_score": 90,
     "henan_plan": 199,
@@ -98,6 +143,42 @@ def build_validation_summary(db: Session) -> ValidationSummary:
     shanghai = db.query(Province).filter_by(code="shanghai").first()
     shandong = db.query(Province).filter_by(code="shandong").first()
     hebei = db.query(Province).filter_by(code="hebei").first()
+    for code, name in (("hunan", "湖南"), ("jiangxi", "江西"), ("anhui", "安徽"), ("fujian", "福建"), ("sichuan", "四川"), ("chongqing", "重庆"), ("beijing", "北京"), ("guangxi", "广西")):
+        province = db.query(Province).filter_by(code=code).first()
+        if province is None:
+            issues.append(ValidationIssue(severity="error", area="省份", message=f"缺少{name}省份记录"))
+            continue
+        for key, label, query in (
+            ("institution", "院校", db.query(Institution).filter_by(province_id=province.id)),
+            ("plan", "专升本目录", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == province.id)),
+            ("score", "院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == province.id)),
+            ("control", "省控线", db.query(ProvinceControlScore).filter_by(province_id=province.id)),
+        ):
+            add_count_issue(issues, f"{name}数据", f"{name}{label}", query.count(), EXPECTED_COUNTS[f"{code}_{key}"])
+        collection_count = sum(len((school.supplemental_data or {}).get("category_collection_plans", []))
+                               for school in db.query(Institution).filter_by(province_id=province.id))
+        add_count_issue(issues, f"{name}数据", f"{name}院校科类征集", collection_count, EXPECTED_COUNTS[f"{code}_collection"])
+    jiangxi_review_count = sum(
+        detail.get("selection_eligible") is False
+        for school in db.query(Institution).join(Province).filter(Province.code == "jiangxi")
+        for detail in (school.supplemental_data or {}).get("plan_details", {}).values()
+    )
+    if jiangxi_review_count:
+        issues.append(ValidationIssue(severity="warning", area="江西资料复核", message=f"江西有{jiangxi_review_count}条科类待核实或科目冲突记录，已禁止作为备考目标"))
+    hubei = db.query(Province).filter_by(code="hubei").first()
+    if hubei is None:
+        issues.append(ValidationIssue(severity="error", area="省份", message="缺少湖北省份记录"))
+    else:
+        for key, label, query in (
+            ("institution", "院校", db.query(Institution).filter_by(province_id=hubei.id)),
+            ("plan", "专升本目录", db.query(AdmissionPlan).join(Institution).filter(Institution.province_id == hubei.id)),
+            ("score", "院校实际录取线", db.query(AdmissionScore).join(Institution).filter(Institution.province_id == hubei.id)),
+            ("control", "省控线", db.query(ProvinceControlScore).filter_by(province_id=hubei.id)),
+        ):
+            add_count_issue(issues, "湖北数据", f"湖北{label}", query.count(), EXPECTED_COUNTS[f"hubei_{key}"])
+        collection_count = sum(len((s.supplemental_data or {}).get("category_collection_plans", []))
+                               for s in db.query(Institution).filter_by(province_id=hubei.id))
+        add_count_issue(issues, "湖北数据", "湖北院校科类征集", collection_count, EXPECTED_COUNTS["hubei_collection"])
     if hebei is None:
         issues.append(ValidationIssue(severity="error", area="省份", message="缺少河北省份记录"))
     else:

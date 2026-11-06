@@ -1,0 +1,177 @@
+{
+  "province": "hubei",
+  "checked_at": "2026-11-06T11:31:23.709991+00:00",
+  "stage": "normalized_ready_for_import",
+  "catalogue_institutions": 5,
+  "catalogue_rows": 85,
+  "collection_rows": 25,
+  "collection_plan_counts_by_year": {
+    "2024": 376,
+    "2025": 592
+  },
+  "control_rows": 24,
+  "institution_score_rows": 0,
+  "sources": [
+    {
+      "path": "sources/hubei/brochure-hbeu-2026.html",
+      "url": "https://cjxy.hbeu.edu.cn/info/1068/6053.htm",
+      "sha256": "5efa6a8b88c7ce1e62a2730c24fb16804e92496bf642c75837f7ca8690b05975"
+    },
+    {
+      "path": "sources/hubei/brochure-hbmu-2026.html",
+      "url": "https://www.hbmu.edu.cn/2026/0525/c849a165540/page.htm",
+      "sha256": "e09b29813a570ebcb0b83fda530540c0e4f1f496aee52afa4bc027a36735bc4f"
+    },
+    {
+      "path": "sources/hubei/brochure-hbuas.html",
+      "url": "https://jjy.hbuas.edu.cn/info/1141/3883.htm",
+      "sha256": "f62e05873ccd709880ed399f89cddb66ab7bc3faebdf71cb13b06d030b345637"
+    },
+    {
+      "path": "sources/hubei/brochure-hbucm-2026.html",
+      "url": "https://hbucm.edu.cn/info/1049/205401.htm",
+      "sha256": "89c1f10370681df27c3d9a0c454b50e6f0c2746d975d1e51cdccf635afea75d0"
+    },
+    {
+      "path": "sources/hubei/brochure-hbue-2026.html",
+      "url": "https://jxjy.hbue.edu.cn/ab/2d/c10383a371501/page.htm",
+      "sha256": "d12fb602cae6ad06ba728623732b65aa30a2277f6718c6158109ef7a18b13ad0"
+    },
+    {
+      "path": "sources/hubei/brochure-hbue-2026.pdf",
+      "url": "https://jxjy.hbue.edu.cn/_upload/article/files/21/c0/1d2818e546df92381fa8c8d5ddee/91d96484-6439-46e7-b24c-fd363a06721d.pdf",
+      "sha256": "28aa9b8a51c5a5ea8561b05975908c88a7c0c8c032b77e40cfec30e85d0f473f"
+    },
+    {
+      "path": "sources/hubei/brochure-hbue-charter.html",
+      "url": "https://jxjy.hbue.edu.cn/c0/0a/c1238a376842/page.htm",
+      "sha256": "ca84e36f40e102b3ec72bc08d722b6a2f83c2c7ae837a1d905464b3a686b6c89"
+    },
+    {
+      "path": "sources/hubei/brochure-hbust.html",
+      "url": "https://jxjy.hbust.edu.cn/info/1187/1234.htm",
+      "sha256": "b4705e41260223cc3f1d30df17f5ea052a9d5bd44c61fad312a7e87fd74dfbed"
+    },
+    {
+      "path": "sources/hubei/brochure-hbut-2026.html",
+      "url": "https://ce.hbut.edu.cn/info/1031/3080.htm",
+      "sha256": "4cd341c1aa8b8e7806565fce77d9808ea81e74e7db5662652078b3ede8f3cf41"
+    },
+    {
+      "path": "sources/hubei/brochure-hbut-2026.pdf",
+      "url": "https://ce.hbut.edu.cn/virtual_attach_file.vsb?afc=8M4Nibn7VfLl7aLDmUsU87iolLiUlCsYozGsM8lDM4-DUN-0gihFp2hmCIa0LYyYMSy8LShVL4TfU4liLRAVnRL4L7LYLm9ZU8-4M4Tkoz6FUmlZMRNPM7QFM4l4n7VRgjfNQmOeo4x/_2Xb_dNYLR-igDTJQty0LzG4LSy4LR9agtA8pUZcc&oid=2135724224&tid=1031&nid=3080&e=.pdf",
+      "sha256": "4de3a4d2362ff1cddbe1591047c2beb3fe3dc50ac1f415b6d17f5a0681a68741"
+    },
+    {
+      "path": "sources/hubei/brochure-hubu-2026.html",
+      "url": "https://jjy.hubu.edu.cn/info/1060/2773.htm",
+      "sha256": "9cbcb45a4cbcb5797ee2acadc2d42d4403fce16b3b4a01dc38bc6938cf992268"
+    },
+    {
+      "path": "sources/hubei/brochure-hzau-2026.html",
+      "url": "https://jxjy.hzau.edu.cn/info/1047/8745.htm",
+      "sha256": "130376d17436797c53d7179e593d1dee092cb624c3a33c829c73f134000198a9"
+    },
+    {
+      "path": "sources/hubei/brochure-jhun.html",
+      "url": "https://jjy.jhun.edu.cn/88/62/c3150a231522/pagem.htm",
+      "sha256": "e5832925e67d7017fe48a0057f608b0226c4a307dc9e09eaa4f6d68897bc97b4"
+    },
+    {
+      "path": "sources/hubei/collection-2024.html",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202412/t20241222_5471145.shtml",
+      "sha256": "00dc1b8dad014e29373534db0380f5cb2d7575964976bb2d98d7924b0f67135b"
+    },
+    {
+      "path": "sources/hubei/collection-2024.pdf",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202412/P020241223338935382266.pdf",
+      "sha256": "48917b4e7dfb11fe861d286954a9cff60aaf9b4384d75ec6df457654fe19a978"
+    },
+    {
+      "path": "sources/hubei/collection-2025.html",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/t20251219_5838237.shtml",
+      "sha256": "e0c1f6cafe6528550d8c3ebe24f3fad119b238824ce85f50c6376a4a24330e08"
+    },
+    {
+      "path": "sources/hubei/collection-2025.pdf",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202512/P020251219649285286532.pdf",
+      "sha256": "c9951c0ac0cfe7b2768ceaf28ed85c2d318ea91ab5ede0c51707e8eb1e135798"
+    },
+    {
+      "path": "sources/hubei/controls-2023.html",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202311/t20231129_4978723.shtml",
+      "sha256": "9beffd81230ea52dfc911f61f9f42db428ef0c7bd4beee148b26e3f5c1b57e38"
+    },
+    {
+      "path": "sources/hubei/controls-2024.html",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202411/t20241127_5430044.shtml",
+      "sha256": "c6f7e73663d1e4992450bf12ea8ab92f61fddf04f8a382a70cc7283d917ed319"
+    },
+    {
+      "path": "sources/hubei/controls-2025.html",
+      "url": "https://jyt.hubei.gov.cn/bmdt/ztzl/gxzs/xxgk/ywgg/202511/t20251128_5822976.shtml",
+      "sha256": "c12de0bae346eda414c121fd9ca41c1e57e66adb2f597641813ba4db4b5477e9"
+    },
+    {
+      "path": "sources/hubei/exam-categories-2026.doc",
+      "url": "https://www.hbea.edu.cn/files/2026-08/2026%E5%B9%B4%E6%88%90%E4%BA%BA%E9%AB%98%E8%80%83%E8%80%83%E7%94%9F%E6%8A%A5%E5%90%8D%E9%A1%BB%E7%9F%A5%E9%99%84%E4%BB%B6.doc",
+      "sha256": "c79baf6257e0fe7c9424825ef8e7a681cdb8cd9848afe8cf79044e7f0ec47cb7"
+    },
+    {
+      "path": "sources/hubei/index-hbuas.html",
+      "url": "https://jjy.hbuas.edu.cn/gdxljxjy.htm",
+      "sha256": "a7d3816ee684b7c7999a0c21521e6692eaef701b6de6753eb2bbd3ecc487ab36"
+    },
+    {
+      "path": "sources/hubei/index-hbue-charter.html",
+      "url": "https://xxgk.hbue.edu.cn/cjszs/list.htm",
+      "sha256": "ea32b22d4a0f90cbccb869ff0af39410b587caf7d2cd36c5ab074385593d2e0b"
+    },
+    {
+      "path": "sources/hubei/index-hbue.html",
+      "url": "https://jxjy.hbue.edu.cn/_s26/10383/list.psp",
+      "sha256": "cc8b754d359e694c874b8f43c498f9f344454ea42623d74214a9605d98f3119e"
+    },
+    {
+      "path": "sources/hubei/index-hbust.html",
+      "url": "https://jxjy.hbust.edu.cn/",
+      "sha256": "8027f20aca5f70ad9e02a9fd5d81142fe8336735dcb94b45748d2629bf951589"
+    },
+    {
+      "path": "sources/hubei/index-hbut.html",
+      "url": "https://ce.hbut.edu.cn/crjy/zsgz.htm",
+      "sha256": "dd706b6e8f96ac94a6626d7ec33c2d64a52498a13ccd0ebff5201902f5250d20"
+    },
+    {
+      "path": "sources/hubei/index-jhun.html",
+      "url": "https://jjy.jhun.edu.cn/zxgg/listm1.htm",
+      "sha256": "a0751249aa04982b57776ea5618e213b57fa12c96ba18db5528dbdcab7ab6a18"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    },
+    {
+      "path": "sources/hubei/policy-2026.html",
+      "url": "https://www.hbea.edu.cn/html/2026-08/16093.shtml",
+      "sha256": "7bea77c3ab263b1e154013ff9084f29c6179753c34620c34b6a133c6b396d781"
+    }
+  ],
+  "derived_sources": [
+    {
+      "path": "sources/hubei/exam-categories-2026.txt",
+      "derived_from": "sources/hubei/exam-categories-2026.doc",
+      "method": "macOS textutil -convert txt",
+      "sha256": "c8d6616f1028b6aff66019c759f5c1138078bdb04d014d7d0cf9d91a3b530834"
+    }
+  ],
+  "limitations": [
+    "非全省完整专业目录，2026仅所列院校简章；拟招生专业仍以审核批准结果为准",
+    "征集计划仅院校科类粒度，禁止分摊为逐专业人数",
+    "2026省控线及院校实际录取线未取得",
+    "湖北工业大学、湖北经济学院PDF为扫描件，其余无文本表格简章尚未结构化，均不并入专业行",
+    "湖北医药学院为招生预告；科类按湖北考试院2026专业科目对照表核对，原始科类和学科门类分别保留",
+    "华中农业大学表中*及新增标记保留原文；未明确专业学费、教学点和人数保持空"
+  ]
+}

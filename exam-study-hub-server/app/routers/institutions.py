@@ -20,6 +20,15 @@ PROVIDER_BY_PROVINCE = {
     "shanghai": "上海市教育考试院",
     "shandong": "山东省教育招生考试院",
     "hebei": "河北省教育考试院",
+    "hubei": "湖北省教育厅及院校官网",
+    "hunan": "湖南省教育考试院及湖南日报",
+    "jiangxi": "江西高校官网及省教育考试院公告转载",
+    "anhui": "安徽省教育招生考试院公开查询",
+    "fujian": "福建省教育考试院公开查询",
+    "sichuan": "四川省教育考试院官方目录",
+    "chongqing": "重庆市教育考试院公开查询及市教委",
+    "beijing": "北京教育考试院官方目录",
+    "guangxi": "广西招生考试院官方目录",
 }
 
 
@@ -47,6 +56,7 @@ def read_institutions(
     for inst in crud_inst.list_institutions(db, province_code=province):
         province_code = province_map.get(inst.province_id, "")
         active_year = (inst.supplemental_data or {}).get("active_catalog_year")
+        active_round = (inst.supplemental_data or {}).get("active_catalog_round")
         plan_details = (inst.supplemental_data or {}).get("plan_details", {})
         if inst.plans:
             # 有公开专业计划：只认真实专业名称能匹配到本系统专业 code 的专业。
@@ -54,8 +64,10 @@ def read_institutions(
                 code_by_major_name[plan.major_name]
                 for plan in inst.plans
                 if plan.major_name in code_by_major_name
+                and plan_details.get(f"{plan.year}/{plan.round}/{plan.major_code}", {}).get("selection_eligible", True) is not False
                 and (active_year is None or (plan.year == active_year and plan.plan_count != 0))
-                and (province_code != "hebei" or major_categories[plan.major_name] == {
+                and (active_round is None or plan.round == active_round)
+                and (province_code not in ("hebei", "hubei", "hunan", "jiangxi", "anhui", "fujian", "sichuan", "chongqing", "beijing", "guangxi") or major_categories[plan.major_name] == {
                     "文史类": "文史中医类", "中医类": "文史中医类",
                 }.get(plan.category_name, plan.category_name))
                 # The current study curriculum supports English; retain Japanese
@@ -106,13 +118,13 @@ def read_institutions(
                 source_url=p.source,
                 **{field: plan_details.get(f"{p.year}/{p.round}/{p.major_code}", {}).get(field)
                    for field in ("study_duration_raw", "minimum_study_duration_raw", "major_direction", "foreign_language", "remarks",
-                                 "institution_code_raw", "applicant_group", "source_page")},
+                                 "institution_code_raw", "applicant_group", "source_page", "major_code_raw", "selection_eligible")},
             )
             for p in sorted(inst.plans, key=lambda item: (item.year, item.major_code))
         ]
         # 来源与可信度：页面的参考线来自 scores，优先使用分数来源；没有分数时再兜底到招生计划来源。
         plan_source = next(
-            (p for p in sorted(inst.plans, key=lambda item: item.year, reverse=True) if p.source),
+            (p for p in sorted(inst.plans, key=lambda item: (item.year, item.round == active_round), reverse=True) if p.source),
             None,
         )
         score_source = next(
@@ -145,8 +157,10 @@ def read_institutions(
             scores=scores,
             source=source,
             supplemental_data=inst.supplemental_data,
+            category_collection_plans=(inst.supplemental_data or {}).get("category_collection_plans", []),
             active_catalog_year=active_year,
-            control_scores=controls_by_province.get(inst.province_id, []) if province_code in ("shanghai", "shandong", "hebei") else [],
+            active_catalog_round=active_round,
+            control_scores=controls_by_province.get(inst.province_id, []) if province_code in ("shanghai", "shandong", "hebei", "hubei", "hunan", "jiangxi", "anhui", "fujian", "sichuan", "chongqing", "beijing", "guangxi") else [],
         ))
 
     # 若指定了专业，只返回开设该专业的院校

@@ -1,0 +1,10 @@
+{
+  "source_hashes": {
+    "brochure-ncu-2026.pdf": "33ffc8a381e71bc8ba50431f039cb28819bdfd7701154c9ed7d43f59a250f6a2"
+  },
+  "study_duration_raw": "3年",
+  "tuition_amount": 1700,
+  "numeric_review_note": "PDF数字字体映射损坏；目视核对第1页24条专升本均3年，第2页本科学费1700/学年；第32行网络空间安全列合并，按渲染页核对补录。",
+  "review_method": "rendered_pdf_or_original_image_visual_check",
+  "reviewed_date": "2026-11-06"
+}

@@ -1,0 +1,10 @@
+{
+  "catalog-all-levels-2026.json": {
+    "method": "POST",
+    "body": "yxdm=&ccdm=&kldm=&xxxsdm=&zymc=&wyyzmc="
+  },
+  "catalog-zsb-2026.json": {
+    "method": "POST",
+    "body": "yxdm=&ccdm=1&kldm=&xxxsdm=&zymc=&wyyzmc="
+  }
+}

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="29">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_17004"> 
+                          <td >17004</td> 
+                          <td >淮南师范学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17005"> 
+                          <td >17005</td> 
+                          <td >淮南师范学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17006"> 
+                          <td >17006</td> 
+                          <td >淮南师范学院</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17007"> 
+                          <td >17007</td> 
+                          <td >淮南师范学院</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17008"> 
+                          <td >17008</td> 
+                          <td >淮南师范学院</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17009"> 
+                          <td >17009</td> 
+                          <td >淮南师范学院</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17010"> 
+                          <td >17010</td> 
+                          <td >淮南师范学院</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17011"> 
+                          <td >17011</td> 
+                          <td >淮南师范学院</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17012"> 
+                          <td >17012</td> 
+                          <td >淮南师范学院</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17013"> 
+                          <td >17013</td> 
+                          <td >淮南师范学院</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17014"> 
+                          <td >17014</td> 
+                          <td >淮南师范学院</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17015"> 
+                          <td >17015</td> 
+                          <td >淮南师范学院</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17016"> 
+                          <td >17016</td> 
+                          <td >淮南师范学院</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17017"> 
+                          <td >17017</td> 
+                          <td >淮南师范学院</td> 
+                          <td >化学工程与工艺</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17018"> 
+                          <td >17018</td> 
+                          <td >淮南师范学院</td> 
+                          <td >智慧交通</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17019"> 
+                          <td >17019</td> 
+                          <td >淮南师范学院</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17020"> 
+                          <td >17020</td> 
+                          <td >淮南师范学院</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17021"> 
+                          <td >17021</td> 
+                          <td >淮南师范学院</td> 
+                          <td >会计学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17022"> 
+                          <td >17022</td> 
+                          <td >淮南师范学院</td> 
+                          <td >法学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17023"> 
+                          <td >17023</td> 
+                          <td >淮南师范学院</td> 
+                          <td >法学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17024"> 
+                          <td >17024</td> 
+                          <td >淮南师范学院</td> 
+                          <td >法学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17025"> 
+                          <td >17025</td> 
+                          <td >淮南师范学院</td> 
+                          <td >思想政治教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17026"> 
+                          <td >17026</td> 
+                          <td >淮南师范学院</td> 
+                          <td >思想政治教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院界首市教师进修学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17027"> 
+                          <td >17027</td> 
+                          <td >淮南师范学院</td> 
+                          <td >思想政治教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17028"> 
+                          <td >17028</td> 
+                          <td >淮南师范学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院宿州逸夫师范学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17029"> 
+                          <td >17029</td> 
+                          <td >淮南师范学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17030"> 
+                          <td >17030</td> 
+                          <td >淮南师范学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院界首市教师进修学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17031"> 
+                          <td >17031</td> 
+                          <td >淮南师范学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17032"> 
+                          <td >17032</td> 
+                          <td >淮南师范学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17033"> 
+                          <td >17033</td> 
+                          <td >淮南师范学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院宿州逸夫师范学校校外教学点</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17004&nbsp;淮南师范学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17005&nbsp;淮南师范学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院淮北市烈山区职业教育中心校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17006&nbsp;淮南师范学院&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院合肥理工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17007&nbsp;淮南师范学院&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17008&nbsp;淮南师范学院&nbsp;&nbsp;机械设计制造及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院淮北市烈山区职业教育中心校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17009&nbsp;淮南师范学院&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院合肥理工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17010&nbsp;淮南师范学院&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17011&nbsp;淮南师范学院&nbsp;&nbsp;电气工程及其自动化</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院淮北市烈山区职业教育中心校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17012&nbsp;淮南师范学院&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院合肥理工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17013&nbsp;淮南师范学院&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+      

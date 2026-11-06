@@ -1,0 +1,641 @@
+[
+  {
+    "province": "sichuan",
+    "institution_code": "010",
+    "institution_name": "四川大学",
+    "city": "成都",
+    "national_institution_code": "4151010610",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185844_0671.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185844_7985.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "030",
+    "institution_name": "西南科技大学",
+    "city": "绵阳",
+    "national_institution_code": "4151010619",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185844_7985.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185845_5415.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185846_3578.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185847_1612.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185847_9748.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "046",
+    "institution_name": "中国药科大学",
+    "city": "南京",
+    "national_institution_code": "4132010316",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185847_9748.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "047",
+    "institution_name": "河海大学",
+    "city": "南京",
+    "national_institution_code": "4132010294",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185847_9748.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "057",
+    "institution_name": "成都理工大学",
+    "city": "成都",
+    "national_institution_code": "4151010616",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185847_9748.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185848_7854.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185849_5903.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185850_4021.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "067",
+    "institution_name": "电子科技大学",
+    "city": "成都",
+    "national_institution_code": "4151010614",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185850_4021.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185851_2335.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "089",
+    "institution_name": "四川旅游学院",
+    "city": "成都",
+    "national_institution_code": "4151011552",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185851_2335.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185852_0649.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "160",
+    "institution_name": "西南交通大学",
+    "city": "成都",
+    "national_institution_code": "4151010613",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185852_0649.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "202",
+    "institution_name": "重庆邮电大学",
+    "city": "重庆",
+    "national_institution_code": "4150010617",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185852_0649.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "203",
+    "institution_name": "北京体育大学",
+    "city": "北京",
+    "national_institution_code": "4111010043",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185852_8556.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "204",
+    "institution_name": "大连海事大学",
+    "city": "大连",
+    "national_institution_code": "4121010151",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185852_8556.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "231",
+    "institution_name": "成都信息工程大学",
+    "city": "成都",
+    "national_institution_code": "4151010621",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185852_8556.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185853_6402.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185854_4293.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "248",
+    "institution_name": "西南财经大学",
+    "city": "成都",
+    "national_institution_code": "4151010651",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185854_4293.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185855_2325.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "254",
+    "institution_name": "西南石油大学",
+    "city": "成都",
+    "national_institution_code": "4151010615",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185855_2325.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185855_9795.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185856_7649.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "300",
+    "institution_name": "四川师范大学",
+    "city": "成都",
+    "national_institution_code": "4151010636",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185856_7649.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185857_4635.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185858_1462.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185858_9365.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185949_4877.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "301",
+    "institution_name": "西华师范大学",
+    "city": "南充",
+    "national_institution_code": "4151010638",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185949_4877.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185950_4227.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185951_3246.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185952_0377.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "302",
+    "institution_name": "四川农业大学",
+    "city": "雅安",
+    "national_institution_code": "4151010626",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185952_0377.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185952_7514.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185953_5814.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185954_7337.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185955_7095.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185956_5939.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "303",
+    "institution_name": "西南医科大学",
+    "city": "泸州",
+    "national_institution_code": "4151010632",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185956_5939.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185957_3586.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185958_1990.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "304",
+    "institution_name": "成都中医药大学",
+    "city": "成都",
+    "national_institution_code": "4151010633",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185958_1990.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185958_9999.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827185959_9048.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "305",
+    "institution_name": "川北医学院",
+    "city": "南充",
+    "national_institution_code": "4151010634",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827185959_9048.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190000_5991.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "306",
+    "institution_name": "西华大学",
+    "city": "成都",
+    "national_institution_code": "4151010623",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190000_5991.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190001_3646.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190002_1184.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "307",
+    "institution_name": "四川轻化工大学",
+    "city": "自贡",
+    "national_institution_code": "4151010622",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190002_1184.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190002_9018.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190003_5740.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190004_2880.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "308",
+    "institution_name": "四川音乐学院",
+    "city": "成都",
+    "national_institution_code": "4151010654",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190004_2880.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "310",
+    "institution_name": "攀枝花学院",
+    "city": "攀枝花",
+    "national_institution_code": "4151011360",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190004_2880.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190005_0015.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "311",
+    "institution_name": "成都大学",
+    "city": "成都",
+    "national_institution_code": "4151011079",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190005_0015.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190101_2904.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "316",
+    "institution_name": "西昌学院",
+    "city": "凉山",
+    "national_institution_code": "4151010628",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190101_2904.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190101_9992.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190102_7030.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "318",
+    "institution_name": "成都医学院",
+    "city": "成都",
+    "national_institution_code": "4151013705",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190102_7030.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190103_5034.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190104_3086.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "326",
+    "institution_name": "绵阳师范学院",
+    "city": "绵阳",
+    "national_institution_code": "4151010639",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190104_3086.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190105_1988.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "329",
+    "institution_name": "内江师范学院",
+    "city": "内江",
+    "national_institution_code": "4151010640",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190105_1988.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "330",
+    "institution_name": "乐山师范学院",
+    "city": "乐山",
+    "national_institution_code": "4151010649",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190105_1988.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190105_8878.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "332",
+    "institution_name": "宜宾学院",
+    "city": "宜宾",
+    "national_institution_code": "4151010641",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190105_8878.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190106_7647.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "334",
+    "institution_name": "四川文理学院",
+    "city": "达州",
+    "national_institution_code": "4151010644",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190106_7647.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190107_7138.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "339",
+    "institution_name": "四川民族学院",
+    "city": "甘孜",
+    "national_institution_code": "4151011661",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "340",
+    "institution_name": "四川工业科技学院",
+    "city": "德阳",
+    "national_institution_code": "4151013816",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "355",
+    "institution_name": "成都文理学院",
+    "city": "成都",
+    "national_institution_code": "4151013671",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "361",
+    "institution_name": "四川文化艺术学院",
+    "city": "绵阳",
+    "national_institution_code": "4151014043",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "501",
+    "institution_name": "成都外国语学院",
+    "city": "成都",
+    "national_institution_code": "4151013673",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "502",
+    "institution_name": "成都艺术职业大学",
+    "city": "成都",
+    "national_institution_code": "4151012969",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190108_6599.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190109_5250.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "503",
+    "institution_name": "西南大学",
+    "city": "重庆",
+    "national_institution_code": "4150010635",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190109_5250.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "757",
+    "institution_name": "四川工商学院",
+    "city": "成都",
+    "national_institution_code": "4151013672",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190109_5250.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "783",
+    "institution_name": "中国消防救援学院",
+    "city": "北京",
+    "national_institution_code": "4111010039",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190109_5250.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "786",
+    "institution_name": "西北工业大学",
+    "city": "西安",
+    "national_institution_code": "4161010699",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190111_2533.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "788",
+    "institution_name": "西安电子科技大学",
+    "city": "西安",
+    "national_institution_code": "4161010701",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190111_2533.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "789",
+    "institution_name": "武汉理工大学",
+    "city": "武汉",
+    "national_institution_code": "4142010497",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190111_2533.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190112_1916.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "800",
+    "institution_name": "成都师范学院",
+    "city": "成都",
+    "national_institution_code": "4151014389",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190112_1916.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190113_5677.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "900",
+    "institution_name": "四川开放大学",
+    "city": "成都",
+    "national_institution_code": null,
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.scou.cn",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190113_5677.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "961",
+    "institution_name": "吉利学院",
+    "city": "成都",
+    "national_institution_code": "4111012802",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190113_5677.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "966",
+    "institution_name": "绵阳城市学院",
+    "city": "绵阳",
+    "national_institution_code": "4151014045",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190113_5677.png"
+    ]
+  },
+  {
+    "province": "sichuan",
+    "institution_code": "985",
+    "institution_name": "阿坝师范学院",
+    "city": "阿坝",
+    "national_institution_code": "4151010646",
+    "identity_basis": "省级官方专升本目录院校编码；城市按教育部高校名单或学校官网地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.sceea.cn/Upload/image/20260827/20260827190113_5677.png",
+      "https://www.sceea.cn/Upload/image/20260827/20260827190113_9991.png"
+    ]
+  }
+]

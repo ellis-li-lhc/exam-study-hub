@@ -1,0 +1,19 @@
+{
+  "source_sha256": "afefbc1a82ce689a4613dba9b4dfedd7c642964b602fca0724d0549d90da5c86",
+  "reviewed_date": "2026-11-06",
+  "review_method": "original_official_image_visual_check",
+  "ordinary_zsb_controls": {
+    "文史中医类": 151,
+    "艺术类": 109,
+    "理工类": 100,
+    "经济管理类": 100,
+    "法学类": 100,
+    "教育学类": 160,
+    "农学类": 104,
+    "医学类": 160
+  },
+  "excluded_other_levels": [
+    "高起本",
+    "高起专"
+  ]
+}

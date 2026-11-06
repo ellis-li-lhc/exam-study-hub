@@ -52,6 +52,9 @@ export const examMajors = [
   { code: 'fangdichan', name: '房地产开发与管理', category: '经济管理类' },
   { code: 'nonglin-jingji', name: '农林经济管理', category: '经济管理类' },
 
+  { code: 'xinxi-guanli', name: '信息管理与信息系统', category: '经济管理类' },
+  { code: 'yingyong-xinli', name: '应用心理学', category: '经济管理类' },
+
   // —— 理工类（统考：政治、英语、高等数学（一））——
   { code: 'jisuanji', name: '计算机科学与技术', category: '理工类' },
   { code: 'ruanjian', name: '软件工程', category: '理工类' },
@@ -59,7 +62,6 @@ export const examMajors = [
   { code: 'wulianwang', name: '物联网工程', category: '理工类' },
   { code: 'dashuju', name: '数据科学与大数据技术', category: '理工类' },
   { code: 'rengong-zhineng', name: '人工智能', category: '理工类' },
-  { code: 'xinxi-guanli', name: '信息管理与信息系统', category: '理工类' },
   { code: 'dianzi-xinxi', name: '电子信息工程', category: '理工类' },
   { code: 'tongxin', name: '通信工程', category: '理工类' },
   { code: 'zidonghua', name: '自动化', category: '理工类' },
@@ -90,7 +92,6 @@ export const examMajors = [
   { code: 'tiyu-jiaoyu', name: '体育教育', category: '教育学类' },
   { code: 'jiaoyu-jishu', name: '教育技术学', category: '教育学类' },
   { code: 'teshu-jiaoyu', name: '特殊教育', category: '教育学类' },
-  { code: 'yingyong-xinli', name: '应用心理学', category: '教育学类' },
   { code: 'shehui-tiyu', name: '社会体育指导与管理', category: '教育学类' },
 
   // —— 文史中医类（统考：政治、英语、大学语文）——
@@ -108,3 +109,22 @@ export const examMajors = [
   { code: 'zhongyao', name: '中药学', category: '文史中医类' },
   { code: 'zhenjiu', name: '针灸推拿学', category: '文史中医类' }
 ]
+
+// Preserve shared-subject results when a legacy curriculum gains the corrected third subject.
+export function reconcileDiagnosticSubjects(diagnostic, major) {
+  const subjects = subjectsForCategory(major?.category)
+  const existing = diagnostic?.subjectScores || {}
+  const oldSubjects = { 'yingyong-xinli': '教育理论', 'xinxi-guanli': '高等数学（一）' }
+  const oldSubject = oldSubjects[major?.code]
+  const requiresRetest = Boolean(oldSubject && subjects.length
+    && (Object.hasOwn(existing, oldSubject) || !subjects.every(subject => Object.hasOwn(existing, subject))))
+  return {
+    requiresRetest,
+    diagnostic: {
+      ...diagnostic,
+      subjectScores: Object.fromEntries(subjects.map(subject => [subject, existing[subject] ?? 0])),
+      ...(requiresRetest ? { completed: false,
+        submittedSubjects: (diagnostic?.submittedSubjects || []).filter(subject => subjects.includes(subject)) } : {})
+    }
+  }
+}

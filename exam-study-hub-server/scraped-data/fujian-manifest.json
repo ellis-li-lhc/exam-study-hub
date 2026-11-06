@@ -1,0 +1,255 @@
+{
+  "province": "fujian",
+  "province_name": "福建",
+  "catalog_year": 2026,
+  "coverage_note": "已接入2026省级公开专升本目录40校468条记录（242个院校专业组合），含不同教学点；8条历史省控线单列。10条专项限制记录不作普通备考目标；目录未公布人数，暂无院校实际录取线",
+  "counts": {
+    "institutions": 40,
+    "programs": 468,
+    "controls": 8,
+    "category_collections": 0
+  },
+  "public_query": {
+    "pages": 25,
+    "all_level_records": 965,
+    "zsb_records": 468,
+    "completeness": "all_current_public_query_pages",
+    "ordinary_target_excluded_records": 10,
+    "school_major_pairs": 242
+  },
+  "sources": [
+    {
+      "path": "sources/fujian/catalog-query-2026.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx?PAGEID=pg_tz_enroll_regulations",
+      "sha256": "9533591425572ac44bd2f761592364c23e450fc712143c1308c9aaab2c4dd034"
+    },
+    {
+      "path": "sources/fujian/controls-2025.html",
+      "url": "https://www.eeafj.cn/ckgsgg/20251124/14351.html",
+      "sha256": "ea1691af73d5b015ccb4679f6eb50854bb25b0c3c24c8151ffee968ab89581f3"
+    },
+    {
+      "path": "sources/fujian/collection-2025.html",
+      "url": "https://www.eeafj.cn/ckgsgg/20251205/14336.html",
+      "sha256": "160cfc0af43c41e76647ed27c9350f9fad6851e397d320754008745450355106"
+    },
+    {
+      "path": "sources/fujian/policy-2026.html",
+      "url": "https://jyt.fujian.gov.cn/xxgk/zywj/202609/t20260907_7209803.htm",
+      "sha256": "7067119d96f68b233dfdb4f0307b3175c88045140188bae8967e9233669cf309"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-002.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "110a4064462f91f1c508c492d498c954c33e5dcafbb0090aab6077b34ad02028",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=2&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-001.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "30bba2a1bf99b261d1425a2131f531988d1513873da944dbfb31a551e6ac4726",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=1&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-003.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "2f027d0dc5f0c14fd107cc84ef60ee19a6a17c9cb1288c702fba6cdbc9ddd5e7",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=3&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-004.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "c5deb46c84e44a17baa2a15701946489a62d8de7e3d6eda1bb5853161ca606c4",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=4&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-005.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "ace87f045c49c0ad48d3e722959c483b1baaf67317a94b46fd351630f0097bc1",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=5&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-006.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "3ae690456289a127fff7545dcdb7ab5952a7fb19ec3dcad50b2d3b9f7bc40b8e",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=6&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-007.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "6d9e0c6353d2ff81091c456f59b29222211851019318f3a512b1fade28b14b59",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=7&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-008.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "428778ace8958cbe66e2bd83d79e738182f5cc10a6f4893df84a763d8b426ca6",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=8&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-009.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "671b06f316ecbc7e24e326c0a1e2743697c4942d8e554aa40c37d73d3c1bbb40",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=9&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-010.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "1204caf923c1bdbf000fc522b1a839c139f875a4de4463dd7a80e1e07e99b33b",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=10&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-011.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "2faac5d8cdca1a6115899e06d93d017e4caa8785cec8d72d632a1192007de6bf",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=11&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-012.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "6f7aec73b051a71f6b350a3b7f683bacf90529049547566f0a3b5abd20a66deb",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=12&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-013.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "5b6be794c570c8167101f24b38f358cddfe0d11738f9ee380203b67627bd4fb4",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=13&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-014.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "c9ac0d3a93b32922146e3b5c5cdd8fc2ae12a958ff076dc401150a249cce07a7",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=14&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-015.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "23a95a48b36872ea8eba9c1344180da1ff7aaa49508cb3e74945f362e0cfca1b",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=15&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-016.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "3404c5e65c3aae5baedb724a6f74fa0693d4a0bc0d5f6ec51c31e53b72d4305e",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=16&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-017.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "af6a3fe4a65edd7c8de3ed38d27cfc46e7ad3605570f317e284f0b7289d9bd46",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=17&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-018.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "659c1875e82d4446d2dad6cbb74152a93a118650acdc35052b3d5afefd9cc298",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=18&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-019.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "660265b3ca55e6f3f7f76a8822e59ac0765a517e3dfc1bb617b81e948d55a282",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=19&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-020.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "20fb778be6a35962158dc216111e0f3417dcb9eb61e8f9501a878d54cb2b8d0a",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=20&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-021.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "f11c105e412d7a1d7323159b001bec229e9753ef6b4a65fc9383a1d12a6e4b85",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=21&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-022.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "5ed8569a1aa137216c1da11e46540b8ddaf770c0d2203553b799d2c58a4a2253",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=22&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-023.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "1a9603ea68b9d4fc03aabd4a93b45c6335431d83a1564216aefa218efba8fd0b",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=23&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-024.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "f235758c2de02a78eaef4f3868ef0463738da8acdc3f2a6539726c4e1513815e",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=24&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/catalog-2026-025.html",
+      "url": "https://ckcz.eeafj.cn/ShowReport.wx",
+      "sha256": "2d4788876090bc8fe68a2e7c4b80a90c197419dc0e2d0d4c900714cef1a7a302",
+      "method": "POST",
+      "body": "DISPLAY_TYPE=1&PAGEID=pg_tz_enroll_regulations&txtyxdm=&txtzydm=&txtcengci=&txtformxx=&rp_tz_enroll_regulations_PAGENO=25&rp_tz_enroll_regulations_ALLDATASETS_RECORDCOUNT=dataset1%3D965%3B&rp_tz_enroll_regulations_RECORDCOUNT=965&rp_tz_enroll_regulations_PAGECOUNT=25"
+    },
+    {
+      "path": "sources/fujian/controls-2025.png",
+      "url": "https://www.eeafj.cn/u/cms/default/202511/20251124152804_695.png",
+      "sha256": "afefbc1a82ce689a4613dba9b4dfedd7c642964b602fca0724d0549d90da5c86"
+    },
+    {
+      "path": "sources/fujian/identity-fjou-2026.html",
+      "url": "https://www.fjou.edu.cn/",
+      "sha256": "12cb0ec3923c4250bd5dad63cbb2f0b8dd1de3140c2b7ccd16800fd85c616d31"
+    },
+    {
+      "path": "sources/fujian/identity-fjjyxy-2022.html",
+      "url": "https://jyt.fujian.gov.cn/xxgk/zfxxgkzl/zfxxgkml/zcwj/202212/t20221219_6080963.htm",
+      "sha256": "f451ed84933e9c1cc34ff6ed3995d4f814af2fd2aca646b56a93eed52f00283d"
+    },
+    {
+      "path": "sources/fujian/portal-home-2026.html",
+      "url": "https://ckcz.eeafj.cn/",
+      "sha256": "6ebd462650fdcdfc651aaa923f0dc5ea2e211ac3df9541bfe2aa08be98071930"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    },
+    {
+      "path": "sources/fujian/controls-2025-reviewed.json",
+      "url": "https://www.eeafj.cn/u/cms/default/202511/20251124152804_695.png",
+      "sha256": "a60755c5972e20a6b9920cc7e2fb5421db957ad39b82558d922e15354f9de729",
+      "role": "visually_reviewed_extraction"
+    }
+  ],
+  "limitations": [
+    "目录不是人数计划；无2027目录；2026资料仅作2027备考历史参考",
+    "省控线不是院校实际录取线；报考需符合相应专业资格",
+    "查询分页使用公开POST表单，source_filename和source_query_page绑定原始页；直接打开官方链接为默认查询首页",
+    "收费金额缺计费周期时保留原文，不推定为每年",
+    "2025征求公告仅列院校剩余人数，未标专业科类，本次仅归档不分摊为专业计划"
+  ]
+}

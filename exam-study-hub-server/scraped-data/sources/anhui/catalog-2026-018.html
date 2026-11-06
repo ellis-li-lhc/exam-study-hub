@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="18">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_13703"> 
+                          <td >13703</td> 
+                          <td >安徽艺术学院</td> 
+                          <td >表演</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >艺术类</td> 
+                          <td >二年半</td> 
+                          <td >2000元/年</td> 
+                          <td >安徽艺术学院校本部。安徽艺术学院校本部招生，需先进行专业加试，请关注安徽艺术学院继续教育学院（https://www.ahua.edu.cn/jxjy/）加试通知。表演专业中部分计划用于招录黄梅戏方向。</td>                       
+                         </tr>
+                        <tr id="zy_13704"> 
+                          <td >13704</td> 
+                          <td >安徽艺术学院</td> 
+                          <td >播音与主持艺术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >艺术类</td> 
+                          <td >二年半</td> 
+                          <td >2000元/年</td> 
+                          <td >安徽艺术学院校本部。安徽艺术学院校本部招生，需先进行专业加试，请关注安徽艺术学院继续教育学院（https://www.ahua.edu.cn/jxjy/）加试通知。</td>                       
+                         </tr>
+                        <tr id="zy_13705"> 
+                          <td >13705</td> 
+                          <td >安徽艺术学院</td> 
+                          <td >视觉传达设计</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >艺术类</td> 
+                          <td >二年半</td> 
+                          <td >2000元/年</td> 
+                          <td >安徽艺术学院校本部。安徽艺术学院校本部招生，需先进行专业加试，请关注安徽艺术学院继续教育学院（https://www.ahua.edu.cn/jxjy/）加试通知。</td>                       
+                         </tr>
+                        <tr id="zy_14001"> 
+                          <td >14001</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >中医学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14002"> 
+                          <td >14002</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >针灸推拿学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14003"> 
+                          <td >14003</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >中药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学宿州机械电子学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14004"> 
+                          <td >14004</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >中药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学安徽中医药高等专科学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14005"> 
+                          <td >14005</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >中药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14006"> 
+                          <td >14006</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >中药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学安徽省淮南卫生学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14007"> 
+                          <td >14007</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14008"> 
+                          <td >14008</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >食品质量与安全</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14009"> 
+                          <td >14009</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学宿州机械电子学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14010"> 
+                          <td >14010</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学安徽中医药高等专科学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14011"> 
+                          <td >14011</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14012"> 
+                          <td >14012</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >药学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学安徽省淮南卫生学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14013"> 
+                          <td >14013</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >人力资源管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14014"> 
+                          <td >14014</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >公共事业管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14015"> 
+                          <td >14015</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >中西医临床医学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14016"> 
+                          <td >14016</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学亳州职业技术学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14017"> 
+                          <td >14017</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学宿州机械电子学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14018"> 
+                          <td >14018</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学安徽中医药高等专科学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14019"> 
+                          <td >14019</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14020"> 
+                          <td >14020</td> 
+                          <td >安徽中医药大学</td> 
+                          <td >护理学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >医学类</td> 
+                          <td >三年</td> 
+                          <td >1650元/年</td> 
+                          <td >安徽中医药大学安徽省淮南卫生学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14201"> 
+                          <td >14201</td> 
+                          <td >安庆师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >每年1100元</td> 
+                          <td >安庆师范大学淮南寿县科技学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14202"> 
+                          <td >14202</td> 
+                          <td >安庆师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >每年1100元</td> 
+                          <td >安庆师范大学校本部</td>                       
+                         </tr>
+                        <tr id="zy_14203"> 
+                          <td >14203</td> 
+                          <td >安庆师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >每年1100元</td> 
+                          <td >安庆师范大学宿州技师学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14204"> 
+                          <td >14204</td> 
+                          <td >安庆师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >每年1100元</td> 
+                          <td >安庆师范大学合肥精英培训学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14205"> 
+                          <td >14205</td> 
+                          <td >安庆师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >每年1100元</td> 
+                          <td >安庆师范大学六安市金安区教师发展中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14206"> 
+                          <td >14206</td> 
+                          <td >安庆师范大学</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >每年1100元</td> 
+                          <td >安庆师范大学阜阳市颍上县三铭中等专业学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_14207"> 
+                          <td >14207</td> 
+                          <td >安庆师范大学</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >每年1320元</td> 
+                          <td >安庆师范大学淮南寿县科技学校校外教学点</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">13703&nbsp;安徽艺术学院&nbsp;&nbsp;表演</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">艺术类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">2000元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽艺术学院校本部。安徽艺术学院校本部招生，需先进行专业加试，请关注安徽艺术学院继续教育学院（https://www.ahua.edu.cn/jxjy/）加试通知。表演专业中部分计划用于招录黄梅戏方向。</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">13704&nbsp;安徽艺术学院&nbsp;&nbsp;播音与主持艺术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">艺术类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">2000元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽艺术学院校本部。安徽艺术学院校本部招生，需先进行专业加试，请关注安徽艺术学院继续教育学院（https://www.ahua.edu.cn/jxjy/）加试通知。</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">13705&nbsp;安徽艺术学院&nbsp;&nbsp;视觉传达设计</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">艺术类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">2000元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽艺术学院校本部。安徽艺术学院校本部招生，需先进行专业加试，请关注安徽艺术学院继续教育学院（https://www.ahua.edu.cn/jxjy/）加试通知。</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14001&nbsp;安徽中医药大学&nbsp;&nbsp;中医学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽中医药大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14002&nbsp;安徽中医药大学&nbsp;&nbsp;针灸推拿学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽中医药大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14003&nbsp;安徽中医药大学&nbsp;&nbsp;中药学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽中医药大学宿州机械电子学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14004&nbsp;安徽中医药大学&nbsp;&nbsp;中药学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽中医药大学安徽中医药高等专科学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14005&nbsp;安徽中医药大学&nbsp;&nbsp;中药学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽中医药大学校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14006&nbsp;安徽中医药大学&nbsp;&nbsp;中药学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">三年</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1650元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">安徽中医药大学安徽省淮南卫生学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">14007&nbsp;安徽中医药大学&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+         

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/" />
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta content="webkit" name="renderer">
+<meta http-equiv="Expires" CONTENT="0"/>
+<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+<meta http-equiv="Pragma" CONTENT="no-cache"/>
+<title>安徽省成人高校招生网</title>
+<link rel="stylesheet" href="resources/css/newsite.css" type="text/css">
+<link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css">
+
+
+</head>
+<body>
+
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+   
+  <div class="div-top"> <!-- 导航滑动固定-->
+   <!-- 顶部横幅 -->
+    <div class="top-banner" >
+        <div class="container">
+            <img class="top-img1" src="resources/images/logo.png"  />
+            <img class="top-img2" src="resources/images/weixin.png"  />	 
+        </div>
+    </div>
+    
+    <!-- 顶部信息栏 -->
+    <div class="top-info-bar" >
+        <div class="container top-info-content">
+<!-- 时间 -->
+<div class="date-info">
+   <i class="fa fa-calendar"></i>
+   <span id="currentDate">今天是2026年11月06日  星期五</span>
+</div>        </div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar"  >
+        <div class="container nav-container" >            
+            <!-- 桌面导航 -->
+            <div class="nav-desktop">
+                <ul>
+                    <li class="rline lline"><a href="" >首页</a></li>
+                    <li class="rline"><a href="newslist/ckdt" >成考动态</a></li>
+                    <li class="rline"><a href="newslist/zcfg" >政策法规</a></li>
+                    <li class="rline"><a href="enrollStuPlan" class="active">招生计划</a></li>
+                    <li class="rline"><a href="process" >报名流程</a></li>
+                    <li class="rline"><a href="know/2026" >报考须知</a></li>
+                    <li class="rline"><a href="msEnter" >免试生专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 移动导航 -->
+            <div class="nav-mobile">
+                <div class="menu-toggle" id="menuToggle" >
+                 <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="" >首页</a></li>
+                        <li><a href="newslist/ckdt" >成考动态</a></li>
+                        <li><a href="newslist/zcfg" >政策法规</a></li>
+                        <li><a href="enrollStuPlan" class="active">招生计划</a></li>
+                        <li><a href="process" >报名流程</a></li>
+                        <li><a href="know/2026" >报考须知</a></li>
+                        <li><a href="msEnter" >免试生专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </div>  
+        
+  <!-- 主要内容区域 -->
+  <div class="">
+  
+
+ 
+ <!-- 主要内容区域 -->
+    <div class="container main-content-news nr-height">  
+    <!-- 查询导航 -->
+         <div class="query-nav" >
+            <ul class="query-nav-items">
+                <li class="query-nav-item ">
+                    <a href="enrollStuPlan"><i class="fa fa-list-alt"></i> 专业目录说明</a>
+                </li>
+                <li class="query-nav-item ">
+                    <a href="enrollSchool"><i class="fa fa-university"></i> 按院校查询计划</a>
+                </li>
+                <li class="query-nav-item active">
+                    <a href="enrollMajor"><i class="fa fa-graduation-cap"></i> 按专业查询计划</a>
+                </li>
+                <li class="query-nav-item">
+                    <a href="enrollSubject" target="_blank"><i class="fa fa-book"></i> 统考科目</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-content-news">
+             <!-- 查询表单 -->
+       <form class="search_list" id="frmSubmit" method="post" action="enrollMajor" >
+           <input type="hidden" name="currPage" id="currPage" value="30">
+        <div class="query-form" >
+            <div class="form-row"  >
+                <div class="form-group">
+                    <label for="yxmc">院校名称：</label>
+                    <input type="text" id="yxmc" name="yxmc" value="" class="form-control" placeholder="请输入院校名称" >
+                </div>
+                <div class="form-group">
+                    <label for="zymc">专业名称：</label>
+                    <input type="text" id="zymc" name="zymc" value="" class="form-control" placeholder="请输入专业名称" >
+                </div>
+                <div class="form-group">
+                    <label for="ccdm">层次：</label>
+                    <select  class="form-control" id="ccdm" name="ccdm"  onchange="getKl('');">
+                      	<option value="">全部</option>
+						 <option value="1" selected>专升本</option>  		         
+						 <option value="2" >高中起点本科</option>  		         
+						 <option value="3" >高中起点专科</option>  		         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kldm">科类：</label>
+                    <select  id="kldm" name="kldm" class="form-control">
+                        <option value="">全部</option>                        
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="ccdm">学习形式：</label>
+                    <select  class="form-control"  id="xxxs" name="xxxs" >
+                      	<option value="">全部</option>
+						 <option value="4" >非脱产</option>  		         
+                    </select>
+                </div>              
+                <div class="form-actions" >
+                    <button class="btn-query" id="queryBtn" onclick="search();">
+                         <i class="fa fa-search"></i> 查询
+                    </button>
+                </div>
+           </div>
+        </div>
+        
+        <!-- 桌面端表格 -->
+        <div class="table-container" >
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                          <th width="11%">院校专业代码</th> 
+                          <th width="13%">院校名称</th>                                                  
+                          <th width="12%">专业名称</th>                               
+                          <th width="8%">学习形式</th>
+                          <th width="8%">层次</th>
+                          <th width="8%">科类</th>
+                          <th width="6%">学制</th>
+                          <th width="10%">收费标准</th>
+                          <th width="23%">招生范围及加试信息</th> 
+                    </tr>
+                </thead>
+                <tbody >
+                        <tr id="zy_17034"> 
+                          <td >17034</td> 
+                          <td >淮南师范学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院合肥理工学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17035"> 
+                          <td >17035</td> 
+                          <td >淮南师范学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院界首市教师进修学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17036"> 
+                          <td >17036</td> 
+                          <td >淮南师范学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17037"> 
+                          <td >17037</td> 
+                          <td >淮南师范学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/年</td> 
+                          <td >淮南师范学院淮北市烈山区职业教育中心校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17201"> 
+                          <td >17201</td> 
+                          <td >黄山学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17202"> 
+                          <td >17202</td> 
+                          <td >黄山学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17203"> 
+                          <td >17203</td> 
+                          <td >黄山学院</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17204"> 
+                          <td >17204</td> 
+                          <td >黄山学院</td> 
+                          <td >计算机科学与技术</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17205"> 
+                          <td >17205</td> 
+                          <td >黄山学院</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17206"> 
+                          <td >17206</td> 
+                          <td >黄山学院</td> 
+                          <td >土木工程</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17207"> 
+                          <td >17207</td> 
+                          <td >黄山学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17208"> 
+                          <td >17208</td> 
+                          <td >黄山学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17209"> 
+                          <td >17209</td> 
+                          <td >黄山学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17210"> 
+                          <td >17210</td> 
+                          <td >黄山学院</td> 
+                          <td >学前教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17211"> 
+                          <td >17211</td> 
+                          <td >黄山学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17212"> 
+                          <td >17212</td> 
+                          <td >黄山学院</td> 
+                          <td >小学教育</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >教育学类</td> 
+                          <td >二年半</td> 
+                          <td >1100元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17213"> 
+                          <td >17213</td> 
+                          <td >黄山学院</td> 
+                          <td >林学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >农学类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/学年</td> 
+                          <td >黄山学院广德市邱村镇中心小学校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_17214"> 
+                          <td >17214</td> 
+                          <td >黄山学院</td> 
+                          <td >林学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >农学类</td> 
+                          <td >二年半</td> 
+                          <td >1320元/学年</td> 
+                          <td >黄山学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17401"> 
+                          <td >17401</td> 
+                          <td >合肥经济学院</td> 
+                          <td >机械设计制造及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >合肥经济学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17402"> 
+                          <td >17402</td> 
+                          <td >合肥经济学院</td> 
+                          <td >金融学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1200</td> 
+                          <td >合肥经济学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17403"> 
+                          <td >17403</td> 
+                          <td >合肥经济学院</td> 
+                          <td >市场营销</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1200</td> 
+                          <td >合肥经济学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17404"> 
+                          <td >17404</td> 
+                          <td >合肥经济学院</td> 
+                          <td >财务管理</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >经济管理类</td> 
+                          <td >二年半</td> 
+                          <td >1200</td> 
+                          <td >合肥经济学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_17405"> 
+                          <td >17405</td> 
+                          <td >合肥经济学院</td> 
+                          <td >法学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >法学类</td> 
+                          <td >二年半</td> 
+                          <td >1200</td> 
+                          <td >合肥经济学院校本部</td>                       
+                         </tr>
+                        <tr id="zy_18001"> 
+                          <td >18001</td> 
+                          <td >宿州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >宿州学院滁州市信息工程学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_18002"> 
+                          <td >18002</td> 
+                          <td >宿州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >宿州学院继续教育学院</td>                       
+                         </tr>
+                        <tr id="zy_18003"> 
+                          <td >18003</td> 
+                          <td >宿州学院</td> 
+                          <td >汉语言文学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1100</td> 
+                          <td >宿州学院合肥财经职业学院校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_18004"> 
+                          <td >18004</td> 
+                          <td >宿州学院</td> 
+                          <td >英语</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >文史、中医类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >宿州学院继续教育学院</td>                       
+                         </tr>
+                        <tr id="zy_18005"> 
+                          <td >18005</td> 
+                          <td >宿州学院</td> 
+                          <td >数学与应用数学</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >宿州学院继续教育学院</td>                       
+                         </tr>
+                        <tr id="zy_18006"> 
+                          <td >18006</td> 
+                          <td >宿州学院</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >宿州学院滁州市信息工程学校校外教学点</td>                       
+                         </tr>
+                        <tr id="zy_18007"> 
+                          <td >18007</td> 
+                          <td >宿州学院</td> 
+                          <td >电气工程及其自动化</td> 
+                          <td >非脱产</td> 
+                          <td >专升本</td>
+                          <td >理工类</td> 
+                          <td >二年半</td> 
+                          <td >1320</td> 
+                          <td >宿州学院继续教育学院</td>                       
+                         </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 移动端卡片列表 -->
+        <div class="mobile-list" id="mobileList" >
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17034&nbsp;淮南师范学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院合肥理工学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17035&nbsp;淮南师范学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院界首市教师进修学校校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17036&nbsp;淮南师范学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17037&nbsp;淮南师范学院&nbsp;&nbsp;小学教育</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">教育学类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">淮南师范学院淮北市烈山区职业教育中心校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17201&nbsp;黄山学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/学年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">黄山学院广德市邱村镇中心小学校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17202&nbsp;黄山学院&nbsp;&nbsp;汉语言文学</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">文史、中医类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1100元/学年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">黄山学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17203&nbsp;黄山学院&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/学年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">黄山学院广德市邱村镇中心小学校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17204&nbsp;黄山学院&nbsp;&nbsp;计算机科学与技术</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/学年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">黄山学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17205&nbsp;黄山学院&nbsp;&nbsp;土木工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/学年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">黄山学院广德市邱村镇中心小学校外教学点</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17206&nbsp;黄山学院&nbsp;&nbsp;土木工程</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">理工类</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学习形式：</div>
+                            <div class="info-value">非脱产</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学制：</div>
+                            <div class="info-value">二年半</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">学费标准：</div>
+                            <div class="info-value">1320元/学年</div>
+                        </div>     
+                    </div>
+                    <div class="info-group">
+                            <div class="info-label">招生范围及加试信息：</div>
+                            <div class="info-value">黄山学院校本部</div>
+                    </div>
+            </div>
+           <div class="program-card" >
+                <div class="card-header">
+                        <div class="program-code">17207&nbsp;黄山学院&nbsp;&nbsp;财务管理</div>
+                </div>
+                    <div class="card-body">                                   
+                        <div class="info-group">
+                            <div class="info-label">层次：</div>
+                            <div class="info-value">专升本</div>
+                        </div>
+                        <div class="info-group">
+                            <div class="info-label">科类：</div>
+                            <div class="info-value">经济管�

@@ -1,0 +1,56 @@
+{
+  "province": "guangxi",
+  "province_name": "广西",
+  "catalog_year": 2026,
+  "coverage_note": "2026考试院公开专升本目录55校569条记录（561个院校专业及方向组合）；2024—2025省市控线16条单列。9条限定招生记录不作普通备考目标；人数未公布，暂无院校实际录取线",
+  "counts": {
+    "institutions": 55,
+    "programs": 569,
+    "controls": 16,
+    "category_collections": 0
+  },
+  "public_query": {
+    "all_level_records": 988,
+    "zsb_records": 569,
+    "completeness": "all_official_catalogue_paragraphs",
+    "ordinary_target_excluded_records": 9,
+    "school_major_direction_pairs": 561
+  },
+  "sources": [
+    {
+      "path": "sources/guangxi/catalog-index-2026.html",
+      "url": "https://www.gxeea.cn/adultgk/zszyml.htm",
+      "sha256": "17d1029f5d4b25c59f7ef8001c0d856bc745f10bc2a5bd043e726fd55633edc5"
+    },
+    {
+      "path": "sources/guangxi/catalog-2026.html",
+      "url": "https://www.gxeea.cn/view/content_1146_33369.htm",
+      "sha256": "9bfbf342cd1a26667c71a1a17b811c00d6c5d8c07c47d9ad4a1ab199686d5c1f"
+    },
+    {
+      "path": "sources/guangxi/controls-2025.html",
+      "url": "https://www.gxeea.cn/view/content_1140_32301.htm",
+      "sha256": "a3c25b42ba9c88bc9195cbc3bf009ab0a5ae57aab294e8d0ea2b79aea72e1cc1"
+    },
+    {
+      "path": "sources/guangxi/controls-2024.html",
+      "url": "https://www.gxeea.cn/view/content_1140_31080.htm",
+      "sha256": "329fc9b669d5a24d7ce619bc8b3c25dd5c8a7f2dd92cccd93c902d88fddaf736"
+    },
+    {
+      "path": "sources/guangxi/exam-2026.html",
+      "url": "https://www.gxeea.cn/view/content_1140_33398.htm",
+      "sha256": "f9a0de06027af53fdf036150d13d95e24539c6f21e4b3891d5ad182396a74b30"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    }
+  ],
+  "limitations": [
+    "2026目录仅作2027备考历史参考，不代表2027招生计划",
+    "省市控线不是院校实际录取线；未公布人数，不推算人数",
+    "广西授课地点未全部列举，缺失不推测；广西警察学院11547及广西职业师范学院50869为目录招生编码，分别不同于教育部13520及14684；医学资格等要求以官方为准"
+  ]
+}

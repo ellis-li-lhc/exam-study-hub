@@ -2,7 +2,7 @@ import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { ElMessage } from 'element-plus'
 import { provinceOptions as mvpProvinces, stageTemplates } from '../data/mvp'
-import { examMajors, normalizeMajorCodes, subjectsForCategory } from '../data/majors'
+import { examMajors, normalizeMajorCodes, subjectsForCategory, reconcileDiagnosticSubjects } from '../data/majors'
 import { getProvinces, getInstitutions } from '../api'
 import {
   advanceReviewItem,
@@ -352,7 +352,9 @@ export const useApplicationStore = defineStore('application', () => {
         majorMatch: item.major_match || 'category',
         plans: item.plans || [],
         activeCatalogYear: item.active_catalog_year ?? null,
+        activeCatalogRound: item.active_catalog_round ?? null,
         controlScores: item.control_scores || [],
+        categoryCollectionPlans: item.category_collection_plans || [],
         supplementalData: item.supplemental_data || null,
         scores: normalizeInstitutionScores(item.scores || []),
       }))
@@ -367,11 +369,9 @@ export const useApplicationStore = defineStore('application', () => {
   }
 
   function syncDiagnosticSubjects() {
-    const existing = diagnostic.value.subjectScores
-    // 未诊断科目默认 0，不再写入占位假分
-    diagnostic.value.subjectScores = Object.fromEntries(
-      (selectedMajor.value?.subjects || []).map(subject => [subject, existing[subject] ?? 0])
-    )
+    const aligned = reconcileDiagnosticSubjects(diagnostic.value, selectedMajor.value)
+    diagnostic.value = aligned.diagnostic
+    if (aligned.requiresRetest) tasksVersion.value = null
   }
 
   function completeDiagnostic(payload, completed = true) {
@@ -612,6 +612,7 @@ export const useApplicationStore = defineStore('application', () => {
     if (Array.isArray(blob.practiceAttempts)) practiceAttempts.value = blob.practiceAttempts
     if ('tasksDate' in blob) tasksDate.value = blob.tasksDate
     if (Array.isArray(blob.reviewQueue)) reviewQueue.value = normalizeReviewQueue(blob.reviewQueue, fmtDate(new Date()))
+    syncDiagnosticSubjects()
   }
 
   // 退出登录时把本地状态恢复成默认值，避免下个账号看到上个账号的数据。
@@ -639,6 +640,8 @@ export const useApplicationStore = defineStore('application', () => {
     institutionsLoaded.value = false
     institutionsError.value = null
   }
+
+  syncDiagnosticSubjects()
 
   watch([profile, selectedInstitutionCode, diagnostic, currentStage, tasks, tasksVersion, stageTests, practiceAttempts, tasksDate, reviewQueue], () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({

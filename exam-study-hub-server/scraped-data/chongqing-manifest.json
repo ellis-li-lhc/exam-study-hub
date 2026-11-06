@@ -1,0 +1,93 @@
+{
+  "province": "chongqing",
+  "province_name": "重庆",
+  "catalog_year": 2026,
+  "coverage_note": "已接入2026省级公开专升本目录36校472条记录（250个院校专业组合）；2024—2025省控线16条单列。12条限定招生记录不作普通备考目标；人数未作为公开计划导入，暂无院校实际录取线",
+  "counts": {
+    "institutions": 36,
+    "programs": 472,
+    "controls": 16,
+    "category_collections": 0
+  },
+  "public_query": {
+    "pages": 1,
+    "all_level_records": 742,
+    "zsb_records": 472,
+    "completeness": "all_public_json_rows_cross_checked_with_level_filter",
+    "ordinary_target_excluded_records": 12,
+    "school_major_pairs": 250
+  },
+  "sources": [
+    {
+      "path": "sources/chongqing/portal-home-2026.html",
+      "url": "https://www.cqksy.cn/",
+      "sha256": "098a238807014a7330ede9f6fcc54478a4cf0d808bc83640322aaf03c821eeeb"
+    },
+    {
+      "path": "sources/chongqing/catalog-2026.html",
+      "url": "https://ck.cqksy.cn/czPage/info_zszy_show",
+      "sha256": "6f571e0e3f42f8e68e758b744b4557d38a95de27bcc597efcb585e06b7d585ec"
+    },
+    {
+      "path": "sources/chongqing/catalog-client-2026.js",
+      "url": "https://ck.cqksy.cn/static/js/czstu/action.info.zszy.show.js",
+      "sha256": "c0a1d34f6400d3ee81e417510a6b76853e2cb7834e96d5c0c9e7793995acd949"
+    },
+    {
+      "path": "sources/chongqing/portal-client-2026.js",
+      "url": "https://ck.cqksy.cn/static/js/czstu/action.common.home.js?v=0.0.1",
+      "sha256": "735083c5c593b8e79ce3f047302bbe533ce78e429d9a83624b2c6de3d296ec07"
+    },
+    {
+      "path": "sources/chongqing/levels-2026.json",
+      "url": "https://ck.cqksy.cn/info/getBkcc/all",
+      "sha256": "4aeee5edbc2d6ba92dd0c5f78e4a10dcf16dc5e4c101ef2118821855d22a7293"
+    },
+    {
+      "path": "sources/chongqing/forms-2026.json",
+      "url": "https://ck.cqksy.cn/info/getXxxs",
+      "sha256": "6f6e02e81a70c51d2be1e4dd3fa53d398c5f9c4ee6eedf240e007d5b5cff20db"
+    },
+    {
+      "path": "sources/chongqing/controls-2025.html",
+      "url": "https://jw.cq.gov.cn/zwxx_209/gggs/202511/t20251112_15157980_wap.html",
+      "sha256": "c28a6393189a2629ebce455ca4f2963df31cdb256d21bf5f9587b843b5734e02"
+    },
+    {
+      "path": "sources/chongqing/controls-2024.html",
+      "url": "https://www.cq.gov.cn/ywdt/bmts/202411/t20241113_13794361.html",
+      "sha256": "eefd676c7b3d859e481e1b7fa71433759e774ea74a029a53c5926c1a25d69f50"
+    },
+    {
+      "path": "sources/chongqing/catalog-all-levels-2026.json",
+      "url": "https://ck.cqksy.cn/info/getZsyxZylist",
+      "sha256": "c8323b8094272919137cb45f2dd1470c1745a12237c187749eb453c28098e4cb",
+      "method": "POST",
+      "body": "yxdm=&ccdm=&kldm=&xxxsdm=&zymc=&wyyzmc="
+    },
+    {
+      "path": "sources/chongqing/catalog-zsb-2026.json",
+      "url": "https://ck.cqksy.cn/info/getZsyxZylist",
+      "sha256": "1851968e18a74333aa803112bcbddc8c7c23c30da8dae0897c6486aa1b5fa95f",
+      "method": "POST",
+      "body": "yxdm=&ccdm=1&kldm=&xxxsdm=&zymc=&wyyzmc="
+    },
+    {
+      "path": "sources/chongqing/identity-cqou.html",
+      "url": "http://www.cqdd.cq.cn",
+      "sha256": "a43efd9fb4eb441e9c805b5b9f64ceddd6a101b4506080855fd60e32e50f578b"
+    },
+    {
+      "path": "sources/hubei/moe-universities-2026.xls",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+      "sha256": "29c40f083b639888e429cf40b68f9a75782d1ce81131c99aabca65b65b36eaea"
+    }
+  ],
+  "limitations": [
+    "2026目录为2027备考历史参考，不代表2027招生安排",
+    "省控线不是院校实际录取线；特殊专业资格要求仍需考生自行核实",
+    "同名专业可因教学点、地址等不同占多行，不能把记录数当作专业数",
+    "公开页面未展示API中的jhs字段，因此未把该字段当作公开人数计划；学校地址不自动当作授课地点",
+    "收费未注明周期时保留原文，不推算年学费"
+  ]
+}

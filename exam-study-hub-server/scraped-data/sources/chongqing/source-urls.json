@@ -1,0 +1,14 @@
+{
+  "discovery-eol-2026.html": "https://www.eol.cn/baokao/ck-cqckzc/20260904111656.html",
+  "portal-home-2026.html": "https://www.cqksy.cn/",
+  "catalog-2026.html": "https://ck.cqksy.cn/czPage/info_zszy_show",
+  "catalog-client-2026.js": "https://ck.cqksy.cn/static/js/czstu/action.info.zszy.show.js",
+  "portal-client-2026.js": "https://ck.cqksy.cn/static/js/czstu/action.common.home.js?v=0.0.1",
+  "levels-2026.json": "https://ck.cqksy.cn/info/getBkcc/all",
+  "forms-2026.json": "https://ck.cqksy.cn/info/getXxxs",
+  "controls-2025.html": "https://jw.cq.gov.cn/zwxx_209/gggs/202511/t20251112_15157980_wap.html",
+  "controls-2024.html": "https://www.cq.gov.cn/ywdt/bmts/202411/t20241113_13794361.html",
+  "catalog-all-levels-2026.json": "https://ck.cqksy.cn/info/getZsyxZylist",
+  "catalog-zsb-2026.json": "https://ck.cqksy.cn/info/getZsyxZylist",
+  "identity-cqou.html": "http://www.cqdd.cq.cn"
+}

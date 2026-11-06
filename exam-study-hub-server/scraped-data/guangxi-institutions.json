@@ -1,0 +1,662 @@
+[
+  {
+    "province": "guangxi",
+    "institution_code": "10004",
+    "institution_name": "北京交通大学",
+    "city": "北京",
+    "national_institution_code": "4111010004",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10015",
+    "institution_name": "北京印刷学院",
+    "city": "北京",
+    "national_institution_code": "4111010015",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10022",
+    "institution_name": "北京林业大学",
+    "city": "北京",
+    "national_institution_code": "4111010022",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10039",
+    "institution_name": "中国消防救援学院",
+    "city": "北京",
+    "national_institution_code": "4111010039",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10140",
+    "institution_name": "辽宁大学",
+    "city": "沈阳",
+    "national_institution_code": "4121010140",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10200",
+    "institution_name": "东北师范大学",
+    "city": "长春",
+    "national_institution_code": "4122010200",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10224",
+    "institution_name": "东北农业大学",
+    "city": "哈尔滨",
+    "national_institution_code": "4123010224",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10294",
+    "institution_name": "河海大学",
+    "city": "南京",
+    "national_institution_code": "4132010294",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10298",
+    "institution_name": "南京林业大学",
+    "city": "南京",
+    "national_institution_code": "4132010298",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10307",
+    "institution_name": "南京农业大学",
+    "city": "南京",
+    "national_institution_code": "4132010307",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10316",
+    "institution_name": "中国药科大学",
+    "city": "南京",
+    "national_institution_code": "4132010316",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10491",
+    "institution_name": "中国地质大学(武汉)",
+    "city": "武汉",
+    "national_institution_code": "4142010491",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10497",
+    "institution_name": "武汉理工大学",
+    "city": "武汉",
+    "national_institution_code": "4142010497",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10537",
+    "institution_name": "湖南农业大学",
+    "city": "长沙",
+    "national_institution_code": "4143010537",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10538",
+    "institution_name": "中南林业科技大学",
+    "city": "长沙",
+    "national_institution_code": "4143010538",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10542",
+    "institution_name": "湖南师范大学",
+    "city": "长沙",
+    "national_institution_code": "4143010542",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10594",
+    "institution_name": "广西科技大学",
+    "city": "柳州",
+    "national_institution_code": "4145010594",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10595",
+    "institution_name": "桂林电子科技大学",
+    "city": "桂林",
+    "national_institution_code": "4145010595",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10596",
+    "institution_name": "桂林理工大学",
+    "city": "桂林",
+    "national_institution_code": "4145010596",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10598",
+    "institution_name": "广西医科大学",
+    "city": "南宁",
+    "national_institution_code": "4145010598",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10599",
+    "institution_name": "右江民族医学院",
+    "city": "百色",
+    "national_institution_code": "4145010599",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10600",
+    "institution_name": "广西中医药大学",
+    "city": "南宁",
+    "national_institution_code": "4145010600",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10601",
+    "institution_name": "桂林医科大学",
+    "city": "桂林",
+    "national_institution_code": "4145010601",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10602",
+    "institution_name": "广西师范大学",
+    "city": "桂林",
+    "national_institution_code": "4145010602",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10603",
+    "institution_name": "南宁师范大学",
+    "city": "南宁",
+    "national_institution_code": "4145010603",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10604",
+    "institution_name": "广西民族师范学院",
+    "city": "崇左",
+    "national_institution_code": "4145010604",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10605",
+    "institution_name": "河池学院",
+    "city": "河池",
+    "national_institution_code": "4145010605",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10606",
+    "institution_name": "玉林师范学院",
+    "city": "玉林",
+    "national_institution_code": "4145010606",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10607",
+    "institution_name": "广西艺术学院",
+    "city": "南宁",
+    "national_institution_code": "4145010607",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10608",
+    "institution_name": "广西民族大学",
+    "city": "南宁",
+    "national_institution_code": "4145010608",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10609",
+    "institution_name": "百色学院",
+    "city": "百色",
+    "national_institution_code": "4145010609",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10610",
+    "institution_name": "四川大学",
+    "city": "成都",
+    "national_institution_code": "4151010610",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10613",
+    "institution_name": "西南交通大学",
+    "city": "成都",
+    "national_institution_code": "4151010613",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10618",
+    "institution_name": "重庆交通大学",
+    "city": "重庆",
+    "national_institution_code": "4150010618",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10626",
+    "institution_name": "四川农业大学",
+    "city": "雅安",
+    "national_institution_code": "4151010626",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10699",
+    "institution_name": "西北工业大学",
+    "city": "西安",
+    "national_institution_code": "4161010699",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10701",
+    "institution_name": "西安电子科技大学",
+    "city": "西安",
+    "national_institution_code": "4161010701",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "10710",
+    "institution_name": "长安大学",
+    "city": "西安",
+    "national_institution_code": "4161010710",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11354",
+    "institution_name": "梧州学院",
+    "city": "梧州",
+    "national_institution_code": "4145011354",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11413",
+    "institution_name": "中国矿业大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011413",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11415",
+    "institution_name": "中国地质大学(北京)",
+    "city": "北京",
+    "national_institution_code": "4111011415",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11546",
+    "institution_name": "广西科技师范学院",
+    "city": "来宾",
+    "national_institution_code": "4145011546",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11547",
+    "institution_name": "广西警察学院",
+    "city": "南宁",
+    "national_institution_code": "4145013520",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11548",
+    "institution_name": "广西财经学院",
+    "city": "南宁",
+    "national_institution_code": "4145011548",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11607",
+    "institution_name": "北部湾大学",
+    "city": "钦州",
+    "national_institution_code": "4145011607",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11825",
+    "institution_name": "桂林航天工业学院",
+    "city": "桂林",
+    "national_institution_code": "4145011825",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11837",
+    "institution_name": "桂林旅游学院",
+    "city": "桂林",
+    "national_institution_code": "4145011837",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "11838",
+    "institution_name": "贺州学院",
+    "city": "贺州",
+    "national_institution_code": "4145011838",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "13641",
+    "institution_name": "桂林学院",
+    "city": "桂林",
+    "national_institution_code": "4145013641",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "13644",
+    "institution_name": "桂林信息科技学院",
+    "city": "桂林",
+    "national_institution_code": "4145013644",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "13645",
+    "institution_name": "南宁理工学院",
+    "city": "桂林",
+    "national_institution_code": "4145013645",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "13830",
+    "institution_name": "广西外国语学院",
+    "city": "南宁",
+    "national_institution_code": "4145013830",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "16205",
+    "institution_name": "广西农业职业技术大学",
+    "city": "南宁",
+    "national_institution_code": "4145016205",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "50869",
+    "institution_name": "广西职业师范学院",
+    "city": "南宁",
+    "national_institution_code": "4145014684",
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202606/W020260618416094865984.xls",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  },
+  {
+    "province": "guangxi",
+    "institution_code": "51338",
+    "institution_name": "广西开放大学",
+    "city": "南宁",
+    "national_institution_code": null,
+    "identity_basis": "考试院公开目录院校编码；校本部城市按教育部高校名单或目录院校官方地址核验",
+    "city_source_url": "https://www.gxeea.cn/view/content_1146_33369.htm",
+    "source_urls": [
+      "https://www.gxeea.cn/view/content_1146_33369.htm"
+    ]
+  }
+]
